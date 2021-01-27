@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structsp__node" kind="struct" language="C++" prot="public">
+    <compoundname>sp_node</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsp__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/sp_tree.c" line="55" column="10" bodyfile="src/sp_tree.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsp__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* datum</definition>
+        <argsstring></argsstring>
+        <name>datum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/sp_tree.c" line="55" column="21" bodyfile="src/sp_tree.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsp__node_1a1c7fd5fcaab9ca7faadfacd8acc9d21b" prot="public" static="no" mutable="no">
+        <type><ref refid="structsp__node" kindref="compound">sp_node</ref> *</type>
+        <definition>sp_node* parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/sp_tree.c" line="55" column="39" bodyfile="src/sp_tree.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsp__node_1a1d6ea745e0112a6a912b8e19e3cd9c60" prot="public" static="no" mutable="no">
+        <type><ref refid="structsp__node" kindref="compound">sp_node</ref> *</type>
+        <definition>sp_node* llink</definition>
+        <argsstring></argsstring>
+        <name>llink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/sp_tree.c" line="55" column="58" bodyfile="src/sp_tree.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsp__node_1ad6ab7d8c03223fa53442e6f17f2cb1b0" prot="public" static="no" mutable="no">
+        <type><ref refid="structsp__node" kindref="compound">sp_node</ref> *</type>
+        <definition>sp_node* rlink</definition>
+        <argsstring></argsstring>
+        <name>rlink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/sp_tree.c" line="55" column="76" bodyfile="src/sp_tree.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>sp_node</label>
+        <link refid="structsp__node"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>rlink</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/sp_tree.c" line="54" column="1" bodyfile="src/sp_tree.c" bodystart="54" bodyend="56"/>
+    <listofallmembers>
+      <member refid="structsp__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" virt="non-virtual"><scope>sp_node</scope><name>datum</name></member>
+      <member refid="structsp__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" virt="non-virtual"><scope>sp_node</scope><name>key</name></member>
+      <member refid="structsp__node_1a1d6ea745e0112a6a912b8e19e3cd9c60" prot="public" virt="non-virtual"><scope>sp_node</scope><name>llink</name></member>
+      <member refid="structsp__node_1a1c7fd5fcaab9ca7faadfacd8acc9d21b" prot="public" virt="non-virtual"><scope>sp_node</scope><name>parent</name></member>
+      <member refid="structsp__node_1ad6ab7d8c03223fa53442e6f17f2cb1b0" prot="public" virt="non-virtual"><scope>sp_node</scope><name>rlink</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

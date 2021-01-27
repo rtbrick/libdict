@@ -1,0 +1,504 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dict__private_8h" kind="file" language="C++">
+    <compoundname>dict_private.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="dict_8h" local="yes">dict.h</includes>
+    <includedby refid="dict_8c" local="yes">src/dict.c</includedby>
+    <includedby refid="hashtable_8c" local="yes">src/hashtable.c</includedby>
+    <includedby refid="hashtable2_8c" local="yes">src/hashtable2.c</includedby>
+    <includedby refid="hb__tree_8c" local="yes">src/hb_tree.c</includedby>
+    <includedby refid="pr__tree_8c" local="yes">src/pr_tree.c</includedby>
+    <includedby refid="rb__tree_8c" local="yes">src/rb_tree.c</includedby>
+    <includedby refid="skiplist_8c" local="yes">src/skiplist.c</includedby>
+    <includedby refid="sp__tree_8c" local="yes">src/sp_tree.c</includedby>
+    <includedby refid="tr__tree_8c" local="yes">src/tr_tree.c</includedby>
+    <includedby refid="tree__common_8c" local="yes">src/tree_common.c</includedby>
+    <includedby refid="wb__tree_8c" local="yes">src/wb_tree.c</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>stdbool.h</label>
+      </node>
+      <node id="13">
+        <label>skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="16">
+        <label>wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/dict_private.h</label>
+        <link refid="dict__private_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>hashtable.h</label>
+        <link refid="hashtable_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dict.h</label>
+        <link refid="dict_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>pr_tree.h</label>
+        <link refid="pr__tree_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="9">
+        <label>hashtable2.h</label>
+        <link refid="hashtable2_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>tr_tree.h</label>
+        <link refid="tr__tree_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10">
+        <label>src/tr_tree.c</label>
+        <link refid="tr__tree_8c"/>
+      </node>
+      <node id="5">
+        <label>src/hb_tree.c</label>
+        <link refid="hb__tree_8c"/>
+      </node>
+      <node id="4">
+        <label>src/hashtable2.c</label>
+        <link refid="hashtable2_8c"/>
+      </node>
+      <node id="9">
+        <label>src/sp_tree.c</label>
+        <link refid="sp__tree_8c"/>
+      </node>
+      <node id="3">
+        <label>src/hashtable.c</label>
+        <link refid="hashtable_8c"/>
+      </node>
+      <node id="12">
+        <label>src/wb_tree.c</label>
+        <link refid="wb__tree_8c"/>
+      </node>
+      <node id="8">
+        <label>src/skiplist.c</label>
+        <link refid="skiplist_8c"/>
+      </node>
+      <node id="1">
+        <label>src/dict_private.h</label>
+        <link refid="dict__private_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/dict.c</label>
+        <link refid="dict_8c"/>
+      </node>
+      <node id="7">
+        <label>src/rb_tree.c</label>
+        <link refid="rb__tree_8c"/>
+      </node>
+      <node id="11">
+        <label>src/tree_common.c</label>
+        <link refid="tree__common_8c"/>
+      </node>
+      <node id="6">
+        <label>src/pr_tree.c</label>
+        <link refid="pr__tree_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" prot="public" static="no">
+        <name>ASSERT</name>
+        <param><defname>expr</defname></param>
+        <initializer>    do { \
+	if (!(expr)) { \
+	    fprintf(stderr, &quot;\n%s:%d assertion failed: %s\n&quot;, \
+		    __FILE__, __LINE__, #expr); \
+	    abort(); \
+	} \
+    } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="51" column="15" bodyfile="src/dict_private.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1a262afcfe437f4addb13fb1b47a6a7086" prot="public" static="no">
+        <name>LIKELY</name>
+        <param><defname>expr</defname></param>
+        <initializer>(expr)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="76" column="11" bodyfile="src/dict_private.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1a9acc330d508b9a3b775cfdf7ce405e7d" prot="public" static="no">
+        <name>UNLIKELY</name>
+        <param><defname>expr</defname></param>
+        <initializer>(expr)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="77" column="10" bodyfile="src/dict_private.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" prot="public" static="no">
+        <name>VERIFY</name>
+        <param><defname>expr</defname></param>
+        <initializer>    do { \
+	if (!(expr)) { \
+	    fprintf(stderr, &quot;\n%s:%d verification failed: %s\n&quot;, \
+		    __FILE__, __LINE__, #expr); \
+	    return false; \
+	} \
+    } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="78" column="10" bodyfile="src/dict_private.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" prot="public" static="no">
+        <name>MALLOC</name>
+        <param><defname>n</defname></param>
+        <initializer>(*<ref refid="dict_8h_1af202e0695edba206489b6a3936610803" kindref="member">dict_malloc_func</ref>)(n)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="88" column="9" bodyfile="src/dict_private.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" prot="public" static="no">
+        <name>FREE</name>
+        <param><defname>p</defname></param>
+        <initializer>(*<ref refid="dict_8h_1afeae04c4c07e57a7451c3480a7a4bf2e" kindref="member">dict_free_func</ref>)(p)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="89" column="9" bodyfile="src/dict_private.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1ae2f08dc603ae93c402abd918ba4e23e1" prot="public" static="no">
+        <name>ABS</name>
+        <param><defname>a</defname></param>
+        <initializer>((a) &lt; 0 ? -(a) : (a))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="91" column="9" bodyfile="src/dict_private.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" prot="public" static="no">
+        <name>MIN</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((a) &lt; (b) ? (a) : (b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="92" column="9" bodyfile="src/dict_private.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" prot="public" static="no">
+        <name>MAX</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((a) &gt; (b) ? (a) : (b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="93" column="9" bodyfile="src/dict_private.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1ab342a6196c058644c297e3c191c6e4e4" prot="public" static="no">
+        <name>SWAP</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>v</defname></param>
+        <initializer>do { v = (a); (a) = (b); (b) = v; } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="94" column="9" bodyfile="src/dict_private.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1a451bf468f4bb265aba601ce6e6a29969" prot="public" static="no">
+        <name>GCC_INLINE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="100" column="11" bodyfile="src/dict_private.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1a12d694562e578998ac23889a81e2df58" prot="public" static="no">
+        <name>GCC_CONST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="101" column="10" bodyfile="src/dict_private.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long random</definition>
+        <argsstring>(void)</argsstring>
+        <name>random</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="104" column="13" declfile="src/dict_private.h" declline="104" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="dict__private_8h_1a419e929fe2cc7ac7cd90accf60b09682" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>static unsigned dict_rand</definition>
+        <argsstring>()</argsstring>
+        <name>dict_rand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="105" column="24" bodyfile="src/dict_private.h" bodystart="105" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>libdict<sp/>-<sp/>private<sp/>definitions.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2001-2014,<sp/>Farooq<sp/>Mela</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;<sp/>AND</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIBDICT_DICT_PRIVATE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBDICT_DICT_PRIVATE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dict_8h" kindref="compound">dict.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>feature<sp/>(or<sp/>bug)<sp/>of<sp/>this<sp/>macro<sp/>is<sp/>that<sp/>the<sp/>expression<sp/>is<sp/>always<sp/>evaluated,</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>regardless<sp/>of<sp/>whether<sp/>NDEBUG<sp/>is<sp/>defined<sp/>or<sp/>not.<sp/>This<sp/>is<sp/>intentional<sp/>and</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>sometimes<sp/>useful.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NDEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>undef<sp/>ASSERT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>if<sp/>defined(__GNUC__)<sp/>||<sp/>defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>ASSERT(expr)<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!__builtin_expect((expr),<sp/>1))<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>(%s)<sp/>assertion<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>__func__,<sp/>#expr);<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abort();<sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>ASSERT(expr)<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!(expr))<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>assertion<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>#expr);<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abort();<sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>ASSERT(expr)<sp/><sp/><sp/>(void)(expr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)<sp/>||<sp/>defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>LIKELY(expr)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>__builtin_expect((expr),<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>UNLIKELY(expr)<sp/><sp/><sp/><sp/><sp/>__builtin_expect((expr),<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>VERIFY(expr)<sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!__builtin_expect((expr),<sp/>1))<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>(%s)<sp/>verification<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>__func__,<sp/>#expr);<sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;<sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="dict__private_8h_1a262afcfe437f4addb13fb1b47a6a7086" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>LIKELY(expr)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(expr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="dict__private_8h_1a9acc330d508b9a3b775cfdf7ce405e7d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>UNLIKELY(expr)<sp/><sp/><sp/><sp/><sp/>(expr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>VERIFY(expr)<sp/>\</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!(expr))<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>verification<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>\</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>#expr);<sp/>\</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;<sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MALLOC(n)<sp/><sp/><sp/>(*dict_malloc_func)(n)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FREE(p)<sp/><sp/><sp/><sp/><sp/>(*dict_free_func)(p)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="dict__private_8h_1ae2f08dc603ae93c402abd918ba4e23e1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ABS(a)<sp/><sp/><sp/><sp/><sp/><sp/>((a)<sp/>&lt;<sp/>0<sp/>?<sp/>-(a)<sp/>:<sp/>(a))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="dict__private_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MIN(a,b)<sp/><sp/><sp/><sp/>((a)<sp/>&lt;<sp/>(b)<sp/>?<sp/>(a)<sp/>:<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="dict__private_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX(a,b)<sp/><sp/><sp/><sp/>((a)<sp/>&gt;<sp/>(b)<sp/>?<sp/>(a)<sp/>:<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="dict__private_8h_1ab342a6196c058644c297e3c191c6e4e4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWAP(a,b,v)<sp/>do<sp/>{<sp/>v<sp/>=<sp/>(a);<sp/>(a)<sp/>=<sp/>(b);<sp/>(b)<sp/>=<sp/>v;<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)<sp/>||<sp/>defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>GCC_INLINE<sp/>__inline__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>GCC_CONST<sp/><sp/>__attribute__((__const__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="dict__private_8h_1a451bf468f4bb265aba601ce6e6a29969" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>GCC_INLINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="dict__private_8h_1a12d694562e578998ac23889a81e2df58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>GCC_CONST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" kindref="member">random</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>dict_rand()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)<sp/><ref refid="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" kindref="member">random</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!LIBDICT_DICT_PRIVATE_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="src/dict_private.h"/>
+  </compounddef>
+</doxygen>

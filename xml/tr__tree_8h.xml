@@ -1,0 +1,1216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="tr__tree_8h" kind="file" language="C++">
+    <compoundname>tr_tree.h</compoundname>
+    <includes refid="dict_8h" local="yes">dict.h</includes>
+    <includedby refid="tr__tree_8c" local="yes">src/tr_tree.c</includedby>
+    <includedby refid="dict_8h" local="yes">include/dict.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="11">
+        <label>skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="13">
+        <label>wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>hashtable.h</label>
+        <link refid="hashtable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dict.h</label>
+        <link refid="dict_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>pr_tree.h</label>
+        <link refid="pr__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>hashtable2.h</label>
+        <link refid="hashtable2_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/tr_tree.h</label>
+        <link refid="tr__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/tr_tree.c</label>
+        <link refid="tr__tree_8c"/>
+      </node>
+      <node id="8">
+        <label>src/hb_tree.c</label>
+        <link refid="hb__tree_8c"/>
+      </node>
+      <node id="21">
+        <label>include/skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>include/rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>src/hashtable2.c</label>
+        <link refid="hashtable2_8c"/>
+      </node>
+      <node id="12">
+        <label>src/sp_tree.c</label>
+        <link refid="sp__tree_8c"/>
+      </node>
+      <node id="6">
+        <label>src/hashtable.c</label>
+        <link refid="hashtable_8c"/>
+      </node>
+      <node id="23">
+        <label>include/wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>src/wb_tree.c</label>
+        <link refid="wb__tree_8c"/>
+      </node>
+      <node id="11">
+        <label>src/skiplist.c</label>
+        <link refid="skiplist_8c"/>
+      </node>
+      <node id="18">
+        <label>include/hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/dict_private.h</label>
+        <link refid="dict__private_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/dict.c</label>
+        <link refid="dict_8c"/>
+      </node>
+      <node id="22">
+        <label>include/sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>include/hashtable.h</label>
+        <link refid="hashtable_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/rb_tree.c</label>
+        <link refid="rb__tree_8c"/>
+      </node>
+      <node id="13">
+        <label>src/tree_common.c</label>
+        <link refid="tree__common_8c"/>
+      </node>
+      <node id="15">
+        <label>src/tree_common.h</label>
+        <link refid="tree__common_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/dict.h</label>
+        <link refid="dict_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>include/pr_tree.h</label>
+        <link refid="pr__tree_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>src/pr_tree.c</label>
+        <link refid="pr__tree_8c"/>
+      </node>
+      <node id="17">
+        <label>include/hashtable2.h</label>
+        <link refid="hashtable2_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/tr_tree.h</label>
+        <link refid="tr__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="tr__tree_8h_1a9abc2051519dbf98f8af8f44e672453e" prot="public" static="no">
+        <type>struct <ref refid="structtr__tree" kindref="compound">tr_tree</ref></type>
+        <definition>typedef struct tr_tree tr_tree</definition>
+        <argsstring></argsstring>
+        <name>tr_tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="1" column="0" bodyfile="include/tr_tree.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="tr__tree_8h_1a594b5c00617e763e31da34743cf785f4" prot="public" static="no">
+        <type>struct <ref refid="structtr__itor" kindref="compound">tr_itor</ref></type>
+        <definition>typedef struct tr_itor tr_itor</definition>
+        <argsstring></argsstring>
+        <name>tr_itor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="57" column="5" bodyfile="include/tr_tree.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tr__tree_8h_1a50c1b306d0eb2d99da30e94c1c2f3127" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+        <definition>tr_tree* tr_tree_new</definition>
+        <argsstring>(dict_compare_func compare_func, dict_prio_func prio_func)</argsstring>
+        <name>tr_tree_new</name>
+        <param>
+          <type><ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref></type>
+          <declname>compare_func</declname>
+        </param>
+        <param>
+          <type><ref refid="dict_8h_1acd0323c1d9eb91048a9458e7467594f7" kindref="member">dict_prio_func</ref></type>
+          <declname>prio_func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="37" column="8" bodyfile="src/tr_tree.c" bodystart="106" bodyend="119" declfile="include/tr_tree.h" declline="37" declcolumn="8"/>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
+        <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
+        <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
+        <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
+        <references refid="structtree_1adf0b2d44ac6cd97d428ec85210970b43" compoundref="tree__common_8c" startline="38">tree::rotation_count</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1aaff60df98e5fda03de86208c5ab58818" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdict" kindref="compound">dict</ref> *</type>
+        <definition>dict* tr_dict_new</definition>
+        <argsstring>(dict_compare_func compare_func, dict_prio_func prio_func)</argsstring>
+        <name>tr_dict_new</name>
+        <param>
+          <type><ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref></type>
+          <declname>compare_func</declname>
+        </param>
+        <param>
+          <type><ref refid="dict_8h_1acd0323c1d9eb91048a9458e7467594f7" kindref="member">dict_prio_func</ref></type>
+          <declname>prio_func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="38" column="5" bodyfile="src/tr_tree.c" bodystart="122" bodyend="133" declfile="include/tr_tree.h" declline="38" declcolumn="5"/>
+        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="152">dict::_object</references>
+        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
+        <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
+        <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
+        <references refid="tr__tree_8c_1a648dba2e9e0df339046927f077e720a8" compoundref="tr__tree_8c" startline="106" endline="119">tr_tree_new</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a76e673a39086c1510d82a6ee9ff74c8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_free</definition>
+        <argsstring>(tr_tree *tree, dict_delete_func delete_func)</argsstring>
+        <name>tr_tree_free</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref></type>
+          <declname>delete_func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="39" column="7" bodyfile="src/tr_tree.c" bodystart="135" bodyend="135" declfile="include/tr_tree.h" declline="39" declcolumn="7"/>
+        <references refid="tree__common_8c_1a058d607ec36526c0e52cd66f853ef888" compoundref="tree__common_8c" startline="328" endline="333">tree_free</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1af12c30c66ba2122b652249b9531bb2c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></type>
+        <definition>dict_insert_result tr_tree_insert</definition>
+        <argsstring>(tr_tree *tree, void *key)</argsstring>
+        <name>tr_tree_insert</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="42" column="1" bodyfile="src/tr_tree.c" bodystart="139" bodyend="182" declfile="include/tr_tree.h" declline="42" declcolumn="1"/>
+        <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
+        <references refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tr__tree_8c" startline="51">tr_node::datum</references>
+        <references refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tr__tree_8c" startline="51">tr_node::key</references>
+        <references refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" compoundref="tr__tree_8c" startline="51">tr_node::llink</references>
+        <references refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" compoundref="tr__tree_8c" startline="51">tr_node::rlink</references>
+        <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a72e0676b79abc74359c66d30345ae1f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_tree_search</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_search</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="43" column="5" bodyfile="src/tr_tree.c" bodystart="218" bodyend="218" declfile="include/tr_tree.h" declline="43" declcolumn="5"/>
+        <references refid="tree__common_8c_1a54ed614fb74b373c5167325d6c744171" compoundref="tree__common_8c" startline="144" endline="148">tree_search</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a47a8040660895a251ac1d54a5f9689d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_tree_search_le</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_search_le</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="44" column="5" bodyfile="src/tr_tree.c" bodystart="219" bodyend="219" declfile="include/tr_tree.h" declline="44" declcolumn="5"/>
+        <references refid="tree__common_8c_1a8aa3ee04b16a1a81d153af21326ce29f" compoundref="tree__common_8c" startline="170" endline="174">tree_search_le</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1afe61944f8ab6e076e4daa164ff1d7a5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_tree_search_lt</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_search_lt</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="45" column="5" bodyfile="src/tr_tree.c" bodystart="220" bodyend="220" declfile="include/tr_tree.h" declline="45" declcolumn="5"/>
+        <references refid="tree__common_8c_1abf8d8bb4075e9f28c545ed1c83f0dafa" compoundref="tree__common_8c" startline="194" endline="198">tree_search_lt</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a574c05a02f2e58ef93d5ed5c1d32d20b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_tree_search_ge</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_search_ge</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="46" column="5" bodyfile="src/tr_tree.c" bodystart="221" bodyend="221" declfile="include/tr_tree.h" declline="46" declcolumn="5"/>
+        <references refid="tree__common_8c_1a8598cfe5c4f5a7a4a1bbc270225bc1ec" compoundref="tree__common_8c" startline="221" endline="225">tree_search_ge</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1aa9bb0f0c930c050042b8df9ffa6f37c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_tree_search_gt</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_search_gt</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="47" column="5" bodyfile="src/tr_tree.c" bodystart="222" bodyend="222" declfile="include/tr_tree.h" declline="47" declcolumn="5"/>
+        <references refid="tree__common_8c_1a34db2e1b372d1847d32223c3c852b059" compoundref="tree__common_8c" startline="245" endline="249">tree_search_gt</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a2c12fb2ab62855990ac8a0959ffd14b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref></type>
+        <definition>dict_remove_result tr_tree_remove</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_remove</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="49" column="1" bodyfile="src/tr_tree.c" bodystart="208" bodyend="216" declfile="include/tr_tree.h" declline="49" declcolumn="1"/>
+        <references refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tr__tree_8c" startline="51">tr_node::datum</references>
+        <references refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tr__tree_8c" startline="51">tr_node::key</references>
+        <references refid="tree__common_8c_1a8ca8a698fb9f3c76e48a451e547166db" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a6946de3d63d8b9e7190e13f3b3aa0925" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_clear</definition>
+        <argsstring>(tr_tree *tree, dict_delete_func delete_func)</argsstring>
+        <name>tr_tree_clear</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref></type>
+          <declname>delete_func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="50" column="7" bodyfile="src/tr_tree.c" bodystart="136" bodyend="136" declfile="include/tr_tree.h" declline="50" declcolumn="7"/>
+        <references refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" compoundref="tree__common_8c" startline="302" endline="325">tree_clear</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a6fd74f8e83a6fcdf320cd662512bb52f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_traverse</definition>
+        <argsstring>(tr_tree *tree, dict_visit_func visit, void *user_data)</argsstring>
+        <name>tr_tree_traverse</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type><ref refid="dict_8h_1aebbefe3aa81b20e1254e8a7a5253caf6" kindref="member">dict_visit_func</ref></type>
+          <declname>visit</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="51" column="7" bodyfile="src/tr_tree.c" bodystart="223" bodyend="223" declfile="include/tr_tree.h" declline="51" declcolumn="7"/>
+        <references refid="tree__common_8c_1a8af8d7bc05c41b6b1889714238c541e1" compoundref="tree__common_8c" startline="252" endline="268">tree_traverse</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a422a191c3a32b8f95b76b2d0be61a817" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_tree_select</definition>
+        <argsstring>(tr_tree *tree, size_t n, const void **key, void **datum)</argsstring>
+        <name>tr_tree_select</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const void **</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>datum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="52" column="5" bodyfile="src/tr_tree.c" bodystart="224" bodyend="224" declfile="include/tr_tree.h" declline="52" declcolumn="5"/>
+        <references refid="tree__common_8c_1aa14359a5a539fe914717663d62ab3bc2" compoundref="tree__common_8c" startline="271" endline="293">tree_select</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1ae6440d12783ccc58b1ef6e5f3c662c98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_count</definition>
+        <argsstring>(const tr_tree *tree)</argsstring>
+        <name>tr_tree_count</name>
+        <param>
+          <type>const <ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="53" column="7" bodyfile="src/tr_tree.c" bodystart="225" bodyend="225" declfile="include/tr_tree.h" declline="53" declcolumn="7"/>
+        <references refid="tree__common_8c_1a666279f96572685934714532e744718e" compoundref="tree__common_8c" startline="296" endline="299">tree_count</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a8d47e3d4932c53b1af3cda751867d431" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_min_path_length</definition>
+        <argsstring>(const tr_tree *tree)</argsstring>
+        <name>tr_tree_min_path_length</name>
+        <param>
+          <type>const <ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="54" column="7" bodyfile="src/tr_tree.c" bodystart="226" bodyend="226" declfile="include/tr_tree.h" declline="54" declcolumn="7"/>
+        <references refid="tree__common_8c_1a756193ba67a2786a5e4a6274a7ec170e" compoundref="tree__common_8c" startline="344" endline="348">tree_min_path_length</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1af7b0627fcc48dfe850aacbc4dab7ec01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_max_path_length</definition>
+        <argsstring>(const tr_tree *tree)</argsstring>
+        <name>tr_tree_max_path_length</name>
+        <param>
+          <type>const <ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="55" column="7" bodyfile="src/tr_tree.c" bodystart="227" bodyend="227" declfile="include/tr_tree.h" declline="55" declcolumn="7"/>
+        <references refid="tree__common_8c_1abf500bf5b159c5ec35a5e0a3ff57a0e8" compoundref="tree__common_8c" startline="359" endline="363">tree_max_path_length</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a35128a0a7038af7f263a1d2d5209086b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_total_path_length</definition>
+        <argsstring>(const tr_tree *tree)</argsstring>
+        <name>tr_tree_total_path_length</name>
+        <param>
+          <type>const <ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="56" column="7" bodyfile="src/tr_tree.c" bodystart="228" bodyend="228" declfile="include/tr_tree.h" declline="56" declcolumn="7"/>
+        <references refid="tree__common_8c_1a8ff1218a16ab93160f3a922fcdf88882" compoundref="tree__common_8c" startline="374" endline="378">tree_total_path_length</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1acb4c734f0994b7eadedde0e1c9a3809a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_tree_verify</definition>
+        <argsstring>(const tr_tree *tree)</argsstring>
+        <name>tr_tree_verify</name>
+        <param>
+          <type>const <ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="57" column="5" bodyfile="src/tr_tree.c" bodystart="271" bodyend="279" declfile="include/tr_tree.h" declline="57" declcolumn="5"/>
+        <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
+        <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a9f83be747a7e2cfa2063d96e82aeebfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+        <definition>tr_itor* tr_itor_new</definition>
+        <argsstring>(tr_tree *tree)</argsstring>
+        <name>tr_itor_new</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="61" column="8" bodyfile="src/tr_tree.c" bodystart="282" bodyend="290" declfile="include/tr_tree.h" declline="61" declcolumn="8"/>
+        <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
+        <references refid="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" compoundref="tr__tree_8c" startline="61">tr_itor::node</references>
+        <references refid="structtr__itor_1aecf2bdfca32e5e0ab1e1fd6ef98c7f94" compoundref="tr__tree_8c" startline="61">tr_itor::tree</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1ac6d0f50d8fb9f844fbd1d9a73c883887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdict__itor" kindref="compound">dict_itor</ref> *</type>
+        <definition>dict_itor* tr_dict_itor_new</definition>
+        <argsstring>(tr_tree *tree)</argsstring>
+        <name>tr_dict_itor_new</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="62" column="10" bodyfile="src/tr_tree.c" bodystart="293" bodyend="304" declfile="include/tr_tree.h" declline="62" declcolumn="10"/>
+        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="174">dict_itor::_itor</references>
+        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="175">dict_itor::_vtable</references>
+        <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
+        <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
+        <references refid="tr__tree_8c_1a9f83be747a7e2cfa2063d96e82aeebfa" compoundref="tr__tree_8c" startline="282" endline="290">tr_itor_new</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a0d33be2ae7dd13a2c1517f7141e9fc0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tr_itor_free</definition>
+        <argsstring>(tr_itor *tree)</argsstring>
+        <name>tr_itor_free</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="63" column="5" bodyfile="src/tr_tree.c" bodystart="306" bodyend="306" declfile="include/tr_tree.h" declline="63" declcolumn="5"/>
+        <references refid="tree__common_8c_1aa3a6573b092296a44a074269c8d2bc91" compoundref="tree__common_8c" startline="393" endline="398">tree_iterator_free</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1ac4bafa502b5ed7d8f92b3f917d7464fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_valid</definition>
+        <argsstring>(const tr_itor *itor)</argsstring>
+        <name>tr_itor_valid</name>
+        <param>
+          <type>const <ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="65" column="5" bodyfile="src/tr_tree.c" bodystart="307" bodyend="307" declfile="include/tr_tree.h" declline="65" declcolumn="5"/>
+        <references refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" compoundref="tree__common_8c" startline="381" endline="384">tree_iterator_valid</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a37970eecfadd85fbcd621b2fddbda176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tr_itor_invalidate</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_invalidate</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="66" column="5" bodyfile="src/tr_tree.c" bodystart="308" bodyend="308" declfile="include/tr_tree.h" declline="66" declcolumn="5"/>
+        <references refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" compoundref="tree__common_8c" startline="387" endline="390">tree_iterator_invalidate</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a6a6b39591a7036d82998fe5012b79e94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_next</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_next</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="67" column="5" bodyfile="src/tr_tree.c" bodystart="309" bodyend="309" declfile="include/tr_tree.h" declline="67" declcolumn="5"/>
+        <references refid="tree__common_8c_1a1e3db914a6bdf103e9f7db4f78c908ae" compoundref="tree__common_8c" startline="401" endline="405">tree_iterator_next</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a84639eb061b5324246005ca456935d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_prev</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_prev</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="68" column="5" bodyfile="src/tr_tree.c" bodystart="310" bodyend="310" declfile="include/tr_tree.h" declline="68" declcolumn="5"/>
+        <references refid="tree__common_8c_1afad64b5a28a44ca544fe3f0b8011db17" compoundref="tree__common_8c" startline="408" endline="412">tree_iterator_prev</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a5d104b8cb137d5dc21f9c99116aa7585" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_nextn</definition>
+        <argsstring>(tr_itor *itor, size_t count)</argsstring>
+        <name>tr_itor_nextn</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="69" column="5" bodyfile="src/tr_tree.c" bodystart="311" bodyend="311" declfile="include/tr_tree.h" declline="69" declcolumn="5"/>
+        <references refid="tree__common_8c_1a8a7b95378ac8dc696b220f073b83977c" compoundref="tree__common_8c" startline="415" endline="421">tree_iterator_nextn</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1accce6878c7a1a4b97584f78ab5308478" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_prevn</definition>
+        <argsstring>(tr_itor *itor, size_t count)</argsstring>
+        <name>tr_itor_prevn</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="70" column="5" bodyfile="src/tr_tree.c" bodystart="312" bodyend="312" declfile="include/tr_tree.h" declline="70" declcolumn="5"/>
+        <references refid="tree__common_8c_1aa54a225a4b2bfc3a6bbf73125d4dd88a" compoundref="tree__common_8c" startline="424" endline="430">tree_iterator_prevn</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a7ffb3d1301c986e527b96d42ee765b19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_first</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_first</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="71" column="5" bodyfile="src/tr_tree.c" bodystart="313" bodyend="313" declfile="include/tr_tree.h" declline="71" declcolumn="5"/>
+        <references refid="tree__common_8c_1a9bab181bc96dd1334ea36f0b3f647f2a" compoundref="tree__common_8c" startline="433" endline="437">tree_iterator_first</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a442bcd9f2b3b859ea4b74d88f2196077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_last</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_last</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="72" column="5" bodyfile="src/tr_tree.c" bodystart="314" bodyend="314" declfile="include/tr_tree.h" declline="72" declcolumn="5"/>
+        <references refid="tree__common_8c_1a03b78e22aed8c0dd38f96d939066239a" compoundref="tree__common_8c" startline="440" endline="444">tree_iterator_last</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1af4553033eb69c20e79a98be3fbea7170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_search</definition>
+        <argsstring>(tr_itor *itor, const void *key)</argsstring>
+        <name>tr_itor_search</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="73" column="5" bodyfile="src/tr_tree.c" bodystart="315" bodyend="315" declfile="include/tr_tree.h" declline="73" declcolumn="5"/>
+        <references refid="tree__common_8c_1aeebf37a00012869c931e03dbb1047ade" compoundref="tree__common_8c" startline="447" endline="451">tree_iterator_search</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a16ba357d7ce3b3233fc15c0c1e069df3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_search_le</definition>
+        <argsstring>(tr_itor *itor, const void *key)</argsstring>
+        <name>tr_itor_search_le</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="74" column="5" bodyfile="src/tr_tree.c" bodystart="316" bodyend="316" declfile="include/tr_tree.h" declline="74" declcolumn="5"/>
+        <references refid="tree__common_8c_1a630ac71696ac60548789b01f1e618350" compoundref="tree__common_8c" startline="454" endline="458">tree_iterator_search_le</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a451de2be9ffc4651dd0138ebb2a57fc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_search_lt</definition>
+        <argsstring>(tr_itor *itor, const void *key)</argsstring>
+        <name>tr_itor_search_lt</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="75" column="5" bodyfile="src/tr_tree.c" bodystart="317" bodyend="317" declfile="include/tr_tree.h" declline="75" declcolumn="5"/>
+        <references refid="tree__common_8c_1aa83954869eda27b3488032f96a257771" compoundref="tree__common_8c" startline="461" endline="465">tree_iterator_search_lt</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a854994ca3ed00e38a5fb585a443b1cf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_search_ge</definition>
+        <argsstring>(tr_itor *itor, const void *key)</argsstring>
+        <name>tr_itor_search_ge</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="76" column="5" bodyfile="src/tr_tree.c" bodystart="318" bodyend="318" declfile="include/tr_tree.h" declline="76" declcolumn="5"/>
+        <references refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" compoundref="tree__common_8c" startline="468" endline="472">tree_iterator_search_ge</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a9b3d079fdc8c2288c6fbf9180e03f029" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_search_gt</definition>
+        <argsstring>(tr_itor *itor, const void *key)</argsstring>
+        <name>tr_itor_search_gt</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="77" column="5" bodyfile="src/tr_tree.c" bodystart="319" bodyend="319" declfile="include/tr_tree.h" declline="77" declcolumn="5"/>
+        <references refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" compoundref="tree__common_8c" startline="475" endline="479">tree_iterator_search_gt</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a35ba10e05ebbf9ce85c829ed6d881da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const void *</type>
+        <definition>const void* tr_itor_key</definition>
+        <argsstring>(const tr_itor *itor)</argsstring>
+        <name>tr_itor_key</name>
+        <param>
+          <type>const <ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="78" column="11" bodyfile="src/tr_tree.c" bodystart="320" bodyend="320" declfile="include/tr_tree.h" declline="78" declcolumn="11"/>
+        <references refid="tree__common_8c_1af179889330c7dccaefc41a06d11b288f" compoundref="tree__common_8c" startline="495" endline="499">tree_iterator_key</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a1d9a225610e930952c949bd97f1d43ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_itor_datum</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_datum</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="79" column="5" bodyfile="src/tr_tree.c" bodystart="321" bodyend="321" declfile="include/tr_tree.h" declline="79" declcolumn="5"/>
+        <references refid="tree__common_8c_1ad4045a0af97ccd1df2c1e251e40e5a4f" compoundref="tree__common_8c" startline="502" endline="506">tree_iterator_datum</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1ae746542a6b1e4770004b3b0c6a9ae6ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tr_itor_compare</definition>
+        <argsstring>(const tr_itor *i1, const tr_itor *i2)</argsstring>
+        <name>tr_itor_compare</name>
+        <param>
+          <type>const <ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>i1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>i2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="80" column="17" bodyfile="src/tr_tree.c" bodystart="322" bodyend="322" declfile="include/tr_tree.h" declline="80" declcolumn="17"/>
+        <references refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" compoundref="tree__common_8c" startline="482" endline="492">tree_iterator_compare</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8h_1a633dcc656305d59fb4a395dc231fb04f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_remove</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_remove</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/tr_tree.h" line="81" column="5" bodyfile="src/tr_tree.c" bodystart="325" bodyend="332" declfile="include/tr_tree.h" declline="81" declcolumn="5"/>
+        <references refid="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" compoundref="tr__tree_8c" startline="61">tr_itor::node</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="tr__tree_8h_1a9abc2051519dbf98f8af8f44e672453e" refkind="member"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>libdict<sp/>--<sp/>treap<sp/>interface.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2001-2014,<sp/>Farooq<sp/>Mela</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;<sp/>AND</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIBDICT_TR_TREE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBDICT_TR_TREE_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dict_8h" kindref="compound">dict.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="dict_8h_1a0c5f0f7b40e3b3df5aaa4c5e3c874b3b" kindref="member">BEGIN_DECL</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtr__tree" kindref="compound">tr_tree</ref><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a50c1b306d0eb2d99da30e94c1c2f3127" kindref="member">tr_tree_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/>compare_func,<sp/><ref refid="dict_8h_1acd0323c1d9eb91048a9458e7467594f7" kindref="member">dict_prio_func</ref><sp/><ref refid="structtr__tree_1ab0fddef55318e7c9a173f78c9bbeffd1" kindref="member">prio_func</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1aaff60df98e5fda03de86208c5ab58818" kindref="member">tr_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/>compare_func,<sp/><ref refid="dict_8h_1acd0323c1d9eb91048a9458e7467594f7" kindref="member">dict_prio_func</ref><sp/><ref refid="structtr__tree_1ab0fddef55318e7c9a173f78c9bbeffd1" kindref="member">prio_func</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a76e673a39086c1510d82a6ee9ff74c8e" kindref="member">tr_tree_free</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1af12c30c66ba2122b652249b9531bb2c3" kindref="member">tr_tree_insert</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a72e0676b79abc74359c66d30345ae1f7" kindref="member">tr_tree_search</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a47a8040660895a251ac1d54a5f9689d0" kindref="member">tr_tree_search_le</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1afe61944f8ab6e076e4daa164ff1d7a5b" kindref="member">tr_tree_search_lt</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a574c05a02f2e58ef93d5ed5c1d32d20b" kindref="member">tr_tree_search_ge</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1aa9bb0f0c930c050042b8df9ffa6f37c6" kindref="member">tr_tree_search_gt</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a2c12fb2ab62855990ac8a0959ffd14b0" kindref="member">tr_tree_remove</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a6946de3d63d8b9e7190e13f3b3aa0925" kindref="member">tr_tree_clear</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a6fd74f8e83a6fcdf320cd662512bb52f" kindref="member">tr_tree_traverse</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/><ref refid="dict_8h_1aebbefe3aa81b20e1254e8a7a5253caf6" kindref="member">dict_visit_func</ref><sp/>visit,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>user_data);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a422a191c3a32b8f95b76b2d0be61a817" kindref="member">tr_tree_select</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/>key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/>datum);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1ae6440d12783ccc58b1ef6e5f3c662c98" kindref="member">tr_tree_count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a8d47e3d4932c53b1af3cda751867d431" kindref="member">tr_tree_min_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1af7b0627fcc48dfe850aacbc4dab7ec01" kindref="member">tr_tree_max_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a35128a0a7038af7f263a1d2d5209086b" kindref="member">tr_tree_total_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="57" refid="tr__tree_8h_1a594b5c00617e763e31da34743cf785f4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1acb4c734f0994b7eadedde0e1c9a3809a" kindref="member">tr_tree_verify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtr__itor" kindref="compound">tr_itor</ref><sp/><ref refid="structtr__itor" kindref="compound">tr_itor</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a9f83be747a7e2cfa2063d96e82aeebfa" kindref="member">tr_itor_new</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/><sp/><ref refid="tr__tree_8h_1ac6d0f50d8fb9f844fbd1d9a73c883887" kindref="member">tr_dict_itor_new</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a0d33be2ae7dd13a2c1517f7141e9fc0f" kindref="member">tr_itor_free</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1ac4bafa502b5ed7d8f92b3f917d7464fb" kindref="member">tr_itor_valid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a37970eecfadd85fbcd621b2fddbda176" kindref="member">tr_itor_invalidate</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a6a6b39591a7036d82998fe5012b79e94" kindref="member">tr_itor_next</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a84639eb061b5324246005ca456935d22" kindref="member">tr_itor_prev</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a5d104b8cb137d5dc21f9c99116aa7585" kindref="member">tr_itor_nextn</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1accce6878c7a1a4b97584f78ab5308478" kindref="member">tr_itor_prevn</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a7ffb3d1301c986e527b96d42ee765b19" kindref="member">tr_itor_first</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a442bcd9f2b3b859ea4b74d88f2196077" kindref="member">tr_itor_last</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1af4553033eb69c20e79a98be3fbea7170" kindref="member">tr_itor_search</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a16ba357d7ce3b3233fc15c0c1e069df3" kindref="member">tr_itor_search_le</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a451de2be9ffc4651dd0138ebb2a57fc4" kindref="member">tr_itor_search_lt</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a854994ca3ed00e38a5fb585a443b1cf0" kindref="member">tr_itor_search_ge</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a9b3d079fdc8c2288c6fbf9180e03f029" kindref="member">tr_itor_search_gt</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="tr__tree_8h_1a35ba10e05ebbf9ce85c829ed6d881da0" kindref="member">tr_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a1d9a225610e930952c949bd97f1d43ef" kindref="member">tr_itor_datum</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1ae746542a6b1e4770004b3b0c6a9ae6ee" kindref="member">tr_itor_compare</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>i1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>i2);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8h_1a633dcc656305d59fb4a395dc231fb04f" kindref="member">tr_itor_remove</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><ref refid="dict_8h_1acca589e3adebef8ed4e5bed6dea40ebb" kindref="member">END_DECL</ref></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!LIBDICT_TR_TREE_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/tr_tree.h"/>
+  </compounddef>
+</doxygen>

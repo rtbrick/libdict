@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structwb__itor" kind="struct" language="C++" prot="public">
+    <compoundname>wb_itor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwb__itor_1a42771997b8e85c81685bce9ab1a46426" prot="public" static="no" mutable="no">
+        <type><ref refid="structwb__tree" kindref="compound">wb_tree</ref> *</type>
+        <definition>wb_tree* tree</definition>
+        <argsstring></argsstring>
+        <name>tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wb_tree.c" line="79" column="15" bodyfile="src/wb_tree.c" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwb__itor_1a0c66ad50dc8ddb60e664a1d4c3132009" prot="public" static="no" mutable="no">
+        <type><ref refid="structwb__node" kindref="compound">wb_node</ref> *</type>
+        <definition>wb_node* node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/wb_tree.c" line="79" column="32" bodyfile="src/wb_tree.c" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>wb_node</label>
+        <link refid="structwb__node"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>rlink</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>wb_itor</label>
+        <link refid="structwb__itor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>tree</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>wb_tree</label>
+        <link refid="structwb__tree"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/wb_tree.c" line="78" column="1" bodyfile="src/wb_tree.c" bodystart="78" bodyend="80"/>
+    <listofallmembers>
+      <member refid="structwb__itor_1a0c66ad50dc8ddb60e664a1d4c3132009" prot="public" virt="non-virtual"><scope>wb_itor</scope><name>node</name></member>
+      <member refid="structwb__itor_1a42771997b8e85c81685bce9ab1a46426" prot="public" virt="non-virtual"><scope>wb_itor</scope><name>tree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

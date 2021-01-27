@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhashtable" kind="struct" language="C++" prot="public">
+    <compoundname>hashtable</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" prot="public" static="no" mutable="no">
+        <type><ref refid="structhash__node" kindref="compound">hash_node</ref> **</type>
+        <definition>hash_node** table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hashtable.c" line="57" column="18" bodyfile="src/hashtable.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhashtable_1a3e0944ca8a425fcd254ca5057e885e45" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref></type>
+        <definition>dict_compare_func cmp_func</definition>
+        <argsstring></argsstring>
+        <name>cmp_func</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hashtable.c" line="58" column="26" bodyfile="src/hashtable.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhashtable_1afcbf6b4ca50c87e70ae1ae4febfdff2f" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1a849c4295058ff98298369ba530fd254d" kindref="member">dict_hash_func</ref></type>
+        <definition>dict_hash_func hash_func</definition>
+        <argsstring></argsstring>
+        <name>hash_func</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hashtable.c" line="59" column="23" bodyfile="src/hashtable.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhashtable_1a76d971a3c552bc58ba9f0d5fceae9806" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hashtable.c" line="60" column="15" bodyfile="src/hashtable.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhashtable_1a245260f6f74972558f61b85227df5aae" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hashtable.c" line="61" column="17" bodyfile="src/hashtable.c" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>hash_node</label>
+        <link refid="structhash__node"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>next</edgelabel>
+          <edgelabel>prev</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hashtable</label>
+        <link refid="structhashtable"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>table</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/hashtable.c" line="56" column="1" bodyfile="src/hashtable.c" bodystart="56" bodyend="62"/>
+    <listofallmembers>
+      <member refid="structhashtable_1a3e0944ca8a425fcd254ca5057e885e45" prot="public" virt="non-virtual"><scope>hashtable</scope><name>cmp_func</name></member>
+      <member refid="structhashtable_1a76d971a3c552bc58ba9f0d5fceae9806" prot="public" virt="non-virtual"><scope>hashtable</scope><name>count</name></member>
+      <member refid="structhashtable_1afcbf6b4ca50c87e70ae1ae4febfdff2f" prot="public" virt="non-virtual"><scope>hashtable</scope><name>hash_func</name></member>
+      <member refid="structhashtable_1a245260f6f74972558f61b85227df5aae" prot="public" virt="non-virtual"><scope>hashtable</scope><name>size</name></member>
+      <member refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" prot="public" virt="non-virtual"><scope>hashtable</scope><name>table</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

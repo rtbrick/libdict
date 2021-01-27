@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhb__itor" kind="struct" language="C++" prot="public">
+    <compoundname>hb_itor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhb__itor_1a024a8670718387a22dc8053590c48176" prot="public" static="no" mutable="no">
+        <type><ref refid="structhb__tree" kindref="compound">hb_tree</ref> *</type>
+        <definition>hb_tree* tree</definition>
+        <argsstring></argsstring>
+        <name>tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hb_tree.c" line="56" column="15" bodyfile="src/hb_tree.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhb__itor_1abd1d99b37abe63189d6db6eb630bd2ff" prot="public" static="no" mutable="no">
+        <type><ref refid="structhb__node" kindref="compound">hb_node</ref> *</type>
+        <definition>hb_node* node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hb_tree.c" line="56" column="32" bodyfile="src/hb_tree.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>hb_node</label>
+        <link refid="structhb__node"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>pptr</edgelabel>
+          <edgelabel>rlink</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hb_itor</label>
+        <link refid="structhb__itor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>tree</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hb_tree</label>
+        <link refid="structhb__tree"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/hb_tree.c" line="55" column="1" bodyfile="src/hb_tree.c" bodystart="55" bodyend="57"/>
+    <listofallmembers>
+      <member refid="structhb__itor_1abd1d99b37abe63189d6db6eb630bd2ff" prot="public" virt="non-virtual"><scope>hb_itor</scope><name>node</name></member>
+      <member refid="structhb__itor_1a024a8670718387a22dc8053590c48176" prot="public" virt="non-virtual"><scope>hb_itor</scope><name>tree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

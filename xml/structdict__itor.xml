@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdict__itor" kind="struct" language="C++" prot="public">
+    <compoundname>dict_itor</compoundname>
+    <includes refid="dict_8h" local="no">dict.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _itor</definition>
+        <argsstring></argsstring>
+        <name>_itor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="174" column="9" bodyfile="include/dict.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structitor__vtable" kindref="compound">itor_vtable</ref> *</type>
+        <definition>const itor_vtable* _vtable</definition>
+        <argsstring></argsstring>
+        <name>_vtable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="175" column="24" bodyfile="include/dict.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>dict_itor</label>
+        <link refid="structdict__itor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_vtable</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>itor_vtable</label>
+        <link refid="structitor__vtable"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/dict.h" line="173" column="1" bodyfile="include/dict.h" bodystart="173" bodyend="176"/>
+    <listofallmembers>
+      <member refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" prot="public" virt="non-virtual"><scope>dict_itor</scope><name>_itor</name></member>
+      <member refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" prot="public" virt="non-virtual"><scope>dict_itor</scope><name>_vtable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhashtable2__itor" kind="struct" language="C++" prot="public">
+    <compoundname>hashtable2_itor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhashtable2__itor_1ac39287fa1fbff323f1764c7902c9e718" prot="public" static="no" mutable="no">
+        <type><ref refid="structhashtable2" kindref="compound">hashtable2</ref> *</type>
+        <definition>hashtable2* table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hashtable2.c" line="62" column="19" bodyfile="src/hashtable2.c" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int slot</definition>
+        <argsstring></argsstring>
+        <name>slot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hashtable2.c" line="63" column="12" bodyfile="src/hashtable2.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>hashtable2_itor</label>
+        <link refid="structhashtable2__itor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>table</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hashtable2</label>
+        <link refid="structhashtable2"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>table</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hash_node</label>
+        <link refid="structhash__node"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>next</edgelabel>
+          <edgelabel>prev</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/hashtable2.c" line="61" column="1" bodyfile="src/hashtable2.c" bodystart="61" bodyend="64"/>
+    <listofallmembers>
+      <member refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" prot="public" virt="non-virtual"><scope>hashtable2_itor</scope><name>slot</name></member>
+      <member refid="structhashtable2__itor_1ac39287fa1fbff323f1764c7902c9e718" prot="public" virt="non-virtual"><scope>hashtable2_itor</scope><name>table</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

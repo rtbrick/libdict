@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhb__node" kind="struct" language="C++" prot="public">
+    <compoundname>hb_node</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhb__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hb_tree.c" line="36" column="13" bodyfile="src/hb_tree.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhb__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* datum</definition>
+        <argsstring></argsstring>
+        <name>datum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hb_tree.c" line="37" column="13" bodyfile="src/hb_tree.c" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhb__node_1afef439511732fd1557216f60d140adc1" prot="public" static="no" mutable="no">
+        <type>intptr_t</type>
+        <definition>intptr_t bal</definition>
+        <argsstring></argsstring>
+        <name>bal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hb_tree.c" line="39" column="13" bodyfile="src/hb_tree.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhb__node_1a5a83c322bc3600c9d6ad24ac42fb3da4" prot="public" static="no" mutable="no">
+        <type><ref refid="structhb__node" kindref="compound">hb_node</ref> *</type>
+        <definition>hb_node* pptr</definition>
+        <argsstring></argsstring>
+        <name>pptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hb_tree.c" line="40" column="12" bodyfile="src/hb_tree.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhb__node_1a9142098899fc37a1d20a92aaeddb436c" prot="public" static="no" mutable="no">
+        <type>union hb_node::@0</type>
+        <definition>union hb_node::@0 @1</definition>
+        <argsstring></argsstring>
+        <name>@1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hb_tree.c" line="41" column="5"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhb__node_1a09a1a7c8d2b7630acdf7c7b85e084fd8" prot="public" static="no" mutable="no">
+        <type><ref refid="structhb__node" kindref="compound">hb_node</ref> *</type>
+        <definition>hb_node* llink</definition>
+        <argsstring></argsstring>
+        <name>llink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hb_tree.c" line="42" column="16" bodyfile="src/hb_tree.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhb__node_1abd399e99e142df740ec840a54f801a8d" prot="public" static="no" mutable="no">
+        <type><ref refid="structhb__node" kindref="compound">hb_node</ref> *</type>
+        <definition>hb_node* rlink</definition>
+        <argsstring></argsstring>
+        <name>rlink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hb_tree.c" line="43" column="16" bodyfile="src/hb_tree.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>hb_node</label>
+        <link refid="structhb__node"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>pptr</edgelabel>
+          <edgelabel>rlink</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/hb_tree.c" line="35" column="1" bodyfile="src/hb_tree.c" bodystart="35" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structhb__node_1afef439511732fd1557216f60d140adc1" prot="public" virt="non-virtual"><scope>hb_node</scope><name>bal</name></member>
+      <member refid="structhb__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" virt="non-virtual"><scope>hb_node</scope><name>datum</name></member>
+      <member refid="structhb__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" virt="non-virtual"><scope>hb_node</scope><name>key</name></member>
+      <member refid="structhb__node_1a09a1a7c8d2b7630acdf7c7b85e084fd8" prot="public" virt="non-virtual"><scope>hb_node</scope><name>llink</name></member>
+      <member refid="structhb__node_1a5a83c322bc3600c9d6ad24ac42fb3da4" prot="public" virt="non-virtual"><scope>hb_node</scope><name>pptr</name></member>
+      <member refid="structhb__node_1abd399e99e142df740ec840a54f801a8d" prot="public" virt="non-virtual"><scope>hb_node</scope><name>rlink</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

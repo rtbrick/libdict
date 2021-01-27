@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdict" kind="struct" language="C++" prot="public">
+    <compoundname>dict</compoundname>
+    <includes refid="dict_8h" local="no">dict.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdict_1a4658ca96529d47daaf0c459afdf9cc59" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _object</definition>
+        <argsstring></argsstring>
+        <name>_object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="152" column="9" bodyfile="include/dict.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict_1acf9d1ce55b44ba41d25081c84310a031" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structdict__vtable" kindref="compound">dict_vtable</ref> *</type>
+        <definition>const dict_vtable* _vtable</definition>
+        <argsstring></argsstring>
+        <name>_vtable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="153" column="24" bodyfile="include/dict.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>dict_insert_result</label>
+        <link refid="structdict__insert__result"/>
+      </node>
+      <node id="2">
+        <label>dict_vtable</label>
+        <link refid="structdict__vtable"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>insert</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>inew</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>remove</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dict</label>
+        <link refid="structdict"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_vtable</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dict_itor</label>
+        <link refid="structdict__itor"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>_vtable</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>itor_vtable</label>
+        <link refid="structitor__vtable"/>
+      </node>
+      <node id="6">
+        <label>dict_remove_result</label>
+        <link refid="structdict__remove__result"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/dict.h" line="151" column="1" bodyfile="include/dict.h" bodystart="151" bodyend="154"/>
+    <listofallmembers>
+      <member refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" prot="public" virt="non-virtual"><scope>dict</scope><name>_object</name></member>
+      <member refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" prot="public" virt="non-virtual"><scope>dict</scope><name>_vtable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

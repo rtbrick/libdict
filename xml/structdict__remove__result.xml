@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdict__remove__result" kind="struct" language="C++" prot="public">
+    <compoundname>dict_remove_result</compoundname>
+    <includes refid="dict_8h" local="no">dict.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdict__remove__result_1ab5c000aec752f2206131e183daf5efbf" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="79" column="12" bodyfile="include/dict.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__remove__result_1a56b62b74c25973b49f06895dfd600c94" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* datum</definition>
+        <argsstring></argsstring>
+        <name>datum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="80" column="12" bodyfile="include/dict.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__remove__result_1a3b6ac8b02ffc67e7ac109edf6dca3ceb" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool removed</definition>
+        <argsstring></argsstring>
+        <name>removed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="81" column="13" bodyfile="include/dict.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/dict.h" line="78" column="1" bodyfile="include/dict.h" bodystart="78" bodyend="82"/>
+    <listofallmembers>
+      <member refid="structdict__remove__result_1a56b62b74c25973b49f06895dfd600c94" prot="public" virt="non-virtual"><scope>dict_remove_result</scope><name>datum</name></member>
+      <member refid="structdict__remove__result_1ab5c000aec752f2206131e183daf5efbf" prot="public" virt="non-virtual"><scope>dict_remove_result</scope><name>key</name></member>
+      <member refid="structdict__remove__result_1a3b6ac8b02ffc67e7ac109edf6dca3ceb" prot="public" virt="non-virtual"><scope>dict_remove_result</scope><name>removed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

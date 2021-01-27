@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdict__insert__result" kind="struct" language="C++" prot="public">
+    <compoundname>dict_insert_result</compoundname>
+    <includes refid="dict_8h" local="no">dict.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdict__insert__result_1a9874e765273b8a34323b00166c989f2e" prot="public" static="no" mutable="no">
+        <type>void **</type>
+        <definition>void** datum_ptr</definition>
+        <argsstring></argsstring>
+        <name>datum_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="74" column="11" bodyfile="include/dict.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__insert__result_1a325385b8d6787835cb03a2f364ab2c56" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool inserted</definition>
+        <argsstring></argsstring>
+        <name>inserted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="75" column="13" bodyfile="include/dict.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/dict.h" line="73" column="1" bodyfile="include/dict.h" bodystart="73" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structdict__insert__result_1a9874e765273b8a34323b00166c989f2e" prot="public" virt="non-virtual"><scope>dict_insert_result</scope><name>datum_ptr</name></member>
+      <member refid="structdict__insert__result_1a325385b8d6787835cb03a2f364ab2c56" prot="public" virt="non-virtual"><scope>dict_insert_result</scope><name>inserted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

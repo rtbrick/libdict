@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtr__node" kind="struct" language="C++" prot="public">
+    <compoundname>tr_node</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtr__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="51" column="10" bodyfile="src/tr_tree.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtr__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* datum</definition>
+        <argsstring></argsstring>
+        <name>datum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="51" column="21" bodyfile="src/tr_tree.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" prot="public" static="no" mutable="no">
+        <type><ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
+        <definition>tr_node* parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="51" column="39" bodyfile="src/tr_tree.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" prot="public" static="no" mutable="no">
+        <type><ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
+        <definition>tr_node* llink</definition>
+        <argsstring></argsstring>
+        <name>llink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="51" column="58" bodyfile="src/tr_tree.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" prot="public" static="no" mutable="no">
+        <type><ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
+        <definition>tr_node* rlink</definition>
+        <argsstring></argsstring>
+        <name>rlink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="51" column="76" bodyfile="src/tr_tree.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t prio</definition>
+        <argsstring></argsstring>
+        <name>prio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="52" column="17" bodyfile="src/tr_tree.c" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>tr_node</label>
+        <link refid="structtr__node"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>rlink</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/tr_tree.c" line="50" column="1" bodyfile="src/tr_tree.c" bodystart="50" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" virt="non-virtual"><scope>tr_node</scope><name>datum</name></member>
+      <member refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" virt="non-virtual"><scope>tr_node</scope><name>key</name></member>
+      <member refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" prot="public" virt="non-virtual"><scope>tr_node</scope><name>llink</name></member>
+      <member refid="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" prot="public" virt="non-virtual"><scope>tr_node</scope><name>parent</name></member>
+      <member refid="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" prot="public" virt="non-virtual"><scope>tr_node</scope><name>prio</name></member>
+      <member refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" prot="public" virt="non-virtual"><scope>tr_node</scope><name>rlink</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

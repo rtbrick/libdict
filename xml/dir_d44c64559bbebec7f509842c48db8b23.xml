@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="dict_8h">dict.h</innerfile>
+    <innerfile refid="hashtable_8h">hashtable.h</innerfile>
+    <innerfile refid="hashtable2_8h">hashtable2.h</innerfile>
+    <innerfile refid="hb__tree_8h">hb_tree.h</innerfile>
+    <innerfile refid="pr__tree_8h">pr_tree.h</innerfile>
+    <innerfile refid="rb__tree_8h">rb_tree.h</innerfile>
+    <innerfile refid="skiplist_8h">skiplist.h</innerfile>
+    <innerfile refid="sp__tree_8h">sp_tree.h</innerfile>
+    <innerfile refid="tr__tree_8h">tr_tree.h</innerfile>
+    <innerfile refid="wb__tree_8h">wb_tree.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/"/>
+  </compounddef>
+</doxygen>

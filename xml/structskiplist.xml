@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structskiplist" kind="struct" language="C++" prot="public">
+    <compoundname>skiplist</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" prot="public" static="no" mutable="no">
+        <type><ref refid="structskip__node" kindref="compound">skip_node</ref> *</type>
+        <definition>skip_node* head</definition>
+        <argsstring></argsstring>
+        <name>head</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="50" column="18" bodyfile="src/skiplist.c" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structskiplist_1a196385d0ce1b6f622135248c96a88e6d" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned max_link</definition>
+        <argsstring></argsstring>
+        <name>max_link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="51" column="17" bodyfile="src/skiplist.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structskiplist_1af6e47de1fdddfdde6a04eaf5a4cf1609" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned top_link</definition>
+        <argsstring></argsstring>
+        <name>top_link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="52" column="17" bodyfile="src/skiplist.c" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref></type>
+        <definition>dict_compare_func cmp_func</definition>
+        <argsstring></argsstring>
+        <name>cmp_func</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="53" column="26" bodyfile="src/skiplist.c" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structskiplist_1a76d971a3c552bc58ba9f0d5fceae9806" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="54" column="15" bodyfile="src/skiplist.c" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>skip_node</label>
+        <link refid="structskip__node"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>link</edgelabel>
+          <edgelabel>prev</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>skiplist</label>
+        <link refid="structskiplist"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>head</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/skiplist.c" line="49" column="1" bodyfile="src/skiplist.c" bodystart="49" bodyend="55"/>
+    <listofallmembers>
+      <member refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" prot="public" virt="non-virtual"><scope>skiplist</scope><name>cmp_func</name></member>
+      <member refid="structskiplist_1a76d971a3c552bc58ba9f0d5fceae9806" prot="public" virt="non-virtual"><scope>skiplist</scope><name>count</name></member>
+      <member refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" prot="public" virt="non-virtual"><scope>skiplist</scope><name>head</name></member>
+      <member refid="structskiplist_1a196385d0ce1b6f622135248c96a88e6d" prot="public" virt="non-virtual"><scope>skiplist</scope><name>max_link</name></member>
+      <member refid="structskiplist_1af6e47de1fdddfdde6a04eaf5a4cf1609" prot="public" virt="non-virtual"><scope>skiplist</scope><name>top_link</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

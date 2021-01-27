@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structskiplist__itor" kind="struct" language="C++" prot="public">
+    <compoundname>skiplist_itor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" prot="public" static="no" mutable="no">
+        <type><ref refid="structskiplist" kindref="compound">skiplist</ref> *</type>
+        <definition>skiplist* list</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="58" column="17" bodyfile="src/skiplist.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" prot="public" static="no" mutable="no">
+        <type><ref refid="structskip__node" kindref="compound">skip_node</ref> *</type>
+        <definition>skip_node* node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="59" column="18" bodyfile="src/skiplist.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>skip_node</label>
+        <link refid="structskip__node"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>link</edgelabel>
+          <edgelabel>prev</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>skiplist_itor</label>
+        <link refid="structskiplist__itor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>skiplist</label>
+        <link refid="structskiplist"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>head</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/skiplist.c" line="57" column="1" bodyfile="src/skiplist.c" bodystart="57" bodyend="60"/>
+    <listofallmembers>
+      <member refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" prot="public" virt="non-virtual"><scope>skiplist_itor</scope><name>list</name></member>
+      <member refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" prot="public" virt="non-virtual"><scope>skiplist_itor</scope><name>node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

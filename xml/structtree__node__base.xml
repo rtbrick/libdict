@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtree__node__base" kind="struct" language="C++" prot="public">
+    <compoundname>tree_node_base</compoundname>
+    <includes refid="tree__common_8h" local="no">tree_common.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtree__node__base_1ab5c000aec752f2206131e183daf5efbf" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tree_common.h" line="41" column="10" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtree__node__base_1a56b62b74c25973b49f06895dfd600c94" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* datum</definition>
+        <argsstring></argsstring>
+        <name>datum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tree_common.h" line="41" column="21" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtree__node__base_1a004e0d775ac84f0908b5b6b346087660" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structtree__node__base" kindref="compound">tree_node_base</ref> *</type>
+        <definition>struct tree_node_base* parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tree_common.h" line="41" column="51" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtree__node__base_1af4f788ba1f85223b13b3c13e9f7d2424" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structtree__node__base" kindref="compound">tree_node_base</ref> *</type>
+        <definition>struct tree_node_base* llink</definition>
+        <argsstring></argsstring>
+        <name>llink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tree_common.h" line="41" column="82" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtree__node__base_1ac763a359e713b626d6ce7f16604e8da5" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structtree__node__base" kindref="compound">tree_node_base</ref> *</type>
+        <definition>struct tree_node_base* rlink</definition>
+        <argsstring></argsstring>
+        <name>rlink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tree_common.h" line="41" column="112" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>tree_node_base</label>
+        <link refid="structtree__node__base"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>rlink</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/tree_common.h" line="40" column="1" bodyfile="src/tree_common.h" bodystart="40" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structtree__node__base_1a56b62b74c25973b49f06895dfd600c94" prot="public" virt="non-virtual"><scope>tree_node_base</scope><name>datum</name></member>
+      <member refid="structtree__node__base_1ab5c000aec752f2206131e183daf5efbf" prot="public" virt="non-virtual"><scope>tree_node_base</scope><name>key</name></member>
+      <member refid="structtree__node__base_1af4f788ba1f85223b13b3c13e9f7d2424" prot="public" virt="non-virtual"><scope>tree_node_base</scope><name>llink</name></member>
+      <member refid="structtree__node__base_1a004e0d775ac84f0908b5b6b346087660" prot="public" virt="non-virtual"><scope>tree_node_base</scope><name>parent</name></member>
+      <member refid="structtree__node__base_1ac763a359e713b626d6ce7f16604e8da5" prot="public" virt="non-virtual"><scope>tree_node_base</scope><name>rlink</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

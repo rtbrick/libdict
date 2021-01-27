@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="dict_8c">dict.c</innerfile>
+    <innerfile refid="dict__private_8h">dict_private.h</innerfile>
+    <innerfile refid="hashtable_8c">hashtable.c</innerfile>
+    <innerfile refid="hashtable2_8c">hashtable2.c</innerfile>
+    <innerfile refid="hashtable__common_8c">hashtable_common.c</innerfile>
+    <innerfile refid="hashtable__common_8h">hashtable_common.h</innerfile>
+    <innerfile refid="hb__tree_8c">hb_tree.c</innerfile>
+    <innerfile refid="pr__tree_8c">pr_tree.c</innerfile>
+    <innerfile refid="rb__tree_8c">rb_tree.c</innerfile>
+    <innerfile refid="skiplist_8c">skiplist.c</innerfile>
+    <innerfile refid="sp__tree_8c">sp_tree.c</innerfile>
+    <innerfile refid="tr__tree_8c">tr_tree.c</innerfile>
+    <innerfile refid="tree__common_8c">tree_common.c</innerfile>
+    <innerfile refid="tree__common_8h">tree_common.h</innerfile>
+    <innerfile refid="wb__tree_8c">wb_tree.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

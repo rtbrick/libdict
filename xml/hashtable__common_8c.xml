@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hashtable__common_8c" kind="file" language="C++">
+    <compoundname>hashtable_common.c</compoundname>
+    <includes refid="hashtable__common_8h" local="yes">hashtable_common.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/hashtable_common.c</label>
+        <link refid="hashtable__common_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hashtable_common.h</label>
+        <link refid="hashtable__common_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="hashtable__common_8c_1aba0865e40164f606e02b9db8ecdb8408" prot="public" static="yes" mutable="no">
+        <type>const unsigned</type>
+        <definition>const unsigned kPrimes[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kPrimes</name>
+        <initializer>= {
+    11,		17,	    37,		67,	    131,
+    257,	521,	    1031,       2053,       4099,
+    8209,       16411,      32771,      65537,      131101,
+    262147,     524309,     1048583,    2097169,    4194319,
+    8388617,    16777259,   33554467,   67108879,   134217757,
+    268435459,  536870923,  1073741827, 2147483659, 4294967291
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hashtable_common.c" line="30" column="23" bodyfile="src/hashtable_common.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="hashtable__common_8c_1ad60146210872d945ed48ae63cb8f166f" prot="public" static="yes" mutable="no">
+        <type>const unsigned</type>
+        <definition>const unsigned kNumPrimes</definition>
+        <argsstring></argsstring>
+        <name>kNumPrimes</name>
+        <initializer>= sizeof(kPrimes) / sizeof(kPrimes[0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hashtable_common.c" line="38" column="23" bodyfile="src/hashtable_common.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hashtable__common_8c_1af8af08005cd8f9f8cd81dd7ca0692b11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned dict_prime_geq</definition>
+        <argsstring>(unsigned n)</argsstring>
+        <name>dict_prime_geq</name>
+        <param>
+          <type>unsigned</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hashtable_common.c" line="41" column="1" bodyfile="src/hashtable_common.c" bodystart="41" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>libdict<sp/>-<sp/>common<sp/>definitions<sp/>for<sp/>hash<sp/>tables.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2014,<sp/>Farooq<sp/>Mela</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;<sp/>AND</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hashtable__common_8h" kindref="compound">hashtable_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>kPrimes[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>11,<sp/><sp/><sp/><sp/><sp/>17,<sp/><sp/><sp/><sp/><sp/>37,<sp/><sp/><sp/><sp/><sp/>67,<sp/><sp/><sp/><sp/><sp/>131,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>257,<sp/><sp/><sp/><sp/>521,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1031,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2053,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4099,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>8209,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>16411,<sp/><sp/><sp/><sp/><sp/><sp/>32771,<sp/><sp/><sp/><sp/><sp/><sp/>65537,<sp/><sp/><sp/><sp/><sp/><sp/>131101,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>262147,<sp/><sp/><sp/><sp/><sp/>524309,<sp/><sp/><sp/><sp/><sp/>1048583,<sp/><sp/><sp/><sp/>2097169,<sp/><sp/><sp/><sp/>4194319,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>8388617,<sp/><sp/><sp/><sp/>16777259,<sp/><sp/><sp/>33554467,<sp/><sp/><sp/>67108879,<sp/><sp/><sp/>134217757,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>268435459,<sp/><sp/>536870923,<sp/><sp/>1073741827,<sp/>2147483659,<sp/>4294967291</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>kNumPrimes<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(kPrimes)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(kPrimes[0]);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="hashtable__common_8c_1af8af08005cd8f9f8cd81dd7ca0692b11" refkind="member"><highlight class="normal"><ref refid="hashtable__common_8c_1af8af08005cd8f9f8cd81dd7ca0692b11" kindref="member">dict_prime_geq</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>TODO(farooq):<sp/>use<sp/>binary<sp/>search<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>kNumPrimes;<sp/>++index)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(kPrimes[index]<sp/>&gt;=<sp/>n)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>kPrimes[index];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>kPrimes[kNumPrimes<sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/hashtable_common.c"/>
+  </compounddef>
+</doxygen>

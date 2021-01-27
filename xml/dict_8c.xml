@@ -1,0 +1,513 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dict_8c" kind="file" language="C++">
+    <compoundname>dict.c</compoundname>
+    <includes refid="dict__private_8h" local="yes">dict_private.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>stdbool.h</label>
+      </node>
+      <node id="14">
+        <label>skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="13">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="17">
+        <label>wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dict_private.h</label>
+        <link refid="dict__private_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/dict.c</label>
+        <link refid="dict_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>hashtable.h</label>
+        <link refid="hashtable_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dict.h</label>
+        <link refid="dict_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>pr_tree.h</label>
+        <link refid="pr__tree_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="10">
+        <label>hashtable2.h</label>
+        <link refid="hashtable2_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>tr_tree.h</label>
+        <link refid="tr__tree_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="dict_8c_1aaa3726224d7be26c97326d970701af83" prot="public" static="no">
+        <name>XSTRINGIFY</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="dict_8c_1a6df1d22fb5f09eccc23b9f399670cfd7" kindref="member">STRINGIFY</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="30" column="9" bodyfile="src/dict.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dict_8c_1a6df1d22fb5f09eccc23b9f399670cfd7" prot="public" static="no">
+        <name>STRINGIFY</name>
+        <param><defname>x</defname></param>
+        <initializer>#x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="31" column="9" bodyfile="src/dict.c" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dict_8c_1aebdce71ca7165e3d22e931f13b3b354e" prot="public" static="no" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const kDictVersionString</definition>
+        <argsstring></argsstring>
+        <name>kDictVersionString</name>
+        <initializer>= &quot;0&quot; &quot;.&quot;
+				       &quot;3&quot; &quot;.&quot;
+				       &quot;0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="33" column="18" bodyfile="src/dict.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dict_8c_1af202e0695edba206489b6a3936610803" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* dict_malloc_func) (size_t)</definition>
+        <argsstring>)(size_t)</argsstring>
+        <name>dict_malloc_func</name>
+        <initializer>= malloc</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="37" column="1" bodyfile="src/dict.c" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dict_8c_1afeae04c4c07e57a7451c3480a7a4bf2e" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* dict_free_func) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>dict_free_func</name>
+        <initializer>= free</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="38" column="1" bodyfile="src/dict.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dict_8c_1aff73cb45075501b1f9cac831514fc716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int dict_int_cmp</definition>
+        <argsstring>(const void *k1, const void *k2)</argsstring>
+        <name>dict_int_cmp</name>
+        <param>
+          <type>const void *</type>
+          <declname>k1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="41" column="1" bodyfile="src/dict.c" bodystart="41" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="dict_8c_1a5f039dd5b7c1348411fe3eb40f10aa91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int dict_uint_cmp</definition>
+        <argsstring>(const void *k1, const void *k2)</argsstring>
+        <name>dict_uint_cmp</name>
+        <param>
+          <type>const void *</type>
+          <declname>k1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="49" column="1" bodyfile="src/dict.c" bodystart="49" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="dict_8c_1ae281f2cf5e9f40b8d9f043e55f98389b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int dict_long_cmp</definition>
+        <argsstring>(const void *k1, const void *k2)</argsstring>
+        <name>dict_long_cmp</name>
+        <param>
+          <type>const void *</type>
+          <declname>k1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="57" column="1" bodyfile="src/dict.c" bodystart="57" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="dict_8c_1a4a9f360c1a6254aba6f33ada8bc981a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int dict_ulong_cmp</definition>
+        <argsstring>(const void *k1, const void *k2)</argsstring>
+        <name>dict_ulong_cmp</name>
+        <param>
+          <type>const void *</type>
+          <declname>k1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="65" column="1" bodyfile="src/dict.c" bodystart="65" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="dict_8c_1a18bc040f3cc63cf74faa0218a2e36ea5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int dict_ptr_cmp</definition>
+        <argsstring>(const void *k1, const void *k2)</argsstring>
+        <name>dict_ptr_cmp</name>
+        <param>
+          <type>const void *</type>
+          <declname>k1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="73" column="1" bodyfile="src/dict.c" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="dict_8c_1a6e8db53eafe12ed257b3a8005a947d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int dict_str_cmp</definition>
+        <argsstring>(const void *k1, const void *k2)</argsstring>
+        <name>dict_str_cmp</name>
+        <param>
+          <type>const void *</type>
+          <declname>k1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>k2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="79" column="1" bodyfile="src/dict.c" bodystart="79" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="dict_8c_1a8a174e862d3ddbf2a985675500dcaf43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned dict_str_hash</definition>
+        <argsstring>(const void *k)</argsstring>
+        <name>dict_str_hash</name>
+        <param>
+          <type>const void *</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="92" column="1" bodyfile="src/dict.c" bodystart="92" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="dict_8c_1a4ffb34d3cb396bb2a79d2e21298c3bdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t dict_free</definition>
+        <argsstring>(dict *dct, dict_delete_func delete_func)</argsstring>
+        <name>dict_free</name>
+        <param>
+          <type><ref refid="structdict" kindref="compound">dict</ref> *</type>
+          <declname>dct</declname>
+        </param>
+        <param>
+          <type><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref></type>
+          <declname>delete_func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="103" column="1" bodyfile="src/dict.c" bodystart="103" bodyend="110"/>
+        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="152">dict::_object</references>
+        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" compoundref="dict_8h" startline="100">dict_vtable::dfree</references>
+        <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
+      </memberdef>
+      <memberdef kind="function" id="dict_8c_1ad63f3fe30bbbf82147a6eb419ab1f040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dict_itor_free</definition>
+        <argsstring>(dict_itor *itor)</argsstring>
+        <name>dict_itor_free</name>
+        <param>
+          <type><ref refid="structdict__itor" kindref="compound">dict_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict.c" line="113" column="1" bodyfile="src/dict.c" bodystart="113" bodyend="119"/>
+        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="174">dict_itor::_itor</references>
+        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="175">dict_itor::_vtable</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
+        <references refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" compoundref="dict_8h" startline="131">itor_vtable::ifree</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>libdict<sp/>--<sp/>generic<sp/>dictionary<sp/>implementation.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2001-2014,<sp/>Farooq<sp/>Mela</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;<sp/>AND</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dict__private_8h" kindref="compound">dict_private.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="dict_8c_1aaa3726224d7be26c97326d970701af83" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XSTRINGIFY(x)<sp/><sp/><sp/>STRINGIFY(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="dict_8c_1a6df1d22fb5f09eccc23b9f399670cfd7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STRINGIFY(x)<sp/><sp/><sp/><sp/>#x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="dict_8c_1aebdce71ca7165e3d22e931f13b3b354e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dict_8c_1aebdce71ca7165e3d22e931f13b3b354e" kindref="member">kDictVersionString</ref><sp/>=<sp/><ref refid="dict_8c_1aaa3726224d7be26c97326d970701af83" kindref="member">XSTRINGIFY</ref>(<ref refid="dict_8h_1aea067f8afa29b1aae36acf8a3e20823c" kindref="member">DICT_VERSION_MAJOR</ref>)<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict_8c_1aaa3726224d7be26c97326d970701af83" kindref="member">XSTRINGIFY</ref>(<ref refid="dict_8h_1a3df93efd89c744ae214d5003f33f9c41" kindref="member">DICT_VERSION_MINOR</ref>)<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict_8c_1aaa3726224d7be26c97326d970701af83" kindref="member">XSTRINGIFY</ref>(<ref refid="dict_8h_1a5985ca4f8bd97c110645a7e2315b4516" kindref="member">DICT_VERSION_PATCH</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="dict_8c_1af202e0695edba206489b6a3936610803" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>(*dict_malloc_func)(size_t)<sp/>=<sp/>malloc;</highlight></codeline>
+<codeline lineno="38" refid="dict_8c_1afeae04c4c07e57a7451c3480a7a4bf2e" refkind="member"><highlight class="normal">void<sp/>(*<ref refid="dict_8c_1afeae04c4c07e57a7451c3480a7a4bf2e" kindref="member">dict_free_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)<sp/>=<sp/>free;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="dict_8c_1aff73cb45075501b1f9cac831514fc716" refkind="member"><highlight class="normal"><ref refid="dict_8c_1aff73cb45075501b1f9cac831514fc716" kindref="member">dict_int_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>*(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)k1;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>*(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)k2;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(a<sp/>&gt;<sp/>b)<sp/>-<sp/>(a<sp/>&lt;<sp/>b);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="dict_8c_1a5f039dd5b7c1348411fe3eb40f10aa91" refkind="member"><highlight class="normal"><ref refid="dict_8c_1a5f039dd5b7c1348411fe3eb40f10aa91" kindref="member">dict_uint_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>*(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)k1;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>*(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)k2;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(a<sp/>&gt;<sp/>b)<sp/>-<sp/>(a<sp/>&lt;<sp/>b);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="dict_8c_1ae281f2cf5e9f40b8d9f043e55f98389b" refkind="member"><highlight class="normal"><ref refid="dict_8c_1ae281f2cf5e9f40b8d9f043e55f98389b" kindref="member">dict_long_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>*(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)k1;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>*(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)k2;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(a<sp/>&gt;<sp/>b)<sp/>-<sp/>(a<sp/>&lt;<sp/>b);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="dict_8c_1a4a9f360c1a6254aba6f33ada8bc981a8" refkind="member"><highlight class="normal"><ref refid="dict_8c_1a4a9f360c1a6254aba6f33ada8bc981a8" kindref="member">dict_ulong_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>*(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)k1;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>*(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)k2;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(a<sp/>&gt;<sp/>b)<sp/>-<sp/>(a<sp/>&lt;<sp/>b);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="dict_8c_1a18bc040f3cc63cf74faa0218a2e36ea5" refkind="member"><highlight class="normal"><ref refid="dict_8c_1a18bc040f3cc63cf74faa0218a2e36ea5" kindref="member">dict_ptr_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(k1<sp/>&gt;<sp/>k2)<sp/>-<sp/>(k1<sp/>&lt;<sp/>k2);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="dict_8c_1a6e8db53eafe12ed257b3a8005a947d85" refkind="member"><highlight class="normal"><ref refid="dict_8c_1a6e8db53eafe12ed257b3a8005a947d85" kindref="member">dict_str_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>a<sp/>=<sp/>k1;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>b<sp/>=<sp/>k2;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>*a++,<sp/>q<sp/>=<sp/>*b++;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!p<sp/>||<sp/>p<sp/>!=<sp/>q)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(p<sp/>&gt;<sp/>q)<sp/>-<sp/>(p<sp/>&lt;<sp/>q);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="dict_8c_1a8a174e862d3ddbf2a985675500dcaf43" refkind="member"><highlight class="normal"><ref refid="dict_8c_1a8a174e862d3ddbf2a985675500dcaf43" kindref="member">dict_str_hash</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>FNV<sp/>1-a<sp/>string<sp/>hash.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>hash<sp/>=<sp/>2166136261U;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>ptr<sp/>=<sp/>k;<sp/>*ptr;)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>hash<sp/>=<sp/>(hash<sp/>^<sp/>*ptr++)<sp/>*<sp/>16777619U;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hash;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="dict_8c_1a4ffb34d3cb396bb2a79d2e21298c3bdb" refkind="member"><highlight class="normal"><ref refid="dict_8c_1a4ffb34d3cb396bb2a79d2e21298c3bdb" kindref="member">dict_free</ref>(<ref refid="structdict" kindref="compound">dict</ref>*<sp/>dct,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" kindref="member">ASSERT</ref>(dct<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>dct-&gt;<ref refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" kindref="member">_vtable</ref>-&gt;<ref refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" kindref="member">dfree</ref>(dct-&gt;<ref refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" kindref="member">_object</ref>,<sp/>delete_func);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" kindref="member">FREE</ref>(dct);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="dict_8c_1ad63f3fe30bbbf82147a6eb419ab1f040" refkind="member"><highlight class="normal"><ref refid="dict_8c_1ad63f3fe30bbbf82147a6eb419ab1f040" kindref="member">dict_itor_free</ref>(<ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/>itor)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" kindref="member">ASSERT</ref>(itor<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>itor-&gt;<ref refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" kindref="member">_vtable</ref>-&gt;<ref refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" kindref="member">ifree</ref>(itor-&gt;<ref refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" kindref="member">_itor</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" kindref="member">FREE</ref>(itor);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/dict.c"/>
+  </compounddef>
+</doxygen>

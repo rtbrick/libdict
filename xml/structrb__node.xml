@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structrb__node" kind="struct" language="C++" prot="public">
+    <compoundname>rb_node</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrb__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/rb_tree.c" line="40" column="13" bodyfile="src/rb_tree.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrb__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* datum</definition>
+        <argsstring></argsstring>
+        <name>datum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/rb_tree.c" line="41" column="13" bodyfile="src/rb_tree.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrb__node_1ac8f265bed1235ac887fe760cab708f42" prot="public" static="no" mutable="no">
+        <type>intptr_t</type>
+        <definition>intptr_t color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/rb_tree.c" line="42" column="17" bodyfile="src/rb_tree.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" prot="public" static="no" mutable="no">
+        <type><ref refid="structrb__node" kindref="compound">rb_node</ref> *</type>
+        <definition>rb_node* llink</definition>
+        <argsstring></argsstring>
+        <name>llink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/rb_tree.c" line="43" column="16" bodyfile="src/rb_tree.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrb__node_1a0c31e262dea8ef6bf9e7efdbbb20f6e1" prot="public" static="no" mutable="no">
+        <type><ref refid="structrb__node" kindref="compound">rb_node</ref> *</type>
+        <definition>rb_node* rlink</definition>
+        <argsstring></argsstring>
+        <name>rlink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/rb_tree.c" line="44" column="16" bodyfile="src/rb_tree.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>rb_node</label>
+        <link refid="structrb__node"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>rlink</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/rb_tree.c" line="39" column="1" bodyfile="src/rb_tree.c" bodystart="39" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structrb__node_1ac8f265bed1235ac887fe760cab708f42" prot="public" virt="non-virtual"><scope>rb_node</scope><name>color</name></member>
+      <member refid="structrb__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" virt="non-virtual"><scope>rb_node</scope><name>datum</name></member>
+      <member refid="structrb__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" virt="non-virtual"><scope>rb_node</scope><name>key</name></member>
+      <member refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" prot="public" virt="non-virtual"><scope>rb_node</scope><name>llink</name></member>
+      <member refid="structrb__node_1a0c31e262dea8ef6bf9e7efdbbb20f6e1" prot="public" virt="non-virtual"><scope>rb_node</scope><name>rlink</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

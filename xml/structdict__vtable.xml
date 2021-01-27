@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdict__vtable" kind="struct" language="C++" prot="public">
+    <compoundname>dict_vtable</compoundname>
+    <includes refid="dict_8h" local="no">dict.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdict__vtable_1acf8fad49e668cc99a362e48aad34fe67" prot="public" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool sorted</definition>
+        <argsstring></argsstring>
+        <name>sorted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="98" column="15" bodyfile="include/dict.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1accc47e6d4e080bda45cbd10177d06f9b" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1a456bfcc5a7d9356c29dd80f6b5ca4acc" kindref="member">dict_inew_func</ref></type>
+        <definition>dict_inew_func inew</definition>
+        <argsstring></argsstring>
+        <name>inew</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="99" column="25" bodyfile="include/dict.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1a861d296c134c416c965b8e2117cda33a" kindref="member">dict_dfree_func</ref></type>
+        <definition>dict_dfree_func dfree</definition>
+        <argsstring></argsstring>
+        <name>dfree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="100" column="25" bodyfile="include/dict.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1a841c55da488714c38f761e78e449fcb0" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1a526ec5a7be277ebf2fb509362b6b2f0c" kindref="member">dict_insert_func</ref></type>
+        <definition>dict_insert_func insert</definition>
+        <argsstring></argsstring>
+        <name>insert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="101" column="25" bodyfile="include/dict.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1a8f81e32838f291f16df28fe9a68d588e" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref></type>
+        <definition>dict_search_func search</definition>
+        <argsstring></argsstring>
+        <name>search</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="102" column="25" bodyfile="include/dict.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1a11eb072fdeb8a09637cb83c22b585315" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref></type>
+        <definition>dict_search_func search_le</definition>
+        <argsstring></argsstring>
+        <name>search_le</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="103" column="25" bodyfile="include/dict.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1a993cad0961870e4819c22235a458340b" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref></type>
+        <definition>dict_search_func search_lt</definition>
+        <argsstring></argsstring>
+        <name>search_lt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="104" column="25" bodyfile="include/dict.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1ab9863c525cb29a00e6a89263492902b4" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref></type>
+        <definition>dict_search_func search_ge</definition>
+        <argsstring></argsstring>
+        <name>search_ge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="105" column="25" bodyfile="include/dict.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1a8056803e5f315296e1015f3934e13bd1" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref></type>
+        <definition>dict_search_func search_gt</definition>
+        <argsstring></argsstring>
+        <name>search_gt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="106" column="25" bodyfile="include/dict.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1afda0b20e130895ef4ee5d176e9f2fac5" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1a03ac901668905b999c543bd504ce6049" kindref="member">dict_remove_func</ref></type>
+        <definition>dict_remove_func remove</definition>
+        <argsstring></argsstring>
+        <name>remove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="107" column="25" bodyfile="include/dict.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1a5f94157af1adf4ad9afdb6b6ce1fe7c8" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1af10d9833546e8a985bf8a21e7cca9c39" kindref="member">dict_clear_func</ref></type>
+        <definition>dict_clear_func clear</definition>
+        <argsstring></argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="108" column="25" bodyfile="include/dict.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1a5029b9a8aaf0dba01f0ad3f33f8f0a2c" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1a465ab0c48a0c2920bd4a4d2119dde513" kindref="member">dict_traverse_func</ref></type>
+        <definition>dict_traverse_func traverse</definition>
+        <argsstring></argsstring>
+        <name>traverse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="109" column="25" bodyfile="include/dict.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1a1b53ea6123c1028131cf2558a321b433" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1a18186f71a497454b44c31cd4737594fc" kindref="member">dict_select_func</ref></type>
+        <definition>dict_select_func select</definition>
+        <argsstring></argsstring>
+        <name>select</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="110" column="25" bodyfile="include/dict.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1af975eb7eab0d010053e07ad065da0501" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1a6c85f33ba34353d8433b41377053f882" kindref="member">dict_count_func</ref></type>
+        <definition>dict_count_func count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="111" column="25" bodyfile="include/dict.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdict__vtable_1a8cee39f73df4b25654a6d9c96ea0efbf" prot="public" static="no" mutable="no">
+        <type><ref refid="dict_8h_1aeb7fec8d69b3fc9802e46e7d3eae4d41" kindref="member">dict_verify_func</ref></type>
+        <definition>dict_verify_func verify</definition>
+        <argsstring></argsstring>
+        <name>verify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dict.h" line="112" column="21" bodyfile="include/dict.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>dict_insert_result</label>
+        <link refid="structdict__insert__result"/>
+      </node>
+      <node id="1">
+        <label>dict_vtable</label>
+        <link refid="structdict__vtable"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>insert</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>inew</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>remove</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dict_itor</label>
+        <link refid="structdict__itor"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_vtable</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>itor_vtable</label>
+        <link refid="structitor__vtable"/>
+      </node>
+      <node id="5">
+        <label>dict_remove_result</label>
+        <link refid="structdict__remove__result"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/dict.h" line="97" column="1" bodyfile="include/dict.h" bodystart="97" bodyend="113"/>
+    <listofallmembers>
+      <member refid="structdict__vtable_1a5f94157af1adf4ad9afdb6b6ce1fe7c8" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>clear</name></member>
+      <member refid="structdict__vtable_1af975eb7eab0d010053e07ad065da0501" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>count</name></member>
+      <member refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>dfree</name></member>
+      <member refid="structdict__vtable_1accc47e6d4e080bda45cbd10177d06f9b" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>inew</name></member>
+      <member refid="structdict__vtable_1a841c55da488714c38f761e78e449fcb0" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>insert</name></member>
+      <member refid="structdict__vtable_1afda0b20e130895ef4ee5d176e9f2fac5" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>remove</name></member>
+      <member refid="structdict__vtable_1a8f81e32838f291f16df28fe9a68d588e" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>search</name></member>
+      <member refid="structdict__vtable_1ab9863c525cb29a00e6a89263492902b4" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>search_ge</name></member>
+      <member refid="structdict__vtable_1a8056803e5f315296e1015f3934e13bd1" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>search_gt</name></member>
+      <member refid="structdict__vtable_1a11eb072fdeb8a09637cb83c22b585315" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>search_le</name></member>
+      <member refid="structdict__vtable_1a993cad0961870e4819c22235a458340b" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>search_lt</name></member>
+      <member refid="structdict__vtable_1a1b53ea6123c1028131cf2558a321b433" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>select</name></member>
+      <member refid="structdict__vtable_1acf8fad49e668cc99a362e48aad34fe67" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>sorted</name></member>
+      <member refid="structdict__vtable_1a5029b9a8aaf0dba01f0ad3f33f8f0a2c" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>traverse</name></member>
+      <member refid="structdict__vtable_1a8cee39f73df4b25654a6d9c96ea0efbf" prot="public" virt="non-virtual"><scope>dict_vtable</scope><name>verify</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

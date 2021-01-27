@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structskip__node" kind="struct" language="C++" prot="public">
+    <compoundname>skip_node</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structskip__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="40" column="13" bodyfile="src/skiplist.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structskip__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* datum</definition>
+        <argsstring></argsstring>
+        <name>datum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="41" column="13" bodyfile="src/skiplist.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structskip__node_1a45a0b6bc7ce1d301c1527998d99e85f0" prot="public" static="no" mutable="no">
+        <type><ref refid="structskip__node" kindref="compound">skip_node</ref> *</type>
+        <definition>skip_node* prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="42" column="18" bodyfile="src/skiplist.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structskip__node_1abaf0316f33b38ccdaa4682bebce24ced" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned link_count</definition>
+        <argsstring></argsstring>
+        <name>link_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="43" column="17" bodyfile="src/skiplist.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" prot="public" static="no" mutable="no">
+        <type><ref refid="structskip__node" kindref="compound">skip_node</ref> *</type>
+        <definition>skip_node* link[]</definition>
+        <argsstring>[]</argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/skiplist.c" line="44" column="18" bodyfile="src/skiplist.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>skip_node</label>
+        <link refid="structskip__node"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>link</edgelabel>
+          <edgelabel>prev</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/skiplist.c" line="39" column="1" bodyfile="src/skiplist.c" bodystart="39" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" virt="non-virtual"><scope>skip_node</scope><name>datum</name></member>
+      <member refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" virt="non-virtual"><scope>skip_node</scope><name>key</name></member>
+      <member refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" prot="public" virt="non-virtual"><scope>skip_node</scope><name>link</name></member>
+      <member refid="structskip__node_1abaf0316f33b38ccdaa4682bebce24ced" prot="public" virt="non-virtual"><scope>skip_node</scope><name>link_count</name></member>
+      <member refid="structskip__node_1a45a0b6bc7ce1d301c1527998d99e85f0" prot="public" virt="non-virtual"><scope>skip_node</scope><name>prev</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

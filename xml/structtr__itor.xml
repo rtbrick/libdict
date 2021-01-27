@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtr__itor" kind="struct" language="C++" prot="public">
+    <compoundname>tr_itor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtr__itor_1aecf2bdfca32e5e0ab1e1fd6ef98c7f94" prot="public" static="no" mutable="no">
+        <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+        <definition>tr_tree* tree</definition>
+        <argsstring></argsstring>
+        <name>tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="61" column="15" bodyfile="src/tr_tree.c" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" prot="public" static="no" mutable="no">
+        <type><ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
+        <definition>tr_node* node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="61" column="32" bodyfile="src/tr_tree.c" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>tr_node</label>
+        <link refid="structtr__node"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>rlink</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tr_itor</label>
+        <link refid="structtr__itor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>tree</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>tr_tree</label>
+        <link refid="structtr__tree"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/tr_tree.c" line="60" column="1" bodyfile="src/tr_tree.c" bodystart="60" bodyend="62"/>
+    <listofallmembers>
+      <member refid="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" prot="public" virt="non-virtual"><scope>tr_itor</scope><name>node</name></member>
+      <member refid="structtr__itor_1aecf2bdfca32e5e0ab1e1fd6ef98c7f94" prot="public" virt="non-virtual"><scope>tr_itor</scope><name>tree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

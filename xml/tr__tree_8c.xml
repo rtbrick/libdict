@@ -1,0 +1,1431 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="tr__tree_8c" kind="file" language="C++">
+    <compoundname>tr_tree.c</compoundname>
+    <includes refid="tr__tree_8h" local="yes">tr_tree.h</includes>
+    <includes local="no">limits.h</includes>
+    <includes refid="dict__private_8h" local="yes">dict_private.h</includes>
+    <includes refid="tree__common_8h" local="yes">tree_common.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/tr_tree.c</label>
+        <link refid="tr__tree_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="12">
+        <label>skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="18">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="15">
+        <label>limits.h</label>
+      </node>
+      <node id="14">
+        <label>wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>dict_private.h</label>
+        <link refid="dict__private_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>hashtable.h</label>
+        <link refid="hashtable_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>tree_common.h</label>
+        <link refid="tree__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dict.h</label>
+        <link refid="dict_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>pr_tree.h</label>
+        <link refid="pr__tree_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>stdio.h</label>
+      </node>
+      <node id="8">
+        <label>hashtable2.h</label>
+        <link refid="hashtable2_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tr_tree.h</label>
+        <link refid="tr__tree_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structtr__node" prot="public">tr_node</innerclass>
+    <innerclass refid="structtr__tree" prot="public">tr_tree</innerclass>
+    <innerclass refid="structtr__itor" prot="public">tr_itor</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="tr__tree_8c_1a9e133a630615d0838dc94fa52d7d7395" prot="public" static="no">
+        <type>struct <ref refid="structtr__node" kindref="compound">tr_node</ref></type>
+        <definition>typedef struct tr_node tr_node</definition>
+        <argsstring></argsstring>
+        <name>tr_node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="1" column="0" bodyfile="src/tr_tree.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="tr__tree_8c_1ae644d5e2ee0e0fb10e49c18f320d5426" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structdict__vtable" kindref="compound">dict_vtable</ref></type>
+        <definition>const dict_vtable tr_tree_vtable</definition>
+        <argsstring></argsstring>
+        <name>tr_tree_vtable</name>
+        <initializer>= {
+    true,
+    (<ref refid="dict_8h_1a456bfcc5a7d9356c29dd80f6b5ca4acc" kindref="member">dict_inew_func</ref>)	    <ref refid="tr__tree_8h_1ac6d0f50d8fb9f844fbd1d9a73c883887" kindref="member">tr_dict_itor_new</ref>,
+    (<ref refid="dict_8h_1a861d296c134c416c965b8e2117cda33a" kindref="member">dict_dfree_func</ref>)	    <ref refid="tree__common_8h_1a29602ed18f6d0a7db2b9c37d6fa0368b" kindref="member">tree_free</ref>,
+    (<ref refid="dict_8h_1a526ec5a7be277ebf2fb509362b6b2f0c" kindref="member">dict_insert_func</ref>)	    <ref refid="tr__tree_8h_1af12c30c66ba2122b652249b9531bb2c3" kindref="member">tr_tree_insert</ref>,
+    (<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)	    <ref refid="tree__common_8h_1af5143d04b903f3b3f75954d7919e2c15" kindref="member">tree_search</ref>,
+    (<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)	    <ref refid="tree__common_8h_1afe29edab5be1ee1e662cd046c25f8ac8" kindref="member">tree_search_le</ref>,
+    (<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)	    <ref refid="tree__common_8h_1a73d440cafc7a1793a596a61a939ff110" kindref="member">tree_search_lt</ref>,
+    (<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)	    <ref refid="tree__common_8h_1a7daad8511212bd799705f34524641d4a" kindref="member">tree_search_ge</ref>,
+    (<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)	    <ref refid="tree__common_8h_1a251aa3bd4ffad4917ab2e6a948d78c7e" kindref="member">tree_search_gt</ref>,
+    (<ref refid="dict_8h_1a03ac901668905b999c543bd504ce6049" kindref="member">dict_remove_func</ref>)	    <ref refid="tr__tree_8h_1a2c12fb2ab62855990ac8a0959ffd14b0" kindref="member">tr_tree_remove</ref>,
+    (<ref refid="dict_8h_1af10d9833546e8a985bf8a21e7cca9c39" kindref="member">dict_clear_func</ref>)	    <ref refid="tree__common_8h_1a883af43dc54a56d18fd30bee2104ba85" kindref="member">tree_clear</ref>,
+    (<ref refid="dict_8h_1a465ab0c48a0c2920bd4a4d2119dde513" kindref="member">dict_traverse_func</ref>)    <ref refid="tree__common_8h_1a62fef1416dee2635ca075d5d9a519c34" kindref="member">tree_traverse</ref>,
+    (<ref refid="dict_8h_1a18186f71a497454b44c31cd4737594fc" kindref="member">dict_select_func</ref>)	    <ref refid="tree__common_8h_1ac144b757fd8ecdeab9e1ae4d31dd92e2" kindref="member">tree_select</ref>,
+    (<ref refid="dict_8h_1a6c85f33ba34353d8433b41377053f882" kindref="member">dict_count_func</ref>)	    <ref refid="tree__common_8h_1ad7192e6cc9305bd387a2de989dbe0c54" kindref="member">tree_count</ref>,
+    (<ref refid="dict_8h_1aeb7fec8d69b3fc9802e46e7d3eae4d41" kindref="member">dict_verify_func</ref>)	    <ref refid="tr__tree_8h_1acb4c734f0994b7eadedde0e1c9a3809a" kindref="member">tr_tree_verify</ref>,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="64" column="26" bodyfile="src/tr_tree.c" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tr__tree_8c_1aec869c9972cd577ccc6a6017b3344b5b" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structitor__vtable" kindref="compound">itor_vtable</ref></type>
+        <definition>const itor_vtable tr_tree_itor_vtable</definition>
+        <argsstring></argsstring>
+        <name>tr_tree_itor_vtable</name>
+        <initializer>= {
+    (<ref refid="dict_8h_1af7abde3da86249ff4c3d19f5e62e7617" kindref="member">dict_ifree_func</ref>)	    <ref refid="tree__common_8h_1a25e867d4c0d4447e6c0b0838aa311e55" kindref="member">tree_iterator_free</ref>,
+    (<ref refid="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" kindref="member">dict_valid_func</ref>)	    <ref refid="tree__common_8h_1a007c77730e99ae192e34ba18399f0456" kindref="member">tree_iterator_valid</ref>,
+    (<ref refid="dict_8h_1a1fdd9cad34cc517ad72e999498333195" kindref="member">dict_invalidate_func</ref>)  <ref refid="tree__common_8h_1ad3ee7c4e1533726f211e78e559ce5398" kindref="member">tree_iterator_invalidate</ref>,
+    (<ref refid="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" kindref="member">dict_next_func</ref>)	    <ref refid="tree__common_8h_1a43963be9eade744b2d3a77914e4e20a5" kindref="member">tree_iterator_next</ref>,
+    (<ref refid="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" kindref="member">dict_prev_func</ref>)	    <ref refid="tree__common_8h_1a56eed6b63ed322aa656ba02e845a2caf" kindref="member">tree_iterator_prev</ref>,
+    (<ref refid="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" kindref="member">dict_nextn_func</ref>)	    <ref refid="tree__common_8h_1a4e54c33bf8c8429421ef698f049ff46c" kindref="member">tree_iterator_nextn</ref>,
+    (<ref refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" kindref="member">dict_prevn_func</ref>)	    <ref refid="tree__common_8h_1a8be1329ad6b7d656cc29bcca4e8e3b95" kindref="member">tree_iterator_prevn</ref>,
+    (<ref refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" kindref="member">dict_first_func</ref>)	    <ref refid="tree__common_8h_1a76a5215d5dad8de31b36ad11350770f8" kindref="member">tree_iterator_first</ref>,
+    (<ref refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" kindref="member">dict_last_func</ref>)	    <ref refid="tree__common_8h_1ab9329d4cf4317f2ddd9f46f967bb1d3c" kindref="member">tree_iterator_last</ref>,
+    (<ref refid="dict_8h_1a35f6e7bcb0876419ae8fedb5c6f8d856" kindref="member">dict_key_func</ref>)	    <ref refid="tree__common_8h_1a98d990c2956165a7426c31d1850ba65d" kindref="member">tree_iterator_key</ref>,
+    (<ref refid="dict_8h_1ab07daf83ff24f29a3035b1c94652558b" kindref="member">dict_datum_func</ref>)	    <ref refid="tree__common_8h_1a65055f9e363c6d28a063f204671ba12f" kindref="member">tree_iterator_datum</ref>,
+    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="tree__common_8h_1ae475a957640b2a7fda1c7a803590a55a" kindref="member">tree_iterator_search</ref>,
+    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="tree__common_8h_1aca4d6919c69c59b77effed9746350ccf" kindref="member">tree_iterator_search_le</ref>,
+    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="tree__common_8h_1acd2643e69cd70b24ab68157c88d89150" kindref="member">tree_iterator_search_lt</ref>,
+    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="tree__common_8h_1a8731f9d60ea044a8b79ed90fe1b25a57" kindref="member">tree_iterator_search_ge</ref>,
+    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="tree__common_8h_1ab419689d410592ac34ff9b00b7977096" kindref="member">tree_iterator_search_gt</ref>,
+    (<ref refid="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" kindref="member">dict_iremove_func</ref>)	    <ref refid="tr__tree_8h_1a633dcc656305d59fb4a395dc231fb04f" kindref="member">tr_itor_remove</ref>,
+    (<ref refid="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" kindref="member">dict_icompare_func</ref>)    <ref refid="tree__common_8h_1abf1de1d71e92df79cd1b0cee24465c27" kindref="member">tree_iterator_compare</ref>,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="82" column="26" bodyfile="src/tr_tree.c" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tr__tree_8c_1a1da1da775ec7171b829f3d404d4d937e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
+        <definition>static tr_node * node_new</definition>
+        <argsstring>(void *key)</argsstring>
+        <name>node_new</name>
+        <param>
+          <type>void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="231" column="1" bodyfile="src/tr_tree.c" bodystart="231" bodyend="242" declfile="src/tr_tree.c" declline="103" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a648dba2e9e0df339046927f077e720a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+        <definition>tr_tree* tr_tree_new</definition>
+        <argsstring>(dict_compare_func cmp_func, dict_prio_func prio_func)</argsstring>
+        <name>tr_tree_new</name>
+        <param>
+          <type><ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref></type>
+          <declname>cmp_func</declname>
+        </param>
+        <param>
+          <type><ref refid="dict_8h_1acd0323c1d9eb91048a9458e7467594f7" kindref="member">dict_prio_func</ref></type>
+          <declname>prio_func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="106" column="1" bodyfile="src/tr_tree.c" bodystart="106" bodyend="119"/>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
+        <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
+        <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
+        <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
+        <references refid="structtree_1adf0b2d44ac6cd97d428ec85210970b43" compoundref="tree__common_8c" startline="38">tree::rotation_count</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a9c885ebbb4db4159a8e5ee9280a9b5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdict" kindref="compound">dict</ref> *</type>
+        <definition>dict* tr_dict_new</definition>
+        <argsstring>(dict_compare_func cmp_func, dict_prio_func prio_func)</argsstring>
+        <name>tr_dict_new</name>
+        <param>
+          <type><ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref></type>
+          <declname>cmp_func</declname>
+        </param>
+        <param>
+          <type><ref refid="dict_8h_1acd0323c1d9eb91048a9458e7467594f7" kindref="member">dict_prio_func</ref></type>
+          <declname>prio_func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="122" column="1" bodyfile="src/tr_tree.c" bodystart="122" bodyend="133"/>
+        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="152">dict::_object</references>
+        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
+        <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
+        <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
+        <references refid="tr__tree_8c_1a648dba2e9e0df339046927f077e720a8" compoundref="tr__tree_8c" startline="106" endline="119">tr_tree_new</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a76e673a39086c1510d82a6ee9ff74c8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_free</definition>
+        <argsstring>(tr_tree *tree, dict_delete_func delete_func)</argsstring>
+        <name>tr_tree_free</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref></type>
+          <declname>delete_func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="135" column="8" bodyfile="src/tr_tree.c" bodystart="135" bodyend="135"/>
+        <references refid="tree__common_8c_1a058d607ec36526c0e52cd66f853ef888" compoundref="tree__common_8c" startline="328" endline="333">tree_free</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a6946de3d63d8b9e7190e13f3b3aa0925" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_clear</definition>
+        <argsstring>(tr_tree *tree, dict_delete_func delete_func)</argsstring>
+        <name>tr_tree_clear</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref></type>
+          <declname>delete_func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="136" column="8" bodyfile="src/tr_tree.c" bodystart="136" bodyend="136"/>
+        <references refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" compoundref="tree__common_8c" startline="302" endline="325">tree_clear</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1af12c30c66ba2122b652249b9531bb2c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></type>
+        <definition>dict_insert_result tr_tree_insert</definition>
+        <argsstring>(tr_tree *tree, void *key)</argsstring>
+        <name>tr_tree_insert</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="139" column="1" bodyfile="src/tr_tree.c" bodystart="139" bodyend="182"/>
+        <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
+        <references refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tr__tree_8c" startline="51">tr_node::datum</references>
+        <references refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tr__tree_8c" startline="51">tr_node::key</references>
+        <references refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" compoundref="tr__tree_8c" startline="51">tr_node::llink</references>
+        <references refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" compoundref="tr__tree_8c" startline="51">tr_node::rlink</references>
+        <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1aa8f2ac5d519297eeb3a5a2201ff990f9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void remove_node</definition>
+        <argsstring>(tr_tree *tree, tr_node *node)</argsstring>
+        <name>remove_node</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type><ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="185" column="1" bodyfile="src/tr_tree.c" bodystart="185" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a2c12fb2ab62855990ac8a0959ffd14b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref></type>
+        <definition>dict_remove_result tr_tree_remove</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_remove</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="208" column="1" bodyfile="src/tr_tree.c" bodystart="208" bodyend="216"/>
+        <references refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tr__tree_8c" startline="51">tr_node::datum</references>
+        <references refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tr__tree_8c" startline="51">tr_node::key</references>
+        <references refid="tree__common_8c_1a8ca8a698fb9f3c76e48a451e547166db" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a72e0676b79abc74359c66d30345ae1f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_tree_search</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_search</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="218" column="6" bodyfile="src/tr_tree.c" bodystart="218" bodyend="218"/>
+        <references refid="tree__common_8c_1a54ed614fb74b373c5167325d6c744171" compoundref="tree__common_8c" startline="144" endline="148">tree_search</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a47a8040660895a251ac1d54a5f9689d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_tree_search_le</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_search_le</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="219" column="6" bodyfile="src/tr_tree.c" bodystart="219" bodyend="219"/>
+        <references refid="tree__common_8c_1a8aa3ee04b16a1a81d153af21326ce29f" compoundref="tree__common_8c" startline="170" endline="174">tree_search_le</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1afe61944f8ab6e076e4daa164ff1d7a5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_tree_search_lt</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_search_lt</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="220" column="6" bodyfile="src/tr_tree.c" bodystart="220" bodyend="220"/>
+        <references refid="tree__common_8c_1abf8d8bb4075e9f28c545ed1c83f0dafa" compoundref="tree__common_8c" startline="194" endline="198">tree_search_lt</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a574c05a02f2e58ef93d5ed5c1d32d20b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_tree_search_ge</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_search_ge</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="221" column="6" bodyfile="src/tr_tree.c" bodystart="221" bodyend="221"/>
+        <references refid="tree__common_8c_1a8598cfe5c4f5a7a4a1bbc270225bc1ec" compoundref="tree__common_8c" startline="221" endline="225">tree_search_ge</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1aa9bb0f0c930c050042b8df9ffa6f37c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_tree_search_gt</definition>
+        <argsstring>(tr_tree *tree, const void *key)</argsstring>
+        <name>tr_tree_search_gt</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="222" column="6" bodyfile="src/tr_tree.c" bodystart="222" bodyend="222"/>
+        <references refid="tree__common_8c_1a34db2e1b372d1847d32223c3c852b059" compoundref="tree__common_8c" startline="245" endline="249">tree_search_gt</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a6fd74f8e83a6fcdf320cd662512bb52f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_traverse</definition>
+        <argsstring>(tr_tree *tree, dict_visit_func visit, void *user_data)</argsstring>
+        <name>tr_tree_traverse</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type><ref refid="dict_8h_1aebbefe3aa81b20e1254e8a7a5253caf6" kindref="member">dict_visit_func</ref></type>
+          <declname>visit</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="223" column="8" bodyfile="src/tr_tree.c" bodystart="223" bodyend="223"/>
+        <references refid="tree__common_8c_1a8af8d7bc05c41b6b1889714238c541e1" compoundref="tree__common_8c" startline="252" endline="268">tree_traverse</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a422a191c3a32b8f95b76b2d0be61a817" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_tree_select</definition>
+        <argsstring>(tr_tree *tree, size_t n, const void **key, void **datum)</argsstring>
+        <name>tr_tree_select</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const void **</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>datum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="224" column="6" bodyfile="src/tr_tree.c" bodystart="224" bodyend="224"/>
+        <references refid="tree__common_8c_1aa14359a5a539fe914717663d62ab3bc2" compoundref="tree__common_8c" startline="271" endline="293">tree_select</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1ae6440d12783ccc58b1ef6e5f3c662c98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_count</definition>
+        <argsstring>(const tr_tree *tree)</argsstring>
+        <name>tr_tree_count</name>
+        <param>
+          <type>const <ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="225" column="8" bodyfile="src/tr_tree.c" bodystart="225" bodyend="225"/>
+        <references refid="tree__common_8c_1a666279f96572685934714532e744718e" compoundref="tree__common_8c" startline="296" endline="299">tree_count</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a8d47e3d4932c53b1af3cda751867d431" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_min_path_length</definition>
+        <argsstring>(const tr_tree *tree)</argsstring>
+        <name>tr_tree_min_path_length</name>
+        <param>
+          <type>const <ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="226" column="8" bodyfile="src/tr_tree.c" bodystart="226" bodyend="226"/>
+        <references refid="tree__common_8c_1a756193ba67a2786a5e4a6274a7ec170e" compoundref="tree__common_8c" startline="344" endline="348">tree_min_path_length</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1af7b0627fcc48dfe850aacbc4dab7ec01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_max_path_length</definition>
+        <argsstring>(const tr_tree *tree)</argsstring>
+        <name>tr_tree_max_path_length</name>
+        <param>
+          <type>const <ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="227" column="8" bodyfile="src/tr_tree.c" bodystart="227" bodyend="227"/>
+        <references refid="tree__common_8c_1abf500bf5b159c5ec35a5e0a3ff57a0e8" compoundref="tree__common_8c" startline="359" endline="363">tree_max_path_length</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a35128a0a7038af7f263a1d2d5209086b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t tr_tree_total_path_length</definition>
+        <argsstring>(const tr_tree *tree)</argsstring>
+        <name>tr_tree_total_path_length</name>
+        <param>
+          <type>const <ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="228" column="8" bodyfile="src/tr_tree.c" bodystart="228" bodyend="228"/>
+        <references refid="tree__common_8c_1a8ff1218a16ab93160f3a922fcdf88882" compoundref="tree__common_8c" startline="374" endline="378">tree_total_path_length</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a9d5796c0c2efa70b42fcf3ce3c9d4393" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool node_verify</definition>
+        <argsstring>(const tr_tree *tree, const tr_node *parent, const tr_node *node)</argsstring>
+        <name>node_verify</name>
+        <param>
+          <type>const <ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="245" column="1" bodyfile="src/tr_tree.c" bodystart="245" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1acb4c734f0994b7eadedde0e1c9a3809a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_tree_verify</definition>
+        <argsstring>(const tr_tree *tree)</argsstring>
+        <name>tr_tree_verify</name>
+        <param>
+          <type>const <ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="271" column="1" bodyfile="src/tr_tree.c" bodystart="271" bodyend="279"/>
+        <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
+        <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a9f83be747a7e2cfa2063d96e82aeebfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+        <definition>tr_itor* tr_itor_new</definition>
+        <argsstring>(tr_tree *tree)</argsstring>
+        <name>tr_itor_new</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="282" column="1" bodyfile="src/tr_tree.c" bodystart="282" bodyend="290"/>
+        <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
+        <references refid="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" compoundref="tr__tree_8c" startline="61">tr_itor::node</references>
+        <references refid="structtr__itor_1aecf2bdfca32e5e0ab1e1fd6ef98c7f94" compoundref="tr__tree_8c" startline="61">tr_itor::tree</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1ac6d0f50d8fb9f844fbd1d9a73c883887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structdict__itor" kindref="compound">dict_itor</ref> *</type>
+        <definition>dict_itor* tr_dict_itor_new</definition>
+        <argsstring>(tr_tree *tree)</argsstring>
+        <name>tr_dict_itor_new</name>
+        <param>
+          <type><ref refid="structtr__tree" kindref="compound">tr_tree</ref> *</type>
+          <declname>tree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="293" column="1" bodyfile="src/tr_tree.c" bodystart="293" bodyend="304"/>
+        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="174">dict_itor::_itor</references>
+        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="175">dict_itor::_vtable</references>
+        <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
+        <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
+        <references refid="tr__tree_8c_1a9f83be747a7e2cfa2063d96e82aeebfa" compoundref="tr__tree_8c" startline="282" endline="290">tr_itor_new</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1ad2e0654f35bcfd2b4b2d3214599adc68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tr_itor_free</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_free</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="306" column="6" bodyfile="src/tr_tree.c" bodystart="306" bodyend="306"/>
+        <references refid="tree__common_8c_1aa3a6573b092296a44a074269c8d2bc91" compoundref="tree__common_8c" startline="393" endline="398">tree_iterator_free</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1ac4bafa502b5ed7d8f92b3f917d7464fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_valid</definition>
+        <argsstring>(const tr_itor *itor)</argsstring>
+        <name>tr_itor_valid</name>
+        <param>
+          <type>const <ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="307" column="6" bodyfile="src/tr_tree.c" bodystart="307" bodyend="307"/>
+        <references refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" compoundref="tree__common_8c" startline="381" endline="384">tree_iterator_valid</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a37970eecfadd85fbcd621b2fddbda176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tr_itor_invalidate</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_invalidate</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="308" column="6" bodyfile="src/tr_tree.c" bodystart="308" bodyend="308"/>
+        <references refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" compoundref="tree__common_8c" startline="387" endline="390">tree_iterator_invalidate</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a6a6b39591a7036d82998fe5012b79e94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_next</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_next</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="309" column="6" bodyfile="src/tr_tree.c" bodystart="309" bodyend="309"/>
+        <references refid="tree__common_8c_1a1e3db914a6bdf103e9f7db4f78c908ae" compoundref="tree__common_8c" startline="401" endline="405">tree_iterator_next</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a84639eb061b5324246005ca456935d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_prev</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_prev</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="310" column="6" bodyfile="src/tr_tree.c" bodystart="310" bodyend="310"/>
+        <references refid="tree__common_8c_1afad64b5a28a44ca544fe3f0b8011db17" compoundref="tree__common_8c" startline="408" endline="412">tree_iterator_prev</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a5d104b8cb137d5dc21f9c99116aa7585" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_nextn</definition>
+        <argsstring>(tr_itor *itor, size_t count)</argsstring>
+        <name>tr_itor_nextn</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="311" column="6" bodyfile="src/tr_tree.c" bodystart="311" bodyend="311"/>
+        <references refid="tree__common_8c_1a8a7b95378ac8dc696b220f073b83977c" compoundref="tree__common_8c" startline="415" endline="421">tree_iterator_nextn</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1accce6878c7a1a4b97584f78ab5308478" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_prevn</definition>
+        <argsstring>(tr_itor *itor, size_t count)</argsstring>
+        <name>tr_itor_prevn</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="312" column="6" bodyfile="src/tr_tree.c" bodystart="312" bodyend="312"/>
+        <references refid="tree__common_8c_1aa54a225a4b2bfc3a6bbf73125d4dd88a" compoundref="tree__common_8c" startline="424" endline="430">tree_iterator_prevn</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a7ffb3d1301c986e527b96d42ee765b19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_first</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_first</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="313" column="6" bodyfile="src/tr_tree.c" bodystart="313" bodyend="313"/>
+        <references refid="tree__common_8c_1a9bab181bc96dd1334ea36f0b3f647f2a" compoundref="tree__common_8c" startline="433" endline="437">tree_iterator_first</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a442bcd9f2b3b859ea4b74d88f2196077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_last</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_last</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="314" column="6" bodyfile="src/tr_tree.c" bodystart="314" bodyend="314"/>
+        <references refid="tree__common_8c_1a03b78e22aed8c0dd38f96d939066239a" compoundref="tree__common_8c" startline="440" endline="444">tree_iterator_last</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1af4553033eb69c20e79a98be3fbea7170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_search</definition>
+        <argsstring>(tr_itor *itor, const void *key)</argsstring>
+        <name>tr_itor_search</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="315" column="6" bodyfile="src/tr_tree.c" bodystart="315" bodyend="315"/>
+        <references refid="tree__common_8c_1aeebf37a00012869c931e03dbb1047ade" compoundref="tree__common_8c" startline="447" endline="451">tree_iterator_search</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a16ba357d7ce3b3233fc15c0c1e069df3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_search_le</definition>
+        <argsstring>(tr_itor *itor, const void *key)</argsstring>
+        <name>tr_itor_search_le</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="316" column="6" bodyfile="src/tr_tree.c" bodystart="316" bodyend="316"/>
+        <references refid="tree__common_8c_1a630ac71696ac60548789b01f1e618350" compoundref="tree__common_8c" startline="454" endline="458">tree_iterator_search_le</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a451de2be9ffc4651dd0138ebb2a57fc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_search_lt</definition>
+        <argsstring>(tr_itor *itor, const void *key)</argsstring>
+        <name>tr_itor_search_lt</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="317" column="6" bodyfile="src/tr_tree.c" bodystart="317" bodyend="317"/>
+        <references refid="tree__common_8c_1aa83954869eda27b3488032f96a257771" compoundref="tree__common_8c" startline="461" endline="465">tree_iterator_search_lt</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a854994ca3ed00e38a5fb585a443b1cf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_search_ge</definition>
+        <argsstring>(tr_itor *itor, const void *key)</argsstring>
+        <name>tr_itor_search_ge</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="318" column="6" bodyfile="src/tr_tree.c" bodystart="318" bodyend="318"/>
+        <references refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" compoundref="tree__common_8c" startline="468" endline="472">tree_iterator_search_ge</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a9b3d079fdc8c2288c6fbf9180e03f029" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_search_gt</definition>
+        <argsstring>(tr_itor *itor, const void *key)</argsstring>
+        <name>tr_itor_search_gt</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="319" column="6" bodyfile="src/tr_tree.c" bodystart="319" bodyend="319"/>
+        <references refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" compoundref="tree__common_8c" startline="475" endline="479">tree_iterator_search_gt</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a35ba10e05ebbf9ce85c829ed6d881da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const void *</type>
+        <definition>const void* tr_itor_key</definition>
+        <argsstring>(const tr_itor *itor)</argsstring>
+        <name>tr_itor_key</name>
+        <param>
+          <type>const <ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="320" column="12" bodyfile="src/tr_tree.c" bodystart="320" bodyend="320"/>
+        <references refid="tree__common_8c_1af179889330c7dccaefc41a06d11b288f" compoundref="tree__common_8c" startline="495" endline="499">tree_iterator_key</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a1d9a225610e930952c949bd97f1d43ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void **</type>
+        <definition>void** tr_itor_datum</definition>
+        <argsstring>(tr_itor *itor)</argsstring>
+        <name>tr_itor_datum</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>itor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="321" column="6" bodyfile="src/tr_tree.c" bodystart="321" bodyend="321"/>
+        <references refid="tree__common_8c_1ad4045a0af97ccd1df2c1e251e40e5a4f" compoundref="tree__common_8c" startline="502" endline="506">tree_iterator_datum</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1ae746542a6b1e4770004b3b0c6a9ae6ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tr_itor_compare</definition>
+        <argsstring>(const tr_itor *i1, const tr_itor *i2)</argsstring>
+        <name>tr_itor_compare</name>
+        <param>
+          <type>const <ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>i1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>i2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="322" column="5" bodyfile="src/tr_tree.c" bodystart="322" bodyend="322"/>
+        <references refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" compoundref="tree__common_8c" startline="482" endline="492">tree_iterator_compare</references>
+      </memberdef>
+      <memberdef kind="function" id="tr__tree_8c_1a332a934be706ba2287233367d39c2e67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tr_itor_remove</definition>
+        <argsstring>(tr_itor *it)</argsstring>
+        <name>tr_itor_remove</name>
+        <param>
+          <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tr_tree.c" line="325" column="1" bodyfile="src/tr_tree.c" bodystart="325" bodyend="332"/>
+        <references refid="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" compoundref="tr__tree_8c" startline="61">tr_itor::node</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="tr__tree_8c_1a9e133a630615d0838dc94fa52d7d7395" refkind="member"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>libdict<sp/>--<sp/>treap<sp/>implementation.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2001-2014,<sp/>Farooq<sp/>Mela</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;<sp/>AND</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>cf.<sp/>[Aragon<sp/>and<sp/>Seidel,<sp/>1996],<sp/>[Knuth<sp/>1998]</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>A<sp/>treap<sp/>is<sp/>a<sp/>randomized<sp/>data<sp/>structure<sp/>in<sp/>which<sp/>each<sp/>node<sp/>of<sp/>tree<sp/>has<sp/>an</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>associated<sp/>key<sp/>and<sp/>priority.<sp/>The<sp/>priority<sp/>is<sp/>chosen<sp/>at<sp/>random<sp/>when<sp/>the<sp/>node</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>is<sp/>inserted<sp/>into<sp/>the<sp/>tree.<sp/>Each<sp/>node<sp/>is<sp/>inserted<sp/>so<sp/>that<sp/>the<sp/>lexicographic</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>order<sp/>of<sp/>the<sp/>keys<sp/>is<sp/>preserved,<sp/>and<sp/>the<sp/>priority<sp/>of<sp/>any<sp/>node<sp/>is<sp/>less<sp/>than</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>the<sp/>priority<sp/>of<sp/>either<sp/>of<sp/>its<sp/>child<sp/>nodes;<sp/>in<sp/>this<sp/>way<sp/>the<sp/>treap<sp/>is<sp/>a</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>combination<sp/>of<sp/>a<sp/>tree<sp/>and<sp/>a<sp/>min-heap.<sp/>In<sp/>this<sp/>implementation,<sp/>this<sp/>is</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>accomplished<sp/>by<sp/>first<sp/>inserting<sp/>the<sp/>node<sp/>according<sp/>to<sp/>lexigraphical<sp/>order<sp/>of</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>keys<sp/>as<sp/>in<sp/>a<sp/>normal<sp/>binary<sp/>tree,<sp/>and<sp/>then,<sp/>if<sp/>needed,<sp/>sifting<sp/>the<sp/>node</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>upwards<sp/>using<sp/>a<sp/>series<sp/>of<sp/>rotations<sp/>until<sp/>the<sp/>heap<sp/>property<sp/>of<sp/>the<sp/>tree<sp/>is</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/>restored.</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tr__tree_8h" kindref="compound">tr_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dict__private_8h" kindref="compound">dict_private.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tree__common_8h" kindref="compound">tree_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtr__node" kindref="compound">tr_node</ref><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structtr__node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtr__node" kindref="compound">tr_node</ref><sp/>{</highlight></codeline>
+<codeline lineno="51" refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a8bf6d3b26e824be81b856b68ff0ceed1" kindref="member">TREE_NODE_FIELDS</ref>(<ref refid="structtr__node" kindref="compound">tr_node</ref>);</highlight></codeline>
+<codeline lineno="52" refid="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" kindref="member">prio</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structtr__tree" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtr__tree" kindref="compound">tr_tree</ref><sp/>{</highlight></codeline>
+<codeline lineno="56" refid="structtr__tree_1a3e0944ca8a425fcd254ca5057e885e45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1ab336de7dac2bbab532f41737fa8f103d" kindref="member">TREE_FIELDS</ref>(<ref refid="structtr__node" kindref="compound">tr_node</ref>);</highlight></codeline>
+<codeline lineno="57" refid="structtr__tree_1ab0fddef55318e7c9a173f78c9bbeffd1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1acd0323c1d9eb91048a9458e7467594f7" kindref="member">dict_prio_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtr__tree_1ab0fddef55318e7c9a173f78c9bbeffd1" kindref="member">prio_func</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structtr__itor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtr__itor" kindref="compound">tr_itor</ref><sp/>{</highlight></codeline>
+<codeline lineno="61" refid="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1aaa3336561dab3f71e234b679290eb7d6" kindref="member">TREE_ITERATOR_FIELDS</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>,<sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdict__vtable" kindref="compound">dict_vtable</ref><sp/>tr_tree_vtable<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a456bfcc5a7d9356c29dd80f6b5ca4acc" kindref="member">dict_inew_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8c_1ac6d0f50d8fb9f844fbd1d9a73c883887" kindref="member">tr_dict_itor_new</ref>,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a861d296c134c416c965b8e2117cda33a" kindref="member">dict_dfree_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a058d607ec36526c0e52cd66f853ef888" kindref="member">tree_free</ref>,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a526ec5a7be277ebf2fb509362b6b2f0c" kindref="member">dict_insert_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8c_1af12c30c66ba2122b652249b9531bb2c3" kindref="member">tr_tree_insert</ref>,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a54ed614fb74b373c5167325d6c744171" kindref="member">tree_search</ref>,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a8aa3ee04b16a1a81d153af21326ce29f" kindref="member">tree_search_le</ref>,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1abf8d8bb4075e9f28c545ed1c83f0dafa" kindref="member">tree_search_lt</ref>,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a8598cfe5c4f5a7a4a1bbc270225bc1ec" kindref="member">tree_search_ge</ref>,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a34db2e1b372d1847d32223c3c852b059" kindref="member">tree_search_gt</ref>,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a03ac901668905b999c543bd504ce6049" kindref="member">dict_remove_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8c_1a2c12fb2ab62855990ac8a0959ffd14b0" kindref="member">tr_tree_remove</ref>,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1af10d9833546e8a985bf8a21e7cca9c39" kindref="member">dict_clear_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" kindref="member">tree_clear</ref>,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a465ab0c48a0c2920bd4a4d2119dde513" kindref="member">dict_traverse_func</ref>)<sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a8af8d7bc05c41b6b1889714238c541e1" kindref="member">tree_traverse</ref>,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a18186f71a497454b44c31cd4737594fc" kindref="member">dict_select_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1aa14359a5a539fe914717663d62ab3bc2" kindref="member">tree_select</ref>,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a6c85f33ba34353d8433b41377053f882" kindref="member">dict_count_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a666279f96572685934714532e744718e" kindref="member">tree_count</ref>,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1aeb7fec8d69b3fc9802e46e7d3eae4d41" kindref="member">dict_verify_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8c_1acb4c734f0994b7eadedde0e1c9a3809a" kindref="member">tr_tree_verify</ref>,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structitor__vtable" kindref="compound">itor_vtable</ref><sp/>tr_tree_itor_vtable<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1af7abde3da86249ff4c3d19f5e62e7617" kindref="member">dict_ifree_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1aa3a6573b092296a44a074269c8d2bc91" kindref="member">tree_iterator_free</ref>,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" kindref="member">dict_valid_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" kindref="member">tree_iterator_valid</ref>,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a1fdd9cad34cc517ad72e999498333195" kindref="member">dict_invalidate_func</ref>)<sp/><sp/><ref refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" kindref="member">tree_iterator_invalidate</ref>,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" kindref="member">dict_next_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a1e3db914a6bdf103e9f7db4f78c908ae" kindref="member">tree_iterator_next</ref>,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" kindref="member">dict_prev_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1afad64b5a28a44ca544fe3f0b8011db17" kindref="member">tree_iterator_prev</ref>,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" kindref="member">dict_nextn_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a8a7b95378ac8dc696b220f073b83977c" kindref="member">tree_iterator_nextn</ref>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" kindref="member">dict_prevn_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1aa54a225a4b2bfc3a6bbf73125d4dd88a" kindref="member">tree_iterator_prevn</ref>,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" kindref="member">dict_first_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a9bab181bc96dd1334ea36f0b3f647f2a" kindref="member">tree_iterator_first</ref>,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" kindref="member">dict_last_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a03b78e22aed8c0dd38f96d939066239a" kindref="member">tree_iterator_last</ref>,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a35f6e7bcb0876419ae8fedb5c6f8d856" kindref="member">dict_key_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1af179889330c7dccaefc41a06d11b288f" kindref="member">tree_iterator_key</ref>,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab07daf83ff24f29a3035b1c94652558b" kindref="member">dict_datum_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1ad4045a0af97ccd1df2c1e251e40e5a4f" kindref="member">tree_iterator_datum</ref>,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1aeebf37a00012869c931e03dbb1047ade" kindref="member">tree_iterator_search</ref>,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a630ac71696ac60548789b01f1e618350" kindref="member">tree_iterator_search_le</ref>,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1aa83954869eda27b3488032f96a257771" kindref="member">tree_iterator_search_lt</ref>,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" kindref="member">tree_iterator_search_ge</ref>,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" kindref="member">tree_iterator_search_gt</ref>,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" kindref="member">dict_iremove_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="tr__tree_8c_1a332a934be706ba2287233367d39c2e67" kindref="member">tr_itor_remove</ref>,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" kindref="member">dict_icompare_func</ref>)<sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" kindref="member">tree_iterator_compare</ref>,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/>node_new(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*</highlight></codeline>
+<codeline lineno="106" refid="tr__tree_8c_1a648dba2e9e0df339046927f077e720a8" refkind="member"><highlight class="normal"><ref refid="tr__tree_8c_1a648dba2e9e0df339046927f077e720a8" kindref="member">tr_tree_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/>cmp_func,<sp/><ref refid="dict_8h_1acd0323c1d9eb91048a9458e7467594f7" kindref="member">dict_prio_func</ref><sp/>prio_func)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" kindref="member">ASSERT</ref>(cmp_func<sp/>!=<sp/>NULL);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref><sp/>=<sp/><ref refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" kindref="member">MALLOC</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*<ref refid="structtree" kindref="compound">tree</ref>));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structtree" kindref="compound">tree</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" kindref="member">count</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref><sp/>=<sp/>cmp_func;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1adf0b2d44ac6cd97d428ec85210970b43" kindref="member">rotation_count</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;prio_func<sp/>=<sp/>prio_func;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structtree" kindref="compound">tree</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*</highlight></codeline>
+<codeline lineno="122" refid="tr__tree_8c_1a9c885ebbb4db4159a8e5ee9280a9b5ec" refkind="member"><highlight class="normal"><ref refid="tr__tree_8c_1a9c885ebbb4db4159a8e5ee9280a9b5ec" kindref="member">tr_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/>cmp_func,<sp/><ref refid="dict_8h_1acd0323c1d9eb91048a9458e7467594f7" kindref="member">dict_prio_func</ref><sp/>prio_func)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdict" kindref="compound">dict</ref>*<sp/>dct<sp/>=<sp/><ref refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" kindref="member">MALLOC</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*dct));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dct)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(dct-&gt;<ref refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" kindref="member">_object</ref><sp/>=<sp/><ref refid="tr__tree_8c_1a648dba2e9e0df339046927f077e720a8" kindref="member">tr_tree_new</ref>(cmp_func,<sp/>prio_func)))<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" kindref="member">FREE</ref>(dct);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>dct-&gt;<ref refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" kindref="member">_vtable</ref><sp/>=<sp/>&amp;tr_tree_vtable;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dct;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="tr__tree_8c_1a76e673a39086c1510d82a6ee9ff74c8e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a76e673a39086c1510d82a6ee9ff74c8e" kindref="member">tr_tree_free</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a058d607ec36526c0e52cd66f853ef888" kindref="member">tree_free</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>delete_func);<sp/>}</highlight></codeline>
+<codeline lineno="136" refid="tr__tree_8c_1a6946de3d63d8b9e7190e13f3b3aa0925" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a6946de3d63d8b9e7190e13f3b3aa0925" kindref="member">tr_tree_clear</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" kindref="member">tree_clear</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>delete_func);<sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></highlight></codeline>
+<codeline lineno="139" refid="tr__tree_8c_1af12c30c66ba2122b652249b9531bb2c3" refkind="member"><highlight class="normal"><ref refid="tr__tree_8c_1af12c30c66ba2122b652249b9531bb2c3" kindref="member">tr_tree_insert</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cmp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/>node<sp/>=<sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/>parent<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(node)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>cmp<sp/>=<sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>(key,<sp/>node-&gt;<ref refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" kindref="member">key</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmp<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent<sp/>=<sp/>node;<sp/>node<sp/>=<sp/>node-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmp<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent<sp/>=<sp/>node;<sp/>node<sp/>=<sp/>node-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref>)<sp/>{<sp/>&amp;node-&gt;<ref refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" kindref="member">datum</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(node<sp/>=<sp/>node_new(key)))</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref>)<sp/>{<sp/>NULL,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" kindref="member">prio</ref><sp/>=<sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;prio_func<sp/>?<sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;prio_func(key)<sp/>:<sp/>dict_rand();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(node-&gt;<ref refid="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" kindref="member">parent</ref><sp/>=<sp/>parent))<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" kindref="member">ASSERT</ref>(<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref><sp/>==<sp/>NULL);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" kindref="member">ASSERT</ref>(<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" kindref="member">count</ref><sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cmp<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>rotations<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(parent-&gt;<ref refid="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" kindref="member">prio</ref><sp/>&lt;<sp/>node-&gt;<ref refid="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" kindref="member">prio</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++rotations;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>==<sp/>node)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1ad79fac7e5a30bf71ac8a7d53c56cf176" kindref="member">tree_node_rot_right</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>parent);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a364dcfa88f9f8e27d1e0ffa7ae7cd15d" kindref="member">tree_node_rot_left</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>parent);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(parent<sp/>=<sp/>node-&gt;<ref refid="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" kindref="member">parent</ref>))</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1adf0b2d44ac6cd97d428ec85210970b43" kindref="member">rotation_count</ref><sp/>+=<sp/>rotations;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" kindref="member">count</ref>++;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref>)<sp/>{<sp/>&amp;node-&gt;<ref refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" kindref="member">datum</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">remove_node(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/>node)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>rotations<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(node-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>&amp;&amp;<sp/>node-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>++rotations;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref>-&gt;<ref refid="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" kindref="member">prio</ref><sp/>&gt;<sp/>node-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref>-&gt;<ref refid="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" kindref="member">prio</ref>)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1ad79fac7e5a30bf71ac8a7d53c56cf176" kindref="member">tree_node_rot_right</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>node);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8c_1a364dcfa88f9f8e27d1e0ffa7ae7cd15d" kindref="member">tree_node_rot_left</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>node);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1adf0b2d44ac6cd97d428ec85210970b43" kindref="member">rotation_count</ref><sp/>+=<sp/>rotations;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>out<sp/>=<sp/>node-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>?<sp/>node-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>:<sp/>node-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>parent<sp/>=<sp/>node-&gt;<ref refid="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" kindref="member">parent</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(out)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>out-&gt;<ref refid="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" kindref="member">parent</ref><sp/>=<sp/>parent;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)<sp/>=<sp/>out;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" kindref="member">FREE</ref>(node);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" kindref="member">count</ref>--;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref></highlight></codeline>
+<codeline lineno="208" refid="tr__tree_8c_1a2c12fb2ab62855990ac8a0959ffd14b0" refkind="member"><highlight class="normal"><ref refid="tr__tree_8c_1a2c12fb2ab62855990ac8a0959ffd14b0" kindref="member">tr_tree_remove</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/>node<sp/>=<sp/><ref refid="tree__common_8c_1a8ca8a698fb9f3c76e48a451e547166db" kindref="member">tree_search_node</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>key);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!node)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref>)<sp/>{<sp/>NULL,<sp/>NULL,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref><sp/>result<sp/>=<sp/>{<sp/>node-&gt;<ref refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" kindref="member">key</ref>,<sp/>node-&gt;<ref refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" kindref="member">datum</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>remove_node(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>node);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="tr__tree_8c_1a72e0676b79abc74359c66d30345ae1f7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><ref refid="tr__tree_8c_1a72e0676b79abc74359c66d30345ae1f7" kindref="member">tr_tree_search</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a54ed614fb74b373c5167325d6c744171" kindref="member">tree_search</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>key);<sp/>}</highlight></codeline>
+<codeline lineno="219" refid="tr__tree_8c_1a47a8040660895a251ac1d54a5f9689d0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><ref refid="tr__tree_8c_1a47a8040660895a251ac1d54a5f9689d0" kindref="member">tr_tree_search_le</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a8aa3ee04b16a1a81d153af21326ce29f" kindref="member">tree_search_le</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>key);<sp/>}</highlight></codeline>
+<codeline lineno="220" refid="tr__tree_8c_1afe61944f8ab6e076e4daa164ff1d7a5b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><ref refid="tr__tree_8c_1afe61944f8ab6e076e4daa164ff1d7a5b" kindref="member">tr_tree_search_lt</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1abf8d8bb4075e9f28c545ed1c83f0dafa" kindref="member">tree_search_lt</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>key);<sp/>}</highlight></codeline>
+<codeline lineno="221" refid="tr__tree_8c_1a574c05a02f2e58ef93d5ed5c1d32d20b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><ref refid="tr__tree_8c_1a574c05a02f2e58ef93d5ed5c1d32d20b" kindref="member">tr_tree_search_ge</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a8598cfe5c4f5a7a4a1bbc270225bc1ec" kindref="member">tree_search_ge</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>key);<sp/>}</highlight></codeline>
+<codeline lineno="222" refid="tr__tree_8c_1aa9bb0f0c930c050042b8df9ffa6f37c6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><ref refid="tr__tree_8c_1aa9bb0f0c930c050042b8df9ffa6f37c6" kindref="member">tr_tree_search_gt</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a34db2e1b372d1847d32223c3c852b059" kindref="member">tree_search_gt</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>key);<sp/>}</highlight></codeline>
+<codeline lineno="223" refid="tr__tree_8c_1a6fd74f8e83a6fcdf320cd662512bb52f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a6fd74f8e83a6fcdf320cd662512bb52f" kindref="member">tr_tree_traverse</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/><ref refid="dict_8h_1aebbefe3aa81b20e1254e8a7a5253caf6" kindref="member">dict_visit_func</ref><sp/>visit,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>user_data)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a8af8d7bc05c41b6b1889714238c541e1" kindref="member">tree_traverse</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>visit,<sp/>user_data);<sp/>}</highlight></codeline>
+<codeline lineno="224" refid="tr__tree_8c_1a422a191c3a32b8f95b76b2d0be61a817" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a422a191c3a32b8f95b76b2d0be61a817" kindref="member">tr_tree_select</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/>key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/>datum)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1aa14359a5a539fe914717663d62ab3bc2" kindref="member">tree_select</ref>(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>n,<sp/>key,<sp/>datum);<sp/>}</highlight></codeline>
+<codeline lineno="225" refid="tr__tree_8c_1ae6440d12783ccc58b1ef6e5f3c662c98" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1ae6440d12783ccc58b1ef6e5f3c662c98" kindref="member">tr_tree_count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a666279f96572685934714532e744718e" kindref="member">tree_count</ref>(<ref refid="structtree" kindref="compound">tree</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="226" refid="tr__tree_8c_1a8d47e3d4932c53b1af3cda751867d431" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a8d47e3d4932c53b1af3cda751867d431" kindref="member">tr_tree_min_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a756193ba67a2786a5e4a6274a7ec170e" kindref="member">tree_min_path_length</ref>(<ref refid="structtree" kindref="compound">tree</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="227" refid="tr__tree_8c_1af7b0627fcc48dfe850aacbc4dab7ec01" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1af7b0627fcc48dfe850aacbc4dab7ec01" kindref="member">tr_tree_max_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1abf500bf5b159c5ec35a5e0a3ff57a0e8" kindref="member">tree_max_path_length</ref>(<ref refid="structtree" kindref="compound">tree</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="228" refid="tr__tree_8c_1a35128a0a7038af7f263a1d2d5209086b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a35128a0a7038af7f263a1d2d5209086b" kindref="member">tr_tree_total_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a8ff1218a16ab93160f3a922fcdf88882" kindref="member">tree_total_path_length</ref>(<ref refid="structtree" kindref="compound">tree</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">node_new(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/>node<sp/>=<sp/><ref refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" kindref="member">MALLOC</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*node));</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" kindref="member">key</ref><sp/>=<sp/>key;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" kindref="member">datum</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" kindref="member">parent</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>node;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal">node_verify(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/>parent,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/>node)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!parent)<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" kindref="member">VERIFY</ref>(<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref><sp/>==<sp/>node);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" kindref="member">VERIFY</ref>(parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>==<sp/>node<sp/>||<sp/>parent-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref><sp/>==<sp/>node);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" kindref="member">VERIFY</ref>(node-&gt;<ref refid="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" kindref="member">parent</ref><sp/>==<sp/>parent);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parent)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" kindref="member">VERIFY</ref>(node-&gt;<ref refid="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" kindref="member">prio</ref><sp/>&lt;=<sp/>parent-&gt;<ref refid="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" kindref="member">prio</ref>);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>==<sp/>node)<sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" kindref="member">VERIFY</ref>(<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>(parent-&gt;<ref refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" kindref="member">key</ref>,<sp/>node-&gt;<ref refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" kindref="member">key</ref>)<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" kindref="member">ASSERT</ref>(parent-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref><sp/>==<sp/>node);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" kindref="member">VERIFY</ref>(<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>(parent-&gt;<ref refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" kindref="member">key</ref>,<sp/>node-&gt;<ref refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" kindref="member">key</ref>)<sp/>&lt;<sp/>0);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!node_verify(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>node,<sp/>node-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref>)<sp/>||</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!node_verify(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>node,<sp/>node-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref>))</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="tr__tree_8c_1acb4c734f0994b7eadedde0e1c9a3809a" refkind="member"><highlight class="normal"><ref refid="tr__tree_8c_1acb4c734f0994b7eadedde0e1c9a3809a" kindref="member">tr_tree_verify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" kindref="member">VERIFY</ref>(<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" kindref="member">count</ref><sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" kindref="member">VERIFY</ref>(<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" kindref="member">count</ref><sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>node_verify(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>NULL,<sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><ref refid="structtr__itor" kindref="compound">tr_itor</ref>*</highlight></codeline>
+<codeline lineno="282" refid="tr__tree_8c_1a9f83be747a7e2cfa2063d96e82aeebfa" refkind="member"><highlight class="normal"><ref refid="tr__tree_8c_1a9f83be747a7e2cfa2063d96e82aeebfa" kindref="member">tr_itor_new</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor<sp/>=<sp/><ref refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" kindref="member">MALLOC</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*itor));</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(itor)<sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>itor-&gt;<ref refid="structtr__itor_1aecf2bdfca32e5e0ab1e1fd6ef98c7f94" kindref="member">tree</ref><sp/>=<sp/><ref refid="structtree" kindref="compound">tree</ref>;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>itor-&gt;<ref refid="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" kindref="member">node</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>itor;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*</highlight></codeline>
+<codeline lineno="293" refid="tr__tree_8c_1ac6d0f50d8fb9f844fbd1d9a73c883887" refkind="member"><highlight class="normal"><ref refid="tr__tree_8c_1ac6d0f50d8fb9f844fbd1d9a73c883887" kindref="member">tr_dict_itor_new</ref>(<ref refid="structtr__tree" kindref="compound">tr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>)</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/>itor<sp/>=<sp/><ref refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" kindref="member">MALLOC</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*itor));</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(itor)<sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(itor-&gt;<ref refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" kindref="member">_itor</ref><sp/>=<sp/><ref refid="tr__tree_8c_1a9f83be747a7e2cfa2063d96e82aeebfa" kindref="member">tr_itor_new</ref>(<ref refid="structtree" kindref="compound">tree</ref>)))<sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" kindref="member">FREE</ref>(itor);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>itor-&gt;<ref refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" kindref="member">_vtable</ref><sp/>=<sp/>&amp;tr_tree_itor_vtable;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>itor;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306" refid="tr__tree_8c_1ad2e0654f35bcfd2b4b2d3214599adc68" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1ad2e0654f35bcfd2b4b2d3214599adc68" kindref="member">tr_itor_free</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor)<sp/>{<sp/><ref refid="tree__common_8c_1aa3a6573b092296a44a074269c8d2bc91" kindref="member">tree_iterator_free</ref>(itor);<sp/>}</highlight></codeline>
+<codeline lineno="307" refid="tr__tree_8c_1ac4bafa502b5ed7d8f92b3f917d7464fb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1ac4bafa502b5ed7d8f92b3f917d7464fb" kindref="member">tr_itor_valid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" kindref="member">tree_iterator_valid</ref>(itor);<sp/>}</highlight></codeline>
+<codeline lineno="308" refid="tr__tree_8c_1a37970eecfadd85fbcd621b2fddbda176" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a37970eecfadd85fbcd621b2fddbda176" kindref="member">tr_itor_invalidate</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor)<sp/>{<sp/><ref refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" kindref="member">tree_iterator_invalidate</ref>(itor);<sp/>}</highlight></codeline>
+<codeline lineno="309" refid="tr__tree_8c_1a6a6b39591a7036d82998fe5012b79e94" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a6a6b39591a7036d82998fe5012b79e94" kindref="member">tr_itor_next</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a1e3db914a6bdf103e9f7db4f78c908ae" kindref="member">tree_iterator_next</ref>(itor);<sp/>}</highlight></codeline>
+<codeline lineno="310" refid="tr__tree_8c_1a84639eb061b5324246005ca456935d22" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a84639eb061b5324246005ca456935d22" kindref="member">tr_itor_prev</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1afad64b5a28a44ca544fe3f0b8011db17" kindref="member">tree_iterator_prev</ref>(itor);<sp/>}</highlight></codeline>
+<codeline lineno="311" refid="tr__tree_8c_1a5d104b8cb137d5dc21f9c99116aa7585" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a5d104b8cb137d5dc21f9c99116aa7585" kindref="member">tr_itor_nextn</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a8a7b95378ac8dc696b220f073b83977c" kindref="member">tree_iterator_nextn</ref>(itor,<sp/>count);<sp/>}</highlight></codeline>
+<codeline lineno="312" refid="tr__tree_8c_1accce6878c7a1a4b97584f78ab5308478" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1accce6878c7a1a4b97584f78ab5308478" kindref="member">tr_itor_prevn</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1aa54a225a4b2bfc3a6bbf73125d4dd88a" kindref="member">tree_iterator_prevn</ref>(itor,<sp/>count);<sp/>}</highlight></codeline>
+<codeline lineno="313" refid="tr__tree_8c_1a7ffb3d1301c986e527b96d42ee765b19" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a7ffb3d1301c986e527b96d42ee765b19" kindref="member">tr_itor_first</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a9bab181bc96dd1334ea36f0b3f647f2a" kindref="member">tree_iterator_first</ref>(itor);<sp/>}</highlight></codeline>
+<codeline lineno="314" refid="tr__tree_8c_1a442bcd9f2b3b859ea4b74d88f2196077" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a442bcd9f2b3b859ea4b74d88f2196077" kindref="member">tr_itor_last</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a03b78e22aed8c0dd38f96d939066239a" kindref="member">tree_iterator_last</ref>(itor);<sp/>}</highlight></codeline>
+<codeline lineno="315" refid="tr__tree_8c_1af4553033eb69c20e79a98be3fbea7170" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1af4553033eb69c20e79a98be3fbea7170" kindref="member">tr_itor_search</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1aeebf37a00012869c931e03dbb1047ade" kindref="member">tree_iterator_search</ref>(itor,<sp/>key);<sp/>}</highlight></codeline>
+<codeline lineno="316" refid="tr__tree_8c_1a16ba357d7ce3b3233fc15c0c1e069df3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a16ba357d7ce3b3233fc15c0c1e069df3" kindref="member">tr_itor_search_le</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a630ac71696ac60548789b01f1e618350" kindref="member">tree_iterator_search_le</ref>(itor,<sp/>key);<sp/>}</highlight></codeline>
+<codeline lineno="317" refid="tr__tree_8c_1a451de2be9ffc4651dd0138ebb2a57fc4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a451de2be9ffc4651dd0138ebb2a57fc4" kindref="member">tr_itor_search_lt</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1aa83954869eda27b3488032f96a257771" kindref="member">tree_iterator_search_lt</ref>(itor,<sp/>key);<sp/>}</highlight></codeline>
+<codeline lineno="318" refid="tr__tree_8c_1a854994ca3ed00e38a5fb585a443b1cf0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a854994ca3ed00e38a5fb585a443b1cf0" kindref="member">tr_itor_search_ge</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" kindref="member">tree_iterator_search_ge</ref>(itor,<sp/>key);<sp/>}</highlight></codeline>
+<codeline lineno="319" refid="tr__tree_8c_1a9b3d079fdc8c2288c6fbf9180e03f029" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1a9b3d079fdc8c2288c6fbf9180e03f029" kindref="member">tr_itor_search_gt</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" kindref="member">tree_iterator_search_gt</ref>(itor,<sp/>key);<sp/>}</highlight></codeline>
+<codeline lineno="320" refid="tr__tree_8c_1a35ba10e05ebbf9ce85c829ed6d881da0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="tr__tree_8c_1a35ba10e05ebbf9ce85c829ed6d881da0" kindref="member">tr_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1af179889330c7dccaefc41a06d11b288f" kindref="member">tree_iterator_key</ref>(itor);<sp/>}</highlight></codeline>
+<codeline lineno="321" refid="tr__tree_8c_1a1d9a225610e930952c949bd97f1d43ef" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><ref refid="tr__tree_8c_1a1d9a225610e930952c949bd97f1d43ef" kindref="member">tr_itor_datum</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>itor)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1ad4045a0af97ccd1df2c1e251e40e5a4f" kindref="member">tree_iterator_datum</ref>(itor);<sp/>}</highlight></codeline>
+<codeline lineno="322" refid="tr__tree_8c_1ae746542a6b1e4770004b3b0c6a9ae6ee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tr__tree_8c_1ae746542a6b1e4770004b3b0c6a9ae6ee" kindref="member">tr_itor_compare</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>i1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>i2)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" kindref="member">tree_iterator_compare</ref>(i1,<sp/>i2);<sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325" refid="tr__tree_8c_1a332a934be706ba2287233367d39c2e67" refkind="member"><highlight class="normal"><ref refid="tr__tree_8c_1a332a934be706ba2287233367d39c2e67" kindref="member">tr_itor_remove</ref>(<ref refid="structtr__itor" kindref="compound">tr_itor</ref>*<sp/>it)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!it-&gt;<ref refid="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" kindref="member">node</ref>)</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>remove_node(it-&gt;<ref refid="structtr__itor_1aecf2bdfca32e5e0ab1e1fd6ef98c7f94" kindref="member">tree</ref>,<sp/>it-&gt;<ref refid="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" kindref="member">node</ref>);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>it-&gt;<ref refid="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" kindref="member">node</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/tr_tree.c"/>
+  </compounddef>
+</doxygen>

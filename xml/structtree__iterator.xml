@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtree__iterator" kind="struct" language="C++" prot="public">
+    <compoundname>tree_iterator</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" prot="public" static="no" mutable="no">
+        <type><ref refid="structtree" kindref="compound">tree</ref> *</type>
+        <definition>tree* tree</definition>
+        <argsstring></argsstring>
+        <name>tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tree_common.c" line="42" column="12" bodyfile="src/tree_common.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" prot="public" static="no" mutable="no">
+        <type><ref refid="structtree__node" kindref="compound">tree_node</ref> *</type>
+        <definition>tree_node* node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tree_common.c" line="42" column="31" bodyfile="src/tree_common.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>tree_node</label>
+        <link refid="structtree__node"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>rlink</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>tree</label>
+        <link refid="structtree"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tree_iterator</label>
+        <link refid="structtree__iterator"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>tree</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/tree_common.c" line="41" column="1" bodyfile="src/tree_common.c" bodystart="41" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" prot="public" virt="non-virtual"><scope>tree_iterator</scope><name>node</name></member>
+      <member refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" prot="public" virt="non-virtual"><scope>tree_iterator</scope><name>tree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
