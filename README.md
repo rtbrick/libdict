@@ -59,4 +59,4 @@ To build with the included GNU Makefile, simply run `make` in the repository.
 
 ## License
 
-libdict is released under the simplified BSD [license](LICENSE).
+libdict is released under the simplified BSD [license](LICENSE). 
