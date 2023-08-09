@@ -2,9 +2,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # set the project name and version.
-project(libdict
-    VERSION 1.0.1
-    LANGUAGES C)
+project(libdict VERSION 1.0.2 LANGUAGES C)
 
 # set C standard to C11 without extensions
 set(CMAKE_C_STANDARD 11)
@@ -150,6 +148,10 @@ set(CPACK_DEB_COMPONENT_INSTALL ON)
 set(CPACK_DEBIAN_ENABLE_COMPONENT_DEPENDS YES)
 set(CPACK_DEBIAN_LIB_PACKAGE_NAME "libdict")
 set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")
-set(CPACK_PACKAGE_CONTACT "Patrick Elsen <patrick@rtbrick.com>")
-set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
+set(CPACK_PACKAGE_CONTACT "Christian Giese <christian@rtbrick.com>")
+if (NOT DEFINED LIBDICT_VERSION)
+    set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
+else()
+    set(CPACK_PACKAGE_VERSION ${LIBDICT_VERSION})
+endif()
 include(CPack)
