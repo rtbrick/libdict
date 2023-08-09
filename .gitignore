@@ -1,6 +1,7 @@
 words-*
 shuffle.pl
 bin/*
+build/
 *.log
 *.pdf
 *.aux
