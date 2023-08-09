@@ -5,25 +5,62 @@ on:
     tags:
       - 'v*'
 
+env:
+  BUILD_TYPE: Release
+
 jobs:
-  build:
+  release:
     name: Create Release
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get Ref Names
+      id: ref_name
+      run: |
+          echo "SOURCE_NAME=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
+          echo "SOURCE_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+          echo "SOURCE_TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+    - uses: actions/checkout@v3
+    - uses: ncipollo/release-action@v1
+      with:
+        tag: ${{ steps.ref_name.outputs.SOURCE_TAG }}
+        body: "libdict ${{ steps.ref_name.outputs.SOURCE_TAG }}"
+
+  build:
+    name: Build Release ${{matrix.os}}
+    needs: [release]
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, ubuntu-22.04]
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install dependencies
         shell: bash
         run: sudo apt install libcunit1-dev
 
+      - name: Get Ref Names
+        id: ref_name
+        run: |
+            echo "SOURCE_NAME=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
+            echo "SOURCE_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+            echo "SOURCE_TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Set export SOURCE_DATE_EPOCH to git commit time
+        run: |
+            echo "SOURCE_DATE_EPOCH=$(git log -1 --format=%ct)" >> $GITHUB_ENV
+
       - name: Create Build Environment
-        run: cmake -E make_directory ${{github.workspace}}/build
+        run: cmake -E make_directory ${{github.workspace}}/build 
 
       - name: Configure CMake
         shell: bash
         working-directory: ${{github.workspace}}/build
-        run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+        run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DLIBDICT_VERSION=${{ steps.ref_name.outputs.SOURCE_TAG }}
 
       - name: Build
         working-directory: ${{github.workspace}}/build
@@ -40,27 +77,12 @@ jobs:
         shell: bash
         run: |
             cpack -G DEB
-            zip libdict-debian *.deb
+            zip libdict-${{ matrix.os }}.zip *.deb
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload Release
+        uses: svenstaro/upload-release-action@v2
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: Release ${{ github.ref }}
-          draft: true # need to manually publish
-          prerelease: false
-
-      - name: Upload libdict Debian Package
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build/libdict-debian.zip
-          asset_name: libdict-debian.zip
-          asset_content_type: application/zip
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: build/libdict-${{ matrix.os }}.zip
+          asset_name: libdict-${{ matrix.os }}.zip
+          tag: ${{ steps.ref_name.outputs.SOURCE_TAG }}
