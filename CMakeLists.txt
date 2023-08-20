@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # set the project name and version.
-project(libdict VERSION 1.0.2 LANGUAGES C)
+project(libdict VERSION 1.0.0 LANGUAGES C)
 
 # set C standard to C11 without extensions
 set(CMAKE_C_STANDARD 11)

@@ -1,9 +1,9 @@
 name: Release
 
 on:
-  push:
-    tags:
-      - 'v*'
+    push:
+      tags:
+        - "[0-9]+.[0-9]+.[0-9]+"
 
 env:
   BUILD_TYPE: Release
