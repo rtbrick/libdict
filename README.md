@@ -1,6 +1,6 @@
 # libdict
 
-[![GitHub branch checks state](https://img.shields.io/github/workflow/status/rtbrick/libdict/Test)](https://github.com/rtbrick/libdict/actions?query=branch%3Amaster)
+[![Test](https://github.com/rtbrick/libdict/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/rtbrick/libdict/actions/workflows/test.yml)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/rtbrick/libdict?color=green)](https://github.com/rtbrick/libdict/releases)
 [![Doxygen documentation](https://img.shields.io/badge/docs-doxygen-green)](https://rtbrick.github.io/libdict/html)
 [![GitHub](https://img.shields.io/github/license/rtbrick/libdict)](LICENSE)
