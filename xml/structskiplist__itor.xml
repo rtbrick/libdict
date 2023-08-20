@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structskiplist__itor" kind="struct" language="C++" prot="public">
     <compoundname>skiplist_itor</compoundname>
       <sectiondef kind="public-attrib">
@@ -8,6 +8,7 @@
         <definition>skiplist* list</definition>
         <argsstring></argsstring>
         <name>list</name>
+        <qualifiedname>skiplist_itor::list</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -21,6 +22,7 @@
         <definition>skip_node* node</definition>
         <argsstring></argsstring>
         <name>node</name>
+        <qualifiedname>skiplist_itor::node</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -43,6 +45,13 @@
           <edgelabel>prev</edgelabel>
         </childnode>
       </node>
+      <node id="2">
+        <label>skiplist</label>
+        <link refid="structskiplist"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>head</edgelabel>
+        </childnode>
+      </node>
       <node id="1">
         <label>skiplist_itor</label>
         <link refid="structskiplist__itor"/>
@@ -51,13 +60,6 @@
         </childnode>
         <childnode refid="3" relation="usage">
           <edgelabel>node</edgelabel>
-        </childnode>
-      </node>
-      <node id="2">
-        <label>skiplist</label>
-        <link refid="structskiplist"/>
-        <childnode refid="3" relation="usage">
-          <edgelabel>head</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

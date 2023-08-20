@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structitor__vtable" kind="struct" language="C++" prot="public">
     <compoundname>itor_vtable</compoundname>
     <includes refid="dict_8h" local="no">dict.h</includes>
@@ -9,6 +9,7 @@
         <definition>dict_ifree_func ifree</definition>
         <argsstring></argsstring>
         <name>ifree</name>
+        <qualifiedname>itor_vtable::ifree</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -22,6 +23,7 @@
         <definition>dict_valid_func valid</definition>
         <argsstring></argsstring>
         <name>valid</name>
+        <qualifiedname>itor_vtable::valid</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -35,6 +37,7 @@
         <definition>dict_invalidate_func invalid</definition>
         <argsstring></argsstring>
         <name>invalid</name>
+        <qualifiedname>itor_vtable::invalid</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -48,6 +51,7 @@
         <definition>dict_next_func next</definition>
         <argsstring></argsstring>
         <name>next</name>
+        <qualifiedname>itor_vtable::next</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -61,6 +65,7 @@
         <definition>dict_prev_func prev</definition>
         <argsstring></argsstring>
         <name>prev</name>
+        <qualifiedname>itor_vtable::prev</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -74,6 +79,7 @@
         <definition>dict_nextn_func nextn</definition>
         <argsstring></argsstring>
         <name>nextn</name>
+        <qualifiedname>itor_vtable::nextn</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -87,6 +93,7 @@
         <definition>dict_prevn_func prevn</definition>
         <argsstring></argsstring>
         <name>prevn</name>
+        <qualifiedname>itor_vtable::prevn</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -100,6 +107,7 @@
         <definition>dict_first_func first</definition>
         <argsstring></argsstring>
         <name>first</name>
+        <qualifiedname>itor_vtable::first</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -113,6 +121,7 @@
         <definition>dict_last_func last</definition>
         <argsstring></argsstring>
         <name>last</name>
+        <qualifiedname>itor_vtable::last</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -122,10 +131,11 @@
         <location file="include/dict.h" line="139" column="23" bodyfile="include/dict.h" bodystart="139" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a236dbeefa21b31029d1e4828126988c5" prot="public" static="no" mutable="no">
-        <type><ref refid="dict_8h_1a35f6e7bcb0876419ae8fedb5c6f8d856" kindref="member">dict_key_func</ref></type>
+        <type><ref refid="dict_8h_1a7969590b6825845cd1e644d05b4fa300" kindref="member">dict_key_func</ref></type>
         <definition>dict_key_func key</definition>
         <argsstring></argsstring>
         <name>key</name>
+        <qualifiedname>itor_vtable::key</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -135,10 +145,11 @@
         <location file="include/dict.h" line="140" column="22" bodyfile="include/dict.h" bodystart="140" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1aee22330239b8c709c60d3b8275e01060" prot="public" static="no" mutable="no">
-        <type><ref refid="dict_8h_1ab07daf83ff24f29a3035b1c94652558b" kindref="member">dict_datum_func</ref></type>
+        <type><ref refid="dict_8h_1aa24f05bcc6368e21bc8774eec9fb3a17" kindref="member">dict_datum_func</ref></type>
         <definition>dict_datum_func datum</definition>
         <argsstring></argsstring>
         <name>datum</name>
+        <qualifiedname>itor_vtable::datum</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -152,6 +163,7 @@
         <definition>dict_isearch_func search</definition>
         <argsstring></argsstring>
         <name>search</name>
+        <qualifiedname>itor_vtable::search</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -165,6 +177,7 @@
         <definition>dict_isearch_func search_le</definition>
         <argsstring></argsstring>
         <name>search_le</name>
+        <qualifiedname>itor_vtable::search_le</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -178,6 +191,7 @@
         <definition>dict_isearch_func search_lt</definition>
         <argsstring></argsstring>
         <name>search_lt</name>
+        <qualifiedname>itor_vtable::search_lt</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -191,6 +205,7 @@
         <definition>dict_isearch_func search_ge</definition>
         <argsstring></argsstring>
         <name>search_ge</name>
+        <qualifiedname>itor_vtable::search_ge</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -204,6 +219,7 @@
         <definition>dict_isearch_func search_gt</definition>
         <argsstring></argsstring>
         <name>search_gt</name>
+        <qualifiedname>itor_vtable::search_gt</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -217,6 +233,7 @@
         <definition>dict_iremove_func remove</definition>
         <argsstring></argsstring>
         <name>remove</name>
+        <qualifiedname>itor_vtable::remove</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -230,6 +247,7 @@
         <definition>dict_icompare_func compare</definition>
         <argsstring></argsstring>
         <name>compare</name>
+        <qualifiedname>itor_vtable::compare</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

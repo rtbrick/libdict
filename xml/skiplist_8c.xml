@@ -1,82 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="skiplist_8c" kind="file" language="C++">
     <compoundname>skiplist.c</compoundname>
     <includes refid="skiplist_8h" local="yes">skiplist.h</includes>
     <includes local="no">string.h</includes>
     <includes refid="dict__private_8h" local="yes">dict_private.h</includes>
     <incdepgraph>
-      <node id="6">
-        <label>stdbool.h</label>
-      </node>
-      <node id="2">
-        <label>skiplist.h</label>
-        <link refid="skiplist_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>stdint.h</label>
-      </node>
-      <node id="18">
-        <label>stdlib.h</label>
-      </node>
-      <node id="11">
-        <label>rb_tree.h</label>
-        <link refid="rb__tree_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>stddef.h</label>
-      </node>
-      <node id="14">
-        <label>wb_tree.h</label>
-        <link refid="wb__tree_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>src/skiplist.c</label>
-        <link refid="skiplist_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>string.h</label>
-      </node>
-      <node id="9">
-        <label>hb_tree.h</label>
-        <link refid="hb__tree_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="16">
-        <label>dict_private.h</label>
-        <link refid="dict__private_8h"/>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>sp_tree.h</label>
-        <link refid="sp__tree_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>hashtable.h</label>
-        <link refid="hashtable_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
       <node id="3">
         <label>dict.h</label>
         <link refid="dict_8h"/>
@@ -105,18 +34,45 @@
         <childnode refid="14" relation="include">
         </childnode>
       </node>
+      <node id="7">
+        <label>hashtable.h</label>
+        <link refid="hashtable_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>hashtable2.h</label>
+        <link refid="hashtable2_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
       <node id="10">
         <label>pr_tree.h</label>
         <link refid="pr__tree_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="17">
-        <label>stdio.h</label>
+      <node id="11">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-      <node id="8">
-        <label>hashtable2.h</label>
-        <link refid="hashtable2_8h"/>
+      <node id="2">
+        <label>skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
@@ -125,6 +81,50 @@
         <link refid="tr__tree_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+      </node>
+      <node id="14">
+        <label>wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>dict_private.h</label>
+        <link refid="dict__private_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/skiplist.c</label>
+        <link refid="skiplist_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="17">
+        <label>stdio.h</label>
+      </node>
+      <node id="18">
+        <label>stdlib.h</label>
+      </node>
+      <node id="15">
+        <label>string.h</label>
       </node>
     </incdepgraph>
     <innerclass refid="structskip__node" prot="public">skip_node</innerclass>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/skiplist.c" line="1" column="0" bodyfile="src/skiplist.c" bodystart="37" bodyend="-1"/>
+        <location file="src/skiplist.c" line="37" column="24" bodyfile="src/skiplist.c" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -166,20 +166,20 @@
         <name>skiplist_vtable</name>
         <initializer>= {
     true,
-    (<ref refid="dict_8h_1a456bfcc5a7d9356c29dd80f6b5ca4acc" kindref="member">dict_inew_func</ref>)	    <ref refid="skiplist_8h_1ae742f53773db37d0bb05167a0d259f56" kindref="member">skiplist_dict_itor_new</ref>,
-    (<ref refid="dict_8h_1a861d296c134c416c965b8e2117cda33a" kindref="member">dict_dfree_func</ref>)	    <ref refid="skiplist_8h_1a824d0126c8f9bfdb2a80a357f1846909" kindref="member">skiplist_free</ref>,
-    (<ref refid="dict_8h_1a526ec5a7be277ebf2fb509362b6b2f0c" kindref="member">dict_insert_func</ref>)	    <ref refid="skiplist_8h_1ad4842554437de6ab010bb84006b8bf39" kindref="member">skiplist_insert</ref>,
-    (<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)	    <ref refid="skiplist_8h_1a5c11b20a0881225c697bbd86a75da887" kindref="member">skiplist_search</ref>,
-    (<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)	    <ref refid="skiplist_8h_1abf3ef943fd90c79c13116019b33b2b98" kindref="member">skiplist_search_le</ref>,
-    (<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)	    <ref refid="skiplist_8h_1ad134b2b5bb0c2e7b53bd84b90b732cf2" kindref="member">skiplist_search_lt</ref>,
-    (<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)	    <ref refid="skiplist_8h_1a70be0065f6ff56b5e901d08411f4ba8a" kindref="member">skiplist_search_ge</ref>,
-    (<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)	    <ref refid="skiplist_8h_1abbec770f20a57f89c9c87cf2994b0924" kindref="member">skiplist_search_gt</ref>,
-    (<ref refid="dict_8h_1a03ac901668905b999c543bd504ce6049" kindref="member">dict_remove_func</ref>)	    <ref refid="skiplist_8h_1af23e431ed5e8c8e2aecdcc5627bc68be" kindref="member">skiplist_remove</ref>,
-    (<ref refid="dict_8h_1af10d9833546e8a985bf8a21e7cca9c39" kindref="member">dict_clear_func</ref>)	    <ref refid="skiplist_8h_1adcd7400173bafdbc06f7868e2ff11a9d" kindref="member">skiplist_clear</ref>,
-    (<ref refid="dict_8h_1a465ab0c48a0c2920bd4a4d2119dde513" kindref="member">dict_traverse_func</ref>)    <ref refid="skiplist_8h_1a15170e44c991e2f0710781da66693072" kindref="member">skiplist_traverse</ref>,
+    (<ref refid="dict_8h_1ad70c6127784fe473398838a4ca7ee0e8" kindref="member">dict_inew_func</ref>)	    <ref refid="skiplist_8c_1ab465d5aeebddd87b8a4bdb07b5eb0fd0" kindref="member">skiplist_dict_itor_new</ref>,
+    (<ref refid="dict_8h_1a861d296c134c416c965b8e2117cda33a" kindref="member">dict_dfree_func</ref>)	    <ref refid="skiplist_8c_1a824d0126c8f9bfdb2a80a357f1846909" kindref="member">skiplist_free</ref>,
+    (<ref refid="dict_8h_1a526ec5a7be277ebf2fb509362b6b2f0c" kindref="member">dict_insert_func</ref>)	    <ref refid="skiplist_8c_1ad4842554437de6ab010bb84006b8bf39" kindref="member">skiplist_insert</ref>,
+    (<ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref>)	    <ref refid="skiplist_8c_1a482f4582ee618e6daefc99e64fcebc59" kindref="member">skiplist_search</ref>,
+    (<ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref>)	    <ref refid="skiplist_8c_1a373602310b3d20ab40e7634d719081f0" kindref="member">skiplist_search_le</ref>,
+    (<ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref>)	    <ref refid="skiplist_8c_1ab71061e35d511edaf582707c024d5629" kindref="member">skiplist_search_lt</ref>,
+    (<ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref>)	    <ref refid="skiplist_8c_1a98fbe7bcb19546c9e3695eaa592b6b02" kindref="member">skiplist_search_ge</ref>,
+    (<ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref>)	    <ref refid="skiplist_8c_1a8b8f7145975eff26a2d358a7ab60652f" kindref="member">skiplist_search_gt</ref>,
+    (<ref refid="dict_8h_1a03ac901668905b999c543bd504ce6049" kindref="member">dict_remove_func</ref>)	    <ref refid="skiplist_8c_1af23e431ed5e8c8e2aecdcc5627bc68be" kindref="member">skiplist_remove</ref>,
+    (<ref refid="dict_8h_1af10d9833546e8a985bf8a21e7cca9c39" kindref="member">dict_clear_func</ref>)	    <ref refid="skiplist_8c_1adcd7400173bafdbc06f7868e2ff11a9d" kindref="member">skiplist_clear</ref>,
+    (<ref refid="dict_8h_1a465ab0c48a0c2920bd4a4d2119dde513" kindref="member">dict_traverse_func</ref>)    <ref refid="skiplist_8c_1a15170e44c991e2f0710781da66693072" kindref="member">skiplist_traverse</ref>,
     (<ref refid="dict_8h_1a18186f71a497454b44c31cd4737594fc" kindref="member">dict_select_func</ref>)	    NULL,
-    (<ref refid="dict_8h_1a6c85f33ba34353d8433b41377053f882" kindref="member">dict_count_func</ref>)	    <ref refid="skiplist_8h_1aeab0378a37def72ea8c518e1f44a1b33" kindref="member">skiplist_count</ref>,
-    (<ref refid="dict_8h_1aeb7fec8d69b3fc9802e46e7d3eae4d41" kindref="member">dict_verify_func</ref>)	    <ref refid="skiplist_8h_1a4df47d9ff2ce6126c15bc80d9423bdf1" kindref="member">skiplist_verify</ref>,
+    (<ref refid="dict_8h_1a6c85f33ba34353d8433b41377053f882" kindref="member">dict_count_func</ref>)	    <ref refid="skiplist_8c_1aeab0378a37def72ea8c518e1f44a1b33" kindref="member">skiplist_count</ref>,
+    (<ref refid="dict_8h_1aeb7fec8d69b3fc9802e46e7d3eae4d41" kindref="member">dict_verify_func</ref>)	    <ref refid="skiplist_8c_1a4df47d9ff2ce6126c15bc80d9423bdf1" kindref="member">skiplist_verify</ref>,
 }</initializer>
         <briefdescription>
         </briefdescription>
@@ -195,24 +195,24 @@
         <argsstring></argsstring>
         <name>skiplist_itor_vtable</name>
         <initializer>= {
-    (<ref refid="dict_8h_1af7abde3da86249ff4c3d19f5e62e7617" kindref="member">dict_ifree_func</ref>)	    <ref refid="skiplist_8h_1a0038797e29797bdb7ccd59e33f9e65a0" kindref="member">skiplist_itor_free</ref>,
-    (<ref refid="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" kindref="member">dict_valid_func</ref>)	    <ref refid="skiplist_8h_1a8c9a8ef464827a0ae56e66063b632b02" kindref="member">skiplist_itor_valid</ref>,
-    (<ref refid="dict_8h_1a1fdd9cad34cc517ad72e999498333195" kindref="member">dict_invalidate_func</ref>)  <ref refid="skiplist_8h_1a83a1a0a8199354a84a74bc69785d48d2" kindref="member">skiplist_itor_invalidate</ref>,
-    (<ref refid="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" kindref="member">dict_next_func</ref>)	    <ref refid="skiplist_8h_1a6b16e0f86c1a718837212ec494dc639d" kindref="member">skiplist_itor_next</ref>,
-    (<ref refid="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" kindref="member">dict_prev_func</ref>)	    <ref refid="skiplist_8h_1afa49a5994bef26a067229baf829757da" kindref="member">skiplist_itor_prev</ref>,
-    (<ref refid="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" kindref="member">dict_nextn_func</ref>)	    <ref refid="skiplist_8h_1ad6fcce69c6f6ce1e613554bbb2137953" kindref="member">skiplist_itor_nextn</ref>,
-    (<ref refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" kindref="member">dict_prevn_func</ref>)	    <ref refid="skiplist_8h_1a80b0fe3e44974d0317096d4c9bc85d75" kindref="member">skiplist_itor_prevn</ref>,
-    (<ref refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" kindref="member">dict_first_func</ref>)	    <ref refid="skiplist_8h_1a6647c65a42000e933fc047a2ff1077af" kindref="member">skiplist_itor_first</ref>,
-    (<ref refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" kindref="member">dict_last_func</ref>)	    <ref refid="skiplist_8h_1af97c68bce2728f1b15bbcf2d9ce32a68" kindref="member">skiplist_itor_last</ref>,
-    (<ref refid="dict_8h_1a35f6e7bcb0876419ae8fedb5c6f8d856" kindref="member">dict_key_func</ref>)	    <ref refid="skiplist_8h_1a4e69c1333109390b56dcd689f2456be5" kindref="member">skiplist_itor_key</ref>,
-    (<ref refid="dict_8h_1ab07daf83ff24f29a3035b1c94652558b" kindref="member">dict_datum_func</ref>)	    <ref refid="skiplist_8h_1a0bf22a90eb6e57ee13d5b5c5bae5f374" kindref="member">skiplist_itor_datum</ref>,
-    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="skiplist_8h_1a4adae95e07dd7e8478ce673218a54ed2" kindref="member">skiplist_itor_search</ref>,
-    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="skiplist_8h_1a0067bbc33ec62d152bb64cd6993ff049" kindref="member">skiplist_itor_search_le</ref>,
-    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="skiplist_8h_1a8c0239dbe5d95238b677ddc22e80f27d" kindref="member">skiplist_itor_search_lt</ref>,
-    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="skiplist_8h_1aa6d10c17c75f3cc02f0ce4ff23b7a8e4" kindref="member">skiplist_itor_search_ge</ref>,
-    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="skiplist_8h_1a2e73ff31a8023637eaa66e43cccb0075" kindref="member">skiplist_itor_search_gt</ref>,
-    (<ref refid="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" kindref="member">dict_iremove_func</ref>)	    <ref refid="skiplist_8h_1a33ddbfa076ade530bcdd0079ec4aa506" kindref="member">skiplist_itor_remove</ref>,
-    (<ref refid="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" kindref="member">dict_icompare_func</ref>)    <ref refid="skiplist_8h_1a668e525bb9157022c05b9b42700cdc95" kindref="member">skiplist_itor_compare</ref>,
+    (<ref refid="dict_8h_1af7abde3da86249ff4c3d19f5e62e7617" kindref="member">dict_ifree_func</ref>)	    <ref refid="skiplist_8c_1ad31dfafa1f916757efc48eb41f4040f1" kindref="member">skiplist_itor_free</ref>,
+    (<ref refid="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" kindref="member">dict_valid_func</ref>)	    <ref refid="skiplist_8c_1a8c9a8ef464827a0ae56e66063b632b02" kindref="member">skiplist_itor_valid</ref>,
+    (<ref refid="dict_8h_1a1fdd9cad34cc517ad72e999498333195" kindref="member">dict_invalidate_func</ref>)  <ref refid="skiplist_8c_1a83a1a0a8199354a84a74bc69785d48d2" kindref="member">skiplist_itor_invalidate</ref>,
+    (<ref refid="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" kindref="member">dict_next_func</ref>)	    <ref refid="skiplist_8c_1a6b16e0f86c1a718837212ec494dc639d" kindref="member">skiplist_itor_next</ref>,
+    (<ref refid="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" kindref="member">dict_prev_func</ref>)	    <ref refid="skiplist_8c_1afa49a5994bef26a067229baf829757da" kindref="member">skiplist_itor_prev</ref>,
+    (<ref refid="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" kindref="member">dict_nextn_func</ref>)	    <ref refid="skiplist_8c_1ad6fcce69c6f6ce1e613554bbb2137953" kindref="member">skiplist_itor_nextn</ref>,
+    (<ref refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" kindref="member">dict_prevn_func</ref>)	    <ref refid="skiplist_8c_1a80b0fe3e44974d0317096d4c9bc85d75" kindref="member">skiplist_itor_prevn</ref>,
+    (<ref refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" kindref="member">dict_first_func</ref>)	    <ref refid="skiplist_8c_1a6647c65a42000e933fc047a2ff1077af" kindref="member">skiplist_itor_first</ref>,
+    (<ref refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" kindref="member">dict_last_func</ref>)	    <ref refid="skiplist_8c_1af97c68bce2728f1b15bbcf2d9ce32a68" kindref="member">skiplist_itor_last</ref>,
+    (<ref refid="dict_8h_1a7969590b6825845cd1e644d05b4fa300" kindref="member">dict_key_func</ref>)	    <ref refid="skiplist_8c_1a88b927a970f40fe40eb161fc14c88fa2" kindref="member">skiplist_itor_key</ref>,
+    (<ref refid="dict_8h_1aa24f05bcc6368e21bc8774eec9fb3a17" kindref="member">dict_datum_func</ref>)	    <ref refid="skiplist_8c_1aac0b4e5a1495aeeb324fbc0ae11b0dcc" kindref="member">skiplist_itor_datum</ref>,
+    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="skiplist_8c_1a4adae95e07dd7e8478ce673218a54ed2" kindref="member">skiplist_itor_search</ref>,
+    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="skiplist_8c_1a0067bbc33ec62d152bb64cd6993ff049" kindref="member">skiplist_itor_search_le</ref>,
+    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="skiplist_8c_1a8c0239dbe5d95238b677ddc22e80f27d" kindref="member">skiplist_itor_search_lt</ref>,
+    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="skiplist_8c_1aa6d10c17c75f3cc02f0ce4ff23b7a8e4" kindref="member">skiplist_itor_search_ge</ref>,
+    (<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)	    <ref refid="skiplist_8c_1a2e73ff31a8023637eaa66e43cccb0075" kindref="member">skiplist_itor_search_gt</ref>,
+    (<ref refid="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" kindref="member">dict_iremove_func</ref>)	    <ref refid="skiplist_8c_1a33ddbfa076ade530bcdd0079ec4aa506" kindref="member">skiplist_itor_remove</ref>,
+    (<ref refid="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" kindref="member">dict_icompare_func</ref>)    <ref refid="skiplist_8c_1aaa479df9fd2242cb344db95e1a747708" kindref="member">skiplist_itor_compare</ref>,
 }</initializer>
         <briefdescription>
         </briefdescription>
@@ -392,9 +392,9 @@
         </inbodydescription>
         <location file="src/skiplist.c" line="685" column="1" bodyfile="src/skiplist.c" bodystart="685" bodyend="689" declfile="src/skiplist.c" declline="108" declcolumn="26"/>
       </memberdef>
-      <memberdef kind="function" id="skiplist_8c_1a2b34dfc5713e5b1d3cc11367ffbea901" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="skiplist_8c_1a163c5a84a8d9796d5a382824734d041c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structskiplist" kindref="compound">skiplist</ref> *</type>
-        <definition>skiplist* skiplist_new</definition>
+        <definition>skiplist * skiplist_new</definition>
         <argsstring>(dict_compare_func cmp_func, unsigned max_link)</argsstring>
         <name>skiplist_new</name>
         <param>
@@ -413,13 +413,18 @@
         </inbodydescription>
         <location file="src/skiplist.c" line="111" column="1" bodyfile="src/skiplist.c" bodystart="111" bodyend="132"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
+        <references refid="structskiplist_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="skiplist_8c" startline="54">skiplist::count</references>
+        <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" compoundref="skiplist_8c" startline="50">skiplist::head</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
         <references refid="skiplist_8c_1abfa744c8ca5b46f7f2a10aea53a4ec59" compoundref="skiplist_8c" startline="47">MAX_LINK</references>
+        <references refid="structskiplist_1a196385d0ce1b6f622135248c96a88e6d" compoundref="skiplist_8c" startline="51">skiplist::max_link</references>
+        <references refid="structskiplist_1af6e47de1fdddfdde6a04eaf5a4cf1609" compoundref="skiplist_8c" startline="52">skiplist::top_link</references>
       </memberdef>
-      <memberdef kind="function" id="skiplist_8c_1ad423234d19d8d1def1d010f57cd19da6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="skiplist_8c_1a97d5ef497ad5c8b0b14c59097c0efa6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict" kindref="compound">dict</ref> *</type>
-        <definition>dict* skiplist_dict_new</definition>
+        <definition>dict * skiplist_dict_new</definition>
         <argsstring>(dict_compare_func cmp_func, unsigned max_link)</argsstring>
         <name>skiplist_dict_new</name>
         <param>
@@ -441,7 +446,7 @@
         <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
-        <references refid="skiplist_8c_1a2b34dfc5713e5b1d3cc11367ffbea901" compoundref="skiplist_8c" startline="111" endline="132">skiplist_new</references>
+        <references refid="skiplist_8c_1a163c5a84a8d9796d5a382824734d041c" compoundref="skiplist_8c" startline="111" endline="132">skiplist_new</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8c_1a824d0126c8f9bfdb2a80a357f1846909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -497,9 +502,9 @@
         <references refid="skiplist_8c_1abfa744c8ca5b46f7f2a10aea53a4ec59" compoundref="skiplist_8c" startline="47">MAX_LINK</references>
         <references refid="structskiplist_1af6e47de1fdddfdde6a04eaf5a4cf1609" compoundref="skiplist_8c" startline="52">skiplist::top_link</references>
       </memberdef>
-      <memberdef kind="function" id="skiplist_8c_1a5c11b20a0881225c697bbd86a75da887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="skiplist_8c_1a482f4582ee618e6daefc99e64fcebc59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** skiplist_search</definition>
+        <definition>void ** skiplist_search</definition>
         <argsstring>(skiplist *list, const void *key)</argsstring>
         <name>skiplist_search</name>
         <param>
@@ -517,10 +522,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="327" column="1" bodyfile="src/skiplist.c" bodystart="327" bodyend="331"/>
+        <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
       </memberdef>
-      <memberdef kind="function" id="skiplist_8c_1abf3ef943fd90c79c13116019b33b2b98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="skiplist_8c_1a373602310b3d20ab40e7634d719081f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** skiplist_search_le</definition>
+        <definition>void ** skiplist_search_le</definition>
         <argsstring>(skiplist *list, const void *key)</argsstring>
         <name>skiplist_search_le</name>
         <param>
@@ -538,10 +544,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="334" column="1" bodyfile="src/skiplist.c" bodystart="334" bodyend="338"/>
+        <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
       </memberdef>
-      <memberdef kind="function" id="skiplist_8c_1ad134b2b5bb0c2e7b53bd84b90b732cf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="skiplist_8c_1ab71061e35d511edaf582707c024d5629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** skiplist_search_lt</definition>
+        <definition>void ** skiplist_search_lt</definition>
         <argsstring>(skiplist *list, const void *key)</argsstring>
         <name>skiplist_search_lt</name>
         <param>
@@ -559,10 +566,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="341" column="1" bodyfile="src/skiplist.c" bodystart="341" bodyend="345"/>
+        <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
       </memberdef>
-      <memberdef kind="function" id="skiplist_8c_1a70be0065f6ff56b5e901d08411f4ba8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="skiplist_8c_1a98fbe7bcb19546c9e3695eaa592b6b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** skiplist_search_ge</definition>
+        <definition>void ** skiplist_search_ge</definition>
         <argsstring>(skiplist *list, const void *key)</argsstring>
         <name>skiplist_search_ge</name>
         <param>
@@ -580,10 +588,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="348" column="1" bodyfile="src/skiplist.c" bodystart="348" bodyend="352"/>
+        <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
       </memberdef>
-      <memberdef kind="function" id="skiplist_8c_1abbec770f20a57f89c9c87cf2994b0924" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="skiplist_8c_1a8b8f7145975eff26a2d358a7ab60652f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** skiplist_search_gt</definition>
+        <definition>void ** skiplist_search_gt</definition>
         <argsstring>(skiplist *list, const void *key)</argsstring>
         <name>skiplist_search_gt</name>
         <param>
@@ -601,6 +610,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="355" column="1" bodyfile="src/skiplist.c" bodystart="355" bodyend="359"/>
+        <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8c_1af23e431ed5e8c8e2aecdcc5627bc68be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref></type>
@@ -761,9 +771,9 @@
         <references refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" compoundref="skiplist_8c" startline="50">skiplist::head</references>
         <references refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" compoundref="skiplist_8c" startline="44">skip_node::link</references>
       </memberdef>
-      <memberdef kind="function" id="skiplist_8c_1a323893c14c3786a260ab00ba33afa149" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="skiplist_8c_1adbe33aa562dee4fa3e409b3544203780" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structskiplist__itor" kindref="compound">skiplist_itor</ref> *</type>
-        <definition>skiplist_itor* skiplist_itor_new</definition>
+        <definition>skiplist_itor * skiplist_itor_new</definition>
         <argsstring>(skiplist *list)</argsstring>
         <name>skiplist_itor_new</name>
         <param>
@@ -781,9 +791,9 @@
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
-      <memberdef kind="function" id="skiplist_8c_1ae742f53773db37d0bb05167a0d259f56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="skiplist_8c_1ab465d5aeebddd87b8a4bdb07b5eb0fd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict__itor" kindref="compound">dict_itor</ref> *</type>
-        <definition>dict_itor* skiplist_dict_itor_new</definition>
+        <definition>dict_itor * skiplist_dict_itor_new</definition>
         <argsstring>(skiplist *list)</argsstring>
         <name>skiplist_dict_itor_new</name>
         <param>
@@ -801,7 +811,7 @@
         <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="175">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
-        <references refid="skiplist_8c_1a323893c14c3786a260ab00ba33afa149" compoundref="skiplist_8c" startline="503" endline="511">skiplist_itor_new</references>
+        <references refid="skiplist_8c_1adbe33aa562dee4fa3e409b3544203780" compoundref="skiplist_8c" startline="503" endline="511">skiplist_itor_new</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8c_1ad31dfafa1f916757efc48eb41f4040f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1004,6 +1014,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="603" column="1" bodyfile="src/skiplist.c" bodystart="603" bodyend="606"/>
+        <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8c_1a0067bbc33ec62d152bb64cd6993ff049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1026,6 +1037,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="609" column="1" bodyfile="src/skiplist.c" bodystart="609" bodyend="612"/>
+        <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8c_1a8c0239dbe5d95238b677ddc22e80f27d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1048,6 +1060,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="615" column="1" bodyfile="src/skiplist.c" bodystart="615" bodyend="618"/>
+        <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8c_1aa6d10c17c75f3cc02f0ce4ff23b7a8e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1070,6 +1083,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="621" column="1" bodyfile="src/skiplist.c" bodystart="621" bodyend="624"/>
+        <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8c_1a2e73ff31a8023637eaa66e43cccb0075" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1092,11 +1106,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="627" column="1" bodyfile="src/skiplist.c" bodystart="627" bodyend="630"/>
+        <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
-      <memberdef kind="function" id="skiplist_8c_1a4e69c1333109390b56dcd689f2456be5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="skiplist_8c_1a88b927a970f40fe40eb161fc14c88fa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const void *</type>
-        <definition>const void* skiplist_itor_key</definition>
+        <definition>const void * skiplist_itor_key</definition>
         <argsstring>(const skiplist_itor *itor)</argsstring>
         <name>skiplist_itor_key</name>
         <param>
@@ -1113,9 +1128,9 @@
         <references refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="skiplist_8c" startline="40">skip_node::key</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
-      <memberdef kind="function" id="skiplist_8c_1a0bf22a90eb6e57ee13d5b5c5bae5f374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="skiplist_8c_1aac0b4e5a1495aeeb324fbc0ae11b0dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** skiplist_itor_datum</definition>
+        <definition>void ** skiplist_itor_datum</definition>
         <argsstring>(skiplist_itor *itor)</argsstring>
         <name>skiplist_itor_datum</name>
         <param>
@@ -1187,7 +1202,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="skiplist_8c_1a50e428cd0dfc84ac5e72fb3ae9595a37" refkind="member"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/>libdict<sp/>--<sp/>skiplist<sp/>implementation.</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2001-2014,<sp/>Farooq<sp/>Mela</highlight></codeline>
@@ -1223,7 +1238,7 @@
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>For<sp/>memset()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dict__private_8h" kindref="compound">dict_private.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structskip__node" kindref="compound">skip_node</ref><sp/><ref refid="structskip__node" kindref="compound">skip_node</ref>;</highlight></codeline>
+<codeline lineno="37" refid="skiplist_8c_1a50e428cd0dfc84ac5e72fb3ae9595a37" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structskip__node" kindref="compound">skip_node</ref><sp/><ref refid="structskip__node" kindref="compound">skip_node</ref>;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39" refid="structskip__node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structskip__node" kindref="compound">skip_node</ref><sp/>{</highlight></codeline>
 <codeline lineno="40" refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" kindref="member">key</ref>;</highlight></codeline>
@@ -1250,14 +1265,14 @@
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdict__vtable" kindref="compound">dict_vtable</ref><sp/>skiplist_vtable<sp/>=<sp/>{</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a456bfcc5a7d9356c29dd80f6b5ca4acc" kindref="member">dict_inew_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1ae742f53773db37d0bb05167a0d259f56" kindref="member">skiplist_dict_itor_new</ref>,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ad70c6127784fe473398838a4ca7ee0e8" kindref="member">dict_inew_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1ab465d5aeebddd87b8a4bdb07b5eb0fd0" kindref="member">skiplist_dict_itor_new</ref>,</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a861d296c134c416c965b8e2117cda33a" kindref="member">dict_dfree_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a824d0126c8f9bfdb2a80a357f1846909" kindref="member">skiplist_free</ref>,</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a526ec5a7be277ebf2fb509362b6b2f0c" kindref="member">dict_insert_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1ad4842554437de6ab010bb84006b8bf39" kindref="member">skiplist_insert</ref>,</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a5c11b20a0881225c697bbd86a75da887" kindref="member">skiplist_search</ref>,</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1abf3ef943fd90c79c13116019b33b2b98" kindref="member">skiplist_search_le</ref>,</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1ad134b2b5bb0c2e7b53bd84b90b732cf2" kindref="member">skiplist_search_lt</ref>,</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a70be0065f6ff56b5e901d08411f4ba8a" kindref="member">skiplist_search_ge</ref>,</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1abbec770f20a57f89c9c87cf2994b0924" kindref="member">skiplist_search_gt</ref>,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a482f4582ee618e6daefc99e64fcebc59" kindref="member">skiplist_search</ref>,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a373602310b3d20ab40e7634d719081f0" kindref="member">skiplist_search_le</ref>,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1ab71061e35d511edaf582707c024d5629" kindref="member">skiplist_search_lt</ref>,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a98fbe7bcb19546c9e3695eaa592b6b02" kindref="member">skiplist_search_ge</ref>,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a8b8f7145975eff26a2d358a7ab60652f" kindref="member">skiplist_search_gt</ref>,</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a03ac901668905b999c543bd504ce6049" kindref="member">dict_remove_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1af23e431ed5e8c8e2aecdcc5627bc68be" kindref="member">skiplist_remove</ref>,</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1af10d9833546e8a985bf8a21e7cca9c39" kindref="member">dict_clear_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1adcd7400173bafdbc06f7868e2ff11a9d" kindref="member">skiplist_clear</ref>,</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a465ab0c48a0c2920bd4a4d2119dde513" kindref="member">dict_traverse_func</ref>)<sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a15170e44c991e2f0710781da66693072" kindref="member">skiplist_traverse</ref>,</highlight></codeline>
@@ -1276,8 +1291,8 @@
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" kindref="member">dict_prevn_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a80b0fe3e44974d0317096d4c9bc85d75" kindref="member">skiplist_itor_prevn</ref>,</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" kindref="member">dict_first_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a6647c65a42000e933fc047a2ff1077af" kindref="member">skiplist_itor_first</ref>,</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" kindref="member">dict_last_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1af97c68bce2728f1b15bbcf2d9ce32a68" kindref="member">skiplist_itor_last</ref>,</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a35f6e7bcb0876419ae8fedb5c6f8d856" kindref="member">dict_key_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a4e69c1333109390b56dcd689f2456be5" kindref="member">skiplist_itor_key</ref>,</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab07daf83ff24f29a3035b1c94652558b" kindref="member">dict_datum_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a0bf22a90eb6e57ee13d5b5c5bae5f374" kindref="member">skiplist_itor_datum</ref>,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1a7969590b6825845cd1e644d05b4fa300" kindref="member">dict_key_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a88b927a970f40fe40eb161fc14c88fa2" kindref="member">skiplist_itor_key</ref>,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1aa24f05bcc6368e21bc8774eec9fb3a17" kindref="member">dict_datum_func</ref>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1aac0b4e5a1495aeeb324fbc0ae11b0dcc" kindref="member">skiplist_itor_datum</ref>,</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a4adae95e07dd7e8478ce673218a54ed2" kindref="member">skiplist_itor_search</ref>,</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a0067bbc33ec62d152bb64cd6993ff049" kindref="member">skiplist_itor_search_le</ref>,</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)<sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8c_1a8c0239dbe5d95238b677ddc22e80f27d" kindref="member">skiplist_itor_search_lt</ref>,</highlight></codeline>
@@ -1297,7 +1312,7 @@
 <codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>rand_link_count(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list);</highlight></codeline>
 <codeline lineno="109"><highlight class="normal"></highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><ref refid="structskiplist" kindref="compound">skiplist</ref>*</highlight></codeline>
-<codeline lineno="111" refid="skiplist_8c_1a2b34dfc5713e5b1d3cc11367ffbea901" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a2b34dfc5713e5b1d3cc11367ffbea901" kindref="member">skiplist_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/>cmp_func,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>max_link)</highlight></codeline>
+<codeline lineno="111" refid="skiplist_8c_1a163c5a84a8d9796d5a382824734d041c" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a163c5a84a8d9796d5a382824734d041c" kindref="member">skiplist_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/>cmp_func,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>max_link)</highlight></codeline>
 <codeline lineno="112"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" kindref="member">ASSERT</ref>(cmp_func<sp/>!=<sp/>NULL);</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" kindref="member">ASSERT</ref>(max_link<sp/>&gt;<sp/>0);</highlight></codeline>
@@ -1321,11 +1336,11 @@
 <codeline lineno="132"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"></highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*</highlight></codeline>
-<codeline lineno="135" refid="skiplist_8c_1ad423234d19d8d1def1d010f57cd19da6" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1ad423234d19d8d1def1d010f57cd19da6" kindref="member">skiplist_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/>cmp_func,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>max_link)</highlight></codeline>
+<codeline lineno="135" refid="skiplist_8c_1a97d5ef497ad5c8b0b14c59097c0efa6b" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a97d5ef497ad5c8b0b14c59097c0efa6b" kindref="member">skiplist_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/>cmp_func,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>max_link)</highlight></codeline>
 <codeline lineno="136"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdict" kindref="compound">dict</ref>*<sp/>dct<sp/>=<sp/><ref refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" kindref="member">MALLOC</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*dct));</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dct)<sp/>{</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(dct-&gt;<ref refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" kindref="member">_object</ref><sp/>=<sp/><ref refid="skiplist_8c_1a2b34dfc5713e5b1d3cc11367ffbea901" kindref="member">skiplist_new</ref>(cmp_func,<sp/>max_link)))<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(dct-&gt;<ref refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" kindref="member">_object</ref><sp/>=<sp/><ref refid="skiplist_8c_1a163c5a84a8d9796d5a382824734d041c" kindref="member">skiplist_new</ref>(cmp_func,<sp/>max_link)))<sp/>{</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" kindref="member">FREE</ref>(dct);</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1513,35 +1528,35 @@
 <codeline lineno="324"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="325"><highlight class="normal"></highlight></codeline>
 <codeline lineno="326"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**</highlight></codeline>
-<codeline lineno="327" refid="skiplist_8c_1a5c11b20a0881225c697bbd86a75da887" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a5c11b20a0881225c697bbd86a75da887" kindref="member">skiplist_search</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
+<codeline lineno="327" refid="skiplist_8c_1a482f4582ee618e6daefc99e64fcebc59" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a482f4582ee618e6daefc99e64fcebc59" kindref="member">skiplist_search</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
 <codeline lineno="328"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structskip__node" kindref="compound">skip_node</ref>*<sp/>x<sp/>=<sp/>node_search(list,<sp/>key);</highlight></codeline>
 <codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>?<sp/>&amp;x-&gt;<ref refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" kindref="member">datum</ref><sp/>:<sp/>NULL;</highlight></codeline>
 <codeline lineno="331"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="332"><highlight class="normal"></highlight></codeline>
 <codeline lineno="333"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**</highlight></codeline>
-<codeline lineno="334" refid="skiplist_8c_1abf3ef943fd90c79c13116019b33b2b98" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1abf3ef943fd90c79c13116019b33b2b98" kindref="member">skiplist_search_le</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
+<codeline lineno="334" refid="skiplist_8c_1a373602310b3d20ab40e7634d719081f0" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a373602310b3d20ab40e7634d719081f0" kindref="member">skiplist_search_le</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
 <codeline lineno="335"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structskip__node" kindref="compound">skip_node</ref>*<sp/>x<sp/>=<sp/>node_search_le(list,<sp/>key);</highlight></codeline>
 <codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>?<sp/>&amp;x-&gt;<ref refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" kindref="member">datum</ref><sp/>:<sp/>NULL;</highlight></codeline>
 <codeline lineno="338"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="339"><highlight class="normal"></highlight></codeline>
 <codeline lineno="340"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**</highlight></codeline>
-<codeline lineno="341" refid="skiplist_8c_1ad134b2b5bb0c2e7b53bd84b90b732cf2" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1ad134b2b5bb0c2e7b53bd84b90b732cf2" kindref="member">skiplist_search_lt</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
+<codeline lineno="341" refid="skiplist_8c_1ab71061e35d511edaf582707c024d5629" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1ab71061e35d511edaf582707c024d5629" kindref="member">skiplist_search_lt</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
 <codeline lineno="342"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structskip__node" kindref="compound">skip_node</ref>*<sp/>x<sp/>=<sp/>node_search_lt(list,<sp/>key);</highlight></codeline>
 <codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>?<sp/>&amp;x-&gt;<ref refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" kindref="member">datum</ref><sp/>:<sp/>NULL;</highlight></codeline>
 <codeline lineno="345"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="346"><highlight class="normal"></highlight></codeline>
 <codeline lineno="347"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**</highlight></codeline>
-<codeline lineno="348" refid="skiplist_8c_1a70be0065f6ff56b5e901d08411f4ba8a" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a70be0065f6ff56b5e901d08411f4ba8a" kindref="member">skiplist_search_ge</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
+<codeline lineno="348" refid="skiplist_8c_1a98fbe7bcb19546c9e3695eaa592b6b02" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a98fbe7bcb19546c9e3695eaa592b6b02" kindref="member">skiplist_search_ge</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
 <codeline lineno="349"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structskip__node" kindref="compound">skip_node</ref>*<sp/>x<sp/>=<sp/>node_search_ge(list,<sp/>key);</highlight></codeline>
 <codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>?<sp/>&amp;x-&gt;<ref refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" kindref="member">datum</ref><sp/>:<sp/>NULL;</highlight></codeline>
 <codeline lineno="352"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="353"><highlight class="normal"></highlight></codeline>
 <codeline lineno="354"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**</highlight></codeline>
-<codeline lineno="355" refid="skiplist_8c_1abbec770f20a57f89c9c87cf2994b0924" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1abbec770f20a57f89c9c87cf2994b0924" kindref="member">skiplist_search_gt</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
+<codeline lineno="355" refid="skiplist_8c_1a8b8f7145975eff26a2d358a7ab60652f" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a8b8f7145975eff26a2d358a7ab60652f" kindref="member">skiplist_search_gt</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key)</highlight></codeline>
 <codeline lineno="356"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structskip__node" kindref="compound">skip_node</ref>*<sp/>x<sp/>=<sp/>node_search_gt(list,<sp/>key);</highlight></codeline>
 <codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>?<sp/>&amp;x-&gt;<ref refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" kindref="member">datum</ref><sp/>:<sp/>NULL;</highlight></codeline>
@@ -1689,7 +1704,7 @@
 <codeline lineno="500"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="501"><highlight class="normal"></highlight></codeline>
 <codeline lineno="502"><highlight class="normal"><ref refid="structskiplist__itor" kindref="compound">skiplist_itor</ref>*</highlight></codeline>
-<codeline lineno="503" refid="skiplist_8c_1a323893c14c3786a260ab00ba33afa149" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a323893c14c3786a260ab00ba33afa149" kindref="member">skiplist_itor_new</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list)</highlight></codeline>
+<codeline lineno="503" refid="skiplist_8c_1adbe33aa562dee4fa3e409b3544203780" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1adbe33aa562dee4fa3e409b3544203780" kindref="member">skiplist_itor_new</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list)</highlight></codeline>
 <codeline lineno="504"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structskiplist__itor" kindref="compound">skiplist_itor</ref>*<sp/>itor<sp/>=<sp/><ref refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" kindref="member">MALLOC</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*itor));</highlight></codeline>
 <codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(itor)<sp/>{</highlight></codeline>
@@ -1700,11 +1715,11 @@
 <codeline lineno="511"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="512"><highlight class="normal"></highlight></codeline>
 <codeline lineno="513"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*</highlight></codeline>
-<codeline lineno="514" refid="skiplist_8c_1ae742f53773db37d0bb05167a0d259f56" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1ae742f53773db37d0bb05167a0d259f56" kindref="member">skiplist_dict_itor_new</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list)</highlight></codeline>
+<codeline lineno="514" refid="skiplist_8c_1ab465d5aeebddd87b8a4bdb07b5eb0fd0" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1ab465d5aeebddd87b8a4bdb07b5eb0fd0" kindref="member">skiplist_dict_itor_new</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list)</highlight></codeline>
 <codeline lineno="515"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/>itor<sp/>=<sp/><ref refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" kindref="member">MALLOC</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*itor));</highlight></codeline>
 <codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(itor)<sp/>{</highlight></codeline>
-<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(itor-&gt;<ref refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" kindref="member">_itor</ref><sp/>=<sp/><ref refid="skiplist_8c_1a323893c14c3786a260ab00ba33afa149" kindref="member">skiplist_itor_new</ref>(list)))<sp/>{</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(itor-&gt;<ref refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" kindref="member">_itor</ref><sp/>=<sp/><ref refid="skiplist_8c_1adbe33aa562dee4fa3e409b3544203780" kindref="member">skiplist_itor_new</ref>(list)))<sp/>{</highlight></codeline>
 <codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" kindref="member">FREE</ref>(itor);</highlight></codeline>
 <codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
 <codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1819,13 +1834,13 @@
 <codeline lineno="630"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="631"><highlight class="normal"></highlight></codeline>
 <codeline lineno="632"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight></codeline>
-<codeline lineno="633" refid="skiplist_8c_1a4e69c1333109390b56dcd689f2456be5" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a4e69c1333109390b56dcd689f2456be5" kindref="member">skiplist_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structskiplist__itor" kindref="compound">skiplist_itor</ref>*<sp/>itor)</highlight></codeline>
+<codeline lineno="633" refid="skiplist_8c_1a88b927a970f40fe40eb161fc14c88fa2" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a88b927a970f40fe40eb161fc14c88fa2" kindref="member">skiplist_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structskiplist__itor" kindref="compound">skiplist_itor</ref>*<sp/>itor)</highlight></codeline>
 <codeline lineno="634"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="635"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>itor-&gt;<ref refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" kindref="member">node</ref><sp/>?<sp/>itor-&gt;<ref refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" kindref="member">node</ref>-&gt;<ref refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" kindref="member">key</ref><sp/>:<sp/>NULL;</highlight></codeline>
 <codeline lineno="636"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="637"><highlight class="normal"></highlight></codeline>
 <codeline lineno="638"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**</highlight></codeline>
-<codeline lineno="639" refid="skiplist_8c_1a0bf22a90eb6e57ee13d5b5c5bae5f374" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a0bf22a90eb6e57ee13d5b5c5bae5f374" kindref="member">skiplist_itor_datum</ref>(<ref refid="structskiplist__itor" kindref="compound">skiplist_itor</ref>*<sp/>itor)</highlight></codeline>
+<codeline lineno="639" refid="skiplist_8c_1aac0b4e5a1495aeeb324fbc0ae11b0dcc" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1aac0b4e5a1495aeeb324fbc0ae11b0dcc" kindref="member">skiplist_itor_datum</ref>(<ref refid="structskiplist__itor" kindref="compound">skiplist_itor</ref>*<sp/>itor)</highlight></codeline>
 <codeline lineno="640"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="641"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>itor-&gt;<ref refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" kindref="member">node</ref><sp/>?<sp/>&amp;itor-&gt;<ref refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" kindref="member">node</ref>-&gt;<ref refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" kindref="member">datum</ref><sp/>:<sp/>NULL;</highlight></codeline>
 <codeline lineno="642"><highlight class="normal">}</highlight></codeline>

@@ -1,56 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="pr__tree_8h" kind="file" language="C++">
     <compoundname>pr_tree.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
-    <includedby refid="pr__tree_8c" local="yes">src/pr_tree.c</includedby>
     <includedby refid="dict_8h" local="yes">include/dict.h</includedby>
+    <includedby refid="pr__tree_8c" local="yes">src/pr_tree.c</includedby>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
-      <node id="10">
-        <label>skiplist.h</label>
-        <link refid="skiplist_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>stdint.h</label>
-      </node>
-      <node id="9">
-        <label>rb_tree.h</label>
-        <link refid="rb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>stddef.h</label>
-      </node>
-      <node id="13">
-        <label>wb_tree.h</label>
-        <link refid="wb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>hb_tree.h</label>
-        <link refid="hb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>sp_tree.h</label>
-        <link refid="sp__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>hashtable.h</label>
-        <link refid="hashtable_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>dict.h</label>
         <link refid="dict_8h"/>
@@ -79,9 +34,9 @@
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="1">
-        <label>include/pr_tree.h</label>
-        <link refid="pr__tree_8h"/>
+      <node id="6">
+        <label>hashtable.h</label>
+        <link refid="hashtable_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
@@ -91,170 +46,10 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="12">
-        <label>tr_tree.h</label>
-        <link refid="tr__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="12">
-        <label>src/tr_tree.c</label>
-        <link refid="tr__tree_8c"/>
-      </node>
       <node id="8">
-        <label>src/hb_tree.c</label>
-        <link refid="hb__tree_8c"/>
-      </node>
-      <node id="20">
-        <label>include/skiplist.h</label>
-        <link refid="skiplist_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>include/rb_tree.h</label>
-        <link refid="rb__tree_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>src/hashtable2.c</label>
-        <link refid="hashtable2_8c"/>
-      </node>
-      <node id="11">
-        <label>src/sp_tree.c</label>
-        <link refid="sp__tree_8c"/>
-      </node>
-      <node id="6">
-        <label>src/hashtable.c</label>
-        <link refid="hashtable_8c"/>
-      </node>
-      <node id="23">
-        <label>include/wb_tree.h</label>
-        <link refid="wb__tree_8h"/>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>src/wb_tree.c</label>
-        <link refid="wb__tree_8c"/>
-      </node>
-      <node id="10">
-        <label>src/skiplist.c</label>
-        <link refid="skiplist_8c"/>
-      </node>
-      <node id="18">
-        <label>include/hb_tree.h</label>
+        <label>hb_tree.h</label>
         <link refid="hb__tree_8h"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>src/dict_private.h</label>
-        <link refid="dict__private_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>src/dict.c</label>
-        <link refid="dict_8c"/>
-      </node>
-      <node id="21">
-        <label>include/sp_tree.h</label>
-        <link refid="sp__tree_8h"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="16">
-        <label>include/hashtable.h</label>
-        <link refid="hashtable_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>src/rb_tree.c</label>
-        <link refid="rb__tree_8c"/>
-      </node>
-      <node id="13">
-        <label>src/tree_common.c</label>
-        <link refid="tree__common_8c"/>
-      </node>
-      <node id="15">
-        <label>src/tree_common.h</label>
-        <link refid="tree__common_8h"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>include/dict.h</label>
-        <link refid="dict_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="1" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -262,28 +57,233 @@
         <link refid="pr__tree_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+      </node>
+      <node id="9">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="10">
+        <label>skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>tr_tree.h</label>
+        <link refid="tr__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
       <node id="2">
+        <label>include/dict.h</label>
+        <link refid="dict_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/hashtable.h</label>
+        <link refid="hashtable_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/hashtable2.h</label>
+        <link refid="hashtable2_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/pr_tree.h</label>
+        <link refid="pr__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>include/rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>include/skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>include/sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>include/tr_tree.h</label>
+        <link refid="tr__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>include/wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>src/dict.c</label>
+        <link refid="dict_8c"/>
+      </node>
+      <node id="19">
+        <label>src/dict_private.h</label>
+        <link refid="dict__private_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/hashtable.c</label>
+        <link refid="hashtable_8c"/>
+      </node>
+      <node id="6">
+        <label>src/hashtable2.c</label>
+        <link refid="hashtable2_8c"/>
+      </node>
+      <node id="8">
+        <label>src/hb_tree.c</label>
+        <link refid="hb__tree_8c"/>
+      </node>
+      <node id="21">
         <label>src/pr_tree.c</label>
         <link refid="pr__tree_8c"/>
       </node>
-      <node id="17">
-        <label>include/hashtable2.h</label>
-        <link refid="hashtable2_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
+      <node id="10">
+        <label>src/rb_tree.c</label>
+        <link refid="rb__tree_8c"/>
+      </node>
+      <node id="12">
+        <label>src/skiplist.c</label>
+        <link refid="skiplist_8c"/>
+      </node>
+      <node id="14">
+        <label>src/sp_tree.c</label>
+        <link refid="sp__tree_8c"/>
+      </node>
+      <node id="16">
+        <label>src/tr_tree.c</label>
+        <link refid="tr__tree_8c"/>
       </node>
       <node id="22">
-        <label>include/tr_tree.h</label>
-        <link refid="tr__tree_8h"/>
-        <childnode refid="12" relation="include">
+        <label>src/tree_common.c</label>
+        <link refid="tree__common_8c"/>
+      </node>
+      <node id="23">
+        <label>src/tree_common.h</label>
+        <link refid="tree__common_8h"/>
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>src/wb_tree.c</label>
+        <link refid="wb__tree_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="typedef">
@@ -298,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="1" column="0" bodyfile="include/pr_tree.h" bodystart="35" bodyend="-1"/>
+        <location file="include/pr_tree.h" line="35" column="22" bodyfile="include/pr_tree.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="pr__tree_8h_1aaa4542371a02ee1060cbedc6426f21a4" prot="public" static="no">
         <type>struct <ref refid="structpr__itor" kindref="compound">pr_itor</ref></type>
@@ -311,13 +311,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="57" column="5" bodyfile="include/pr_tree.h" bodystart="59" bodyend="-1"/>
+        <location file="include/pr_tree.h" line="59" column="22" bodyfile="include/pr_tree.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="pr__tree_8h_1ad8bc5912079f561ba50a19bf8c8761f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1a021d6c481cd2bf3e59d1e2d2ab869428" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structpr__tree" kindref="compound">pr_tree</ref> *</type>
-        <definition>pr_tree* pr_tree_new</definition>
+        <definition>pr_tree * pr_tree_new</definition>
         <argsstring>(dict_compare_func cmp_func)</argsstring>
         <name>pr_tree_new</name>
         <param>
@@ -338,9 +338,9 @@
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="structtree_1adf0b2d44ac6cd97d428ec85210970b43" compoundref="tree__common_8c" startline="38">tree::rotation_count</references>
       </memberdef>
-      <memberdef kind="function" id="pr__tree_8h_1adfd56f755588461fa3de18d583de2279" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1a0f4e72cc520d3c11b84ac04989148352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict" kindref="compound">dict</ref> *</type>
-        <definition>dict* pr_dict_new</definition>
+        <definition>dict * pr_dict_new</definition>
         <argsstring>(dict_compare_func cmp_func)</argsstring>
         <name>pr_dict_new</name>
         <param>
@@ -358,7 +358,7 @@
         <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
-        <references refid="pr__tree_8c_1ad8bc5912079f561ba50a19bf8c8761f7" compoundref="pr__tree_8c" startline="98" endline="110">pr_tree_new</references>
+        <references refid="pr__tree_8c_1a021d6c481cd2bf3e59d1e2d2ab869428" compoundref="pr__tree_8c" startline="98" endline="110">pr_tree_new</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1aa4a6bb903a1760fced365e1804c14b8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -402,16 +402,21 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/pr_tree.h" line="42" column="1" bodyfile="src/pr_tree.c" bodystart="252" bodyend="290" declfile="include/pr_tree.h" declline="42" declcolumn="1"/>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
+        <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structpr__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="pr__tree_8c" startline="39">pr_node::datum</references>
         <references refid="structpr__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="pr__tree_8c" startline="39">pr_node::key</references>
         <references refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" compoundref="pr__tree_8c" startline="39">pr_node::llink</references>
+        <references refid="structpr__node_1abf99a703fdebf3d585be06abfc890b49" compoundref="pr__tree_8c" startline="39">pr_node::parent</references>
         <references refid="structpr__node_1aa12c8a5c73b3b5f356df3fd22236f931" compoundref="pr__tree_8c" startline="39">pr_node::rlink</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
+        <references refid="structtree_1adf0b2d44ac6cd97d428ec85210970b43" compoundref="tree__common_8c" startline="38">tree::rotation_count</references>
+        <references refid="structpr__node_1a72e70550dea6ad3694160a3d35dd932f" compoundref="pr__tree_8c" startline="40">pr_node::weight</references>
       </memberdef>
-      <memberdef kind="function" id="pr__tree_8h_1aa2bf2d58a28e55a34d405943630aaae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1af03a9d82a232ad95cab29fe57da099ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** pr_tree_search</definition>
+        <definition>void ** pr_tree_search</definition>
         <argsstring>(pr_tree *tree, const void *key)</argsstring>
         <name>pr_tree_search</name>
         <param>
@@ -429,11 +434,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/pr_tree.h" line="43" column="5" bodyfile="src/pr_tree.c" bodystart="127" bodyend="127" declfile="include/pr_tree.h" declline="43" declcolumn="5"/>
-        <references refid="tree__common_8c_1a54ed614fb74b373c5167325d6c744171" compoundref="tree__common_8c" startline="144" endline="148">tree_search</references>
+        <references refid="tree__common_8c_1a81a92b2c7f8d6ebdeacd787d53b67055" compoundref="tree__common_8c" startline="144" endline="148">tree_search</references>
       </memberdef>
-      <memberdef kind="function" id="pr__tree_8h_1abfed472e2d32fbf24674d8b05fe45680" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1acc5e721a419ab0385d680fcf6876546c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** pr_tree_search_le</definition>
+        <definition>void ** pr_tree_search_le</definition>
         <argsstring>(pr_tree *tree, const void *key)</argsstring>
         <name>pr_tree_search_le</name>
         <param>
@@ -451,11 +456,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/pr_tree.h" line="44" column="5" bodyfile="src/pr_tree.c" bodystart="128" bodyend="128" declfile="include/pr_tree.h" declline="44" declcolumn="5"/>
-        <references refid="tree__common_8c_1a8aa3ee04b16a1a81d153af21326ce29f" compoundref="tree__common_8c" startline="170" endline="174">tree_search_le</references>
+        <references refid="tree__common_8c_1ae1ea8d32b69d63eed985f52949bb493c" compoundref="tree__common_8c" startline="170" endline="174">tree_search_le</references>
       </memberdef>
-      <memberdef kind="function" id="pr__tree_8h_1a69b5c8bc1f244b967dde7bc3844e44b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1a19abec2733a7ea9caa29f1d22e7b850c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** pr_tree_search_lt</definition>
+        <definition>void ** pr_tree_search_lt</definition>
         <argsstring>(pr_tree *tree, const void *key)</argsstring>
         <name>pr_tree_search_lt</name>
         <param>
@@ -473,11 +478,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/pr_tree.h" line="45" column="5" bodyfile="src/pr_tree.c" bodystart="129" bodyend="129" declfile="include/pr_tree.h" declline="45" declcolumn="5"/>
-        <references refid="tree__common_8c_1abf8d8bb4075e9f28c545ed1c83f0dafa" compoundref="tree__common_8c" startline="194" endline="198">tree_search_lt</references>
+        <references refid="tree__common_8c_1a6f24b96ae2c229648439aa85a2895044" compoundref="tree__common_8c" startline="194" endline="198">tree_search_lt</references>
       </memberdef>
-      <memberdef kind="function" id="pr__tree_8h_1a10441ad7093361d4407e31327b834d4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1a66085cf58e260d862ce8fe4fbfe31df5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** pr_tree_search_ge</definition>
+        <definition>void ** pr_tree_search_ge</definition>
         <argsstring>(pr_tree *tree, const void *key)</argsstring>
         <name>pr_tree_search_ge</name>
         <param>
@@ -495,11 +500,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/pr_tree.h" line="46" column="5" bodyfile="src/pr_tree.c" bodystart="130" bodyend="130" declfile="include/pr_tree.h" declline="46" declcolumn="5"/>
-        <references refid="tree__common_8c_1a8598cfe5c4f5a7a4a1bbc270225bc1ec" compoundref="tree__common_8c" startline="221" endline="225">tree_search_ge</references>
+        <references refid="tree__common_8c_1ad6f8aff956f6f8b7f9eaebcd659506b1" compoundref="tree__common_8c" startline="221" endline="225">tree_search_ge</references>
       </memberdef>
-      <memberdef kind="function" id="pr__tree_8h_1a19d5cf16ee84960fca3df169149e8d4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1a13aac3c296260214168e0702ad88095b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** pr_tree_search_gt</definition>
+        <definition>void ** pr_tree_search_gt</definition>
         <argsstring>(pr_tree *tree, const void *key)</argsstring>
         <name>pr_tree_search_gt</name>
         <param>
@@ -517,7 +522,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/pr_tree.h" line="47" column="5" bodyfile="src/pr_tree.c" bodystart="131" bodyend="131" declfile="include/pr_tree.h" declline="47" declcolumn="5"/>
-        <references refid="tree__common_8c_1a34db2e1b372d1847d32223c3c852b059" compoundref="tree__common_8c" startline="245" endline="249">tree_search_gt</references>
+        <references refid="tree__common_8c_1a28283925393f2eb613aa1e669f181c18" compoundref="tree__common_8c" startline="245" endline="249">tree_search_gt</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a5439bea0d35397810101842ae9556056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref></type>
@@ -541,7 +546,7 @@
         <location file="include/pr_tree.h" line="49" column="1" bodyfile="src/pr_tree.c" bodystart="328" bodyend="336" declfile="include/pr_tree.h" declline="49" declcolumn="1"/>
         <references refid="structpr__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="pr__tree_8c" startline="39">pr_node::datum</references>
         <references refid="structpr__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="pr__tree_8c" startline="39">pr_node::key</references>
-        <references refid="tree__common_8c_1a8ca8a698fb9f3c76e48a451e547166db" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
+        <references refid="tree__common_8c_1a4336bbd1dec56af86a45e1d84d622063" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a9339232ae391d0e7f673fa275733555c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -719,9 +724,9 @@
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
       </memberdef>
-      <memberdef kind="function" id="pr__tree_8h_1a13b3bf6e7f5b46655a11ada686c51571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1ae8398f448c6c0c7555d38840cba7bb55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structpr__itor" kindref="compound">pr_itor</ref> *</type>
-        <definition>pr_itor* pr_itor_new</definition>
+        <definition>pr_itor * pr_itor_new</definition>
         <argsstring>(pr_tree *tree)</argsstring>
         <name>pr_itor_new</name>
         <param>
@@ -739,9 +744,9 @@
         <references refid="structpr__itor_1a6abe4fbcd865ddab321cb1e020355fc7" compoundref="pr__tree_8c" startline="50">pr_itor::node</references>
         <references refid="structpr__itor_1a0e42d341d4cb4d8aa99bd66d8a5877dd" compoundref="pr__tree_8c" startline="50">pr_itor::tree</references>
       </memberdef>
-      <memberdef kind="function" id="pr__tree_8h_1a6d5014c37429128cbfb457cf9bbdf006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1a34060218131e6e94fea3533d268f03a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict__itor" kindref="compound">dict_itor</ref> *</type>
-        <definition>dict_itor* pr_dict_itor_new</definition>
+        <definition>dict_itor * pr_dict_itor_new</definition>
         <argsstring>(pr_tree *tree)</argsstring>
         <name>pr_dict_itor_new</name>
         <param>
@@ -759,7 +764,7 @@
         <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="175">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
-        <references refid="pr__tree_8c_1a13b3bf6e7f5b46655a11ada686c51571" compoundref="pr__tree_8c" startline="492" endline="500">pr_itor_new</references>
+        <references refid="pr__tree_8c_1ae8398f448c6c0c7555d38840cba7bb55" compoundref="pr__tree_8c" startline="492" endline="500">pr_itor_new</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1ab1f4e7a7a186e27d63269f7f40bbbb88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1041,9 +1046,9 @@
         <location file="include/pr_tree.h" line="77" column="5" bodyfile="src/pr_tree.c" bodystart="530" bodyend="530" declfile="include/pr_tree.h" declline="77" declcolumn="5"/>
         <references refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" compoundref="tree__common_8c" startline="475" endline="479">tree_iterator_search_gt</references>
       </memberdef>
-      <memberdef kind="function" id="pr__tree_8h_1a506cc3d47a368f772de8101763c12f92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1a1a4daa96bf7bfbcf18e11112f7d2115a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const void *</type>
-        <definition>const void* pr_itor_key</definition>
+        <definition>const void * pr_itor_key</definition>
         <argsstring>(const pr_itor *itor)</argsstring>
         <name>pr_itor_key</name>
         <param>
@@ -1057,11 +1062,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/pr_tree.h" line="78" column="11" bodyfile="src/pr_tree.c" bodystart="531" bodyend="531" declfile="include/pr_tree.h" declline="78" declcolumn="11"/>
-        <references refid="tree__common_8c_1af179889330c7dccaefc41a06d11b288f" compoundref="tree__common_8c" startline="495" endline="499">tree_iterator_key</references>
+        <references refid="tree__common_8c_1a71fd87b638317045ae986d9886f10c10" compoundref="tree__common_8c" startline="495" endline="499">tree_iterator_key</references>
       </memberdef>
-      <memberdef kind="function" id="pr__tree_8h_1a3ffb235a1b0da55cd1d5f0b4f9a102db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1acc6f2b1cf7e2294ce3f3dd4ace188002" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** pr_itor_datum</definition>
+        <definition>void ** pr_itor_datum</definition>
         <argsstring>(pr_itor *itor)</argsstring>
         <name>pr_itor_datum</name>
         <param>
@@ -1075,7 +1080,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/pr_tree.h" line="79" column="5" bodyfile="src/pr_tree.c" bodystart="532" bodyend="532" declfile="include/pr_tree.h" declline="79" declcolumn="5"/>
-        <references refid="tree__common_8c_1ad4045a0af97ccd1df2c1e251e40e5a4f" compoundref="tree__common_8c" startline="502" endline="506">tree_iterator_datum</references>
+        <references refid="tree__common_8c_1a1cc4c18adcfc606676bbbe632160f50a" compoundref="tree__common_8c" startline="502" endline="506">tree_iterator_datum</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a682978f7c2b9bbf42e3a632db907bfdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1116,6 +1121,7 @@
         </inbodydescription>
         <location file="include/pr_tree.h" line="81" column="5" bodyfile="src/pr_tree.c" bodystart="536" bodyend="543" declfile="include/pr_tree.h" declline="81" declcolumn="5"/>
         <references refid="structpr__itor_1a6abe4fbcd865ddab321cb1e020355fc7" compoundref="pr__tree_8c" startline="50">pr_itor::node</references>
+        <references refid="structpr__itor_1a0e42d341d4cb4d8aa99bd66d8a5877dd" compoundref="pr__tree_8c" startline="50">pr_itor::tree</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1123,7 +1129,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="pr__tree_8h_1a4d2f06c25e3a0a10f9e048aebd2b1e56" refkind="member"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/>libdict<sp/>--<sp/>internal<sp/>path<sp/>reduction<sp/>tree<sp/>interface.</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2001-2014,<sp/>Farooq<sp/>Mela</highlight></codeline>
@@ -1157,19 +1163,19 @@
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><ref refid="dict_8h_1a0c5f0f7b40e3b3df5aaa4c5e3c874b3b" kindref="member">BEGIN_DECL</ref></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpr__tree" kindref="compound">pr_tree</ref><sp/><ref refid="structpr__tree" kindref="compound">pr_tree</ref>;</highlight></codeline>
+<codeline lineno="35" refid="pr__tree_8h_1a4d2f06c25e3a0a10f9e048aebd2b1e56" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpr__tree" kindref="compound">pr_tree</ref><sp/><ref refid="structpr__tree" kindref="compound">pr_tree</ref>;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1ad8bc5912079f561ba50a19bf8c8761f7" kindref="member">pr_tree_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structpr__tree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1adfd56f755588461fa3de18d583de2279" kindref="member">pr_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structpr__tree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a021d6c481cd2bf3e59d1e2d2ab869428" kindref="member">pr_tree_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structpr__tree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a0f4e72cc520d3c11b84ac04989148352" kindref="member">pr_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structpr__tree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1aa4a6bb903a1760fced365e1804c14b8f" kindref="member">pr_tree_free</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a369aef27d756b0dc5e36f9937aac3290" kindref="member">pr_tree_insert</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1aa2bf2d58a28e55a34d405943630aaae0" kindref="member">pr_tree_search</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1abfed472e2d32fbf24674d8b05fe45680" kindref="member">pr_tree_search_le</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a69b5c8bc1f244b967dde7bc3844e44b8" kindref="member">pr_tree_search_lt</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a10441ad7093361d4407e31327b834d4a" kindref="member">pr_tree_search_ge</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a19d5cf16ee84960fca3df169149e8d4e" kindref="member">pr_tree_search_gt</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1af03a9d82a232ad95cab29fe57da099ab" kindref="member">pr_tree_search</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1acc5e721a419ab0385d680fcf6876546c" kindref="member">pr_tree_search_le</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a19abec2733a7ea9caa29f1d22e7b850c" kindref="member">pr_tree_search_lt</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a66085cf58e260d862ce8fe4fbfe31df5" kindref="member">pr_tree_search_ge</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a13aac3c296260214168e0702ad88095b" kindref="member">pr_tree_search_gt</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a5439bea0d35397810101842ae9556056" kindref="member">pr_tree_remove</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a9339232ae391d0e7f673fa275733555c" kindref="member">pr_tree_clear</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
@@ -1179,12 +1185,12 @@
 <codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a813fe6b4373aebdf8d7eeeb8f022afd3" kindref="member">pr_tree_min_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a0a8f3a4bfb2749b87517fa08971ca3da" kindref="member">pr_tree_max_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1acdf0fc6fc9b122418083888333b7ccda" kindref="member">pr_tree_total_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
-<codeline lineno="57" refid="pr__tree_8h_1aaa4542371a02ee1060cbedc6426f21a4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1ae3a3c1c743cb2c3fdfbaac2befcf3c5e" kindref="member">pr_tree_verify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1ae3a3c1c743cb2c3fdfbaac2befcf3c5e" kindref="member">pr_tree_verify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpr__itor" kindref="compound">pr_itor</ref><sp/><ref refid="structpr__itor" kindref="compound">pr_itor</ref>;</highlight></codeline>
+<codeline lineno="59" refid="pr__tree_8h_1aaa4542371a02ee1060cbedc6426f21a4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpr__itor" kindref="compound">pr_itor</ref><sp/><ref refid="structpr__itor" kindref="compound">pr_itor</ref>;</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a13b3bf6e7f5b46655a11ada686c51571" kindref="member">pr_itor_new</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/><sp/><ref refid="pr__tree_8h_1a6d5014c37429128cbfb457cf9bbdf006" kindref="member">pr_dict_itor_new</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1ae8398f448c6c0c7555d38840cba7bb55" kindref="member">pr_itor_new</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/><sp/><ref refid="pr__tree_8h_1a34060218131e6e94fea3533d268f03a9" kindref="member">pr_dict_itor_new</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1ab1f4e7a7a186e27d63269f7f40bbbb88" kindref="member">pr_itor_free</ref>(<ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a5e728838fdbe2fea666faae2bfe82a1d" kindref="member">pr_itor_valid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor);</highlight></codeline>
@@ -1200,8 +1206,8 @@
 <codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1af595a91bfa4ed7f53cfbdd7c8b75f669" kindref="member">pr_itor_search_lt</ref>(<ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1aa3580461d7082c82e1a8312529f799f3" kindref="member">pr_itor_search_ge</ref>(<ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1af46574d3f0cac9d7a66f68b803464ee4" kindref="member">pr_itor_search_gt</ref>(<ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="pr__tree_8h_1a506cc3d47a368f772de8101763c12f92" kindref="member">pr_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a3ffb235a1b0da55cd1d5f0b4f9a102db" kindref="member">pr_itor_datum</ref>(<ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="pr__tree_8h_1a1a4daa96bf7bfbcf18e11112f7d2115a" kindref="member">pr_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1acc6f2b1cf7e2294ce3f3dd4ace188002" kindref="member">pr_itor_datum</ref>(<ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor);</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a682978f7c2b9bbf42e3a632db907bfdb" kindref="member">pr_itor_compare</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>i1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>i2);</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a604e78d2b7caf21b31a2f287fa2e2bd7" kindref="member">pr_itor_remove</ref>(<ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor);</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>

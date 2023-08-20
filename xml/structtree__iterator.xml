@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structtree__iterator" kind="struct" language="C++" prot="public">
     <compoundname>tree_iterator</compoundname>
       <sectiondef kind="public-attrib">
@@ -8,6 +8,7 @@
         <definition>tree* tree</definition>
         <argsstring></argsstring>
         <name>tree</name>
+        <qualifiedname>tree_iterator::tree</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -21,6 +22,7 @@
         <definition>tree_node* node</definition>
         <argsstring></argsstring>
         <name>node</name>
+        <qualifiedname>tree_iterator::node</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -36,18 +38,9 @@
     </detaileddescription>
     <collaborationgraph>
       <node id="2">
-        <label>tree_node</label>
-        <link refid="structtree__node"/>
-        <childnode refid="2" relation="usage">
-          <edgelabel>llink</edgelabel>
-          <edgelabel>parent</edgelabel>
-          <edgelabel>rlink</edgelabel>
-        </childnode>
-      </node>
-      <node id="3">
         <label>tree</label>
         <link refid="structtree"/>
-        <childnode refid="2" relation="usage">
+        <childnode refid="3" relation="usage">
           <edgelabel>root</edgelabel>
         </childnode>
       </node>
@@ -55,10 +48,19 @@
         <label>tree_iterator</label>
         <link refid="structtree__iterator"/>
         <childnode refid="2" relation="usage">
-          <edgelabel>node</edgelabel>
+          <edgelabel>tree</edgelabel>
         </childnode>
         <childnode refid="3" relation="usage">
-          <edgelabel>tree</edgelabel>
+          <edgelabel>node</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>tree_node</label>
+        <link refid="structtree__node"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>rlink</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

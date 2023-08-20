@@ -1,56 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="hashtable_8h" kind="file" language="C++">
     <compoundname>hashtable.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
-    <includedby refid="hashtable_8c" local="yes">src/hashtable.c</includedby>
     <includedby refid="dict_8h" local="yes">include/dict.h</includedby>
+    <includedby refid="hashtable_8c" local="yes">src/hashtable.c</includedby>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
-      <node id="10">
-        <label>skiplist.h</label>
-        <link refid="skiplist_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>stdint.h</label>
-      </node>
-      <node id="9">
-        <label>rb_tree.h</label>
-        <link refid="rb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>stddef.h</label>
-      </node>
-      <node id="13">
-        <label>wb_tree.h</label>
-        <link refid="wb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>hb_tree.h</label>
-        <link refid="hb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>sp_tree.h</label>
-        <link refid="sp__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>include/hashtable.h</label>
-        <link refid="hashtable_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>dict.h</label>
         <link refid="dict_8h"/>
@@ -79,9 +34,9 @@
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>pr_tree.h</label>
-        <link refid="pr__tree_8h"/>
+      <node id="1">
+        <label>include/hashtable.h</label>
+        <link refid="hashtable_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
@@ -91,110 +46,83 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="7">
+        <label>hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>pr_tree.h</label>
+        <link refid="pr__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="12">
         <label>tr_tree.h</label>
         <link refid="tr__tree_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="12">
-        <label>src/tr_tree.c</label>
-        <link refid="tr__tree_8c"/>
-      </node>
-      <node id="7">
-        <label>src/hb_tree.c</label>
-        <link refid="hb__tree_8c"/>
-      </node>
-      <node id="20">
-        <label>include/skiplist.h</label>
-        <link refid="skiplist_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>include/rb_tree.h</label>
-        <link refid="rb__tree_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>src/hashtable2.c</label>
-        <link refid="hashtable2_8c"/>
-      </node>
-      <node id="11">
-        <label>src/sp_tree.c</label>
-        <link refid="sp__tree_8c"/>
-      </node>
-      <node id="2">
-        <label>src/hashtable.c</label>
-        <link refid="hashtable_8c"/>
-      </node>
-      <node id="23">
-        <label>include/wb_tree.h</label>
+      <node id="13">
+        <label>wb_tree.h</label>
         <link refid="wb__tree_8h"/>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>src/wb_tree.c</label>
-        <link refid="wb__tree_8c"/>
-      </node>
-      <node id="10">
-        <label>src/skiplist.c</label>
-        <link refid="skiplist_8c"/>
-      </node>
-      <node id="17">
-        <label>include/hb_tree.h</label>
-        <link refid="hb__tree_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>src/dict_private.h</label>
-        <link refid="dict__private_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="5">
-        <label>src/dict.c</label>
-        <link refid="dict_8c"/>
+        <label>stdbool.h</label>
       </node>
-      <node id="21">
-        <label>include/sp_tree.h</label>
-        <link refid="sp__tree_8h"/>
-        <childnode refid="11" relation="include">
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/dict.h</label>
+        <link refid="dict_8h"/>
+        <childnode refid="1" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -202,88 +130,160 @@
         <link refid="hashtable_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="9">
-        <label>src/rb_tree.c</label>
-        <link refid="rb__tree_8c"/>
+      <node id="3">
+        <label>include/hashtable2.h</label>
+        <link refid="hashtable2_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
-      <node id="13">
-        <label>src/tree_common.c</label>
-        <link refid="tree__common_8c"/>
+      <node id="5">
+        <label>include/hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
-      <node id="15">
-        <label>src/tree_common.h</label>
-        <link refid="tree__common_8h"/>
-        <childnode refid="7" relation="include">
+      <node id="7">
+        <label>include/pr_tree.h</label>
+        <link refid="pr__tree_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+      </node>
+      <node id="9">
+        <label>include/rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>include/skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+      </node>
+      <node id="13">
+        <label>include/sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>include/dict.h</label>
-        <link refid="dict_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="1" relation="include">
+      <node id="15">
+        <label>include/tr_tree.h</label>
+        <link refid="tr__tree_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+      </node>
+      <node id="17">
+        <label>include/wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
+      </node>
+      <node id="20">
+        <label>src/dict.c</label>
+        <link refid="dict_8c"/>
+      </node>
+      <node id="19">
+        <label>src/dict_private.h</label>
+        <link refid="dict__private_8h"/>
         <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-      </node>
-      <node id="18">
-        <label>include/pr_tree.h</label>
-        <link refid="pr__tree_8h"/>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>src/hashtable.c</label>
+        <link refid="hashtable_8c"/>
+      </node>
+      <node id="4">
+        <label>src/hashtable2.c</label>
+        <link refid="hashtable2_8c"/>
+      </node>
+      <node id="6">
+        <label>src/hb_tree.c</label>
+        <link refid="hb__tree_8c"/>
       </node>
       <node id="8">
         <label>src/pr_tree.c</label>
         <link refid="pr__tree_8c"/>
       </node>
+      <node id="10">
+        <label>src/rb_tree.c</label>
+        <link refid="rb__tree_8c"/>
+      </node>
+      <node id="12">
+        <label>src/skiplist.c</label>
+        <link refid="skiplist_8c"/>
+      </node>
+      <node id="14">
+        <label>src/sp_tree.c</label>
+        <link refid="sp__tree_8c"/>
+      </node>
       <node id="16">
-        <label>include/hashtable2.h</label>
-        <link refid="hashtable2_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
+        <label>src/tr_tree.c</label>
+        <link refid="tr__tree_8c"/>
       </node>
       <node id="22">
-        <label>include/tr_tree.h</label>
-        <link refid="tr__tree_8h"/>
-        <childnode refid="12" relation="include">
+        <label>src/tree_common.c</label>
+        <link refid="tree__common_8c"/>
+      </node>
+      <node id="23">
+        <label>src/tree_common.h</label>
+        <link refid="tree__common_8h"/>
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>src/wb_tree.c</label>
+        <link refid="wb__tree_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="typedef">
@@ -298,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable.h" line="1" column="0" bodyfile="include/hashtable.h" bodystart="35" bodyend="-1"/>
+        <location file="include/hashtable.h" line="35" column="24" bodyfile="include/hashtable.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="hashtable_8h_1ada354ce7ebae1d38e3b3636b1900c8f4" prot="public" static="no">
         <type>struct <ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref></type>
@@ -311,13 +311,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable.h" line="52" column="5" bodyfile="include/hashtable.h" bodystart="54" bodyend="-1"/>
+        <location file="include/hashtable.h" line="54" column="29" bodyfile="include/hashtable.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="hashtable_8h_1a037074b31c446931c1967bfd80c060e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hashtable_8h_1af455c560cff947a8088f557ab119795a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structhashtable" kindref="compound">hashtable</ref> *</type>
-        <definition>hashtable* hashtable_new</definition>
+        <definition>hashtable * hashtable_new</definition>
         <argsstring>(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned size)</argsstring>
         <name>hashtable_new</name>
         <param>
@@ -349,9 +349,9 @@
         <references refid="structhashtable_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable_8c" startline="61">hashtable::size</references>
         <references refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" compoundref="hashtable_8c" startline="57">hashtable::table</references>
       </memberdef>
-      <memberdef kind="function" id="hashtable_8h_1aa2d8a2cbc968478a436363812da7d33d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hashtable_8h_1abbe4b0247e04c69486fe907df6b34849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict" kindref="compound">dict</ref> *</type>
-        <definition>dict* hashtable_dict_new</definition>
+        <definition>dict * hashtable_dict_new</definition>
         <argsstring>(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned size)</argsstring>
         <name>hashtable_dict_new</name>
         <param>
@@ -377,7 +377,7 @@
         <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
-        <references refid="hashtable_8c_1a037074b31c446931c1967bfd80c060e7" compoundref="hashtable_8c" startline="110" endline="130">hashtable_new</references>
+        <references refid="hashtable_8c_1af455c560cff947a8088f557ab119795a" compoundref="hashtable_8c" startline="110" endline="130">hashtable_new</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
       </memberdef>
       <memberdef kind="function" id="hashtable_8h_1a24bb5d1cc6d174e890eebcfbf4ecf4ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -440,9 +440,9 @@
         <references refid="structhashtable_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable_8c" startline="61">hashtable::size</references>
         <references refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" compoundref="hashtable_8c" startline="57">hashtable::table</references>
       </memberdef>
-      <memberdef kind="function" id="hashtable_8h_1a804f9f1f154405ddf5a51f3ad9c4ca2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hashtable_8h_1acf6fe1dbd03b91f46fa0c2cc9b36f455" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** hashtable_search</definition>
+        <definition>void ** hashtable_search</definition>
         <argsstring>(hashtable *table, const void *key)</argsstring>
         <name>hashtable_search</name>
         <param>
@@ -494,6 +494,7 @@
         <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
         <references refid="structhashtable_1afcbf6b4ca50c87e70ae1ae4febfdff2f" compoundref="hashtable_8c" startline="59">hashtable::hash_func</references>
         <references refid="structhash__node_1a269110e1860732992f4f6f5514813c75" compoundref="hashtable_8c" startline="48">hash_node::key</references>
+        <references refid="structhash__node_1a7a97227f6e8d3ea257f595306e8cb20a" compoundref="hashtable_8c" startline="50">hash_node::next</references>
         <references refid="structhashtable_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable_8c" startline="61">hashtable::size</references>
         <references refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" compoundref="hashtable_8c" startline="57">hashtable::table</references>
       </memberdef>
@@ -661,9 +662,9 @@
         <references refid="structhashtable_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable_8c" startline="61">hashtable::size</references>
         <references refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" compoundref="hashtable_8c" startline="57">hashtable::table</references>
       </memberdef>
-      <memberdef kind="function" id="hashtable_8h_1a0276b0b09fddd87d7ae0660d39d1ed1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hashtable_8h_1a42ef1560386cd5b2ed4bbda89066305a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref> *</type>
-        <definition>hashtable_itor* hashtable_itor_new</definition>
+        <definition>hashtable_itor * hashtable_itor_new</definition>
         <argsstring>(hashtable *table)</argsstring>
         <name>hashtable_itor_new</name>
         <param>
@@ -682,9 +683,9 @@
         <references refid="structhashtable__itor_1a10d37451a519c4fc6326acbdf8856451" compoundref="hashtable_8c" startline="67">hashtable_itor::slot</references>
         <references refid="structhashtable__itor_1a1c2725966eac16e4eb85ec20276be313" compoundref="hashtable_8c" startline="65">hashtable_itor::table</references>
       </memberdef>
-      <memberdef kind="function" id="hashtable_8h_1aa8d78f4c2a7967d8f40d9ce2e21a0f77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hashtable_8h_1a395e03d6fb1a673dacfa87784d9c1bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict__itor" kindref="compound">dict_itor</ref> *</type>
-        <definition>dict_itor* hashtable_dict_itor_new</definition>
+        <definition>dict_itor * hashtable_dict_itor_new</definition>
         <argsstring>(hashtable *table)</argsstring>
         <name>hashtable_dict_itor_new</name>
         <param>
@@ -701,7 +702,7 @@
         <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="174">dict_itor::_itor</references>
         <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="175">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
-        <references refid="hashtable_8c_1a0276b0b09fddd87d7ae0660d39d1ed1a" compoundref="hashtable_8c" startline="366" endline="375">hashtable_itor_new</references>
+        <references refid="hashtable_8c_1a42ef1560386cd5b2ed4bbda89066305a" compoundref="hashtable_8c" startline="366" endline="375">hashtable_itor_new</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
       </memberdef>
       <memberdef kind="function" id="hashtable_8h_1a8ac2a4cbf94617859785461561ac6641" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -927,9 +928,9 @@
         <references refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" compoundref="hashtable_8c" startline="57">hashtable::table</references>
         <references refid="structhashtable__itor_1a1c2725966eac16e4eb85ec20276be313" compoundref="hashtable_8c" startline="65">hashtable_itor::table</references>
       </memberdef>
-      <memberdef kind="function" id="hashtable_8h_1ae3d254592f7844b8acdea0090d8017ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hashtable_8h_1ae5ecbe4b9400383290c704d35c7c9054" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const void *</type>
-        <definition>const void* hashtable_itor_key</definition>
+        <definition>const void * hashtable_itor_key</definition>
         <argsstring>(const hashtable_itor *itor)</argsstring>
         <name>hashtable_itor_key</name>
         <param>
@@ -946,9 +947,9 @@
         <references refid="structhash__node_1a269110e1860732992f4f6f5514813c75" compoundref="hashtable_8c" startline="48">hash_node::key</references>
         <references refid="structhashtable__itor_1ac132a6acabd26ddbcea7c8d00fd5b68f" compoundref="hashtable_8c" startline="66">hashtable_itor::node</references>
       </memberdef>
-      <memberdef kind="function" id="hashtable_8h_1adb8f0fbfdc33424efe15e8de17d37131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hashtable_8h_1a70ff976a76185ee4e9024bfa7b1b02bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** hashtable_itor_datum</definition>
+        <definition>void ** hashtable_itor_datum</definition>
         <argsstring>(hashtable_itor *itor)</argsstring>
         <name>hashtable_itor_datum</name>
         <param>
@@ -981,7 +982,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hashtable.h" line="71" column="5" bodyfile="src/hashtable.c" bodystart="538" bodyend="545" declfile="include/hashtable.h" declline="71" declcolumn="5"/>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
         <references refid="structhashtable__itor_1ac132a6acabd26ddbcea7c8d00fd5b68f" compoundref="hashtable_8c" startline="66">hashtable_itor::node</references>
+        <references refid="structhashtable_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable_8c" startline="61">hashtable::size</references>
+        <references refid="structhashtable__itor_1a1c2725966eac16e4eb85ec20276be313" compoundref="hashtable_8c" startline="65">hashtable_itor::table</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -989,7 +993,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="hashtable_8h_1a70220a04ca914ec91d54260b4608234a" refkind="member"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/>libdict<sp/>--<sp/>hash-value<sp/>sorted,<sp/>chained<sp/>hash-table<sp/>interface.</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2001-2014,<sp/>Farooq<sp/>Mela</highlight></codeline>
@@ -1023,15 +1027,15 @@
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><ref refid="dict_8h_1a0c5f0f7b40e3b3df5aaa4c5e3c874b3b" kindref="member">BEGIN_DECL</ref></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhashtable" kindref="compound">hashtable</ref><sp/><ref refid="structhashtable" kindref="compound">hashtable</ref>;</highlight></codeline>
+<codeline lineno="35" refid="hashtable_8h_1a70220a04ca914ec91d54260b4608234a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhashtable" kindref="compound">hashtable</ref><sp/><ref refid="structhashtable" kindref="compound">hashtable</ref>;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><sp/><ref refid="hashtable_8h_1a037074b31c446931c1967bfd80c060e7" kindref="member">hashtable_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhashtable_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>,<sp/><ref refid="dict_8h_1a849c4295058ff98298369ba530fd254d" kindref="member">dict_hash_func</ref><sp/><ref refid="structhashtable_1afcbf6b4ca50c87e70ae1ae4febfdff2f" kindref="member">hash_func</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structhashtable_1a245260f6f74972558f61b85227df5aae" kindref="member">size</ref>);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1aa2d8a2cbc968478a436363812da7d33d" kindref="member">hashtable_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhashtable_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>,<sp/><ref refid="dict_8h_1a849c4295058ff98298369ba530fd254d" kindref="member">dict_hash_func</ref><sp/><ref refid="structhashtable_1afcbf6b4ca50c87e70ae1ae4febfdff2f" kindref="member">hash_func</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structhashtable_1a245260f6f74972558f61b85227df5aae" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><sp/><ref refid="hashtable_8h_1af455c560cff947a8088f557ab119795a" kindref="member">hashtable_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhashtable_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>,<sp/><ref refid="dict_8h_1a849c4295058ff98298369ba530fd254d" kindref="member">dict_hash_func</ref><sp/><ref refid="structhashtable_1afcbf6b4ca50c87e70ae1ae4febfdff2f" kindref="member">hash_func</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structhashtable_1a245260f6f74972558f61b85227df5aae" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1abbe4b0247e04c69486fe907df6b34849" kindref="member">hashtable_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhashtable_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>,<sp/><ref refid="dict_8h_1a849c4295058ff98298369ba530fd254d" kindref="member">dict_hash_func</ref><sp/><ref refid="structhashtable_1afcbf6b4ca50c87e70ae1ae4febfdff2f" kindref="member">hash_func</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structhashtable_1a245260f6f74972558f61b85227df5aae" kindref="member">size</ref>);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a24bb5d1cc6d174e890eebcfbf4ecf4ee" kindref="member">hashtable_free</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" kindref="member">table</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a67bcbfe82dc7d75e26d28e82593de9ca" kindref="member">hashtable_insert</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" kindref="member">table</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a804f9f1f154405ddf5a51f3ad9c4ca2f" kindref="member">hashtable_search</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" kindref="member">table</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1acf6fe1dbd03b91f46fa0c2cc9b36f455" kindref="member">hashtable_search</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" kindref="member">table</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a2f60f28533279fae7e1b46de945986c5" kindref="member">hashtable_remove</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" kindref="member">table</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1aae522c5e1cb380ff321c81d21b3c6f08" kindref="member">hashtable_clear</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" kindref="member">table</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
@@ -1040,12 +1044,12 @@
 <codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1ad37da2d98910ad7ad07a9bd325128e45" kindref="member">hashtable_size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" kindref="member">table</ref>);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1ae4e6def277e47c1ed3088462dbf6b652" kindref="member">hashtable_slots_used</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" kindref="member">table</ref>);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a4470d170573e6d2d398cfa38e4a828cd" kindref="member">hashtable_verify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" kindref="member">table</ref>);</highlight></codeline>
-<codeline lineno="52" refid="hashtable_8h_1ada354ce7ebae1d38e3b3636b1900c8f4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a257683480baebb03b82de91168276e58" kindref="member">hashtable_resize</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" kindref="member">table</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structhashtable_1a245260f6f74972558f61b85227df5aae" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a257683480baebb03b82de91168276e58" kindref="member">hashtable_resize</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" kindref="member">table</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structhashtable_1a245260f6f74972558f61b85227df5aae" kindref="member">size</ref>);</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref><sp/><ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>;</highlight></codeline>
+<codeline lineno="54" refid="hashtable_8h_1ada354ce7ebae1d38e3b3636b1900c8f4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref><sp/><ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>;</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/><ref refid="hashtable_8h_1a0276b0b09fddd87d7ae0660d39d1ed1a" kindref="member">hashtable_itor_new</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable__itor_1a1c2725966eac16e4eb85ec20276be313" kindref="member">table</ref>);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/><sp/><ref refid="hashtable_8h_1aa8d78f4c2a7967d8f40d9ce2e21a0f77" kindref="member">hashtable_dict_itor_new</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable__itor_1a1c2725966eac16e4eb85ec20276be313" kindref="member">table</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/><ref refid="hashtable_8h_1a42ef1560386cd5b2ed4bbda89066305a" kindref="member">hashtable_itor_new</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable__itor_1a1c2725966eac16e4eb85ec20276be313" kindref="member">table</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/><sp/><ref refid="hashtable_8h_1a395e03d6fb1a673dacfa87784d9c1bba" kindref="member">hashtable_dict_itor_new</ref>(<ref refid="structhashtable" kindref="compound">hashtable</ref>*<sp/><ref refid="structhashtable__itor_1a1c2725966eac16e4eb85ec20276be313" kindref="member">table</ref>);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a8ac2a4cbf94617859785461561ac6641" kindref="member">hashtable_itor_free</ref>(<ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/>itor);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1abefb05d066d3a1c9183bf8104667bce9" kindref="member">hashtable_itor_valid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/>itor);</highlight></codeline>
@@ -1057,8 +1061,8 @@
 <codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a4af5cb02f974fcafb9cbd486e273eca1" kindref="member">hashtable_itor_first</ref>(<ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/>itor);</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a45f1d8e870f55a93a8aa7c6f11124080" kindref="member">hashtable_itor_last</ref>(<ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/>itor);</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a2618afdd980763175fab2a23333fb4a9" kindref="member">hashtable_itor_search</ref>(<ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="hashtable_8h_1ae3d254592f7844b8acdea0090d8017ca" kindref="member">hashtable_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/>itor);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1adb8f0fbfdc33424efe15e8de17d37131" kindref="member">hashtable_itor_datum</ref>(<ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="hashtable_8h_1ae5ecbe4b9400383290c704d35c7c9054" kindref="member">hashtable_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a70ff976a76185ee4e9024bfa7b1b02bd" kindref="member">hashtable_itor_datum</ref>(<ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/>itor);</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable_8h_1a7ba59e801312dab3714273fd4d060fe8" kindref="member">hashtable_itor_remove</ref>(<ref refid="structhashtable__itor" kindref="compound">hashtable_itor</ref>*<sp/>itor);</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><ref refid="dict_8h_1acca589e3adebef8ed4e5bed6dea40ebb" kindref="member">END_DECL</ref></highlight></codeline>

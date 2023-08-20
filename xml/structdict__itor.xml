@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structdict__itor" kind="struct" language="C++" prot="public">
     <compoundname>dict_itor</compoundname>
     <includes refid="dict_8h" local="no">dict.h</includes>
@@ -9,6 +9,7 @@
         <definition>void* _itor</definition>
         <argsstring></argsstring>
         <name>_itor</name>
+        <qualifiedname>dict_itor::_itor</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -22,6 +23,7 @@
         <definition>const itor_vtable* _vtable</definition>
         <argsstring></argsstring>
         <name>_vtable</name>
+        <qualifiedname>dict_itor::_vtable</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

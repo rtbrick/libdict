@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structtree__node__base" kind="struct" language="C++" prot="public">
     <compoundname>tree_node_base</compoundname>
     <includes refid="tree__common_8h" local="no">tree_common.h</includes>
@@ -9,6 +9,7 @@
         <definition>void* key</definition>
         <argsstring></argsstring>
         <name>key</name>
+        <qualifiedname>tree_node_base::key</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -22,6 +23,7 @@
         <definition>void* datum</definition>
         <argsstring></argsstring>
         <name>datum</name>
+        <qualifiedname>tree_node_base::datum</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -35,6 +37,7 @@
         <definition>struct tree_node_base* parent</definition>
         <argsstring></argsstring>
         <name>parent</name>
+        <qualifiedname>tree_node_base::parent</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -48,6 +51,7 @@
         <definition>struct tree_node_base* llink</definition>
         <argsstring></argsstring>
         <name>llink</name>
+        <qualifiedname>tree_node_base::llink</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -61,6 +65,7 @@
         <definition>struct tree_node_base* rlink</definition>
         <argsstring></argsstring>
         <name>rlink</name>
+        <qualifiedname>tree_node_base::rlink</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

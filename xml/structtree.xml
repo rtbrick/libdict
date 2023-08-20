@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structtree" kind="struct" language="C++" prot="public">
     <compoundname>tree</compoundname>
       <sectiondef kind="public-attrib">
@@ -8,6 +8,7 @@
         <definition>tree_node* root</definition>
         <argsstring></argsstring>
         <name>root</name>
+        <qualifiedname>tree::root</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -21,6 +22,7 @@
         <definition>size_t count</definition>
         <argsstring></argsstring>
         <name>count</name>
+        <qualifiedname>tree::count</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -34,6 +36,7 @@
         <definition>dict_compare_func cmp_func</definition>
         <argsstring></argsstring>
         <name>cmp_func</name>
+        <qualifiedname>tree::cmp_func</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -47,6 +50,7 @@
         <definition>size_t rotation_count</definition>
         <argsstring></argsstring>
         <name>rotation_count</name>
+        <qualifiedname>tree::rotation_count</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -61,6 +65,13 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
+      <node id="1">
+        <label>tree</label>
+        <link refid="structtree"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+      </node>
       <node id="2">
         <label>tree_node</label>
         <link refid="structtree__node"/>
@@ -68,13 +79,6 @@
           <edgelabel>llink</edgelabel>
           <edgelabel>parent</edgelabel>
           <edgelabel>rlink</edgelabel>
-        </childnode>
-      </node>
-      <node id="1">
-        <label>tree</label>
-        <link refid="structtree"/>
-        <childnode refid="2" relation="usage">
-          <edgelabel>root</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

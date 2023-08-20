@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="dict__private_8h" kind="file" language="C++">
     <compoundname>dict_private.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -17,64 +17,6 @@
     <includedby refid="tree__common_8c" local="yes">src/tree_common.c</includedby>
     <includedby refid="wb__tree_8c" local="yes">src/wb_tree.c</includedby>
     <incdepgraph>
-      <node id="7">
-        <label>stdbool.h</label>
-      </node>
-      <node id="13">
-        <label>skiplist.h</label>
-        <link refid="skiplist_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>stdint.h</label>
-      </node>
-      <node id="3">
-        <label>stdlib.h</label>
-      </node>
-      <node id="12">
-        <label>rb_tree.h</label>
-        <link refid="rb__tree_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>stddef.h</label>
-      </node>
-      <node id="16">
-        <label>wb_tree.h</label>
-        <link refid="wb__tree_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>hb_tree.h</label>
-        <link refid="hb__tree_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>src/dict_private.h</label>
-        <link refid="dict__private_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>sp_tree.h</label>
-        <link refid="sp__tree_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>hashtable.h</label>
-        <link refid="hashtable_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
       <node id="4">
         <label>dict.h</label>
         <link refid="dict_8h"/>
@@ -103,18 +45,45 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
+      <node id="8">
+        <label>hashtable.h</label>
+        <link refid="hashtable_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>hashtable2.h</label>
+        <link refid="hashtable2_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
       <node id="11">
         <label>pr_tree.h</label>
         <link refid="pr__tree_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>stdio.h</label>
+      <node id="12">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
-      <node id="9">
-        <label>hashtable2.h</label>
-        <link refid="hashtable2_8h"/>
+      <node id="13">
+        <label>skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
@@ -124,35 +93,42 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="10">
-        <label>src/tr_tree.c</label>
-        <link refid="tr__tree_8c"/>
+      <node id="16">
+        <label>wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/dict_private.h</label>
+        <link refid="dict__private_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdbool.h</label>
       </node>
       <node id="5">
-        <label>src/hb_tree.c</label>
-        <link refid="hb__tree_8c"/>
+        <label>stddef.h</label>
       </node>
-      <node id="4">
-        <label>src/hashtable2.c</label>
-        <link refid="hashtable2_8c"/>
+      <node id="6">
+        <label>stdint.h</label>
       </node>
-      <node id="9">
-        <label>src/sp_tree.c</label>
-        <link refid="sp__tree_8c"/>
+      <node id="2">
+        <label>stdio.h</label>
       </node>
       <node id="3">
-        <label>src/hashtable.c</label>
-        <link refid="hashtable_8c"/>
+        <label>stdlib.h</label>
       </node>
-      <node id="12">
-        <label>src/wb_tree.c</label>
-        <link refid="wb__tree_8c"/>
-      </node>
-      <node id="8">
-        <label>src/skiplist.c</label>
-        <link refid="skiplist_8c"/>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/dict.c</label>
+        <link refid="dict_8c"/>
       </node>
       <node id="1">
         <label>src/dict_private.h</label>
@@ -180,21 +156,45 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>src/dict.c</label>
-        <link refid="dict_8c"/>
+      <node id="3">
+        <label>src/hashtable.c</label>
+        <link refid="hashtable_8c"/>
+      </node>
+      <node id="4">
+        <label>src/hashtable2.c</label>
+        <link refid="hashtable2_8c"/>
+      </node>
+      <node id="5">
+        <label>src/hb_tree.c</label>
+        <link refid="hb__tree_8c"/>
+      </node>
+      <node id="6">
+        <label>src/pr_tree.c</label>
+        <link refid="pr__tree_8c"/>
       </node>
       <node id="7">
         <label>src/rb_tree.c</label>
         <link refid="rb__tree_8c"/>
       </node>
+      <node id="8">
+        <label>src/skiplist.c</label>
+        <link refid="skiplist_8c"/>
+      </node>
+      <node id="9">
+        <label>src/sp_tree.c</label>
+        <link refid="sp__tree_8c"/>
+      </node>
+      <node id="10">
+        <label>src/tr_tree.c</label>
+        <link refid="tr__tree_8c"/>
+      </node>
       <node id="11">
         <label>src/tree_common.c</label>
         <link refid="tree__common_8c"/>
       </node>
-      <node id="6">
-        <label>src/pr_tree.c</label>
-        <link refid="pr__tree_8c"/>
+      <node id="12">
+        <label>src/wb_tree.c</label>
+        <link refid="wb__tree_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
@@ -261,7 +261,7 @@
       <memberdef kind="define" id="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" prot="public" static="no">
         <name>MALLOC</name>
         <param><defname>n</defname></param>
-        <initializer>(*<ref refid="dict_8h_1af202e0695edba206489b6a3936610803" kindref="member">dict_malloc_func</ref>)(n)</initializer>
+        <initializer>(*<ref refid="dict_8c_1a6e4168cb588cf762d93db53f53fdcce0" kindref="member">dict_malloc_func</ref>)(n)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -273,7 +273,7 @@
       <memberdef kind="define" id="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" prot="public" static="no">
         <name>FREE</name>
         <param><defname>p</defname></param>
-        <initializer>(*<ref refid="dict_8h_1afeae04c4c07e57a7451c3480a7a4bf2e" kindref="member">dict_free_func</ref>)(p)</initializer>
+        <initializer>(*<ref refid="dict_8c_1afeae04c4c07e57a7451c3480a7a4bf2e" kindref="member">dict_free_func</ref>)(p)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structhashtable" kind="struct" language="C++" prot="public">
     <compoundname>hashtable</compoundname>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" prot="public" static="no" mutable="no">
-        <type><ref refid="structhash__node" kindref="compound">hash_node</ref> **</type>
+        <type><ref refid="hashtable_8c_1a4a37dff778daa13ddb34cd8e4ef1a129" kindref="member">hash_node</ref> **</type>
         <definition>hash_node** table</definition>
         <argsstring></argsstring>
         <name>table</name>
+        <qualifiedname>hashtable::table</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -21,6 +22,7 @@
         <definition>dict_compare_func cmp_func</definition>
         <argsstring></argsstring>
         <name>cmp_func</name>
+        <qualifiedname>hashtable::cmp_func</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -34,6 +36,7 @@
         <definition>dict_hash_func hash_func</definition>
         <argsstring></argsstring>
         <name>hash_func</name>
+        <qualifiedname>hashtable::hash_func</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -47,6 +50,7 @@
         <definition>size_t count</definition>
         <argsstring></argsstring>
         <name>count</name>
+        <qualifiedname>hashtable::count</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -60,6 +64,7 @@
         <definition>unsigned size</definition>
         <argsstring></argsstring>
         <name>size</name>
+        <qualifiedname>hashtable::size</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

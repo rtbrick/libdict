@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="tree__common_8h" kind="file" language="C++">
     <compoundname>tree_common.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -11,57 +11,6 @@
     <includedby refid="tree__common_8c" local="yes">src/tree_common.c</includedby>
     <includedby refid="wb__tree_8c" local="yes">src/wb_tree.c</includedby>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
-      <node id="11">
-        <label>skiplist.h</label>
-        <link refid="skiplist_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>stdint.h</label>
-      </node>
-      <node id="10">
-        <label>rb_tree.h</label>
-        <link refid="rb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>stddef.h</label>
-      </node>
-      <node id="14">
-        <label>wb_tree.h</label>
-        <link refid="wb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>hb_tree.h</label>
-        <link refid="hb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>sp_tree.h</label>
-        <link refid="sp__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>hashtable.h</label>
-        <link refid="hashtable_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>src/tree_common.h</label>
-        <link refid="tree__common_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>dict.h</label>
         <link refid="dict_8h"/>
@@ -90,9 +39,9 @@
         <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="9">
-        <label>pr_tree.h</label>
-        <link refid="pr__tree_8h"/>
+      <node id="6">
+        <label>hashtable.h</label>
+        <link refid="hashtable_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
@@ -102,33 +51,84 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="8">
+        <label>hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>pr_tree.h</label>
+        <link refid="pr__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="13">
         <label>tr_tree.h</label>
         <link refid="tr__tree_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="14">
+        <label>wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/tree_common.h</label>
+        <link refid="tree__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="6">
-        <label>src/tr_tree.c</label>
-        <link refid="tr__tree_8c"/>
-      </node>
       <node id="2">
         <label>src/hb_tree.c</label>
         <link refid="hb__tree_8c"/>
+      </node>
+      <node id="3">
+        <label>src/pr_tree.c</label>
+        <link refid="pr__tree_8c"/>
+      </node>
+      <node id="4">
+        <label>src/rb_tree.c</label>
+        <link refid="rb__tree_8c"/>
       </node>
       <node id="5">
         <label>src/sp_tree.c</label>
         <link refid="sp__tree_8c"/>
       </node>
-      <node id="8">
-        <label>src/wb_tree.c</label>
-        <link refid="wb__tree_8c"/>
-      </node>
-      <node id="4">
-        <label>src/rb_tree.c</label>
-        <link refid="rb__tree_8c"/>
+      <node id="6">
+        <label>src/tr_tree.c</label>
+        <link refid="tr__tree_8c"/>
       </node>
       <node id="7">
         <label>src/tree_common.c</label>
@@ -152,9 +152,9 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>src/pr_tree.c</label>
-        <link refid="pr__tree_8c"/>
+      <node id="8">
+        <label>src/wb_tree.c</label>
+        <link refid="wb__tree_8c"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structtree__node__base" prot="public">tree_node_base</innerclass>
@@ -285,9 +285,9 @@
         <references refid="structtree__node_1a1b14b7d0565271b34732a5c6fd7b79c4" compoundref="tree__common_8c" startline="34">tree_node::parent</references>
         <references refid="structtree__node_1a385f2b6c9d6fbb5c5f1b9b26d5e64267" compoundref="tree__common_8c" startline="34">tree_node::rlink</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1ae09d2fd7eaee83c14c1ce3645e080afc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1a90e4160ff37de7247b611782efafba65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
-        <definition>void* tree_node_prev</definition>
+        <definition>void * tree_node_prev</definition>
         <argsstring>(void *node)</argsstring>
         <name>tree_node_prev</name>
         <param>
@@ -303,11 +303,11 @@
         <location file="src/tree_common.h" line="66" column="9" bodyfile="src/tree_common.c" bodystart="78" bodyend="89" declfile="src/tree_common.h" declline="66" declcolumn="9"/>
         <references refid="structtree__node_1ad05ecdb82a6038d4bf5aaa7eac22fbd3" compoundref="tree__common_8c" startline="34">tree_node::llink</references>
         <references refid="structtree__node_1a1b14b7d0565271b34732a5c6fd7b79c4" compoundref="tree__common_8c" startline="34">tree_node::parent</references>
-        <references refid="tree__common_8c_1a4d488cb5df5938af5705fe3925944ea6" compoundref="tree__common_8c" startline="117" endline="125">tree_node_max</references>
+        <references refid="tree__common_8c_1a1f73b77d5b43f77f45ba24acdbe83faf" compoundref="tree__common_8c" startline="117" endline="125">tree_node_max</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1a3d08fb9f36f4f9f8961c295e4251f6ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1aa36c6127ed2f7bef26f000da64f05e20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
-        <definition>void* tree_node_next</definition>
+        <definition>void * tree_node_next</definition>
         <argsstring>(void *node)</argsstring>
         <name>tree_node_next</name>
         <param>
@@ -323,11 +323,11 @@
         <location file="src/tree_common.h" line="69" column="9" bodyfile="src/tree_common.c" bodystart="92" bodyend="103" declfile="src/tree_common.h" declline="69" declcolumn="9"/>
         <references refid="structtree__node_1a1b14b7d0565271b34732a5c6fd7b79c4" compoundref="tree__common_8c" startline="34">tree_node::parent</references>
         <references refid="structtree__node_1a385f2b6c9d6fbb5c5f1b9b26d5e64267" compoundref="tree__common_8c" startline="34">tree_node::rlink</references>
-        <references refid="tree__common_8c_1a5932ecd29c1e23af6211df7a412fef8e" compoundref="tree__common_8c" startline="106" endline="114">tree_node_min</references>
+        <references refid="tree__common_8c_1a7b6de5488b23a09de4f838c218adabd0" compoundref="tree__common_8c" startline="106" endline="114">tree_node_min</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1a8b3b49b3a73dba71fdd928c5a0df0aea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1adde7c25179e77fd991a879a1cab795ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
-        <definition>void* tree_node_min</definition>
+        <definition>void * tree_node_min</definition>
         <argsstring>(void *node)</argsstring>
         <name>tree_node_min</name>
         <param>
@@ -343,9 +343,9 @@
         <location file="src/tree_common.h" line="72" column="9" bodyfile="src/tree_common.c" bodystart="106" bodyend="114" declfile="src/tree_common.h" declline="72" declcolumn="9"/>
         <references refid="structtree__node_1ad05ecdb82a6038d4bf5aaa7eac22fbd3" compoundref="tree__common_8c" startline="34">tree_node::llink</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1a94acb95d54aefccaa88728b630b8ccf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1a4ce2ec2b8d2273572d9193559a62b5a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
-        <definition>void* tree_node_max</definition>
+        <definition>void * tree_node_max</definition>
         <argsstring>(void *node)</argsstring>
         <name>tree_node_max</name>
         <param>
@@ -361,9 +361,9 @@
         <location file="src/tree_common.h" line="75" column="9" bodyfile="src/tree_common.c" bodystart="117" bodyend="125" declfile="src/tree_common.h" declline="75" declcolumn="9"/>
         <references refid="structtree__node_1a385f2b6c9d6fbb5c5f1b9b26d5e64267" compoundref="tree__common_8c" startline="34">tree_node::rlink</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1af5143d04b903f3b3f75954d7919e2c15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1a7765b89cd139c6c938b44f272738be55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** tree_search</definition>
+        <definition>void ** tree_search</definition>
         <argsstring>(void *tree, const void *key)</argsstring>
         <name>tree_search</name>
         <param>
@@ -382,11 +382,11 @@
         </inbodydescription>
         <location file="src/tree_common.h" line="77" column="9" bodyfile="src/tree_common.c" bodystart="144" bodyend="148" declfile="src/tree_common.h" declline="77" declcolumn="9"/>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
-        <references refid="tree__common_8c_1a8ca8a698fb9f3c76e48a451e547166db" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
+        <references refid="tree__common_8c_1a4336bbd1dec56af86a45e1d84d622063" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1ada60a4b12961a36913afdce8fd86e14a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1a28e378870f0efa0b15fd3f8c8141abd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
-        <definition>void* tree_search_node</definition>
+        <definition>void * tree_search_node</definition>
         <argsstring>(void *tree, const void *key)</argsstring>
         <name>tree_search_node</name>
         <param>
@@ -407,9 +407,9 @@
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1afe29edab5be1ee1e662cd046c25f8ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1a834572fa63706dc9a9cfa4267e07eb08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** tree_search_le</definition>
+        <definition>void ** tree_search_le</definition>
         <argsstring>(void *tree, const void *key)</argsstring>
         <name>tree_search_le</name>
         <param>
@@ -428,11 +428,11 @@
         </inbodydescription>
         <location file="src/tree_common.h" line="82" column="9" bodyfile="src/tree_common.c" bodystart="170" bodyend="174" declfile="src/tree_common.h" declline="82" declcolumn="9"/>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
-        <references refid="tree__common_8c_1affc948ff27956042441414301d9372c9" compoundref="tree__common_8c" startline="151" endline="167">tree_search_le_node</references>
+        <references refid="tree__common_8c_1a1e5a4773127f62034080c522c657c5d1" compoundref="tree__common_8c" startline="151" endline="167">tree_search_le_node</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1a53b69971620836b61c0840f79a4dca83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1acf04110b9a2494c4ea91b5f960478e9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
-        <definition>void* tree_search_le_node</definition>
+        <definition>void * tree_search_le_node</definition>
         <argsstring>(void *tree, const void *key)</argsstring>
         <name>tree_search_le_node</name>
         <param>
@@ -456,9 +456,9 @@
         <references refid="structtree__node_1a385f2b6c9d6fbb5c5f1b9b26d5e64267" compoundref="tree__common_8c" startline="34">tree_node::rlink</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1a73d440cafc7a1793a596a61a939ff110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1a1fc9e462ca58e9d12d81e9e1f77e640d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** tree_search_lt</definition>
+        <definition>void ** tree_search_lt</definition>
         <argsstring>(void *tree, const void *key)</argsstring>
         <name>tree_search_lt</name>
         <param>
@@ -477,11 +477,11 @@
         </inbodydescription>
         <location file="src/tree_common.h" line="86" column="9" bodyfile="src/tree_common.c" bodystart="194" bodyend="198" declfile="src/tree_common.h" declline="86" declcolumn="9"/>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
-        <references refid="tree__common_8c_1a1feee838918be0b03687aaa9acac4049" compoundref="tree__common_8c" startline="177" endline="191">tree_search_lt_node</references>
+        <references refid="tree__common_8c_1a645c577b5288a0d739610bca51a82e22" compoundref="tree__common_8c" startline="177" endline="191">tree_search_lt_node</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1a472d92383ac8fe457557e07451195d44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1ac2b03ab7859c7c7c48f32b7b8d40a4bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
-        <definition>void* tree_search_lt_node</definition>
+        <definition>void * tree_search_lt_node</definition>
         <argsstring>(void *tree, const void *key)</argsstring>
         <name>tree_search_lt_node</name>
         <param>
@@ -505,9 +505,9 @@
         <references refid="structtree__node_1a385f2b6c9d6fbb5c5f1b9b26d5e64267" compoundref="tree__common_8c" startline="34">tree_node::rlink</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1a7daad8511212bd799705f34524641d4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1af6ed3a63a9c60907953d2746a3a1b8fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** tree_search_ge</definition>
+        <definition>void ** tree_search_ge</definition>
         <argsstring>(void *tree, const void *key)</argsstring>
         <name>tree_search_ge</name>
         <param>
@@ -526,11 +526,11 @@
         </inbodydescription>
         <location file="src/tree_common.h" line="90" column="9" bodyfile="src/tree_common.c" bodystart="221" bodyend="225" declfile="src/tree_common.h" declline="90" declcolumn="9"/>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
-        <references refid="tree__common_8c_1a8f315539350683fdc84db46e0ef5a0d3" compoundref="tree__common_8c" startline="201" endline="218">tree_search_ge_node</references>
+        <references refid="tree__common_8c_1aec6b09ca1b7597db7cb5a5389153f598" compoundref="tree__common_8c" startline="201" endline="218">tree_search_ge_node</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1ac2f5b85745c2c0c98d802feada9366fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1a7ef6f4a68ff6cba269988aeba2a66a33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
-        <definition>void* tree_search_ge_node</definition>
+        <definition>void * tree_search_ge_node</definition>
         <argsstring>(void *tree, const void *key)</argsstring>
         <name>tree_search_ge_node</name>
         <param>
@@ -554,9 +554,9 @@
         <references refid="structtree__node_1a385f2b6c9d6fbb5c5f1b9b26d5e64267" compoundref="tree__common_8c" startline="34">tree_node::rlink</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1a251aa3bd4ffad4917ab2e6a948d78c7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1a8b3a3c169d964c62302581f5d85ac004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** tree_search_gt</definition>
+        <definition>void ** tree_search_gt</definition>
         <argsstring>(void *tree, const void *key)</argsstring>
         <name>tree_search_gt</name>
         <param>
@@ -575,11 +575,11 @@
         </inbodydescription>
         <location file="src/tree_common.h" line="94" column="9" bodyfile="src/tree_common.c" bodystart="245" bodyend="249" declfile="src/tree_common.h" declline="94" declcolumn="9"/>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
-        <references refid="tree__common_8c_1ad6e458881eac24a655b8ebb2cf9dcca4" compoundref="tree__common_8c" startline="228" endline="242">tree_search_gt_node</references>
+        <references refid="tree__common_8c_1a083987581cc9832ac2e13c1047b6f0f3" compoundref="tree__common_8c" startline="228" endline="242">tree_search_gt_node</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1ade7af08f98e09ad3f39417647d0cb2bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1a68a8285626f8ca19aa5028d8db8c1c97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
-        <definition>void* tree_search_gt_node</definition>
+        <definition>void * tree_search_gt_node</definition>
         <argsstring>(void *tree, const void *key)</argsstring>
         <name>tree_search_gt_node</name>
         <param>
@@ -631,8 +631,8 @@
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
         <references refid="structtree__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tree__common_8c" startline="34">tree_node::key</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
-        <references refid="tree__common_8c_1a5932ecd29c1e23af6211df7a412fef8e" compoundref="tree__common_8c" startline="106" endline="114">tree_node_min</references>
-        <references refid="tree__common_8c_1a1a09be3530a054a0ddc54cc5188c2cd2" compoundref="tree__common_8c" startline="92" endline="103">tree_node_next</references>
+        <references refid="tree__common_8c_1a7b6de5488b23a09de4f838c218adabd0" compoundref="tree__common_8c" startline="106" endline="114">tree_node_min</references>
+        <references refid="tree__common_8c_1af61f08f021d60815449e7657dc75ea6a" compoundref="tree__common_8c" startline="92" endline="103">tree_node_next</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1ac144b757fd8ecdeab9e1ae4d31dd92e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -666,10 +666,10 @@
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
         <references refid="structtree__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tree__common_8c" startline="34">tree_node::key</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
-        <references refid="tree__common_8c_1a4d488cb5df5938af5705fe3925944ea6" compoundref="tree__common_8c" startline="117" endline="125">tree_node_max</references>
-        <references refid="tree__common_8c_1a5932ecd29c1e23af6211df7a412fef8e" compoundref="tree__common_8c" startline="106" endline="114">tree_node_min</references>
-        <references refid="tree__common_8c_1a1a09be3530a054a0ddc54cc5188c2cd2" compoundref="tree__common_8c" startline="92" endline="103">tree_node_next</references>
-        <references refid="tree__common_8c_1a2f98af886596fe2b7e650cd95f67098c" compoundref="tree__common_8c" startline="78" endline="89">tree_node_prev</references>
+        <references refid="tree__common_8c_1a1f73b77d5b43f77f45ba24acdbe83faf" compoundref="tree__common_8c" startline="117" endline="125">tree_node_max</references>
+        <references refid="tree__common_8c_1a7b6de5488b23a09de4f838c218adabd0" compoundref="tree__common_8c" startline="106" endline="114">tree_node_min</references>
+        <references refid="tree__common_8c_1af61f08f021d60815449e7657dc75ea6a" compoundref="tree__common_8c" startline="92" endline="103">tree_node_next</references>
+        <references refid="tree__common_8c_1aad7c42c6dfa4a11176cff91f41c9383a" compoundref="tree__common_8c" startline="78" endline="89">tree_node_prev</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1ad7192e6cc9305bd387a2de989dbe0c54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -865,7 +865,7 @@
         </inbodydescription>
         <location file="src/tree_common.h" line="120" column="9" bodyfile="src/tree_common.c" bodystart="401" bodyend="405" declfile="src/tree_common.h" declline="120" declcolumn="9"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
-        <references refid="tree__common_8c_1a1a09be3530a054a0ddc54cc5188c2cd2" compoundref="tree__common_8c" startline="92" endline="103">tree_node_next</references>
+        <references refid="tree__common_8c_1af61f08f021d60815449e7657dc75ea6a" compoundref="tree__common_8c" startline="92" endline="103">tree_node_next</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1a56eed6b63ed322aa656ba02e845a2caf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -884,7 +884,7 @@
         </inbodydescription>
         <location file="src/tree_common.h" line="121" column="9" bodyfile="src/tree_common.c" bodystart="408" bodyend="412" declfile="src/tree_common.h" declline="121" declcolumn="9"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
-        <references refid="tree__common_8c_1a2f98af886596fe2b7e650cd95f67098c" compoundref="tree__common_8c" startline="78" endline="89">tree_node_prev</references>
+        <references refid="tree__common_8c_1aad7c42c6dfa4a11176cff91f41c9383a" compoundref="tree__common_8c" startline="78" endline="89">tree_node_prev</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1a4e54c33bf8c8429421ef698f049ff46c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -907,7 +907,7 @@
         </inbodydescription>
         <location file="src/tree_common.h" line="122" column="9" bodyfile="src/tree_common.c" bodystart="415" bodyend="421" declfile="src/tree_common.h" declline="122" declcolumn="9"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
-        <references refid="tree__common_8c_1a1a09be3530a054a0ddc54cc5188c2cd2" compoundref="tree__common_8c" startline="92" endline="103">tree_node_next</references>
+        <references refid="tree__common_8c_1af61f08f021d60815449e7657dc75ea6a" compoundref="tree__common_8c" startline="92" endline="103">tree_node_next</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1a8be1329ad6b7d656cc29bcca4e8e3b95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -930,7 +930,7 @@
         </inbodydescription>
         <location file="src/tree_common.h" line="123" column="9" bodyfile="src/tree_common.c" bodystart="424" bodyend="430" declfile="src/tree_common.h" declline="123" declcolumn="9"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
-        <references refid="tree__common_8c_1a2f98af886596fe2b7e650cd95f67098c" compoundref="tree__common_8c" startline="78" endline="89">tree_node_prev</references>
+        <references refid="tree__common_8c_1aad7c42c6dfa4a11176cff91f41c9383a" compoundref="tree__common_8c" startline="78" endline="89">tree_node_prev</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1a76a5215d5dad8de31b36ad11350770f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -951,7 +951,7 @@
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
-        <references refid="tree__common_8c_1a5932ecd29c1e23af6211df7a412fef8e" compoundref="tree__common_8c" startline="106" endline="114">tree_node_min</references>
+        <references refid="tree__common_8c_1a7b6de5488b23a09de4f838c218adabd0" compoundref="tree__common_8c" startline="106" endline="114">tree_node_min</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1ab9329d4cf4317f2ddd9f46f967bb1d3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -972,7 +972,7 @@
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
-        <references refid="tree__common_8c_1a4d488cb5df5938af5705fe3925944ea6" compoundref="tree__common_8c" startline="117" endline="125">tree_node_max</references>
+        <references refid="tree__common_8c_1a1f73b77d5b43f77f45ba24acdbe83faf" compoundref="tree__common_8c" startline="117" endline="125">tree_node_max</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1ae475a957640b2a7fda1c7a803590a55a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -996,7 +996,7 @@
         <location file="src/tree_common.h" line="126" column="9" bodyfile="src/tree_common.c" bodystart="447" bodyend="451" declfile="src/tree_common.h" declline="126" declcolumn="9"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
-        <references refid="tree__common_8c_1a8ca8a698fb9f3c76e48a451e547166db" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
+        <references refid="tree__common_8c_1a4336bbd1dec56af86a45e1d84d622063" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1aca4d6919c69c59b77effed9746350ccf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1020,7 +1020,7 @@
         <location file="src/tree_common.h" line="127" column="9" bodyfile="src/tree_common.c" bodystart="454" bodyend="458" declfile="src/tree_common.h" declline="127" declcolumn="9"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
-        <references refid="tree__common_8c_1affc948ff27956042441414301d9372c9" compoundref="tree__common_8c" startline="151" endline="167">tree_search_le_node</references>
+        <references refid="tree__common_8c_1a1e5a4773127f62034080c522c657c5d1" compoundref="tree__common_8c" startline="151" endline="167">tree_search_le_node</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1acd2643e69cd70b24ab68157c88d89150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1044,7 +1044,7 @@
         <location file="src/tree_common.h" line="128" column="9" bodyfile="src/tree_common.c" bodystart="461" bodyend="465" declfile="src/tree_common.h" declline="128" declcolumn="9"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
-        <references refid="tree__common_8c_1a1feee838918be0b03687aaa9acac4049" compoundref="tree__common_8c" startline="177" endline="191">tree_search_lt_node</references>
+        <references refid="tree__common_8c_1a645c577b5288a0d739610bca51a82e22" compoundref="tree__common_8c" startline="177" endline="191">tree_search_lt_node</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1a8731f9d60ea044a8b79ed90fe1b25a57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1068,7 +1068,7 @@
         <location file="src/tree_common.h" line="129" column="9" bodyfile="src/tree_common.c" bodystart="468" bodyend="472" declfile="src/tree_common.h" declline="129" declcolumn="9"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
-        <references refid="tree__common_8c_1a8f315539350683fdc84db46e0ef5a0d3" compoundref="tree__common_8c" startline="201" endline="218">tree_search_ge_node</references>
+        <references refid="tree__common_8c_1aec6b09ca1b7597db7cb5a5389153f598" compoundref="tree__common_8c" startline="201" endline="218">tree_search_ge_node</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1ab419689d410592ac34ff9b00b7977096" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1092,7 +1092,7 @@
         <location file="src/tree_common.h" line="130" column="9" bodyfile="src/tree_common.c" bodystart="475" bodyend="479" declfile="src/tree_common.h" declline="130" declcolumn="9"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
-        <references refid="tree__common_8c_1ad6e458881eac24a655b8ebb2cf9dcca4" compoundref="tree__common_8c" startline="228" endline="242">tree_search_gt_node</references>
+        <references refid="tree__common_8c_1a083987581cc9832ac2e13c1047b6f0f3" compoundref="tree__common_8c" startline="228" endline="242">tree_search_gt_node</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1abf1de1d71e92df79cd1b0cee24465c27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1120,9 +1120,9 @@
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1a98d990c2956165a7426c31d1850ba65d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1aaa46faf126d94dfa7dd33fe9db363f2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const void *</type>
-        <definition>const void* tree_iterator_key</definition>
+        <definition>const void * tree_iterator_key</definition>
         <argsstring>(const void *iterator)</argsstring>
         <name>tree_iterator_key</name>
         <param>
@@ -1139,9 +1139,9 @@
         <references refid="structtree__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tree__common_8c" startline="34">tree_node::key</references>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
       </memberdef>
-      <memberdef kind="function" id="tree__common_8h_1a65055f9e363c6d28a063f204671ba12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="tree__common_8h_1a192415adccccf2fd72ed144ffec4cac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** tree_iterator_datum</definition>
+        <definition>void ** tree_iterator_datum</definition>
         <argsstring>(void *iterator)</argsstring>
         <name>tree_iterator_datum</name>
         <param>
@@ -1205,7 +1205,7 @@
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40" refid="structtree__node__base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtree__node__base" kindref="compound">tree_node_base</ref><sp/>{</highlight></codeline>
 <codeline lineno="41" refid="structtree__node__base_1a56b62b74c25973b49f06895dfd600c94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a8bf6d3b26e824be81b856b68ff0ceed1" kindref="member">TREE_NODE_FIELDS</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structtree__node__base" kindref="compound">tree_node_base</ref>);</highlight></codeline>
-<codeline lineno="42" refid="tree__common_8h_1a9069a8899a6e1ad0d0facc4644961b6e" refkind="member"><highlight class="normal">}<sp/><ref refid="tree__common_8h_1a9069a8899a6e1ad0d0facc4644961b6e" kindref="member">tree_node_base</ref>;</highlight></codeline>
+<codeline lineno="42" refid="tree__common_8h_1a9069a8899a6e1ad0d0facc4644961b6e" refkind="member"><highlight class="normal">}<sp/><ref refid="structtree__node__base" kindref="compound">tree_node_base</ref>;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44" refid="tree__common_8h_1ab336de7dac2bbab532f41737fa8f103d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TREE_FIELDS(node_type)<sp/>\</highlight></codeline>
 <codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>node_type*<sp/><sp/><sp/><sp/><sp/><sp/>root;<sp/>\</highlight></codeline>
@@ -1215,7 +1215,7 @@
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50" refid="structtree__base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtree__base" kindref="compound">tree_base</ref><sp/>{</highlight></codeline>
 <codeline lineno="51" refid="structtree__base_1a3e0944ca8a425fcd254ca5057e885e45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1ab336de7dac2bbab532f41737fa8f103d" kindref="member">TREE_FIELDS</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structtree__node__base" kindref="compound">tree_node_base</ref>);</highlight></codeline>
-<codeline lineno="52" refid="tree__common_8h_1acc8b5e2dfeccc10ebe77ddffb5d84708" refkind="member"><highlight class="normal">}<sp/><ref refid="tree__common_8h_1acc8b5e2dfeccc10ebe77ddffb5d84708" kindref="member">tree_base</ref>;</highlight></codeline>
+<codeline lineno="52" refid="tree__common_8h_1acc8b5e2dfeccc10ebe77ddffb5d84708" refkind="member"><highlight class="normal">}<sp/><ref refid="structtree__base" kindref="compound">tree_base</ref>;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54" refid="tree__common_8h_1aaa3336561dab3f71e234b679290eb7d6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TREE_ITERATOR_FIELDS(tree_type,<sp/>node_type)<sp/>\</highlight></codeline>
 <codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>tree_type*<sp/><sp/><sp/><sp/><sp/><sp/>tree;<sp/>\</highlight></codeline>
@@ -1229,36 +1229,36 @@
 <codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a2881f1f967eee56db7a80caddc614c8e" kindref="member">tree_node_rot_right</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*node);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>the<sp/>predecessor<sp/>of<sp/>|node|,<sp/>or<sp/>NULL<sp/>if<sp/>|node|<sp/>has<sp/>no<sp/>predecessor.</highlight></codeline>
 <codeline lineno="65"><highlight class="comment"><sp/>*<sp/>|node|<sp/>must<sp/>not<sp/>be<sp/>NULL.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1ae09d2fd7eaee83c14c1ce3645e080afc" kindref="member">tree_node_prev</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*node);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a90e4160ff37de7247b611782efafba65" kindref="member">tree_node_prev</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*node);</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>the<sp/>successor<sp/>of<sp/>|node|,<sp/>or<sp/>NULL<sp/>if<sp/>|node|<sp/>has<sp/>no<sp/>successor.</highlight></codeline>
 <codeline lineno="68"><highlight class="comment"><sp/>*<sp/>|node|<sp/>must<sp/>not<sp/>be<sp/>NULL.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a3d08fb9f36f4f9f8961c295e4251f6ce" kindref="member">tree_node_next</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*node);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1aa36c6127ed2f7bef26f000da64f05e20" kindref="member">tree_node_next</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*node);</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>the<sp/>left<sp/>child<sp/>of<sp/>|node|,<sp/>or<sp/>|node|<sp/>if<sp/>it<sp/>has<sp/>no<sp/>right<sp/>child.</highlight></codeline>
 <codeline lineno="71"><highlight class="comment"><sp/>*<sp/>|node|<sp/>must<sp/>not<sp/>be<sp/>NULL.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a8b3b49b3a73dba71fdd928c5a0df0aea" kindref="member">tree_node_min</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*node);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1adde7c25179e77fd991a879a1cab795ff" kindref="member">tree_node_min</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*node);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>the<sp/>rightmost<sp/>child<sp/>of<sp/>|node|,<sp/>or<sp/>|node|<sp/>if<sp/>it<sp/>has<sp/>no<sp/>right<sp/>child.</highlight></codeline>
 <codeline lineno="74"><highlight class="comment"><sp/>*<sp/>|node|<sp/>must<sp/>not<sp/>be<sp/>NULL.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a94acb95d54aefccaa88728b630b8ccf5" kindref="member">tree_node_max</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*node);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a4ce2ec2b8d2273572d9193559a62b5a3" kindref="member">tree_node_max</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*node);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>the<sp/>address<sp/>of<sp/>the<sp/>data<sp/>for<sp/>the<sp/>given<sp/>the<sp/>key,<sp/>or<sp/>NULL<sp/>if<sp/>not<sp/>found.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1af5143d04b903f3b3f75954d7919e2c15" kindref="member">tree_search</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a7765b89cd139c6c938b44f272738be55" kindref="member">tree_search</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>the<sp/>node<sp/>has<sp/>the<sp/>key,<sp/>or<sp/>NULL<sp/>if<sp/>not<sp/>found.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1ada60a4b12961a36913afdce8fd86e14a" kindref="member">tree_search_node</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a28e378870f0efa0b15fd3f8c8141abd3" kindref="member">tree_search_node</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>the<sp/>data/node<sp/>associated<sp/>with<sp/>the<sp/>first<sp/>key<sp/>less<sp/>than<sp/>or</highlight></codeline>
 <codeline lineno="81"><highlight class="comment"><sp/>*<sp/>equal<sp/>to<sp/>the<sp/>specified<sp/>key,<sp/>or<sp/>NULL<sp/>if<sp/>not<sp/>found.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1afe29edab5be1ee1e662cd046c25f8ac8" kindref="member">tree_search_le</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a53b69971620836b61c0840f79a4dca83" kindref="member">tree_search_le_node</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a834572fa63706dc9a9cfa4267e07eb08" kindref="member">tree_search_le</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1acf04110b9a2494c4ea91b5f960478e9e" kindref="member">tree_search_le_node</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>the<sp/>data/node<sp/>associated<sp/>with<sp/>the<sp/>first<sp/>key<sp/>less<sp/>than<sp/>the</highlight></codeline>
 <codeline lineno="85"><highlight class="comment"><sp/>*<sp/>specified<sp/>key,<sp/>or<sp/>NULL<sp/>if<sp/>not<sp/>found.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a73d440cafc7a1793a596a61a939ff110" kindref="member">tree_search_lt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a472d92383ac8fe457557e07451195d44" kindref="member">tree_search_lt_node</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a1fc9e462ca58e9d12d81e9e1f77e640d" kindref="member">tree_search_lt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1ac2b03ab7859c7c7c48f32b7b8d40a4bf" kindref="member">tree_search_lt_node</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>the<sp/>data/node<sp/>associated<sp/>with<sp/>the<sp/>first<sp/>key<sp/>greater<sp/>than<sp/>or</highlight></codeline>
 <codeline lineno="89"><highlight class="comment"><sp/>*<sp/>equal<sp/>to<sp/>the<sp/>specified<sp/>key,<sp/>or<sp/>NULL<sp/>if<sp/>not<sp/>found.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a7daad8511212bd799705f34524641d4a" kindref="member">tree_search_ge</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1ac2f5b85745c2c0c98d802feada9366fd" kindref="member">tree_search_ge_node</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1af6ed3a63a9c60907953d2746a3a1b8fb" kindref="member">tree_search_ge</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a7ef6f4a68ff6cba269988aeba2a66a33" kindref="member">tree_search_ge_node</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>the<sp/>data/node<sp/>associated<sp/>with<sp/>the<sp/>first<sp/>key<sp/>greater<sp/>than<sp/>the</highlight></codeline>
 <codeline lineno="93"><highlight class="comment"><sp/>*<sp/>specified<sp/>key,<sp/>or<sp/>NULL<sp/>if<sp/>not<sp/>found.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a251aa3bd4ffad4917ab2e6a948d78c7e" kindref="member">tree_search_gt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1ade7af08f98e09ad3f39417647d0cb2bd" kindref="member">tree_search_gt_node</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a8b3a3c169d964c62302581f5d85ac004" kindref="member">tree_search_gt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a68a8285626f8ca19aa5028d8db8c1c97" kindref="member">tree_search_gt_node</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Traverses<sp/>the<sp/>tree<sp/>in<sp/>order,<sp/>calling<sp/>|visit|<sp/>with<sp/>each<sp/>key<sp/>and<sp/>value<sp/>pair,</highlight></codeline>
 <codeline lineno="97"><highlight class="comment"><sp/>*<sp/>stopping<sp/>if<sp/>|visit|<sp/>returns<sp/>false.<sp/>Returns<sp/>the<sp/>number<sp/>of<sp/>times<sp/>|visit|<sp/>was</highlight></codeline>
 <codeline lineno="98"><highlight class="comment"><sp/>*<sp/>called.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
@@ -1295,8 +1295,8 @@
 <codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a8731f9d60ea044a8b79ed90fe1b25a57" kindref="member">tree_iterator_search_ge</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*iterator,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1ab419689d410592ac34ff9b00b7977096" kindref="member">tree_iterator_search_gt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*iterator,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1abf1de1d71e92df79cd1b0cee24465c27" kindref="member">tree_iterator_compare</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>iterator1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>iterator2);</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="tree__common_8h_1a98d990c2956165a7426c31d1850ba65d" kindref="member">tree_iterator_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*iterator);</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a65055f9e363c6d28a063f204671ba12f" kindref="member">tree_iterator_datum</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*iterator);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="tree__common_8h_1aaa46faf126d94dfa7dd33fe9db363f2b" kindref="member">tree_iterator_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*iterator);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a192415adccccf2fd72ed144ffec4cac6" kindref="member">tree_iterator_datum</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*iterator);</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"></highlight></codeline>
 <codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!LIBDICT_TREE_COMMON_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>

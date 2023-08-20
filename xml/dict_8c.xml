@@ -1,73 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="dict_8c" kind="file" language="C++">
     <compoundname>dict.c</compoundname>
     <includes refid="dict__private_8h" local="yes">dict_private.h</includes>
     <incdepgraph>
-      <node id="8">
-        <label>stdbool.h</label>
-      </node>
-      <node id="14">
-        <label>skiplist.h</label>
-        <link refid="skiplist_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>stdint.h</label>
-      </node>
-      <node id="4">
-        <label>stdlib.h</label>
-      </node>
-      <node id="13">
-        <label>rb_tree.h</label>
-        <link refid="rb__tree_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>stddef.h</label>
-      </node>
-      <node id="17">
-        <label>wb_tree.h</label>
-        <link refid="wb__tree_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>hb_tree.h</label>
-        <link refid="hb__tree_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>dict_private.h</label>
-        <link refid="dict__private_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>src/dict.c</label>
-        <link refid="dict_8c"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>sp_tree.h</label>
-        <link refid="sp__tree_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>hashtable.h</label>
-        <link refid="hashtable_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
       <node id="5">
         <label>dict.h</label>
         <link refid="dict_8h"/>
@@ -96,18 +32,45 @@
         <childnode refid="17" relation="include">
         </childnode>
       </node>
+      <node id="9">
+        <label>hashtable.h</label>
+        <link refid="hashtable_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hashtable2.h</label>
+        <link refid="hashtable2_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
       <node id="12">
         <label>pr_tree.h</label>
         <link refid="pr__tree_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>stdio.h</label>
+      <node id="13">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
-      <node id="10">
-        <label>hashtable2.h</label>
-        <link refid="hashtable2_8h"/>
+      <node id="14">
+        <label>skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
@@ -116,6 +79,43 @@
         <link refid="tr__tree_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
+      </node>
+      <node id="17">
+        <label>wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/dict.c</label>
+        <link refid="dict_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dict_private.h</label>
+        <link refid="dict__private_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
       </node>
     </incdepgraph>
       <sectiondef kind="define">
@@ -161,9 +161,9 @@
         </inbodydescription>
         <location file="src/dict.c" line="33" column="18" bodyfile="src/dict.c" bodystart="33" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="dict_8c_1af202e0695edba206489b6a3936610803" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="dict_8c_1a6e4168cb588cf762d93db53f53fdcce0" prot="public" static="no" mutable="no">
         <type>void *(*</type>
-        <definition>void*(* dict_malloc_func) (size_t)</definition>
+        <definition>void *(* dict_malloc_func) (size_t)</definition>
         <argsstring>)(size_t)</argsstring>
         <name>dict_malloc_func</name>
         <initializer>= malloc</initializer>
@@ -424,7 +424,7 @@
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict_8c_1aaa3726224d7be26c97326d970701af83" kindref="member">XSTRINGIFY</ref>(<ref refid="dict_8h_1a3df93efd89c744ae214d5003f33f9c41" kindref="member">DICT_VERSION_MINOR</ref>)<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dict_8c_1aaa3726224d7be26c97326d970701af83" kindref="member">XSTRINGIFY</ref>(<ref refid="dict_8h_1a5985ca4f8bd97c110645a7e2315b4516" kindref="member">DICT_VERSION_PATCH</ref>);</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="dict_8c_1af202e0695edba206489b6a3936610803" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>(*dict_malloc_func)(size_t)<sp/>=<sp/>malloc;</highlight></codeline>
+<codeline lineno="37" refid="dict_8c_1a6e4168cb588cf762d93db53f53fdcce0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>(*dict_malloc_func)(size_t)<sp/>=<sp/>malloc;</highlight></codeline>
 <codeline lineno="38" refid="dict_8c_1afeae04c4c07e57a7451c3480a7a4bf2e" refkind="member"><highlight class="normal">void<sp/>(*<ref refid="dict_8c_1afeae04c4c07e57a7451c3480a7a4bf2e" kindref="member">dict_free_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)<sp/>=<sp/>free;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>

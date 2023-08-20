@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structskip__node" kind="struct" language="C++" prot="public">
     <compoundname>skip_node</compoundname>
       <sectiondef kind="public-attrib">
@@ -8,6 +8,7 @@
         <definition>void* key</definition>
         <argsstring></argsstring>
         <name>key</name>
+        <qualifiedname>skip_node::key</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -21,6 +22,7 @@
         <definition>void* datum</definition>
         <argsstring></argsstring>
         <name>datum</name>
+        <qualifiedname>skip_node::datum</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -34,6 +36,7 @@
         <definition>skip_node* prev</definition>
         <argsstring></argsstring>
         <name>prev</name>
+        <qualifiedname>skip_node::prev</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -47,6 +50,7 @@
         <definition>unsigned link_count</definition>
         <argsstring></argsstring>
         <name>link_count</name>
+        <qualifiedname>skip_node::link_count</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -60,6 +64,7 @@
         <definition>skip_node* link[]</definition>
         <argsstring>[]</argsstring>
         <name>link</name>
+        <qualifiedname>skip_node::link</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

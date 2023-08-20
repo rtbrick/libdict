@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structdict" kind="struct" language="C++" prot="public">
     <compoundname>dict</compoundname>
     <includes refid="dict_8h" local="no">dict.h</includes>
@@ -9,6 +9,7 @@
         <definition>void* _object</definition>
         <argsstring></argsstring>
         <name>_object</name>
+        <qualifiedname>dict::_object</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -22,6 +23,7 @@
         <definition>const dict_vtable* _vtable</definition>
         <argsstring></argsstring>
         <name>_vtable</name>
+        <qualifiedname>dict::_vtable</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -36,23 +38,6 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="3">
-        <label>dict_insert_result</label>
-        <link refid="structdict__insert__result"/>
-      </node>
-      <node id="2">
-        <label>dict_vtable</label>
-        <link refid="structdict__vtable"/>
-        <childnode refid="3" relation="usage">
-          <edgelabel>insert</edgelabel>
-        </childnode>
-        <childnode refid="4" relation="usage">
-          <edgelabel>inew</edgelabel>
-        </childnode>
-        <childnode refid="6" relation="usage">
-          <edgelabel>remove</edgelabel>
-        </childnode>
-      </node>
       <node id="1">
         <label>dict</label>
         <link refid="structdict"/>
@@ -60,20 +45,37 @@
           <edgelabel>_vtable</edgelabel>
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
+        <label>dict_insert_result</label>
+        <link refid="structdict__insert__result"/>
+      </node>
+      <node id="3">
         <label>dict_itor</label>
         <link refid="structdict__itor"/>
-        <childnode refid="5" relation="usage">
+        <childnode refid="4" relation="usage">
           <edgelabel>_vtable</edgelabel>
         </childnode>
-      </node>
-      <node id="5">
-        <label>itor_vtable</label>
-        <link refid="structitor__vtable"/>
       </node>
       <node id="6">
         <label>dict_remove_result</label>
         <link refid="structdict__remove__result"/>
+      </node>
+      <node id="2">
+        <label>dict_vtable</label>
+        <link refid="structdict__vtable"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>inew</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>insert</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>remove</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>itor_vtable</label>
+        <link refid="structitor__vtable"/>
       </node>
     </collaborationgraph>
     <location file="include/dict.h" line="151" column="1" bodyfile="include/dict.h" bodystart="151" bodyend="154"/>

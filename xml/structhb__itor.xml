@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structhb__itor" kind="struct" language="C++" prot="public">
     <compoundname>hb_itor</compoundname>
       <sectiondef kind="public-attrib">
@@ -8,6 +8,7 @@
         <definition>hb_tree* tree</definition>
         <argsstring></argsstring>
         <name>tree</name>
+        <qualifiedname>hb_itor::tree</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -21,6 +22,7 @@
         <definition>hb_node* node</definition>
         <argsstring></argsstring>
         <name>node</name>
+        <qualifiedname>hb_itor::node</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -35,15 +37,6 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="3">
-        <label>hb_node</label>
-        <link refid="structhb__node"/>
-        <childnode refid="3" relation="usage">
-          <edgelabel>llink</edgelabel>
-          <edgelabel>pptr</edgelabel>
-          <edgelabel>rlink</edgelabel>
-        </childnode>
-      </node>
       <node id="1">
         <label>hb_itor</label>
         <link refid="structhb__itor"/>
@@ -52,6 +45,15 @@
         </childnode>
         <childnode refid="3" relation="usage">
           <edgelabel>node</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hb_node</label>
+        <link refid="structhb__node"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>pptr</edgelabel>
+          <edgelabel>rlink</edgelabel>
         </childnode>
       </node>
       <node id="2">

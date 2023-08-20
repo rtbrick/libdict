@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structdict__insert__result" kind="struct" language="C++" prot="public">
     <compoundname>dict_insert_result</compoundname>
     <includes refid="dict_8h" local="no">dict.h</includes>
@@ -9,6 +9,7 @@
         <definition>void** datum_ptr</definition>
         <argsstring></argsstring>
         <name>datum_ptr</name>
+        <qualifiedname>dict_insert_result::datum_ptr</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -22,6 +23,7 @@
         <definition>bool inserted</definition>
         <argsstring></argsstring>
         <name>inserted</name>
+        <qualifiedname>dict_insert_result::inserted</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

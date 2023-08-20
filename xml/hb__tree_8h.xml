@@ -1,56 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="hb__tree_8h" kind="file" language="C++">
     <compoundname>hb_tree.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
-    <includedby refid="hb__tree_8c" local="yes">src/hb_tree.c</includedby>
     <includedby refid="dict_8h" local="yes">include/dict.h</includedby>
+    <includedby refid="hb__tree_8c" local="yes">src/hb_tree.c</includedby>
     <incdepgraph>
-      <node id="5">
-        <label>stdbool.h</label>
-      </node>
-      <node id="10">
-        <label>skiplist.h</label>
-        <link refid="skiplist_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>stdint.h</label>
-      </node>
-      <node id="9">
-        <label>rb_tree.h</label>
-        <link refid="rb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>stddef.h</label>
-      </node>
-      <node id="13">
-        <label>wb_tree.h</label>
-        <link refid="wb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>include/hb_tree.h</label>
-        <link refid="hb__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>sp_tree.h</label>
-        <link refid="sp__tree_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>hashtable.h</label>
-        <link refid="hashtable_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="2">
         <label>dict.h</label>
         <link refid="dict_8h"/>
@@ -79,9 +34,9 @@
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>pr_tree.h</label>
-        <link refid="pr__tree_8h"/>
+      <node id="6">
+        <label>hashtable.h</label>
+        <link refid="hashtable_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
@@ -91,199 +46,244 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="1">
+        <label>include/hb_tree.h</label>
+        <link refid="hb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>pr_tree.h</label>
+        <link refid="pr__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="12">
         <label>tr_tree.h</label>
         <link refid="tr__tree_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="13">
+        <label>wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="12">
-        <label>src/tr_tree.c</label>
-        <link refid="tr__tree_8c"/>
-      </node>
       <node id="2">
-        <label>src/hb_tree.c</label>
-        <link refid="hb__tree_8c"/>
-      </node>
-      <node id="20">
-        <label>include/skiplist.h</label>
-        <link refid="skiplist_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
+        <label>include/dict.h</label>
+        <link refid="dict_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-      </node>
-      <node id="19">
-        <label>include/rb_tree.h</label>
-        <link refid="rb__tree_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
-      <node id="7">
-        <label>src/hashtable2.c</label>
-        <link refid="hashtable2_8c"/>
-      </node>
-      <node id="11">
-        <label>src/sp_tree.c</label>
-        <link refid="sp__tree_8c"/>
-      </node>
-      <node id="6">
-        <label>src/hashtable.c</label>
-        <link refid="hashtable_8c"/>
-      </node>
-      <node id="23">
-        <label>include/wb_tree.h</label>
-        <link refid="wb__tree_8h"/>
-        <childnode refid="14" relation="include">
+      <node id="3">
+        <label>include/hashtable.h</label>
+        <link refid="hashtable_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="14">
-        <label>src/wb_tree.c</label>
-        <link refid="wb__tree_8c"/>
-      </node>
-      <node id="10">
-        <label>src/skiplist.c</label>
-        <link refid="skiplist_8c"/>
+      <node id="5">
+        <label>include/hashtable2.h</label>
+        <link refid="hashtable2_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>include/hb_tree.h</label>
         <link refid="hb__tree_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>src/dict_private.h</label>
-        <link refid="dict__private_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
+      <node id="7">
+        <label>include/pr_tree.h</label>
+        <link refid="pr__tree_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>src/dict.c</label>
-        <link refid="dict_8c"/>
-      </node>
-      <node id="21">
-        <label>include/sp_tree.h</label>
-        <link refid="sp__tree_8h"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="16">
-        <label>include/hashtable.h</label>
-        <link refid="hashtable_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="9">
-        <label>src/rb_tree.c</label>
-        <link refid="rb__tree_8c"/>
-      </node>
-      <node id="13">
-        <label>src/tree_common.c</label>
-        <link refid="tree__common_8c"/>
-      </node>
-      <node id="15">
-        <label>src/tree_common.h</label>
-        <link refid="tree__common_8h"/>
+        <label>include/rb_tree.h</label>
+        <link refid="rb__tree_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
+      </node>
+      <node id="11">
+        <label>include/skiplist.h</label>
+        <link refid="skiplist_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+      </node>
+      <node id="13">
+        <label>include/sp_tree.h</label>
+        <link refid="sp__tree_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>include/dict.h</label>
-        <link refid="dict_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
+      <node id="15">
+        <label>include/tr_tree.h</label>
+        <link refid="tr__tree_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="1" relation="include">
+      </node>
+      <node id="17">
+        <label>include/wb_tree.h</label>
+        <link refid="wb__tree_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
+      </node>
+      <node id="20">
+        <label>src/dict.c</label>
+        <link refid="dict_8c"/>
+      </node>
+      <node id="19">
+        <label>src/dict_private.h</label>
+        <link refid="dict__private_8h"/>
         <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
-        <label>include/pr_tree.h</label>
-        <link refid="pr__tree_8h"/>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/hashtable.c</label>
+        <link refid="hashtable_8c"/>
+      </node>
+      <node id="6">
+        <label>src/hashtable2.c</label>
+        <link refid="hashtable2_8c"/>
+      </node>
+      <node id="21">
+        <label>src/hb_tree.c</label>
+        <link refid="hb__tree_8c"/>
       </node>
       <node id="8">
         <label>src/pr_tree.c</label>
         <link refid="pr__tree_8c"/>
       </node>
-      <node id="17">
-        <label>include/hashtable2.h</label>
-        <link refid="hashtable2_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
+      <node id="10">
+        <label>src/rb_tree.c</label>
+        <link refid="rb__tree_8c"/>
+      </node>
+      <node id="12">
+        <label>src/skiplist.c</label>
+        <link refid="skiplist_8c"/>
+      </node>
+      <node id="14">
+        <label>src/sp_tree.c</label>
+        <link refid="sp__tree_8c"/>
+      </node>
+      <node id="16">
+        <label>src/tr_tree.c</label>
+        <link refid="tr__tree_8c"/>
       </node>
       <node id="22">
-        <label>include/tr_tree.h</label>
-        <link refid="tr__tree_8h"/>
-        <childnode refid="12" relation="include">
+        <label>src/tree_common.c</label>
+        <link refid="tree__common_8c"/>
+      </node>
+      <node id="23">
+        <label>src/tree_common.h</label>
+        <link refid="tree__common_8h"/>
+        <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>src/wb_tree.c</label>
+        <link refid="wb__tree_8c"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="typedef">
@@ -298,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="1" column="0" bodyfile="include/hb_tree.h" bodystart="35" bodyend="-1"/>
+        <location file="include/hb_tree.h" line="35" column="22" bodyfile="include/hb_tree.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="hb__tree_8h_1a1b9cb9d629fc490252598fde0a1134b3" prot="public" static="no">
         <type>struct <ref refid="structhb__itor" kindref="compound">hb_itor</ref></type>
@@ -311,13 +311,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="57" column="5" bodyfile="include/hb_tree.h" bodystart="59" bodyend="-1"/>
+        <location file="include/hb_tree.h" line="59" column="22" bodyfile="include/hb_tree.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="hb__tree_8h_1a543e6ec31e2682576f7059492af3d0cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hb__tree_8h_1a57b5dfeb404aaf4d90547bd39751d635" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structhb__tree" kindref="compound">hb_tree</ref> *</type>
-        <definition>hb_tree* hb_tree_new</definition>
+        <definition>hb_tree * hb_tree_new</definition>
         <argsstring>(dict_compare_func cmp_func)</argsstring>
         <name>hb_tree_new</name>
         <param>
@@ -338,9 +338,9 @@
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="structtree_1adf0b2d44ac6cd97d428ec85210970b43" compoundref="tree__common_8c" startline="38">tree::rotation_count</references>
       </memberdef>
-      <memberdef kind="function" id="hb__tree_8h_1af78675001da28fac2b4f27d9bb8e0542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hb__tree_8h_1a2e1c00512efdc460239efbbf3199c78e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict" kindref="compound">dict</ref> *</type>
-        <definition>dict* hb_dict_new</definition>
+        <definition>dict * hb_dict_new</definition>
         <argsstring>(dict_compare_func cmp_func)</argsstring>
         <name>hb_dict_new</name>
         <param>
@@ -357,7 +357,7 @@
         <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="152">dict::_object</references>
         <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
-        <references refid="hb__tree_8c_1a543e6ec31e2682576f7059492af3d0cf" compoundref="hb__tree_8c" startline="105" endline="117">hb_tree_new</references>
+        <references refid="hb__tree_8c_1a57b5dfeb404aaf4d90547bd39751d635" compoundref="hb__tree_8c" startline="105" endline="117">hb_tree_new</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a835fc4b0757a7447a0ab302117a101a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -403,18 +403,25 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="42" column="1" bodyfile="src/hb_tree.c" bodystart="280" bodyend="355" declfile="include/hb_tree.h" declline="42" declcolumn="1"/>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
         <references refid="structhb__node_1afef439511732fd1557216f60d140adc1" compoundref="hb__tree_8c" startline="39">hb_node::bal</references>
         <references refid="hb__tree_8c_1a754d86c01037dc99b622207561ede09b" compoundref="hb__tree_8c" startline="46">BAL_MASK</references>
+        <references refid="hb__tree_8c_1a1771b2c25425cc83256948dbd89d147d" compoundref="hb__tree_8c" startline="49">BAL_NEG</references>
+        <references refid="hb__tree_8c_1a0809a38686a9bcafa88d0fc05916d248" compoundref="hb__tree_8c" startline="48">BAL_POS</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
+        <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structhb__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="hb__tree_8c" startline="37">hb_node::datum</references>
         <references refid="structhb__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="hb__tree_8c" startline="36">hb_node::key</references>
         <references refid="structhb__node_1a09a1a7c8d2b7630acdf7c7b85e084fd8" compoundref="hb__tree_8c" startline="42">hb_node::llink</references>
+        <references refid="hb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" compoundref="hb__tree_8c" startline="47">PARENT</references>
+        <references refid="structhb__node_1a5a83c322bc3600c9d6ad24ac42fb3da4" compoundref="hb__tree_8c" startline="40">hb_node::pptr</references>
         <references refid="structhb__node_1abd399e99e142df740ec840a54f801a8d" compoundref="hb__tree_8c" startline="43">hb_node::rlink</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
+        <references refid="structtree_1adf0b2d44ac6cd97d428ec85210970b43" compoundref="tree__common_8c" startline="38">tree::rotation_count</references>
       </memberdef>
-      <memberdef kind="function" id="hb__tree_8h_1ab557ffd5850cc82404c2bfb4675eda92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hb__tree_8h_1a171ba5671724ed9fe20bf69db56348d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** hb_tree_search</definition>
+        <definition>void ** hb_tree_search</definition>
         <argsstring>(hb_tree *tree, const void *key)</argsstring>
         <name>hb_tree_search</name>
         <param>
@@ -432,11 +439,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="43" column="5" bodyfile="src/hb_tree.c" bodystart="357" bodyend="357" declfile="include/hb_tree.h" declline="43" declcolumn="5"/>
-        <references refid="tree__common_8c_1a54ed614fb74b373c5167325d6c744171" compoundref="tree__common_8c" startline="144" endline="148">tree_search</references>
+        <references refid="tree__common_8c_1a81a92b2c7f8d6ebdeacd787d53b67055" compoundref="tree__common_8c" startline="144" endline="148">tree_search</references>
       </memberdef>
-      <memberdef kind="function" id="hb__tree_8h_1ac092aa61445067f2e882d1851f5d9e01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hb__tree_8h_1ad90b85a31237dd9d0b0272b4c36a32e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** hb_tree_search_le</definition>
+        <definition>void ** hb_tree_search_le</definition>
         <argsstring>(hb_tree *tree, const void *key)</argsstring>
         <name>hb_tree_search_le</name>
         <param>
@@ -454,11 +461,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="44" column="5" bodyfile="src/hb_tree.c" bodystart="358" bodyend="358" declfile="include/hb_tree.h" declline="44" declcolumn="5"/>
-        <references refid="tree__common_8c_1a8aa3ee04b16a1a81d153af21326ce29f" compoundref="tree__common_8c" startline="170" endline="174">tree_search_le</references>
+        <references refid="tree__common_8c_1ae1ea8d32b69d63eed985f52949bb493c" compoundref="tree__common_8c" startline="170" endline="174">tree_search_le</references>
       </memberdef>
-      <memberdef kind="function" id="hb__tree_8h_1a9c51e82dc2ebe2febb2c14b7dcd84dc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hb__tree_8h_1a0cb08de1a192929edb9e8c4db8d6f850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** hb_tree_search_lt</definition>
+        <definition>void ** hb_tree_search_lt</definition>
         <argsstring>(hb_tree *tree, const void *key)</argsstring>
         <name>hb_tree_search_lt</name>
         <param>
@@ -476,11 +483,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="45" column="5" bodyfile="src/hb_tree.c" bodystart="359" bodyend="359" declfile="include/hb_tree.h" declline="45" declcolumn="5"/>
-        <references refid="tree__common_8c_1abf8d8bb4075e9f28c545ed1c83f0dafa" compoundref="tree__common_8c" startline="194" endline="198">tree_search_lt</references>
+        <references refid="tree__common_8c_1a6f24b96ae2c229648439aa85a2895044" compoundref="tree__common_8c" startline="194" endline="198">tree_search_lt</references>
       </memberdef>
-      <memberdef kind="function" id="hb__tree_8h_1ac041c18069b3eaff835554609e974dc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hb__tree_8h_1a7076af3dfd6a6f9afdf4954ba95f1c5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** hb_tree_search_ge</definition>
+        <definition>void ** hb_tree_search_ge</definition>
         <argsstring>(hb_tree *tree, const void *key)</argsstring>
         <name>hb_tree_search_ge</name>
         <param>
@@ -498,11 +505,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="46" column="5" bodyfile="src/hb_tree.c" bodystart="360" bodyend="360" declfile="include/hb_tree.h" declline="46" declcolumn="5"/>
-        <references refid="tree__common_8c_1a8598cfe5c4f5a7a4a1bbc270225bc1ec" compoundref="tree__common_8c" startline="221" endline="225">tree_search_ge</references>
+        <references refid="tree__common_8c_1ad6f8aff956f6f8b7f9eaebcd659506b1" compoundref="tree__common_8c" startline="221" endline="225">tree_search_ge</references>
       </memberdef>
-      <memberdef kind="function" id="hb__tree_8h_1ae036b6377249f7ee16f55f8b40c957c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hb__tree_8h_1a4e566a851a0d4ded370c9d40e17f9177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** hb_tree_search_gt</definition>
+        <definition>void ** hb_tree_search_gt</definition>
         <argsstring>(hb_tree *tree, const void *key)</argsstring>
         <name>hb_tree_search_gt</name>
         <param>
@@ -520,7 +527,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="47" column="5" bodyfile="src/hb_tree.c" bodystart="361" bodyend="361" declfile="include/hb_tree.h" declline="47" declcolumn="5"/>
-        <references refid="tree__common_8c_1a34db2e1b372d1847d32223c3c852b059" compoundref="tree__common_8c" startline="245" endline="249">tree_search_gt</references>
+        <references refid="tree__common_8c_1a28283925393f2eb613aa1e669f181c18" compoundref="tree__common_8c" startline="245" endline="249">tree_search_gt</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a894bbf6694afbd7b9c6832caf8e9c350" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref></type>
@@ -544,7 +551,7 @@
         <location file="include/hb_tree.h" line="49" column="1" bodyfile="src/hb_tree.c" bodystart="452" bodyend="460" declfile="include/hb_tree.h" declline="49" declcolumn="1"/>
         <references refid="structhb__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="hb__tree_8c" startline="37">hb_node::datum</references>
         <references refid="structhb__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="hb__tree_8c" startline="36">hb_node::key</references>
-        <references refid="tree__common_8c_1a8ca8a698fb9f3c76e48a451e547166db" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
+        <references refid="tree__common_8c_1a4336bbd1dec56af86a45e1d84d622063" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a074911e5272be53155567b2a9631ef29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -631,8 +638,11 @@
         </inbodydescription>
         <location file="include/hb_tree.h" line="52" column="5" bodyfile="src/hb_tree.c" bodystart="469" bodyend="494" declfile="include/hb_tree.h" declline="52" declcolumn="5"/>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
+        <references refid="structhb__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="hb__tree_8c" startline="37">hb_node::datum</references>
+        <references refid="structhb__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="hb__tree_8c" startline="36">hb_node::key</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
-        <references refid="tree__common_8c_1a4d488cb5df5938af5705fe3925944ea6" compoundref="tree__common_8c" startline="117" endline="125">tree_node_max</references>
+        <references refid="tree__common_8c_1a1f73b77d5b43f77f45ba24acdbe83faf" compoundref="tree__common_8c" startline="117" endline="125">tree_node_max</references>
+        <references refid="tree__common_8c_1a7b6de5488b23a09de4f838c218adabd0" compoundref="tree__common_8c" startline="106" endline="114">tree_node_min</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a5ffcf496b4d4e96cef73cffbaa9eb762" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -722,10 +732,13 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="57" column="5" bodyfile="src/hb_tree.c" bodystart="585" bodyend="591" declfile="include/hb_tree.h" declline="57" declcolumn="5"/>
+        <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
+        <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
       </memberdef>
-      <memberdef kind="function" id="hb__tree_8h_1a3be02705fb42645f4f87c9a845fa7986" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hb__tree_8h_1a3b953aabe2e0cc553e89b59d5f308607" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structhb__itor" kindref="compound">hb_itor</ref> *</type>
-        <definition>hb_itor* hb_itor_new</definition>
+        <definition>hb_itor * hb_itor_new</definition>
         <argsstring>(hb_tree *tree)</argsstring>
         <name>hb_itor_new</name>
         <param>
@@ -743,9 +756,9 @@
         <references refid="structhb__itor_1abd1d99b37abe63189d6db6eb630bd2ff" compoundref="hb__tree_8c" startline="56">hb_itor::node</references>
         <references refid="structhb__itor_1a024a8670718387a22dc8053590c48176" compoundref="hb__tree_8c" startline="56">hb_itor::tree</references>
       </memberdef>
-      <memberdef kind="function" id="hb__tree_8h_1ac38b72cebc642c2277dfcdc0c1f22a88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hb__tree_8h_1a0636536d77902f633b4a7cad46bd3fed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict__itor" kindref="compound">dict_itor</ref> *</type>
-        <definition>dict_itor* hb_dict_itor_new</definition>
+        <definition>dict_itor * hb_dict_itor_new</definition>
         <argsstring>(hb_tree *tree)</argsstring>
         <name>hb_dict_itor_new</name>
         <param>
@@ -762,7 +775,7 @@
         <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="174">dict_itor::_itor</references>
         <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="175">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
-        <references refid="hb__tree_8c_1a3be02705fb42645f4f87c9a845fa7986" compoundref="hb__tree_8c" startline="594" endline="602">hb_itor_new</references>
+        <references refid="hb__tree_8c_1a3b953aabe2e0cc553e89b59d5f308607" compoundref="hb__tree_8c" startline="594" endline="602">hb_itor_new</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a81460798e9da8681d4d030d608561005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1045,9 +1058,9 @@
         <location file="include/hb_tree.h" line="77" column="5" bodyfile="src/hb_tree.c" bodystart="652" bodyend="652" declfile="include/hb_tree.h" declline="77" declcolumn="5"/>
         <references refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" compoundref="tree__common_8c" startline="475" endline="479">tree_iterator_search_gt</references>
       </memberdef>
-      <memberdef kind="function" id="hb__tree_8h_1ab302fa0f6a00fb87809ec353e40df756" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hb__tree_8h_1aa9e522dab4ef7c220d12755cc387bacf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const void *</type>
-        <definition>const void* hb_itor_key</definition>
+        <definition>const void * hb_itor_key</definition>
         <argsstring>(const hb_itor *itor)</argsstring>
         <name>hb_itor_key</name>
         <param>
@@ -1061,11 +1074,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="78" column="11" bodyfile="src/hb_tree.c" bodystart="654" bodyend="654" declfile="include/hb_tree.h" declline="78" declcolumn="11"/>
-        <references refid="tree__common_8c_1af179889330c7dccaefc41a06d11b288f" compoundref="tree__common_8c" startline="495" endline="499">tree_iterator_key</references>
+        <references refid="tree__common_8c_1a71fd87b638317045ae986d9886f10c10" compoundref="tree__common_8c" startline="495" endline="499">tree_iterator_key</references>
       </memberdef>
-      <memberdef kind="function" id="hb__tree_8h_1ab5af3525d52fa002fd94fde7615a41d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="hb__tree_8h_1a9fb076b58a4435f4cd696b845ed78909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
-        <definition>void** hb_itor_datum</definition>
+        <definition>void ** hb_itor_datum</definition>
         <argsstring>(hb_itor *itor)</argsstring>
         <name>hb_itor_datum</name>
         <param>
@@ -1079,7 +1092,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="79" column="5" bodyfile="src/hb_tree.c" bodystart="655" bodyend="655" declfile="include/hb_tree.h" declline="79" declcolumn="5"/>
-        <references refid="tree__common_8c_1ad4045a0af97ccd1df2c1e251e40e5a4f" compoundref="tree__common_8c" startline="502" endline="506">tree_iterator_datum</references>
+        <references refid="tree__common_8c_1a1cc4c18adcfc606676bbbe632160f50a" compoundref="tree__common_8c" startline="502" endline="506">tree_iterator_datum</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a8e1e16fbe55e6aaf652fcd284edfdbcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1120,6 +1133,7 @@
         </inbodydescription>
         <location file="include/hb_tree.h" line="81" column="5" bodyfile="src/hb_tree.c" bodystart="658" bodyend="665" declfile="include/hb_tree.h" declline="81" declcolumn="5"/>
         <references refid="structhb__itor_1abd1d99b37abe63189d6db6eb630bd2ff" compoundref="hb__tree_8c" startline="56">hb_itor::node</references>
+        <references refid="structhb__itor_1a024a8670718387a22dc8053590c48176" compoundref="hb__tree_8c" startline="56">hb_itor::tree</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1127,7 +1141,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="hb__tree_8h_1a1752cf6a346e6f05b07c1ea239edbbc0" refkind="member"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/>libdict<sp/>--<sp/>height-balanced<sp/>(AVL)<sp/>tree<sp/>interface.</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2001-2014,<sp/>Farooq<sp/>Mela</highlight></codeline>
@@ -1161,19 +1175,19 @@
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><ref refid="dict_8h_1a0c5f0f7b40e3b3df5aaa4c5e3c874b3b" kindref="member">BEGIN_DECL</ref></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhb__tree" kindref="compound">hb_tree</ref><sp/><ref refid="structhb__tree" kindref="compound">hb_tree</ref>;</highlight></codeline>
+<codeline lineno="35" refid="hb__tree_8h_1a1752cf6a346e6f05b07c1ea239edbbc0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhb__tree" kindref="compound">hb_tree</ref><sp/><ref refid="structhb__tree" kindref="compound">hb_tree</ref>;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a543e6ec31e2682576f7059492af3d0cf" kindref="member">hb_tree_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhb__tree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1af78675001da28fac2b4f27d9bb8e0542" kindref="member">hb_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhb__tree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a57b5dfeb404aaf4d90547bd39751d635" kindref="member">hb_tree_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhb__tree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a2e1c00512efdc460239efbbf3199c78e" kindref="member">hb_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhb__tree_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a835fc4b0757a7447a0ab302117a101a4" kindref="member">hb_tree_free</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a652cad7f3fdf92084667a6a3932f9111" kindref="member">hb_tree_insert</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1ab557ffd5850cc82404c2bfb4675eda92" kindref="member">hb_tree_search</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1ac092aa61445067f2e882d1851f5d9e01" kindref="member">hb_tree_search_le</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a9c51e82dc2ebe2febb2c14b7dcd84dc4" kindref="member">hb_tree_search_lt</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1ac041c18069b3eaff835554609e974dc6" kindref="member">hb_tree_search_ge</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1ae036b6377249f7ee16f55f8b40c957c9" kindref="member">hb_tree_search_gt</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a171ba5671724ed9fe20bf69db56348d6" kindref="member">hb_tree_search</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1ad90b85a31237dd9d0b0272b4c36a32e0" kindref="member">hb_tree_search_le</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a0cb08de1a192929edb9e8c4db8d6f850" kindref="member">hb_tree_search_lt</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a7076af3dfd6a6f9afdf4954ba95f1c5c" kindref="member">hb_tree_search_ge</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a4e566a851a0d4ded370c9d40e17f9177" kindref="member">hb_tree_search_gt</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a894bbf6694afbd7b9c6832caf8e9c350" kindref="member">hb_tree_remove</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a074911e5272be53155567b2a9631ef29" kindref="member">hb_tree_clear</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
@@ -1183,12 +1197,12 @@
 <codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a632ec7cb94560ebb17f1263ff6270d9d" kindref="member">hb_tree_min_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a8aacfc0effde0a95a6e9e1af5f4d29c2" kindref="member">hb_tree_max_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1af6fdedf05c4f8b3d1667e87f347d31bb" kindref="member">hb_tree_total_path_length</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
-<codeline lineno="57" refid="hb__tree_8h_1a1b9cb9d629fc490252598fde0a1134b3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1abacf1587193dd266718afcc29a909728" kindref="member">hb_tree_verify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1abacf1587193dd266718afcc29a909728" kindref="member">hb_tree_verify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhb__itor" kindref="compound">hb_itor</ref><sp/><ref refid="structhb__itor" kindref="compound">hb_itor</ref>;</highlight></codeline>
+<codeline lineno="59" refid="hb__tree_8h_1a1b9cb9d629fc490252598fde0a1134b3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhb__itor" kindref="compound">hb_itor</ref><sp/><ref refid="structhb__itor" kindref="compound">hb_itor</ref>;</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a3be02705fb42645f4f87c9a845fa7986" kindref="member">hb_itor_new</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/><sp/><ref refid="hb__tree_8h_1ac38b72cebc642c2277dfcdc0c1f22a88" kindref="member">hb_dict_itor_new</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a3b953aabe2e0cc553e89b59d5f308607" kindref="member">hb_itor_new</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/><sp/><ref refid="hb__tree_8h_1a0636536d77902f633b4a7cad46bd3fed" kindref="member">hb_dict_itor_new</ref>(<ref refid="structhb__tree" kindref="compound">hb_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a81460798e9da8681d4d030d608561005" kindref="member">hb_itor_free</ref>(<ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a60e945547a822605b87a874fe84f36f9" kindref="member">hb_itor_valid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/>itor);</highlight></codeline>
@@ -1204,8 +1218,8 @@
 <codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a4607a5422ddcea6ca429de95721d1d66" kindref="member">hb_itor_search_lt</ref>(<ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a2fb84f10c1de87e756f9da059ac4849b" kindref="member">hb_itor_search_ge</ref>(<ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a09990b7e8fd9b889e467be431bc7ccbd" kindref="member">hb_itor_search_gt</ref>(<ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="hb__tree_8h_1ab302fa0f6a00fb87809ec353e40df756" kindref="member">hb_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/>itor);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1ab5af3525d52fa002fd94fde7615a41d4" kindref="member">hb_itor_datum</ref>(<ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="hb__tree_8h_1aa9e522dab4ef7c220d12755cc387bacf" kindref="member">hb_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a9fb076b58a4435f4cd696b845ed78909" kindref="member">hb_itor_datum</ref>(<ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/>itor);</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a8e1e16fbe55e6aaf652fcd284edfdbcc" kindref="member">hb_itor_compare</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/>i1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/>i2);</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hb__tree_8h_1a7f741c2750a9b76c98f2c308c1da96cb" kindref="member">hb_itor_remove</ref>(<ref refid="structhb__itor" kindref="compound">hb_itor</ref>*<sp/>itor);</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>

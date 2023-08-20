@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structtr__itor" kind="struct" language="C++" prot="public">
     <compoundname>tr_itor</compoundname>
       <sectiondef kind="public-attrib">
@@ -8,6 +8,7 @@
         <definition>tr_tree* tree</definition>
         <argsstring></argsstring>
         <name>tree</name>
+        <qualifiedname>tr_itor::tree</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -21,6 +22,7 @@
         <definition>tr_node* node</definition>
         <argsstring></argsstring>
         <name>node</name>
+        <qualifiedname>tr_itor::node</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -35,29 +37,29 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="2">
+      <node id="1">
+        <label>tr_itor</label>
+        <link refid="structtr__itor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>tree</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
         <label>tr_node</label>
         <link refid="structtr__node"/>
-        <childnode refid="2" relation="usage">
+        <childnode refid="3" relation="usage">
           <edgelabel>llink</edgelabel>
           <edgelabel>parent</edgelabel>
           <edgelabel>rlink</edgelabel>
         </childnode>
       </node>
-      <node id="1">
-        <label>tr_itor</label>
-        <link refid="structtr__itor"/>
-        <childnode refid="2" relation="usage">
-          <edgelabel>node</edgelabel>
-        </childnode>
-        <childnode refid="3" relation="usage">
-          <edgelabel>tree</edgelabel>
-        </childnode>
-      </node>
-      <node id="3">
+      <node id="2">
         <label>tr_tree</label>
         <link refid="structtr__tree"/>
-        <childnode refid="2" relation="usage">
+        <childnode refid="3" relation="usage">
           <edgelabel>root</edgelabel>
         </childnode>
       </node>

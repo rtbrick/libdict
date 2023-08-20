@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structdict__vtable" kind="struct" language="C++" prot="public">
     <compoundname>dict_vtable</compoundname>
     <includes refid="dict_8h" local="no">dict.h</includes>
@@ -9,6 +9,7 @@
         <definition>const bool sorted</definition>
         <argsstring></argsstring>
         <name>sorted</name>
+        <qualifiedname>dict_vtable::sorted</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -18,10 +19,11 @@
         <location file="include/dict.h" line="98" column="15" bodyfile="include/dict.h" bodystart="98" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdict__vtable_1accc47e6d4e080bda45cbd10177d06f9b" prot="public" static="no" mutable="no">
-        <type><ref refid="dict_8h_1a456bfcc5a7d9356c29dd80f6b5ca4acc" kindref="member">dict_inew_func</ref></type>
+        <type><ref refid="dict_8h_1ad70c6127784fe473398838a4ca7ee0e8" kindref="member">dict_inew_func</ref></type>
         <definition>dict_inew_func inew</definition>
         <argsstring></argsstring>
         <name>inew</name>
+        <qualifiedname>dict_vtable::inew</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -35,6 +37,7 @@
         <definition>dict_dfree_func dfree</definition>
         <argsstring></argsstring>
         <name>dfree</name>
+        <qualifiedname>dict_vtable::dfree</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -48,6 +51,7 @@
         <definition>dict_insert_func insert</definition>
         <argsstring></argsstring>
         <name>insert</name>
+        <qualifiedname>dict_vtable::insert</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -57,10 +61,11 @@
         <location file="include/dict.h" line="101" column="25" bodyfile="include/dict.h" bodystart="101" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdict__vtable_1a8f81e32838f291f16df28fe9a68d588e" prot="public" static="no" mutable="no">
-        <type><ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref></type>
+        <type><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref></type>
         <definition>dict_search_func search</definition>
         <argsstring></argsstring>
         <name>search</name>
+        <qualifiedname>dict_vtable::search</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -70,10 +75,11 @@
         <location file="include/dict.h" line="102" column="25" bodyfile="include/dict.h" bodystart="102" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdict__vtable_1a11eb072fdeb8a09637cb83c22b585315" prot="public" static="no" mutable="no">
-        <type><ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref></type>
+        <type><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref></type>
         <definition>dict_search_func search_le</definition>
         <argsstring></argsstring>
         <name>search_le</name>
+        <qualifiedname>dict_vtable::search_le</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -83,10 +89,11 @@
         <location file="include/dict.h" line="103" column="25" bodyfile="include/dict.h" bodystart="103" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdict__vtable_1a993cad0961870e4819c22235a458340b" prot="public" static="no" mutable="no">
-        <type><ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref></type>
+        <type><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref></type>
         <definition>dict_search_func search_lt</definition>
         <argsstring></argsstring>
         <name>search_lt</name>
+        <qualifiedname>dict_vtable::search_lt</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -96,10 +103,11 @@
         <location file="include/dict.h" line="104" column="25" bodyfile="include/dict.h" bodystart="104" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdict__vtable_1ab9863c525cb29a00e6a89263492902b4" prot="public" static="no" mutable="no">
-        <type><ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref></type>
+        <type><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref></type>
         <definition>dict_search_func search_ge</definition>
         <argsstring></argsstring>
         <name>search_ge</name>
+        <qualifiedname>dict_vtable::search_ge</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -109,10 +117,11 @@
         <location file="include/dict.h" line="105" column="25" bodyfile="include/dict.h" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdict__vtable_1a8056803e5f315296e1015f3934e13bd1" prot="public" static="no" mutable="no">
-        <type><ref refid="dict_8h_1adad4cdcff7aae74cec80792f6ef7b93f" kindref="member">dict_search_func</ref></type>
+        <type><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref></type>
         <definition>dict_search_func search_gt</definition>
         <argsstring></argsstring>
         <name>search_gt</name>
+        <qualifiedname>dict_vtable::search_gt</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -126,6 +135,7 @@
         <definition>dict_remove_func remove</definition>
         <argsstring></argsstring>
         <name>remove</name>
+        <qualifiedname>dict_vtable::remove</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -139,6 +149,7 @@
         <definition>dict_clear_func clear</definition>
         <argsstring></argsstring>
         <name>clear</name>
+        <qualifiedname>dict_vtable::clear</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -152,6 +163,7 @@
         <definition>dict_traverse_func traverse</definition>
         <argsstring></argsstring>
         <name>traverse</name>
+        <qualifiedname>dict_vtable::traverse</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -165,6 +177,7 @@
         <definition>dict_select_func select</definition>
         <argsstring></argsstring>
         <name>select</name>
+        <qualifiedname>dict_vtable::select</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -178,6 +191,7 @@
         <definition>dict_count_func count</definition>
         <argsstring></argsstring>
         <name>count</name>
+        <qualifiedname>dict_vtable::count</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -191,6 +205,7 @@
         <definition>dict_verify_func verify</definition>
         <argsstring></argsstring>
         <name>verify</name>
+        <qualifiedname>dict_vtable::verify</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -205,37 +220,37 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="2">
+      <node id="4">
         <label>dict_insert_result</label>
         <link refid="structdict__insert__result"/>
+      </node>
+      <node id="2">
+        <label>dict_itor</label>
+        <link refid="structdict__itor"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_vtable</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dict_remove_result</label>
+        <link refid="structdict__remove__result"/>
       </node>
       <node id="1">
         <label>dict_vtable</label>
         <link refid="structdict__vtable"/>
         <childnode refid="2" relation="usage">
-          <edgelabel>insert</edgelabel>
-        </childnode>
-        <childnode refid="3" relation="usage">
           <edgelabel>inew</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>insert</edgelabel>
         </childnode>
         <childnode refid="5" relation="usage">
           <edgelabel>remove</edgelabel>
         </childnode>
       </node>
       <node id="3">
-        <label>dict_itor</label>
-        <link refid="structdict__itor"/>
-        <childnode refid="4" relation="usage">
-          <edgelabel>_vtable</edgelabel>
-        </childnode>
-      </node>
-      <node id="4">
         <label>itor_vtable</label>
         <link refid="structitor__vtable"/>
-      </node>
-      <node id="5">
-        <label>dict_remove_result</label>
-        <link refid="structdict__remove__result"/>
       </node>
     </collaborationgraph>
     <location file="include/dict.h" line="97" column="1" bodyfile="include/dict.h" bodystart="97" bodyend="113"/>

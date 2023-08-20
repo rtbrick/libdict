@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structhashtable2__itor" kind="struct" language="C++" prot="public">
     <compoundname>hashtable2_itor</compoundname>
       <sectiondef kind="public-attrib">
@@ -8,6 +8,7 @@
         <definition>hashtable2* table</definition>
         <argsstring></argsstring>
         <name>table</name>
+        <qualifiedname>hashtable2_itor::table</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -21,6 +22,7 @@
         <definition>int slot</definition>
         <argsstring></argsstring>
         <name>slot</name>
+        <qualifiedname>hashtable2_itor::slot</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -35,11 +37,12 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="1">
-        <label>hashtable2_itor</label>
-        <link refid="structhashtable2__itor"/>
-        <childnode refid="2" relation="usage">
-          <edgelabel>table</edgelabel>
+      <node id="3">
+        <label>hash_node</label>
+        <link refid="structhash__node"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>next</edgelabel>
+          <edgelabel>prev</edgelabel>
         </childnode>
       </node>
       <node id="2">
@@ -49,12 +52,11 @@
           <edgelabel>table</edgelabel>
         </childnode>
       </node>
-      <node id="3">
-        <label>hash_node</label>
-        <link refid="structhash__node"/>
-        <childnode refid="3" relation="usage">
-          <edgelabel>next</edgelabel>
-          <edgelabel>prev</edgelabel>
+      <node id="1">
+        <label>hashtable2_itor</label>
+        <link refid="structhashtable2__itor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>table</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>

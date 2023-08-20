@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
   <compounddef id="structhash__node" kind="struct" language="C++" prot="public">
     <compoundname>hash_node</compoundname>
       <sectiondef kind="public-attrib">
@@ -8,6 +8,7 @@
         <definition>void * key</definition>
         <argsstring></argsstring>
         <name>key</name>
+        <qualifiedname>hash_node::key</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -21,6 +22,7 @@
         <definition>void * datum</definition>
         <argsstring></argsstring>
         <name>datum</name>
+        <qualifiedname>hash_node::datum</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -34,6 +36,7 @@
         <definition>hash_node* next</definition>
         <argsstring></argsstring>
         <name>next</name>
+        <qualifiedname>hash_node::next</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -47,6 +50,7 @@
         <definition>hash_node* prev</definition>
         <argsstring></argsstring>
         <name>prev</name>
+        <qualifiedname>hash_node::prev</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -60,6 +64,7 @@
         <definition>unsigned hash</definition>
         <argsstring></argsstring>
         <name>hash</name>
+        <qualifiedname>hash_node::hash</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
