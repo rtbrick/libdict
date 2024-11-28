@@ -156,10 +156,7 @@ rb_tree_clear(rb_tree* tree, dict_delete_func delete_func)
             node = node->llink ? node->llink : node->rlink;
             continue;
         }
-
-        if (delete_func)
-            delete_func(node->key, node->datum);
-
+        if (delete_func) delete_func(node->key, node->datum);
         rb_node* const parent = PARENT(node);
         FREE(node);
         *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &tree->root) = NULL;
@@ -394,8 +391,7 @@ rb_tree_traverse(rb_tree* tree, dict_visit_func visit, void* user_data)
     rb_node* node = tree_node_min(tree->root);
     for (; node != NULL; node = node_next(node)) {
         ++count;
-        if (!visit(node->key, node->datum, user_data))
-            break;
+        if (!visit(node->key, node->datum, user_data)) break;
     }
     return count;
 }

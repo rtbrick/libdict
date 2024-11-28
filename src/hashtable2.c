@@ -308,8 +308,7 @@ hashtable2_clear(hashtable2* table, dict_delete_func delete_func)
     hash_node *const end = table->table + table->size;
     for (; node != end; ++node) {
         if (node->hash) {
-            if (delete_func)
-                delete_func(node->key, node->datum);
+            if (delete_func) delete_func(node->key, node->datum);
             node->key = node->datum = NULL;
             node->hash = 0;
         }
@@ -328,8 +327,7 @@ hashtable2_traverse(hashtable2* table, dict_visit_func visit, void* user_data)
     for (hash_node *const end = table->table + table->size; node != end; ++node) {
         if (node->hash) {
             ++count;
-            if (!visit(node->key, node->datum, user_data))
-                break;
+            if (!visit(node->key, node->datum, user_data)) break;
         }
     }
     return count;

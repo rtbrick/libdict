@@ -225,13 +225,13 @@ fixup(pr_tree* tree, pr_node* node)
             lr->llink = l;
             l->parent = lr;
             if ((l->rlink = a) != NULL)
-            a->parent = l;
+                a->parent = l;
 
             pr_node* const b = lr->rlink;
             lr->rlink = node;
             node->parent = lr;
             if ((node->llink = b) != NULL)
-            b->parent = node;
+                b->parent = node;
 
             lr->parent = parent;
             *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &tree->root) = lr;

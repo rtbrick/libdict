@@ -189,14 +189,14 @@ skiplist_insert(skiplist* list, void* key)
         for (;;) {
             skip_node* const y = x->link[k];
             if (!y)
-            break;
+                break;
             const int cmp = list->cmp_func(key, y->key);
             if (cmp < 0) {
-            while (k > 0 && x->link[k - 1] == y)
-                update[k--] = x;
-            break;
+                while (k > 0 && x->link[k - 1] == y)
+                    update[k--] = x;
+                break;
             } else if (cmp == 0)
-            return (dict_insert_result) { &y->datum, false };
+                return (dict_insert_result) { &y->datum, false };
             x = y;
         }
         update[k] = x;
@@ -389,8 +389,7 @@ skiplist_remove(skiplist* list, const void* key)
     for (unsigned k = 0; k <= list->top_link; k++) {
         ASSERT(update[k] != NULL);
         ASSERT(update[k]->link_count > k);
-        if (update[k]->link[k] != x)
-            break;
+        if (update[k]->link[k] != x) break;
         update[k]->link[k] = x->link[k];
     }
     if (x->prev)
@@ -411,8 +410,7 @@ skiplist_clear(skiplist* list, dict_delete_func delete_func)
     skip_node* node = list->head->link[0];
     while (node) {
         skip_node* next = node->link[0];
-        if (delete_func)
-            delete_func(node->key, node->datum);
+        if (delete_func) delete_func(node->key, node->datum);
         FREE(node);
         node = next;
     }
@@ -432,8 +430,7 @@ skiplist_traverse(skiplist* list, dict_visit_func visit, void* user_data)
     size_t count = 0;
     for (skip_node* node = list->head->link[0]; node; node = node->link[0]) {
         ++count;
-        if (!visit(node->key, node->datum, user_data))
-            break;
+        if (!visit(node->key, node->datum, user_data)) break;
     }
     return count;
 }

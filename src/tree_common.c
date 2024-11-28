@@ -49,7 +49,7 @@ tree_node_rot_left(void* Tree, void* Node)
     tree_node* const nr = n->rlink;
     ASSERT(nr != NULL);
     if ((n->rlink = nr->llink) != NULL)
-    n->rlink->parent = n;
+        n->rlink->parent = n;
     nr->llink = n;
 
     tree_node* p = n->parent;
@@ -259,8 +259,7 @@ tree_traverse(void* Tree, dict_visit_func visit, void* user_data)
         tree_node* node = tree_node_min(t->root);
         do {
             ++count;
-            if (!visit(node->key, node->datum, user_data))
-                break;
+            if (!visit(node->key, node->datum, user_data)) break;
             node = tree_node_next(node);
         } while (node);
     }
@@ -310,10 +309,7 @@ tree_clear(void* Tree, dict_delete_func delete_func)
             node = node->llink ? node->llink : node->rlink;
             continue;
         }
-
-        if (delete_func)
-            delete_func(node->key, node->datum);
-
+        if (delete_func) delete_func(node->key, node->datum);
         tree_node* const parent = node->parent;
         FREE(node);
         *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &t->root) = NULL;

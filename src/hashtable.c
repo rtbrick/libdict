@@ -254,8 +254,7 @@ hashtable_clear(hashtable* table, dict_delete_func delete_func)
         hash_node* node = table->table[slot];
         while (node != NULL) {
             hash_node* next = node->next;
-            if (delete_func)
-            delete_func(node->key, node->datum);
+            if (delete_func) delete_func(node->key, node->datum);
             FREE(node);
             node = next;
         }
@@ -274,8 +273,7 @@ hashtable_traverse(hashtable* table, dict_visit_func visit, void* user_data)
     for (unsigned i = 0; i < table->size; i++) {
         for (hash_node* node = table->table[i]; node; node = node->next) {
             ++count;
-            if (!visit(node->key, node->datum, user_data))
-            return count;
+            if (!visit(node->key, node->datum, user_data)) return count;
         }
     }
     return count;
@@ -309,13 +307,11 @@ hashtable_resize(hashtable* table, unsigned new_size)
     ASSERT(new_size > 0);
 
     new_size = dict_prime_geq(new_size);
-    if (table->size == new_size)
-        return true;
+    if (table->size == new_size) return true;
 
     /* TODO: investigate whether using realloc would be advantageous. */
     hash_node** ntable = MALLOC(new_size * sizeof(hash_node*));
-    if (!ntable)
-        return false;
+    if (!ntable) return false;
 
     memset(ntable, 0, new_size * sizeof(hash_node*));
 
@@ -323,20 +319,18 @@ hashtable_resize(hashtable* table, unsigned new_size)
         for (hash_node* node = table->table[i]; node;) {
             hash_node* const next = node->next;
             const unsigned mhash = node->hash % new_size;
-
             hash_node* search = ntable[mhash];
             hash_node* prev = NULL;
             while (search && node->hash >= search->hash) {
-            prev = search;
-            search = search->next;
+                prev = search;
+                search = search->next;
             }
             if ((node->next = search) != NULL)
-            search->prev = node;
+                search->prev = node;
             if ((node->prev = prev) != NULL)
-            prev->next = node;
+                prev->next = node;
             else
-            ntable[mhash] = node;
-
+                ntable[mhash] = node;
             node = next;
         }
     }
