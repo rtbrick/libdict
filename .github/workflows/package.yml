@@ -39,7 +39,7 @@ jobs:
       shell: bash
       run: cpack -G DEB
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         name: deb
         path: ${{github.workspace}}/build/*.deb
