@@ -466,10 +466,10 @@ node_verify(const pr_tree* tree, const pr_node* parent, const pr_node* node)
         unsigned lweight = WEIGHT(l);
         unsigned rweight = WEIGHT(r);
         VERIFY(node->weight == lweight + rweight);
-        if (rweight > lweight) {
+        if (r && rweight > lweight) {
             VERIFY(WEIGHT(r->rlink) <= lweight);
             VERIFY(WEIGHT(r->llink) <= lweight);
-        } else if (lweight > rweight) {
+        } else if (l && lweight > rweight) {
             VERIFY(WEIGHT(l->llink) <= rweight);
             VERIFY(WEIGHT(l->rlink) <= rweight);
         }

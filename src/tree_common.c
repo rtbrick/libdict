@@ -401,14 +401,22 @@ bool
 tree_iterator_next(void* Iterator)
 {
     tree_iterator* iterator = Iterator;
-    return (iterator->node != NULL) && (iterator->node = tree_node_next(iterator->node)) != NULL;
+    if(iterator->node) {
+        iterator->node = tree_node_next(iterator->node);
+        if(iterator->node) return true;
+    }
+    return false;
 }
 
 bool
 tree_iterator_prev(void* Iterator)
 {
     tree_iterator* iterator = Iterator;
-    return (iterator->node != NULL) && (iterator->node = tree_node_prev(iterator->node)) != NULL;
+    if(iterator->node) {
+        iterator->node = tree_node_prev(iterator->node);
+        if(iterator->node) return true;
+    }
+    return false;
 }
 
 bool
