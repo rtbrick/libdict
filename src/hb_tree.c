@@ -401,8 +401,7 @@ remove_node(hb_tree* tree, hb_node* node)
                     rotate_rl(tree, p);
                 } else {
                     rotations += 1;
-                    if (rotate_l(tree, p))
-                    break;
+                    if (rotate_l(tree, p)) break;
                 }
                 node = PARENT(p);
             } else if (BAL_NEG(p)) { /* else if p->balance == -1 */
