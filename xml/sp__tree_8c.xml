@@ -317,7 +317,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="137" column="8" bodyfile="src/sp_tree.c" bodystart="137" bodyend="137"/>
-        <references refid="tree__common_8c_1a058d607ec36526c0e52cd66f853ef888" compoundref="tree__common_8c" startline="328" endline="333">tree_free</references>
+        <references refid="tree__common_8c_1a058d607ec36526c0e52cd66f853ef888" compoundref="tree__common_8c" startline="324" endline="329">tree_free</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a3c9f2eef13a5203b55d0145a1af71499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -339,7 +339,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="138" column="8" bodyfile="src/sp_tree.c" bodystart="138" bodyend="138"/>
-        <references refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" compoundref="tree__common_8c" startline="302" endline="325">tree_clear</references>
+        <references refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" compoundref="tree__common_8c" startline="301" endline="321">tree_clear</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a3b1d829d912c8ab320e8110716875950" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></type>
@@ -564,7 +564,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="385" column="8" bodyfile="src/sp_tree.c" bodystart="385" bodyend="385"/>
-        <references refid="tree__common_8c_1a8af8d7bc05c41b6b1889714238c541e1" compoundref="tree__common_8c" startline="252" endline="268">tree_traverse</references>
+        <references refid="tree__common_8c_1a8af8d7bc05c41b6b1889714238c541e1" compoundref="tree__common_8c" startline="252" endline="267">tree_traverse</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a4b360505e324551364c92d556fb9bebb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -594,7 +594,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="386" column="6" bodyfile="src/sp_tree.c" bodystart="386" bodyend="386"/>
-        <references refid="tree__common_8c_1aa14359a5a539fe914717663d62ab3bc2" compoundref="tree__common_8c" startline="271" endline="293">tree_select</references>
+        <references refid="tree__common_8c_1aa14359a5a539fe914717663d62ab3bc2" compoundref="tree__common_8c" startline="270" endline="292">tree_select</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a9ff35e577690ce12ab6e963f5f939ea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -612,7 +612,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="387" column="8" bodyfile="src/sp_tree.c" bodystart="387" bodyend="387"/>
-        <references refid="tree__common_8c_1a666279f96572685934714532e744718e" compoundref="tree__common_8c" startline="296" endline="299">tree_count</references>
+        <references refid="tree__common_8c_1a666279f96572685934714532e744718e" compoundref="tree__common_8c" startline="295" endline="298">tree_count</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a4d72fa3b29ac89d45d898ecf7e4dac8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -630,7 +630,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="388" column="8" bodyfile="src/sp_tree.c" bodystart="388" bodyend="388"/>
-        <references refid="tree__common_8c_1a756193ba67a2786a5e4a6274a7ec170e" compoundref="tree__common_8c" startline="344" endline="348">tree_min_path_length</references>
+        <references refid="tree__common_8c_1a756193ba67a2786a5e4a6274a7ec170e" compoundref="tree__common_8c" startline="340" endline="344">tree_min_path_length</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a7f612182b8d25714fd43dd70a264d132" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -648,7 +648,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="389" column="8" bodyfile="src/sp_tree.c" bodystart="389" bodyend="389"/>
-        <references refid="tree__common_8c_1abf500bf5b159c5ec35a5e0a3ff57a0e8" compoundref="tree__common_8c" startline="359" endline="363">tree_max_path_length</references>
+        <references refid="tree__common_8c_1abf500bf5b159c5ec35a5e0a3ff57a0e8" compoundref="tree__common_8c" startline="355" endline="359">tree_max_path_length</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1aeaad2a79cf2f5811d22d9027c881c0f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -666,7 +666,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="390" column="8" bodyfile="src/sp_tree.c" bodystart="390" bodyend="390"/>
-        <references refid="tree__common_8c_1a8ff1218a16ab93160f3a922fcdf88882" compoundref="tree__common_8c" startline="374" endline="378">tree_total_path_length</references>
+        <references refid="tree__common_8c_1a8ff1218a16ab93160f3a922fcdf88882" compoundref="tree__common_8c" startline="370" endline="374">tree_total_path_length</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a513d5dcda30a02504aed361205686a14" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -771,7 +771,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="467" column="6" bodyfile="src/sp_tree.c" bodystart="467" bodyend="467"/>
-        <references refid="tree__common_8c_1aa3a6573b092296a44a074269c8d2bc91" compoundref="tree__common_8c" startline="393" endline="398">tree_iterator_free</references>
+        <references refid="tree__common_8c_1aa3a6573b092296a44a074269c8d2bc91" compoundref="tree__common_8c" startline="389" endline="394">tree_iterator_free</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1ab9c244698889f3b8d3a9c4fce90e1060" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -789,7 +789,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="468" column="6" bodyfile="src/sp_tree.c" bodystart="468" bodyend="468"/>
-        <references refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" compoundref="tree__common_8c" startline="381" endline="384">tree_iterator_valid</references>
+        <references refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" compoundref="tree__common_8c" startline="377" endline="380">tree_iterator_valid</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a9d080146ed7720bfa237111611caa970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -807,7 +807,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="469" column="6" bodyfile="src/sp_tree.c" bodystart="469" bodyend="469"/>
-        <references refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" compoundref="tree__common_8c" startline="387" endline="390">tree_iterator_invalidate</references>
+        <references refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" compoundref="tree__common_8c" startline="383" endline="386">tree_iterator_invalidate</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a5ec031c6c4bf789b0391bce36c664dc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -825,7 +825,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="470" column="6" bodyfile="src/sp_tree.c" bodystart="470" bodyend="470"/>
-        <references refid="tree__common_8c_1a1e3db914a6bdf103e9f7db4f78c908ae" compoundref="tree__common_8c" startline="401" endline="409">tree_iterator_next</references>
+        <references refid="tree__common_8c_1a1e3db914a6bdf103e9f7db4f78c908ae" compoundref="tree__common_8c" startline="397" endline="405">tree_iterator_next</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a37c497903825a793f867122b21efcd10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -843,7 +843,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="471" column="6" bodyfile="src/sp_tree.c" bodystart="471" bodyend="471"/>
-        <references refid="tree__common_8c_1afad64b5a28a44ca544fe3f0b8011db17" compoundref="tree__common_8c" startline="412" endline="420">tree_iterator_prev</references>
+        <references refid="tree__common_8c_1afad64b5a28a44ca544fe3f0b8011db17" compoundref="tree__common_8c" startline="408" endline="416">tree_iterator_prev</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a126590bec2cfe018ac71f3a404d2dc75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -865,7 +865,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="472" column="6" bodyfile="src/sp_tree.c" bodystart="472" bodyend="472"/>
-        <references refid="tree__common_8c_1a8a7b95378ac8dc696b220f073b83977c" compoundref="tree__common_8c" startline="423" endline="429">tree_iterator_nextn</references>
+        <references refid="tree__common_8c_1a8a7b95378ac8dc696b220f073b83977c" compoundref="tree__common_8c" startline="419" endline="425">tree_iterator_nextn</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a7446bad5cb5cf66b7631f54021aad7b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -887,7 +887,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="473" column="6" bodyfile="src/sp_tree.c" bodystart="473" bodyend="473"/>
-        <references refid="tree__common_8c_1aa54a225a4b2bfc3a6bbf73125d4dd88a" compoundref="tree__common_8c" startline="432" endline="438">tree_iterator_prevn</references>
+        <references refid="tree__common_8c_1aa54a225a4b2bfc3a6bbf73125d4dd88a" compoundref="tree__common_8c" startline="428" endline="434">tree_iterator_prevn</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1adfc0d6dba087898b99b833dff64cd75f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -905,7 +905,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="474" column="6" bodyfile="src/sp_tree.c" bodystart="474" bodyend="474"/>
-        <references refid="tree__common_8c_1a9bab181bc96dd1334ea36f0b3f647f2a" compoundref="tree__common_8c" startline="441" endline="445">tree_iterator_first</references>
+        <references refid="tree__common_8c_1a9bab181bc96dd1334ea36f0b3f647f2a" compoundref="tree__common_8c" startline="437" endline="441">tree_iterator_first</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a0bbc8dfb29420c2213b8a87dc38ed7fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -923,7 +923,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="475" column="6" bodyfile="src/sp_tree.c" bodystart="475" bodyend="475"/>
-        <references refid="tree__common_8c_1a03b78e22aed8c0dd38f96d939066239a" compoundref="tree__common_8c" startline="448" endline="452">tree_iterator_last</references>
+        <references refid="tree__common_8c_1a03b78e22aed8c0dd38f96d939066239a" compoundref="tree__common_8c" startline="444" endline="448">tree_iterator_last</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1afe58f8a23aa49ecf39a86410326df325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -945,7 +945,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="477" column="6" bodyfile="src/sp_tree.c" bodystart="477" bodyend="477"/>
-        <references refid="tree__common_8c_1aeebf37a00012869c931e03dbb1047ade" compoundref="tree__common_8c" startline="455" endline="459">tree_iterator_search</references>
+        <references refid="tree__common_8c_1aeebf37a00012869c931e03dbb1047ade" compoundref="tree__common_8c" startline="451" endline="455">tree_iterator_search</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1abfa097e41a164e857fff94b297acdb68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -967,7 +967,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="478" column="6" bodyfile="src/sp_tree.c" bodystart="478" bodyend="478"/>
-        <references refid="tree__common_8c_1a630ac71696ac60548789b01f1e618350" compoundref="tree__common_8c" startline="462" endline="466">tree_iterator_search_le</references>
+        <references refid="tree__common_8c_1a630ac71696ac60548789b01f1e618350" compoundref="tree__common_8c" startline="458" endline="462">tree_iterator_search_le</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1aeab0a5071187a441852424630c4e179d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -989,7 +989,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="479" column="6" bodyfile="src/sp_tree.c" bodystart="479" bodyend="479"/>
-        <references refid="tree__common_8c_1aa83954869eda27b3488032f96a257771" compoundref="tree__common_8c" startline="469" endline="473">tree_iterator_search_lt</references>
+        <references refid="tree__common_8c_1aa83954869eda27b3488032f96a257771" compoundref="tree__common_8c" startline="465" endline="469">tree_iterator_search_lt</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a255ff56e31d60736be987136e6f5bb90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1011,7 +1011,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="480" column="6" bodyfile="src/sp_tree.c" bodystart="480" bodyend="480"/>
-        <references refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" compoundref="tree__common_8c" startline="476" endline="480">tree_iterator_search_ge</references>
+        <references refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" compoundref="tree__common_8c" startline="472" endline="476">tree_iterator_search_ge</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1af2a87f0226e009a956acf683427d62f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1033,7 +1033,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="481" column="6" bodyfile="src/sp_tree.c" bodystart="481" bodyend="481"/>
-        <references refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" compoundref="tree__common_8c" startline="483" endline="487">tree_iterator_search_gt</references>
+        <references refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" compoundref="tree__common_8c" startline="479" endline="483">tree_iterator_search_gt</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1aed4ab0ae8ace94de5cb022ddd747441a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const void *</type>
@@ -1051,7 +1051,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="482" column="12" bodyfile="src/sp_tree.c" bodystart="482" bodyend="482"/>
-        <references refid="tree__common_8c_1a71fd87b638317045ae986d9886f10c10" compoundref="tree__common_8c" startline="503" endline="507">tree_iterator_key</references>
+        <references refid="tree__common_8c_1a71fd87b638317045ae986d9886f10c10" compoundref="tree__common_8c" startline="499" endline="503">tree_iterator_key</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a124014a5870761a1e8e795bfe77386a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
@@ -1069,7 +1069,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="483" column="6" bodyfile="src/sp_tree.c" bodystart="483" bodyend="483"/>
-        <references refid="tree__common_8c_1a1cc4c18adcfc606676bbbe632160f50a" compoundref="tree__common_8c" startline="510" endline="514">tree_iterator_datum</references>
+        <references refid="tree__common_8c_1a1cc4c18adcfc606676bbbe632160f50a" compoundref="tree__common_8c" startline="506" endline="510">tree_iterator_datum</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a69177491372a2140181640ac0158333a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1091,7 +1091,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="486" column="1" bodyfile="src/sp_tree.c" bodystart="486" bodyend="489"/>
-        <references refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" compoundref="tree__common_8c" startline="490" endline="500">tree_iterator_compare</references>
+        <references refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" compoundref="tree__common_8c" startline="486" endline="496">tree_iterator_compare</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a6c721a662275fd9a821086f581dff7ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>

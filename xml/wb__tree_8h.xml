@@ -380,7 +380,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="39" column="17" bodyfile="src/wb_tree.c" bodystart="323" bodyend="323" declfile="include/wb_tree.h" declline="39" declcolumn="17"/>
-        <references refid="tree__common_8c_1a058d607ec36526c0e52cd66f853ef888" compoundref="tree__common_8c" startline="328" endline="333">tree_free</references>
+        <references refid="tree__common_8c_1a058d607ec36526c0e52cd66f853ef888" compoundref="tree__common_8c" startline="324" endline="329">tree_free</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a54a19c9b110f4601037b3080524e6e61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></type>
@@ -568,7 +568,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="51" column="17" bodyfile="src/wb_tree.c" bodystart="324" bodyend="324" declfile="include/wb_tree.h" declline="51" declcolumn="17"/>
-        <references refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" compoundref="tree__common_8c" startline="302" endline="325">tree_clear</references>
+        <references refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" compoundref="tree__common_8c" startline="301" endline="321">tree_clear</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a4bc071f6cdd6c188428d094d8b5a0483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -594,7 +594,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="52" column="17" bodyfile="src/wb_tree.c" bodystart="325" bodyend="325" declfile="include/wb_tree.h" declline="52" declcolumn="17"/>
-        <references refid="tree__common_8c_1a8af8d7bc05c41b6b1889714238c541e1" compoundref="tree__common_8c" startline="252" endline="268">tree_traverse</references>
+        <references refid="tree__common_8c_1a8af8d7bc05c41b6b1889714238c541e1" compoundref="tree__common_8c" startline="252" endline="267">tree_traverse</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1abbc5a55384850ddc7b5d970666596381" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -648,7 +648,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="54" column="17" bodyfile="src/wb_tree.c" bodystart="356" bodyend="356" declfile="include/wb_tree.h" declline="54" declcolumn="17"/>
-        <references refid="tree__common_8c_1a666279f96572685934714532e744718e" compoundref="tree__common_8c" startline="296" endline="299">tree_count</references>
+        <references refid="tree__common_8c_1a666279f96572685934714532e744718e" compoundref="tree__common_8c" startline="295" endline="298">tree_count</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1ac56cd4fdd98c4925d4d977e9ce7a58a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -666,7 +666,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="55" column="17" bodyfile="src/wb_tree.c" bodystart="357" bodyend="357" declfile="include/wb_tree.h" declline="55" declcolumn="17"/>
-        <references refid="tree__common_8c_1a756193ba67a2786a5e4a6274a7ec170e" compoundref="tree__common_8c" startline="344" endline="348">tree_min_path_length</references>
+        <references refid="tree__common_8c_1a756193ba67a2786a5e4a6274a7ec170e" compoundref="tree__common_8c" startline="340" endline="344">tree_min_path_length</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1ad904ad93c7fa2a090b83ac245762f2c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -684,7 +684,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="56" column="17" bodyfile="src/wb_tree.c" bodystart="358" bodyend="358" declfile="include/wb_tree.h" declline="56" declcolumn="17"/>
-        <references refid="tree__common_8c_1abf500bf5b159c5ec35a5e0a3ff57a0e8" compoundref="tree__common_8c" startline="359" endline="363">tree_max_path_length</references>
+        <references refid="tree__common_8c_1abf500bf5b159c5ec35a5e0a3ff57a0e8" compoundref="tree__common_8c" startline="355" endline="359">tree_max_path_length</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1af808013473d7440aaf265bb349c0b50b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -702,7 +702,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="57" column="17" bodyfile="src/wb_tree.c" bodystart="359" bodyend="359" declfile="include/wb_tree.h" declline="57" declcolumn="17"/>
-        <references refid="tree__common_8c_1a8ff1218a16ab93160f3a922fcdf88882" compoundref="tree__common_8c" startline="374" endline="378">tree_total_path_length</references>
+        <references refid="tree__common_8c_1a8ff1218a16ab93160f3a922fcdf88882" compoundref="tree__common_8c" startline="370" endline="374">tree_total_path_length</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a817ec8c3de389dcba19fa0fbd6e719f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -782,7 +782,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="64" column="17" bodyfile="src/wb_tree.c" bodystart="449" bodyend="449" declfile="include/wb_tree.h" declline="64" declcolumn="17"/>
-        <references refid="tree__common_8c_1aa3a6573b092296a44a074269c8d2bc91" compoundref="tree__common_8c" startline="393" endline="398">tree_iterator_free</references>
+        <references refid="tree__common_8c_1aa3a6573b092296a44a074269c8d2bc91" compoundref="tree__common_8c" startline="389" endline="394">tree_iterator_free</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1ab954259febd4e147facc6c586ebbf7b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -800,7 +800,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="66" column="17" bodyfile="src/wb_tree.c" bodystart="450" bodyend="450" declfile="include/wb_tree.h" declline="66" declcolumn="17"/>
-        <references refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" compoundref="tree__common_8c" startline="381" endline="384">tree_iterator_valid</references>
+        <references refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" compoundref="tree__common_8c" startline="377" endline="380">tree_iterator_valid</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1aa3ead63bfafe567b78dc86abd591feaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -818,7 +818,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="67" column="17" bodyfile="src/wb_tree.c" bodystart="451" bodyend="451" declfile="include/wb_tree.h" declline="67" declcolumn="17"/>
-        <references refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" compoundref="tree__common_8c" startline="387" endline="390">tree_iterator_invalidate</references>
+        <references refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" compoundref="tree__common_8c" startline="383" endline="386">tree_iterator_invalidate</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1ac7eb41b7cf280538f88dff5617154c50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -836,7 +836,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="68" column="17" bodyfile="src/wb_tree.c" bodystart="452" bodyend="452" declfile="include/wb_tree.h" declline="68" declcolumn="17"/>
-        <references refid="tree__common_8c_1a1e3db914a6bdf103e9f7db4f78c908ae" compoundref="tree__common_8c" startline="401" endline="409">tree_iterator_next</references>
+        <references refid="tree__common_8c_1a1e3db914a6bdf103e9f7db4f78c908ae" compoundref="tree__common_8c" startline="397" endline="405">tree_iterator_next</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1ab9f6954c288a11010744cd732033c0b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -854,7 +854,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="69" column="17" bodyfile="src/wb_tree.c" bodystart="453" bodyend="453" declfile="include/wb_tree.h" declline="69" declcolumn="17"/>
-        <references refid="tree__common_8c_1afad64b5a28a44ca544fe3f0b8011db17" compoundref="tree__common_8c" startline="412" endline="420">tree_iterator_prev</references>
+        <references refid="tree__common_8c_1afad64b5a28a44ca544fe3f0b8011db17" compoundref="tree__common_8c" startline="408" endline="416">tree_iterator_prev</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a99dfeab6474c3e1fc552c6a46f951e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -876,7 +876,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="70" column="17" bodyfile="src/wb_tree.c" bodystart="454" bodyend="454" declfile="include/wb_tree.h" declline="70" declcolumn="17"/>
-        <references refid="tree__common_8c_1a8a7b95378ac8dc696b220f073b83977c" compoundref="tree__common_8c" startline="423" endline="429">tree_iterator_nextn</references>
+        <references refid="tree__common_8c_1a8a7b95378ac8dc696b220f073b83977c" compoundref="tree__common_8c" startline="419" endline="425">tree_iterator_nextn</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a57ef84514afae130d9bdec6ee5fe9941" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -898,7 +898,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="71" column="17" bodyfile="src/wb_tree.c" bodystart="455" bodyend="455" declfile="include/wb_tree.h" declline="71" declcolumn="17"/>
-        <references refid="tree__common_8c_1aa54a225a4b2bfc3a6bbf73125d4dd88a" compoundref="tree__common_8c" startline="432" endline="438">tree_iterator_prevn</references>
+        <references refid="tree__common_8c_1aa54a225a4b2bfc3a6bbf73125d4dd88a" compoundref="tree__common_8c" startline="428" endline="434">tree_iterator_prevn</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a02920fef1ee443fd01895cbe411262a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -916,7 +916,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="72" column="17" bodyfile="src/wb_tree.c" bodystart="456" bodyend="456" declfile="include/wb_tree.h" declline="72" declcolumn="17"/>
-        <references refid="tree__common_8c_1a9bab181bc96dd1334ea36f0b3f647f2a" compoundref="tree__common_8c" startline="441" endline="445">tree_iterator_first</references>
+        <references refid="tree__common_8c_1a9bab181bc96dd1334ea36f0b3f647f2a" compoundref="tree__common_8c" startline="437" endline="441">tree_iterator_first</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a324f9fe9c537c1091817ee43c6b5b2c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -934,7 +934,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="73" column="17" bodyfile="src/wb_tree.c" bodystart="457" bodyend="457" declfile="include/wb_tree.h" declline="73" declcolumn="17"/>
-        <references refid="tree__common_8c_1a03b78e22aed8c0dd38f96d939066239a" compoundref="tree__common_8c" startline="448" endline="452">tree_iterator_last</references>
+        <references refid="tree__common_8c_1a03b78e22aed8c0dd38f96d939066239a" compoundref="tree__common_8c" startline="444" endline="448">tree_iterator_last</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a7c0030de3d0f9bf8d23a0686806b605d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -956,7 +956,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="74" column="17" bodyfile="src/wb_tree.c" bodystart="458" bodyend="458" declfile="include/wb_tree.h" declline="74" declcolumn="17"/>
-        <references refid="tree__common_8c_1aeebf37a00012869c931e03dbb1047ade" compoundref="tree__common_8c" startline="455" endline="459">tree_iterator_search</references>
+        <references refid="tree__common_8c_1aeebf37a00012869c931e03dbb1047ade" compoundref="tree__common_8c" startline="451" endline="455">tree_iterator_search</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a9d88f5a7e4d3eab546f3664d916d5e3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -978,7 +978,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="75" column="17" bodyfile="src/wb_tree.c" bodystart="459" bodyend="459" declfile="include/wb_tree.h" declline="75" declcolumn="17"/>
-        <references refid="tree__common_8c_1a630ac71696ac60548789b01f1e618350" compoundref="tree__common_8c" startline="462" endline="466">tree_iterator_search_le</references>
+        <references refid="tree__common_8c_1a630ac71696ac60548789b01f1e618350" compoundref="tree__common_8c" startline="458" endline="462">tree_iterator_search_le</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a3674163743a6ab577a9a0c65690e05e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1000,7 +1000,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="76" column="17" bodyfile="src/wb_tree.c" bodystart="460" bodyend="460" declfile="include/wb_tree.h" declline="76" declcolumn="17"/>
-        <references refid="tree__common_8c_1aa83954869eda27b3488032f96a257771" compoundref="tree__common_8c" startline="469" endline="473">tree_iterator_search_lt</references>
+        <references refid="tree__common_8c_1aa83954869eda27b3488032f96a257771" compoundref="tree__common_8c" startline="465" endline="469">tree_iterator_search_lt</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a843d990ec79866b212fe19539eef60e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1022,7 +1022,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="77" column="17" bodyfile="src/wb_tree.c" bodystart="461" bodyend="461" declfile="include/wb_tree.h" declline="77" declcolumn="17"/>
-        <references refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" compoundref="tree__common_8c" startline="476" endline="480">tree_iterator_search_ge</references>
+        <references refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" compoundref="tree__common_8c" startline="472" endline="476">tree_iterator_search_ge</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a453bfe660417a86ce6f2d94540c2f705" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1044,7 +1044,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="78" column="17" bodyfile="src/wb_tree.c" bodystart="462" bodyend="462" declfile="include/wb_tree.h" declline="78" declcolumn="17"/>
-        <references refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" compoundref="tree__common_8c" startline="483" endline="487">tree_iterator_search_gt</references>
+        <references refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" compoundref="tree__common_8c" startline="479" endline="483">tree_iterator_search_gt</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a41aa529a2bbff0b91bea7b0e6d8c1f86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const void *</type>
@@ -1062,7 +1062,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="79" column="16" bodyfile="src/wb_tree.c" bodystart="463" bodyend="463" declfile="include/wb_tree.h" declline="79" declcolumn="16"/>
-        <references refid="tree__common_8c_1a71fd87b638317045ae986d9886f10c10" compoundref="tree__common_8c" startline="503" endline="507">tree_iterator_key</references>
+        <references refid="tree__common_8c_1a71fd87b638317045ae986d9886f10c10" compoundref="tree__common_8c" startline="499" endline="503">tree_iterator_key</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a832c1b1d07fa0e6b2bd6af95a5ff5e4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
@@ -1080,7 +1080,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="80" column="15" bodyfile="src/wb_tree.c" bodystart="464" bodyend="464" declfile="include/wb_tree.h" declline="80" declcolumn="15"/>
-        <references refid="tree__common_8c_1a1cc4c18adcfc606676bbbe632160f50a" compoundref="tree__common_8c" startline="510" endline="514">tree_iterator_datum</references>
+        <references refid="tree__common_8c_1a1cc4c18adcfc606676bbbe632160f50a" compoundref="tree__common_8c" startline="506" endline="510">tree_iterator_datum</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a3195a70c2624d672b6d45c90f78b7b8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1102,7 +1102,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/wb_tree.h" line="81" column="17" bodyfile="src/wb_tree.c" bodystart="465" bodyend="465" declfile="include/wb_tree.h" declline="81" declcolumn="17"/>
-        <references refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" compoundref="tree__common_8c" startline="490" endline="500">tree_iterator_compare</references>
+        <references refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" compoundref="tree__common_8c" startline="486" endline="496">tree_iterator_compare</references>
       </memberdef>
       <memberdef kind="function" id="wb__tree_8h_1a44846bbf6729a9998e7d615043ccc910" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>

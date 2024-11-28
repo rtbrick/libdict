@@ -626,7 +626,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="99" column="9" bodyfile="src/tree_common.c" bodystart="252" bodyend="268" declfile="src/tree_common.h" declline="99" declcolumn="9"/>
+        <location file="src/tree_common.h" line="99" column="9" bodyfile="src/tree_common.c" bodystart="252" bodyend="267" declfile="src/tree_common.h" declline="99" declcolumn="9"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
         <references refid="structtree__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tree__common_8c" startline="34">tree_node::key</references>
@@ -661,7 +661,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="103" column="9" bodyfile="src/tree_common.c" bodystart="271" bodyend="293" declfile="src/tree_common.h" declline="103" declcolumn="9"/>
+        <location file="src/tree_common.h" line="103" column="9" bodyfile="src/tree_common.c" bodystart="270" bodyend="292" declfile="src/tree_common.h" declline="103" declcolumn="9"/>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
         <references refid="structtree__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tree__common_8c" startline="34">tree_node::key</references>
@@ -686,7 +686,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="105" column="9" bodyfile="src/tree_common.c" bodystart="296" bodyend="299" declfile="src/tree_common.h" declline="105" declcolumn="9"/>
+        <location file="src/tree_common.h" line="105" column="9" bodyfile="src/tree_common.c" bodystart="295" bodyend="298" declfile="src/tree_common.h" declline="105" declcolumn="9"/>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1a883af43dc54a56d18fd30bee2104ba85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -707,7 +707,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="107" column="9" bodyfile="src/tree_common.c" bodystart="302" bodyend="325" declfile="src/tree_common.h" declline="107" declcolumn="9"/>
+        <location file="src/tree_common.h" line="107" column="9" bodyfile="src/tree_common.c" bodystart="301" bodyend="321" declfile="src/tree_common.h" declline="107" declcolumn="9"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
@@ -737,9 +737,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="109" column="9" bodyfile="src/tree_common.c" bodystart="328" bodyend="333" declfile="src/tree_common.h" declline="109" declcolumn="9"/>
+        <location file="src/tree_common.h" line="109" column="9" bodyfile="src/tree_common.c" bodystart="324" bodyend="329" declfile="src/tree_common.h" declline="109" declcolumn="9"/>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
-        <references refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" compoundref="tree__common_8c" startline="302" endline="325">tree_clear</references>
+        <references refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" compoundref="tree__common_8c" startline="301" endline="321">tree_clear</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1a2afc6479b48b15341653535d1c09b23f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -756,7 +756,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="111" column="9" bodyfile="src/tree_common.c" bodystart="344" bodyend="348" declfile="src/tree_common.h" declline="111" declcolumn="9"/>
+        <location file="src/tree_common.h" line="111" column="9" bodyfile="src/tree_common.c" bodystart="340" bodyend="344" declfile="src/tree_common.h" declline="111" declcolumn="9"/>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1a70efe1dab1d7e921660d1df4dfbbdd03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -774,7 +774,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="113" column="9" bodyfile="src/tree_common.c" bodystart="359" bodyend="363" declfile="src/tree_common.h" declline="113" declcolumn="9"/>
+        <location file="src/tree_common.h" line="113" column="9" bodyfile="src/tree_common.c" bodystart="355" bodyend="359" declfile="src/tree_common.h" declline="113" declcolumn="9"/>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1ad8bd4c384ca20067d07d7ac261a670ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -792,7 +792,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="115" column="9" bodyfile="src/tree_common.c" bodystart="374" bodyend="378" declfile="src/tree_common.h" declline="115" declcolumn="9"/>
+        <location file="src/tree_common.h" line="115" column="9" bodyfile="src/tree_common.c" bodystart="370" bodyend="374" declfile="src/tree_common.h" declline="115" declcolumn="9"/>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1a007c77730e99ae192e34ba18399f0456" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -810,7 +810,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="117" column="13" bodyfile="src/tree_common.c" bodystart="381" bodyend="384" declfile="src/tree_common.h" declline="117" declcolumn="13"/>
+        <location file="src/tree_common.h" line="117" column="13" bodyfile="src/tree_common.c" bodystart="377" bodyend="380" declfile="src/tree_common.h" declline="117" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1ad3ee7c4e1533726f211e78e559ce5398" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -827,7 +827,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="118" column="13" bodyfile="src/tree_common.c" bodystart="387" bodyend="390" declfile="src/tree_common.h" declline="118" declcolumn="13"/>
+        <location file="src/tree_common.h" line="118" column="13" bodyfile="src/tree_common.c" bodystart="383" bodyend="386" declfile="src/tree_common.h" declline="118" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="tree__common_8h_1a25e867d4c0d4447e6c0b0838aa311e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -844,7 +844,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="119" column="13" bodyfile="src/tree_common.c" bodystart="393" bodyend="398" declfile="src/tree_common.h" declline="119" declcolumn="13"/>
+        <location file="src/tree_common.h" line="119" column="13" bodyfile="src/tree_common.c" bodystart="389" bodyend="394" declfile="src/tree_common.h" declline="119" declcolumn="13"/>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
       </memberdef>
@@ -863,7 +863,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="120" column="13" bodyfile="src/tree_common.c" bodystart="401" bodyend="409" declfile="src/tree_common.h" declline="120" declcolumn="13"/>
+        <location file="src/tree_common.h" line="120" column="13" bodyfile="src/tree_common.c" bodystart="397" bodyend="405" declfile="src/tree_common.h" declline="120" declcolumn="13"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="tree__common_8c_1af61f08f021d60815449e7657dc75ea6a" compoundref="tree__common_8c" startline="92" endline="103">tree_node_next</references>
       </memberdef>
@@ -882,7 +882,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="121" column="13" bodyfile="src/tree_common.c" bodystart="412" bodyend="420" declfile="src/tree_common.h" declline="121" declcolumn="13"/>
+        <location file="src/tree_common.h" line="121" column="13" bodyfile="src/tree_common.c" bodystart="408" bodyend="416" declfile="src/tree_common.h" declline="121" declcolumn="13"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="tree__common_8c_1aad7c42c6dfa4a11176cff91f41c9383a" compoundref="tree__common_8c" startline="78" endline="89">tree_node_prev</references>
       </memberdef>
@@ -905,7 +905,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="122" column="13" bodyfile="src/tree_common.c" bodystart="423" bodyend="429" declfile="src/tree_common.h" declline="122" declcolumn="13"/>
+        <location file="src/tree_common.h" line="122" column="13" bodyfile="src/tree_common.c" bodystart="419" bodyend="425" declfile="src/tree_common.h" declline="122" declcolumn="13"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="tree__common_8c_1af61f08f021d60815449e7657dc75ea6a" compoundref="tree__common_8c" startline="92" endline="103">tree_node_next</references>
       </memberdef>
@@ -928,7 +928,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="123" column="13" bodyfile="src/tree_common.c" bodystart="432" bodyend="438" declfile="src/tree_common.h" declline="123" declcolumn="13"/>
+        <location file="src/tree_common.h" line="123" column="13" bodyfile="src/tree_common.c" bodystart="428" bodyend="434" declfile="src/tree_common.h" declline="123" declcolumn="13"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="tree__common_8c_1aad7c42c6dfa4a11176cff91f41c9383a" compoundref="tree__common_8c" startline="78" endline="89">tree_node_prev</references>
       </memberdef>
@@ -947,7 +947,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="124" column="13" bodyfile="src/tree_common.c" bodystart="441" bodyend="445" declfile="src/tree_common.h" declline="124" declcolumn="13"/>
+        <location file="src/tree_common.h" line="124" column="13" bodyfile="src/tree_common.c" bodystart="437" bodyend="441" declfile="src/tree_common.h" declline="124" declcolumn="13"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
@@ -968,7 +968,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="125" column="13" bodyfile="src/tree_common.c" bodystart="448" bodyend="452" declfile="src/tree_common.h" declline="125" declcolumn="13"/>
+        <location file="src/tree_common.h" line="125" column="13" bodyfile="src/tree_common.c" bodystart="444" bodyend="448" declfile="src/tree_common.h" declline="125" declcolumn="13"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
@@ -993,7 +993,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="126" column="13" bodyfile="src/tree_common.c" bodystart="455" bodyend="459" declfile="src/tree_common.h" declline="126" declcolumn="13"/>
+        <location file="src/tree_common.h" line="126" column="13" bodyfile="src/tree_common.c" bodystart="451" bodyend="455" declfile="src/tree_common.h" declline="126" declcolumn="13"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
         <references refid="tree__common_8c_1a4336bbd1dec56af86a45e1d84d622063" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
@@ -1017,7 +1017,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="127" column="13" bodyfile="src/tree_common.c" bodystart="462" bodyend="466" declfile="src/tree_common.h" declline="127" declcolumn="13"/>
+        <location file="src/tree_common.h" line="127" column="13" bodyfile="src/tree_common.c" bodystart="458" bodyend="462" declfile="src/tree_common.h" declline="127" declcolumn="13"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
         <references refid="tree__common_8c_1a1e5a4773127f62034080c522c657c5d1" compoundref="tree__common_8c" startline="151" endline="167">tree_search_le_node</references>
@@ -1041,7 +1041,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="128" column="13" bodyfile="src/tree_common.c" bodystart="469" bodyend="473" declfile="src/tree_common.h" declline="128" declcolumn="13"/>
+        <location file="src/tree_common.h" line="128" column="13" bodyfile="src/tree_common.c" bodystart="465" bodyend="469" declfile="src/tree_common.h" declline="128" declcolumn="13"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
         <references refid="tree__common_8c_1a645c577b5288a0d739610bca51a82e22" compoundref="tree__common_8c" startline="177" endline="191">tree_search_lt_node</references>
@@ -1065,7 +1065,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="129" column="13" bodyfile="src/tree_common.c" bodystart="476" bodyend="480" declfile="src/tree_common.h" declline="129" declcolumn="13"/>
+        <location file="src/tree_common.h" line="129" column="13" bodyfile="src/tree_common.c" bodystart="472" bodyend="476" declfile="src/tree_common.h" declline="129" declcolumn="13"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
         <references refid="tree__common_8c_1aec6b09ca1b7597db7cb5a5389153f598" compoundref="tree__common_8c" startline="201" endline="218">tree_search_ge_node</references>
@@ -1089,7 +1089,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="130" column="13" bodyfile="src/tree_common.c" bodystart="483" bodyend="487" declfile="src/tree_common.h" declline="130" declcolumn="13"/>
+        <location file="src/tree_common.h" line="130" column="13" bodyfile="src/tree_common.c" bodystart="479" bodyend="483" declfile="src/tree_common.h" declline="130" declcolumn="13"/>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
         <references refid="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" compoundref="tree__common_8c" startline="42">tree_iterator::tree</references>
         <references refid="tree__common_8c_1a083987581cc9832ac2e13c1047b6f0f3" compoundref="tree__common_8c" startline="228" endline="242">tree_search_gt_node</references>
@@ -1113,7 +1113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="131" column="13" bodyfile="src/tree_common.c" bodystart="490" bodyend="500" declfile="src/tree_common.h" declline="131" declcolumn="13"/>
+        <location file="src/tree_common.h" line="131" column="13" bodyfile="src/tree_common.c" bodystart="486" bodyend="496" declfile="src/tree_common.h" declline="131" declcolumn="13"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tree__common_8c" startline="34">tree_node::key</references>
@@ -1135,7 +1135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="132" column="12" bodyfile="src/tree_common.c" bodystart="503" bodyend="507" declfile="src/tree_common.h" declline="132" declcolumn="12"/>
+        <location file="src/tree_common.h" line="132" column="12" bodyfile="src/tree_common.c" bodystart="499" bodyend="503" declfile="src/tree_common.h" declline="132" declcolumn="12"/>
         <references refid="structtree__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tree__common_8c" startline="34">tree_node::key</references>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
       </memberdef>
@@ -1154,7 +1154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="133" column="11" bodyfile="src/tree_common.c" bodystart="510" bodyend="514" declfile="src/tree_common.h" declline="133" declcolumn="11"/>
+        <location file="src/tree_common.h" line="133" column="11" bodyfile="src/tree_common.c" bodystart="506" bodyend="510" declfile="src/tree_common.h" declline="133" declcolumn="11"/>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
       </memberdef>
