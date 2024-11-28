@@ -1,5 +1,7 @@
 <map id="tr_tree_insert" name="tr_tree_insert">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,104,56"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#a364dcfa88f9f8e27d1e0ffa7ae7cd15d" title=" " alt="" coords="155,5,282,31"/>
-<area shape="rect" id="node3" href="$tree__common_8c.html#ad79fac7e5a30bf71ac8a7d53c56cf176" title=" " alt="" coords="152,55,285,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,103,56"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#a364dcfa88f9f8e27d1e0ffa7ae7cd15d" title=" " alt="" coords="154,5,280,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,33,138,28,139,33,103,39"/>
+<area shape="rect" id="Node000003" href="$tree__common_8c.html#ad79fac7e5a30bf71ac8a7d53c56cf176" title=" " alt="" coords="151,55,283,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="103,48,136,53,135,58,103,53"/>
 </map>

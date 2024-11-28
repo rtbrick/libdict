@@ -1,4 +1,5 @@
 <map id="wb_itor_datum" name="wb_itor_datum">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,112,31"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#a1cc4c18adcfc606676bbbe632160f50a" title=" " alt="" coords="160,5,295,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,112,31"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#a1cc4c18adcfc606676bbbe632160f50a" title=" " alt="" coords="160,5,293,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,16,144,16,144,21,112,21"/>
 </map>

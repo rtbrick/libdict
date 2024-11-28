@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="pr__tree_8c" kind="file" language="C++">
     <compoundname>pr_tree.c</compoundname>
     <includes refid="pr__tree_8h" local="yes">pr_tree.h</includes>
@@ -133,7 +133,7 @@
     <innerclass refid="structpr__node" prot="public">pr_node</innerclass>
     <innerclass refid="structpr__tree" prot="public">pr_tree</innerclass>
     <innerclass refid="structpr__itor" prot="public">pr_itor</innerclass>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="pr__tree_8c_1ab15db866407010ad20587248b4febfcb" prot="public" static="no">
         <name>WEIGHT</name>
         <param><defname>n</defname></param>
@@ -146,8 +146,8 @@
         </inbodydescription>
         <location file="src/pr_tree.c" line="43" column="9" bodyfile="src/pr_tree.c" bodystart="43" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="pr__tree_8c_1a9c99a7afdc595f4bf162db44d8375630" prot="public" static="no">
         <type>struct <ref refid="structpr__node" kindref="compound">pr_node</ref></type>
         <definition>typedef struct pr_node pr_node</definition>
@@ -161,8 +161,8 @@
         </inbodydescription>
         <location file="src/pr_tree.c" line="37" column="22" bodyfile="src/pr_tree.c" bodystart="37" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="pr__tree_8c_1ae0e5307ac933d9aece1ae4e1ffd4eb9d" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structdict__vtable" kindref="compound">dict_vtable</ref></type>
         <definition>const dict_vtable pr_tree_vtable</definition>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/pr_tree.c" line="53" column="26" bodyfile="src/pr_tree.c" bodystart="53" bodyend="-1"/>
+        <location file="src/pr_tree.c" line="53" column="26" bodyfile="src/pr_tree.c" bodystart="53" bodyend="69"/>
       </memberdef>
       <memberdef kind="variable" id="pr__tree_8c_1add77cbb0895aeea08742c4894f2d9da6" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structitor__vtable" kindref="compound">itor_vtable</ref></type>
@@ -224,10 +224,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/pr_tree.c" line="71" column="26" bodyfile="src/pr_tree.c" bodystart="71" bodyend="-1"/>
+        <location file="src/pr_tree.c" line="71" column="26" bodyfile="src/pr_tree.c" bodystart="71" bodyend="90"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="pr__tree_8c_1a9ef53aba3623a85774d1060a6c585136" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
         <definition>static unsigned fixup</definition>
@@ -324,7 +324,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/pr_tree.c" line="98" column="1" bodyfile="src/pr_tree.c" bodystart="98" bodyend="110"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
@@ -505,7 +505,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/pr_tree.c" line="252" column="1" bodyfile="src/pr_tree.c" bodystart="252" bodyend="290"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structpr__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="pr__tree_8c" startline="39">pr_node::datum</references>
@@ -761,7 +761,7 @@
         <location file="src/pr_tree.c" line="481" column="1" bodyfile="src/pr_tree.c" bodystart="481" bodyend="489"/>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
-        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8c_1ae8398f448c6c0c7555d38840cba7bb55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structpr__itor" kindref="compound">pr_itor</ref> *</type>
@@ -1162,7 +1162,7 @@
         <references refid="structpr__itor_1a6abe4fbcd865ddab321cb1e020355fc7" compoundref="pr__tree_8c" startline="50">pr_itor::node</references>
         <references refid="structpr__itor_1a0e42d341d4cb4d8aa99bd66d8a5877dd" compoundref="pr__tree_8c" startline="50">pr_itor::tree</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1364,7 +1364,7 @@
 <codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structpr__node_1abf99a703fdebf3d585be06abfc890b49" kindref="member">parent</ref><sp/>=<sp/>r;</highlight></codeline>
 <codeline lineno="195"><highlight class="normal"></highlight></codeline>
 <codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rl-&gt;<ref refid="structpr__node_1abf99a703fdebf3d585be06abfc890b49" kindref="member">parent</ref><sp/>=<sp/>parent;</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structpr__node_1aa12c8a5c73b3b5f356df3fd22236f931" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)<sp/>=<sp/>rl;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structpr__node_1aa12c8a5c73b3b5f356df3fd22236f931" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;root)<sp/>=<sp/>rl;</highlight></codeline>
 <codeline lineno="198"><highlight class="normal"></highlight></codeline>
 <codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpr__node_1a72e70550dea6ad3694160a3d35dd932f" kindref="member">weight</ref><sp/>+=<sp/><ref refid="pr__tree_8c_1ab15db866407010ad20587248b4febfcb" kindref="member">WEIGHT</ref>(a)<sp/>-<sp/>r-&gt;<ref refid="structpr__node_1a72e70550dea6ad3694160a3d35dd932f" kindref="member">weight</ref>;</highlight></codeline>
 <codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r-&gt;<ref refid="structpr__node_1a72e70550dea6ad3694160a3d35dd932f" kindref="member">weight</ref><sp/>+=<sp/><ref refid="pr__tree_8c_1ab15db866407010ad20587248b4febfcb" kindref="member">WEIGHT</ref>(b)<sp/>-<sp/>rl-&gt;<ref refid="structpr__node_1a72e70550dea6ad3694160a3d35dd932f" kindref="member">weight</ref>;</highlight></codeline>
@@ -1404,7 +1404,7 @@
 <codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structpr__node_1abf99a703fdebf3d585be06abfc890b49" kindref="member">parent</ref><sp/>=<sp/>node;</highlight></codeline>
 <codeline lineno="235"><highlight class="normal"></highlight></codeline>
 <codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lr-&gt;<ref refid="structpr__node_1abf99a703fdebf3d585be06abfc890b49" kindref="member">parent</ref><sp/>=<sp/>parent;</highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structpr__node_1aa12c8a5c73b3b5f356df3fd22236f931" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)<sp/>=<sp/>lr;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structpr__node_1aa12c8a5c73b3b5f356df3fd22236f931" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;root)<sp/>=<sp/>lr;</highlight></codeline>
 <codeline lineno="238"><highlight class="normal"></highlight></codeline>
 <codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structpr__node_1a72e70550dea6ad3694160a3d35dd932f" kindref="member">weight</ref><sp/>+=<sp/><ref refid="pr__tree_8c_1ab15db866407010ad20587248b4febfcb" kindref="member">WEIGHT</ref>(b)<sp/>-<sp/>l-&gt;<ref refid="structpr__node_1a72e70550dea6ad3694160a3d35dd932f" kindref="member">weight</ref>;</highlight></codeline>
 <codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l-&gt;<ref refid="structpr__node_1a72e70550dea6ad3694160a3d35dd932f" kindref="member">weight</ref><sp/>+=<sp/><ref refid="pr__tree_8c_1ab15db866407010ad20587248b4febfcb" kindref="member">WEIGHT</ref>(a)<sp/>-<sp/>lr-&gt;<ref refid="structpr__node_1a72e70550dea6ad3694160a3d35dd932f" kindref="member">weight</ref>;</highlight></codeline>
@@ -1480,7 +1480,7 @@
 <codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpr__node" kindref="compound">pr_node</ref>*<sp/>parent<sp/>=<sp/>node-&gt;<ref refid="structpr__node_1abf99a703fdebf3d585be06abfc890b49" kindref="member">parent</ref>;</highlight></codeline>
 <codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(child)</highlight></codeline>
 <codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>child-&gt;<ref refid="structpr__node_1abf99a703fdebf3d585be06abfc890b49" kindref="member">parent</ref><sp/>=<sp/>parent;</highlight></codeline>
-<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structpr__node_1aa12c8a5c73b3b5f356df3fd22236f931" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)<sp/>=<sp/>child;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structpr__node_1a3c64480e8bd2fe2e3c0c4395dd178fd3" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structpr__node_1aa12c8a5c73b3b5f356df3fd22236f931" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;root)<sp/>=<sp/>child;</highlight></codeline>
 <codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" kindref="member">FREE</ref>(node);</highlight></codeline>
 <codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" kindref="member">count</ref>--;</highlight></codeline>
 <codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Now<sp/>move<sp/>up<sp/>the<sp/>tree,<sp/>decrementing<sp/>weights.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>

@@ -1,4 +1,5 @@
 <map id="pr_dict_new" name="pr_dict_new">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,97,31"/>
-<area shape="rect" id="node2" href="$pr__tree_8c.html#a021d6c481cd2bf3e59d1e2d2ab869428" title=" " alt="" coords="145,5,239,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,97,31"/>
+<area shape="rect" id="Node000002" href="$pr__tree_8c.html#a021d6c481cd2bf3e59d1e2d2ab869428" title=" " alt="" coords="145,5,237,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,16,129,16,129,21,97,21"/>
 </map>

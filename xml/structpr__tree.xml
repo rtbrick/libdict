@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structpr__tree" kind="struct" language="C++" prot="public">
     <compoundname>pr_tree</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structpr__tree_1a3cd52c0f9d4fe4238bfe1b4c20b60909" prot="public" static="no" mutable="no">
         <type><ref refid="structpr__node" kindref="compound">pr_node</ref> *</type>
         <definition>pr_node* root</definition>
@@ -59,7 +59,7 @@
         </inbodydescription>
         <location file="src/pr_tree.c" line="46" column="73" bodyfile="src/pr_tree.c" bodystart="46" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

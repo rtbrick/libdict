@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="skiplist_8c" kind="file" language="C++">
     <compoundname>skiplist.c</compoundname>
     <includes refid="skiplist_8h" local="yes">skiplist.h</includes>
@@ -130,7 +130,7 @@
     <innerclass refid="structskip__node" prot="public">skip_node</innerclass>
     <innerclass refid="structskiplist" prot="public">skiplist</innerclass>
     <innerclass refid="structskiplist__itor" prot="public">skiplist_itor</innerclass>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="skiplist_8c_1abfa744c8ca5b46f7f2a10aea53a4ec59" prot="public" static="no">
         <name>MAX_LINK</name>
         <initializer>32</initializer>
@@ -142,8 +142,8 @@
         </inbodydescription>
         <location file="src/skiplist.c" line="47" column="9" bodyfile="src/skiplist.c" bodystart="47" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="skiplist_8c_1a50e428cd0dfc84ac5e72fb3ae9595a37" prot="public" static="no">
         <type>struct <ref refid="structskip__node" kindref="compound">skip_node</ref></type>
         <definition>typedef struct skip_node skip_node</definition>
@@ -157,8 +157,8 @@
         </inbodydescription>
         <location file="src/skiplist.c" line="37" column="24" bodyfile="src/skiplist.c" bodystart="37" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="skiplist_8c_1a9ae78b7e22c15dd4be10a2afaf18ad37" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structdict__vtable" kindref="compound">dict_vtable</ref></type>
         <definition>const dict_vtable skiplist_vtable</definition>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/skiplist.c" line="62" column="26" bodyfile="src/skiplist.c" bodystart="62" bodyend="-1"/>
+        <location file="src/skiplist.c" line="62" column="26" bodyfile="src/skiplist.c" bodystart="62" bodyend="78"/>
       </memberdef>
       <memberdef kind="variable" id="skiplist_8c_1a8312192ddda59c8d5a8dd192b1634b7c" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structitor__vtable" kindref="compound">itor_vtable</ref></type>
@@ -220,10 +220,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/skiplist.c" line="80" column="26" bodyfile="src/skiplist.c" bodystart="80" bodyend="-1"/>
+        <location file="src/skiplist.c" line="80" column="26" bodyfile="src/skiplist.c" bodystart="80" bodyend="99"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="skiplist_8c_1a035540716c81ddbe09e3bb4a2723131a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structskip__node" kindref="compound">skip_node</ref> *</type>
         <definition>static skip_node * node_new</definition>
@@ -412,7 +412,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="111" column="1" bodyfile="src/skiplist.c" bodystart="111" bodyend="132"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
         <references refid="structskiplist_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="skiplist_8c" startline="54">skiplist::count</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
@@ -492,7 +492,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="183" column="1" bodyfile="src/skiplist.c" bodystart="183" bodyend="210"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
         <references refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" compoundref="skiplist_8c" startline="50">skiplist::head</references>
@@ -632,7 +632,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="362" column="1" bodyfile="src/skiplist.c" bodystart="362" bodyend="406"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
         <references refid="structskiplist_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="skiplist_8c" startline="54">skiplist::count</references>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
@@ -741,7 +741,7 @@
         <references refid="structskiplist_1a196385d0ce1b6f622135248c96a88e6d" compoundref="skiplist_8c" startline="51">skiplist::max_link</references>
         <references refid="structskip__node_1a45a0b6bc7ce1d301c1527998d99e85f0" compoundref="skiplist_8c" startline="42">skip_node::prev</references>
         <references refid="structskiplist_1af6e47de1fdddfdde6a04eaf5a4cf1609" compoundref="skiplist_8c" startline="52">skiplist::top_link</references>
-        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8c_1af9d82cffc987f421df8743706ac80538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -1167,7 +1167,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="645" column="1" bodyfile="src/skiplist.c" bodystart="645" bodyend="653"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
         <references refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="skiplist_8c" startline="40">skip_node::key</references>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
@@ -1189,14 +1189,14 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="656" column="1" bodyfile="src/skiplist.c" bodystart="656" bodyend="665"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="skiplist_8c" startline="40">skip_node::key</references>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
         <references refid="structdict__remove__result_1a3b6ac8b02ffc67e7ac109edf6dca3ceb" compoundref="dict_8h" startline="81">dict_remove_result::removed</references>
         <references refid="skiplist_8c_1af23e431ed5e8c8e2aecdcc5627bc68be" compoundref="skiplist_8c" startline="362" endline="406">skiplist_remove</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1634,7 +1634,7 @@
 <codeline lineno="430" refid="skiplist_8c_1a15170e44c991e2f0710781da66693072" refkind="member"><highlight class="normal"><ref refid="skiplist_8c_1a15170e44c991e2f0710781da66693072" kindref="member">skiplist_traverse</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/><ref refid="dict_8h_1aebbefe3aa81b20e1254e8a7a5253caf6" kindref="member">dict_visit_func</ref><sp/>visit,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>user_data)</highlight></codeline>
 <codeline lineno="431"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structskip__node" kindref="compound">skip_node</ref>*<sp/>node<sp/>=<sp/>list-&gt;<ref refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" kindref="member">head</ref>-&gt;<ref refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" kindref="member">link</ref>[0];<sp/>node;<sp/>node<sp/>=<sp/>node-&gt;<ref refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" kindref="member">link</ref>[0])<sp/>{</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structskip__node" kindref="compound">skip_node</ref>*<sp/>node<sp/>=<sp/>list-&gt;<ref refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" kindref="member">head</ref>-&gt;<ref refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" kindref="member">link</ref>[0];<sp/>node;<sp/>node<sp/>=<sp/>node-&gt;link[0])<sp/>{</highlight></codeline>
 <codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/>++count;</highlight></codeline>
 <codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!visit(node-&gt;key,<sp/>node-&gt;datum,<sp/>user_data))</highlight></codeline>
 <codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
@@ -1660,7 +1660,7 @@
 <codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>list-&gt;<ref refid="structskiplist_1af6e47de1fdddfdde6a04eaf5a4cf1609" kindref="member">top_link</ref>;<sp/>++i)<sp/>{</highlight></codeline>
 <codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" kindref="member">VERIFY</ref>(list-&gt;<ref refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" kindref="member">head</ref>-&gt;<ref refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" kindref="member">link</ref>[i]<sp/>!=<sp/>NULL);</highlight></codeline>
 <codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>list-&gt;<ref refid="structskiplist_1af6e47de1fdddfdde6a04eaf5a4cf1609" kindref="member">top_link</ref>;<sp/>i<sp/>&lt;<sp/>list-&gt;max_link;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>list-&gt;<ref refid="structskiplist_1af6e47de1fdddfdde6a04eaf5a4cf1609" kindref="member">top_link</ref>;<sp/>i<sp/>&lt;<sp/>list-&gt;<ref refid="structskiplist_1a196385d0ce1b6f622135248c96a88e6d" kindref="member">max_link</ref>;<sp/>++i)<sp/>{</highlight></codeline>
 <codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" kindref="member">VERIFY</ref>(list-&gt;<ref refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" kindref="member">head</ref>-&gt;<ref refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" kindref="member">link</ref>[i]<sp/>==<sp/>NULL);</highlight></codeline>
 <codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>observed_top_link<sp/>=<sp/>0;</highlight></codeline>
@@ -1694,7 +1694,7 @@
 <codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/>counts[i]<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="491"><highlight class="normal"></highlight></codeline>
 <codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>max_num_links<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structskip__node" kindref="compound">skip_node</ref>*<sp/>node<sp/>=<sp/>list-&gt;<ref refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" kindref="member">head</ref>-&gt;<ref refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" kindref="member">link</ref>[0];<sp/>node;<sp/>node<sp/>=<sp/>node-&gt;<ref refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" kindref="member">link</ref>[0])<sp/>{</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structskip__node" kindref="compound">skip_node</ref>*<sp/>node<sp/>=<sp/>list-&gt;<ref refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" kindref="member">head</ref>-&gt;<ref refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" kindref="member">link</ref>[0];<sp/>node;<sp/>node<sp/>=<sp/>node-&gt;link[0])<sp/>{</highlight></codeline>
 <codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(max_num_links<sp/>&lt;<sp/>node-&gt;link_count)</highlight></codeline>
 <codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_num_links<sp/>=<sp/>node-&gt;link_count;</highlight></codeline>
 <codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ncounts<sp/>&gt;<sp/>node-&gt;link_count)</highlight></codeline>

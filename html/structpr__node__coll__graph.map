@@ -1,3 +1,4 @@
 <map id="pr_node" name="pr_node">
-<area shape="rect" id="node1" title=" " alt="" coords="5,15,73,40"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,15,73,41"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="89,21,99,28,90,34,73,35,73,30,89,29,94,28,87,26"/>
 </map>

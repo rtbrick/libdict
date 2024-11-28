@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="hashtable__common_8c" kind="file" language="C++">
     <compoundname>hashtable_common.c</compoundname>
     <includes refid="hashtable__common_8h" local="yes">hashtable_common.h</includes>
@@ -15,7 +15,7 @@
         <link refid="hashtable__common_8h"/>
       </node>
     </incdepgraph>
-      <sectiondef kind="var">
+    <sectiondef kind="var">
       <memberdef kind="variable" id="hashtable__common_8c_1aba0865e40164f606e02b9db8ecdb8408" prot="public" static="yes" mutable="no">
         <type>const unsigned</type>
         <definition>const unsigned kPrimes[]</definition>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable_common.c" line="30" column="23" bodyfile="src/hashtable_common.c" bodystart="30" bodyend="-1"/>
+        <location file="src/hashtable_common.c" line="30" column="23" bodyfile="src/hashtable_common.c" bodystart="30" bodyend="37"/>
       </memberdef>
       <memberdef kind="variable" id="hashtable__common_8c_1ad60146210872d945ed48ae63cb8f166f" prot="public" static="yes" mutable="no">
         <type>const unsigned</type>
@@ -51,8 +51,8 @@
         </inbodydescription>
         <location file="src/hashtable_common.c" line="38" column="23" bodyfile="src/hashtable_common.c" bodystart="38" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="hashtable__common_8c_1af8af08005cd8f9f8cd81dd7ca0692b11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
         <definition>unsigned dict_prime_geq</definition>
@@ -70,7 +70,7 @@
         </inbodydescription>
         <location file="src/hashtable_common.c" line="41" column="1" bodyfile="src/hashtable_common.c" bodystart="41" bodyend="48"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

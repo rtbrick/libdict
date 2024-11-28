@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="rb__tree_8c" kind="file" language="C++">
     <compoundname>rb_tree.c</compoundname>
     <includes refid="rb__tree_8h" local="yes">rb_tree.h</includes>
@@ -139,7 +139,7 @@
     <innerclass refid="structrb__node" prot="public">rb_node</innerclass>
     <innerclass refid="structrb__tree" prot="public">rb_tree</innerclass>
     <innerclass refid="structrb__itor" prot="public">rb_itor</innerclass>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="rb__tree_8c_1aebf73e751fbdd4b625db308dbf04d0d2" prot="public" static="no">
         <name>RB_RED</name>
         <initializer>0</initializer>
@@ -223,8 +223,8 @@
         </inbodydescription>
         <location file="src/rb_tree.c" line="55" column="9" bodyfile="src/rb_tree.c" bodystart="55" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="rb__tree_8c_1a3debd163d7696f113822817ea5f74d63" prot="public" static="no">
         <type>struct <ref refid="structrb__node" kindref="compound">rb_node</ref></type>
         <definition>typedef struct rb_node rb_node</definition>
@@ -238,8 +238,8 @@
         </inbodydescription>
         <location file="src/rb_tree.c" line="38" column="22" bodyfile="src/rb_tree.c" bodystart="38" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="rb__tree_8c_1a3cf01baf14dac893e481acd0d731570f" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structdict__vtable" kindref="compound">dict_vtable</ref></type>
         <definition>const dict_vtable rb_tree_vtable</definition>
@@ -268,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/rb_tree.c" line="65" column="26" bodyfile="src/rb_tree.c" bodystart="65" bodyend="-1"/>
+        <location file="src/rb_tree.c" line="65" column="26" bodyfile="src/rb_tree.c" bodystart="65" bodyend="81"/>
       </memberdef>
       <memberdef kind="variable" id="rb__tree_8c_1a6bf25b6b99105ab504f5bf7fb9a9ef0e" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structitor__vtable" kindref="compound">itor_vtable</ref></type>
@@ -301,10 +301,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/rb_tree.c" line="83" column="26" bodyfile="src/rb_tree.c" bodystart="83" bodyend="-1"/>
+        <location file="src/rb_tree.c" line="83" column="26" bodyfile="src/rb_tree.c" bodystart="83" bodyend="102"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="rb__tree_8c_1aaae070e2770a8b4de295389d2efe34cd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void rot_left</definition>
@@ -464,7 +464,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/rb_tree.c" line="113" column="1" bodyfile="src/rb_tree.c" bodystart="113" bodyend="125"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
@@ -536,7 +536,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/rb_tree.c" line="149" column="1" bodyfile="src/rb_tree.c" bodystart="149" bodyend="171"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structrb__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="rb__tree_8c" startline="41">rb_node::datum</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
@@ -676,7 +676,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/rb_tree.c" line="180" column="1" bodyfile="src/rb_tree.c" bodystart="180" bodyend="214"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structrb__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="rb__tree_8c" startline="41">rb_node::datum</references>
@@ -923,7 +923,7 @@
         <references refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" compoundref="rb__tree_8c" startline="43">rb_node::llink</references>
         <references refid="rb__tree_8c_1a9776c921e63661755728d05e55484d0b" compoundref="rb__tree_8c" startline="48">RB_BLACK</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
-        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
       </memberdef>
       <memberdef kind="function" id="rb__tree_8c_1a5b8d3d3eb399c02c815d24bc1bc7cb35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structrb__itor" kindref="compound">rb_itor</ref> *</type>
@@ -1326,7 +1326,7 @@
         <references refid="structrb__itor_1ae49fdb9a0b8ac1940cd9fd3047488de1" compoundref="rb__tree_8c" startline="62">rb_itor::node</references>
         <references refid="structrb__itor_1a5131fd6ad6d9f6bb49f67571babdb5d6" compoundref="rb__tree_8c" startline="62">rb_itor::tree</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1553,7 +1553,7 @@
 <codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>rotations<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(node<sp/>!=<sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref><sp/>&amp;&amp;<sp/><ref refid="rb__tree_8c_1ae75791dcea89e11d3f729f4bc57a2cae" kindref="member">COLOR</ref>(<ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(node))<sp/>==<sp/><ref refid="rb__tree_8c_1aebf73e751fbdd4b625db308dbf04d0d2" kindref="member">RB_RED</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(node)<sp/>==<sp/><ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(<ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(node))-&gt;llink)<sp/>{</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrb__node" kindref="compound">rb_node</ref>*<sp/>temp<sp/>=<sp/><ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(<ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(node))-&gt;rlink;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrb__node" kindref="compound">rb_node</ref>*<sp/>temp<sp/>=<sp/><ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(<ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(node))-&gt;<ref refid="structrb__node_1a0c31e262dea8ef6bf9e7efdbbb20f6e1" kindref="member">rlink</ref>;</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp<sp/>&amp;&amp;<sp/><ref refid="rb__tree_8c_1ae75791dcea89e11d3f729f4bc57a2cae" kindref="member">COLOR</ref>(temp)<sp/>==<sp/><ref refid="rb__tree_8c_1aebf73e751fbdd4b625db308dbf04d0d2" kindref="member">RB_RED</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rb__tree_8c_1a469003c3eb34c060c60b111dec911d65" kindref="member">SET_BLACK</ref>(temp);</highlight></codeline>
 <codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node<sp/>=<sp/><ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(node);</highlight></codeline>
@@ -1574,7 +1574,7 @@
 <codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++rotations;</highlight></codeline>
 <codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrb__node" kindref="compound">rb_node</ref>*<sp/>temp<sp/>=<sp/><ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(<ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(node))-&gt;llink;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrb__node" kindref="compound">rb_node</ref>*<sp/>temp<sp/>=<sp/><ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(<ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(node))-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref>;</highlight></codeline>
 <codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp<sp/>&amp;&amp;<sp/><ref refid="rb__tree_8c_1ae75791dcea89e11d3f729f4bc57a2cae" kindref="member">COLOR</ref>(temp)<sp/>==<sp/><ref refid="rb__tree_8c_1aebf73e751fbdd4b625db308dbf04d0d2" kindref="member">RB_RED</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rb__tree_8c_1a469003c3eb34c060c60b111dec911d65" kindref="member">SET_BLACK</ref>(temp);</highlight></codeline>
 <codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node<sp/>=<sp/><ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(node);</highlight></codeline>
@@ -1619,7 +1619,7 @@
 <codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x)</highlight></codeline>
 <codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rb__tree_8c_1a76aa12fe135672434038d443b7a5743d" kindref="member">SET_PARENT</ref>(x,<sp/>xp);</highlight></codeline>
 <codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>left<sp/>=<sp/>xp<sp/>&amp;&amp;<sp/>xp-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>==<sp/>out;</highlight></codeline>
-<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>*(xp<sp/>?<sp/>(xp-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>==<sp/>out<sp/>?<sp/>&amp;xp-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>:<sp/>&amp;xp-&gt;<ref refid="structrb__node_1a0c31e262dea8ef6bf9e7efdbbb20f6e1" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>*(xp<sp/>?<sp/>(xp-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>==<sp/>out<sp/>?<sp/>&amp;xp-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>:<sp/>&amp;xp-&gt;<ref refid="structrb__node_1a0c31e262dea8ef6bf9e7efdbbb20f6e1" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;root)<sp/>=<sp/>x;</highlight></codeline>
 <codeline lineno="289"><highlight class="normal"></highlight></codeline>
 <codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="rb__tree_8c_1ae75791dcea89e11d3f729f4bc57a2cae" kindref="member">COLOR</ref>(out)<sp/>==<sp/><ref refid="rb__tree_8c_1a9776c921e63661755728d05e55484d0b" kindref="member">RB_BLACK</ref><sp/>&amp;&amp;<sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)</highlight></codeline>
 <codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1adf0b2d44ac6cd97d428ec85210970b43" kindref="member">rotation_count</ref><sp/>+=<sp/>delete_fixup(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>x,<sp/>xp,<sp/>left);</highlight></codeline>
@@ -1770,7 +1770,7 @@
 <codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rb__tree_8c_1a76aa12fe135672434038d443b7a5743d" kindref="member">SET_PARENT</ref>(rlink-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref>,<sp/>node);</highlight></codeline>
 <codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrb__node" kindref="compound">rb_node</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>parent<sp/>=<sp/><ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(node);</highlight></codeline>
 <codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rb__tree_8c_1a76aa12fe135672434038d443b7a5743d" kindref="member">SET_PARENT</ref>(rlink,<sp/>parent);</highlight></codeline>
-<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structrb__node_1a0c31e262dea8ef6bf9e7efdbbb20f6e1" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)<sp/>=<sp/>rlink;</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structrb__node_1a0c31e262dea8ef6bf9e7efdbbb20f6e1" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;root)<sp/>=<sp/>rlink;</highlight></codeline>
 <codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/>rlink-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>=<sp/>node;</highlight></codeline>
 <codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rb__tree_8c_1a76aa12fe135672434038d443b7a5743d" kindref="member">SET_PARENT</ref>(node,<sp/>rlink);</highlight></codeline>
 <codeline lineno="442"><highlight class="normal">}</highlight></codeline>
@@ -1783,7 +1783,7 @@
 <codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rb__tree_8c_1a76aa12fe135672434038d443b7a5743d" kindref="member">SET_PARENT</ref>(llink-&gt;<ref refid="structrb__node_1a0c31e262dea8ef6bf9e7efdbbb20f6e1" kindref="member">rlink</ref>,<sp/>node);</highlight></codeline>
 <codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrb__node" kindref="compound">rb_node</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>parent<sp/>=<sp/><ref refid="rb__tree_8c_1a1042a71e846badbb5768267a92bf4ccb" kindref="member">PARENT</ref>(node);</highlight></codeline>
 <codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rb__tree_8c_1a76aa12fe135672434038d443b7a5743d" kindref="member">SET_PARENT</ref>(llink,<sp/>parent);</highlight></codeline>
-<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structrb__node_1a0c31e262dea8ef6bf9e7efdbbb20f6e1" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)<sp/>=<sp/>llink;</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structrb__node_1a0c31e262dea8ef6bf9e7efdbbb20f6e1" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;root)<sp/>=<sp/>llink;</highlight></codeline>
 <codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/>llink-&gt;<ref refid="structrb__node_1a0c31e262dea8ef6bf9e7efdbbb20f6e1" kindref="member">rlink</ref><sp/>=<sp/>node;</highlight></codeline>
 <codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rb__tree_8c_1a76aa12fe135672434038d443b7a5743d" kindref="member">SET_PARENT</ref>(node,<sp/>llink);</highlight></codeline>
 <codeline lineno="455"><highlight class="normal">}</highlight></codeline>

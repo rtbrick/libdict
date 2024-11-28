@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dict__private_8h" kind="file" language="C++">
     <compoundname>dict_private.h</compoundname>
     <includes local="no">stdio.h</includes>
@@ -197,7 +197,7 @@
         <link refid="wb__tree_8c"/>
       </node>
     </invincdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" prot="public" static="no">
         <name>ASSERT</name>
         <param><defname>expr</defname></param>
@@ -214,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dict_private.h" line="51" column="15" bodyfile="src/dict_private.h" bodystart="51" bodyend="-1"/>
+        <location file="src/dict_private.h" line="51" column="15" bodyfile="src/dict_private.h" bodystart="51" bodyend="58"/>
       </memberdef>
       <memberdef kind="define" id="dict__private_8h_1a262afcfe437f4addb13fb1b47a6a7086" prot="public" static="no">
         <name>LIKELY</name>
@@ -256,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/dict_private.h" line="78" column="10" bodyfile="src/dict_private.h" bodystart="78" bodyend="-1"/>
+        <location file="src/dict_private.h" line="78" column="10" bodyfile="src/dict_private.h" bodystart="78" bodyend="85"/>
       </memberdef>
       <memberdef kind="define" id="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" prot="public" static="no">
         <name>MALLOC</name>
@@ -354,9 +354,9 @@
         </inbodydescription>
         <location file="src/dict_private.h" line="101" column="10" bodyfile="src/dict_private.h" bodystart="101" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" prot="public" static="no" extern="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
         <definition>long random</definition>
         <argsstring>(void)</argsstring>
@@ -385,7 +385,7 @@
         </inbodydescription>
         <location file="src/dict_private.h" line="105" column="24" bodyfile="src/dict_private.h" bodystart="105" bodyend="105"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -435,20 +435,20 @@
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>ASSERT(expr)<sp/>\</highlight></codeline>
 <codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!__builtin_expect((expr),<sp/>1))<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>(%s)<sp/>assertion<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>\</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>__func__,<sp/>#expr);<sp/>\</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abort();<sp/>\</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>(%s)<sp/>assertion<sp/>failed:<sp/>%s\n&quot;,<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>__func__,<sp/>#expr);<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abort();<sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="51" refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>ASSERT(expr)<sp/>\</highlight></codeline>
 <codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!(expr))<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>assertion<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>\</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>#expr);<sp/>\</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abort();<sp/>\</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>assertion<sp/>failed:<sp/>%s\n&quot;,<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>#expr);<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abort();<sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>ASSERT(expr)<sp/><sp/><sp/>(void)(expr)</highlight><highlight class="normal"></highlight></codeline>
@@ -460,22 +460,22 @@
 <codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>VERIFY(expr)<sp/>\</highlight></codeline>
 <codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="69"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!__builtin_expect((expr),<sp/>1))<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>(%s)<sp/>verification<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>\</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>__func__,<sp/>#expr);<sp/>\</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;<sp/>\</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>(%s)<sp/>verification<sp/>failed:<sp/>%s\n&quot;,<sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>__func__,<sp/>#expr);<sp/>\</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;<sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="76" refid="dict__private_8h_1a262afcfe437f4addb13fb1b47a6a7086" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>LIKELY(expr)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(expr)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="77" refid="dict__private_8h_1a9acc330d508b9a3b775cfdf7ce405e7d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>UNLIKELY(expr)<sp/><sp/><sp/><sp/><sp/>(expr)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="78" refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>VERIFY(expr)<sp/>\</highlight></codeline>
 <codeline lineno="79"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
 <codeline lineno="80"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!(expr))<sp/>{<sp/>\</highlight></codeline>
-<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>verification<sp/>failed:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>\</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>#expr);<sp/>\</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;<sp/>\</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;\n%s:%d<sp/>verification<sp/>failed:<sp/>%s\n&quot;,<sp/>\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>__LINE__,<sp/>#expr);<sp/>\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;<sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
 <codeline lineno="88" refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MALLOC(n)<sp/><sp/><sp/>(*dict_malloc_func)(n)</highlight><highlight class="normal"></highlight></codeline>

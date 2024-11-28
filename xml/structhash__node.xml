@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structhash__node" kind="struct" language="C++" prot="public">
     <compoundname>hash_node</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structhash__node_1a269110e1860732992f4f6f5514813c75" prot="public" static="no" mutable="no">
         <type>void *</type>
         <definition>void * key</definition>
@@ -73,7 +73,7 @@
         </inbodydescription>
         <location file="src/hashtable.c" line="53" column="17" bodyfile="src/hashtable.c" bodystart="53" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

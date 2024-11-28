@@ -1,4 +1,5 @@
 <map id="pr_tree_remove" name="pr_tree_remove">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,117,31"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#a4336bbd1dec56af86a45e1d84d622063" title=" " alt="" coords="165,5,291,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,117,31"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#a4336bbd1dec56af86a45e1d84d622063" title=" " alt="" coords="165,5,289,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,16,149,16,149,21,117,21"/>
 </map>

@@ -1,4 +1,6 @@
 <map id="wb_tree" name="wb_tree">
-<area shape="rect" id="node1" title=" " alt="" coords="9,112,77,137"/>
-<area shape="rect" id="node2" href="$structwb__node.html" title=" " alt="" coords="5,15,80,40"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="8,113,76,139"/>
+<area shape="rect" id="Node000002" href="$structwb__node.html" title=" " alt="" coords="5,15,79,41"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,57,45,113,39,113,39,57"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="95,17,102,21,105,28,97,38,80,41,79,35,95,33,100,27,98,25,93,22"/>
 </map>

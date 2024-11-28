@@ -1,5 +1,7 @@
 <map id="hashtable2_dict_new" name="hashtable2_dict_new">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,149,31"/>
-<area shape="rect" id="node2" href="$hashtable2_8c.html#a840e984b3c37be780f2cd0e054513e62" title=" " alt="" coords="197,5,313,31"/>
-<area shape="rect" id="node3" href="$hashtable__common_8c.html#af8af08005cd8f9f8cd81dd7ca0692b11" title=" " alt="" coords="361,5,472,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,149,31"/>
+<area shape="rect" id="Node000002" href="$hashtable2_8c.html#a840e984b3c37be780f2cd0e054513e62" title=" " alt="" coords="197,5,312,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,16,181,16,181,21,149,21"/>
+<area shape="rect" id="Node000003" href="$hashtable__common_8c.html#af8af08005cd8f9f8cd81dd7ca0692b11" title=" " alt="" coords="360,5,469,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,16,344,16,344,21,313,21"/>
 </map>

@@ -1,7 +1,11 @@
 <map id="dict_vtable" name="dict_vtable">
-<area shape="rect" id="node1" title=" " alt="" coords="123,181,208,207"/>
-<area shape="rect" id="node2" href="$structdict__itor.html" title=" " alt="" coords="13,93,81,119"/>
-<area shape="rect" id="node3" href="$structitor__vtable.html" title=" " alt="" coords="5,5,88,31"/>
-<area shape="rect" id="node4" href="$structdict__insert__result.html" title=" " alt="" coords="105,93,226,119"/>
-<area shape="rect" id="node5" href="$structdict__remove__result.html" title=" " alt="" coords="250,93,382,119"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="121,183,206,208"/>
+<area shape="rect" id="Node000002" href="$structdict__itor.html" title=" " alt="" coords="12,94,80,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,127,148,180,145,184,73,131"/>
+<area shape="rect" id="Node000003" href="$structitor__vtable.html" title=" " alt="" coords="5,5,87,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="49,47,49,94,43,94,43,47"/>
+<area shape="rect" id="Node000004" href="$structdict__insert__result.html" title=" " alt="" coords="103,94,224,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="166,135,166,182,161,182,161,135"/>
+<area shape="rect" id="Node000005" href="$structdict__remove__result.html" title=" " alt="" coords="247,94,378,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="280,130,186,184,183,180,277,125"/>
 </map>

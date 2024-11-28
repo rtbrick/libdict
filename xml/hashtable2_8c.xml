@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="hashtable2_8c" kind="file" language="C++">
     <compoundname>hashtable2.c</compoundname>
     <includes refid="hashtable2_8h" local="yes">hashtable2.h</includes>
@@ -137,7 +137,7 @@
     <innerclass refid="structhash__node" prot="public">hash_node</innerclass>
     <innerclass refid="structhashtable2" prot="public">hashtable2</innerclass>
     <innerclass refid="structhashtable2__itor" prot="public">hashtable2_itor</innerclass>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="hashtable2_8c_1a24e21f497bc214e2c211c4bed541bdf8" prot="public" static="no">
         <name>LOADFACTOR_NUMERATOR</name>
         <initializer>2</initializer>
@@ -160,8 +160,8 @@
         </inbodydescription>
         <location file="src/hashtable2.c" line="40" column="9" bodyfile="src/hashtable2.c" bodystart="40" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="hashtable2_8c_1a4a37dff778daa13ddb34cd8e4ef1a129" prot="public" static="no">
         <type>struct <ref refid="structhash__node" kindref="compound">hash_node</ref></type>
         <definition>typedef struct hash_node hash_node</definition>
@@ -175,8 +175,8 @@
         </inbodydescription>
         <location file="src/hashtable2.c" line="45" column="24" bodyfile="src/hashtable2.c" bodystart="45" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="hashtable2_8c_1a1c33bed2d1996ebfbb81a841f3439393" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structdict__vtable" kindref="compound">dict_vtable</ref></type>
         <definition>const dict_vtable hashtable2_vtable</definition>
@@ -205,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable2.c" line="66" column="26" bodyfile="src/hashtable2.c" bodystart="66" bodyend="-1"/>
+        <location file="src/hashtable2.c" line="66" column="26" bodyfile="src/hashtable2.c" bodystart="66" bodyend="82"/>
       </memberdef>
       <memberdef kind="variable" id="hashtable2_8c_1aeb6d49a24931b3fc47e240e4dd0e5a6b" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structitor__vtable" kindref="compound">itor_vtable</ref></type>
@@ -238,10 +238,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable2.c" line="84" column="26" bodyfile="src/hashtable2.c" bodystart="84" bodyend="-1"/>
+        <location file="src/hashtable2.c" line="84" column="26" bodyfile="src/hashtable2.c" bodystart="84" bodyend="103"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="hashtable2_8c_1a840e984b3c37be780f2cd0e054513e62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structhashtable2" kindref="compound">hashtable2</ref> *</type>
         <definition>hashtable2 * hashtable2_new</definition>
@@ -266,7 +266,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/hashtable2.c" line="106" column="1" bodyfile="src/hashtable2.c" bodystart="106" bodyend="126"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structhashtable2_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="hashtable2_8c" startline="55">hashtable2::cmp_func</references>
         <references refid="structhashtable2_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="hashtable2_8c" startline="54">hashtable2::count</references>
         <references refid="hashtable__common_8c_1af8af08005cd8f9f8cd81dd7ca0692b11" compoundref="hashtable__common_8c" startline="41" endline="48">dict_prime_geq</references>
@@ -302,7 +302,7 @@
         <location file="src/hashtable2.c" line="129" column="1" bodyfile="src/hashtable2.c" bodystart="129" bodyend="144"/>
         <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="152">dict::_object</references>
         <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="hashtable2_8c_1a840e984b3c37be780f2cd0e054513e62" compoundref="hashtable2_8c" startline="106" endline="126">hashtable2_new</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
@@ -642,7 +642,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/hashtable2.c" line="357" column="1" bodyfile="src/hashtable2.c" bodystart="357" bodyend="398"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structhashtable2_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="hashtable2_8c" startline="54">hashtable2::count</references>
         <references refid="structhash__node_1ac9af8e9ce7fe8f1707012ed4fe5cf0ca" compoundref="hashtable_8c" startline="49">hash_node::datum</references>
         <references refid="structdict__insert__result_1a9874e765273b8a34323b00166c989f2e" compoundref="dict_8h" startline="74">dict_insert_result::datum_ptr</references>
@@ -674,7 +674,7 @@
         <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
-        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
       </memberdef>
       <memberdef kind="function" id="hashtable2_8c_1a0c15f24c3e187b1c121a051ef62b8e43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref> *</type>
@@ -752,7 +752,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/hashtable2.c" line="449" column="1" bodyfile="src/hashtable2.c" bodystart="449" bodyend="455"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
@@ -814,7 +814,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/hashtable2.c" line="478" column="1" bodyfile="src/hashtable2.c" bodystart="478" bodyend="489"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
@@ -1003,7 +1003,7 @@
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
         <references refid="structhashtable2__itor_1ac39287fa1fbff323f1764c7902c9e718" compoundref="hashtable2_8c" startline="62">hashtable2_itor::table</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1224,7 +1224,7 @@
 <codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(node-&gt;<ref refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" kindref="member">hash</ref><sp/>==<sp/>hash<sp/>&amp;&amp;<sp/>table-&gt;<ref refid="structhashtable2_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>(key,<sp/>node-&gt;<ref refid="structhash__node_1a269110e1860732992f4f6f5514813c75" kindref="member">key</ref>)<sp/>==<sp/>0)</highlight></codeline>
 <codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;node-&gt;<ref refid="structhash__node_1ac9af8e9ce7fe8f1707012ed4fe5cf0ca" kindref="member">datum</ref>;</highlight></codeline>
 <codeline lineno="215"><highlight class="normal"></highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(++node<sp/>==<sp/>table_end)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(++node<sp/>==<sp/>table_end)</highlight></codeline>
 <codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node<sp/>=<sp/>table-&gt;<ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>;</highlight></codeline>
 <codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(node<sp/>!=<sp/>first);</highlight></codeline>
 <codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>

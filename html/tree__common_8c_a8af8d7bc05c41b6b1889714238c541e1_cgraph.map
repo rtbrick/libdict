@@ -1,5 +1,8 @@
 <map id="tree_traverse" name="tree_traverse">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,104,31"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#a7b6de5488b23a09de4f838c218adabd0" title=" " alt="" coords="311,5,417,31"/>
-<area shape="rect" id="node3" href="$tree__common_8c.html#af61f08f021d60815449e7657dc75ea6a" title=" " alt="" coords="152,31,263,56"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,103,31"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#a7b6de5488b23a09de4f838c218adabd0" title=" " alt="" coords="308,5,414,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,16,292,16,292,21,103,21"/>
+<area shape="rect" id="Node000003" href="$tree__common_8c.html#af61f08f021d60815449e7657dc75ea6a" title=" " alt="" coords="151,31,260,56"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="104,24,135,29,135,34,103,29"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="260,32,292,27,293,32,261,37"/>
 </map>

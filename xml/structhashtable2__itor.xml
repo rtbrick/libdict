@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structhashtable2__itor" kind="struct" language="C++" prot="public">
     <compoundname>hashtable2_itor</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structhashtable2__itor_1ac39287fa1fbff323f1764c7902c9e718" prot="public" static="no" mutable="no">
         <type><ref refid="structhashtable2" kindref="compound">hashtable2</ref> *</type>
         <definition>hashtable2* table</definition>
@@ -31,7 +31,7 @@
         </inbodydescription>
         <location file="src/hashtable2.c" line="63" column="12" bodyfile="src/hashtable2.c" bodystart="63" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

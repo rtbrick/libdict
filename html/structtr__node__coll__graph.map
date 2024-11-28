@@ -1,3 +1,4 @@
 <map id="tr_node" name="tr_node">
-<area shape="rect" id="node1" title=" " alt="" coords="5,15,71,40"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,15,70,41"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="86,21,96,28,87,34,70,35,70,30,86,29,91,28,84,26"/>
 </map>

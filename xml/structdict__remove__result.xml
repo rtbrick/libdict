@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structdict__remove__result" kind="struct" language="C++" prot="public">
     <compoundname>dict_remove_result</compoundname>
     <includes refid="dict_8h" local="no">dict.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structdict__remove__result_1ab5c000aec752f2206131e183daf5efbf" prot="public" static="no" mutable="no">
         <type>void *</type>
         <definition>void* key</definition>
@@ -46,7 +46,7 @@
         </inbodydescription>
         <location file="include/dict.h" line="81" column="13" bodyfile="include/dict.h" bodystart="81" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

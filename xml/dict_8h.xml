@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dict_8h" kind="file" language="C++">
     <compoundname>dict.h</compoundname>
     <includes local="no">stddef.h</includes>
@@ -312,7 +312,7 @@
     <innerclass refid="structitor__vtable" prot="public">itor_vtable</innerclass>
     <innerclass refid="structdict" prot="public">dict</innerclass>
     <innerclass refid="structdict__itor" prot="public">dict_itor</innerclass>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="dict_8h_1a0c5f0f7b40e3b3df5aaa4c5e3c874b3b" prot="public" static="no">
         <name>BEGIN_DECL</name>
         <briefdescription>
@@ -783,8 +783,8 @@
         </inbodydescription>
         <location file="include/dict.h" line="195" column="9" bodyfile="include/dict.h" bodystart="195" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" prot="public" static="no">
         <type>int(*</type>
         <definition>typedef int(* dict_compare_func) (const void *, const void *)</definition>
@@ -1175,9 +1175,9 @@
         </inbodydescription>
         <location file="include/dict.h" line="128" column="9" bodyfile="include/dict.h" bodystart="128" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="dict_8h_1aebdce71ca7165e3d22e931f13b3b354e" prot="public" static="no" mutable="no">
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="dict_8h_1aebdce71ca7165e3d22e931f13b3b354e" prot="public" static="no" extern="yes" mutable="no">
         <type>const char *const</type>
         <definition>const char* const kDictVersionString</definition>
         <argsstring></argsstring>
@@ -1190,7 +1190,7 @@
         </inbodydescription>
         <location file="include/dict.h" line="48" column="25" bodyfile="src/dict.c" bodystart="33" bodyend="-1" declfile="include/dict.h" declline="48" declcolumn="25"/>
       </memberdef>
-      <memberdef kind="variable" id="dict_8h_1a6e4168cb588cf762d93db53f53fdcce0" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="dict_8h_1a6e4168cb588cf762d93db53f53fdcce0" prot="public" static="no" extern="yes" mutable="no">
         <type>void *(*</type>
         <definition>void *(* dict_malloc_func) (size_t)</definition>
         <argsstring>)(size_t)</argsstring>
@@ -1203,7 +1203,7 @@
         </inbodydescription>
         <location file="include/dict.h" line="66" column="8" bodyfile="src/dict.c" bodystart="37" bodyend="-1" declfile="include/dict.h" declline="66" declcolumn="8"/>
       </memberdef>
-      <memberdef kind="variable" id="dict_8h_1afeae04c4c07e57a7451c3480a7a4bf2e" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="dict_8h_1afeae04c4c07e57a7451c3480a7a4bf2e" prot="public" static="no" extern="yes" mutable="no">
         <type>void(*</type>
         <definition>void(* dict_free_func) (void *)</definition>
         <argsstring>)(void *)</argsstring>
@@ -1216,8 +1216,8 @@
         </inbodydescription>
         <location file="include/dict.h" line="68" column="8" bodyfile="src/dict.c" bodystart="38" bodyend="-1" declfile="include/dict.h" declline="68" declcolumn="8"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="dict_8h_1a4ffb34d3cb396bb2a79d2e21298c3bdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
         <definition>size_t dict_free</definition>
@@ -1240,7 +1240,7 @@
         <location file="include/dict.h" line="171" column="8" bodyfile="src/dict.c" bodystart="103" bodyend="110" declfile="include/dict.h" declline="171" declcolumn="8"/>
         <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="152">dict::_object</references>
         <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" compoundref="dict_8h" startline="100">dict_vtable::dfree</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
       </memberdef>
@@ -1262,7 +1262,7 @@
         <location file="include/dict.h" line="196" column="6" bodyfile="src/dict.c" bodystart="113" bodyend="119" declfile="include/dict.h" declline="196" declcolumn="6"/>
         <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="174">dict_itor::_itor</references>
         <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="175">dict_itor::_vtable</references>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" compoundref="dict_8h" startline="131">itor_vtable::ifree</references>
       </memberdef>
@@ -1409,7 +1409,7 @@
         </inbodydescription>
         <location file="include/dict.h" line="204" column="10" bodyfile="src/dict.c" bodystart="92" bodyend="100" declfile="include/dict.h" declline="204" declcolumn="10"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1446,7 +1446,7 @@
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBDICT_DICT_H__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)<sp/>||<sp/>defined(c_plusplus)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>BEGIN_DECL<sp/><sp/><sp/><sp/><sp/>extern<sp/>&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>BEGIN_DECL<sp/><sp/><sp/><sp/><sp/>extern<sp/>&quot;C&quot;<sp/>{</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>END_DECL<sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35" refid="dict_8h_1a0c5f0f7b40e3b3df5aaa4c5e3c874b3b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>BEGIN_DECL</highlight><highlight class="normal"></highlight></codeline>

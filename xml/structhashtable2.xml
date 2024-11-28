@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structhashtable2" kind="struct" language="C++" prot="public">
     <compoundname>hashtable2</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structhashtable2_1a76d971a3c552bc58ba9f0d5fceae9806" prot="public" static="no" mutable="no">
         <type>size_t</type>
         <definition>size_t count</definition>
@@ -73,7 +73,7 @@
         </inbodydescription>
         <location file="src/hashtable2.c" line="58" column="17" bodyfile="src/hashtable2.c" bodystart="58" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structskiplist" kind="struct" language="C++" prot="public">
     <compoundname>skiplist</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" prot="public" static="no" mutable="no">
         <type><ref refid="structskip__node" kindref="compound">skip_node</ref> *</type>
         <definition>skip_node* head</definition>
@@ -73,7 +73,7 @@
         </inbodydescription>
         <location file="src/skiplist.c" line="54" column="15" bodyfile="src/skiplist.c" bodystart="54" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

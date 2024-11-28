@@ -1,3 +1,4 @@
 <map id="wb_node" name="wb_node">
-<area shape="rect" id="node1" title=" " alt="" coords="5,15,80,40"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,15,79,41"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="96,22,105,28,97,34,80,35,79,30,95,29,100,28,93,26"/>
 </map>

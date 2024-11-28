@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structitor__vtable" kind="struct" language="C++" prot="public">
     <compoundname>itor_vtable</compoundname>
     <includes refid="dict_8h" local="no">dict.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1af7abde3da86249ff4c3d19f5e62e7617" kindref="member">dict_ifree_func</ref></type>
         <definition>dict_ifree_func ifree</definition>
@@ -256,7 +256,7 @@
         </inbodydescription>
         <location file="include/dict.h" line="148" column="29" bodyfile="include/dict.h" bodystart="148" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

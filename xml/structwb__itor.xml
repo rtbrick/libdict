@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structwb__itor" kind="struct" language="C++" prot="public">
     <compoundname>wb_itor</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structwb__itor_1a42771997b8e85c81685bce9ab1a46426" prot="public" static="no" mutable="no">
         <type><ref refid="structwb__tree" kindref="compound">wb_tree</ref> *</type>
         <definition>wb_tree* tree</definition>
@@ -31,7 +31,7 @@
         </inbodydescription>
         <location file="src/wb_tree.c" line="79" column="32" bodyfile="src/wb_tree.c" bodystart="79" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

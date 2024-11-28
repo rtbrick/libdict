@@ -1,4 +1,5 @@
 <map id="wb_tree_clear" name="wb_tree_clear">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,108,31"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#a6fbd46e35ff34bda38574a440b879dc1" title=" " alt="" coords="156,5,235,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,108,31"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#a6fbd46e35ff34bda38574a440b879dc1" title=" " alt="" coords="156,5,234,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,16,140,16,140,21,108,21"/>
 </map>

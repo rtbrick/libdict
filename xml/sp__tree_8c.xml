@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="sp__tree_8c" kind="file" language="C++">
     <compoundname>sp_tree.c</compoundname>
     <includes refid="sp__tree_8h" local="yes">sp_tree.h</includes>
@@ -133,7 +133,7 @@
     <innerclass refid="structsp__node" prot="public">sp_node</innerclass>
     <innerclass refid="structsp__tree" prot="public">sp_tree</innerclass>
     <innerclass refid="structsp__itor" prot="public">sp_itor</innerclass>
-      <sectiondef kind="typedef">
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="sp__tree_8c_1a5691ea6af6c9773f1eb9605b269a2152" prot="public" static="no">
         <type>struct <ref refid="structsp__node" kindref="compound">sp_node</ref></type>
         <definition>typedef struct sp_node sp_node</definition>
@@ -147,8 +147,8 @@
         </inbodydescription>
         <location file="src/sp_tree.c" line="53" column="22" bodyfile="src/sp_tree.c" bodystart="53" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="sp__tree_8c_1ad795fbc5baab8f0ae486b2da1a3cfb32" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structdict__vtable" kindref="compound">dict_vtable</ref></type>
         <definition>const dict_vtable sp_tree_vtable</definition>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/sp_tree.c" line="66" column="26" bodyfile="src/sp_tree.c" bodystart="66" bodyend="-1"/>
+        <location file="src/sp_tree.c" line="66" column="26" bodyfile="src/sp_tree.c" bodystart="66" bodyend="82"/>
       </memberdef>
       <memberdef kind="variable" id="sp__tree_8c_1a349c18e6c13d1d9e9b6a8c8246d809ac" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structitor__vtable" kindref="compound">itor_vtable</ref></type>
@@ -210,10 +210,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/sp_tree.c" line="84" column="26" bodyfile="src/sp_tree.c" bodystart="84" bodyend="-1"/>
+        <location file="src/sp_tree.c" line="84" column="26" bodyfile="src/sp_tree.c" bodystart="84" bodyend="103"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="sp__tree_8c_1a9b6cac6415d06381b3e353d672cc6c0b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structsp__node" kindref="compound">sp_node</ref> *</type>
         <definition>static sp_node * node_new</definition>
@@ -268,7 +268,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="109" column="1" bodyfile="src/sp_tree.c" bodystart="109" bodyend="121"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
@@ -361,7 +361,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="244" column="1" bodyfile="src/sp_tree.c" bodystart="244" bodyend="277"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structsp__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="sp__tree_8c" startline="55">sp_node::datum</references>
@@ -391,7 +391,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="280" column="1" bodyfile="src/sp_tree.c" bodystart="280" bodyend="299"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
       </memberdef>
@@ -415,7 +415,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="302" column="1" bodyfile="src/sp_tree.c" bodystart="302" bodyend="311"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structsp__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="sp__tree_8c" startline="55">sp_node::datum</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="tree__common_8c_1a1e5a4773127f62034080c522c657c5d1" compoundref="tree__common_8c" startline="151" endline="167">tree_search_le_node</references>
@@ -440,7 +440,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="314" column="1" bodyfile="src/sp_tree.c" bodystart="314" bodyend="323"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structsp__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="sp__tree_8c" startline="55">sp_node::datum</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="tree__common_8c_1a645c577b5288a0d739610bca51a82e22" compoundref="tree__common_8c" startline="177" endline="191">tree_search_lt_node</references>
@@ -465,7 +465,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="326" column="1" bodyfile="src/sp_tree.c" bodystart="326" bodyend="335"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structsp__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="sp__tree_8c" startline="55">sp_node::datum</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="tree__common_8c_1aec6b09ca1b7597db7cb5a5389153f598" compoundref="tree__common_8c" startline="201" endline="218">tree_search_ge_node</references>
@@ -490,7 +490,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/sp_tree.c" line="338" column="1" bodyfile="src/sp_tree.c" bodystart="338" bodyend="347"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structsp__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="sp__tree_8c" startline="55">sp_node::datum</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="tree__common_8c_1a083987581cc9832ac2e13c1047b6f0f3" compoundref="tree__common_8c" startline="228" endline="242">tree_search_gt_node</references>
@@ -711,7 +711,7 @@
         <location file="src/sp_tree.c" line="432" column="1" bodyfile="src/sp_tree.c" bodystart="432" bodyend="440"/>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
-        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
       </memberdef>
       <memberdef kind="function" id="sp__tree_8c_1a4f2d401aa5cda05fc2d1f74e5ae62677" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structsp__itor" kindref="compound">sp_itor</ref> *</type>
@@ -1112,7 +1112,7 @@
         <references refid="structsp__itor_1a60c62d8f1ba6e12c422f3e5c2bf98e32" compoundref="sp__tree_8c" startline="63">sp_itor::node</references>
         <references refid="structsp__itor_1a8bea87a779a98e21ef87ad5fe91be6f4" compoundref="sp__tree_8c" startline="63">sp_itor::tree</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1485,7 +1485,7 @@
 <codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp)</highlight></codeline>
 <codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>temp-&gt;<ref refid="structsp__node_1a1c7fd5fcaab9ca7faadfacd8acc9d21b" kindref="member">parent</ref><sp/>=<sp/>parent;</highlight></codeline>
 <codeline lineno="367"><highlight class="normal"></highlight></codeline>
-<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structsp__node_1a1d6ea745e0112a6a912b8e19e3cd9c60" kindref="member">llink</ref><sp/>==<sp/>out<sp/>?<sp/>&amp;parent-&gt;<ref refid="structsp__node_1a1d6ea745e0112a6a912b8e19e3cd9c60" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structsp__node_1ad6ab7d8c03223fa53442e6f17f2cb1b0" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structsp__node_1a1d6ea745e0112a6a912b8e19e3cd9c60" kindref="member">llink</ref><sp/>==<sp/>out<sp/>?<sp/>&amp;parent-&gt;<ref refid="structsp__node_1a1d6ea745e0112a6a912b8e19e3cd9c60" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structsp__node_1ad6ab7d8c03223fa53442e6f17f2cb1b0" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;root)<sp/>=<sp/>temp;</highlight></codeline>
 <codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parent)</highlight></codeline>
 <codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>splay(<ref refid="structtree" kindref="compound">tree</ref>,<sp/>parent);</highlight></codeline>
 <codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" kindref="member">count</ref>--;</highlight></codeline>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="skiplist_8h" kind="file" language="C++">
     <compoundname>skiplist.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -286,7 +286,7 @@
         <link refid="wb__tree_8c"/>
       </node>
     </invincdepgraph>
-      <sectiondef kind="typedef">
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="skiplist_8h_1ad54b05301a5276404d53e2bce969c45f" prot="public" static="no">
         <type>struct <ref refid="structskiplist" kindref="compound">skiplist</ref></type>
         <definition>typedef struct skiplist skiplist</definition>
@@ -313,8 +313,8 @@
         </inbodydescription>
         <location file="include/skiplist.h" line="63" column="28" bodyfile="include/skiplist.h" bodystart="63" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="skiplist_8h_1a163c5a84a8d9796d5a382824734d041c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structskiplist" kindref="compound">skiplist</ref> *</type>
         <definition>skiplist * skiplist_new</definition>
@@ -335,7 +335,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/skiplist.h" line="37" column="9" bodyfile="src/skiplist.c" bodystart="111" bodyend="132" declfile="include/skiplist.h" declline="37" declcolumn="9"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
         <references refid="structskiplist_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="skiplist_8c" startline="54">skiplist::count</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
@@ -415,7 +415,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/skiplist.h" line="42" column="1" bodyfile="src/skiplist.c" bodystart="183" bodyend="210" declfile="include/skiplist.h" declline="42" declcolumn="1"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
         <references refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" compoundref="skiplist_8c" startline="50">skiplist::head</references>
@@ -555,7 +555,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/skiplist.h" line="49" column="1" bodyfile="src/skiplist.c" bodystart="362" bodyend="406" declfile="include/skiplist.h" declline="49" declcolumn="1"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
         <references refid="structskiplist_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="skiplist_8c" startline="54">skiplist::count</references>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
@@ -664,7 +664,7 @@
         <references refid="structskiplist_1a196385d0ce1b6f622135248c96a88e6d" compoundref="skiplist_8c" startline="51">skiplist::max_link</references>
         <references refid="structskip__node_1a45a0b6bc7ce1d301c1527998d99e85f0" compoundref="skiplist_8c" startline="42">skip_node::prev</references>
         <references refid="structskiplist_1af6e47de1fdddfdde6a04eaf5a4cf1609" compoundref="skiplist_8c" startline="52">skiplist::top_link</references>
-        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1af9d82cffc987f421df8743706ac80538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -1090,7 +1090,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/skiplist.h" line="84" column="17" bodyfile="src/skiplist.c" bodystart="645" bodyend="653" declfile="include/skiplist.h" declline="84" declcolumn="17"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
         <references refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="skiplist_8c" startline="40">skip_node::key</references>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
@@ -1112,14 +1112,14 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/skiplist.h" line="85" column="5" bodyfile="src/skiplist.c" bodystart="656" bodyend="665" declfile="include/skiplist.h" declline="85" declcolumn="5"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="skiplist_8c" startline="40">skip_node::key</references>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
         <references refid="structdict__remove__result_1a3b6ac8b02ffc67e7ac109edf6dca3ceb" compoundref="dict_8h" startline="81">dict_remove_result::removed</references>
         <references refid="skiplist_8c_1af23e431ed5e8c8e2aecdcc5627bc68be" compoundref="skiplist_8c" startline="362" endline="406">skiplist_remove</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

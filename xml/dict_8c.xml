@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dict_8c" kind="file" language="C++">
     <compoundname>dict.c</compoundname>
     <includes refid="dict__private_8h" local="yes">dict_private.h</includes>
@@ -118,7 +118,7 @@
         <label>stdlib.h</label>
       </node>
     </incdepgraph>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="dict_8c_1aaa3726224d7be26c97326d970701af83" prot="public" static="no">
         <name>XSTRINGIFY</name>
         <param><defname>x</defname></param>
@@ -143,8 +143,8 @@
         </inbodydescription>
         <location file="src/dict.c" line="31" column="9" bodyfile="src/dict.c" bodystart="31" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="dict_8c_1aebdce71ca7165e3d22e931f13b3b354e" prot="public" static="no" mutable="no">
         <type>const char *const</type>
         <definition>const char* const kDictVersionString</definition>
@@ -189,8 +189,8 @@
         </inbodydescription>
         <location file="src/dict.c" line="38" column="1" bodyfile="src/dict.c" bodystart="38" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="dict_8c_1aff73cb45075501b1f9cac831514fc716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
         <definition>int dict_int_cmp</definition>
@@ -356,7 +356,7 @@
         <location file="src/dict.c" line="103" column="1" bodyfile="src/dict.c" bodystart="103" bodyend="110"/>
         <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="152">dict::_object</references>
         <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" compoundref="dict_8h" startline="100">dict_vtable::dfree</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
       </memberdef>
@@ -378,11 +378,11 @@
         <location file="src/dict.c" line="113" column="1" bodyfile="src/dict.c" bodystart="113" bodyend="119"/>
         <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="174">dict_itor::_itor</references>
         <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="175">dict_itor::_vtable</references>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" compoundref="dict_8h" startline="131">itor_vtable::ifree</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

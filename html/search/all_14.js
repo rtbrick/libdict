@@ -2,7 +2,7 @@ var searchData=
 [
   ['wb_5fdict_5fitor_5fnew_0',['wb_dict_itor_new',['../wb__tree_8h.html#a66f125a277aa553c123e2489c680c4e4',1,'wb_dict_itor_new(wb_tree *tree):&#160;wb_tree.c'],['../wb__tree_8c.html#a66f125a277aa553c123e2489c680c4e4',1,'wb_dict_itor_new(wb_tree *tree):&#160;wb_tree.c']]],
   ['wb_5fdict_5fnew_1',['wb_dict_new',['../wb__tree_8h.html#a56a4ff781347387bc8bf46abf9ba8450',1,'wb_dict_new(dict_compare_func cmp_func):&#160;wb_tree.c'],['../wb__tree_8c.html#a56a4ff781347387bc8bf46abf9ba8450',1,'wb_dict_new(dict_compare_func cmp_func):&#160;wb_tree.c']]],
-  ['wb_5fitor_2',['wb_itor',['../structwb__itor.html',1,'wb_itor'],['../wb__tree_8h.html#a68ba9f33b95bdf4911e28dfdce4601ca',1,'wb_itor():&#160;wb_tree.h']]],
+  ['wb_5fitor_2',['wb_itor',['../structwb__itor.html',1,'wb_itor'],['../wb__tree_8h.html#a68ba9f33b95bdf4911e28dfdce4601ca',1,'wb_itor:&#160;wb_tree.h']]],
   ['wb_5fitor_5fcompare_3',['wb_itor_compare',['../wb__tree_8c.html#a3195a70c2624d672b6d45c90f78b7b8c',1,'wb_itor_compare(const wb_itor *i1, const wb_itor *i2):&#160;wb_tree.c'],['../wb__tree_8h.html#a3195a70c2624d672b6d45c90f78b7b8c',1,'wb_itor_compare(const wb_itor *i1, const wb_itor *i2):&#160;wb_tree.c']]],
   ['wb_5fitor_5fdatum_4',['wb_itor_datum',['../wb__tree_8c.html#a832c1b1d07fa0e6b2bd6af95a5ff5e4a',1,'wb_itor_datum(wb_itor *itor):&#160;wb_tree.c'],['../wb__tree_8h.html#a832c1b1d07fa0e6b2bd6af95a5ff5e4a',1,'wb_itor_datum(wb_itor *itor):&#160;wb_tree.c']]],
   ['wb_5fitor_5ffirst_5',['wb_itor_first',['../wb__tree_8c.html#a02920fef1ee443fd01895cbe411262a0',1,'wb_itor_first(wb_itor *itor):&#160;wb_tree.c'],['../wb__tree_8h.html#a02920fef1ee443fd01895cbe411262a0',1,'wb_itor_first(wb_itor *itor):&#160;wb_tree.c']]],
@@ -22,8 +22,8 @@ var searchData=
   ['wb_5fitor_5fsearch_5fle_19',['wb_itor_search_le',['../wb__tree_8c.html#a9d88f5a7e4d3eab546f3664d916d5e3e',1,'wb_itor_search_le(wb_itor *itor, const void *key):&#160;wb_tree.c'],['../wb__tree_8h.html#a9d88f5a7e4d3eab546f3664d916d5e3e',1,'wb_itor_search_le(wb_itor *itor, const void *key):&#160;wb_tree.c']]],
   ['wb_5fitor_5fsearch_5flt_20',['wb_itor_search_lt',['../wb__tree_8h.html#a3674163743a6ab577a9a0c65690e05e3',1,'wb_itor_search_lt(wb_itor *itor, const void *key):&#160;wb_tree.c'],['../wb__tree_8c.html#a3674163743a6ab577a9a0c65690e05e3',1,'wb_itor_search_lt(wb_itor *itor, const void *key):&#160;wb_tree.c']]],
   ['wb_5fitor_5fvalid_21',['wb_itor_valid',['../wb__tree_8h.html#ab954259febd4e147facc6c586ebbf7b7',1,'wb_itor_valid(const wb_itor *itor):&#160;wb_tree.c'],['../wb__tree_8c.html#ab954259febd4e147facc6c586ebbf7b7',1,'wb_itor_valid(const wb_itor *itor):&#160;wb_tree.c']]],
-  ['wb_5fnode_22',['wb_node',['../structwb__node.html',1,'wb_node'],['../wb__tree_8c.html#a59c9f6dbbc6b0cf7f27ff879a637c67a',1,'wb_node():&#160;wb_tree.c']]],
-  ['wb_5ftree_23',['wb_tree',['../wb__tree_8h.html#abd2c41cc9a77786310dac5f0c1c3481d',1,'wb_tree():&#160;wb_tree.h'],['../structwb__tree.html',1,'wb_tree']]],
+  ['wb_5fnode_22',['wb_node',['../structwb__node.html',1,'wb_node'],['../wb__tree_8c.html#a59c9f6dbbc6b0cf7f27ff879a637c67a',1,'wb_node:&#160;wb_tree.c']]],
+  ['wb_5ftree_23',['wb_tree',['../wb__tree_8h.html#abd2c41cc9a77786310dac5f0c1c3481d',1,'wb_tree:&#160;wb_tree.h'],['../structwb__tree.html',1,'wb_tree']]],
   ['wb_5ftree_2ec_24',['wb_tree.c',['../wb__tree_8c.html',1,'']]],
   ['wb_5ftree_2eh_25',['wb_tree.h',['../wb__tree_8h.html',1,'']]],
   ['wb_5ftree_5fclear_26',['wb_tree_clear',['../wb__tree_8h.html#a03bfb4c101e3007f25ba7e3d18a19dbb',1,'wb_tree_clear(wb_tree *tree, dict_delete_func delete_func):&#160;wb_tree.c'],['../wb__tree_8c.html#a03bfb4c101e3007f25ba7e3d18a19dbb',1,'wb_tree_clear(wb_tree *tree, dict_delete_func delete_func):&#160;wb_tree.c']]],
@@ -43,7 +43,5 @@ var searchData=
   ['wb_5ftree_5ftotal_5fpath_5flength_40',['wb_tree_total_path_length',['../wb__tree_8c.html#af808013473d7440aaf265bb349c0b50b',1,'wb_tree_total_path_length(const wb_tree *tree):&#160;wb_tree.c'],['../wb__tree_8h.html#af808013473d7440aaf265bb349c0b50b',1,'wb_tree_total_path_length(const wb_tree *tree):&#160;wb_tree.c']]],
   ['wb_5ftree_5ftraverse_41',['wb_tree_traverse',['../wb__tree_8c.html#a4bc071f6cdd6c188428d094d8b5a0483',1,'wb_tree_traverse(wb_tree *tree, dict_visit_func visit, void *user_data):&#160;wb_tree.c'],['../wb__tree_8h.html#a4bc071f6cdd6c188428d094d8b5a0483',1,'wb_tree_traverse(wb_tree *tree, dict_visit_func visit, void *user_data):&#160;wb_tree.c']]],
   ['wb_5ftree_5fverify_42',['wb_tree_verify',['../wb__tree_8c.html#a817ec8c3de389dcba19fa0fbd6e719f2',1,'wb_tree_verify(const wb_tree *tree):&#160;wb_tree.c'],['../wb__tree_8h.html#a817ec8c3de389dcba19fa0fbd6e719f2',1,'wb_tree_verify(const wb_tree *tree):&#160;wb_tree.c']]],
-  ['weight_43',['weight',['../structwb__node.html#a81c1ee5114e7b2d69dcb6fa7c92a0430',1,'wb_node']]],
-  ['weight_44',['WEIGHT',['../wb__tree_8c.html#ab15db866407010ad20587248b4febfcb',1,'WEIGHT():&#160;wb_tree.c'],['../pr__tree_8c.html#ab15db866407010ad20587248b4febfcb',1,'WEIGHT():&#160;pr_tree.c']]],
-  ['weight_45',['weight',['../structpr__node.html#a72e70550dea6ad3694160a3d35dd932f',1,'pr_node']]]
+  ['weight_43',['weight',['../structwb__node.html#a81c1ee5114e7b2d69dcb6fa7c92a0430',1,'wb_node::weight'],['../wb__tree_8c.html#ab15db866407010ad20587248b4febfcb',1,'WEIGHT:&#160;wb_tree.c'],['../pr__tree_8c.html#ab15db866407010ad20587248b4febfcb',1,'WEIGHT:&#160;pr_tree.c'],['../structpr__node.html#a72e70550dea6ad3694160a3d35dd932f',1,'pr_node::weight']]]
 ];

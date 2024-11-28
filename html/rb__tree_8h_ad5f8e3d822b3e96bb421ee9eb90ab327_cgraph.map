@@ -1,4 +1,5 @@
 <map id="rb_dict_new" name="rb_dict_new">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,97,31"/>
-<area shape="rect" id="node2" href="$rb__tree_8c.html#a185b47ec876c4da963ab7087500a1b99" title=" " alt="" coords="145,5,239,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,97,31"/>
+<area shape="rect" id="Node000002" href="$rb__tree_8c.html#a185b47ec876c4da963ab7087500a1b99" title=" " alt="" coords="145,5,237,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,16,129,16,129,21,97,21"/>
 </map>

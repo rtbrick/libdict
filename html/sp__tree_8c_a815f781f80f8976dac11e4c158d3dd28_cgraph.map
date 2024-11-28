@@ -1,5 +1,7 @@
 <map id="sp_tree_free" name="sp_tree_free">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,100,31"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#a058d607ec36526c0e52cd66f853ef888" title=" " alt="" coords="148,5,221,31"/>
-<area shape="rect" id="node3" href="$tree__common_8c.html#a6fbd46e35ff34bda38574a440b879dc1" title=" " alt="" coords="269,5,348,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,99,31"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#a058d607ec36526c0e52cd66f853ef888" title=" " alt="" coords="147,5,219,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,16,131,16,131,21,99,21"/>
+<area shape="rect" id="Node000003" href="$tree__common_8c.html#a6fbd46e35ff34bda38574a440b879dc1" title=" " alt="" coords="267,5,345,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="219,16,251,16,251,21,219,21"/>
 </map>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="tree__common_8h" kind="file" language="C++">
     <compoundname>tree_common.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -159,7 +159,7 @@
     </invincdepgraph>
     <innerclass refid="structtree__node__base" prot="public">tree_node_base</innerclass>
     <innerclass refid="structtree__base" prot="public">tree_base</innerclass>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="tree__common_8h_1a8bf6d3b26e824be81b856b68ff0ceed1" prot="public" static="no">
         <name>TREE_NODE_FIELDS</name>
         <param><defname>node_type</defname></param>
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="33" column="9" bodyfile="src/tree_common.h" bodystart="33" bodyend="-1"/>
+        <location file="src/tree_common.h" line="33" column="9" bodyfile="src/tree_common.h" bodystart="33" bodyend="38"/>
       </memberdef>
       <memberdef kind="define" id="tree__common_8h_1ab336de7dac2bbab532f41737fa8f103d" prot="public" static="no">
         <name>TREE_FIELDS</name>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="44" column="9" bodyfile="src/tree_common.h" bodystart="44" bodyend="-1"/>
+        <location file="src/tree_common.h" line="44" column="9" bodyfile="src/tree_common.h" bodystart="44" bodyend="48"/>
       </memberdef>
       <memberdef kind="define" id="tree__common_8h_1aaa3336561dab3f71e234b679290eb7d6" prot="public" static="no">
         <name>TREE_ITERATOR_FIELDS</name>
@@ -203,10 +203,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="54" column="9" bodyfile="src/tree_common.h" bodystart="54" bodyend="-1"/>
+        <location file="src/tree_common.h" line="54" column="9" bodyfile="src/tree_common.h" bodystart="54" bodyend="56"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
+    </sectiondef>
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="tree__common_8h_1a9069a8899a6e1ad0d0facc4644961b6e" prot="public" static="no">
         <type>struct <ref refid="structtree__node__base" kindref="compound">tree_node_base</ref></type>
         <definition>typedef struct tree_node_base tree_node_base</definition>
@@ -233,8 +233,8 @@
         </inbodydescription>
         <location file="src/tree_common.h" line="52" column="11"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="tree__common_8h_1a984b8c466ba0ffa7b9eac4a6b2586849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void tree_node_rot_left</definition>
@@ -255,7 +255,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tree_common.h" line="60" column="9" bodyfile="src/tree_common.c" bodystart="46" bodyend="59" declfile="src/tree_common.h" declline="60" declcolumn="9"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree__node_1ad05ecdb82a6038d4bf5aaa7eac22fbd3" compoundref="tree__common_8c" startline="34">tree_node::llink</references>
         <references refid="structtree__node_1a1b14b7d0565271b34732a5c6fd7b79c4" compoundref="tree__common_8c" startline="34">tree_node::parent</references>
         <references refid="structtree__node_1a385f2b6c9d6fbb5c5f1b9b26d5e64267" compoundref="tree__common_8c" startline="34">tree_node::rlink</references>
@@ -280,7 +280,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tree_common.h" line="63" column="9" bodyfile="src/tree_common.c" bodystart="62" bodyend="75" declfile="src/tree_common.h" declline="63" declcolumn="9"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree__node_1ad05ecdb82a6038d4bf5aaa7eac22fbd3" compoundref="tree__common_8c" startline="34">tree_node::llink</references>
         <references refid="structtree__node_1a1b14b7d0565271b34732a5c6fd7b79c4" compoundref="tree__common_8c" startline="34">tree_node::parent</references>
         <references refid="structtree__node_1a385f2b6c9d6fbb5c5f1b9b26d5e64267" compoundref="tree__common_8c" startline="34">tree_node::rlink</references>
@@ -627,7 +627,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tree_common.h" line="99" column="11" bodyfile="src/tree_common.c" bodystart="252" bodyend="268" declfile="src/tree_common.h" declline="99" declcolumn="11"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
         <references refid="structtree__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tree__common_8c" startline="34">tree_node::key</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
@@ -708,7 +708,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tree_common.h" line="107" column="11" bodyfile="src/tree_common.c" bodystart="302" bodyend="325" declfile="src/tree_common.h" declline="107" declcolumn="11"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
@@ -1114,7 +1114,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tree_common.h" line="131" column="13" bodyfile="src/tree_common.c" bodystart="482" bodyend="492" declfile="src/tree_common.h" declline="131" declcolumn="13"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tree__common_8c" startline="34">tree_node::key</references>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
@@ -1158,7 +1158,7 @@
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structdict__insert__result" kind="struct" language="C++" prot="public">
     <compoundname>dict_insert_result</compoundname>
     <includes refid="dict_8h" local="no">dict.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structdict__insert__result_1a9874e765273b8a34323b00166c989f2e" prot="public" static="no" mutable="no">
         <type>void **</type>
         <definition>void** datum_ptr</definition>
@@ -32,7 +32,7 @@
         </inbodydescription>
         <location file="include/dict.h" line="75" column="13" bodyfile="include/dict.h" bodystart="75" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.5" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="structdict" kind="struct"><name>dict</name>
     <member refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" kind="variable"><name>_object</name></member>
     <member refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" kind="variable"><name>_vtable</name></member>
@@ -73,7 +73,7 @@
     <member refid="structhb__node_1a56b62b74c25973b49f06895dfd600c94" kind="variable"><name>datum</name></member>
     <member refid="structhb__node_1afef439511732fd1557216f60d140adc1" kind="variable"><name>bal</name></member>
     <member refid="structhb__node_1a5a83c322bc3600c9d6ad24ac42fb3da4" kind="variable"><name>pptr</name></member>
-    <member refid="structhb__node_1a9142098899fc37a1d20a92aaeddb436c" kind="variable"><name>@1</name></member>
+    <member refid="structhb__node_1a9142098899fc37a1d20a92aaeddb436c" kind="variable"><name></name></member>
     <member refid="structhb__node_1a09a1a7c8d2b7630acdf7c7b85e084fd8" kind="variable"><name>llink</name></member>
     <member refid="structhb__node_1abd399e99e142df740ec840a54f801a8d" kind="variable"><name>rlink</name></member>
   </compound>

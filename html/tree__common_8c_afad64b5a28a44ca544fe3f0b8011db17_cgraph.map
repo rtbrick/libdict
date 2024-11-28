@@ -1,5 +1,7 @@
 <map id="tree_iterator_prev" name="tree_iterator_prev">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,128,31"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#aad7c42c6dfa4a11176cff91f41c9383a" title=" " alt="" coords="176,5,287,31"/>
-<area shape="rect" id="node3" href="$tree__common_8c.html#a1f73b77d5b43f77f45ba24acdbe83faf" title=" " alt="" coords="335,5,445,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,128,31"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#aad7c42c6dfa4a11176cff91f41c9383a" title=" " alt="" coords="176,5,286,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,16,160,16,160,21,128,21"/>
+<area shape="rect" id="Node000003" href="$tree__common_8c.html#a1f73b77d5b43f77f45ba24acdbe83faf" title=" " alt="" coords="334,5,443,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="286,16,318,16,318,21,286,21"/>
 </map>

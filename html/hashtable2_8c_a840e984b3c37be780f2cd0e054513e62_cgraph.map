@@ -1,4 +1,5 @@
 <map id="hashtable2_new" name="hashtable2_new">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,121,31"/>
-<area shape="rect" id="node2" href="$hashtable__common_8c.html#af8af08005cd8f9f8cd81dd7ca0692b11" title=" " alt="" coords="169,5,280,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,121,31"/>
+<area shape="rect" id="Node000002" href="$hashtable__common_8c.html#af8af08005cd8f9f8cd81dd7ca0692b11" title=" " alt="" coords="169,5,278,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,16,153,16,153,21,121,21"/>
 </map>

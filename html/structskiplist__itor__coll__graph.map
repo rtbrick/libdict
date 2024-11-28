@@ -1,5 +1,9 @@
 <map id="skiplist_itor" name="skiplist_itor">
-<area shape="rect" id="node1" title=" " alt="" coords="13,185,101,211"/>
-<area shape="rect" id="node2" href="$structskiplist.html" title=" " alt="" coords="81,97,144,123"/>
-<area shape="rect" id="node3" href="$structskip__node.html" title=" " alt="" coords="5,7,87,33"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="13,187,100,213"/>
+<area shape="rect" id="Node000002" href="$structskiplist.html" title=" " alt="" coords="80,98,142,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,139,66,188,61,185,93,136"/>
+<area shape="rect" id="Node000003" href="$structskip__node.html" title=" " alt="" coords="5,8,86,33"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="43,49,39,85,40,124,55,186,50,187,35,124,34,84,38,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="66,44,104,97,100,100,61,47"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="103,11,112,20,104,29,87,32,86,26,102,24,107,20,99,15"/>
 </map>

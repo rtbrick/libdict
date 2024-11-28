@@ -1,5 +1,7 @@
 <map id="hb_tree_select" name="hb_tree_select">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,112,56"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#a1f73b77d5b43f77f45ba24acdbe83faf" title=" " alt="" coords="160,5,271,31"/>
-<area shape="rect" id="node3" href="$tree__common_8c.html#a7b6de5488b23a09de4f838c218adabd0" title=" " alt="" coords="162,55,269,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,112,56"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#a1f73b77d5b43f77f45ba24acdbe83faf" title=" " alt="" coords="160,5,269,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,32,144,27,145,32,113,37"/>
+<area shape="rect" id="Node000003" href="$tree__common_8c.html#a7b6de5488b23a09de4f838c218adabd0" title=" " alt="" coords="161,55,268,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,49,146,54,145,60,112,54"/>
 </map>

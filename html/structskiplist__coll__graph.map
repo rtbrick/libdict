@@ -1,4 +1,6 @@
 <map id="skiplist" name="skiplist">
-<area shape="rect" id="node1" title=" " alt="" coords="15,97,77,123"/>
-<area shape="rect" id="node2" href="$structskip__node.html" title=" " alt="" coords="5,7,87,33"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="14,98,77,124"/>
+<area shape="rect" id="Node000002" href="$structskip__node.html" title=" " alt="" coords="5,8,86,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,48,48,98,43,98,43,48"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="103,11,112,20,104,29,87,32,86,26,102,24,107,20,99,15"/>
 </map>

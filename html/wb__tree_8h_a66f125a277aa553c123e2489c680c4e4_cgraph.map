@@ -1,4 +1,5 @@
 <map id="wb_dict_itor_new" name="wb_dict_itor_new">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,128,31"/>
-<area shape="rect" id="node2" href="$wb__tree_8c.html#ad6ec8c7c6c7ed74c04cd2380597e999c" title=" " alt="" coords="176,5,271,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,128,31"/>
+<area shape="rect" id="Node000002" href="$wb__tree_8c.html#ad6ec8c7c6c7ed74c04cd2380597e999c" title=" " alt="" coords="176,5,270,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,16,160,16,160,21,128,21"/>
 </map>

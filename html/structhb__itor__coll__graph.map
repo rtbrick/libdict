@@ -1,5 +1,9 @@
 <map id="hb_itor" name="hb_itor">
-<area shape="rect" id="node1" title=" " alt="" coords="22,200,83,225"/>
-<area shape="rect" id="node2" href="$structhb__tree.html" title=" " alt="" coords="76,112,141,137"/>
-<area shape="rect" id="node3" href="$structhb__node.html" title=" " alt="" coords="5,15,76,40"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="21,202,81,228"/>
+<area shape="rect" id="Node000002" href="$structhb__tree.html" title=" " alt="" coords="74,113,138,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,154,61,203,56,200,88,151"/>
+<area shape="rect" id="Node000003" href="$structhb__node.html" title=" " alt="" coords="5,15,76,41"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="38,56,33,95,33,139,41,173,49,201,44,202,36,174,28,139,27,95,32,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="60,52,100,112,96,115,55,55"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="92,17,99,21,102,28,94,38,77,41,76,35,92,33,97,27,95,25,90,22"/>
 </map>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="rb__tree_8h" kind="file" language="C++">
     <compoundname>rb_tree.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -286,7 +286,7 @@
         <link refid="wb__tree_8c"/>
       </node>
     </invincdepgraph>
-      <sectiondef kind="typedef">
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="rb__tree_8h_1af62be841b6f282162fad0a686ffd5e10" prot="public" static="no">
         <type>struct <ref refid="structrb__tree" kindref="compound">rb_tree</ref></type>
         <definition>typedef struct rb_tree rb_tree</definition>
@@ -313,8 +313,8 @@
         </inbodydescription>
         <location file="include/rb_tree.h" line="59" column="22" bodyfile="include/rb_tree.h" bodystart="59" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="rb__tree_8h_1a185b47ec876c4da963ab7087500a1b99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structrb__tree" kindref="compound">rb_tree</ref> *</type>
         <definition>rb_tree * rb_tree_new</definition>
@@ -331,7 +331,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/rb_tree.h" line="37" column="8" bodyfile="src/rb_tree.c" bodystart="113" bodyend="125" declfile="include/rb_tree.h" declline="37" declcolumn="8"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
@@ -403,7 +403,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/rb_tree.h" line="42" column="1" bodyfile="src/rb_tree.c" bodystart="180" bodyend="214" declfile="include/rb_tree.h" declline="42" declcolumn="1"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structrb__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="rb__tree_8c" startline="41">rb_node::datum</references>
@@ -569,7 +569,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/rb_tree.h" line="50" column="7" bodyfile="src/rb_tree.c" bodystart="149" bodyend="171" declfile="include/rb_tree.h" declline="50" declcolumn="7"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structrb__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="rb__tree_8c" startline="41">rb_node::datum</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
@@ -736,7 +736,7 @@
         <references refid="structrb__node_1a9d12018e18c3e299b58bfe67848f2f64" compoundref="rb__tree_8c" startline="43">rb_node::llink</references>
         <references refid="rb__tree_8c_1a9776c921e63661755728d05e55484d0b" compoundref="rb__tree_8c" startline="48">RB_BLACK</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
-        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
       </memberdef>
       <memberdef kind="function" id="rb__tree_8h_1a5b8d3d3eb399c02c815d24bc1bc7cb35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structrb__itor" kindref="compound">rb_itor</ref> *</type>
@@ -1139,7 +1139,7 @@
         <references refid="structrb__itor_1ae49fdb9a0b8ac1940cd9fd3047488de1" compoundref="rb__tree_8c" startline="62">rb_itor::node</references>
         <references refid="structrb__itor_1a5131fd6ad6d9f6bb49f67571babdb5d6" compoundref="rb__tree_8c" startline="62">rb_itor::tree</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

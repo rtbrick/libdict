@@ -1,5 +1,7 @@
 <map id="tr_tree_free" name="tr_tree_free">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,93,31"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#a058d607ec36526c0e52cd66f853ef888" title=" " alt="" coords="141,5,215,31"/>
-<area shape="rect" id="node3" href="$tree__common_8c.html#a6fbd46e35ff34bda38574a440b879dc1" title=" " alt="" coords="263,5,341,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,93,31"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#a058d607ec36526c0e52cd66f853ef888" title=" " alt="" coords="141,5,213,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,16,125,16,125,21,93,21"/>
+<area shape="rect" id="Node000003" href="$tree__common_8c.html#a6fbd46e35ff34bda38574a440b879dc1" title=" " alt="" coords="261,5,339,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,16,245,16,245,21,213,21"/>
 </map>

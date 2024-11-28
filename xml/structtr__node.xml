@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structtr__node" kind="struct" language="C++" prot="public">
     <compoundname>tr_node</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structtr__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" static="no" mutable="no">
         <type>void *</type>
         <definition>void* key</definition>
@@ -87,7 +87,7 @@
         </inbodydescription>
         <location file="src/tr_tree.c" line="52" column="17" bodyfile="src/tr_tree.c" bodystart="52" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

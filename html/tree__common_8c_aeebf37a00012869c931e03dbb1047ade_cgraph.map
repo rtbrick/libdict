@@ -1,4 +1,5 @@
 <map id="tree_iterator_search" name="tree_iterator_search">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,143,31"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#a4336bbd1dec56af86a45e1d84d622063" title=" " alt="" coords="191,5,316,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,142,31"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#a4336bbd1dec56af86a45e1d84d622063" title=" " alt="" coords="190,5,314,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,16,174,16,174,21,142,21"/>
 </map>

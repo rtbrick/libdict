@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="tree__common_8c" kind="file" language="C++">
     <compoundname>tree_common.c</compoundname>
     <includes refid="tree__common_8h" local="yes">tree_common.h</includes>
@@ -136,7 +136,7 @@
     <innerclass refid="structtree__node" prot="public">tree_node</innerclass>
     <innerclass refid="structtree" prot="public">tree</innerclass>
     <innerclass refid="structtree__iterator" prot="public">tree_iterator</innerclass>
-      <sectiondef kind="typedef">
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="tree__common_8c_1a6dae47dcd4d115ec4657410802efb75b" prot="public" static="no">
         <type>struct <ref refid="structtree__node" kindref="compound">tree_node</ref></type>
         <definition>typedef struct tree_node tree_node</definition>
@@ -150,8 +150,8 @@
         </inbodydescription>
         <location file="src/tree_common.c" line="35" column="11"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="tree__common_8c_1a364dcfa88f9f8e27d1e0ffa7ae7cd15d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void tree_node_rot_left</definition>
@@ -172,7 +172,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tree_common.c" line="46" column="1" bodyfile="src/tree_common.c" bodystart="46" bodyend="59"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree__node_1ad05ecdb82a6038d4bf5aaa7eac22fbd3" compoundref="tree__common_8c" startline="34">tree_node::llink</references>
         <references refid="structtree__node_1a1b14b7d0565271b34732a5c6fd7b79c4" compoundref="tree__common_8c" startline="34">tree_node::parent</references>
         <references refid="structtree__node_1a385f2b6c9d6fbb5c5f1b9b26d5e64267" compoundref="tree__common_8c" startline="34">tree_node::rlink</references>
@@ -197,7 +197,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tree_common.c" line="62" column="1" bodyfile="src/tree_common.c" bodystart="62" bodyend="75"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree__node_1ad05ecdb82a6038d4bf5aaa7eac22fbd3" compoundref="tree__common_8c" startline="34">tree_node::llink</references>
         <references refid="structtree__node_1a1b14b7d0565271b34732a5c6fd7b79c4" compoundref="tree__common_8c" startline="34">tree_node::parent</references>
         <references refid="structtree__node_1a385f2b6c9d6fbb5c5f1b9b26d5e64267" compoundref="tree__common_8c" startline="34">tree_node::rlink</references>
@@ -544,7 +544,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tree_common.c" line="252" column="1" bodyfile="src/tree_common.c" bodystart="252" bodyend="268"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
         <references refid="structtree__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tree__common_8c" startline="34">tree_node::key</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
@@ -625,7 +625,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tree_common.c" line="302" column="1" bodyfile="src/tree_common.c" bodystart="302" bodyend="325"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
@@ -1086,7 +1086,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tree_common.c" line="482" column="1" bodyfile="src/tree_common.c" bodystart="482" bodyend="492"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="tree__common_8c" startline="34">tree_node::key</references>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
@@ -1130,7 +1130,7 @@
         <references refid="structtree__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tree__common_8c" startline="34">tree_node::datum</references>
         <references refid="structtree__iterator_1a3fb7c06515f16af7c11e07e7a3dd4813" compoundref="tree__common_8c" startline="42">tree_iterator::node</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

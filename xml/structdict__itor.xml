@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structdict__itor" kind="struct" language="C++" prot="public">
     <compoundname>dict_itor</compoundname>
     <includes refid="dict_8h" local="no">dict.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" prot="public" static="no" mutable="no">
         <type>void *</type>
         <definition>void* _itor</definition>
@@ -32,7 +32,7 @@
         </inbodydescription>
         <location file="include/dict.h" line="175" column="24" bodyfile="include/dict.h" bodystart="175" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

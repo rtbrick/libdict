@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structhashtable" kind="struct" language="C++" prot="public">
     <compoundname>hashtable</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structhashtable_1ad9caeed525ca3622b9d44edd1531a23f" prot="public" static="no" mutable="no">
         <type><ref refid="hashtable_8c_1a4a37dff778daa13ddb34cd8e4ef1a129" kindref="member">hash_node</ref> **</type>
         <definition>hash_node** table</definition>
@@ -73,7 +73,7 @@
         </inbodydescription>
         <location file="src/hashtable.c" line="61" column="17" bodyfile="src/hashtable.c" bodystart="61" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

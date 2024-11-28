@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="tr__tree_8c" kind="file" language="C++">
     <compoundname>tr_tree.c</compoundname>
     <includes refid="tr__tree_8h" local="yes">tr_tree.h</includes>
@@ -139,7 +139,7 @@
     <innerclass refid="structtr__node" prot="public">tr_node</innerclass>
     <innerclass refid="structtr__tree" prot="public">tr_tree</innerclass>
     <innerclass refid="structtr__itor" prot="public">tr_itor</innerclass>
-      <sectiondef kind="typedef">
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="tr__tree_8c_1a9e133a630615d0838dc94fa52d7d7395" prot="public" static="no">
         <type>struct <ref refid="structtr__node" kindref="compound">tr_node</ref></type>
         <definition>typedef struct tr_node tr_node</definition>
@@ -153,8 +153,8 @@
         </inbodydescription>
         <location file="src/tr_tree.c" line="49" column="22" bodyfile="src/tr_tree.c" bodystart="49" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="tr__tree_8c_1ae644d5e2ee0e0fb10e49c18f320d5426" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structdict__vtable" kindref="compound">dict_vtable</ref></type>
         <definition>const dict_vtable tr_tree_vtable</definition>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tr_tree.c" line="64" column="26" bodyfile="src/tr_tree.c" bodystart="64" bodyend="-1"/>
+        <location file="src/tr_tree.c" line="64" column="26" bodyfile="src/tr_tree.c" bodystart="64" bodyend="80"/>
       </memberdef>
       <memberdef kind="variable" id="tr__tree_8c_1aec869c9972cd577ccc6a6017b3344b5b" prot="public" static="yes" mutable="no">
         <type>const <ref refid="structitor__vtable" kindref="compound">itor_vtable</ref></type>
@@ -216,10 +216,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tr_tree.c" line="82" column="26" bodyfile="src/tr_tree.c" bodystart="82" bodyend="-1"/>
+        <location file="src/tr_tree.c" line="82" column="26" bodyfile="src/tr_tree.c" bodystart="82" bodyend="101"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="tr__tree_8c_1a1da1da775ec7171b829f3d404d4d937e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
         <definition>static tr_node * node_new</definition>
@@ -257,7 +257,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tr_tree.c" line="106" column="1" bodyfile="src/tr_tree.c" bodystart="106" bodyend="119"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
@@ -354,7 +354,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/tr_tree.c" line="139" column="1" bodyfile="src/tr_tree.c" bodystart="139" bodyend="182"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="tr__tree_8c" startline="51">tr_node::datum</references>
@@ -694,7 +694,7 @@
         <location file="src/tr_tree.c" line="271" column="1" bodyfile="src/tr_tree.c" bodystart="271" bodyend="279"/>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
-        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
       </memberdef>
       <memberdef kind="function" id="tr__tree_8c_1a83f90deca79342a7693b461a51af5552" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structtr__itor" kindref="compound">tr_itor</ref> *</type>
@@ -1095,7 +1095,7 @@
         <references refid="structtr__itor_1aa20baf22d1f5efc4cb041a5f4d7070ba" compoundref="tr__tree_8c" startline="61">tr_itor::node</references>
         <references refid="structtr__itor_1aecf2bdfca32e5e0ab1e1fd6ef98c7f94" compoundref="tr__tree_8c" startline="61">tr_itor::tree</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1301,7 +1301,7 @@
 <codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>parent<sp/>=<sp/>node-&gt;<ref refid="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" kindref="member">parent</ref>;</highlight></codeline>
 <codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(out)</highlight></codeline>
 <codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>out-&gt;<ref refid="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" kindref="member">parent</ref><sp/>=<sp/>parent;</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)<sp/>=<sp/>out;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;root)<sp/>=<sp/>out;</highlight></codeline>
 <codeline lineno="202"><highlight class="normal"></highlight></codeline>
 <codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" kindref="member">FREE</ref>(node);</highlight></codeline>
 <codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" kindref="member">count</ref>--;</highlight></codeline>

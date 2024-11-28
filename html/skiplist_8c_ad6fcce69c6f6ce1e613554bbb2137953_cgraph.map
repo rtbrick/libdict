@@ -1,4 +1,5 @@
 <map id="skiplist_itor_nextn" name="skiplist_itor_nextn">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,132,31"/>
-<area shape="rect" id="node2" href="$skiplist_8c.html#a6b16e0f86c1a718837212ec494dc639d" title=" " alt="" coords="180,5,299,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,131,31"/>
+<area shape="rect" id="Node000002" href="$skiplist_8c.html#a6b16e0f86c1a718837212ec494dc639d" title=" " alt="" coords="179,5,297,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,16,163,16,163,21,131,21"/>
 </map>

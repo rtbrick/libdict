@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structtree__node__base" kind="struct" language="C++" prot="public">
     <compoundname>tree_node_base</compoundname>
     <includes refid="tree__common_8h" local="no">tree_common.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structtree__node__base_1ab5c000aec752f2206131e183daf5efbf" prot="public" static="no" mutable="no">
         <type>void *</type>
         <definition>void* key</definition>
@@ -74,7 +74,7 @@
         </inbodydescription>
         <location file="src/tree_common.h" line="41" column="112" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

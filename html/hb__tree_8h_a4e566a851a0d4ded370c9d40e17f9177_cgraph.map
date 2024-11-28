@@ -1,5 +1,7 @@
 <map id="hb_tree_search_gt" name="hb_tree_search_gt">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,135,31"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#a28283925393f2eb613aa1e669f181c18" title=" " alt="" coords="183,5,291,31"/>
-<area shape="rect" id="node3" href="$tree__common_8c.html#a083987581cc9832ac2e13c1047b6f0f3" title=" " alt="" coords="339,5,481,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,134,31"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#a28283925393f2eb613aa1e669f181c18" title=" " alt="" coords="182,5,289,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,16,166,16,166,21,134,21"/>
+<area shape="rect" id="Node000003" href="$tree__common_8c.html#a083987581cc9832ac2e13c1047b6f0f3" title=" " alt="" coords="337,5,479,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="290,16,321,16,321,21,290,21"/>
 </map>

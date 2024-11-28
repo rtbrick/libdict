@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structwb__tree" kind="struct" language="C++" prot="public">
     <compoundname>wb_tree</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structwb__tree_1af4663f05b636f5afe22c365f14bd3888" prot="public" static="no" mutable="no">
         <type><ref refid="structwb__node" kindref="compound">wb_node</ref> *</type>
         <definition>wb_node* root</definition>
@@ -59,7 +59,7 @@
         </inbodydescription>
         <location file="src/wb_tree.c" line="75" column="73" bodyfile="src/wb_tree.c" bodystart="75" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

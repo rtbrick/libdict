@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structsp__itor" kind="struct" language="C++" prot="public">
     <compoundname>sp_itor</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structsp__itor_1a8bea87a779a98e21ef87ad5fe91be6f4" prot="public" static="no" mutable="no">
         <type><ref refid="structsp__tree" kindref="compound">sp_tree</ref> *</type>
         <definition>sp_tree* tree</definition>
@@ -31,7 +31,7 @@
         </inbodydescription>
         <location file="src/sp_tree.c" line="63" column="32" bodyfile="src/sp_tree.c" bodystart="63" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

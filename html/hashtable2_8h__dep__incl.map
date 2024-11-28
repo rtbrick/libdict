@@ -1,25 +1,72 @@
 <map id="include/hashtable2.h" name="include/hashtable2.h">
-<area shape="rect" id="node1" title=" " alt="" coords="725,5,865,31"/>
-<area shape="rect" id="node2" href="$dict_8h.html" title=" " alt="" coords="745,79,844,104"/>
-<area shape="rect" id="node21" href="$hashtable2_8c.html" title=" " alt="" coords="1432,225,1549,251"/>
-<area shape="rect" id="node3" href="$hashtable_8h.html" title=" " alt="" coords="1309,152,1443,177"/>
-<area shape="rect" id="node5" href="$hb__tree_8h.html" title=" " alt="" coords="296,152,416,177"/>
-<area shape="rect" id="node7" href="$pr__tree_8h.html" title=" " alt="" coords="736,152,853,177"/>
-<area shape="rect" id="node9" href="$rb__tree_8h.html" title=" " alt="" coords="1024,152,1141,177"/>
-<area shape="rect" id="node11" href="$skiplist_8h.html" title=" " alt="" coords="1166,152,1285,177"/>
-<area shape="rect" id="node13" href="$sp__tree_8h.html" title=" " alt="" coords="5,152,125,177"/>
-<area shape="rect" id="node15" href="$tr__tree_8h.html" title=" " alt="" coords="597,152,712,177"/>
-<area shape="rect" id="node17" href="$wb__tree_8h.html" title=" " alt="" coords="149,152,272,177"/>
-<area shape="rect" id="node19" href="$dict__private_8h.html" title=" " alt="" coords="878,152,999,177"/>
-<area shape="rect" id="node23" href="$tree__common_8h.html" title=" " alt="" coords="440,152,573,177"/>
-<area shape="rect" id="node4" href="$hashtable_8c.html" title=" " alt="" coords="1297,225,1407,251"/>
-<area shape="rect" id="node6" href="$hb__tree_8c.html" title=" " alt="" coords="445,225,542,251"/>
-<area shape="rect" id="node8" href="$pr__tree_8c.html" title=" " alt="" coords="682,225,777,251"/>
-<area shape="rect" id="node10" href="$rb__tree_8c.html" title=" " alt="" coords="959,225,1054,251"/>
-<area shape="rect" id="node12" href="$skiplist_8c.html" title=" " alt="" coords="1178,225,1273,251"/>
-<area shape="rect" id="node14" href="$sp__tree_8c.html" title=" " alt="" coords="199,225,297,251"/>
-<area shape="rect" id="node16" href="$tr__tree_8c.html" title=" " alt="" coords="567,225,657,251"/>
-<area shape="rect" id="node18" href="$wb__tree_8c.html" title=" " alt="" coords="321,225,421,251"/>
-<area shape="rect" id="node20" href="$dict_8c.html" title=" " alt="" coords="1079,225,1153,251"/>
-<area shape="rect" id="node22" href="$tree__common_8c.html" title=" " alt="" coords="801,225,935,251"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="721,5,860,31"/>
+<area shape="rect" id="Node000002" href="$dict_8h.html" title=" " alt="" coords="742,79,839,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="784,46,786,78,781,79,779,46"/>
+<area shape="rect" id="Node000021" href="$hashtable2_8c.html" title=" " alt="" coords="1422,226,1538,252"/>
+<area shape="poly" id="edge47_Node000001_Node000021" title=" " alt="" coords="876,24,1019,40,1188,66,1269,83,1343,103,1403,125,1447,151,1462,168,1472,188,1481,225,1476,227,1467,190,1457,171,1443,155,1401,130,1341,108,1268,88,1187,71,1018,46,875,30"/>
+<area shape="poly" id="edge5_Node000002_Node000001" title=" " alt="" coords="796,64,795,31,800,31,802,63"/>
+<area shape="rect" id="Node000003" href="$hashtable_8h.html" title=" " alt="" coords="1300,153,1433,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="855,99,1276,150,1300,153,1300,159,1275,155,854,104"/>
+<area shape="rect" id="Node000005" href="$hb__tree_8h.html" title=" " alt="" coords="296,153,415,178"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="727,105,416,156,415,151,726,100"/>
+<area shape="rect" id="Node000007" href="$pr__tree_8h.html" title=" " alt="" coords="732,153,849,178"/>
+<area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="784,120,786,152,781,152,779,120"/>
+<area shape="rect" id="Node000009" href="$rb__tree_8h.html" title=" " alt="" coords="1018,153,1134,178"/>
+<area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="847,106,1021,149,1019,155,846,112"/>
+<area shape="rect" id="Node000011" href="$skiplist_8h.html" title=" " alt="" coords="1158,153,1276,178"/>
+<area shape="poly" id="edge15_Node000002_Node000011" title=" " alt="" coords="854,102,1158,153,1157,158,854,108"/>
+<area shape="rect" id="Node000013" href="$sp__tree_8h.html" title=" " alt="" coords="5,153,125,178"/>
+<area shape="poly" id="edge18_Node000002_Node000013" title=" " alt="" coords="726,100,464,120,126,155,125,150,463,115,726,94"/>
+<area shape="rect" id="Node000015" href="$tr__tree_8h.html" title=" " alt="" coords="595,153,708,178"/>
+<area shape="poly" id="edge21_Node000002_Node000015" title=" " alt="" coords="747,114,670,154,667,150,745,109"/>
+<area shape="rect" id="Node000017" href="$wb__tree_8h.html" title=" " alt="" coords="149,153,272,178"/>
+<area shape="poly" id="edge24_Node000002_Node000017" title=" " alt="" coords="727,102,524,124,273,155,272,150,523,119,726,96"/>
+<area shape="rect" id="Node000019" href="$dict__private_8h.html" title=" " alt="" coords="873,153,993,178"/>
+<area shape="poly" id="edge27_Node000002_Node000019" title=" " alt="" coords="829,110,910,150,907,154,827,114"/>
+<area shape="rect" id="Node000023" href="$tree__common_8h.html" title=" " alt="" coords="439,153,571,178"/>
+<area shape="poly" id="edge39_Node000002_Node000023" title=" " alt="" coords="728,111,554,155,553,149,726,106"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="1284,153,839,101,840,95,1285,148"/>
+<area shape="rect" id="Node000004" href="$hashtable_8c.html" title=" " alt="" coords="1288,226,1397,252"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="1360,194,1349,227,1344,225,1355,192"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="430,150,741,100,742,105,431,156"/>
+<area shape="rect" id="Node000006" href="$hb__tree_8c.html" title=" " alt="" coords="445,226,541,252"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="394,183,471,223,468,228,391,188"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="796,137,795,105,800,105,802,137"/>
+<area shape="rect" id="Node000008" href="$pr__tree_8c.html" title=" " alt="" coords="680,226,773,252"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="772,191,739,228,735,224,768,188"/>
+<area shape="poly" id="edge13_Node000009_Node000002" title=" " alt="" coords="1019,151,838,106,840,101,1020,146"/>
+<area shape="rect" id="Node000010" href="$rb__tree_8c.html" title=" " alt="" coords="954,226,1048,252"/>
+<area shape="poly" id="edge14_Node000009_Node000010" title=" " alt="" coords="1054,191,1015,228,1012,224,1050,187"/>
+<area shape="poly" id="edge16_Node000011_Node000002" title=" " alt="" coords="1142,153,839,103,840,98,1143,148"/>
+<area shape="rect" id="Node000012" href="$skiplist_8c.html" title=" " alt="" coords="1170,226,1264,252"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="1220,194,1220,226,1214,226,1214,194"/>
+<area shape="poly" id="edge19_Node000013_Node000002" title=" " alt="" coords="140,151,149,150,487,115,741,94,742,100,488,120,149,155,141,156"/>
+<area shape="rect" id="Node000014" href="$sp__tree_8c.html" title=" " alt="" coords="202,226,299,252"/>
+<area shape="poly" id="edge20_Node000013_Node000014" title=" " alt="" coords="111,182,220,223,218,228,110,187"/>
+<area shape="poly" id="edge22_Node000015_Node000002" title=" " alt="" coords="695,143,773,103,775,108,697,148"/>
+<area shape="rect" id="Node000016" href="$tr__tree_8c.html" title=" " alt="" coords="565,226,656,252"/>
+<area shape="poly" id="edge23_Node000015_Node000016" title=" " alt="" coords="640,193,620,227,615,225,635,190"/>
+<area shape="poly" id="edge25_Node000017_Node000002" title=" " alt="" coords="287,151,295,150,546,119,741,96,741,102,546,124,296,155,287,157"/>
+<area shape="rect" id="Node000018" href="$wb__tree_8c.html" title=" " alt="" coords="322,226,421,252"/>
+<area shape="poly" id="edge26_Node000017_Node000018" title=" " alt="" coords="253,183,345,223,343,228,250,187"/>
+<area shape="poly" id="edge29_Node000019_Node000004" title=" " alt="" coords="1009,177,1288,226,1287,231,1008,183"/>
+<area shape="poly" id="edge31_Node000019_Node000006" title=" " alt="" coords="858,181,553,229,542,231,541,226,553,224,857,176"/>
+<area shape="poly" id="edge32_Node000019_Node000008" title=" " alt="" coords="885,186,762,228,761,223,883,181"/>
+<area shape="poly" id="edge33_Node000019_Node000010" title=" " alt="" coords="957,188,991,224,988,228,953,191"/>
+<area shape="poly" id="edge34_Node000019_Node000012" title=" " alt="" coords="997,180,1170,223,1169,229,995,185"/>
+<area shape="poly" id="edge35_Node000019_Node000014" title=" " alt="" coords="858,181,703,196,582,204,463,212,311,229,299,231,298,225,310,224,462,206,582,198,703,191,857,176"/>
+<area shape="poly" id="edge36_Node000019_Node000016" title=" " alt="" coords="864,185,656,230,655,225,862,180"/>
+<area shape="poly" id="edge38_Node000019_Node000018" title=" " alt="" coords="858,181,644,204,551,213,433,229,422,231,421,225,433,224,550,208,643,199,857,176"/>
+<area shape="rect" id="Node000020" href="$dict_8c.html" title=" " alt="" coords="1072,226,1146,252"/>
+<area shape="poly" id="edge28_Node000019_Node000020" title=" " alt="" coords="978,182,1080,223,1078,228,976,187"/>
+<area shape="poly" id="edge30_Node000019_Node000021" title=" " alt="" coords="1009,176,1210,200,1409,224,1421,225,1421,231,1409,229,1210,205,1008,181"/>
+<area shape="rect" id="Node000022" href="$tree__common_8c.html" title=" " alt="" coords="798,226,930,252"/>
+<area shape="poly" id="edge37_Node000019_Node000022" title=" " alt="" coords="913,191,877,228,873,224,909,187"/>
+<area shape="poly" id="edge40_Node000023_Node000006" title=" " alt="" coords="503,194,498,226,492,225,498,193"/>
+<area shape="poly" id="edge41_Node000023_Node000008" title=" " alt="" coords="558,181,689,223,688,228,556,186"/>
+<area shape="poly" id="edge42_Node000023_Node000010" title=" " alt="" coords="587,176,766,199,943,224,955,226,954,231,942,229,766,204,586,182"/>
+<area shape="poly" id="edge43_Node000023_Node000014" title=" " alt="" coords="448,185,294,228,293,223,447,180"/>
+<area shape="poly" id="edge44_Node000023_Node000016" title=" " alt="" coords="537,185,594,224,591,228,534,190"/>
+<area shape="poly" id="edge46_Node000023_Node000018" title=" " alt="" coords="470,188,396,228,393,223,468,184"/>
+<area shape="poly" id="edge45_Node000023_Node000022" title=" " alt="" coords="582,179,803,223,802,228,581,185"/>
 </map>

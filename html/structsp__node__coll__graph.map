@@ -1,3 +1,4 @@
 <map id="sp_node" name="sp_node">
-<area shape="rect" id="node1" title=" " alt="" coords="5,15,76,40"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,15,76,41"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="93,22,102,28,94,34,76,35,76,30,92,29,97,28,90,26"/>
 </map>

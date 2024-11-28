@@ -1,6 +1,10 @@
 <map id="wb_tree_traverse" name="wb_tree_traverse">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,128,31"/>
-<area shape="rect" id="node2" href="$tree__common_8c.html#a8af8d7bc05c41b6b1889714238c541e1" title=" " alt="" coords="176,5,275,31"/>
-<area shape="rect" id="node3" href="$tree__common_8c.html#a7b6de5488b23a09de4f838c218adabd0" title=" " alt="" coords="481,5,588,31"/>
-<area shape="rect" id="node4" href="$tree__common_8c.html#af61f08f021d60815449e7657dc75ea6a" title=" " alt="" coords="323,31,433,56"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,127,31"/>
+<area shape="rect" id="Node000002" href="$tree__common_8c.html#a8af8d7bc05c41b6b1889714238c541e1" title=" " alt="" coords="175,5,272,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,16,159,16,159,21,127,21"/>
+<area shape="rect" id="Node000003" href="$tree__common_8c.html#a7b6de5488b23a09de4f838c218adabd0" title=" " alt="" coords="477,5,584,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="273,16,462,16,462,21,273,21"/>
+<area shape="rect" id="Node000004" href="$tree__common_8c.html#af61f08f021d60815449e7657dc75ea6a" title=" " alt="" coords="320,31,429,56"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="273,24,305,29,304,34,272,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="429,32,461,27,462,32,430,37"/>
 </map>

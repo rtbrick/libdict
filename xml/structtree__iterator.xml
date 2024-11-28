@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structtree__iterator" kind="struct" language="C++" prot="public">
     <compoundname>tree_iterator</compoundname>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structtree__iterator_1a8346285c2813f7eb001599a6616df9ab" prot="public" static="no" mutable="no">
         <type><ref refid="structtree" kindref="compound">tree</ref> *</type>
         <definition>tree* tree</definition>
@@ -31,7 +31,7 @@
         </inbodydescription>
         <location file="src/tree_common.c" line="42" column="31" bodyfile="src/tree_common.c" bodystart="42" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

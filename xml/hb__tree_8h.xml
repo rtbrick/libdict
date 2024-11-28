@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="hb__tree_8h" kind="file" language="C++">
     <compoundname>hb_tree.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -286,7 +286,7 @@
         <link refid="wb__tree_8c"/>
       </node>
     </invincdepgraph>
-      <sectiondef kind="typedef">
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="hb__tree_8h_1a1752cf6a346e6f05b07c1ea239edbbc0" prot="public" static="no">
         <type>struct <ref refid="structhb__tree" kindref="compound">hb_tree</ref></type>
         <definition>typedef struct hb_tree hb_tree</definition>
@@ -313,8 +313,8 @@
         </inbodydescription>
         <location file="include/hb_tree.h" line="59" column="22" bodyfile="include/hb_tree.h" bodystart="59" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="hb__tree_8h_1a57b5dfeb404aaf4d90547bd39751d635" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structhb__tree" kindref="compound">hb_tree</ref> *</type>
         <definition>hb_tree * hb_tree_new</definition>
@@ -331,7 +331,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="37" column="8" bodyfile="src/hb_tree.c" bodystart="105" bodyend="117" declfile="include/hb_tree.h" declline="37" declcolumn="8"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
@@ -403,7 +403,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="42" column="1" bodyfile="src/hb_tree.c" bodystart="280" bodyend="355" declfile="include/hb_tree.h" declline="42" declcolumn="1"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structhb__node_1afef439511732fd1557216f60d140adc1" compoundref="hb__tree_8c" startline="39">hb_node::bal</references>
         <references refid="hb__tree_8c_1a754d86c01037dc99b622207561ede09b" compoundref="hb__tree_8c" startline="46">BAL_MASK</references>
         <references refid="hb__tree_8c_1a1771b2c25425cc83256948dbd89d147d" compoundref="hb__tree_8c" startline="49">BAL_NEG</references>
@@ -573,7 +573,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/hb_tree.h" line="50" column="7" bodyfile="src/hb_tree.c" bodystart="141" bodyend="163" declfile="include/hb_tree.h" declline="50" declcolumn="7"/>
-        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51">ASSERT</references>
+        <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structhb__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="hb__tree_8c" startline="37">hb_node::datum</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
@@ -734,7 +734,7 @@
         <location file="include/hb_tree.h" line="57" column="5" bodyfile="src/hb_tree.c" bodystart="585" bodyend="591" declfile="include/hb_tree.h" declline="57" declcolumn="5"/>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
-        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78">VERIFY</references>
+        <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a3b953aabe2e0cc553e89b59d5f308607" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structhb__itor" kindref="compound">hb_itor</ref> *</type>
@@ -1135,7 +1135,7 @@
         <references refid="structhb__itor_1abd1d99b37abe63189d6db6eb630bd2ff" compoundref="hb__tree_8c" startline="56">hb_itor::node</references>
         <references refid="structhb__itor_1a024a8670718387a22dc8053590c48176" compoundref="hb__tree_8c" startline="56">hb_itor::tree</references>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
