@@ -169,7 +169,7 @@ node_insert(skiplist* list, skip_node* x, skip_node** update)
     }
 
     x->prev = (update[0] == list->head) ? NULL : update[0];
-    if (update[0]->link && update[0]->link[0])
+    if (update[0]->link[0])
         update[0]->link[0]->prev = x;
     for (unsigned k = 0; k < nlinks; k++) {
         ASSERT(update[k]->link_count > k);
