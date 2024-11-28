@@ -13,7 +13,7 @@ set(CMAKE_C_EXTENSIONS OFF)
 if(MSVC)
     add_compile_options(/W4 /WX)
 else()
-    add_compile_options(-Wall -Wextra -pedantic)
+    add_compile_options(-Werror -Wall -Wextra -Wno-deprecated-declarations -pedantic )
 endif()
 
 # options: should we build static library, shared library, tests, tools?
