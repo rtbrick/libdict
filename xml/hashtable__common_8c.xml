@@ -22,8 +22,8 @@
         <argsstring>[]</argsstring>
         <name>kPrimes</name>
         <initializer>= {
-    11,		17,	    37,		67,	    131,
-    257,	521,	    1031,       2053,       4099,
+    11,         17,         37,         67,         131,
+    257,        521,        1031,       2053,       4099,
     8209,       16411,      32771,      65537,      131101,
     262147,     524309,     1048583,    2097169,    4194319,
     8388617,    16777259,   33554467,   67108879,   134217757,
@@ -106,8 +106,8 @@
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hashtable__common_8h" kindref="compound">hashtable_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>kPrimes[]<sp/>=<sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>11,<sp/><sp/><sp/><sp/><sp/>17,<sp/><sp/><sp/><sp/><sp/>37,<sp/><sp/><sp/><sp/><sp/>67,<sp/><sp/><sp/><sp/><sp/>131,</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>257,<sp/><sp/><sp/><sp/>521,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1031,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2053,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4099,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>11,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>17,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>37,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>67,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>131,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>257,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>521,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1031,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2053,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4099,</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>8209,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>16411,<sp/><sp/><sp/><sp/><sp/><sp/>32771,<sp/><sp/><sp/><sp/><sp/><sp/>65537,<sp/><sp/><sp/><sp/><sp/><sp/>131101,</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>262147,<sp/><sp/><sp/><sp/><sp/>524309,<sp/><sp/><sp/><sp/><sp/>1048583,<sp/><sp/><sp/><sp/>2097169,<sp/><sp/><sp/><sp/>4194319,</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>8388617,<sp/><sp/><sp/><sp/>16777259,<sp/><sp/><sp/>33554467,<sp/><sp/><sp/>67108879,<sp/><sp/><sp/>134217757,</highlight></codeline>
@@ -119,9 +119,9 @@
 <codeline lineno="41" refid="hashtable__common_8c_1af8af08005cd8f9f8cd81dd7ca0692b11" refkind="member"><highlight class="normal"><ref refid="hashtable__common_8c_1af8af08005cd8f9f8cd81dd7ca0692b11" kindref="member">dict_prime_geq</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
 <codeline lineno="42"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>TODO(farooq):<sp/>use<sp/>binary<sp/>search<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>kNumPrimes;<sp/>++index)</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(kPrimes[index]<sp/>&gt;=<sp/>n)</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>kPrimes[index];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>kNumPrimes;<sp/>++index)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(kPrimes[index]<sp/>&gt;=<sp/>n)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>kPrimes[index];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>kPrimes[kNumPrimes<sp/>-<sp/>1];</highlight></codeline>
 <codeline lineno="48"><highlight class="normal">}</highlight></codeline>
     </programlisting>

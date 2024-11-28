@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tr_tree.c" line="57" column="23" bodyfile="src/tr_tree.c" bodystart="57" bodyend="-1"/>
+        <location file="src/tr_tree.c" line="57" column="27" bodyfile="src/tr_tree.c" bodystart="57" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

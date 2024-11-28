@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/skiplist.c" line="40" column="13" bodyfile="src/skiplist.c" bodystart="40" bodyend="-1"/>
+        <location file="src/skiplist.c" line="40" column="24" bodyfile="src/skiplist.c" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structskip__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" static="no" mutable="no">
         <type>void *</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/skiplist.c" line="41" column="13" bodyfile="src/skiplist.c" bodystart="41" bodyend="-1"/>
+        <location file="src/skiplist.c" line="41" column="24" bodyfile="src/skiplist.c" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structskip__node_1a45a0b6bc7ce1d301c1527998d99e85f0" prot="public" static="no" mutable="no">
         <type><ref refid="structskip__node" kindref="compound">skip_node</ref> *</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/skiplist.c" line="42" column="18" bodyfile="src/skiplist.c" bodystart="42" bodyend="-1"/>
+        <location file="src/skiplist.c" line="42" column="24" bodyfile="src/skiplist.c" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structskip__node_1abaf0316f33b38ccdaa4682bebce24ced" prot="public" static="no" mutable="no">
         <type>unsigned</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/skiplist.c" line="43" column="17" bodyfile="src/skiplist.c" bodystart="43" bodyend="-1"/>
+        <location file="src/skiplist.c" line="43" column="25" bodyfile="src/skiplist.c" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" prot="public" static="no" mutable="no">
         <type><ref refid="structskip__node" kindref="compound">skip_node</ref> *</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/skiplist.c" line="44" column="18" bodyfile="src/skiplist.c" bodystart="44" bodyend="-1"/>
+        <location file="src/skiplist.c" line="44" column="24" bodyfile="src/skiplist.c" bodystart="44" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

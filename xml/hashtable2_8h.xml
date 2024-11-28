@@ -338,7 +338,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="37" column="11" bodyfile="src/hashtable2.c" bodystart="106" bodyend="126" declfile="include/hashtable2.h" declline="37" declcolumn="11"/>
+        <location file="include/hashtable2.h" line="37" column="16" bodyfile="src/hashtable2.c" bodystart="106" bodyend="126" declfile="include/hashtable2.h" declline="37" declcolumn="16"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structhashtable2_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="hashtable2_8c" startline="55">hashtable2::cmp_func</references>
         <references refid="structhashtable2_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="hashtable2_8c" startline="54">hashtable2::count</references>
@@ -372,7 +372,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="38" column="5" bodyfile="src/hashtable2.c" bodystart="129" bodyend="144" declfile="include/hashtable2.h" declline="38" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="38" column="16" bodyfile="src/hashtable2.c" bodystart="129" bodyend="144" declfile="include/hashtable2.h" declline="38" declcolumn="16"/>
         <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="152">dict::_object</references>
         <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
@@ -399,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="39" column="7" bodyfile="src/hashtable2.c" bodystart="147" bodyend="153" declfile="include/hashtable2.h" declline="39" declcolumn="7"/>
+        <location file="include/hashtable2.h" line="39" column="17" bodyfile="src/hashtable2.c" bodystart="147" bodyend="153" declfile="include/hashtable2.h" declline="39" declcolumn="17"/>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="hashtable2_8c_1a44ae5c4f6823ed8258898e3bde0a224d" compoundref="hashtable2_8c" startline="305" endline="321">hashtable2_clear</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
@@ -423,7 +423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="42" column="1" bodyfile="src/hashtable2.c" bodystart="187" bodyend="200" declfile="include/hashtable2.h" declline="42" declcolumn="1"/>
+        <location file="include/hashtable2.h" line="42" column="17" bodyfile="src/hashtable2.c" bodystart="187" bodyend="200" declfile="include/hashtable2.h" declline="42" declcolumn="17"/>
         <references refid="structhashtable2_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="hashtable2_8c" startline="54">hashtable2::count</references>
         <references refid="structhashtable2_1afcbf6b4ca50c87e70ae1ae4febfdff2f" compoundref="hashtable2_8c" startline="56">hashtable2::hash_func</references>
         <references refid="hashtable2_8c_1aaf369a616093a2af00d38c41aab53201" compoundref="hashtable2_8c" startline="357" endline="398">hashtable2_resize</references>
@@ -451,10 +451,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="43" column="5" bodyfile="src/hashtable2.c" bodystart="203" bodyend="220" declfile="include/hashtable2.h" declline="43" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="43" column="15" bodyfile="src/hashtable2.c" bodystart="203" bodyend="220" declfile="include/hashtable2.h" declline="43" declcolumn="15"/>
         <references refid="structhashtable2_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="hashtable2_8c" startline="55">hashtable2::cmp_func</references>
         <references refid="structhash__node_1ac9af8e9ce7fe8f1707012ed4fe5cf0ca" compoundref="hashtable_8c" startline="49">hash_node::datum</references>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhashtable2_1afcbf6b4ca50c87e70ae1ae4febfdff2f" compoundref="hashtable2_8c" startline="56">hashtable2::hash_func</references>
         <references refid="structhash__node_1a269110e1860732992f4f6f5514813c75" compoundref="hashtable_8c" startline="48">hash_node::key</references>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
@@ -479,10 +479,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="45" column="1" bodyfile="src/hashtable2.c" bodystart="282" bodyend="302" declfile="include/hashtable2.h" declline="45" declcolumn="1"/>
+        <location file="include/hashtable2.h" line="45" column="17" bodyfile="src/hashtable2.c" bodystart="282" bodyend="302" declfile="include/hashtable2.h" declline="45" declcolumn="17"/>
         <references refid="structhashtable2_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="hashtable2_8c" startline="55">hashtable2::cmp_func</references>
         <references refid="structhash__node_1ac9af8e9ce7fe8f1707012ed4fe5cf0ca" compoundref="hashtable_8c" startline="49">hash_node::datum</references>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhashtable2_1afcbf6b4ca50c87e70ae1ae4febfdff2f" compoundref="hashtable2_8c" startline="56">hashtable2::hash_func</references>
         <references refid="structhash__node_1a269110e1860732992f4f6f5514813c75" compoundref="hashtable_8c" startline="48">hash_node::key</references>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
@@ -507,10 +507,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="46" column="7" bodyfile="src/hashtable2.c" bodystart="305" bodyend="321" declfile="include/hashtable2.h" declline="46" declcolumn="7"/>
+        <location file="include/hashtable2.h" line="46" column="17" bodyfile="src/hashtable2.c" bodystart="305" bodyend="321" declfile="include/hashtable2.h" declline="46" declcolumn="17"/>
         <references refid="structhashtable2_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="hashtable2_8c" startline="54">hashtable2::count</references>
         <references refid="structhash__node_1ac9af8e9ce7fe8f1707012ed4fe5cf0ca" compoundref="hashtable_8c" startline="49">hash_node::datum</references>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhash__node_1a269110e1860732992f4f6f5514813c75" compoundref="hashtable_8c" startline="48">hash_node::key</references>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
@@ -538,9 +538,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="47" column="7" bodyfile="src/hashtable2.c" bodystart="324" bodyend="336" declfile="include/hashtable2.h" declline="47" declcolumn="7"/>
+        <location file="include/hashtable2.h" line="47" column="17" bodyfile="src/hashtable2.c" bodystart="324" bodyend="336" declfile="include/hashtable2.h" declline="47" declcolumn="17"/>
         <references refid="structhash__node_1ac9af8e9ce7fe8f1707012ed4fe5cf0ca" compoundref="hashtable_8c" startline="49">hash_node::datum</references>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhash__node_1a269110e1860732992f4f6f5514813c75" compoundref="hashtable_8c" startline="48">hash_node::key</references>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
@@ -560,7 +560,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="48" column="7" bodyfile="src/hashtable2.c" bodystart="339" bodyend="342" declfile="include/hashtable2.h" declline="48" declcolumn="7"/>
+        <location file="include/hashtable2.h" line="48" column="17" bodyfile="src/hashtable2.c" bodystart="339" bodyend="342" declfile="include/hashtable2.h" declline="48" declcolumn="17"/>
         <references refid="structhashtable2_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="hashtable2_8c" startline="54">hashtable2::count</references>
       </memberdef>
       <memberdef kind="function" id="hashtable2_8h_1a8ff49ac56174d0ba8d06025cd9be2c31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -578,7 +578,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="49" column="7" bodyfile="src/hashtable2.c" bodystart="345" bodyend="348" declfile="include/hashtable2.h" declline="49" declcolumn="7"/>
+        <location file="include/hashtable2.h" line="49" column="17" bodyfile="src/hashtable2.c" bodystart="345" bodyend="348" declfile="include/hashtable2.h" declline="49" declcolumn="17"/>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
       </memberdef>
       <memberdef kind="function" id="hashtable2_8h_1a8f6f7578c572be0270a4d1e63603bc3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -596,7 +596,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="50" column="7" bodyfile="src/hashtable2.c" bodystart="351" bodyend="354" declfile="include/hashtable2.h" declline="50" declcolumn="7"/>
+        <location file="include/hashtable2.h" line="50" column="17" bodyfile="src/hashtable2.c" bodystart="351" bodyend="354" declfile="include/hashtable2.h" declline="50" declcolumn="17"/>
         <references refid="structhashtable2_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="hashtable2_8c" startline="54">hashtable2::count</references>
       </memberdef>
       <memberdef kind="function" id="hashtable2_8h_1a0046bedc02fbc13fc2ad5e63c6f6d65c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -614,10 +614,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="51" column="5" bodyfile="src/hashtable2.c" bodystart="401" bodyend="415" declfile="include/hashtable2.h" declline="51" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="51" column="17" bodyfile="src/hashtable2.c" bodystart="401" bodyend="415" declfile="include/hashtable2.h" declline="51" declcolumn="17"/>
         <references refid="structhashtable2_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="hashtable2_8c" startline="54">hashtable2::count</references>
         <references refid="structhash__node_1ac9af8e9ce7fe8f1707012ed4fe5cf0ca" compoundref="hashtable_8c" startline="49">hash_node::datum</references>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
         <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
@@ -641,7 +641,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="52" column="5" bodyfile="src/hashtable2.c" bodystart="357" bodyend="398" declfile="include/hashtable2.h" declline="52" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="52" column="17" bodyfile="src/hashtable2.c" bodystart="357" bodyend="398" declfile="include/hashtable2.h" declline="52" declcolumn="17"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structhashtable2_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="hashtable2_8c" startline="54">hashtable2::count</references>
         <references refid="structhash__node_1ac9af8e9ce7fe8f1707012ed4fe5cf0ca" compoundref="hashtable_8c" startline="49">hash_node::datum</references>
@@ -688,9 +688,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="57" column="10" bodyfile="src/hashtable2.c" bodystart="429" bodyend="440" declfile="include/hashtable2.h" declline="57" declcolumn="10"/>
-        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="174">dict_itor::_itor</references>
-        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="175">dict_itor::_vtable</references>
+        <location file="include/hashtable2.h" line="57" column="17" bodyfile="src/hashtable2.c" bodystart="429" bodyend="440" declfile="include/hashtable2.h" declline="57" declcolumn="17"/>
+        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="175">dict_itor::_itor</references>
+        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="176">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="hashtable2_8c_1a0c15f24c3e187b1c121a051ef62b8e43" compoundref="hashtable2_8c" startline="418" endline="426">hashtable2_itor_new</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
@@ -710,7 +710,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="58" column="5" bodyfile="src/hashtable2.c" bodystart="443" bodyend="446" declfile="include/hashtable2.h" declline="58" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="58" column="18" bodyfile="src/hashtable2.c" bodystart="443" bodyend="446" declfile="include/hashtable2.h" declline="58" declcolumn="18"/>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
       </memberdef>
       <memberdef kind="function" id="hashtable2_8h_1a2d78df14e4791b628483129358ffab7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -728,9 +728,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="60" column="5" bodyfile="src/hashtable2.c" bodystart="449" bodyend="455" declfile="include/hashtable2.h" declline="60" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="60" column="17" bodyfile="src/hashtable2.c" bodystart="449" bodyend="455" declfile="include/hashtable2.h" declline="60" declcolumn="17"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
         <references refid="structhashtable2__itor_1ac39287fa1fbff323f1764c7902c9e718" compoundref="hashtable2_8c" startline="62">hashtable2_itor::table</references>
@@ -750,7 +750,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="61" column="5" bodyfile="src/hashtable2.c" bodystart="458" bodyend="461" declfile="include/hashtable2.h" declline="61" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="61" column="17" bodyfile="src/hashtable2.c" bodystart="458" bodyend="461" declfile="include/hashtable2.h" declline="61" declcolumn="17"/>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
       </memberdef>
       <memberdef kind="function" id="hashtable2_8h_1adbbfc37e889dffca71d67c12e29562b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -768,8 +768,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="62" column="5" bodyfile="src/hashtable2.c" bodystart="464" bodyend="475" declfile="include/hashtable2.h" declline="62" declcolumn="5"/>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <location file="include/hashtable2.h" line="62" column="17" bodyfile="src/hashtable2.c" bodystart="464" bodyend="475" declfile="include/hashtable2.h" declline="62" declcolumn="17"/>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
@@ -790,9 +790,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="63" column="5" bodyfile="src/hashtable2.c" bodystart="478" bodyend="489" declfile="include/hashtable2.h" declline="63" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="63" column="17" bodyfile="src/hashtable2.c" bodystart="478" bodyend="489" declfile="include/hashtable2.h" declline="63" declcolumn="17"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
         <references refid="structhashtable2__itor_1ac39287fa1fbff323f1764c7902c9e718" compoundref="hashtable2_8c" startline="62">hashtable2_itor::table</references>
@@ -816,7 +816,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="64" column="5" bodyfile="src/hashtable2.c" bodystart="492" bodyend="498" declfile="include/hashtable2.h" declline="64" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="64" column="17" bodyfile="src/hashtable2.c" bodystart="492" bodyend="498" declfile="include/hashtable2.h" declline="64" declcolumn="17"/>
         <references refid="hashtable2_8c_1adbbfc37e889dffca71d67c12e29562b8" compoundref="hashtable2_8c" startline="464" endline="475">hashtable2_itor_next</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
       </memberdef>
@@ -839,7 +839,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="65" column="5" bodyfile="src/hashtable2.c" bodystart="501" bodyend="507" declfile="include/hashtable2.h" declline="65" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="65" column="17" bodyfile="src/hashtable2.c" bodystart="501" bodyend="507" declfile="include/hashtable2.h" declline="65" declcolumn="17"/>
         <references refid="hashtable2_8c_1a368edbffbff8a943596091af2debd361" compoundref="hashtable2_8c" startline="478" endline="489">hashtable2_itor_prev</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
       </memberdef>
@@ -858,8 +858,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="66" column="5" bodyfile="src/hashtable2.c" bodystart="510" bodyend="520" declfile="include/hashtable2.h" declline="66" declcolumn="5"/>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <location file="include/hashtable2.h" line="66" column="17" bodyfile="src/hashtable2.c" bodystart="510" bodyend="520" declfile="include/hashtable2.h" declline="66" declcolumn="17"/>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
@@ -880,8 +880,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="67" column="5" bodyfile="src/hashtable2.c" bodystart="523" bodyend="533" declfile="include/hashtable2.h" declline="67" declcolumn="5"/>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <location file="include/hashtable2.h" line="67" column="17" bodyfile="src/hashtable2.c" bodystart="523" bodyend="533" declfile="include/hashtable2.h" declline="67" declcolumn="17"/>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
@@ -906,9 +906,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="68" column="5" bodyfile="src/hashtable2.c" bodystart="536" bodyend="554" declfile="include/hashtable2.h" declline="68" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="68" column="17" bodyfile="src/hashtable2.c" bodystart="536" bodyend="554" declfile="include/hashtable2.h" declline="68" declcolumn="17"/>
         <references refid="structhashtable2_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="hashtable2_8c" startline="55">hashtable2::cmp_func</references>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhashtable2_1afcbf6b4ca50c87e70ae1ae4febfdff2f" compoundref="hashtable2_8c" startline="56">hashtable2::hash_func</references>
         <references refid="structhash__node_1a269110e1860732992f4f6f5514813c75" compoundref="hashtable_8c" startline="48">hash_node::key</references>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
@@ -931,7 +931,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="69" column="11" bodyfile="src/hashtable2.c" bodystart="557" bodyend="560" declfile="include/hashtable2.h" declline="69" declcolumn="11"/>
+        <location file="include/hashtable2.h" line="69" column="16" bodyfile="src/hashtable2.c" bodystart="557" bodyend="560" declfile="include/hashtable2.h" declline="69" declcolumn="16"/>
         <references refid="structhash__node_1a269110e1860732992f4f6f5514813c75" compoundref="hashtable_8c" startline="48">hash_node::key</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
@@ -952,7 +952,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="70" column="5" bodyfile="src/hashtable2.c" bodystart="563" bodyend="566" declfile="include/hashtable2.h" declline="70" declcolumn="5"/>
+        <location file="include/hashtable2.h" line="70" column="15" bodyfile="src/hashtable2.c" bodystart="563" bodyend="566" declfile="include/hashtable2.h" declline="70" declcolumn="15"/>
         <references refid="structhash__node_1ac9af8e9ce7fe8f1707012ed4fe5cf0ca" compoundref="hashtable_8c" startline="49">hash_node::datum</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
@@ -973,8 +973,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hashtable2.h" line="71" column="5" bodyfile="src/hashtable2.c" bodystart="569" bodyend="578" declfile="include/hashtable2.h" declline="71" declcolumn="5"/>
-        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="53">hash_node::hash</references>
+        <location file="include/hashtable2.h" line="71" column="17" bodyfile="src/hashtable2.c" bodystart="569" bodyend="578" declfile="include/hashtable2.h" declline="71" declcolumn="17"/>
+        <references refid="structhash__node_1a1528ad8c92b5bb97aac6de4360a6e16f" compoundref="hashtable_8c" startline="54">hash_node::hash</references>
         <references refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" compoundref="hashtable2_8c" startline="58">hashtable2::size</references>
         <references refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" compoundref="hashtable2_8c" startline="63">hashtable2_itor::slot</references>
         <references refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" compoundref="hashtable2_8c" startline="57">hashtable2::table</references>
@@ -1022,41 +1022,41 @@
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35" refid="hashtable2_8h_1af679b46553f72406f2fbdd8bf8a45ec3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhashtable2" kindref="compound">hashtable2</ref><sp/><ref refid="structhashtable2" kindref="compound">hashtable2</ref>;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="hashtable2_8h_1a840e984b3c37be780f2cd0e054513e62" kindref="member">hashtable2_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhashtable2_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>,<sp/><ref refid="dict_8h_1a849c4295058ff98298369ba530fd254d" kindref="member">dict_hash_func</ref><sp/><ref refid="structhashtable2_1afcbf6b4ca50c87e70ae1ae4febfdff2f" kindref="member">hash_func</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>initial_size);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1afb856415818c346738023a60f2bc2015" kindref="member">hashtable2_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhashtable2_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>,<sp/><ref refid="dict_8h_1a849c4295058ff98298369ba530fd254d" kindref="member">dict_hash_func</ref><sp/><ref refid="structhashtable2_1afcbf6b4ca50c87e70ae1ae4febfdff2f" kindref="member">hash_func</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>initial_size);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a25f09fa1be9712c4837e1d8df24155ee" kindref="member">hashtable2_free</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a840e984b3c37be780f2cd0e054513e62" kindref="member">hashtable2_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhashtable2_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>,<sp/><ref refid="dict_8h_1a849c4295058ff98298369ba530fd254d" kindref="member">dict_hash_func</ref><sp/><ref refid="structhashtable2_1afcbf6b4ca50c87e70ae1ae4febfdff2f" kindref="member">hash_func</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>initial_size);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1afb856415818c346738023a60f2bc2015" kindref="member">hashtable2_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structhashtable2_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>,<sp/><ref refid="dict_8h_1a849c4295058ff98298369ba530fd254d" kindref="member">dict_hash_func</ref><sp/><ref refid="structhashtable2_1afcbf6b4ca50c87e70ae1ae4febfdff2f" kindref="member">hash_func</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>initial_size);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a25f09fa1be9712c4837e1d8df24155ee" kindref="member">hashtable2_free</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a7268c0a22aa2e614e4224f6b519520eb" kindref="member">hashtable2_insert</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a1246b5d3b772baf221ad394bc6dcff2c" kindref="member">hashtable2_search</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a7268c0a22aa2e614e4224f6b519520eb" kindref="member">hashtable2_insert</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a1246b5d3b772baf221ad394bc6dcff2c" kindref="member">hashtable2_search</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><ref refid="structdict__remove__result" kindref="compound">dict_remove_result</ref></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1aeb094c7bce06fe3998757ad6cf27c8eb" kindref="member">hashtable2_remove</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a44ae5c4f6823ed8258898e3bde0a224d" kindref="member">hashtable2_clear</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1af8b2f7f0fcd184eac4dfcc4bc74ca99a" kindref="member">hashtable2_traverse</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/><ref refid="dict_8h_1aebbefe3aa81b20e1254e8a7a5253caf6" kindref="member">dict_visit_func</ref><sp/>visit,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>user_data);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a876d26c5e2e9ed0a0df1a6a9618b06c3" kindref="member">hashtable2_count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a8ff49ac56174d0ba8d06025cd9be2c31" kindref="member">hashtable2_size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a8f6f7578c572be0270a4d1e63603bc3b" kindref="member">hashtable2_slots_used</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a0046bedc02fbc13fc2ad5e63c6f6d65c" kindref="member">hashtable2_verify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1ada26482ac2bea5897f4a27dd6cd22e07" kindref="member">hashtable2_resize</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1aeb094c7bce06fe3998757ad6cf27c8eb" kindref="member">hashtable2_remove</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a44ae5c4f6823ed8258898e3bde0a224d" kindref="member">hashtable2_clear</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1af8b2f7f0fcd184eac4dfcc4bc74ca99a" kindref="member">hashtable2_traverse</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/><ref refid="dict_8h_1aebbefe3aa81b20e1254e8a7a5253caf6" kindref="member">dict_visit_func</ref><sp/>visit,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>user_data);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a876d26c5e2e9ed0a0df1a6a9618b06c3" kindref="member">hashtable2_count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a8ff49ac56174d0ba8d06025cd9be2c31" kindref="member">hashtable2_size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a8f6f7578c572be0270a4d1e63603bc3b" kindref="member">hashtable2_slots_used</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a0046bedc02fbc13fc2ad5e63c6f6d65c" kindref="member">hashtable2_verify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1ada26482ac2bea5897f4a27dd6cd22e07" kindref="member">hashtable2_resize</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kindref="member">table</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" kindref="member">size</ref>);</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54" refid="hashtable2_8h_1a054ea9a26621b6cea932840fe6c7c17c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref><sp/><ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>;</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="hashtable2_8h_1a0c15f24c3e187b1c121a051ef62b8e43" kindref="member">hashtable2_itor_new</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2__itor_1ac39287fa1fbff323f1764c7902c9e718" kindref="member">table</ref>);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/><sp/><ref refid="hashtable2_8h_1a0ff5cf294222a238e6d3e51a2ba4dd3d" kindref="member">hashtable2_dict_itor_new</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2__itor_1ac39287fa1fbff323f1764c7902c9e718" kindref="member">table</ref>);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1aa32b8b4ebed701351a7d4463c5f28dca" kindref="member">hashtable2_itor_free</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a0ff5cf294222a238e6d3e51a2ba4dd3d" kindref="member">hashtable2_dict_itor_new</ref>(<ref refid="structhashtable2" kindref="compound">hashtable2</ref>*<sp/><ref refid="structhashtable2__itor_1ac39287fa1fbff323f1764c7902c9e718" kindref="member">table</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1aa32b8b4ebed701351a7d4463c5f28dca" kindref="member">hashtable2_itor_free</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a2d78df14e4791b628483129358ffab7c" kindref="member">hashtable2_itor_valid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a7d7262bb936836d3456bae0c279503c8" kindref="member">hashtable2_itor_invalidate</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1adbbfc37e889dffca71d67c12e29562b8" kindref="member">hashtable2_itor_next</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a368edbffbff8a943596091af2debd361" kindref="member">hashtable2_itor_prev</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a19fbc151fe7bca8c36a644b637ee9297" kindref="member">hashtable2_itor_nextn</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1ab66622dadb9e0b6ca52890478432214b" kindref="member">hashtable2_itor_prevn</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1abbb66009f907225aed01c996bbd46126" kindref="member">hashtable2_itor_first</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1afb08ba6ed96ce232d98f263ffc9f993a" kindref="member">hashtable2_itor_last</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1afa082694a816bcfc2dd09d410c18ed00" kindref="member">hashtable2_itor_search</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="hashtable2_8h_1acbfa355e5d41034d3e6a262b06b11dc5" kindref="member">hashtable2_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a3b2ea9bc8254b9eda6a1fbf53ec83f3a" kindref="member">hashtable2_itor_datum</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a3b9d4a624ac364b31479b10409ef839a" kindref="member">hashtable2_itor_remove</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a2d78df14e4791b628483129358ffab7c" kindref="member">hashtable2_itor_valid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a7d7262bb936836d3456bae0c279503c8" kindref="member">hashtable2_itor_invalidate</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1adbbfc37e889dffca71d67c12e29562b8" kindref="member">hashtable2_itor_next</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a368edbffbff8a943596091af2debd361" kindref="member">hashtable2_itor_prev</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a19fbc151fe7bca8c36a644b637ee9297" kindref="member">hashtable2_itor_nextn</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1ab66622dadb9e0b6ca52890478432214b" kindref="member">hashtable2_itor_prevn</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1abbb66009f907225aed01c996bbd46126" kindref="member">hashtable2_itor_first</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1afb08ba6ed96ce232d98f263ffc9f993a" kindref="member">hashtable2_itor_last</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1afa082694a816bcfc2dd09d410c18ed00" kindref="member">hashtable2_itor_search</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1acbfa355e5d41034d3e6a262b06b11dc5" kindref="member">hashtable2_itor_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a3b2ea9bc8254b9eda6a1fbf53ec83f3a" kindref="member">hashtable2_itor_datum</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hashtable2_8h_1a3b9d4a624ac364b31479b10409ef839a" kindref="member">hashtable2_itor_remove</ref>(<ref refid="structhashtable2__itor" kindref="compound">hashtable2_itor</ref>*<sp/><ref refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kindref="member">itor</ref>);</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><ref refid="dict_8h_1acca589e3adebef8ed4e5bed6dea40ebb" kindref="member">END_DECL</ref></highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>

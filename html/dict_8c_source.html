@@ -177,9 +177,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* b = k2;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">for</span> (;;) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">char</span> p = *a++, q = *b++;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">if</span> (!p || p != q)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> (p &gt; q) - (p &lt; q);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">char</span> p = *a++, q = *b++;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">if</span> (!p || p != q)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordflow">return</span> (p &gt; q) - (p &lt; q);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
 </div>
@@ -191,7 +191,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">/* FNV 1-a string hash. */</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">unsigned</span> hash = 2166136261U;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> uint8_t* ptr = k; *ptr;) {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    hash = (hash ^ *ptr++) * 16777619U;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        hash = (hash ^ *ptr++) * 16777619U;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> hash;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
@@ -238,9 +238,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="adict__private_8h_html"><div class="ttname"><a href="dict__private_8h.html">dict_private.h</a></div></div>
 <div class="ttc" id="adict__private_8h_html_a02048bf846e8bc87e3ce188e4957ef06"><div class="ttname"><a href="dict__private_8h.html#a02048bf846e8bc87e3ce188e4957ef06">FREE</a></div><div class="ttdeci">#define FREE(p)</div><div class="ttdef"><b>Definition</b> <a href="dict__private_8h_source.html#l00089">dict_private.h:89</a></div></div>
 <div class="ttc" id="adict__private_8h_html_a28301f76c53b643912da7c538f74e2c6"><div class="ttname"><a href="dict__private_8h.html#a28301f76c53b643912da7c538f74e2c6">ASSERT</a></div><div class="ttdeci">#define ASSERT(expr)</div><div class="ttdef"><b>Definition</b> <a href="dict__private_8h_source.html#l00051">dict_private.h:51</a></div></div>
-<div class="ttc" id="astructdict__itor_html"><div class="ttname"><a href="structdict__itor.html">dict_itor</a></div><div class="ttdef"><b>Definition</b> <a href="dict_8h_source.html#l00173">dict.h:173</a></div></div>
-<div class="ttc" id="astructdict__itor_html_a5f0e212b1ddef75495c8510a9438f377"><div class="ttname"><a href="structdict__itor.html#a5f0e212b1ddef75495c8510a9438f377">dict_itor::_itor</a></div><div class="ttdeci">void * _itor</div><div class="ttdef"><b>Definition</b> <a href="dict_8h_source.html#l00174">dict.h:174</a></div></div>
-<div class="ttc" id="astructdict__itor_html_aec8a547b2b1220000757c4dfec8e7847"><div class="ttname"><a href="structdict__itor.html#aec8a547b2b1220000757c4dfec8e7847">dict_itor::_vtable</a></div><div class="ttdeci">const itor_vtable * _vtable</div><div class="ttdef"><b>Definition</b> <a href="dict_8h_source.html#l00175">dict.h:175</a></div></div>
+<div class="ttc" id="astructdict__itor_html"><div class="ttname"><a href="structdict__itor.html">dict_itor</a></div><div class="ttdef"><b>Definition</b> <a href="dict_8h_source.html#l00174">dict.h:174</a></div></div>
+<div class="ttc" id="astructdict__itor_html_a5f0e212b1ddef75495c8510a9438f377"><div class="ttname"><a href="structdict__itor.html#a5f0e212b1ddef75495c8510a9438f377">dict_itor::_itor</a></div><div class="ttdeci">void * _itor</div><div class="ttdef"><b>Definition</b> <a href="dict_8h_source.html#l00175">dict.h:175</a></div></div>
+<div class="ttc" id="astructdict__itor_html_aec8a547b2b1220000757c4dfec8e7847"><div class="ttname"><a href="structdict__itor.html#aec8a547b2b1220000757c4dfec8e7847">dict_itor::_vtable</a></div><div class="ttdeci">const itor_vtable * _vtable</div><div class="ttdef"><b>Definition</b> <a href="dict_8h_source.html#l00176">dict.h:176</a></div></div>
 <div class="ttc" id="astructdict__vtable_html_a4acf0b406bbe6cf63c7d6bd6f554442f"><div class="ttname"><a href="structdict__vtable.html#a4acf0b406bbe6cf63c7d6bd6f554442f">dict_vtable::dfree</a></div><div class="ttdeci">dict_dfree_func dfree</div><div class="ttdef"><b>Definition</b> <a href="dict_8h_source.html#l00100">dict.h:100</a></div></div>
 <div class="ttc" id="astructdict_html"><div class="ttname"><a href="structdict.html">dict</a></div><div class="ttdef"><b>Definition</b> <a href="dict_8h_source.html#l00151">dict.h:151</a></div></div>
 <div class="ttc" id="astructdict_html_a4658ca96529d47daaf0c459afdf9cc59"><div class="ttname"><a href="structdict.html#a4658ca96529d47daaf0c459afdf9cc59">dict::_object</a></div><div class="ttdeci">void * _object</div><div class="ttdef"><b>Definition</b> <a href="dict_8h_source.html#l00152">dict.h:152</a></div></div>

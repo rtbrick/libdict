@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable2.c" line="62" column="19" bodyfile="src/hashtable2.c" bodystart="62" bodyend="-1"/>
+        <location file="src/hashtable2.c" line="62" column="24" bodyfile="src/hashtable2.c" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable2.c" line="63" column="12" bodyfile="src/hashtable2.c" bodystart="63" bodyend="-1"/>
+        <location file="src/hashtable2.c" line="63" column="25" bodyfile="src/hashtable2.c" bodystart="63" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable.c" line="57" column="18" bodyfile="src/hashtable.c" bodystart="57" bodyend="-1"/>
+        <location file="src/hashtable.c" line="58" column="23" bodyfile="src/hashtable.c" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structhashtable_1a3e0944ca8a425fcd254ca5057e885e45" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable.c" line="58" column="26" bodyfile="src/hashtable.c" bodystart="58" bodyend="-1"/>
+        <location file="src/hashtable.c" line="59" column="25" bodyfile="src/hashtable.c" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structhashtable_1afcbf6b4ca50c87e70ae1ae4febfdff2f" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1a849c4295058ff98298369ba530fd254d" kindref="member">dict_hash_func</ref></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable.c" line="59" column="23" bodyfile="src/hashtable.c" bodystart="59" bodyend="-1"/>
+        <location file="src/hashtable.c" line="60" column="25" bodyfile="src/hashtable.c" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structhashtable_1a76d971a3c552bc58ba9f0d5fceae9806" prot="public" static="no" mutable="no">
         <type>size_t</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable.c" line="60" column="15" bodyfile="src/hashtable.c" bodystart="60" bodyend="-1"/>
+        <location file="src/hashtable.c" line="61" column="25" bodyfile="src/hashtable.c" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structhashtable_1a245260f6f74972558f61b85227df5aae" prot="public" static="no" mutable="no">
         <type>unsigned</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable.c" line="61" column="17" bodyfile="src/hashtable.c" bodystart="61" bodyend="-1"/>
+        <location file="src/hashtable.c" line="62" column="25" bodyfile="src/hashtable.c" bodystart="62" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -95,7 +95,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/hashtable.c" line="56" column="1" bodyfile="src/hashtable.c" bodystart="56" bodyend="62"/>
+    <location file="src/hashtable.c" line="57" column="1" bodyfile="src/hashtable.c" bodystart="57" bodyend="63"/>
     <listofallmembers>
       <member refid="structhashtable_1a3e0944ca8a425fcd254ca5057e885e45" prot="public" virt="non-virtual"><scope>hashtable</scope><name>cmp_func</name></member>
       <member refid="structhashtable_1a76d971a3c552bc58ba9f0d5fceae9806" prot="public" virt="non-virtual"><scope>hashtable</scope><name>count</name></member>
