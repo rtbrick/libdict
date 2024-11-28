@@ -265,7 +265,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    x-&gt;<a class="code hl_variable" href="structskip__node.html#a45a0b6bc7ce1d301c1527998d99e85f0">prev</a> = (update[0] == list-&gt;<a class="code hl_variable" href="structskiplist.html#a100e90aa60de0591e29864fef4ba2baf">head</a>) ? NULL : update[0];</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">if</span> (update[0]-&gt;link &amp;&amp; update[0]-&gt;link[0])</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">if</span> (update[0]-&gt;link[0])</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        update[0]-&gt;<a class="code hl_variable" href="structskip__node.html#afd0a54ecc55aea8e453873fa9f17b225">link</a>[0]-&gt;<a class="code hl_variable" href="structskip__node.html#a45a0b6bc7ce1d301c1527998d99e85f0">prev</a> = x;</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> k = 0; k &lt; nlinks; k++) {</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <a class="code hl_define" href="dict__private_8h.html#a28301f76c53b643912da7c538f74e2c6">ASSERT</a>(update[k]-&gt;link_count &gt; k);</div>
