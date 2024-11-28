@@ -34,55 +34,56 @@ BEGIN_DECL
 
 typedef struct skiplist skiplist;
 
-skiplist*	skiplist_new(dict_compare_func cmp_func, unsigned max_link);
-dict*		skiplist_dict_new(dict_compare_func cmp_func, unsigned max_link);
-size_t		skiplist_free(skiplist* list, dict_delete_func delete_func);
+skiplist*       skiplist_new(dict_compare_func cmp_func, unsigned max_link);
+dict*           skiplist_dict_new(dict_compare_func cmp_func, unsigned max_link);
+size_t          skiplist_free(skiplist* list, dict_delete_func delete_func);
 
 dict_insert_result
-		skiplist_insert(skiplist* list, void* key);
-void**		skiplist_search(skiplist* list, const void* key);
-void**		skiplist_search_le(skiplist* list, const void* key);
-void**		skiplist_search_lt(skiplist* list, const void* key);
-void**		skiplist_search_ge(skiplist* list, const void* key);
-void**		skiplist_search_gt(skiplist* list, const void* key);
+                skiplist_insert(skiplist* list, void* key);
+void**          skiplist_search(skiplist* list, const void* key);
+void**          skiplist_search_le(skiplist* list, const void* key);
+void**          skiplist_search_lt(skiplist* list, const void* key);
+void**          skiplist_search_ge(skiplist* list, const void* key);
+void**          skiplist_search_gt(skiplist* list, const void* key);
+
 dict_remove_result
-		skiplist_remove(skiplist* list, const void* key);
-size_t		skiplist_clear(skiplist* list, dict_delete_func delete_func);
-size_t		skiplist_traverse(skiplist* list, dict_visit_func visit, void* user_data);
-size_t		skiplist_count(const skiplist* list);
-bool		skiplist_verify(const skiplist* list);
+                skiplist_remove(skiplist* list, const void* key);
+size_t          skiplist_clear(skiplist* list, dict_delete_func delete_func);
+size_t          skiplist_traverse(skiplist* list, dict_visit_func visit, void* user_data);
+size_t          skiplist_count(const skiplist* list);
+bool            skiplist_verify(const skiplist* list);
 
 /* Compute the histogram of link counts of the skiplist.
  * For 0 < x < |ncounts|, |counts|[x] will be set to the number of nodes with x
  * links, and the maximal link count will be returned. If the return value is
  * greater than or equal to |ncounts|, not all link counts could be stored in
  * |counts| (i.e. the array was not large enough). */
-size_t		skiplist_link_count_histogram(const skiplist* list,
-					      size_t counts[], size_t ncounts);
+size_t          skiplist_link_count_histogram(const skiplist* list,
+                          size_t counts[], size_t ncounts);
 
 typedef struct skiplist_itor skiplist_itor;
 
-skiplist_itor*	skiplist_itor_new(skiplist* list);
-dict_itor*	skiplist_dict_itor_new(skiplist* list);
-void		skiplist_itor_free(skiplist_itor* );
+skiplist_itor*  skiplist_itor_new(skiplist* list);
+dict_itor*      skiplist_dict_itor_new(skiplist* list);
+void            skiplist_itor_free(skiplist_itor* );
 
-bool		skiplist_itor_valid(const skiplist_itor* itor);
-void		skiplist_itor_invalidate(skiplist_itor* itor);
-bool		skiplist_itor_next(skiplist_itor* itor);
-bool		skiplist_itor_prev(skiplist_itor* itor);
-bool		skiplist_itor_nextn(skiplist_itor* itor, size_t count);
-bool		skiplist_itor_prevn(skiplist_itor* itor, size_t count);
-bool		skiplist_itor_first(skiplist_itor* itor);
-bool		skiplist_itor_last(skiplist_itor* itor);
-bool		skiplist_itor_search(skiplist_itor* itor, const void* key);
-bool		skiplist_itor_search_le(skiplist_itor* itor, const void* key);
-bool		skiplist_itor_search_lt(skiplist_itor* itor, const void* key);
-bool		skiplist_itor_search_ge(skiplist_itor* itor, const void* key);
-bool		skiplist_itor_search_gt(skiplist_itor* itor, const void* key);
-const void*	skiplist_itor_key(const skiplist_itor* itor);
-void**		skiplist_itor_datum(skiplist_itor* itor);
+bool            skiplist_itor_valid(const skiplist_itor* itor);
+void            skiplist_itor_invalidate(skiplist_itor* itor);
+bool            skiplist_itor_next(skiplist_itor* itor);
+bool            skiplist_itor_prev(skiplist_itor* itor);
+bool            skiplist_itor_nextn(skiplist_itor* itor, size_t count);
+bool            skiplist_itor_prevn(skiplist_itor* itor, size_t count);
+bool            skiplist_itor_first(skiplist_itor* itor);
+bool            skiplist_itor_last(skiplist_itor* itor);
+bool            skiplist_itor_search(skiplist_itor* itor, const void* key);
+bool            skiplist_itor_search_le(skiplist_itor* itor, const void* key);
+bool            skiplist_itor_search_lt(skiplist_itor* itor, const void* key);
+bool            skiplist_itor_search_ge(skiplist_itor* itor, const void* key);
+bool            skiplist_itor_search_gt(skiplist_itor* itor, const void* key);
+const void*     skiplist_itor_key(const skiplist_itor* itor);
+void**          skiplist_itor_datum(skiplist_itor* itor);
 int             skiplist_itor_compare(const skiplist_itor* it1, const skiplist_itor* it2);
-bool		skiplist_itor_remove(skiplist_itor* itor);
+bool            skiplist_itor_remove(skiplist_itor* itor);
 
 END_DECL
 

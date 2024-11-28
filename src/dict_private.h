@@ -41,61 +41,61 @@
 # if defined(__GNUC__) || defined(__clang__)
 #  define ASSERT(expr) \
     do { \
-	if (!__builtin_expect((expr), 1)) { \
-	    fprintf(stderr, "\n%s:%d (%s) assertion failed: %s\n", \
-		    __FILE__, __LINE__, __func__, #expr); \
-	    abort(); \
-	} \
+    if (!__builtin_expect((expr), 1)) { \
+        fprintf(stderr, "\n%s:%d (%s) assertion failed: %s\n", \
+            __FILE__, __LINE__, __func__, #expr); \
+        abort(); \
+    } \
     } while (0)
 # else
 #  define ASSERT(expr) \
     do { \
-	if (!(expr)) { \
-	    fprintf(stderr, "\n%s:%d assertion failed: %s\n", \
-		    __FILE__, __LINE__, #expr); \
-	    abort(); \
-	} \
+    if (!(expr)) { \
+        fprintf(stderr, "\n%s:%d assertion failed: %s\n", \
+            __FILE__, __LINE__, #expr); \
+        abort(); \
+    } \
     } while (0)
 # endif
 #else
-# define ASSERT(expr)	(void)(expr)
+# define ASSERT(expr)    (void)(expr)
 #endif
 
 #if defined(__GNUC__) || defined(__clang__)
-# define LIKELY(expr)	    __builtin_expect((expr), 1)
-# define UNLIKELY(expr)	    __builtin_expect((expr), 0)
+# define LIKELY(expr)        __builtin_expect((expr), 1)
+# define UNLIKELY(expr)        __builtin_expect((expr), 0)
 # define VERIFY(expr) \
     do { \
-	if (!__builtin_expect((expr), 1)) { \
-	    fprintf(stderr, "\n%s:%d (%s) verification failed: %s\n", \
-		    __FILE__, __LINE__, __func__, #expr); \
-	    return false; \
-	} \
+    if (!__builtin_expect((expr), 1)) { \
+        fprintf(stderr, "\n%s:%d (%s) verification failed: %s\n", \
+            __FILE__, __LINE__, __func__, #expr); \
+        return false; \
+    } \
     } while (0)
 #else
-# define LIKELY(expr)	    (expr)
-# define UNLIKELY(expr)	    (expr)
+# define LIKELY(expr)        (expr)
+# define UNLIKELY(expr)        (expr)
 # define VERIFY(expr) \
     do { \
-	if (!(expr)) { \
-	    fprintf(stderr, "\n%s:%d verification failed: %s\n", \
-		    __FILE__, __LINE__, #expr); \
-	    return false; \
-	} \
+    if (!(expr)) { \
+        fprintf(stderr, "\n%s:%d verification failed: %s\n", \
+            __FILE__, __LINE__, #expr); \
+        return false; \
+    } \
     } while (0)
 #endif
 
-#define MALLOC(n)	(*dict_malloc_func)(n)
-#define FREE(p)		(*dict_free_func)(p)
+#define MALLOC(n)    (*dict_malloc_func)(n)
+#define FREE(p)        (*dict_free_func)(p)
 
-#define ABS(a)		((a) < 0 ? -(a) : (a))
-#define MIN(a,b)	((a) < (b) ? (a) : (b))
-#define MAX(a,b)	((a) > (b) ? (a) : (b))
-#define SWAP(a,b,v)	do { v = (a); (a) = (b); (b) = v; } while (0)
+#define ABS(a)        ((a) < 0 ? -(a) : (a))
+#define MIN(a,b)    ((a) < (b) ? (a) : (b))
+#define MAX(a,b)    ((a) > (b) ? (a) : (b))
+#define SWAP(a,b,v)    do { v = (a); (a) = (b); (b) = v; } while (0)
 
 #if defined(__GNUC__) || defined(__clang__)
-# define GCC_INLINE	__inline__
-# define GCC_CONST	__attribute__((__const__))
+# define GCC_INLINE    __inline__
+# define GCC_CONST    __attribute__((__const__))
 #else
 # define GCC_INLINE
 # define GCC_CONST

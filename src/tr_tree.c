@@ -49,12 +49,12 @@
 typedef struct tr_node tr_node;
 struct tr_node {
     TREE_NODE_FIELDS(tr_node);
-    uint32_t		    prio;
+    uint32_t            prio;
 };
 
 struct tr_tree {
     TREE_FIELDS(tr_node);
-    dict_prio_func	    prio_func;
+    dict_prio_func        prio_func;
 };
 
 struct tr_itor {
@@ -63,44 +63,44 @@ struct tr_itor {
 
 static const dict_vtable tr_tree_vtable = {
     true,
-    (dict_inew_func)	    tr_dict_itor_new,
-    (dict_dfree_func)	    tree_free,
-    (dict_insert_func)	    tr_tree_insert,
-    (dict_search_func)	    tree_search,
-    (dict_search_func)	    tree_search_le,
-    (dict_search_func)	    tree_search_lt,
-    (dict_search_func)	    tree_search_ge,
-    (dict_search_func)	    tree_search_gt,
-    (dict_remove_func)	    tr_tree_remove,
-    (dict_clear_func)	    tree_clear,
+    (dict_inew_func)        tr_dict_itor_new,
+    (dict_dfree_func)       tree_free,
+    (dict_insert_func)      tr_tree_insert,
+    (dict_search_func)      tree_search,
+    (dict_search_func)      tree_search_le,
+    (dict_search_func)      tree_search_lt,
+    (dict_search_func)      tree_search_ge,
+    (dict_search_func)      tree_search_gt,
+    (dict_remove_func)      tr_tree_remove,
+    (dict_clear_func)       tree_clear,
     (dict_traverse_func)    tree_traverse,
-    (dict_select_func)	    tree_select,
-    (dict_count_func)	    tree_count,
-    (dict_verify_func)	    tr_tree_verify,
+    (dict_select_func)      tree_select,
+    (dict_count_func)       tree_count,
+    (dict_verify_func)      tr_tree_verify,
 };
 
 static const itor_vtable tr_tree_itor_vtable = {
-    (dict_ifree_func)	    tree_iterator_free,
-    (dict_valid_func)	    tree_iterator_valid,
+    (dict_ifree_func)       tree_iterator_free,
+    (dict_valid_func)       tree_iterator_valid,
     (dict_invalidate_func)  tree_iterator_invalidate,
-    (dict_next_func)	    tree_iterator_next,
-    (dict_prev_func)	    tree_iterator_prev,
-    (dict_nextn_func)	    tree_iterator_nextn,
-    (dict_prevn_func)	    tree_iterator_prevn,
-    (dict_first_func)	    tree_iterator_first,
-    (dict_last_func)	    tree_iterator_last,
-    (dict_key_func)	    tree_iterator_key,
-    (dict_datum_func)	    tree_iterator_datum,
-    (dict_isearch_func)	    tree_iterator_search,
-    (dict_isearch_func)	    tree_iterator_search_le,
-    (dict_isearch_func)	    tree_iterator_search_lt,
-    (dict_isearch_func)	    tree_iterator_search_ge,
-    (dict_isearch_func)	    tree_iterator_search_gt,
-    (dict_iremove_func)	    tr_itor_remove,
+    (dict_next_func)        tree_iterator_next,
+    (dict_prev_func)        tree_iterator_prev,
+    (dict_nextn_func)       tree_iterator_nextn,
+    (dict_prevn_func)       tree_iterator_prevn,
+    (dict_first_func)       tree_iterator_first,
+    (dict_last_func)        tree_iterator_last,
+    (dict_key_func)         tree_iterator_key,
+    (dict_datum_func)       tree_iterator_datum,
+    (dict_isearch_func)     tree_iterator_search,
+    (dict_isearch_func)     tree_iterator_search_le,
+    (dict_isearch_func)     tree_iterator_search_lt,
+    (dict_isearch_func)     tree_iterator_search_ge,
+    (dict_isearch_func)     tree_iterator_search_gt,
+    (dict_iremove_func)     tr_itor_remove,
     (dict_icompare_func)    tree_iterator_compare,
 };
 
-static tr_node*	node_new(void* key);
+static tr_node* node_new(void* key);
 
 tr_tree*
 tr_tree_new(dict_compare_func cmp_func, dict_prio_func prio_func)
@@ -109,11 +109,11 @@ tr_tree_new(dict_compare_func cmp_func, dict_prio_func prio_func)
 
     tr_tree* tree = MALLOC(sizeof(*tree));
     if (tree) {
-	tree->root = NULL;
-	tree->count = 0;
-	tree->cmp_func = cmp_func;
-	tree->rotation_count = 0;
-	tree->prio_func = prio_func;
+        tree->root = NULL;
+        tree->count = 0;
+        tree->cmp_func = cmp_func;
+        tree->rotation_count = 0;
+        tree->prio_func = prio_func;
     }
     return tree;
 }
@@ -123,11 +123,11 @@ tr_dict_new(dict_compare_func cmp_func, dict_prio_func prio_func)
 {
     dict* dct = MALLOC(sizeof(*dct));
     if (dct) {
-	if (!(dct->_object = tr_tree_new(cmp_func, prio_func))) {
-	    FREE(dct);
-	    return NULL;
-	}
-	dct->_vtable = &tr_tree_vtable;
+        if (!(dct->_object = tr_tree_new(cmp_func, prio_func))) {
+            FREE(dct);
+            return NULL;
+        }
+        dct->_vtable = &tr_tree_vtable;
     }
     return dct;
 }
@@ -142,40 +142,40 @@ tr_tree_insert(tr_tree* tree, void* key)
     tr_node* node = tree->root;
     tr_node* parent = NULL;
     while (node) {
-	cmp = tree->cmp_func(key, node->key);
-	if (cmp < 0) {
-	    parent = node; node = node->llink;
-	} else if (cmp > 0) {
-	    parent = node; node = node->rlink;
-	} else
-	    return (dict_insert_result) { &node->datum, false };
+        cmp = tree->cmp_func(key, node->key);
+        if (cmp < 0) {
+            parent = node; node = node->llink;
+        } else if (cmp > 0) {
+            parent = node; node = node->rlink;
+        } else
+            return (dict_insert_result) { &node->datum, false };
     }
 
     if (!(node = node_new(key)))
-	return (dict_insert_result) { NULL, false };
+        return (dict_insert_result) { NULL, false };
     node->prio = tree->prio_func ? tree->prio_func(key) : dict_rand();
 
     if (!(node->parent = parent)) {
-	ASSERT(tree->root == NULL);
-	ASSERT(tree->count == 0);
-	tree->root = node;
+        ASSERT(tree->root == NULL);
+        ASSERT(tree->count == 0);
+        tree->root = node;
     } else {
-	if (cmp < 0)
-	    parent->llink = node;
-	else
-	    parent->rlink = node;
+        if (cmp < 0)
+            parent->llink = node;
+        else
+            parent->rlink = node;
 
-	unsigned rotations = 0;
-	while (parent->prio < node->prio) {
-	    ++rotations;
-	    if (parent->llink == node)
-		tree_node_rot_right(tree, parent);
-	    else
-		tree_node_rot_left(tree, parent);
-	    if (!(parent = node->parent))
-		break;
-	}
-	tree->rotation_count += rotations;
+        unsigned rotations = 0;
+        while (parent->prio < node->prio) {
+            ++rotations;
+            if (parent->llink == node)
+                tree_node_rot_right(tree, parent);
+            else
+                tree_node_rot_left(tree, parent);
+            if (!(parent = node->parent))
+                break;
+        }
+        tree->rotation_count += rotations;
     }
     tree->count++;
     return (dict_insert_result) { &node->datum, true };
@@ -186,18 +186,18 @@ remove_node(tr_tree* tree, tr_node* node)
 {
     unsigned rotations = 0;
     while (node->llink && node->rlink) {
-	++rotations;
-	if (node->llink->prio > node->rlink->prio)
-	    tree_node_rot_right(tree, node);
-	else
-	    tree_node_rot_left(tree, node);
+        ++rotations;
+        if (node->llink->prio > node->rlink->prio)
+            tree_node_rot_right(tree, node);
+        else
+            tree_node_rot_left(tree, node);
     }
     tree->rotation_count += rotations;
 
     tr_node* const out = node->llink ? node->llink : node->rlink;
     tr_node* const parent = node->parent;
     if (out)
-	out->parent = parent;
+        out->parent = parent;
     *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &tree->root) = out;
 
     FREE(node);
@@ -209,7 +209,7 @@ tr_tree_remove(tr_tree* tree, const void* key)
 {
     tr_node* node = tree_search_node(tree, key);
     if (!node)
-	return (dict_remove_result) { NULL, NULL, false };
+        return (dict_remove_result) { NULL, NULL, false };
     dict_remove_result result = { node->key, node->datum, true };
     remove_node(tree, node);
     return result;
@@ -232,11 +232,11 @@ node_new(void* key)
 {
     tr_node* node = MALLOC(sizeof(*node));
     if (node) {
-	node->key = key;
-	node->datum = NULL;
-	node->parent = NULL;
-	node->llink = NULL;
-	node->rlink = NULL;
+        node->key = key;
+        node->datum = NULL;
+        node->parent = NULL;
+        node->llink = NULL;
+        node->rlink = NULL;
     }
     return node;
 }
@@ -245,24 +245,24 @@ static bool
 node_verify(const tr_tree* tree, const tr_node* parent, const tr_node* node)
 {
     if (!parent) {
-	VERIFY(tree->root == node);
+        VERIFY(tree->root == node);
     } else {
-	VERIFY(parent->llink == node || parent->rlink == node);
+        VERIFY(parent->llink == node || parent->rlink == node);
     }
     if (node) {
-	VERIFY(node->parent == parent);
-	if (parent) {
-	    VERIFY(node->prio <= parent->prio);
-	    if (parent->llink == node) {
-		VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-	    } else {
-		ASSERT(parent->rlink == node);
-		VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-	    }
-	}
-	if (!node_verify(tree, node, node->llink) ||
-	    !node_verify(tree, node, node->rlink))
-	    return false;
+        VERIFY(node->parent == parent);
+        if (parent) {
+            VERIFY(node->prio <= parent->prio);
+            if (parent->llink == node) {
+                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
+            } else {
+                ASSERT(parent->rlink == node);
+                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
+            }
+        }
+        if (!node_verify(tree, node, node->llink) ||
+            !node_verify(tree, node, node->rlink))
+            return false;
     }
     return true;
 }
@@ -271,9 +271,9 @@ bool
 tr_tree_verify(const tr_tree* tree)
 {
     if (tree->root) {
-	VERIFY(tree->count > 0);
+        VERIFY(tree->count > 0);
     } else {
-	VERIFY(tree->count == 0);
+        VERIFY(tree->count == 0);
     }
     return node_verify(tree, NULL, tree->root);
 }
@@ -283,8 +283,8 @@ tr_itor_new(tr_tree* tree)
 {
     tr_itor* itor = MALLOC(sizeof(*itor));
     if (itor) {
-	itor->tree = tree;
-	itor->node = NULL;
+        itor->tree = tree;
+        itor->node = NULL;
     }
     return itor;
 }
@@ -294,11 +294,11 @@ tr_dict_itor_new(tr_tree* tree)
 {
     dict_itor* itor = MALLOC(sizeof(*itor));
     if (itor) {
-	if (!(itor->_itor = tr_itor_new(tree))) {
-	    FREE(itor);
-	    return NULL;
-	}
-	itor->_vtable = &tr_tree_itor_vtable;
+        if (!(itor->_itor = tr_itor_new(tree))) {
+            FREE(itor);
+            return NULL;
+        }
+        itor->_vtable = &tr_tree_itor_vtable;
     }
     return itor;
 }
@@ -325,7 +325,7 @@ bool
 tr_itor_remove(tr_itor* it)
 {
     if (!it->node)
-	return false;
+        return false;
     remove_node(it->tree, it->node);
     it->node = NULL;
     return true;

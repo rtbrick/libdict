@@ -49,7 +49,7 @@ tree_node_rot_left(void* Tree, void* Node)
     tree_node* const nr = n->rlink;
     ASSERT(nr != NULL);
     if ((n->rlink = nr->llink) != NULL)
-	n->rlink->parent = n;
+    n->rlink->parent = n;
     nr->llink = n;
 
     tree_node* p = n->parent;
@@ -65,7 +65,7 @@ tree_node_rot_right(void* Tree, void* Node)
     tree_node* const nl = n->llink;
     ASSERT(nl != NULL);
     if ((n->llink = nl->rlink) != NULL)
-	n->llink->parent = n;
+        n->llink->parent = n;
     nl->rlink = n;
 
     tree_node* const p = n->parent;
@@ -79,11 +79,11 @@ tree_node_prev(void* Node)
 {
     tree_node* node = Node;
     if (node->llink)
-	return tree_node_max(node->llink);
+        return tree_node_max(node->llink);
     tree_node* parent = node->parent;
     while (parent && parent->llink == node) {
-	node = parent;
-	parent = parent->parent;
+        node = parent;
+        parent = parent->parent;
     }
     return parent;
 }
@@ -93,11 +93,11 @@ tree_node_next(void* Node)
 {
     tree_node* node = Node;
     if (node->rlink)
-	return tree_node_min(node->rlink);
+        return tree_node_min(node->rlink);
     tree_node* parent = node->parent;
     while (parent && parent->rlink == node) {
-	node = parent;
-	parent = parent->parent;
+        node = parent;
+        parent = parent->parent;
     }
     return parent;
 }
@@ -107,9 +107,9 @@ tree_node_min(void* Node)
 {
     tree_node* node = Node;
     if (!node)
-	return NULL;
+        return NULL;
     while (node->llink)
-	node = node->llink;
+        node = node->llink;
     return node;
 }
 
@@ -118,9 +118,9 @@ tree_node_max(void* Node)
 {
     tree_node* node = Node;
     if (!node)
-	return NULL;
+        return NULL;
     while (node->rlink)
-	node = node->rlink;
+        node = node->rlink;
     return node;
 }
 
@@ -129,13 +129,13 @@ tree_search_node(void* Tree, const void* key)
 {
     tree* t = Tree;
     for (tree_node* node = t->root; node;) {
-	const int cmp = t->cmp_func(key, node->key);
-	if (cmp < 0)
-	    node = node->llink;
-	else if (cmp)
-	    node = node->rlink;
-	else
-	    return node;
+        const int cmp = t->cmp_func(key, node->key);
+        if (cmp < 0)
+            node = node->llink;
+        else if (cmp)
+            node = node->rlink;
+        else
+            return node;
     }
     return NULL;
 }
@@ -153,15 +153,15 @@ tree_search_le_node(void* Tree, const void* key)
     tree* t = Tree;
     tree_node* node = t->root, *ret = NULL;
     while (node) {
-	const int cmp = t->cmp_func(key, node->key);
-	if (cmp == 0)
-	    return node;
-	if (cmp < 0) {
-	    node = node->llink;
-	} else {
-	    ret = node;
-	    node = node->rlink;
-	}
+        const int cmp = t->cmp_func(key, node->key);
+        if (cmp == 0)
+            return node;
+        if (cmp < 0) {
+            node = node->llink;
+        } else {
+            ret = node;
+            node = node->rlink;
+        }
     }
     return ret;
 }
@@ -179,13 +179,13 @@ tree_search_lt_node(void* Tree, const void* key)
     tree* t = Tree;
     tree_node* node = t->root, *ret = NULL;
     while (node) {
-	const int cmp = t->cmp_func(key, node->key);
-	if (cmp <= 0) {
-	    node = node->llink;
-	} else {
-	    ret = node;
-	    node = node->rlink;
-	}
+        const int cmp = t->cmp_func(key, node->key);
+        if (cmp <= 0) {
+            node = node->llink;
+        } else {
+            ret = node;
+            node = node->rlink;
+        }
     }
     return ret;
 }
@@ -203,16 +203,16 @@ tree_search_ge_node(void* Tree, const void* key)
     tree* t = Tree;
     tree_node* node = t->root, *ret = NULL;
     while (node) {
-	const int cmp = t->cmp_func(key, node->key);
-	if (cmp == 0) {
-	    return node;
-	}
-	if (cmp < 0) {
-	    ret = node;
-	    node = node->llink;
-	} else {
-	    node = node->rlink;
-	}
+        const int cmp = t->cmp_func(key, node->key);
+        if (cmp == 0) {
+            return node;
+        }
+        if (cmp < 0) {
+            ret = node;
+            node = node->llink;
+        } else {
+            node = node->rlink;
+        }
     }
     return ret;
 }
@@ -230,13 +230,13 @@ tree_search_gt_node(void* Tree, const void* key)
     tree* t = Tree;
     tree_node* node = t->root, *ret = NULL;
     while (node) {
-	const int cmp = t->cmp_func(key, node->key);
-	if (cmp < 0) {
-	    ret = node;
-	    node = node->llink;
-	} else {
-	    node = node->rlink;
-	}
+        const int cmp = t->cmp_func(key, node->key);
+        if (cmp < 0) {
+            ret = node;
+            node = node->llink;
+        } else {
+            node = node->rlink;
+        }
     }
     return ret;
 }
@@ -256,13 +256,13 @@ tree_traverse(void* Tree, dict_visit_func visit, void* user_data)
     tree* t = Tree;
     size_t count = 0;
     if (t->root) {
-	tree_node* node = tree_node_min(t->root);
-	do {
-	    ++count;
-	    if (!visit(node->key, node->datum, user_data))
-		break;
-	    node = tree_node_next(node);
-	} while (node);
+        tree_node* node = tree_node_min(t->root);
+        do {
+            ++count;
+            if (!visit(node->key, node->datum, user_data))
+                break;
+            node = tree_node_next(node);
+        } while (node);
     }
     return count;
 }
@@ -272,20 +272,20 @@ tree_select(void *Tree, size_t n, const void **key, void **datum)
 {
     tree* t = Tree;
     if (n >= t->count) {
-	*key = NULL;
-	*datum = NULL;
-	return false;
+        *key = NULL;
+        *datum = NULL;
+        return false;
     }
     tree_node* node;
     if (n >= t->count / 2) {
-	node = tree_node_max(t->root);
-	n = t->count - 1 - n;
-	while (n--)
-	    node = tree_node_prev(node);
+        node = tree_node_max(t->root);
+        n = t->count - 1 - n;
+        while (n--)
+            node = tree_node_prev(node);
     } else {
-	node = tree_node_min(t->root);
-	while (n--)
-	    node = tree_node_next(node);
+        node = tree_node_min(t->root);
+        while (n--)
+            node = tree_node_next(node);
     }
     *key = node->key;
     *datum = node->datum;
@@ -306,18 +306,18 @@ tree_clear(void* Tree, dict_delete_func delete_func)
 
     tree_node* node = t->root;
     while (node) {
-	if (node->llink || node->rlink) {
-	    node = node->llink ? node->llink : node->rlink;
-	    continue;
-	}
+        if (node->llink || node->rlink) {
+            node = node->llink ? node->llink : node->rlink;
+            continue;
+        }
 
-	if (delete_func)
-	    delete_func(node->key, node->datum);
+        if (delete_func)
+            delete_func(node->key, node->datum);
 
-	tree_node* const parent = node->parent;
-	FREE(node);
-	*(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &t->root) = NULL;
-	node = parent;
+        tree_node* const parent = node->parent;
+        FREE(node);
+        *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &t->root) = NULL;
+        node = parent;
     }
     ASSERT(t->root == NULL);
     t->count = 0;
@@ -366,8 +366,8 @@ static size_t
 node_path_length(const tree_node* node, size_t level)
 {
     return level
-	+ (node->llink ? node_path_length(node->llink, level + 1) : 0)
-	+ (node->rlink ? node_path_length(node->rlink, level + 1) : 0);
+    + (node->llink ? node_path_length(node->llink, level + 1) : 0)
+    + (node->rlink ? node_path_length(node->rlink, level + 1) : 0);
 }
 
 size_t
@@ -416,7 +416,7 @@ tree_iterator_nextn(void* Iterator, size_t count)
 {
     tree_iterator* iterator = Iterator;
     while (iterator->node && count--)
-	iterator->node = tree_node_next(iterator->node);
+        iterator->node = tree_node_next(iterator->node);
     return iterator->node != NULL;
 }
 
@@ -425,7 +425,7 @@ tree_iterator_prevn(void* Iterator, size_t count)
 {
     tree_iterator* iterator = Iterator;
     while (iterator->node && count--)
-	iterator->node = tree_node_prev(iterator->node);
+        iterator->node = tree_node_prev(iterator->node);
     return iterator->node != NULL;
 }
 
@@ -485,9 +485,9 @@ tree_iterator_compare(const void* Iterator1, const void* Iterator2)
     const tree_iterator* itor2 = Iterator2;
     ASSERT(itor1->tree == itor2->tree);
     if (!itor1->node)
-	return !itor2->node ? 0 : -1;
+        return !itor2->node ? 0 : -1;
     if (!itor2->node)
-	return 1;
+        return 1;
     return itor1->tree->cmp_func(itor1->node->key, itor2->node->key);
 }
 

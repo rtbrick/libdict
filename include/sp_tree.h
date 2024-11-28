@@ -34,51 +34,51 @@ BEGIN_DECL
 
 typedef struct sp_tree sp_tree;
 
-sp_tree*	sp_tree_new(dict_compare_func cmp_func);
-dict*		sp_dict_new(dict_compare_func cmp_func);
-size_t		sp_tree_free(sp_tree* tree, dict_delete_func delete_func);
+sp_tree*        sp_tree_new(dict_compare_func cmp_func);
+dict*           sp_dict_new(dict_compare_func cmp_func);
+size_t          sp_tree_free(sp_tree* tree, dict_delete_func delete_func);
 
 dict_insert_result
-		sp_tree_insert(sp_tree* tree, void* key);
-void**		sp_tree_search(sp_tree* tree, const void* key);
-void**		sp_tree_search_le(sp_tree* tree, const void* key);
-void**		sp_tree_search_lt(sp_tree* tree, const void* key);
-void**		sp_tree_search_ge(sp_tree* tree, const void* key);
-void**		sp_tree_search_gt(sp_tree* tree, const void* key);
+                sp_tree_insert(sp_tree* tree, void* key);
+void**          sp_tree_search(sp_tree* tree, const void* key);
+void**          sp_tree_search_le(sp_tree* tree, const void* key);
+void**          sp_tree_search_lt(sp_tree* tree, const void* key);
+void**          sp_tree_search_ge(sp_tree* tree, const void* key);
+void**          sp_tree_search_gt(sp_tree* tree, const void* key);
 dict_remove_result
-		sp_tree_remove(sp_tree* tree, const void* key);
-size_t		sp_tree_clear(sp_tree* tree, dict_delete_func delete_func);
-size_t		sp_tree_traverse(sp_tree* tree, dict_visit_func visit, void* user_data);
-bool		sp_tree_select(sp_tree* tree, size_t n, const void** key, void** datum);
-size_t		sp_tree_count(const sp_tree* tree);
-size_t		sp_tree_min_path_length(const sp_tree* tree);
-size_t		sp_tree_max_path_length(const sp_tree* tree);
-size_t		sp_tree_total_path_length(const sp_tree* tree);
-bool		sp_tree_verify(const sp_tree* tree);
+                sp_tree_remove(sp_tree* tree, const void* key);
+size_t          sp_tree_clear(sp_tree* tree, dict_delete_func delete_func);
+size_t          sp_tree_traverse(sp_tree* tree, dict_visit_func visit, void* user_data);
+bool            sp_tree_select(sp_tree* tree, size_t n, const void** key, void** datum);
+size_t          sp_tree_count(const sp_tree* tree);
+size_t          sp_tree_min_path_length(const sp_tree* tree);
+size_t          sp_tree_max_path_length(const sp_tree* tree);
+size_t          sp_tree_total_path_length(const sp_tree* tree);
+bool            sp_tree_verify(const sp_tree* tree);
 
 typedef struct sp_itor sp_itor;
 
-sp_itor*	sp_itor_new(sp_tree* tree);
-dict_itor*	sp_dict_itor_new(sp_tree* tree);
-void		sp_itor_free(sp_itor* tree);
+sp_itor*        sp_itor_new(sp_tree* tree);
+dict_itor*      sp_dict_itor_new(sp_tree* tree);
+void            sp_itor_free(sp_itor* tree);
 
-bool		sp_itor_valid(const sp_itor* itor);
-void		sp_itor_invalidate(sp_itor* itor);
-bool		sp_itor_next(sp_itor* itor);
-bool		sp_itor_prev(sp_itor* itor);
-bool		sp_itor_nextn(sp_itor* itor, size_t count);
-bool		sp_itor_prevn(sp_itor* itor, size_t count);
-bool		sp_itor_first(sp_itor* itor);
-bool		sp_itor_last(sp_itor* itor);
-bool		sp_itor_search(sp_itor* itor, const void* key);
-bool		sp_itor_search_le(sp_itor* itor, const void* key);
-bool		sp_itor_search_lt(sp_itor* itor, const void* key);
-bool		sp_itor_search_ge(sp_itor* itor, const void* key);
-bool		sp_itor_search_gt(sp_itor* itor, const void* key);
-const void*	sp_itor_key(const sp_itor* itor);
-void**		sp_itor_datum(sp_itor* itor);
+bool            sp_itor_valid(const sp_itor* itor);
+void            sp_itor_invalidate(sp_itor* itor);
+bool            sp_itor_next(sp_itor* itor);
+bool            sp_itor_prev(sp_itor* itor);
+bool            sp_itor_nextn(sp_itor* itor, size_t count);
+bool            sp_itor_prevn(sp_itor* itor, size_t count);
+bool            sp_itor_first(sp_itor* itor);
+bool            sp_itor_last(sp_itor* itor);
+bool            sp_itor_search(sp_itor* itor, const void* key);
+bool            sp_itor_search_le(sp_itor* itor, const void* key);
+bool            sp_itor_search_lt(sp_itor* itor, const void* key);
+bool            sp_itor_search_ge(sp_itor* itor, const void* key);
+bool            sp_itor_search_gt(sp_itor* itor, const void* key);
+const void*     sp_itor_key(const sp_itor* itor);
+void**          sp_itor_datum(sp_itor* itor);
 int             sp_itor_compare(const sp_itor* i1, const sp_itor* i2);
-bool		sp_itor_remove(sp_itor* itor);
+bool            sp_itor_remove(sp_itor* itor);
 
 END_DECL
 

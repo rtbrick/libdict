@@ -40,7 +40,7 @@ struct pr_node {
     unsigned weight;
 };
 
-#define WEIGHT(n)	((n) ? (n)->weight : 1)
+#define WEIGHT(n)    ((n) ? (n)->weight : 1)
 
 struct pr_tree {
     TREE_FIELDS(pr_node);
@@ -52,47 +52,47 @@ struct pr_itor {
 
 static const dict_vtable pr_tree_vtable = {
     true,
-    (dict_inew_func)	    pr_dict_itor_new,
-    (dict_dfree_func)	    tree_free,
-    (dict_insert_func)	    pr_tree_insert,
-    (dict_search_func)	    tree_search,
-    (dict_search_func)	    tree_search_le,
-    (dict_search_func)	    tree_search_lt,
-    (dict_search_func)	    tree_search_ge,
-    (dict_search_func)	    tree_search_gt,
-    (dict_remove_func)	    pr_tree_remove,
-    (dict_clear_func)	    tree_clear,
+    (dict_inew_func)        pr_dict_itor_new,
+    (dict_dfree_func)       tree_free,
+    (dict_insert_func)      pr_tree_insert,
+    (dict_search_func)      tree_search,
+    (dict_search_func)      tree_search_le,
+    (dict_search_func)      tree_search_lt,
+    (dict_search_func)      tree_search_ge,
+    (dict_search_func)      tree_search_gt,
+    (dict_remove_func)      pr_tree_remove,
+    (dict_clear_func)       tree_clear,
     (dict_traverse_func)    tree_traverse,
-    (dict_select_func)	    pr_tree_select,
-    (dict_count_func)	    tree_count,
-    (dict_verify_func)	    pr_tree_verify,
+    (dict_select_func)      pr_tree_select,
+    (dict_count_func)       tree_count,
+    (dict_verify_func)      pr_tree_verify,
 };
 
 static const itor_vtable pr_tree_itor_vtable = {
-    (dict_ifree_func)	    tree_iterator_free,
-    (dict_valid_func)	    tree_iterator_valid,
+    (dict_ifree_func)       tree_iterator_free,
+    (dict_valid_func)       tree_iterator_valid,
     (dict_invalidate_func)  tree_iterator_invalidate,
-    (dict_next_func)	    tree_iterator_next,
-    (dict_prev_func)	    tree_iterator_prev,
-    (dict_nextn_func)	    tree_iterator_nextn,
-    (dict_prevn_func)	    tree_iterator_prevn,
-    (dict_first_func)	    tree_iterator_first,
-    (dict_last_func)	    tree_iterator_last,
-    (dict_key_func)	    tree_iterator_key,
-    (dict_datum_func)	    tree_iterator_datum,
-    (dict_isearch_func)	    tree_iterator_search,
-    (dict_isearch_func)	    tree_iterator_search_le,
-    (dict_isearch_func)	    tree_iterator_search_lt,
-    (dict_isearch_func)	    tree_iterator_search_ge,
-    (dict_isearch_func)	    tree_iterator_search_gt,
-    (dict_iremove_func)	    pr_itor_remove,
+    (dict_next_func)        tree_iterator_next,
+    (dict_prev_func)        tree_iterator_prev,
+    (dict_nextn_func)       tree_iterator_nextn,
+    (dict_prevn_func)       tree_iterator_prevn,
+    (dict_first_func)       tree_iterator_first,
+    (dict_last_func)        tree_iterator_last,
+    (dict_key_func)         tree_iterator_key,
+    (dict_datum_func)       tree_iterator_datum,
+    (dict_isearch_func)     tree_iterator_search,
+    (dict_isearch_func)     tree_iterator_search_le,
+    (dict_isearch_func)     tree_iterator_search_lt,
+    (dict_isearch_func)     tree_iterator_search_ge,
+    (dict_isearch_func)     tree_iterator_search_gt,
+    (dict_iremove_func)     pr_itor_remove,
     (dict_icompare_func)    tree_iterator_compare,
 };
 
-static unsigned	fixup(pr_tree* tree, pr_node* node);
-static void	rot_left(pr_tree* tree, pr_node* node);
-static void	rot_right(pr_tree* tree, pr_node* node);
-static pr_node*	node_new(void* key);
+static unsigned fixup(pr_tree* tree, pr_node* node);
+static void rot_left(pr_tree* tree, pr_node* node);
+static void rot_right(pr_tree* tree, pr_node* node);
+static pr_node* node_new(void* key);
 
 pr_tree*
 pr_tree_new(dict_compare_func cmp_func)
@@ -101,10 +101,10 @@ pr_tree_new(dict_compare_func cmp_func)
 
     pr_tree* tree = MALLOC(sizeof(*tree));
     if (tree) {
-	tree->root = NULL;
-	tree->count = 0;
-	tree->cmp_func = cmp_func;
-	tree->rotation_count = 0;
+        tree->root = NULL;
+        tree->count = 0;
+        tree->cmp_func = cmp_func;
+        tree->rotation_count = 0;
     }
     return tree;
 }
@@ -114,11 +114,11 @@ pr_dict_new(dict_compare_func cmp_func)
 {
     dict* dct = MALLOC(sizeof(*dct));
     if (dct) {
-	if (!(dct->_object = pr_tree_new(cmp_func))) {
-	    FREE(dct);
-	    return NULL;
-	}
-	dct->_vtable = &pr_tree_vtable;
+        if (!(dct->_object = pr_tree_new(cmp_func))) {
+            FREE(dct);
+            return NULL;
+        }
+        dct->_vtable = &pr_tree_vtable;
     }
     return dct;
 }
@@ -165,85 +165,85 @@ fixup(pr_tree* tree, pr_node* node)
     const unsigned lweight = WEIGHT(node->llink);
     const unsigned rweight = WEIGHT(node->rlink);
     if (lweight < rweight) {
-	pr_node* r = node->rlink;
-	ASSERT(r != NULL);
-	if (WEIGHT(r->rlink) > lweight) {	    /* LL */
-	    rot_left(tree, node);
-	    rotations += 1;
-	    rotations += fixup(tree, node);
-	    /* Commenting the next line means we must make the weight
-	     * verification condition in node_verify() less stringent. */
-	    rotations += fixup(tree, r);
-	} else if (WEIGHT(r->llink) > lweight) {    /* RL */
-	    /* Rotate |r| right, then |node| left, with |rl| taking the place
-	     * of |node| and having |node| and |r| as left and right children,
-	     * respectively. */
-	    pr_node* const rl = r->llink;
-	    pr_node* const parent = node->parent;
+        pr_node* r = node->rlink;
+        ASSERT(r != NULL);
+        if (WEIGHT(r->rlink) > lweight) {        /* LL */
+            rot_left(tree, node);
+            rotations += 1;
+            rotations += fixup(tree, node);
+            /* Commenting the next line means we must make the weight
+            * verification condition in node_verify() less stringent. */
+            rotations += fixup(tree, r);
+        } else if (WEIGHT(r->llink) > lweight) {    /* RL */
+            /* Rotate |r| right, then |node| left, with |rl| taking the place
+            * of |node| and having |node| and |r| as left and right children,
+            * respectively. */
+            pr_node* const rl = r->llink;
+            pr_node* const parent = node->parent;
 
-	    pr_node* const a = rl->llink;
-	    rl->llink = node;
-	    node->parent = rl;
-	    if ((node->rlink = a) != NULL)
-		a->parent = node;
+            pr_node* const a = rl->llink;
+            rl->llink = node;
+            node->parent = rl;
+            if ((node->rlink = a) != NULL)
+                a->parent = node;
 
-	    pr_node* const b = rl->rlink;
-	    rl->rlink = r;
-	    r->parent = rl;
-	    if ((r->llink = b) != NULL)
-		b->parent = r;
+            pr_node* const b = rl->rlink;
+            rl->rlink = r;
+            r->parent = rl;
+            if ((r->llink = b) != NULL)
+                b->parent = r;
 
-	    rl->parent = parent;
-	    *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &tree->root) = rl;
+            rl->parent = parent;
+            *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &tree->root) = rl;
 
-	    node->weight += WEIGHT(a) - r->weight;
-	    r->weight += WEIGHT(b) - rl->weight;
-	    rl->weight = node->weight + r->weight;
+            node->weight += WEIGHT(a) - r->weight;
+            r->weight += WEIGHT(b) - rl->weight;
+            rl->weight = node->weight + r->weight;
 
-	    rotations += 1;
-	    rotations += fixup(tree, r);
-	    rotations += fixup(tree, node);
-	}
+            rotations += 1;
+            rotations += fixup(tree, r);
+            rotations += fixup(tree, node);
+        }
     } else if (lweight > rweight) {
-	pr_node* l = node->llink;
-	ASSERT(l != NULL);
-	if (WEIGHT(l->llink) > rweight) {	    /* RR */
-	    rot_right(tree, node);
-	    rotations += 1;
-	    rotations += fixup(tree, node);
-	    /* Commenting the next line means we must turn the weight
-	     * verification condition in node_verify() less stringent. */
-	    rotations += fixup(tree, l);
-	} else if (WEIGHT(l->rlink) > rweight) {    /* LR */
-	    /* Rotate |l| left, then |node| right, with |lr| taking the place of
-	     * |node| and having |l| and |node| as left and right children,
-	     * respectively. */
-	    pr_node* const lr = l->rlink;
-	    pr_node* const parent = node->parent;
+        pr_node* l = node->llink;
+        ASSERT(l != NULL);
+        if (WEIGHT(l->llink) > rweight) { /* RR */
+            rot_right(tree, node);
+            rotations += 1;
+            rotations += fixup(tree, node);
+            /* Commenting the next line means we must turn the weight
+             * verification condition in node_verify() less stringent. */
+            rotations += fixup(tree, l);
+        } else if (WEIGHT(l->rlink) > rweight) { /* LR */
+            /* Rotate |l| left, then |node| right, with |lr| taking the place of
+             * |node| and having |l| and |node| as left and right children,
+             * respectively. */
+            pr_node* const lr = l->rlink;
+            pr_node* const parent = node->parent;
 
-	    pr_node* const a = lr->llink;
-	    lr->llink = l;
-	    l->parent = lr;
-	    if ((l->rlink = a) != NULL)
-		a->parent = l;
+            pr_node* const a = lr->llink;
+            lr->llink = l;
+            l->parent = lr;
+            if ((l->rlink = a) != NULL)
+            a->parent = l;
 
-	    pr_node* const b = lr->rlink;
-	    lr->rlink = node;
-	    node->parent = lr;
-	    if ((node->llink = b) != NULL)
-		b->parent = node;
+            pr_node* const b = lr->rlink;
+            lr->rlink = node;
+            node->parent = lr;
+            if ((node->llink = b) != NULL)
+            b->parent = node;
 
-	    lr->parent = parent;
-	    *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &tree->root) = lr;
+            lr->parent = parent;
+            *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &tree->root) = lr;
 
-	    node->weight += WEIGHT(b) - l->weight;
-	    l->weight += WEIGHT(a) - lr->weight;
-	    lr->weight = node->weight + l->weight;
+            node->weight += WEIGHT(b) - l->weight;
+            l->weight += WEIGHT(a) - lr->weight;
+            lr->weight = node->weight + l->weight;
 
-	    rotations += 2;
-	    rotations += fixup(tree, l);
-	    rotations += fixup(tree, node);
-	}
+            rotations += 2;
+            rotations += fixup(tree, l);
+            rotations += fixup(tree, node);
+        }
     }
     return rotations;
 }
@@ -255,35 +255,35 @@ pr_tree_insert(pr_tree* tree, void* key)
     pr_node* node = tree->root;
     pr_node* parent = NULL;
     while (node) {
-	cmp = tree->cmp_func(key, node->key);
-	if (cmp < 0) {
-	    parent = node; node = node->llink;
-	} else if (cmp > 0) {
-	    parent = node; node = node->rlink;
-	} else
-	    return (dict_insert_result) { &node->datum, false };
+        cmp = tree->cmp_func(key, node->key);
+        if (cmp < 0) {
+            parent = node; node = node->llink;
+        } else if (cmp > 0) {
+            parent = node; node = node->rlink;
+        } else
+            return (dict_insert_result) { &node->datum, false };
     }
 
     pr_node* add = node_new(key);
     if (!add)
-	return (dict_insert_result) { NULL, false };
+        return (dict_insert_result) { NULL, false };
     if (!(add->parent = parent)) {
-	ASSERT(tree->count == 0);
-	ASSERT(tree->root == NULL);
-	tree->root = add;
+        ASSERT(tree->count == 0);
+        ASSERT(tree->root == NULL);
+        tree->root = add;
     } else {
-	if (cmp < 0)
-	    parent->llink = add;
-	else
-	    parent->rlink = add;
+        if (cmp < 0)
+            parent->llink = add;
+        else
+            parent->rlink = add;
 
-	unsigned rotations = 0;
-	while ((node = parent) != NULL) {
-	    parent = parent->parent;
-	    ++node->weight;
-	    rotations += fixup(tree, node);
-	}
-	tree->rotation_count += rotations;
+        unsigned rotations = 0;
+        while ((node = parent) != NULL) {
+            parent = parent->parent;
+            ++node->weight;
+            rotations += fixup(tree, node);
+        }
+        tree->rotation_count += rotations;
     }
     tree->count++;
     return (dict_insert_result) { &add->datum, true };
@@ -293,33 +293,33 @@ static void
 remove_node(pr_tree* tree, pr_node* node)
 {
     if (node->llink && node->rlink) {
-	pr_node* out;
-	if (node->llink->weight > node->rlink->weight) {
-	    out = tree_node_max(node->llink);
-	} else {
-	    out = tree_node_min(node->rlink);
-	}
-	void* tmp;
-	SWAP(node->key, out->key, tmp);
-	SWAP(node->datum, out->datum, tmp);
-	node = out;
+        pr_node* out;
+        if (node->llink->weight > node->rlink->weight) {
+            out = tree_node_max(node->llink);
+        } else {
+            out = tree_node_min(node->rlink);
+        }
+        void* tmp;
+        SWAP(node->key, out->key, tmp);
+        SWAP(node->datum, out->datum, tmp);
+        node = out;
     }
     ASSERT(!node->llink || !node->rlink);
     /* Splice in the successor, if any. */
     pr_node* child = node->llink ? node->llink : node->rlink;
     pr_node* parent = node->parent;
     if (child)
-	child->parent = parent;
+        child->parent = parent;
     *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &tree->root) = child;
     FREE(node);
     tree->count--;
     /* Now move up the tree, decrementing weights. */
     unsigned rotations = 0;
     while (parent) {
-	--parent->weight;
-	pr_node* up = parent->parent;
-	rotations += fixup(tree, parent);
-	parent = up;
+        --parent->weight;
+        pr_node* up = parent->parent;
+        rotations += fixup(tree, parent);
+        parent = up;
     }
     tree->rotation_count += rotations;
 }
@@ -329,7 +329,7 @@ pr_tree_remove(pr_tree* tree, const void* key)
 {
     pr_node* node = tree_search_node(tree, key);
     if (!node)
-	return (dict_remove_result) { NULL, NULL, false };
+        return (dict_remove_result) { NULL, NULL, false };
     dict_remove_result result = { node->key, node->datum, true };
     remove_node(tree, node);
     return result;
@@ -347,28 +347,28 @@ bool
 pr_tree_select(pr_tree* tree, size_t n, const void** key, void** datum)
 {
     if (n >= tree->count) {
-	if (key)
-	    *key = NULL;
-	if (datum)
-	    *datum = NULL;
-	return false;
+        if (key)
+            *key = NULL;
+        if (datum)
+            *datum = NULL;
+        return false;
     }
     pr_node* node = tree->root;
     for (;;) {
-	const unsigned nw = WEIGHT(node->llink);
-	if (n + 1 >= nw) {
-	    if (n + 1 == nw) {
-		if (key)
-		    *key = node->key;
-		if (datum)
-		    *datum = node->datum;
-		return true;
-	    }
-	    n -= nw;
-	    node = node->rlink;
-	} else {
-	    node = node->llink;
-	}
+        const unsigned nw = WEIGHT(node->llink);
+        if (n + 1 >= nw) {
+            if (n + 1 == nw) {
+                if (key)
+                    *key = node->key;
+                if (datum)
+                    *datum = node->datum;
+                return true;
+            }
+            n -= nw;
+            node = node->rlink;
+        } else {
+            node = node->llink;
+        }
     }
 }
 
@@ -382,12 +382,12 @@ node_new(void* key)
 {
     pr_node* node = MALLOC(sizeof(*node));
     if (node) {
-	node->key = key;
-	node->datum = NULL;
-	node->parent = NULL;
-	node->llink = NULL;
-	node->rlink = NULL;
-	node->weight = 2;
+        node->key = key;
+        node->datum = NULL;
+        node->parent = NULL;
+        node->llink = NULL;
+        node->rlink = NULL;
+        node->weight = 2;
     }
     return node;
 }
@@ -395,9 +395,9 @@ node_new(void* key)
 /*
  * rot_left(T, B):
  *
- *     /	     /
- *    B	     D
- *   / \	   / \
+ *     /         /
+ *    B         D
+ *   / \       / \
  *  A   D   ==>   B   E
  *     / \       / \
  *    C   E     A   C
@@ -405,7 +405,7 @@ node_new(void* key)
  * Only the weights of B and B's right child to be readjusted.
  */
 static void
-rot_left(pr_tree* tree, pr_node	*node)
+rot_left(pr_tree* tree, pr_node *node)
 {
     ASSERT(node->rlink != NULL);
 
@@ -419,12 +419,12 @@ rot_left(pr_tree* tree, pr_node	*node)
 /*
  * rot_right(T, D):
  *
- *       /	   /
- *      D	   B
- *     / \	 / \
+ *       /       /
+ *      D       B
+ *     / \     / \
  *    B   E  ==>  A   D
- *   / \	     / \
- *  A   C	   C   E
+ *   / \         / \
+ *  A   C       C   E
  *
  * Only the weights of D and D's left child need to be readjusted.
  */
@@ -444,35 +444,35 @@ static bool
 node_verify(const pr_tree* tree, const pr_node* parent, const pr_node* node)
 {
     if (!parent) {
-	VERIFY(tree->root == node);
+        VERIFY(tree->root == node);
     } else {
-	VERIFY(parent->llink == node || parent->rlink == node);
+        VERIFY(parent->llink == node || parent->rlink == node);
     }
     if (node) {
-	VERIFY(node->parent == parent);
-	if (parent) {
-	    if (parent->llink == node) {
-		VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-	    } else {
-		ASSERT(parent->rlink == node);
-		VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-	    }
-	}
-	pr_node* l = node->llink;
-	pr_node* r = node->rlink;
-	if (!node_verify(tree, node, l) ||
-	    !node_verify(tree, node, r))
-	    return false;
-	unsigned lweight = WEIGHT(l);
-	unsigned rweight = WEIGHT(r);
-	VERIFY(node->weight == lweight + rweight);
-	if (rweight > lweight) {
-	    VERIFY(WEIGHT(r->rlink) <= lweight);
-	    VERIFY(WEIGHT(r->llink) <= lweight);
-	} else if (lweight > rweight) {
-	    VERIFY(WEIGHT(l->llink) <= rweight);
-	    VERIFY(WEIGHT(l->rlink) <= rweight);
-	}
+        VERIFY(node->parent == parent);
+        if (parent) {
+            if (parent->llink == node) {
+                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
+            } else {
+                ASSERT(parent->rlink == node);
+                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
+            }
+        }
+        pr_node* l = node->llink;
+        pr_node* r = node->rlink;
+        if (!node_verify(tree, node, l) ||
+            !node_verify(tree, node, r))
+            return false;
+        unsigned lweight = WEIGHT(l);
+        unsigned rweight = WEIGHT(r);
+        VERIFY(node->weight == lweight + rweight);
+        if (rweight > lweight) {
+            VERIFY(WEIGHT(r->rlink) <= lweight);
+            VERIFY(WEIGHT(r->llink) <= lweight);
+        } else if (lweight > rweight) {
+            VERIFY(WEIGHT(l->llink) <= rweight);
+            VERIFY(WEIGHT(l->rlink) <= rweight);
+        }
     }
     return true;
 }
@@ -481,9 +481,9 @@ bool
 pr_tree_verify(const pr_tree* tree)
 {
     if (tree->root) {
-	VERIFY(tree->count > 0);
+        VERIFY(tree->count > 0);
     } else {
-	VERIFY(tree->count == 0);
+        VERIFY(tree->count == 0);
     }
     return node_verify(tree, NULL, tree->root);
 }
@@ -493,8 +493,8 @@ pr_itor_new(pr_tree* tree)
 {
     pr_itor* itor = MALLOC(sizeof(*itor));
     if (itor) {
-	itor->tree = tree;
-	itor->node = NULL;
+        itor->tree = tree;
+        itor->node = NULL;
     }
     return itor;
 }
@@ -502,14 +502,13 @@ pr_itor_new(pr_tree* tree)
 dict_itor*
 pr_dict_itor_new(pr_tree* tree)
 {
-
     dict_itor* itor = MALLOC(sizeof(*itor));
     if (itor) {
-	if (!(itor->_itor = pr_itor_new(tree))) {
-	    FREE(itor);
-	    return NULL;
-	}
-	itor->_vtable = &pr_tree_itor_vtable;
+        if (!(itor->_itor = pr_itor_new(tree))) {
+            FREE(itor);
+            return NULL;
+        }
+        itor->_vtable = &pr_tree_itor_vtable;
     }
     return itor;
 }
@@ -536,7 +535,7 @@ bool
 pr_itor_remove(pr_itor* it)
 {
     if (!it->node)
-	return false;
+        return false;
     remove_node(it->tree, it->node);
     it->node = NULL;
     return true;

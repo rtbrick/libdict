@@ -27,12 +27,12 @@
 
 #include "dict_private.h"
 
-#define XSTRINGIFY(x)	STRINGIFY(x)
-#define STRINGIFY(x)	#x
+#define XSTRINGIFY(x)   STRINGIFY(x)
+#define STRINGIFY(x)    #x
 
 const char* const kDictVersionString = XSTRINGIFY(DICT_VERSION_MAJOR) "."
-				       XSTRINGIFY(DICT_VERSION_MINOR) "."
-				       XSTRINGIFY(DICT_VERSION_PATCH);
+                       XSTRINGIFY(DICT_VERSION_MINOR) "."
+                       XSTRINGIFY(DICT_VERSION_PATCH);
 
 void* (*dict_malloc_func)(size_t) = malloc;
 void (*dict_free_func)(void*) = free;
@@ -82,9 +82,9 @@ dict_str_cmp(const void* k1, const void* k2)
     const char* b = k2;
 
     for (;;) {
-	char p = *a++, q = *b++;
-	if (!p || p != q)
-	    return (p > q) - (p < q);
+        char p = *a++, q = *b++;
+        if (!p || p != q)
+            return (p > q) - (p < q);
     }
 }
 
@@ -94,7 +94,7 @@ dict_str_hash(const void* k)
     /* FNV 1-a string hash. */
     unsigned hash = 2166136261U;
     for (const uint8_t* ptr = k; *ptr;) {
-	hash = (hash ^ *ptr++) * 16777619U;
+        hash = (hash ^ *ptr++) * 16777619U;
     }
     return hash;
 }

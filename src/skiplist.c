@@ -31,81 +31,81 @@
 
 #include "skiplist.h"
 
-#include <string.h>	    /* For memset() */
+#include <string.h>        /* For memset() */
 #include "dict_private.h"
 
 typedef struct skip_node skip_node;
 
 struct skip_node {
-    void*		    key;
-    void*		    datum;
-    skip_node*		    prev;
-    unsigned		    link_count;
-    skip_node*		    link[];
+    void*               key;
+    void*               datum;
+    skip_node*          prev;
+    unsigned            link_count;
+    skip_node*          link[];
 };
 
-#define MAX_LINK	    32
+#define MAX_LINK        32
 
 struct skiplist {
-    skip_node*		    head;
-    unsigned		    max_link;
-    unsigned		    top_link;
-    dict_compare_func	    cmp_func;
-    size_t		    count;
+    skip_node*          head;
+    unsigned            max_link;
+    unsigned            top_link;
+    dict_compare_func   cmp_func;
+    size_t              count;
 };
 
 struct skiplist_itor {
-    skiplist*		    list;
-    skip_node*		    node;
+    skiplist*           list;
+    skip_node*          node;
 };
 
 static const dict_vtable skiplist_vtable = {
     true,
-    (dict_inew_func)	    skiplist_dict_itor_new,
-    (dict_dfree_func)	    skiplist_free,
-    (dict_insert_func)	    skiplist_insert,
-    (dict_search_func)	    skiplist_search,
-    (dict_search_func)	    skiplist_search_le,
-    (dict_search_func)	    skiplist_search_lt,
-    (dict_search_func)	    skiplist_search_ge,
-    (dict_search_func)	    skiplist_search_gt,
-    (dict_remove_func)	    skiplist_remove,
-    (dict_clear_func)	    skiplist_clear,
+    (dict_inew_func)        skiplist_dict_itor_new,
+    (dict_dfree_func)       skiplist_free,
+    (dict_insert_func)      skiplist_insert,
+    (dict_search_func)      skiplist_search,
+    (dict_search_func)      skiplist_search_le,
+    (dict_search_func)      skiplist_search_lt,
+    (dict_search_func)      skiplist_search_ge,
+    (dict_search_func)      skiplist_search_gt,
+    (dict_remove_func)      skiplist_remove,
+    (dict_clear_func)       skiplist_clear,
     (dict_traverse_func)    skiplist_traverse,
-    (dict_select_func)	    NULL,
-    (dict_count_func)	    skiplist_count,
-    (dict_verify_func)	    skiplist_verify,
+    (dict_select_func)      NULL,
+    (dict_count_func)       skiplist_count,
+    (dict_verify_func)      skiplist_verify,
 };
 
 static const itor_vtable skiplist_itor_vtable = {
-    (dict_ifree_func)	    skiplist_itor_free,
-    (dict_valid_func)	    skiplist_itor_valid,
+    (dict_ifree_func)       skiplist_itor_free,
+    (dict_valid_func)       skiplist_itor_valid,
     (dict_invalidate_func)  skiplist_itor_invalidate,
-    (dict_next_func)	    skiplist_itor_next,
-    (dict_prev_func)	    skiplist_itor_prev,
-    (dict_nextn_func)	    skiplist_itor_nextn,
-    (dict_prevn_func)	    skiplist_itor_prevn,
-    (dict_first_func)	    skiplist_itor_first,
-    (dict_last_func)	    skiplist_itor_last,
-    (dict_key_func)	    skiplist_itor_key,
-    (dict_datum_func)	    skiplist_itor_datum,
-    (dict_isearch_func)	    skiplist_itor_search,
-    (dict_isearch_func)	    skiplist_itor_search_le,
-    (dict_isearch_func)	    skiplist_itor_search_lt,
-    (dict_isearch_func)	    skiplist_itor_search_ge,
-    (dict_isearch_func)	    skiplist_itor_search_gt,
-    (dict_iremove_func)	    skiplist_itor_remove,
+    (dict_next_func)        skiplist_itor_next,
+    (dict_prev_func)        skiplist_itor_prev,
+    (dict_nextn_func)       skiplist_itor_nextn,
+    (dict_prevn_func)       skiplist_itor_prevn,
+    (dict_first_func)       skiplist_itor_first,
+    (dict_last_func)        skiplist_itor_last,
+    (dict_key_func)         skiplist_itor_key,
+    (dict_datum_func)       skiplist_itor_datum,
+    (dict_isearch_func)     skiplist_itor_search,
+    (dict_isearch_func)     skiplist_itor_search_le,
+    (dict_isearch_func)     skiplist_itor_search_lt,
+    (dict_isearch_func)     skiplist_itor_search_ge,
+    (dict_isearch_func)     skiplist_itor_search_gt,
+    (dict_iremove_func)     skiplist_itor_remove,
     (dict_icompare_func)    skiplist_itor_compare,
 };
 
-static inline skip_node*   node_new(void* key, unsigned link_count);
-static inline void	   node_insert(skiplist* list, skip_node* x, skip_node** update);
-static inline skip_node*   node_search(skiplist* list, const void* key);
-static inline skip_node*   node_search_le(skiplist* list, const void* key);
-static inline skip_node*   node_search_lt(skiplist* list, const void* key);
-static inline skip_node*   node_search_ge(skiplist* list, const void* key);
-static inline skip_node*   node_search_gt(skiplist* list, const void* key);
-static inline unsigned	   rand_link_count(skiplist* list);
+static inline skip_node* node_new(void* key, unsigned link_count);
+static inline void node_insert(skiplist* list, skip_node* x, skip_node** update);
+static inline skip_node* node_search(skiplist* list, const void* key);
+static inline skip_node* node_search_le(skiplist* list, const void* key);
+static inline skip_node* node_search_lt(skiplist* list, const void* key);
+static inline skip_node* node_search_ge(skiplist* list, const void* key);
+static inline skip_node* node_search_gt(skiplist* list, const void* key);
+static inline unsigned rand_link_count(skiplist* list);
 
 skiplist*
 skiplist_new(dict_compare_func cmp_func, unsigned max_link)
@@ -114,19 +114,19 @@ skiplist_new(dict_compare_func cmp_func, unsigned max_link)
     ASSERT(max_link > 0);
 
     if (max_link > MAX_LINK)
-	max_link = MAX_LINK;
+        max_link = MAX_LINK;
 
     skiplist* list = MALLOC(sizeof(*list));
     if (list) {
-	if (!(list->head = node_new(NULL, max_link))) {
-	    FREE(list);
-	    return NULL;
-	}
+        if (!(list->head = node_new(NULL, max_link))) {
+            FREE(list);
+            return NULL;
+        }
 
-	list->max_link = max_link;
-	list->top_link = 0;
-	list->cmp_func = cmp_func;
-	list->count = 0;
+        list->max_link = max_link;
+        list->top_link = 0;
+        list->cmp_func = cmp_func;
+        list->count = 0;
     }
     return list;
 }
@@ -136,11 +136,11 @@ skiplist_dict_new(dict_compare_func cmp_func, unsigned max_link)
 {
     dict* dct = MALLOC(sizeof(*dct));
     if (dct) {
-	if (!(dct->_object = skiplist_new(cmp_func, max_link))) {
-	    FREE(dct);
-	    return NULL;
-	}
-	dct->_vtable = &skiplist_vtable;
+        if (!(dct->_object = skiplist_new(cmp_func, max_link))) {
+            FREE(dct);
+            return NULL;
+        }
+        dct->_vtable = &skiplist_vtable;
     }
     return dct;
 }
@@ -161,20 +161,20 @@ node_insert(skiplist* list, skip_node* x, skip_node** update)
     ASSERT(nlinks < list->max_link);
 
     if (list->top_link < nlinks) {
-	for (unsigned k = list->top_link+1; k <= nlinks; k++) {
-	    ASSERT(!update[k]);
-	    update[k] = list->head;
-	}
-	list->top_link = nlinks;
+        for (unsigned k = list->top_link+1; k <= nlinks; k++) {
+            ASSERT(!update[k]);
+            update[k] = list->head;
+        }
+        list->top_link = nlinks;
     }
 
     x->prev = (update[0] == list->head) ? NULL : update[0];
     if (update[0]->link[0])
-	update[0]->link[0]->prev = x;
+        update[0]->link[0]->prev = x;
     for (unsigned k = 0; k < nlinks; k++) {
-	ASSERT(update[k]->link_count > k);
-	x->link[k] = update[k]->link[k];
-	update[k]->link[k] = x;
+        ASSERT(update[k]->link_count > k);
+        x->link[k] = update[k]->link[k];
+        update[k]->link[k] = x;
     }
     ++list->count;
 }
@@ -185,26 +185,26 @@ skiplist_insert(skiplist* list, void* key)
     skip_node* x = list->head;
     skip_node* update[MAX_LINK] = { 0 };
     for (unsigned k = list->top_link+1; k-->0; ) {
-	ASSERT(x->link_count > k);
-	for (;;) {
-	    skip_node* const y = x->link[k];
-	    if (!y)
-		break;
-	    const int cmp = list->cmp_func(key, y->key);
-	    if (cmp < 0) {
-		while (k > 0 && x->link[k - 1] == y)
-		    update[k--] = x;
-		break;
-	    } else if (cmp == 0)
-		return (dict_insert_result) { &y->datum, false };
-	    x = y;
-	}
-	update[k] = x;
+        ASSERT(x->link_count > k);
+        for (;;) {
+            skip_node* const y = x->link[k];
+            if (!y)
+            break;
+            const int cmp = list->cmp_func(key, y->key);
+            if (cmp < 0) {
+            while (k > 0 && x->link[k - 1] == y)
+                update[k--] = x;
+            break;
+            } else if (cmp == 0)
+            return (dict_insert_result) { &y->datum, false };
+            x = y;
+        }
+        update[k] = x;
     }
 
     x = node_new(key, rand_link_count(list));
     if (!x)
-	return (dict_insert_result) { NULL, false };
+        return (dict_insert_result) { NULL, false };
     node_insert(list, x, update);
     return (dict_insert_result) { &x->datum, true };
 }
@@ -214,19 +214,19 @@ node_search(skiplist* list, const void* key)
 {
     skip_node* x = list->head;
     for (unsigned k = list->top_link+1; k-->0;) {
-	for (;;) {
-	    skip_node* const y = x->link[k];
-	    if (!y)
-		break;
-	    const int cmp = list->cmp_func(key, y->key);
-	    if (cmp < 0) {
-		while (k > 0 && x->link[k - 1] == y)
-		    k--;
-		break;
-	    } else if (cmp == 0)
-		return y;
-	    x = y;
-	}
+        for (;;) {
+            skip_node* const y = x->link[k];
+            if (!y)
+                break;
+            const int cmp = list->cmp_func(key, y->key);
+            if (cmp < 0) {
+                while (k > 0 && x->link[k - 1] == y)
+                    k--;
+                break;
+            } else if (cmp == 0)
+                return y;
+            x = y;
+        }
     }
     return NULL;
 }
@@ -236,19 +236,19 @@ node_search_le(skiplist* list, const void* key)
 {
     skip_node* x = list->head;
     for (unsigned k = list->top_link+1; k-->0;) {
-	for (;;) {
-	    skip_node* const y = x->link[k];
-	    if (!y)
-		break;
-	    const int cmp = list->cmp_func(key, y->key);
-	    if (cmp < 0) {
-		while (k > 0 && x->link[k - 1] == y)
-		    k--;
-		break;
-	    } else if (cmp == 0)
-		return y;
-	    x = y;
-	}
+        for (;;) {
+            skip_node* const y = x->link[k];
+            if (!y)
+                break;
+            const int cmp = list->cmp_func(key, y->key);
+            if (cmp < 0) {
+                while (k > 0 && x->link[k - 1] == y)
+                    k--;
+                break;
+            } else if (cmp == 0)
+                return y;
+            x = y;
+        }
     }
     return x == list->head ? NULL : x;
 }
@@ -258,19 +258,19 @@ node_search_lt(skiplist* list, const void* key)
 {
     skip_node* x = list->head;
     for (unsigned k = list->top_link+1; k-->0;) {
-	for (;;) {
-	    skip_node* const y = x->link[k];
-	    if (!y)
-		break;
-	    const int cmp = list->cmp_func(key, y->key);
-	    if (cmp < 0) {
-		while (k > 0 && x->link[k - 1] == y)
-		    k--;
-		break;
-	    } else if (cmp == 0)
-		return y->prev;
-	    x = y;
-	}
+        for (;;) {
+            skip_node* const y = x->link[k];
+            if (!y)
+                break;
+            const int cmp = list->cmp_func(key, y->key);
+            if (cmp < 0) {
+                while (k > 0 && x->link[k - 1] == y)
+                    k--;
+                break;
+            } else if (cmp == 0)
+                return y->prev;
+            x = y;
+        }
     }
     return x == list->head ? NULL : x;
 }
@@ -281,20 +281,20 @@ node_search_ge(skiplist* list, const void* key)
     skip_node* x = list->head;
     skip_node* ret = NULL;
     for (unsigned k = list->top_link+1; k-->0;) {
-	for (;;) {
-	    skip_node* const y = x->link[k];
-	    if (!y)
-		break;
-	    const int cmp = list->cmp_func(key, y->key);
-	    if (cmp < 0) {
-		ret = y;
-		while (k > 0 && x->link[k - 1] == y)
-		    k--;
-		break;
-	    } else if (cmp == 0)
-		return y;
-	    x = y;
-	}
+        for (;;) {
+            skip_node* const y = x->link[k];
+            if (!y)
+                break;
+            const int cmp = list->cmp_func(key, y->key);
+            if (cmp < 0) {
+                ret = y;
+                while (k > 0 && x->link[k - 1] == y)
+                    k--;
+                break;
+            } else if (cmp == 0)
+                return y;
+            x = y;
+        }
     }
     return ret;
 }
@@ -305,20 +305,20 @@ node_search_gt(skiplist* list, const void* key)
     skip_node* x = list->head;
     skip_node* ret = NULL;
     for (unsigned k = list->top_link+1; k-->0;) {
-	for (;;) {
-	    skip_node* const y = x->link[k];
-	    if (!y)
-		break;
-	    const int cmp = list->cmp_func(key, y->key);
-	    if (cmp < 0) {
-		ret = y;
-		while (k > 0 && x->link[k - 1] == y)
-		    k--;
-		break;
-	    } else if (cmp == 0)
-		return y->link[0];
-	    x = y;
-	}
+        for (;;) {
+            skip_node* const y = x->link[k];
+            if (!y)
+                break;
+            const int cmp = list->cmp_func(key, y->key);
+            if (cmp < 0) {
+                ret = y;
+                while (k > 0 && x->link[k - 1] == y)
+                    k--;
+                break;
+            } else if (cmp == 0)
+                return y->link[0];
+            x = y;
+        }
     }
     return ret;
 }
@@ -365,42 +365,42 @@ skiplist_remove(skiplist* list, const void* key)
     skip_node* update[MAX_LINK] = { 0 };
     bool found = false;
     for (unsigned k = list->top_link+1; k-->0;) {
-	ASSERT(x->link_count > k);
-	for (;;) {
-	    skip_node* const y = x->link[k];
-	    if (!y)
-		break;
-	    const int cmp = list->cmp_func(key, y->key);
-	    if (cmp > 0)
-		x = y;
-	    else {
-		while (k > 0 && x->link[k - 1] == y)
-		    update[k--] = x;
-		if (cmp == 0)
-		    found = true;
-		break;
-	    }
-	}
-	update[k] = x;
+        ASSERT(x->link_count > k);
+        for (;;) {
+            skip_node* const y = x->link[k];
+            if (!y)
+                break;
+            const int cmp = list->cmp_func(key, y->key);
+            if (cmp > 0)
+                x = y;
+            else {
+                while (k > 0 && x->link[k - 1] == y)
+                    update[k--] = x;
+                if (cmp == 0)
+                    found = true;
+                break;
+            }
+        }
+        update[k] = x;
     }
     if (!found)
-	return (dict_remove_result) { NULL, NULL, false };
+        return (dict_remove_result) { NULL, NULL, false };
     x = x->link[0];
     for (unsigned k = 0; k <= list->top_link; k++) {
-	ASSERT(update[k] != NULL);
-	ASSERT(update[k]->link_count > k);
-	if (update[k]->link[k] != x)
-	    break;
-	update[k]->link[k] = x->link[k];
+        ASSERT(update[k] != NULL);
+        ASSERT(update[k]->link_count > k);
+        if (update[k]->link[k] != x)
+            break;
+        update[k]->link[k] = x->link[k];
     }
     if (x->prev)
-	x->prev->link[0] = x->link[0];
+        x->prev->link[0] = x->link[0];
     if (x->link[0])
-	x->link[0]->prev = x->prev;
+        x->link[0]->prev = x->prev;
     dict_remove_result result = { x->key, x->datum, true };
     FREE(x);
     while (list->top_link > 0 && !list->head->link[list->top_link-1])
-	list->top_link--;
+        list->top_link--;
     list->count--;
     return result;
 }
@@ -410,18 +410,18 @@ skiplist_clear(skiplist* list, dict_delete_func delete_func)
 {
     skip_node* node = list->head->link[0];
     while (node) {
-	skip_node* next = node->link[0];
-	if (delete_func)
-	    delete_func(node->key, node->datum);
-	FREE(node);
-	node = next;
+        skip_node* next = node->link[0];
+        if (delete_func)
+            delete_func(node->key, node->datum);
+        FREE(node);
+        node = next;
     }
 
     const size_t count = list->count;
     list->count = 0;
     list->head->link[list->top_link] = NULL;
     while (list->top_link)
-	list->head->link[--list->top_link] = NULL;
+        list->head->link[--list->top_link] = NULL;
 
     return count;
 }
@@ -431,9 +431,9 @@ skiplist_traverse(skiplist* list, dict_visit_func visit, void* user_data)
 {
     size_t count = 0;
     for (skip_node* node = list->head->link[0]; node; node = node->link[0]) {
-	++count;
-	if (!visit(node->key, node->datum, user_data))
-	    break;
+        ++count;
+        if (!visit(node->key, node->datum, user_data))
+            break;
     }
     return count;
 }
@@ -448,36 +448,36 @@ bool
 skiplist_verify(const skiplist* list)
 {
     if (list->count == 0) {
-	VERIFY(list->top_link == 0);
+        VERIFY(list->top_link == 0);
     } else {
-	VERIFY(list->top_link > 0);
+        VERIFY(list->top_link > 0);
     }
     VERIFY(list->top_link < list->max_link);
     for (unsigned i = 0; i < list->top_link; ++i) {
-	VERIFY(list->head->link[i] != NULL);
+        VERIFY(list->head->link[i] != NULL);
     }
     for (unsigned i = list->top_link; i < list->max_link; ++i) {
-	VERIFY(list->head->link[i] == NULL);
+        VERIFY(list->head->link[i] == NULL);
     }
     unsigned observed_top_link = 0;
 
     skip_node* prev = NULL;
     skip_node* node = list->head->link[0];
     while (node) {
-	if (observed_top_link < node->link_count)
-	    observed_top_link = node->link_count;
+        if (observed_top_link < node->link_count)
+            observed_top_link = node->link_count;
 
-	VERIFY(node->prev == prev);
-	VERIFY(node->link_count >= 1);
-	VERIFY(node->link_count <= list->top_link);
-	for (unsigned k = 0; k < node->link_count; k++) {
-	    if (node->link[k]) {
-		VERIFY(node->link[k]->link_count >= k);
-	    }
-	}
+        VERIFY(node->prev == prev);
+        VERIFY(node->link_count >= 1);
+        VERIFY(node->link_count <= list->top_link);
+        for (unsigned k = 0; k < node->link_count; k++) {
+            if (node->link[k]) {
+                VERIFY(node->link[k]->link_count >= k);
+            }
+        }
 
-	prev = node;
-	node = node->link[0];
+        prev = node;
+        node = node->link[0];
     }
     VERIFY(list->top_link == observed_top_link);
     return true;
@@ -487,14 +487,14 @@ size_t
 skiplist_link_count_histogram(const skiplist* list, size_t counts[], size_t ncounts)
 {
     for (size_t i = 0; i < ncounts; ++i)
-	counts[i] = 0;
+        counts[i] = 0;
 
     size_t max_num_links = 0;
     for (const skip_node* node = list->head->link[0]; node; node = node->link[0]) {
-	if (max_num_links < node->link_count)
-	    max_num_links = node->link_count;
-	if (ncounts > node->link_count)
-	    counts[node->link_count]++;
+        if (max_num_links < node->link_count)
+            max_num_links = node->link_count;
+        if (ncounts > node->link_count)
+            counts[node->link_count]++;
     }
     return max_num_links;
 }
@@ -504,8 +504,8 @@ skiplist_itor_new(skiplist* list)
 {
     skiplist_itor* itor = MALLOC(sizeof(*itor));
     if (itor) {
-	itor->list = list;
-	itor->node = NULL;
+        itor->list = list;
+        itor->node = NULL;
     }
     return itor;
 }
@@ -515,11 +515,11 @@ skiplist_dict_itor_new(skiplist* list)
 {
     dict_itor* itor = MALLOC(sizeof(*itor));
     if (itor) {
-	if (!(itor->_itor = skiplist_itor_new(list))) {
-	    FREE(itor);
-	    return NULL;
-	}
-	itor->_vtable = &skiplist_itor_vtable;
+        if (!(itor->_itor = skiplist_itor_new(list))) {
+            FREE(itor);
+            return NULL;
+        }
+        itor->_vtable = &skiplist_itor_vtable;
     }
     return itor;
 }
@@ -546,7 +546,7 @@ bool
 skiplist_itor_next(skiplist_itor* itor)
 {
     if (itor->node)
-	itor->node = itor->node->link[0];
+        itor->node = itor->node->link[0];
     return itor->node != NULL;
 }
 
@@ -554,7 +554,7 @@ bool
 skiplist_itor_prev(skiplist_itor* itor)
 {
     if (itor->node)
-	itor->node = itor->node->prev;
+        itor->node = itor->node->prev;
     return itor->node != NULL;
 }
 
@@ -562,8 +562,8 @@ bool
 skiplist_itor_nextn(skiplist_itor* itor, size_t count)
 {
     while (count--)
-	if (!skiplist_itor_next(itor))
-	    return false;
+        if (!skiplist_itor_next(itor))
+            return false;
     return itor->node != NULL;
 }
 
@@ -571,8 +571,8 @@ bool
 skiplist_itor_prevn(skiplist_itor* itor, size_t count)
 {
     while (count--)
-	if (!skiplist_itor_prev(itor))
-	    return false;
+        if (!skiplist_itor_prev(itor))
+            return false;
     return itor->node != NULL;
 }
 
@@ -587,15 +587,15 @@ skiplist_itor_last(skiplist_itor* itor)
 {
     skip_node* x = itor->list->head;
     for (unsigned k = itor->list->top_link; k-->0;) {
-	while (x->link[k])
-	    x = x->link[k];
+        while (x->link[k])
+            x = x->link[k];
     }
     if (x == itor->list->head) {
-	itor->node = NULL;
-	return false;
+        itor->node = NULL;
+        return false;
     } else {
-	itor->node = x;
-	return true;
+        itor->node = x;
+        return true;
     }
 }
 
@@ -646,9 +646,9 @@ skiplist_itor_compare(const skiplist_itor* itor1, const skiplist_itor* itor2)
 {
     ASSERT(itor1->list == itor2->list);
     if (!itor1->node)
-	return !itor2->node ? 0 : -1;
+        return !itor2->node ? 0 : -1;
     if (!itor2->node)
-	return 1;
+        return 1;
     return itor1->list->cmp_func(itor1->node->key, itor2->node->key);
 }
 
@@ -656,7 +656,7 @@ bool
 skiplist_itor_remove(skiplist_itor* itor)
 {
     if (!itor->node)
-	return false;
+        return false;
     /* XXX make this smarter */
     dict_remove_result result = skiplist_remove(itor->list, itor->node->key);
     ASSERT(result.removed);
@@ -670,13 +670,13 @@ node_new(void* key, unsigned link_count)
     ASSERT(link_count >= 1);
 
     skip_node* node = MALLOC(sizeof(*node) +
-			     sizeof(node->link[0]) * link_count);
+                 sizeof(node->link[0]) * link_count);
     if (node) {
-	node->key = key;
-	node->datum = NULL;
-	node->prev = NULL;
-	node->link_count = link_count;
-	memset(node->link, 0, sizeof(node->link[0]) * link_count);
+        node->key = key;
+        node->datum = NULL;
+        node->prev = NULL;
+        node->link_count = link_count;
+        memset(node->link, 0, sizeof(node->link[0]) * link_count);
     }
     return node;
 }

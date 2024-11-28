@@ -57,67 +57,67 @@ INSTALL_GROUP ?= 0
 INSTALL_EXTRA_ARGS ?= -s
 
 all: $(OUTPUT_DIR) $(STATIC_LIB) $(SHARED_LIB) $(PROGRAMS)
-	@echo && echo "Don't forget to run 'make test'"
+    @echo && echo "Don't forget to run 'make test'"
 
 shared: $(SHARED_LIB)
 
 static: $(STATIC_LIB) $(PROFIL_LIB)
 
 $(OUTPUT_DIR):
-	[ -d $(OUTPUT_DIR) ] || mkdir -m 755 $(OUTPUT_DIR)
+    [ -d $(OUTPUT_DIR) ] || mkdir -m 755 $(OUTPUT_DIR)
 
 $(STATIC_LIB): $(OUTPUT_DIR) $(STATIC_OBJ)
-	$(AR) $(ARFLAGS) $(STATIC_LIB) $(STATIC_OBJ)
+    $(AR) $(ARFLAGS) $(STATIC_LIB) $(STATIC_OBJ)
 
 $(PROFIL_LIB): $(OUTPUT_DIR) $(PROFIL_OBJ)
-	$(AR) $(ARFLAGS) $(PROFIL_LIB) $(PROFIL_OBJ)
+    $(AR) $(ARFLAGS) $(PROFIL_LIB) $(PROFIL_OBJ)
 
 $(SHARED_LIB): $(OUTPUT_DIR) $(SHARED_OBJ)
-	$(CC) -shared -o $(SHARED_LIB) $(SHARED_OBJ)
+    $(CC) -shared -o $(SHARED_LIB) $(SHARED_OBJ)
 
 $(OUTPUT_DIR)/%.o: $(SOURCE_DIR)/%.c $(HEADER) GNUmakefile $(OUTPUT_DIR)
-	$(CC) $(CFLAGS) -c -o $(@) $(<)
+    $(CC) $(CFLAGS) -c -o $(@) $(<)
 
 $(OUTPUT_DIR)/%.po: $(SOURCE_DIR)/%.c $(HEADER) GNUmakefile $(OUTPUT_DIR)
-	$(CC) $(CFLAGS) -pg -c -o $(@) $(<)
+    $(CC) $(CFLAGS) -pg -c -o $(@) $(<)
 
 $(OUTPUT_DIR)/%.So: $(SOURCE_DIR)/%.c $(HEADER) GNUmakefile $(OUTPUT_DIR)
-	$(CC) $(CFLAGS) -fPIC -DPIC -c -o $(@) $(<)
+    $(CC) $(CFLAGS) -fPIC -DPIC -c -o $(@) $(<)
 
 $(OUTPUT_DIR)/unit_tests: unit_tests.c $(STATIC_OBJ) GNUmakefile
-	$(CC) $(CFLAGS) $(TEST_CFLAGS) -o $(@) $(<) $(STATIC_OBJ) $(LDFLAGS) $(TEST_LDFLAGS) -lcunit
+    $(CC) $(CFLAGS) $(TEST_CFLAGS) -o $(@) $(<) $(STATIC_OBJ) $(LDFLAGS) $(TEST_LDFLAGS) -lcunit
 
 $(OUTPUT_DIR)/%: %.c $(STATIC_OBJ) GNUmakefile
-	$(CC) $(CFLAGS) -o $(@) $(<) $(STATIC_OBJ) $(LDFLAGS)
+    $(CC) $(CFLAGS) -o $(@) $(<) $(STATIC_OBJ) $(LDFLAGS)
 
 test: $(OUTPUT_DIR)/unit_tests
-	./$(OUTPUT_DIR)/unit_tests
+    ./$(OUTPUT_DIR)/unit_tests
 
 .PHONY: clean
 clean:
-	if test -d $(OUTPUT_DIR); then rm -r $(OUTPUT_DIR); fi
+    if test -d $(OUTPUT_DIR); then rm -r $(OUTPUT_DIR); fi
 
 .PHONY: analyze
 analyze:
-	@for x in $(SOURCE) $(PROG_SRC); \
-		do echo Analyzing $$x ...; \
-		clang --analyze $(INCLUDES) $$x -o /dev/null; \
-	done
+    @for x in $(SOURCE) $(PROG_SRC); \
+        do echo Analyzing $$x ...; \
+        clang --analyze $(INCLUDES) $$x -o /dev/null; \
+    done
 
 .PHONY: install
 install: $(STATIC_LIB) $(PROFIL_LIB) $(SHARED_LIB)
-	[ -d $(INSTALL_INCDIR) ] || mkdir -p -m 755 $(INSTALL_INCDIR)
-	$(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 644 $(HEADER) $(INSTALL_INCDIR)
-	[ -d $(INSTALL_LIBDIR) ] || mkdir -p -m 755 $(INSTALL_LIBDIR)
-	$(INSTALL) $(INSTALL_EXTRA_ARGS) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 644 $(STATIC_LIB) $(INSTALL_LIBDIR)/$(STATIC_LIB_NAME)
-	$(INSTALL) $(INSTALL_EXTRA_ARGS) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 644 $(PROFIL_LIB) $(INSTALL_LIBDIR)/$(PROFIL_LIB_NAME)
-	$(INSTALL) $(INSTALL_EXTRA_ARGS) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 755 $(SHARED_LIB) $(INSTALL_LIBDIR)/$(INSTALL_SHLIB)
-	$(SHELL) -ec 'cd $(INSTALL_LIBDIR) && ln -sf $(INSTALL_SHLIB) $(SHARED_LIB_NAME)'
+    [ -d $(INSTALL_INCDIR) ] || mkdir -p -m 755 $(INSTALL_INCDIR)
+    $(INSTALL) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 644 $(HEADER) $(INSTALL_INCDIR)
+    [ -d $(INSTALL_LIBDIR) ] || mkdir -p -m 755 $(INSTALL_LIBDIR)
+    $(INSTALL) $(INSTALL_EXTRA_ARGS) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 644 $(STATIC_LIB) $(INSTALL_LIBDIR)/$(STATIC_LIB_NAME)
+    $(INSTALL) $(INSTALL_EXTRA_ARGS) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 644 $(PROFIL_LIB) $(INSTALL_LIBDIR)/$(PROFIL_LIB_NAME)
+    $(INSTALL) $(INSTALL_EXTRA_ARGS) -o $(INSTALL_USER) -g $(INSTALL_GROUP) -m 755 $(SHARED_LIB) $(INSTALL_LIBDIR)/$(INSTALL_SHLIB)
+    $(SHELL) -ec 'cd $(INSTALL_LIBDIR) && ln -sf $(INSTALL_SHLIB) $(SHARED_LIB_NAME)'
 
 .PHONY: uninstall
 uninstall :
-	-rm -rf $(INSTALL_INCDIR)
-	-rm -f $(INSTALL_LIBDIR)/$(STATIC_LIB)
-	-rm -f $(INSTALL_LIBDIR)/$(PROFIL_LIB)
-	-rm -f $(INSTALL_LIBDIR)/$(INSTALL_SHLIB)
-	-rm -f $(INSTALL_LIBDIR)/$(SHARED_LIB)
+    -rm -rf $(INSTALL_INCDIR)
+    -rm -f $(INSTALL_LIBDIR)/$(STATIC_LIB)
+    -rm -f $(INSTALL_LIBDIR)/$(PROFIL_LIB)
+    -rm -f $(INSTALL_LIBDIR)/$(INSTALL_SHLIB)
+    -rm -f $(INSTALL_LIBDIR)/$(SHARED_LIB)
