@@ -548,7 +548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="49" column="17" bodyfile="src/hb_tree.c" bodystart="451" bodyend="459" declfile="include/hb_tree.h" declline="49" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="49" column="17" bodyfile="src/hb_tree.c" bodystart="450" bodyend="458" declfile="include/hb_tree.h" declline="49" declcolumn="17"/>
         <references refid="structhb__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="hb__tree_8c" startline="37">hb_node::datum</references>
         <references refid="structhb__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="hb__tree_8c" startline="36">hb_node::key</references>
         <references refid="tree__common_8c_1a4336bbd1dec56af86a45e1d84d622063" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
@@ -606,7 +606,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="51" column="17" bodyfile="src/hb_tree.c" bodystart="462" bodyend="465" declfile="include/hb_tree.h" declline="51" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="51" column="17" bodyfile="src/hb_tree.c" bodystart="461" bodyend="464" declfile="include/hb_tree.h" declline="51" declcolumn="17"/>
         <references refid="tree__common_8c_1a8af8d7bc05c41b6b1889714238c541e1" compoundref="tree__common_8c" startline="252" endline="267">tree_traverse</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a1ddd0c864a000666f56ce67a2bb4c673" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -636,7 +636,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="52" column="17" bodyfile="src/hb_tree.c" bodystart="468" bodyend="493" declfile="include/hb_tree.h" declline="52" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="52" column="17" bodyfile="src/hb_tree.c" bodystart="467" bodyend="492" declfile="include/hb_tree.h" declline="52" declcolumn="17"/>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structhb__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="hb__tree_8c" startline="37">hb_node::datum</references>
         <references refid="structhb__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="hb__tree_8c" startline="36">hb_node::key</references>
@@ -659,7 +659,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="53" column="17" bodyfile="src/hb_tree.c" bodystart="495" bodyend="495" declfile="include/hb_tree.h" declline="53" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="53" column="17" bodyfile="src/hb_tree.c" bodystart="494" bodyend="494" declfile="include/hb_tree.h" declline="53" declcolumn="17"/>
         <references refid="tree__common_8c_1a666279f96572685934714532e744718e" compoundref="tree__common_8c" startline="295" endline="298">tree_count</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a632ec7cb94560ebb17f1263ff6270d9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -677,7 +677,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="54" column="17" bodyfile="src/hb_tree.c" bodystart="496" bodyend="496" declfile="include/hb_tree.h" declline="54" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="54" column="17" bodyfile="src/hb_tree.c" bodystart="495" bodyend="495" declfile="include/hb_tree.h" declline="54" declcolumn="17"/>
         <references refid="tree__common_8c_1a756193ba67a2786a5e4a6274a7ec170e" compoundref="tree__common_8c" startline="340" endline="344">tree_min_path_length</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a8aacfc0effde0a95a6e9e1af5f4d29c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -695,7 +695,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="55" column="17" bodyfile="src/hb_tree.c" bodystart="497" bodyend="497" declfile="include/hb_tree.h" declline="55" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="55" column="17" bodyfile="src/hb_tree.c" bodystart="496" bodyend="496" declfile="include/hb_tree.h" declline="55" declcolumn="17"/>
         <references refid="tree__common_8c_1abf500bf5b159c5ec35a5e0a3ff57a0e8" compoundref="tree__common_8c" startline="355" endline="359">tree_max_path_length</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1af6fdedf05c4f8b3d1667e87f347d31bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -713,7 +713,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="56" column="17" bodyfile="src/hb_tree.c" bodystart="498" bodyend="498" declfile="include/hb_tree.h" declline="56" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="56" column="17" bodyfile="src/hb_tree.c" bodystart="497" bodyend="497" declfile="include/hb_tree.h" declline="56" declcolumn="17"/>
         <references refid="tree__common_8c_1a8ff1218a16ab93160f3a922fcdf88882" compoundref="tree__common_8c" startline="370" endline="374">tree_total_path_length</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1abacf1587193dd266718afcc29a909728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -731,7 +731,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="57" column="17" bodyfile="src/hb_tree.c" bodystart="584" bodyend="590" declfile="include/hb_tree.h" declline="57" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="57" column="17" bodyfile="src/hb_tree.c" bodystart="583" bodyend="589" declfile="include/hb_tree.h" declline="57" declcolumn="17"/>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
@@ -751,7 +751,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="61" column="16" bodyfile="src/hb_tree.c" bodystart="593" bodyend="601" declfile="include/hb_tree.h" declline="61" declcolumn="16"/>
+        <location file="include/hb_tree.h" line="61" column="16" bodyfile="src/hb_tree.c" bodystart="592" bodyend="600" declfile="include/hb_tree.h" declline="61" declcolumn="16"/>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
         <references refid="structhb__itor_1abd1d99b37abe63189d6db6eb630bd2ff" compoundref="hb__tree_8c" startline="56">hb_itor::node</references>
         <references refid="structhb__itor_1a024a8670718387a22dc8053590c48176" compoundref="hb__tree_8c" startline="56">hb_itor::tree</references>
@@ -771,11 +771,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="62" column="16" bodyfile="src/hb_tree.c" bodystart="604" bodyend="615" declfile="include/hb_tree.h" declline="62" declcolumn="16"/>
+        <location file="include/hb_tree.h" line="62" column="16" bodyfile="src/hb_tree.c" bodystart="603" bodyend="614" declfile="include/hb_tree.h" declline="62" declcolumn="16"/>
         <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="175">dict_itor::_itor</references>
         <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="176">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
-        <references refid="hb__tree_8c_1a3b953aabe2e0cc553e89b59d5f308607" compoundref="hb__tree_8c" startline="593" endline="601">hb_itor_new</references>
+        <references refid="hb__tree_8c_1a3b953aabe2e0cc553e89b59d5f308607" compoundref="hb__tree_8c" startline="592" endline="600">hb_itor_new</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a81460798e9da8681d4d030d608561005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -793,7 +793,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="63" column="17" bodyfile="src/hb_tree.c" bodystart="617" bodyend="617" declfile="include/hb_tree.h" declline="63" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="63" column="17" bodyfile="src/hb_tree.c" bodystart="616" bodyend="616" declfile="include/hb_tree.h" declline="63" declcolumn="17"/>
         <references refid="tree__common_8c_1aa3a6573b092296a44a074269c8d2bc91" compoundref="tree__common_8c" startline="389" endline="394">tree_iterator_free</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a60e945547a822605b87a874fe84f36f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -811,7 +811,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="65" column="17" bodyfile="src/hb_tree.c" bodystart="618" bodyend="618" declfile="include/hb_tree.h" declline="65" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="65" column="17" bodyfile="src/hb_tree.c" bodystart="617" bodyend="617" declfile="include/hb_tree.h" declline="65" declcolumn="17"/>
         <references refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" compoundref="tree__common_8c" startline="377" endline="380">tree_iterator_valid</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a5aa40cf9743b020d1a9096856f5ee49d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -829,7 +829,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="66" column="17" bodyfile="src/hb_tree.c" bodystart="619" bodyend="619" declfile="include/hb_tree.h" declline="66" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="66" column="17" bodyfile="src/hb_tree.c" bodystart="618" bodyend="618" declfile="include/hb_tree.h" declline="66" declcolumn="17"/>
         <references refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" compoundref="tree__common_8c" startline="383" endline="386">tree_iterator_invalidate</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1aa03cde1152fd7f57d4dbc96082aed683" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -847,7 +847,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="67" column="17" bodyfile="src/hb_tree.c" bodystart="621" bodyend="625" declfile="include/hb_tree.h" declline="67" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="67" column="17" bodyfile="src/hb_tree.c" bodystart="620" bodyend="624" declfile="include/hb_tree.h" declline="67" declcolumn="17"/>
         <references refid="structhb__itor_1abd1d99b37abe63189d6db6eb630bd2ff" compoundref="hb__tree_8c" startline="56">hb_itor::node</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a48aca16bbe563ec51a27062f383d6fdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -865,7 +865,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="68" column="17" bodyfile="src/hb_tree.c" bodystart="627" bodyend="631" declfile="include/hb_tree.h" declline="68" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="68" column="17" bodyfile="src/hb_tree.c" bodystart="626" bodyend="630" declfile="include/hb_tree.h" declline="68" declcolumn="17"/>
         <references refid="structhb__itor_1abd1d99b37abe63189d6db6eb630bd2ff" compoundref="hb__tree_8c" startline="56">hb_itor::node</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a713cafaac5010c272ec49b3708c134cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -887,7 +887,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="69" column="17" bodyfile="src/hb_tree.c" bodystart="633" bodyend="637" declfile="include/hb_tree.h" declline="69" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="69" column="17" bodyfile="src/hb_tree.c" bodystart="632" bodyend="636" declfile="include/hb_tree.h" declline="69" declcolumn="17"/>
         <references refid="structhb__itor_1abd1d99b37abe63189d6db6eb630bd2ff" compoundref="hb__tree_8c" startline="56">hb_itor::node</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a9186702ffcb4a7a4cae504ccfac8f2ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -909,7 +909,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="70" column="17" bodyfile="src/hb_tree.c" bodystart="639" bodyend="643" declfile="include/hb_tree.h" declline="70" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="70" column="17" bodyfile="src/hb_tree.c" bodystart="638" bodyend="642" declfile="include/hb_tree.h" declline="70" declcolumn="17"/>
         <references refid="structhb__itor_1abd1d99b37abe63189d6db6eb630bd2ff" compoundref="hb__tree_8c" startline="56">hb_itor::node</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1ac654d5a634379b7abaa97d40110cfa8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -927,7 +927,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="71" column="17" bodyfile="src/hb_tree.c" bodystart="645" bodyend="645" declfile="include/hb_tree.h" declline="71" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="71" column="17" bodyfile="src/hb_tree.c" bodystart="644" bodyend="644" declfile="include/hb_tree.h" declline="71" declcolumn="17"/>
         <references refid="tree__common_8c_1a9bab181bc96dd1334ea36f0b3f647f2a" compoundref="tree__common_8c" startline="437" endline="441">tree_iterator_first</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a9089a34007439210ae1382380101e45a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -945,7 +945,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="72" column="17" bodyfile="src/hb_tree.c" bodystart="646" bodyend="646" declfile="include/hb_tree.h" declline="72" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="72" column="17" bodyfile="src/hb_tree.c" bodystart="645" bodyend="645" declfile="include/hb_tree.h" declline="72" declcolumn="17"/>
         <references refid="tree__common_8c_1a03b78e22aed8c0dd38f96d939066239a" compoundref="tree__common_8c" startline="444" endline="448">tree_iterator_last</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a01b798d34492d3237aede0152581dcc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -967,7 +967,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="73" column="17" bodyfile="src/hb_tree.c" bodystart="647" bodyend="647" declfile="include/hb_tree.h" declline="73" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="73" column="17" bodyfile="src/hb_tree.c" bodystart="646" bodyend="646" declfile="include/hb_tree.h" declline="73" declcolumn="17"/>
         <references refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" compoundref="tree__common_8c" startline="472" endline="476">tree_iterator_search_ge</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1ab1d35c986721c07903534e75d7862a3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -989,7 +989,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="74" column="17" bodyfile="src/hb_tree.c" bodystart="648" bodyend="648" declfile="include/hb_tree.h" declline="74" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="74" column="17" bodyfile="src/hb_tree.c" bodystart="647" bodyend="647" declfile="include/hb_tree.h" declline="74" declcolumn="17"/>
         <references refid="tree__common_8c_1a630ac71696ac60548789b01f1e618350" compoundref="tree__common_8c" startline="458" endline="462">tree_iterator_search_le</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a4607a5422ddcea6ca429de95721d1d66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1011,7 +1011,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="75" column="17" bodyfile="src/hb_tree.c" bodystart="649" bodyend="649" declfile="include/hb_tree.h" declline="75" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="75" column="17" bodyfile="src/hb_tree.c" bodystart="648" bodyend="648" declfile="include/hb_tree.h" declline="75" declcolumn="17"/>
         <references refid="tree__common_8c_1aa83954869eda27b3488032f96a257771" compoundref="tree__common_8c" startline="465" endline="469">tree_iterator_search_lt</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a2fb84f10c1de87e756f9da059ac4849b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1033,7 +1033,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="76" column="17" bodyfile="src/hb_tree.c" bodystart="650" bodyend="650" declfile="include/hb_tree.h" declline="76" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="76" column="17" bodyfile="src/hb_tree.c" bodystart="649" bodyend="649" declfile="include/hb_tree.h" declline="76" declcolumn="17"/>
         <references refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" compoundref="tree__common_8c" startline="472" endline="476">tree_iterator_search_ge</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a09990b7e8fd9b889e467be431bc7ccbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1055,7 +1055,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="77" column="17" bodyfile="src/hb_tree.c" bodystart="651" bodyend="651" declfile="include/hb_tree.h" declline="77" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="77" column="17" bodyfile="src/hb_tree.c" bodystart="650" bodyend="650" declfile="include/hb_tree.h" declline="77" declcolumn="17"/>
         <references refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" compoundref="tree__common_8c" startline="479" endline="483">tree_iterator_search_gt</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1aa9e522dab4ef7c220d12755cc387bacf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1073,7 +1073,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="78" column="16" bodyfile="src/hb_tree.c" bodystart="653" bodyend="653" declfile="include/hb_tree.h" declline="78" declcolumn="16"/>
+        <location file="include/hb_tree.h" line="78" column="16" bodyfile="src/hb_tree.c" bodystart="652" bodyend="652" declfile="include/hb_tree.h" declline="78" declcolumn="16"/>
         <references refid="tree__common_8c_1a71fd87b638317045ae986d9886f10c10" compoundref="tree__common_8c" startline="499" endline="503">tree_iterator_key</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a9fb076b58a4435f4cd696b845ed78909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1091,7 +1091,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="79" column="15" bodyfile="src/hb_tree.c" bodystart="654" bodyend="654" declfile="include/hb_tree.h" declline="79" declcolumn="15"/>
+        <location file="include/hb_tree.h" line="79" column="15" bodyfile="src/hb_tree.c" bodystart="653" bodyend="653" declfile="include/hb_tree.h" declline="79" declcolumn="15"/>
         <references refid="tree__common_8c_1a1cc4c18adcfc606676bbbe632160f50a" compoundref="tree__common_8c" startline="506" endline="510">tree_iterator_datum</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a8e1e16fbe55e6aaf652fcd284edfdbcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1113,7 +1113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="80" column="17" bodyfile="src/hb_tree.c" bodystart="652" bodyend="652" declfile="include/hb_tree.h" declline="80" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="80" column="17" bodyfile="src/hb_tree.c" bodystart="651" bodyend="651" declfile="include/hb_tree.h" declline="80" declcolumn="17"/>
         <references refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" compoundref="tree__common_8c" startline="486" endline="496">tree_iterator_compare</references>
       </memberdef>
       <memberdef kind="function" id="hb__tree_8h_1a7f741c2750a9b76c98f2c308c1da96cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1131,7 +1131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/hb_tree.h" line="81" column="17" bodyfile="src/hb_tree.c" bodystart="657" bodyend="664" declfile="include/hb_tree.h" declline="81" declcolumn="17"/>
+        <location file="include/hb_tree.h" line="81" column="17" bodyfile="src/hb_tree.c" bodystart="656" bodyend="663" declfile="include/hb_tree.h" declline="81" declcolumn="17"/>
         <references refid="structhb__itor_1abd1d99b37abe63189d6db6eb630bd2ff" compoundref="hb__tree_8c" startline="56">hb_itor::node</references>
         <references refid="structhb__itor_1a024a8670718387a22dc8053590c48176" compoundref="hb__tree_8c" startline="56">hb_itor::tree</references>
       </memberdef>

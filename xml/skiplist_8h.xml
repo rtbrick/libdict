@@ -393,7 +393,7 @@
         <location file="include/skiplist.h" line="39" column="17" bodyfile="src/skiplist.c" bodystart="149" bodyend="155" declfile="include/skiplist.h" declline="39" declcolumn="17"/>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" compoundref="skiplist_8c" startline="50">skiplist::head</references>
-        <references refid="skiplist_8c_1adcd7400173bafdbc06f7868e2ff11a9d" compoundref="skiplist_8c" startline="408" endline="425">skiplist_clear</references>
+        <references refid="skiplist_8c_1adcd7400173bafdbc06f7868e2ff11a9d" compoundref="skiplist_8c" startline="409" endline="426">skiplist_clear</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1ad4842554437de6ab010bb84006b8bf39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></type>
@@ -414,7 +414,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="42" column="17" bodyfile="src/skiplist.c" bodystart="183" bodyend="210" declfile="include/skiplist.h" declline="42" declcolumn="17"/>
+        <location file="include/skiplist.h" line="42" column="17" bodyfile="src/skiplist.c" bodystart="184" bodyend="211" declfile="include/skiplist.h" declline="42" declcolumn="17"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
@@ -444,7 +444,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="43" column="15" bodyfile="src/skiplist.c" bodystart="327" bodyend="331" declfile="include/skiplist.h" declline="43" declcolumn="15"/>
+        <location file="include/skiplist.h" line="43" column="15" bodyfile="src/skiplist.c" bodystart="328" bodyend="332" declfile="include/skiplist.h" declline="43" declcolumn="15"/>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1a373602310b3d20ab40e7634d719081f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -466,7 +466,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="44" column="15" bodyfile="src/skiplist.c" bodystart="334" bodyend="338" declfile="include/skiplist.h" declline="44" declcolumn="15"/>
+        <location file="include/skiplist.h" line="44" column="15" bodyfile="src/skiplist.c" bodystart="335" bodyend="339" declfile="include/skiplist.h" declline="44" declcolumn="15"/>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1ab71061e35d511edaf582707c024d5629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -488,7 +488,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="45" column="15" bodyfile="src/skiplist.c" bodystart="341" bodyend="345" declfile="include/skiplist.h" declline="45" declcolumn="15"/>
+        <location file="include/skiplist.h" line="45" column="15" bodyfile="src/skiplist.c" bodystart="342" bodyend="346" declfile="include/skiplist.h" declline="45" declcolumn="15"/>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1a98fbe7bcb19546c9e3695eaa592b6b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -510,7 +510,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="46" column="15" bodyfile="src/skiplist.c" bodystart="348" bodyend="352" declfile="include/skiplist.h" declline="46" declcolumn="15"/>
+        <location file="include/skiplist.h" line="46" column="15" bodyfile="src/skiplist.c" bodystart="349" bodyend="353" declfile="include/skiplist.h" declline="46" declcolumn="15"/>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1a8b8f7145975eff26a2d358a7ab60652f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -532,7 +532,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="47" column="15" bodyfile="src/skiplist.c" bodystart="355" bodyend="359" declfile="include/skiplist.h" declline="47" declcolumn="15"/>
+        <location file="include/skiplist.h" line="47" column="15" bodyfile="src/skiplist.c" bodystart="356" bodyend="360" declfile="include/skiplist.h" declline="47" declcolumn="15"/>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1af23e431ed5e8c8e2aecdcc5627bc68be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -554,7 +554,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="50" column="17" bodyfile="src/skiplist.c" bodystart="362" bodyend="405" declfile="include/skiplist.h" declline="50" declcolumn="17"/>
+        <location file="include/skiplist.h" line="50" column="17" bodyfile="src/skiplist.c" bodystart="363" bodyend="406" declfile="include/skiplist.h" declline="50" declcolumn="17"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
         <references refid="structskiplist_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="skiplist_8c" startline="54">skiplist::count</references>
@@ -587,7 +587,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="51" column="17" bodyfile="src/skiplist.c" bodystart="408" bodyend="425" declfile="include/skiplist.h" declline="51" declcolumn="17"/>
+        <location file="include/skiplist.h" line="51" column="17" bodyfile="src/skiplist.c" bodystart="409" bodyend="426" declfile="include/skiplist.h" declline="51" declcolumn="17"/>
         <references refid="structskiplist_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="skiplist_8c" startline="54">skiplist::count</references>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
@@ -619,7 +619,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="52" column="17" bodyfile="src/skiplist.c" bodystart="428" bodyend="436" declfile="include/skiplist.h" declline="52" declcolumn="17"/>
+        <location file="include/skiplist.h" line="52" column="17" bodyfile="src/skiplist.c" bodystart="429" bodyend="437" declfile="include/skiplist.h" declline="52" declcolumn="17"/>
         <references refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" compoundref="skiplist_8c" startline="50">skiplist::head</references>
         <references refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" compoundref="skiplist_8c" startline="44">skip_node::link</references>
       </memberdef>
@@ -638,7 +638,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="53" column="17" bodyfile="src/skiplist.c" bodystart="439" bodyend="442" declfile="include/skiplist.h" declline="53" declcolumn="17"/>
+        <location file="include/skiplist.h" line="53" column="17" bodyfile="src/skiplist.c" bodystart="440" bodyend="443" declfile="include/skiplist.h" declline="53" declcolumn="17"/>
         <references refid="structskiplist_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="skiplist_8c" startline="54">skiplist::count</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1a4df47d9ff2ce6126c15bc80d9423bdf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -656,7 +656,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="54" column="17" bodyfile="src/skiplist.c" bodystart="445" bodyend="481" declfile="include/skiplist.h" declline="54" declcolumn="17"/>
+        <location file="include/skiplist.h" line="54" column="17" bodyfile="src/skiplist.c" bodystart="446" bodyend="482" declfile="include/skiplist.h" declline="54" declcolumn="17"/>
         <references refid="structskiplist_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="skiplist_8c" startline="54">skiplist::count</references>
         <references refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" compoundref="skiplist_8c" startline="50">skiplist::head</references>
         <references refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" compoundref="skiplist_8c" startline="44">skip_node::link</references>
@@ -690,7 +690,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="61" column="17" bodyfile="src/skiplist.c" bodystart="484" bodyend="497" declfile="include/skiplist.h" declline="61" declcolumn="17"/>
+        <location file="include/skiplist.h" line="61" column="17" bodyfile="src/skiplist.c" bodystart="485" bodyend="498" declfile="include/skiplist.h" declline="61" declcolumn="17"/>
         <references refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" compoundref="skiplist_8c" startline="50">skiplist::head</references>
         <references refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" compoundref="skiplist_8c" startline="44">skip_node::link</references>
       </memberdef>
@@ -709,7 +709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="66" column="16" bodyfile="src/skiplist.c" bodystart="500" bodyend="508" declfile="include/skiplist.h" declline="66" declcolumn="16"/>
+        <location file="include/skiplist.h" line="66" column="16" bodyfile="src/skiplist.c" bodystart="501" bodyend="509" declfile="include/skiplist.h" declline="66" declcolumn="16"/>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
@@ -729,12 +729,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="67" column="16" bodyfile="src/skiplist.c" bodystart="511" bodyend="522" declfile="include/skiplist.h" declline="67" declcolumn="16"/>
+        <location file="include/skiplist.h" line="67" column="16" bodyfile="src/skiplist.c" bodystart="512" bodyend="523" declfile="include/skiplist.h" declline="67" declcolumn="16"/>
         <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="175">dict_itor::_itor</references>
         <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="176">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
-        <references refid="skiplist_8c_1adbe33aa562dee4fa3e409b3544203780" compoundref="skiplist_8c" startline="500" endline="508">skiplist_itor_new</references>
+        <references refid="skiplist_8c_1adbe33aa562dee4fa3e409b3544203780" compoundref="skiplist_8c" startline="501" endline="509">skiplist_itor_new</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1a0038797e29797bdb7ccd59e33f9e65a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -751,7 +751,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="68" column="17" bodyfile="src/skiplist.c" bodystart="525" bodyend="528" declfile="include/skiplist.h" declline="68" declcolumn="17"/>
+        <location file="include/skiplist.h" line="68" column="17" bodyfile="src/skiplist.c" bodystart="526" bodyend="529" declfile="include/skiplist.h" declline="68" declcolumn="17"/>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1a8c9a8ef464827a0ae56e66063b632b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -769,7 +769,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="70" column="17" bodyfile="src/skiplist.c" bodystart="531" bodyend="534" declfile="include/skiplist.h" declline="70" declcolumn="17"/>
+        <location file="include/skiplist.h" line="70" column="17" bodyfile="src/skiplist.c" bodystart="532" bodyend="535" declfile="include/skiplist.h" declline="70" declcolumn="17"/>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1a83a1a0a8199354a84a74bc69785d48d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -787,7 +787,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="71" column="17" bodyfile="src/skiplist.c" bodystart="537" bodyend="540" declfile="include/skiplist.h" declline="71" declcolumn="17"/>
+        <location file="include/skiplist.h" line="71" column="17" bodyfile="src/skiplist.c" bodystart="538" bodyend="541" declfile="include/skiplist.h" declline="71" declcolumn="17"/>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1a6b16e0f86c1a718837212ec494dc639d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -805,7 +805,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="72" column="17" bodyfile="src/skiplist.c" bodystart="543" bodyend="548" declfile="include/skiplist.h" declline="72" declcolumn="17"/>
+        <location file="include/skiplist.h" line="72" column="17" bodyfile="src/skiplist.c" bodystart="544" bodyend="549" declfile="include/skiplist.h" declline="72" declcolumn="17"/>
         <references refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" compoundref="skiplist_8c" startline="44">skip_node::link</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
@@ -824,7 +824,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="73" column="17" bodyfile="src/skiplist.c" bodystart="551" bodyend="556" declfile="include/skiplist.h" declline="73" declcolumn="17"/>
+        <location file="include/skiplist.h" line="73" column="17" bodyfile="src/skiplist.c" bodystart="552" bodyend="557" declfile="include/skiplist.h" declline="73" declcolumn="17"/>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
         <references refid="structskip__node_1a45a0b6bc7ce1d301c1527998d99e85f0" compoundref="skiplist_8c" startline="42">skip_node::prev</references>
       </memberdef>
@@ -847,9 +847,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="74" column="17" bodyfile="src/skiplist.c" bodystart="559" bodyend="565" declfile="include/skiplist.h" declline="74" declcolumn="17"/>
+        <location file="include/skiplist.h" line="74" column="17" bodyfile="src/skiplist.c" bodystart="560" bodyend="566" declfile="include/skiplist.h" declline="74" declcolumn="17"/>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
-        <references refid="skiplist_8c_1a6b16e0f86c1a718837212ec494dc639d" compoundref="skiplist_8c" startline="543" endline="548">skiplist_itor_next</references>
+        <references refid="skiplist_8c_1a6b16e0f86c1a718837212ec494dc639d" compoundref="skiplist_8c" startline="544" endline="549">skiplist_itor_next</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1a80b0fe3e44974d0317096d4c9bc85d75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -870,9 +870,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="75" column="17" bodyfile="src/skiplist.c" bodystart="568" bodyend="574" declfile="include/skiplist.h" declline="75" declcolumn="17"/>
+        <location file="include/skiplist.h" line="75" column="17" bodyfile="src/skiplist.c" bodystart="569" bodyend="575" declfile="include/skiplist.h" declline="75" declcolumn="17"/>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
-        <references refid="skiplist_8c_1afa49a5994bef26a067229baf829757da" compoundref="skiplist_8c" startline="551" endline="556">skiplist_itor_prev</references>
+        <references refid="skiplist_8c_1afa49a5994bef26a067229baf829757da" compoundref="skiplist_8c" startline="552" endline="557">skiplist_itor_prev</references>
       </memberdef>
       <memberdef kind="function" id="skiplist_8h_1a6647c65a42000e933fc047a2ff1077af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -889,7 +889,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="76" column="17" bodyfile="src/skiplist.c" bodystart="577" bodyend="580" declfile="include/skiplist.h" declline="76" declcolumn="17"/>
+        <location file="include/skiplist.h" line="76" column="17" bodyfile="src/skiplist.c" bodystart="578" bodyend="581" declfile="include/skiplist.h" declline="76" declcolumn="17"/>
         <references refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" compoundref="skiplist_8c" startline="50">skiplist::head</references>
         <references refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" compoundref="skiplist_8c" startline="44">skip_node::link</references>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
@@ -910,7 +910,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="77" column="17" bodyfile="src/skiplist.c" bodystart="583" bodyend="597" declfile="include/skiplist.h" declline="77" declcolumn="17"/>
+        <location file="include/skiplist.h" line="77" column="17" bodyfile="src/skiplist.c" bodystart="584" bodyend="598" declfile="include/skiplist.h" declline="77" declcolumn="17"/>
         <references refid="structskiplist_1a100e90aa60de0591e29864fef4ba2baf" compoundref="skiplist_8c" startline="50">skiplist::head</references>
         <references refid="structskip__node_1afd0a54ecc55aea8e453873fa9f17b225" compoundref="skiplist_8c" startline="44">skip_node::link</references>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
@@ -936,7 +936,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="78" column="17" bodyfile="src/skiplist.c" bodystart="600" bodyend="603" declfile="include/skiplist.h" declline="78" declcolumn="17"/>
+        <location file="include/skiplist.h" line="78" column="17" bodyfile="src/skiplist.c" bodystart="601" bodyend="604" declfile="include/skiplist.h" declline="78" declcolumn="17"/>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
@@ -959,7 +959,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="79" column="17" bodyfile="src/skiplist.c" bodystart="606" bodyend="609" declfile="include/skiplist.h" declline="79" declcolumn="17"/>
+        <location file="include/skiplist.h" line="79" column="17" bodyfile="src/skiplist.c" bodystart="607" bodyend="610" declfile="include/skiplist.h" declline="79" declcolumn="17"/>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
@@ -982,7 +982,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="80" column="17" bodyfile="src/skiplist.c" bodystart="612" bodyend="615" declfile="include/skiplist.h" declline="80" declcolumn="17"/>
+        <location file="include/skiplist.h" line="80" column="17" bodyfile="src/skiplist.c" bodystart="613" bodyend="616" declfile="include/skiplist.h" declline="80" declcolumn="17"/>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
@@ -1005,7 +1005,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="81" column="17" bodyfile="src/skiplist.c" bodystart="618" bodyend="621" declfile="include/skiplist.h" declline="81" declcolumn="17"/>
+        <location file="include/skiplist.h" line="81" column="17" bodyfile="src/skiplist.c" bodystart="619" bodyend="622" declfile="include/skiplist.h" declline="81" declcolumn="17"/>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
@@ -1028,7 +1028,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="82" column="17" bodyfile="src/skiplist.c" bodystart="624" bodyend="627" declfile="include/skiplist.h" declline="82" declcolumn="17"/>
+        <location file="include/skiplist.h" line="82" column="17" bodyfile="src/skiplist.c" bodystart="625" bodyend="628" declfile="include/skiplist.h" declline="82" declcolumn="17"/>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
@@ -1047,7 +1047,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="83" column="16" bodyfile="src/skiplist.c" bodystart="630" bodyend="633" declfile="include/skiplist.h" declline="83" declcolumn="16"/>
+        <location file="include/skiplist.h" line="83" column="16" bodyfile="src/skiplist.c" bodystart="631" bodyend="634" declfile="include/skiplist.h" declline="83" declcolumn="16"/>
         <references refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="skiplist_8c" startline="40">skip_node::key</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
@@ -1066,7 +1066,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="84" column="15" bodyfile="src/skiplist.c" bodystart="636" bodyend="639" declfile="include/skiplist.h" declline="84" declcolumn="15"/>
+        <location file="include/skiplist.h" line="84" column="15" bodyfile="src/skiplist.c" bodystart="637" bodyend="640" declfile="include/skiplist.h" declline="84" declcolumn="15"/>
         <references refid="structskip__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="skiplist_8c" startline="41">skip_node::datum</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
       </memberdef>
@@ -1089,7 +1089,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="85" column="17" bodyfile="src/skiplist.c" bodystart="642" bodyend="650" declfile="include/skiplist.h" declline="85" declcolumn="17"/>
+        <location file="include/skiplist.h" line="85" column="17" bodyfile="src/skiplist.c" bodystart="643" bodyend="651" declfile="include/skiplist.h" declline="85" declcolumn="17"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="skiplist_8c" startline="53">skiplist::cmp_func</references>
         <references refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="skiplist_8c" startline="40">skip_node::key</references>
@@ -1111,13 +1111,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/skiplist.h" line="86" column="17" bodyfile="src/skiplist.c" bodystart="653" bodyend="662" declfile="include/skiplist.h" declline="86" declcolumn="17"/>
+        <location file="include/skiplist.h" line="86" column="17" bodyfile="src/skiplist.c" bodystart="654" bodyend="663" declfile="include/skiplist.h" declline="86" declcolumn="17"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structskip__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="skiplist_8c" startline="40">skip_node::key</references>
         <references refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" compoundref="skiplist_8c" startline="58">skiplist_itor::list</references>
         <references refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" compoundref="skiplist_8c" startline="59">skiplist_itor::node</references>
         <references refid="structdict__remove__result_1a3b6ac8b02ffc67e7ac109edf6dca3ceb" compoundref="dict_8h" startline="81">dict_remove_result::removed</references>
-        <references refid="skiplist_8c_1af23e431ed5e8c8e2aecdcc5627bc68be" compoundref="skiplist_8c" startline="362" endline="405">skiplist_remove</references>
+        <references refid="skiplist_8c_1af23e431ed5e8c8e2aecdcc5627bc68be" compoundref="skiplist_8c" startline="363" endline="406">skiplist_remove</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
