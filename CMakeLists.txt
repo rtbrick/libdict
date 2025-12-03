@@ -9,6 +9,8 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS OFF)
 
+message("Compiler: ${CMAKE_C_COMPILER_ID} Version: ${CMAKE_C_COMPILER_VERSION}")
+
 # enable verbose compiler warnings.
 if(MSVC)
     add_compile_options(/W4 /WX)
@@ -148,7 +150,7 @@ set(CPACK_DEB_COMPONENT_INSTALL ON)
 set(CPACK_DEBIAN_ENABLE_COMPONENT_DEPENDS YES)
 set(CPACK_DEBIAN_LIB_PACKAGE_NAME "libdict")
 set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")
-set(CPACK_PACKAGE_CONTACT "Christian Giese <christian@rtbrick.com>")
+set(CPACK_PACKAGE_CONTACT "RtBrick <bngblaster@rtbrick.com>")
 if (NOT DEFINED LIBDICT_VERSION)
     set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
 else()
