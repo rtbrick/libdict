@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="tr__tree_8c" kind="file" language="C++">
     <compoundname>tr_tree.c</compoundname>
     <includes refid="tr__tree_8h" local="yes">tr_tree.h</includes>
@@ -141,7 +141,7 @@
     <innerclass refid="structtr__itor" prot="public">tr_itor</innerclass>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="tr__tree_8c_1a9e133a630615d0838dc94fa52d7d7395" prot="public" static="no">
-        <type>struct <ref refid="structtr__node" kindref="compound">tr_node</ref></type>
+        <type>struct tr_node</type>
         <definition>typedef struct tr_node tr_node</definition>
         <argsstring></argsstring>
         <name>tr_node</name>
@@ -1301,7 +1301,7 @@
 <codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtr__node" kindref="compound">tr_node</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>parent<sp/>=<sp/>node-&gt;<ref refid="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" kindref="member">parent</ref>;</highlight></codeline>
 <codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(out)</highlight></codeline>
 <codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out-&gt;<ref refid="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" kindref="member">parent</ref><sp/>=<sp/>parent;</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;root)<sp/>=<sp/>out;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>*(parent<sp/>?<sp/>(parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>==<sp/>node<sp/>?<sp/>&amp;parent-&gt;<ref refid="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" kindref="member">llink</ref><sp/>:<sp/>&amp;parent-&gt;<ref refid="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" kindref="member">rlink</ref>)<sp/>:<sp/>&amp;<ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a462689348fa341c603f4840db1a29841" kindref="member">root</ref>)<sp/>=<sp/>out;</highlight></codeline>
 <codeline lineno="202"><highlight class="normal"></highlight></codeline>
 <codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" kindref="member">FREE</ref>(node);</highlight></codeline>
 <codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtree" kindref="compound">tree</ref>-&gt;<ref refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" kindref="member">count</ref>--;</highlight></codeline>

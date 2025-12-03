@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="tr__tree_8h" kind="file" language="C++">
     <compoundname>tr_tree.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -288,7 +288,7 @@
     </invincdepgraph>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="tr__tree_8h_1a9abc2051519dbf98f8af8f44e672453e" prot="public" static="no">
-        <type>struct <ref refid="structtr__tree" kindref="compound">tr_tree</ref></type>
+        <type>struct tr_tree</type>
         <definition>typedef struct tr_tree tr_tree</definition>
         <argsstring></argsstring>
         <name>tr_tree</name>
@@ -301,7 +301,7 @@
         <location file="include/tr_tree.h" line="35" column="22" bodyfile="include/tr_tree.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="tr__tree_8h_1a594b5c00617e763e31da34743cf785f4" prot="public" static="no">
-        <type>struct <ref refid="structtr__itor" kindref="compound">tr_itor</ref></type>
+        <type>struct tr_itor</type>
         <definition>typedef struct tr_itor tr_itor</definition>
         <argsstring></argsstring>
         <name>tr_itor</name>

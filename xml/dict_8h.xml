@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="dict_8h" kind="file" language="C++">
     <compoundname>dict.h</compoundname>
     <includes local="no">stddef.h</includes>
@@ -851,7 +851,7 @@
         <location file="include/dict.h" line="63" column="9" bodyfile="include/dict.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1a8100e988beb964b7ef6705ce30158829" prot="public" static="no">
-        <type>struct <ref refid="structdict__itor" kindref="compound">dict_itor</ref></type>
+        <type>struct dict_itor</type>
         <definition>typedef struct dict_itor dict_itor</definition>
         <argsstring></argsstring>
         <name>dict_itor</name>

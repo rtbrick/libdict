@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="pr__tree_8h" kind="file" language="C++">
     <compoundname>pr_tree.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -288,7 +288,7 @@
     </invincdepgraph>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="pr__tree_8h_1a4d2f06c25e3a0a10f9e048aebd2b1e56" prot="public" static="no">
-        <type>struct <ref refid="structpr__tree" kindref="compound">pr_tree</ref></type>
+        <type>struct pr_tree</type>
         <definition>typedef struct pr_tree pr_tree</definition>
         <argsstring></argsstring>
         <name>pr_tree</name>
@@ -301,7 +301,7 @@
         <location file="include/pr_tree.h" line="35" column="22" bodyfile="include/pr_tree.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="pr__tree_8h_1aaa4542371a02ee1060cbedc6426f21a4" prot="public" static="no">
-        <type>struct <ref refid="structpr__itor" kindref="compound">pr_itor</ref></type>
+        <type>struct pr_itor</type>
         <definition>typedef struct pr_itor pr_itor</definition>
         <argsstring></argsstring>
         <name>pr_itor</name>

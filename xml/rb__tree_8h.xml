@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="rb__tree_8h" kind="file" language="C++">
     <compoundname>rb_tree.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -288,7 +288,7 @@
     </invincdepgraph>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="rb__tree_8h_1af62be841b6f282162fad0a686ffd5e10" prot="public" static="no">
-        <type>struct <ref refid="structrb__tree" kindref="compound">rb_tree</ref></type>
+        <type>struct rb_tree</type>
         <definition>typedef struct rb_tree rb_tree</definition>
         <argsstring></argsstring>
         <name>rb_tree</name>
@@ -301,7 +301,7 @@
         <location file="include/rb_tree.h" line="35" column="22" bodyfile="include/rb_tree.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="rb__tree_8h_1a6a5a46c909e90e300a9939a4aab5a4f4" prot="public" static="no">
-        <type>struct <ref refid="structrb__itor" kindref="compound">rb_itor</ref></type>
+        <type>struct rb_itor</type>
         <definition>typedef struct rb_itor rb_itor</definition>
         <argsstring></argsstring>
         <name>rb_itor</name>

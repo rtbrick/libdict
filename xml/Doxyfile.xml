@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxyfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="doxyfile.xsd" version="1.9.8" xml:lang="en-US">
+<doxyfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="doxyfile.xsd" version="1.12.0" xml:lang="en-US">
   <option  id='DOXYFILE_ENCODING' default='yes' type='string'><value><![CDATA[UTF-8]]></value></option>
   <option  id='PROJECT_NAME' default='no' type='string'><value><![CDATA[libdict]]></value></option>
   <option  id='PROJECT_NUMBER' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='PROJECT_BRIEF' default='no' type='string'><value><![CDATA["Data Structure C Library"]]></value></option>
   <option  id='PROJECT_LOGO' default='yes' type='string'><value><![CDATA[]]></value></option>
+  <option  id='PROJECT_ICON' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='OUTPUT_DIRECTORY' default='no' type='string'><value><![CDATA[docs]]></value></option>
   <option  id='CREATE_SUBDIRS' default='yes' type='bool'><value>NO</value></option>
   <option  id='CREATE_SUBDIRS_LEVEL' default='yes' type='int'><value>8</value></option>
@@ -109,6 +110,8 @@
   <option  id='LAYOUT_FILE' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='CITE_BIB_FILES' default='yes' type='stringlist'>
   </option>
+  <option  id='EXTERNAL_TOOL_PATH' default='yes' type='stringlist'>
+  </option>
   <option  id='QUIET' default='yes' type='bool'><value>NO</value></option>
   <option  id='WARNINGS' default='yes' type='bool'><value>YES</value></option>
   <option  id='WARN_IF_UNDOCUMENTED' default='yes' type='bool'><value>YES</value></option>
@@ -185,6 +188,8 @@
   <option  id='HTML_DYNAMIC_MENUS' default='yes' type='bool'><value>YES</value></option>
   <option  id='HTML_DYNAMIC_SECTIONS' default='yes' type='bool'><value>NO</value></option>
   <option  id='HTML_CODE_FOLDING' default='yes' type='bool'><value>YES</value></option>
+  <option  id='HTML_COPY_CLIPBOARD' default='yes' type='bool'><value>YES</value></option>
+  <option  id='HTML_PROJECT_COOKIE' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='HTML_INDEX_NUM_ENTRIES' default='yes' type='int'><value>100</value></option>
   <option  id='GENERATE_DOCSET' default='yes' type='bool'><value>NO</value></option>
   <option  id='DOCSET_FEEDNAME' default='yes' type='string'><value><![CDATA["Doxygen generated docs"]]></value></option>
@@ -214,6 +219,7 @@
   <option  id='GENERATE_TREEVIEW' default='yes' type='bool'><value>NO</value></option>
   <option  id='FULL_SIDEBAR' default='yes' type='bool'><value>NO</value></option>
   <option  id='ENUM_VALUES_PER_LINE' default='yes' type='int'><value>4</value></option>
+  <option  id='SHOW_ENUM_VALUES' default='yes' type='bool'><value>NO</value></option>
   <option  id='TREEVIEW_WIDTH' default='yes' type='int'><value>250</value></option>
   <option  id='EXT_LINKS_IN_WINDOW' default='yes' type='bool'><value>NO</value></option>
   <option  id='OBFUSCATE_EMAILS' default='yes' type='bool'><value>YES</value></option>
@@ -262,6 +268,8 @@
   <option  id='RTF_HYPERLINKS' default='yes' type='bool'><value>NO</value></option>
   <option  id='RTF_STYLESHEET_FILE' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='RTF_EXTENSIONS_FILE' default='yes' type='string'><value><![CDATA[]]></value></option>
+  <option  id='RTF_EXTRA_FILES' default='yes' type='stringlist'>
+  </option>
   <option  id='GENERATE_MAN' default='yes' type='bool'><value>NO</value></option>
   <option  id='MAN_OUTPUT' default='yes' type='string'><value><![CDATA[man]]></value></option>
   <option  id='MAN_EXTENSION' default='yes' type='string'><value><![CDATA[.3]]></value></option>

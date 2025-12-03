@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hb__tree_8h" kind="file" language="C++">
     <compoundname>hb_tree.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -288,7 +288,7 @@
     </invincdepgraph>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="hb__tree_8h_1a1752cf6a346e6f05b07c1ea239edbbc0" prot="public" static="no">
-        <type>struct <ref refid="structhb__tree" kindref="compound">hb_tree</ref></type>
+        <type>struct hb_tree</type>
         <definition>typedef struct hb_tree hb_tree</definition>
         <argsstring></argsstring>
         <name>hb_tree</name>
@@ -301,7 +301,7 @@
         <location file="include/hb_tree.h" line="35" column="22" bodyfile="include/hb_tree.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="hb__tree_8h_1a1b9cb9d629fc490252598fde0a1134b3" prot="public" static="no">
-        <type>struct <ref refid="structhb__itor" kindref="compound">hb_itor</ref></type>
+        <type>struct hb_itor</type>
         <definition>typedef struct hb_itor hb_itor</definition>
         <argsstring></argsstring>
         <name>hb_itor</name>

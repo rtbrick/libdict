@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="dict_8c" kind="file" language="C++">
     <compoundname>dict.c</compoundname>
     <includes refid="dict__private_8h" local="yes">dict_private.h</includes>
@@ -150,9 +150,9 @@
         <definition>const char* const kDictVersionString</definition>
         <argsstring></argsstring>
         <name>kDictVersionString</name>
-        <initializer>= &quot;0&quot; &quot;.&quot;
-                       &quot;3&quot; &quot;.&quot;
-                       &quot;0&quot;</initializer>
+        <initializer>=  &quot;0&quot; &quot;.&quot;
+                        &quot;3&quot; &quot;.&quot;
+                        &quot;0&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

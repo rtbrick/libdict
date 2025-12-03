@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="sp__tree_8h" kind="file" language="C++">
     <compoundname>sp_tree.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -288,7 +288,7 @@
     </invincdepgraph>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="sp__tree_8h_1a66df5074f0fd4109225e3725574617da" prot="public" static="no">
-        <type>struct <ref refid="structsp__tree" kindref="compound">sp_tree</ref></type>
+        <type>struct sp_tree</type>
         <definition>typedef struct sp_tree sp_tree</definition>
         <argsstring></argsstring>
         <name>sp_tree</name>
@@ -301,7 +301,7 @@
         <location file="include/sp_tree.h" line="35" column="22" bodyfile="include/sp_tree.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="sp__tree_8h_1a2139b4128c710901eefd615efab65f16" prot="public" static="no">
-        <type>struct <ref refid="structsp__itor" kindref="compound">sp_itor</ref></type>
+        <type>struct sp_itor</type>
         <definition>typedef struct sp_itor sp_itor</definition>
         <argsstring></argsstring>
         <name>sp_itor</name>

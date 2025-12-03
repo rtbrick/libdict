@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['dict_5ffree_0',['dict_free',['../dict_8h.html#a4ffb34d3cb396bb2a79d2e21298c3bdb',1,'dict_free(dict *dct, dict_delete_func delete_func):&#160;dict.c'],['../dict_8c.html#a4ffb34d3cb396bb2a79d2e21298c3bdb',1,'dict_free(dict *dct, dict_delete_func delete_func):&#160;dict.c']]],
+  ['dict_5ffree_0',['dict_free',['../dict_8c.html#a4ffb34d3cb396bb2a79d2e21298c3bdb',1,'dict_free(dict *dct, dict_delete_func delete_func):&#160;dict.c'],['../dict_8h.html#a4ffb34d3cb396bb2a79d2e21298c3bdb',1,'dict_free(dict *dct, dict_delete_func delete_func):&#160;dict.c']]],
   ['dict_5fint_5fcmp_1',['dict_int_cmp',['../dict_8c.html#aff73cb45075501b1f9cac831514fc716',1,'dict_int_cmp(const void *k1, const void *k2):&#160;dict.c'],['../dict_8h.html#aff73cb45075501b1f9cac831514fc716',1,'dict_int_cmp(const void *k1, const void *k2):&#160;dict.c']]],
   ['dict_5fitor_5ffree_2',['dict_itor_free',['../dict_8c.html#ad63f3fe30bbbf82147a6eb419ab1f040',1,'dict_itor_free(dict_itor *itor):&#160;dict.c'],['../dict_8h.html#ad63f3fe30bbbf82147a6eb419ab1f040',1,'dict_itor_free(dict_itor *itor):&#160;dict.c']]],
   ['dict_5flong_5fcmp_3',['dict_long_cmp',['../dict_8c.html#ae281f2cf5e9f40b8d9f043e55f98389b',1,'dict_long_cmp(const void *k1, const void *k2):&#160;dict.c'],['../dict_8h.html#ae281f2cf5e9f40b8d9f043e55f98389b',1,'dict_long_cmp(const void *k1, const void *k2):&#160;dict.c']]],

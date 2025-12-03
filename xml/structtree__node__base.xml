@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="structtree__node__base" kind="struct" language="C++" prot="public">
     <compoundname>tree_node_base</compoundname>
     <includes refid="tree__common_8h" local="no">tree_common.h</includes>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="41" column="10" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
+        <location file="src/tree_common.h" line="41" column="11" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtree__node__base_1a56b62b74c25973b49f06895dfd600c94" prot="public" static="no" mutable="no">
         <type>void *</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="41" column="21" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
+        <location file="src/tree_common.h" line="41" column="22" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtree__node__base_1a004e0d775ac84f0908b5b6b346087660" prot="public" static="no" mutable="no">
         <type>struct <ref refid="structtree__node__base" kindref="compound">tree_node_base</ref> *</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="41" column="82" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
+        <location file="src/tree_common.h" line="41" column="81" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtree__node__base_1ac763a359e713b626d6ce7f16604e8da5" prot="public" static="no" mutable="no">
         <type>struct <ref refid="structtree__node__base" kindref="compound">tree_node_base</ref> *</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tree_common.h" line="41" column="112" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
+        <location file="src/tree_common.h" line="41" column="110" bodyfile="src/tree_common.h" bodystart="41" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

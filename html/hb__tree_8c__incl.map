@@ -1,5 +1,5 @@
 <map id="src/hb_tree.c" name="src/hb_tree.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="632,5,729,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="632,5,728,31"/>
 <area shape="rect" id="Node000002" href="$hb__tree_8h.html" title=" " alt="" coords="527,79,602,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="662,34,598,73,595,68,659,29"/>
 <area shape="rect" id="Node000015" href="$dict__private_8h.html" title=" " alt="" coords="759,79,858,105"/>
@@ -42,7 +42,7 @@
 <area shape="poly" id="edge26_Node000015_Node000003" title=" " alt="" coords="781,108,683,149,681,144,779,103"/>
 <area shape="rect" id="Node000016" title=" " alt="" coords="731,153,790,178"/>
 <area shape="poly" id="edge24_Node000015_Node000016" title=" " alt="" coords="803,106,779,141,775,138,798,103"/>
-<area shape="rect" id="Node000017" title=" " alt="" coords="815,153,877,178"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="814,153,877,178"/>
 <area shape="poly" id="edge25_Node000015_Node000017" title=" " alt="" coords="817,104,835,138,830,140,812,106"/>
 <area shape="poly" id="edge28_Node000018_Node000003" title=" " alt="" coords="676,106,658,140,653,138,672,104"/>
 </map>

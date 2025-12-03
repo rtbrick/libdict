@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="wb__tree_8h" kind="file" language="C++">
     <compoundname>wb_tree.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -288,7 +288,7 @@
     </invincdepgraph>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="wb__tree_8h_1abd2c41cc9a77786310dac5f0c1c3481d" prot="public" static="no">
-        <type>struct <ref refid="structwb__tree" kindref="compound">wb_tree</ref></type>
+        <type>struct wb_tree</type>
         <definition>typedef struct wb_tree wb_tree</definition>
         <argsstring></argsstring>
         <name>wb_tree</name>
@@ -301,7 +301,7 @@
         <location file="include/wb_tree.h" line="35" column="22" bodyfile="include/wb_tree.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="wb__tree_8h_1a68ba9f33b95bdf4911e28dfdce4601ca" prot="public" static="no">
-        <type>struct <ref refid="structwb__itor" kindref="compound">wb_itor</ref></type>
+        <type>struct wb_itor</type>
         <definition>typedef struct wb_itor wb_itor</definition>
         <argsstring></argsstring>
         <name>wb_itor</name>

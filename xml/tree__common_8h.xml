@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="tree__common_8h" kind="file" language="C++">
     <compoundname>tree_common.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -208,7 +208,7 @@
     </sectiondef>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="tree__common_8h_1a9069a8899a6e1ad0d0facc4644961b6e" prot="public" static="no">
-        <type>struct <ref refid="structtree__node__base" kindref="compound">tree_node_base</ref></type>
+        <type>struct tree_node_base</type>
         <definition>typedef struct tree_node_base tree_node_base</definition>
         <argsstring></argsstring>
         <name>tree_node_base</name>
@@ -221,7 +221,7 @@
         <location file="src/tree_common.h" line="42" column="16"/>
       </memberdef>
       <memberdef kind="typedef" id="tree__common_8h_1acc8b5e2dfeccc10ebe77ddffb5d84708" prot="public" static="no">
-        <type>struct <ref refid="structtree__base" kindref="compound">tree_base</ref></type>
+        <type>struct tree_base</type>
         <definition>typedef struct tree_base tree_base</definition>
         <argsstring></argsstring>
         <name>tree_base</name>
@@ -1205,7 +1205,7 @@
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40" refid="structtree__node__base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtree__node__base" kindref="compound">tree_node_base</ref><sp/>{</highlight></codeline>
 <codeline lineno="41" refid="structtree__node__base_1a56b62b74c25973b49f06895dfd600c94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1a8bf6d3b26e824be81b856b68ff0ceed1" kindref="member">TREE_NODE_FIELDS</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structtree__node__base" kindref="compound">tree_node_base</ref>);</highlight></codeline>
-<codeline lineno="42" refid="tree__common_8h_1a9069a8899a6e1ad0d0facc4644961b6e" refkind="member"><highlight class="normal">}<sp/><ref refid="structtree__node__base" kindref="compound">tree_node_base</ref>;</highlight></codeline>
+<codeline lineno="42" refid="tree__common_8h_1a9069a8899a6e1ad0d0facc4644961b6e" refkind="member"><highlight class="normal">}<sp/><ref refid="tree__common_8h_1a9069a8899a6e1ad0d0facc4644961b6e" kindref="member">tree_node_base</ref>;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44" refid="tree__common_8h_1ab336de7dac2bbab532f41737fa8f103d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TREE_FIELDS(node_type)<sp/>\</highlight></codeline>
 <codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>node_type*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>root;<sp/>\</highlight></codeline>
@@ -1215,7 +1215,7 @@
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50" refid="structtree__base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtree__base" kindref="compound">tree_base</ref><sp/>{</highlight></codeline>
 <codeline lineno="51" refid="structtree__base_1a3e0944ca8a425fcd254ca5057e885e45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="tree__common_8h_1ab336de7dac2bbab532f41737fa8f103d" kindref="member">TREE_FIELDS</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structtree__node__base" kindref="compound">tree_node_base</ref>);</highlight></codeline>
-<codeline lineno="52" refid="tree__common_8h_1acc8b5e2dfeccc10ebe77ddffb5d84708" refkind="member"><highlight class="normal">}<sp/><ref refid="structtree__base" kindref="compound">tree_base</ref>;</highlight></codeline>
+<codeline lineno="52" refid="tree__common_8h_1acc8b5e2dfeccc10ebe77ddffb5d84708" refkind="member"><highlight class="normal">}<sp/><ref refid="tree__common_8h_1acc8b5e2dfeccc10ebe77ddffb5d84708" kindref="member">tree_base</ref>;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54" refid="tree__common_8h_1aaa3336561dab3f71e234b679290eb7d6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TREE_ITERATOR_FIELDS(tree_type,<sp/>node_type)<sp/>\</highlight></codeline>
 <codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>tree_type*<sp/><sp/>tree;<sp/>\</highlight></codeline>

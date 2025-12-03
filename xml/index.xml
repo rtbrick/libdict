@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.12.0" xml:lang="en-US">
   <compound refid="structdict" kind="struct"><name>dict</name>
     <member refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" kind="variable"><name>_object</name></member>
     <member refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" kind="variable"><name>_vtable</name></member>
@@ -748,7 +748,6 @@
   <compound refid="hashtable2_8c" kind="file"><name>hashtable2.c</name>
     <member refid="hashtable2_8c_1a24e21f497bc214e2c211c4bed541bdf8" kind="define"><name>LOADFACTOR_NUMERATOR</name></member>
     <member refid="hashtable2_8c_1a58651144f26400509df7a63f76c972c9" kind="define"><name>LOADFACTOR_DENOMINATOR</name></member>
-    <member refid="hashtable2_8c_1a4a37dff778daa13ddb34cd8e4ef1a129" kind="typedef"><name>hash_node</name></member>
     <member refid="hashtable2_8c_1a1c33bed2d1996ebfbb81a841f3439393" kind="variable"><name>hashtable2_vtable</name></member>
     <member refid="hashtable2_8c_1aeb6d49a24931b3fc47e240e4dd0e5a6b" kind="variable"><name>hashtable2_itor_vtable</name></member>
     <member refid="hashtable2_8c_1a840e984b3c37be780f2cd0e054513e62" kind="function"><name>hashtable2_new</name></member>

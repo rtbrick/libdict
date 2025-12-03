@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="skiplist_8h" kind="file" language="C++">
     <compoundname>skiplist.h</compoundname>
     <includes refid="dict_8h" local="yes">dict.h</includes>
@@ -288,7 +288,7 @@
     </invincdepgraph>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="skiplist_8h_1ad54b05301a5276404d53e2bce969c45f" prot="public" static="no">
-        <type>struct <ref refid="structskiplist" kindref="compound">skiplist</ref></type>
+        <type>struct skiplist</type>
         <definition>typedef struct skiplist skiplist</definition>
         <argsstring></argsstring>
         <name>skiplist</name>
@@ -301,7 +301,7 @@
         <location file="include/skiplist.h" line="35" column="23" bodyfile="include/skiplist.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="skiplist_8h_1a516029f32fd57f616f44e5b9650c5847" prot="public" static="no">
-        <type>struct <ref refid="structskiplist__itor" kindref="compound">skiplist_itor</ref></type>
+        <type>struct skiplist_itor</type>
         <definition>typedef struct skiplist_itor skiplist_itor</definition>
         <argsstring></argsstring>
         <name>skiplist_itor</name>

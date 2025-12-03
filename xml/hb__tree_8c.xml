@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
   <compounddef id="hb__tree_8c" kind="file" language="C++">
     <compoundname>hb_tree.c</compoundname>
     <includes refid="hb__tree_8h" local="yes">hb_tree.h</includes>
@@ -184,7 +184,7 @@
     </sectiondef>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="hb__tree_8c_1a2b28587da28d5a69716732a2a3ad3f16" prot="public" static="no">
-        <type>struct <ref refid="structhb__node" kindref="compound">hb_node</ref></type>
+        <type>struct hb_node</type>
         <definition>typedef struct hb_node hb_node</definition>
         <argsstring></argsstring>
         <name>hb_node</name>
