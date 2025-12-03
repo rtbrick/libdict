@@ -21,7 +21,7 @@ jobs:
           echo "SOURCE_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
           echo "SOURCE_TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
 
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: ncipollo/release-action@v1
       with:
         tag: ${{ steps.ref_name.outputs.SOURCE_TAG }}
@@ -33,11 +33,11 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ubuntu-20.04, ubuntu-22.04, ubuntu-24.04]
+        os: [ubuntu-22.04, ubuntu-24.04]
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         shell: bash
