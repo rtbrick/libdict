@@ -27,10 +27,11 @@ jobs:
         tag: ${{ steps.ref_name.outputs.SOURCE_TAG }}
         body: "libdict ${{ steps.ref_name.outputs.SOURCE_TAG }}"
 
-  build:
-    name: Build Release ${{matrix.os}}
+  ubuntu:
+    name: Release ${{matrix.os}}
     needs: [release]
     runs-on: ${{matrix.os}}
+
     strategy:
       matrix:
         os: [ubuntu-22.04, ubuntu-24.04]
@@ -42,6 +43,71 @@ jobs:
       - name: Install dependencies
         shell: bash
         run: sudo apt install libcunit1-dev
+
+      - name: Get Ref Names
+        id: ref_name
+        run: |
+            echo "SOURCE_NAME=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
+            echo "SOURCE_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+            echo "SOURCE_TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Set export SOURCE_DATE_EPOCH to git commit time
+        run: |
+            echo "SOURCE_DATE_EPOCH=$(git log -1 --format=%ct)" >> $GITHUB_ENV
+
+      - name: Create Build Environment
+        run: cmake -E make_directory ${{github.workspace}}/build 
+
+      - name: Configure CMake
+        shell: bash
+        working-directory: ${{github.workspace}}/build
+        run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DLIBDICT_VERSION=${{ steps.ref_name.outputs.SOURCE_TAG }}
+
+      - name: Build
+        working-directory: ${{github.workspace}}/build
+        shell: bash
+        run: cmake --build . --config $BUILD_TYPE
+
+      - name: Test
+        working-directory: ${{github.workspace}}/build
+        shell: bash
+        run: ctest -C $BUILD_TYPE
+
+      - name: Package
+        working-directory: ${{github.workspace}}/build
+        shell: bash
+        run: |
+            cpack -G DEB
+            zip libdict-${{ matrix.os }}.zip *.deb
+
+      - name: Upload Release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: build/libdict-${{ matrix.os }}.zip
+          asset_name: libdict-${{ matrix.os }}.zip
+          tag: ${{ steps.ref_name.outputs.SOURCE_TAG }}
+
+  debian:
+    name: Release debian ${{matrix.os}}
+    needs: [release]
+    runs-on: ubuntu-latest
+    container: 
+      image: debian:${{matrix.os}}
+      volumes:
+        - ${{github.workspace}}:${{github.workspace}}
+
+    strategy:
+      matrix:
+        os: [bookworm, trixie]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        shell: bash
+        run: apt update && apt install build-essential cmake zip libcunit1-dev --yes
 
       - name: Get Ref Names
         id: ref_name
