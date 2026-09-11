@@ -2,22 +2,27 @@
 #define UTIL_H__
 
 #include <assert.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdlib.h>
 
-void shuffle(char **p, size_t size);
-bool is_prime(unsigned n);
-bool next_permutation(unsigned a[], unsigned n);
+static inline void shuffle(char **p, size_t size);
+static inline bool is_prime(unsigned n);
+static inline bool next_permutation(unsigned a[], unsigned n);
 
-void shuffle(char **p, size_t size)
+static inline void shuffle(char **p, size_t size)
 {
+    if (size < 2)
+        return;
     for (size_t i = 0; i < size - 1; i++) {
         size_t n = (size_t) rand() % (size - i);
         char *t = p[i+n]; p[i+n] = p[i]; p[i] = t;
     }
 }
 
-bool is_prime(unsigned n)
+static inline bool is_prime(unsigned n)
 {
-    if (n <= 0)
+    if (n < 2)
         return false;
     if (n <= 3)
         return true;
@@ -39,7 +44,7 @@ bool is_prime(unsigned n)
 }
 
 
-bool next_permutation(unsigned a[], unsigned n)
+static inline bool next_permutation(unsigned a[], unsigned n)
 {
     if (n <= 1)
         return false;

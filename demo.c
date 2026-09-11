@@ -24,7 +24,6 @@ char *xstrdup(const char *str);
 #endif
 void quit(const char *, ...) NORETURN;
 void *xmalloc(size_t size);
-void *xrealloc(void *ptr, size_t size);
 void *xdup(const void *ptr, size_t size);
 
 static void
@@ -96,10 +95,10 @@ main(int argc, char **argv)
         char *p, *ptr, *ptr2;
         if ((p = strchr(buf, '\n')) != NULL)
             *p = 0;
-        for (p = buf; *p && isspace(*p); p++)
+        for (p = buf; *p && isspace((unsigned char) *p); p++)
             /* void */;
         if (buf != p) {
-            strcpy(buf, p);
+            memmove(buf, p, strlen(p) + 1);
         }
         ptr2 = (ptr = strtok(buf, " ") ? strtok(NULL, " ") : NULL) ?
             strtok(NULL, " ") : NULL;
@@ -110,17 +109,19 @@ main(int argc, char **argv)
                 printf("usage: insert <key> <data>\n");
                 continue;
             }
-            dict_insert_result result = dict_insert(dct, xstrdup(ptr));
+            char *key = xstrdup(ptr);
+            dict_insert_result result = dict_insert(dct, key);
             if (result.inserted) {
                 *result.datum_ptr = xstrdup(ptr2);
                 printf("inserted '%s': '%s'\n",
                        ptr, (char *)*result.datum_ptr);
             } else {
+                free(key); /* The dict kept the pre-existing key. */
                 printf("'%s' already in dict: '%s'\n",
                        ptr, (char *)*result.datum_ptr);
             }
         } else if (strcmp(buf, "search") == 0) {
-            if (ptr2) {
+            if (!ptr || ptr2) {
                 printf("usage: search <key>\n");
                 continue;
             }
@@ -130,12 +131,12 @@ main(int argc, char **argv)
             else
                 printf("'%s' not found!\n", ptr);
         } else if (strcmp(buf, "searchle") == 0) {
-            if (ptr2) {
+            if (!ptr || ptr2) {
                 printf("usage: searchle <key>\n");
                 continue;
             }
             if (!dict_is_sorted(dct)) {
-                printf("dict does not support that operation!");
+                printf("dict does not support that operation!\n");
                 continue;
             }
             void** search = dict_search_le(dct, ptr);
@@ -144,12 +145,12 @@ main(int argc, char **argv)
             else
                 printf("le '%s': no result.\n", ptr);
         } else if (strcmp(buf, "searchlt") == 0) {
-            if (ptr2) {
+            if (!ptr || ptr2) {
                 printf("usage: searchlt <key>\n");
                 continue;
             }
             if (!dict_is_sorted(dct)) {
-                printf("dict does not support that operation!");
+                printf("dict does not support that operation!\n");
                 continue;
             }
             void** search = dict_search_lt(dct, ptr);
@@ -158,12 +159,12 @@ main(int argc, char **argv)
             else
                 printf("lt '%s': no result.\n", ptr);
         } else if (strcmp(buf, "searchge") == 0) {
-            if (ptr2) {
+            if (!ptr || ptr2) {
                 printf("usage: searchge <key>\n");
                 continue;
             }
             if (!dict_is_sorted(dct)) {
-                printf("dict does not support that operation!");
+                printf("dict does not support that operation!\n");
                 continue;
             }
             void** search = dict_search_ge(dct, ptr);
@@ -172,12 +173,12 @@ main(int argc, char **argv)
             else
                 printf("ge '%s': no result.\n", ptr);
         } else if (strcmp(buf, "searchgt") == 0) {
-            if (ptr2) {
+            if (!ptr || ptr2) {
                 printf("usage: searchgt <key>\n");
                 continue;
             }
             if (!dict_is_sorted(dct)) {
-                printf("dict does not support that operation!");
+                printf("dict does not support that operation!\n");
                 continue;
             }
             void** search = dict_search_gt(dct, ptr);
@@ -206,7 +207,7 @@ main(int argc, char **argv)
             dict_itor_first(itor);
             for (; dict_itor_valid(itor); dict_itor_next(itor))
                 printf("'%s': '%s'\n",
-                    (char *)dict_itor_key(itor),
+                    (const char *)dict_itor_key(itor),
                     (char *)*dict_itor_datum(itor));
             dict_itor_free(itor);
         } else if (strcmp(buf, "reverse") == 0) {
@@ -218,7 +219,7 @@ main(int argc, char **argv)
             dict_itor_last(itor);
             for (; dict_itor_valid(itor); dict_itor_prev(itor))
                 printf("'%s': '%s'\n",
-                    (char *)dict_itor_key(itor),
+                    (const char *)dict_itor_key(itor),
                     (char *)*dict_itor_datum(itor));
             dict_itor_free(itor);
         } else if (strcmp(buf, "clear") == 0) {

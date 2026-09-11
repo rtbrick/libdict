@@ -50,43 +50,55 @@ struct pr_itor {
     TREE_ITERATOR_FIELDS(pr_tree, pr_node);
 };
 
+/* Vtable thunks. The vtable slot types take void*, and calling a function
+ * through a function-pointer type that is not compatible with the function's
+ * own type is undefined behaviour (C11 6.5.2.2p9), so each slot below gets a
+ * thunk with the exact slot signature instead of a cast. A cast would also
+ * hide a genuine signature mismatch. */
+static dict_itor*         vt_pr_dict_itor_new(void* obj)                                         { return pr_dict_itor_new(obj); }
+static dict_insert_result vt_pr_tree_insert(void* obj, void* key)                                { return pr_tree_insert(obj, key); }
+static dict_remove_result vt_pr_tree_remove(void* obj, const void* key)                          { return pr_tree_remove(obj, key); }
+static bool               vt_pr_tree_select(void* obj, size_t n, const void** key, void** datum) { return pr_tree_select(obj, n, key, datum); }
+static bool               vt_pr_tree_verify(const void* obj)                                     { return pr_tree_verify(obj); }
+static bool               vt_pr_itor_remove(void* itor)                                          { return pr_itor_remove(itor); }
+
 static const dict_vtable pr_tree_vtable = {
     true,
-    (dict_inew_func)        pr_dict_itor_new,
-    (dict_dfree_func)       tree_free,
-    (dict_insert_func)      pr_tree_insert,
-    (dict_search_func)      tree_search,
-    (dict_search_func)      tree_search_le,
-    (dict_search_func)      tree_search_lt,
-    (dict_search_func)      tree_search_ge,
-    (dict_search_func)      tree_search_gt,
-    (dict_remove_func)      pr_tree_remove,
-    (dict_clear_func)       tree_clear,
-    (dict_traverse_func)    tree_traverse,
-    (dict_select_func)      pr_tree_select,
-    (dict_count_func)       tree_count,
-    (dict_verify_func)      pr_tree_verify,
+    vt_pr_dict_itor_new,
+    tree_free,
+    vt_pr_tree_insert,
+    tree_search,
+    tree_search_le,
+    tree_search_lt,
+    tree_search_ge,
+    tree_search_gt,
+    vt_pr_tree_remove,
+    tree_clear,
+    tree_traverse,
+    vt_pr_tree_select,
+    tree_count,
+    vt_pr_tree_verify,
 };
 
 static const itor_vtable pr_tree_itor_vtable = {
-    (dict_ifree_func)       tree_iterator_free,
-    (dict_valid_func)       tree_iterator_valid,
-    (dict_invalidate_func)  tree_iterator_invalidate,
-    (dict_next_func)        tree_iterator_next,
-    (dict_prev_func)        tree_iterator_prev,
-    (dict_nextn_func)       tree_iterator_nextn,
-    (dict_prevn_func)       tree_iterator_prevn,
-    (dict_first_func)       tree_iterator_first,
-    (dict_last_func)        tree_iterator_last,
-    (dict_key_func)         tree_iterator_key,
-    (dict_datum_func)       tree_iterator_datum,
-    (dict_isearch_func)     tree_iterator_search,
-    (dict_isearch_func)     tree_iterator_search_le,
-    (dict_isearch_func)     tree_iterator_search_lt,
-    (dict_isearch_func)     tree_iterator_search_ge,
-    (dict_isearch_func)     tree_iterator_search_gt,
-    (dict_iremove_func)     pr_itor_remove,
-    (dict_icompare_func)    tree_iterator_compare,
+    tree_iterator_free,
+    tree_iterator_valid,
+    tree_iterator_invalidate,
+    tree_iterator_next,
+    tree_iterator_prev,
+    tree_iterator_nextn,
+    tree_iterator_prevn,
+    tree_iterator_first,
+    tree_iterator_last,
+    tree_iterator_key,
+    tree_iterator_datum,
+    tree_iterator_search,
+    tree_iterator_search_le,
+    tree_iterator_search_lt,
+    tree_iterator_search_ge,
+    tree_iterator_search_gt,
+    vt_pr_itor_remove,
+    tree_iterator_compare,
 };
 
 static unsigned fixup(pr_tree* tree, pr_node* node);
@@ -143,23 +155,22 @@ fixup(pr_tree* tree, pr_node* node)
      *
      * Consider a node N.
      * A single left rotation is performed when
-     * WEIGHT(n->llink) < WEIGHT(n->rlink->rlink)
+     * WEIGHT(n->rlink->rlink) > WEIGHT(n->llink)
      * A right-left rotation is performed when
-     * WEIGHT(n->llink) < WEIGHT(n->rlink->llink)
+     * WEIGHT(n->rlink->llink) > WEIGHT(n->llink)
      *
      * A single right rotation is performed when
-     * WEIGHT(n->rlink) > WEIGHT(n->llink->llink)
+     * WEIGHT(n->llink->llink) > WEIGHT(n->rlink)
      * A left-right rotation is performed when
-     * WEIGHT(n->rlink) > WEIGHT(n->llink->rlink)
+     * WEIGHT(n->llink->rlink) > WEIGHT(n->rlink)
      *
      * Although the worst case number of rotations for a single insertion or
      * deletion is O(n), the amortized worst-case number of rotations is
      * .44042lg(n) + O(1) for insertion, and .42062lg(n) + O(1) for deletion.
      *
-     * We use tail recursion to minimize the number of recursive calls. For
-     * single rotations, no recursive call is made, and we tail recurse to
-     * continue checking for out-of-balance conditions. For double, we make one
-     * recursive call and then tail recurse.
+     * Every rotating branch below recurses twice, once into each node whose
+     * subtree changed shape, so the recursion depth is bounded by the height
+     * of the tree.
      */
     unsigned rotations = 0;
     const unsigned lweight = WEIGHT(node->llink);
@@ -167,7 +178,7 @@ fixup(pr_tree* tree, pr_node* node)
     if (lweight < rweight) {
         pr_node* r = node->rlink;
         ASSERT(r != NULL);
-        if (WEIGHT(r->rlink) > lweight) {        /* LL */
+        if (WEIGHT(r->rlink) > lweight) {        /* RR */
             rot_left(tree, node);
             rotations += 1;
             rotations += fixup(tree, node);
@@ -200,18 +211,20 @@ fixup(pr_tree* tree, pr_node* node)
             r->weight += WEIGHT(b) - rl->weight;
             rl->weight = node->weight + r->weight;
 
-            rotations += 1;
+            /* A double rotation counts as two, matching the mirrored LR case
+             * below. */
+            rotations += 2;
             rotations += fixup(tree, r);
             rotations += fixup(tree, node);
         }
     } else if (lweight > rweight) {
         pr_node* l = node->llink;
         ASSERT(l != NULL);
-        if (WEIGHT(l->llink) > rweight) { /* RR */
+        if (WEIGHT(l->llink) > rweight) { /* LL */
             rot_right(tree, node);
             rotations += 1;
             rotations += fixup(tree, node);
-            /* Commenting the next line means we must turn the weight
+            /* Commenting the next line means we must make the weight
              * verification condition in node_verify() less stringent. */
             rotations += fixup(tree, l);
         } else if (WEIGHT(l->rlink) > rweight) { /* LR */
@@ -305,7 +318,7 @@ remove_node(pr_tree* tree, pr_node* node)
         node = out;
     }
     ASSERT(!node->llink || !node->rlink);
-    /* Splice in the successor, if any. */
+    /* Splice in the node's only child, if any. */
     pr_node* child = node->llink ? node->llink : node->rlink;
     pr_node* parent = node->parent;
     if (child)
@@ -395,14 +408,14 @@ node_new(void* key)
 /*
  * rot_left(T, B):
  *
- *     /         /
- *    B         D
- *   / \       / \
- *  A   D   ==>   B   E
- *     / \       / \
- *    C   E     A   C
+ *       /                     /
+ *       B                     D
+ *      / \                   / \
+ *     A   D      ==>        B   E
+ *        / \               / \
+ *       C   E             A   C
  *
- * Only the weights of B and B's right child to be readjusted.
+ * Only the weights of B and B's new parent D need to be readjusted.
  */
 static void
 rot_left(pr_tree* tree, pr_node *node)
@@ -419,14 +432,14 @@ rot_left(pr_tree* tree, pr_node *node)
 /*
  * rot_right(T, D):
  *
- *       /       /
- *      D       B
- *     / \     / \
- *    B   E  ==>  A   D
- *   / \         / \
- *  A   C       C   E
+ *       /                     /
+ *       D                     B
+ *      / \                   / \
+ *     B   E      ==>        A   D
+ *    / \                       / \
+ *   A   C                     C   E
  *
- * Only the weights of D and D's left child need to be readjusted.
+ * Only the weights of D and D's new parent B need to be readjusted.
  */
 static void
 rot_right(pr_tree* tree, pr_node* node)
@@ -441,7 +454,8 @@ rot_right(pr_tree* tree, pr_node* node)
 }
 
 static bool
-node_verify(const pr_tree* tree, const pr_node* parent, const pr_node* node)
+node_verify(const pr_tree* tree, const pr_node* parent, const pr_node* node,
+        const void* lower, const void* upper, size_t* count)
 {
     if (!parent) {
         VERIFY(tree->root == node);
@@ -450,18 +464,19 @@ node_verify(const pr_tree* tree, const pr_node* parent, const pr_node* node)
     }
     if (node) {
         VERIFY(node->parent == parent);
-        if (parent) {
-            if (parent->llink == node) {
-                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-            } else {
-                ASSERT(parent->rlink == node);
-                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-            }
-        }
+        /* Global BST ordering. Comparing a node only against its immediate
+         * parent would accept an entire subtree placed on the wrong side:
+         * root 5, 5->llink 3, 3->rlink 7 passes every parent-local check yet
+         * makes key 7 unreachable from the root. */
+        if (lower)
+            VERIFY(tree->cmp_func(lower, node->key) < 0);
+        if (upper)
+            VERIFY(tree->cmp_func(upper, node->key) > 0);
         pr_node* l = node->llink;
         pr_node* r = node->rlink;
-        if (!node_verify(tree, node, l) ||
-            !node_verify(tree, node, r))
+        *count += 1;
+        if (!node_verify(tree, node, l, lower, node->key, count) ||
+            !node_verify(tree, node, r, node->key, upper, count))
             return false;
         unsigned lweight = WEIGHT(l);
         unsigned rweight = WEIGHT(r);
@@ -485,7 +500,11 @@ pr_tree_verify(const pr_tree* tree)
     } else {
         VERIFY(tree->count == 0);
     }
-    return node_verify(tree, NULL, tree->root);
+    size_t count = 0;
+    if (!node_verify(tree, NULL, tree->root, NULL, NULL, &count))
+        return false;
+    VERIFY(tree->count == count);
+    return true;
 }
 
 pr_itor*

@@ -31,7 +31,7 @@
  * A single operation on a splay tree has a worst-case time complexity of O(N),
  * but a series of M operations have a time complexity of O(M lg N), and thus
  * the amortized time complexity of an operation is O(lg N). More specifically,
- * a series of M operations on a tree with N nodes will runs in O((N+M)lg(N+M))
+ * a series of M operations on a tree with N nodes will run in O((N+M)lg(N+M))
  * time. Splay trees work by "splaying" a node up the tree using a series of
  * rotations until it is the root each time it is accessed. They are much
  * simpler to code than most balanced trees, because there is no strict
@@ -63,43 +63,60 @@ struct sp_itor {
     TREE_ITERATOR_FIELDS(sp_tree, sp_node);
 };
 
+/* Vtable thunks. The vtable slot types take void*, and calling a function
+ * through a function-pointer type that is not compatible with the function's
+ * own type is undefined behaviour (C11 6.5.2.2p9), so each slot below gets a
+ * thunk with the exact slot signature instead of a cast. A cast would also
+ * hide a genuine signature mismatch. */
+static dict_itor*         vt_sp_dict_itor_new(void* obj)                   { return sp_dict_itor_new(obj); }
+static dict_insert_result vt_sp_tree_insert(void* obj, void* key)          { return sp_tree_insert(obj, key); }
+static void**             vt_sp_tree_search(void* obj, const void* key)    { return sp_tree_search(obj, key); }
+static void**             vt_sp_tree_search_le(void* obj, const void* key) { return sp_tree_search_le(obj, key); }
+static void**             vt_sp_tree_search_lt(void* obj, const void* key) { return sp_tree_search_lt(obj, key); }
+static void**             vt_sp_tree_search_ge(void* obj, const void* key) { return sp_tree_search_ge(obj, key); }
+static void**             vt_sp_tree_search_gt(void* obj, const void* key) { return sp_tree_search_gt(obj, key); }
+static dict_remove_result vt_sp_tree_remove(void* obj, const void* key)    { return sp_tree_remove(obj, key); }
+static bool               vt_sp_tree_verify(const void* obj)               { return sp_tree_verify(obj); }
+static bool               vt_sp_itor_search(void* itor, const void* key)   { return sp_itor_search(itor, key); }
+static bool               vt_sp_itor_remove(void* itor)                    { return sp_itor_remove(itor); }
+
 static const dict_vtable sp_tree_vtable = {
     true,
-    (dict_inew_func)        sp_dict_itor_new,
-    (dict_dfree_func)       tree_free,
-    (dict_insert_func)      sp_tree_insert,
-    (dict_search_func)      sp_tree_search,
-    (dict_search_func)      sp_tree_search_le,
-    (dict_search_func)      sp_tree_search_lt,
-    (dict_search_func)      sp_tree_search_ge,
-    (dict_search_func)      sp_tree_search_gt,
-    (dict_remove_func)      sp_tree_remove,
-    (dict_clear_func)       tree_clear,
-    (dict_traverse_func)    tree_traverse,
-    (dict_select_func)      tree_select,
-    (dict_count_func)       tree_count,
-    (dict_verify_func)      sp_tree_verify,
+    vt_sp_dict_itor_new,
+    tree_free,
+    vt_sp_tree_insert,
+    vt_sp_tree_search,
+    vt_sp_tree_search_le,
+    vt_sp_tree_search_lt,
+    vt_sp_tree_search_ge,
+    vt_sp_tree_search_gt,
+    vt_sp_tree_remove,
+    tree_clear,
+    tree_traverse,
+    tree_select,
+    tree_count,
+    vt_sp_tree_verify,
 };
 
 static const itor_vtable sp_tree_itor_vtable = {
-    (dict_ifree_func)       tree_iterator_free,
-    (dict_valid_func)       tree_iterator_valid,
-    (dict_invalidate_func)  tree_iterator_invalidate,
-    (dict_next_func)        tree_iterator_next,
-    (dict_prev_func)        tree_iterator_prev,
-    (dict_nextn_func)       tree_iterator_nextn,
-    (dict_prevn_func)       tree_iterator_prevn,
-    (dict_first_func)       tree_iterator_first,
-    (dict_last_func)        tree_iterator_last,
-    (dict_key_func)         tree_iterator_key,
-    (dict_datum_func)       tree_iterator_datum,
-    (dict_isearch_func)     sp_itor_search,
-    (dict_isearch_func)     tree_iterator_search_le,
-    (dict_isearch_func)     tree_iterator_search_lt,
-    (dict_isearch_func)     tree_iterator_search_ge,
-    (dict_isearch_func)     tree_iterator_search_gt,
-    (dict_iremove_func)     sp_itor_remove,
-    (dict_icompare_func)    tree_iterator_compare
+    tree_iterator_free,
+    tree_iterator_valid,
+    tree_iterator_invalidate,
+    tree_iterator_next,
+    tree_iterator_prev,
+    tree_iterator_nextn,
+    tree_iterator_prevn,
+    tree_iterator_first,
+    tree_iterator_last,
+    tree_iterator_key,
+    tree_iterator_datum,
+    vt_sp_itor_search,
+    tree_iterator_search_le,
+    tree_iterator_search_lt,
+    tree_iterator_search_ge,
+    tree_iterator_search_gt,
+    vt_sp_itor_remove,
+    tree_iterator_compare
 };
 
 static sp_node* node_new(void* key);
@@ -154,7 +171,6 @@ splay(sp_tree* t, sp_node* n)
                 if ((p->llink = n->rlink) != NULL)
                     p->llink->parent = p;
                 n->rlink = p;
-                ++rotations;
             } else {
                 if ((p->rlink = n->llink) != NULL)
                     p->rlink->parent = p;
@@ -252,8 +268,13 @@ sp_tree_insert(sp_tree* tree, void* key)
             parent = node; node = node->llink;
         } else if (cmp > 0) {
             parent = node; node = node->rlink;
-        } else
+        } else {
+            /* Splay on a duplicate too: every other accessor restructures, and
+             * skipping it here breaks the amortized O(lg n) bound for repeated
+             * inserts of an existing key. */
+            splay(tree, node);
             return (dict_insert_result) { &node->datum, false };
+        }
     }
 
     if (!(node = node_new(key)))
@@ -263,7 +284,7 @@ sp_tree_insert(sp_tree* tree, void* key)
         ASSERT(tree->count == 0);
         ASSERT(tree->root == NULL);
         tree->root = node;
-        tree->count = 1;
+        tree->count++;
     } else {
         if (cmp < 0)
             parent->llink = node;
@@ -361,11 +382,12 @@ remove_node(sp_tree* tree, sp_node* node)
 
     sp_node* const temp = out->llink ? out->llink : out->rlink;
     sp_node* const parent = out->parent;
+    /* Splice before freeing: comparing a pointer to a freed object is UB. */
+    *(parent ? (parent->llink == out ? &parent->llink : &parent->rlink) : &tree->root) = temp;
     FREE(out);
     if (temp)
         temp->parent = parent;
 
-    *(parent ? (parent->llink == out ? &parent->llink : &parent->rlink) : &tree->root) = temp;
     if (parent)
         splay(tree, parent);
     tree->count--;
@@ -403,40 +425,14 @@ node_new(void* key)
     return node;
 }
 
-static bool
-node_verify(const sp_tree* tree, const sp_node* parent, const sp_node* node)
-{
-    if (!parent) {
-        VERIFY(tree->root == node);
-    } else {
-        VERIFY(parent->llink == node || parent->rlink == node);
-    }
-    if (node) {
-        VERIFY(node->parent == parent);
-        if (parent) {
-            if (parent->llink == node) {
-                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-            } else {
-                ASSERT(parent->rlink == node);
-                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-            }
-        }
-        if (!node_verify(tree, node, node->llink) ||
-            !node_verify(tree, node, node->rlink))
-            return false;
-    }
-    return true;
-}
-
 bool
 sp_tree_verify(const sp_tree* tree)
 {
-    if (tree->root) {
-        VERIFY(tree->count > 0);
-    } else {
-        VERIFY(tree->count == 0);
-    }
-    return node_verify(tree, NULL, tree->root);
+    /* A splay tree has no shape invariant of its own beyond being a valid
+     * search tree, so the shared iterative check is the whole job. It must be
+     * iterative: ascending inserts make a chain as deep as the tree is large,
+     * and recursion would overflow the stack on exactly that case. */
+    return tree_verify_common(tree);
 }
 
 sp_itor*

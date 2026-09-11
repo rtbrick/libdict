@@ -60,7 +60,7 @@ typedef struct rb_itor rb_itor;
 
 rb_itor*        rb_itor_new(rb_tree* tree);
 dict_itor*      rb_dict_itor_new(rb_tree* tree);
-void            rb_itor_free(rb_itor* tree);
+void            rb_itor_free(rb_itor* itor);
 
 bool            rb_itor_valid(const rb_itor* itor);
 void            rb_itor_invalidate(rb_itor* itor);

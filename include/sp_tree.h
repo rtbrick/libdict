@@ -60,7 +60,7 @@ typedef struct sp_itor sp_itor;
 
 sp_itor*        sp_itor_new(sp_tree* tree);
 dict_itor*      sp_dict_itor_new(sp_tree* tree);
-void            sp_itor_free(sp_itor* tree);
+void            sp_itor_free(sp_itor* itor);
 
 bool            sp_itor_valid(const sp_itor* itor);
 void            sp_itor_invalidate(sp_itor* itor);

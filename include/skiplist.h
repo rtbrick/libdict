@@ -35,6 +35,9 @@ BEGIN_DECL
 typedef struct skiplist skiplist;
 
 skiplist*       skiplist_new(dict_compare_func cmp_func, unsigned max_link);
+/* |max_link| is the number of levels in the list. It is clamped into the
+ * usable range [2, 32]: a node receives at most max_link - 1 links, so fewer
+ * than 2 levels could not link anything. */
 dict*           skiplist_dict_new(dict_compare_func cmp_func, unsigned max_link);
 size_t          skiplist_free(skiplist* list, dict_delete_func delete_func);
 
@@ -51,10 +54,15 @@ dict_remove_result
 size_t          skiplist_clear(skiplist* list, dict_delete_func delete_func);
 size_t          skiplist_traverse(skiplist* list, dict_visit_func visit, void* user_data);
 size_t          skiplist_count(const skiplist* list);
+/* Store the key and datum of the |n|th element in key order (0-based) and
+ * return true, or store NULL through each non-NULL out-parameter and return
+ * false if |n| is out of range. Either out-parameter may be NULL. Runs in
+ * O(n), as no span counts are maintained. */
+bool            skiplist_select(skiplist* list, size_t n, const void** key, void** datum);
 bool            skiplist_verify(const skiplist* list);
 
 /* Compute the histogram of link counts of the skiplist.
- * For 0 < x < |ncounts|, |counts|[x] will be set to the number of nodes with x
+ * For 0 <= x < |ncounts|, |counts|[x] will be set to the number of nodes with x
  * links, and the maximal link count will be returned. If the return value is
  * greater than or equal to |ncounts|, not all link counts could be stored in
  * |counts| (i.e. the array was not large enough). */
@@ -65,7 +73,7 @@ typedef struct skiplist_itor skiplist_itor;
 
 skiplist_itor*  skiplist_itor_new(skiplist* list);
 dict_itor*      skiplist_dict_itor_new(skiplist* list);
-void            skiplist_itor_free(skiplist_itor* );
+void            skiplist_itor_free(skiplist_itor* itor);
 
 bool            skiplist_itor_valid(const skiplist_itor* itor);
 void            skiplist_itor_invalidate(skiplist_itor* itor);

@@ -28,13 +28,15 @@
 /*
  * cf. [Aragon and Seidel, 1996], [Knuth 1998]
  *
- * A treap is a randomized data structure in which each node of tree has an
+ * A treap is a randomized data structure in which each node of the tree has an
  * associated key and priority. The priority is chosen at random when the node
  * is inserted into the tree. Each node is inserted so that the lexicographic
- * order of the keys is preserved, and the priority of any node is less than
- * the priority of either of its child nodes; in this way the treap is a
- * combination of a tree and a min-heap. In this implementation, this is
- * accomplished by first inserting the node according to lexigraphical order of
+ * order of the keys is preserved, and the priority of any node is greater
+ * than or equal to the priority of either of its child nodes; in this way the
+ * treap is a combination of a tree and a max-heap. Note the direction: a
+ * dict_prio_func should return a LARGER value for a key that ought to sit
+ * closer to the root. In this implementation, this is
+ * accomplished by first inserting the node according to lexicographical order of
  * keys as in a normal binary tree, and then, if needed, sifting the node
  * upwards using a series of rotations until the heap property of the tree is
  * restored.
@@ -42,7 +44,6 @@
 
 #include "tr_tree.h"
 
-#include <limits.h>
 #include "dict_private.h"
 #include "tree_common.h"
 
@@ -61,43 +62,54 @@ struct tr_itor {
     TREE_ITERATOR_FIELDS(tr_tree, tr_node);
 };
 
+/* Vtable thunks. The vtable slot types take void*, and calling a function
+ * through a function-pointer type that is not compatible with the function's
+ * own type is undefined behaviour (C11 6.5.2.2p9), so each slot below gets a
+ * thunk with the exact slot signature instead of a cast. A cast would also
+ * hide a genuine signature mismatch. */
+static dict_itor*         vt_tr_dict_itor_new(void* obj)                { return tr_dict_itor_new(obj); }
+static dict_insert_result vt_tr_tree_insert(void* obj, void* key)       { return tr_tree_insert(obj, key); }
+static dict_remove_result vt_tr_tree_remove(void* obj, const void* key) { return tr_tree_remove(obj, key); }
+static bool               vt_tr_tree_verify(const void* obj)            { return tr_tree_verify(obj); }
+static bool               vt_tr_itor_remove(void* itor)                 { return tr_itor_remove(itor); }
+
 static const dict_vtable tr_tree_vtable = {
     true,
-    (dict_inew_func)        tr_dict_itor_new,
-    (dict_dfree_func)       tree_free,
-    (dict_insert_func)      tr_tree_insert,
-    (dict_search_func)      tree_search,
-    (dict_search_func)      tree_search_le,
-    (dict_search_func)      tree_search_lt,
-    (dict_search_func)      tree_search_ge,
-    (dict_search_func)      tree_search_gt,
-    (dict_remove_func)      tr_tree_remove,
-    (dict_clear_func)       tree_clear,
-    (dict_traverse_func)    tree_traverse,
-    (dict_select_func)      tree_select,
-    (dict_count_func)       tree_count,
-    (dict_verify_func)      tr_tree_verify,
+    vt_tr_dict_itor_new,
+    tree_free,
+    vt_tr_tree_insert,
+    tree_search,
+    tree_search_le,
+    tree_search_lt,
+    tree_search_ge,
+    tree_search_gt,
+    vt_tr_tree_remove,
+    tree_clear,
+    tree_traverse,
+    tree_select,
+    tree_count,
+    vt_tr_tree_verify,
 };
 
 static const itor_vtable tr_tree_itor_vtable = {
-    (dict_ifree_func)       tree_iterator_free,
-    (dict_valid_func)       tree_iterator_valid,
-    (dict_invalidate_func)  tree_iterator_invalidate,
-    (dict_next_func)        tree_iterator_next,
-    (dict_prev_func)        tree_iterator_prev,
-    (dict_nextn_func)       tree_iterator_nextn,
-    (dict_prevn_func)       tree_iterator_prevn,
-    (dict_first_func)       tree_iterator_first,
-    (dict_last_func)        tree_iterator_last,
-    (dict_key_func)         tree_iterator_key,
-    (dict_datum_func)       tree_iterator_datum,
-    (dict_isearch_func)     tree_iterator_search,
-    (dict_isearch_func)     tree_iterator_search_le,
-    (dict_isearch_func)     tree_iterator_search_lt,
-    (dict_isearch_func)     tree_iterator_search_ge,
-    (dict_isearch_func)     tree_iterator_search_gt,
-    (dict_iremove_func)     tr_itor_remove,
-    (dict_icompare_func)    tree_iterator_compare,
+    tree_iterator_free,
+    tree_iterator_valid,
+    tree_iterator_invalidate,
+    tree_iterator_next,
+    tree_iterator_prev,
+    tree_iterator_nextn,
+    tree_iterator_prevn,
+    tree_iterator_first,
+    tree_iterator_last,
+    tree_iterator_key,
+    tree_iterator_datum,
+    tree_iterator_search,
+    tree_iterator_search_le,
+    tree_iterator_search_lt,
+    tree_iterator_search_ge,
+    tree_iterator_search_gt,
+    vt_tr_itor_remove,
+    tree_iterator_compare,
 };
 
 static tr_node* node_new(void* key);
@@ -237,45 +249,44 @@ node_new(void* key)
         node->parent = NULL;
         node->llink = NULL;
         node->rlink = NULL;
+        /* Overwritten by the caller, but leaving it uninitialized would make a
+         * future second caller inherit heap garbage as a priority. */
+        node->prio = 0;
     }
     return node;
-}
-
-static bool
-node_verify(const tr_tree* tree, const tr_node* parent, const tr_node* node)
-{
-    if (!parent) {
-        VERIFY(tree->root == node);
-    } else {
-        VERIFY(parent->llink == node || parent->rlink == node);
-    }
-    if (node) {
-        VERIFY(node->parent == parent);
-        if (parent) {
-            VERIFY(node->prio <= parent->prio);
-            if (parent->llink == node) {
-                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-            } else {
-                ASSERT(parent->rlink == node);
-                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-            }
-        }
-        if (!node_verify(tree, node, node->llink) ||
-            !node_verify(tree, node, node->rlink))
-            return false;
-    }
-    return true;
 }
 
 bool
 tr_tree_verify(const tr_tree* tree)
 {
-    if (tree->root) {
-        VERIFY(tree->count > 0);
-    } else {
-        VERIFY(tree->count == 0);
+    /* Search-tree, parent-link and count invariants. Iterative, because a
+     * treap given a poor priority function degenerates into a chain as deep
+     * as it has nodes. */
+    if (!tree_verify_common(tree))
+        return false;
+
+    /* Max-heap property on priorities. Now that the links have been verified
+     * an in-order walk is safe, and it needs no stack of its own. */
+    const tr_node* node = tree->root;
+    while (node && node->llink)
+        node = node->llink;
+    while (node) {
+        if (node->parent)
+            VERIFY(node->prio <= node->parent->prio);
+        if (node->rlink) {
+            node = node->rlink;
+            while (node->llink)
+                node = node->llink;
+        } else {
+            const tr_node* parent = node->parent;
+            while (parent && parent->rlink == node) {
+                node = parent;
+                parent = parent->parent;
+            }
+            node = parent;
+        }
     }
-    return node_verify(tree, NULL, tree->root);
+    return true;
 }
 
 tr_itor*

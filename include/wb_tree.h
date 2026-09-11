@@ -61,7 +61,7 @@ typedef struct wb_itor wb_itor;
 
 wb_itor*        wb_itor_new(wb_tree* tree);
 dict_itor*      wb_dict_itor_new(wb_tree* tree);
-void            wb_itor_free(wb_itor* tree);
+void            wb_itor_free(wb_itor* itor);
 
 bool            wb_itor_valid(const wb_itor* itor);
 void            wb_itor_invalidate(wb_itor* itor);

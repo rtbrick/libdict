@@ -31,7 +31,6 @@
 
 #include "rb_tree.h"
 
-#include <string.h>
 #include "dict_private.h"
 #include "tree_common.h"
 
@@ -54,6 +53,26 @@ struct rb_node {
 #define SET_BLACK(node) (node)->color |= ((intptr_t)RB_BLACK)
 #define SET_PARENT(node,p) (node)->color = COLOR(node) | (intptr_t)(p)
 
+/* rb_node is handed to the generic routines in tree_common.c as though it were
+ * a tree_node_base, so its first five members must sit at the same offsets.
+ * The third of those, the parent pointer, additionally carries the colour in
+ * its low bit, so ONLY this file's PARENT() macro may decode it: any
+ * tree_common routine that reads |parent| directly (tree_traverse,
+ * tree_select, tree_clear, tree_iterator_next/prev, tree_node_rot_*) would
+ * dereference a tagged pointer and must be reimplemented here. */
+_Static_assert(sizeof(intptr_t) == sizeof(rb_node*),
+               "rb_node tags a parent pointer stored in an intptr_t");
+_Static_assert(offsetof(rb_node, key)   == offsetof(tree_node_base, key),
+               "rb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(rb_node, datum) == offsetof(tree_node_base, datum),
+               "rb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(rb_node, color) == offsetof(tree_node_base, parent),
+               "rb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(rb_node, llink) == offsetof(tree_node_base, llink),
+               "rb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(rb_node, rlink) == offsetof(tree_node_base, rlink),
+               "rb_node must be layout-compatible with tree_node_base");
+
 struct rb_tree {
     TREE_FIELDS(rb_node);
 };
@@ -62,43 +81,74 @@ struct rb_itor {
     TREE_ITERATOR_FIELDS(rb_tree, rb_node);
 };
 
+/* Vtable thunks. The vtable slot types take void*, and calling a function
+ * through a function-pointer type that is not compatible with the function's
+ * own type is undefined behaviour (C11 6.5.2.2p9), so each slot below gets a
+ * thunk with the exact slot signature instead of a cast. A cast would also
+ * hide a genuine signature mismatch. */
+static dict_itor*         vt_rb_dict_itor_new(void* obj)                                         { return rb_dict_itor_new(obj); }
+static size_t             vt_rb_tree_free(void* obj, dict_delete_func delete_func)               { return rb_tree_free(obj, delete_func); }
+static dict_insert_result vt_rb_tree_insert(void* obj, void* key)                                { return rb_tree_insert(obj, key); }
+static dict_remove_result vt_rb_tree_remove(void* obj, const void* key)                          { return rb_tree_remove(obj, key); }
+static size_t             vt_rb_tree_clear(void* obj, dict_delete_func delete_func)              { return rb_tree_clear(obj, delete_func); }
+static size_t             vt_rb_tree_traverse(void* obj, dict_visit_func visit, void* user_data) { return rb_tree_traverse(obj, visit, user_data); }
+static bool               vt_rb_tree_select(void* obj, size_t n, const void** key, void** datum) { return rb_tree_select(obj, n, key, datum); }
+static bool               vt_rb_tree_verify(const void* obj)                                     { return rb_tree_verify(obj); }
+static void               vt_rb_itor_free(void* itor)                                            { rb_itor_free(itor); }
+static bool               vt_rb_itor_valid(const void* itor)                                     { return rb_itor_valid(itor); }
+static void               vt_rb_itor_invalidate(void* itor)                                      { rb_itor_invalidate(itor); }
+static bool               vt_rb_itor_next(void* itor)                                            { return rb_itor_next(itor); }
+static bool               vt_rb_itor_prev(void* itor)                                            { return rb_itor_prev(itor); }
+static bool               vt_rb_itor_nextn(void* itor, size_t count)                             { return rb_itor_nextn(itor, count); }
+static bool               vt_rb_itor_prevn(void* itor, size_t count)                             { return rb_itor_prevn(itor, count); }
+static bool               vt_rb_itor_first(void* itor)                                           { return rb_itor_first(itor); }
+static bool               vt_rb_itor_last(void* itor)                                            { return rb_itor_last(itor); }
+static const void*        vt_rb_itor_key(const void* itor)                                       { return rb_itor_key(itor); }
+static void**             vt_rb_itor_datum(void* itor)                                           { return rb_itor_datum(itor); }
+static bool               vt_rb_itor_search(void* itor, const void* key)                         { return rb_itor_search(itor, key); }
+static bool               vt_rb_itor_search_le(void* itor, const void* key)                      { return rb_itor_search_le(itor, key); }
+static bool               vt_rb_itor_search_lt(void* itor, const void* key)                      { return rb_itor_search_lt(itor, key); }
+static bool               vt_rb_itor_search_ge(void* itor, const void* key)                      { return rb_itor_search_ge(itor, key); }
+static bool               vt_rb_itor_search_gt(void* itor, const void* key)                      { return rb_itor_search_gt(itor, key); }
+static bool               vt_rb_itor_remove(void* itor)                                          { return rb_itor_remove(itor); }
+
 static const dict_vtable rb_tree_vtable = {
     true,
-    (dict_inew_func)        rb_dict_itor_new,
-    (dict_dfree_func)       rb_tree_free,
-    (dict_insert_func)      rb_tree_insert,
-    (dict_search_func)      tree_search,
-    (dict_search_func)      tree_search_le,
-    (dict_search_func)      tree_search_lt,
-    (dict_search_func)      tree_search_ge,
-    (dict_search_func)      tree_search_gt,
-    (dict_remove_func)      rb_tree_remove,
-    (dict_clear_func)       rb_tree_clear,
-    (dict_traverse_func)    rb_tree_traverse,
-    (dict_select_func)      rb_tree_select,
-    (dict_count_func)       tree_count,
-    (dict_verify_func)      rb_tree_verify,
+    vt_rb_dict_itor_new,
+    vt_rb_tree_free,
+    vt_rb_tree_insert,
+    tree_search,
+    tree_search_le,
+    tree_search_lt,
+    tree_search_ge,
+    tree_search_gt,
+    vt_rb_tree_remove,
+    vt_rb_tree_clear,
+    vt_rb_tree_traverse,
+    vt_rb_tree_select,
+    tree_count,
+    vt_rb_tree_verify,
 };
 
 static const itor_vtable rb_tree_itor_vtable = {
-    (dict_ifree_func)       rb_itor_free,
-    (dict_valid_func)       rb_itor_valid,
-    (dict_invalidate_func)  rb_itor_invalidate,
-    (dict_next_func)        rb_itor_next,
-    (dict_prev_func)        rb_itor_prev,
-    (dict_nextn_func)       rb_itor_nextn,
-    (dict_prevn_func)       rb_itor_prevn,
-    (dict_first_func)       rb_itor_first,
-    (dict_last_func)        rb_itor_last,
-    (dict_key_func)         rb_itor_key,
-    (dict_datum_func)       rb_itor_datum,
-    (dict_isearch_func)     rb_itor_search,
-    (dict_isearch_func)     rb_itor_search_le,
-    (dict_isearch_func)     rb_itor_search_lt,
-    (dict_isearch_func)     rb_itor_search_ge,
-    (dict_isearch_func)     rb_itor_search_gt,
-    (dict_iremove_func)     rb_itor_remove,
-    (dict_icompare_func)    tree_iterator_compare
+    vt_rb_itor_free,
+    vt_rb_itor_valid,
+    vt_rb_itor_invalidate,
+    vt_rb_itor_next,
+    vt_rb_itor_prev,
+    vt_rb_itor_nextn,
+    vt_rb_itor_prevn,
+    vt_rb_itor_first,
+    vt_rb_itor_last,
+    vt_rb_itor_key,
+    vt_rb_itor_datum,
+    vt_rb_itor_search,
+    vt_rb_itor_search_le,
+    vt_rb_itor_search_lt,
+    vt_rb_itor_search_ge,
+    vt_rb_itor_search_gt,
+    vt_rb_itor_remove,
+    tree_iterator_compare
 };
 
 static void rot_left(rb_tree* tree, rb_node* node);
@@ -158,12 +208,14 @@ rb_tree_clear(rb_tree* tree, dict_delete_func delete_func)
         }
         if (delete_func) delete_func(node->key, node->datum);
         rb_node* const parent = PARENT(node);
-        FREE(node);
+        /* Unlink before freeing: comparing a pointer to a freed object is UB. */
         *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &tree->root) = NULL;
+        FREE(node);
         node = parent;
     }
     ASSERT(tree->root == NULL);
     tree->count = 0;
+    tree->rotation_count = 0;
     return count;
 }
 
@@ -371,8 +423,9 @@ delete_fixup(rb_tree* tree, rb_node* node, rb_node* parent, bool left)
         }
     }
 
-    if (node)
-    SET_BLACK(node);
+    if (node) {
+        SET_BLACK(node);
+    }
     return rotations;
 }
 
@@ -455,7 +508,15 @@ node_new(void* key)
 {
     rb_node* node = MALLOC(sizeof(*node));
     if (node) {
-        ASSERT((((intptr_t)node) & 1) == 0); /* Ensure malloc returns aligned result. */
+        /* The low bit of the parent pointer holds the colour, so a node must
+         * be at least 2-byte aligned. dict_malloc_func is user-replaceable,
+         * and an ASSERT would vanish under NDEBUG and let a misaligned
+         * allocator corrupt every parent pointer silently. */
+        if ((((uintptr_t) node) & 1) != 0) {
+            fprintf(stderr, "%s:%d (%s) dict_malloc_func returned an odd "
+                    "pointer: %p\n", __FILE__, __LINE__, __func__, (void*) node);
+            abort();
+        }
         node->key = key;
         node->datum = NULL;
         node->color = RB_RED; /* Also initializes parent to NULL */
@@ -503,7 +564,8 @@ node_prev(rb_node* node)
 
 static bool
 node_verify(const rb_tree* tree, const rb_node* parent, const rb_node* node,
-        unsigned black_node_count, unsigned leaf_black_node_count)
+        unsigned black_node_count, unsigned leaf_black_node_count,
+        const void* lower, const void* upper, size_t* count)
 {
     if (parent == NULL) {
         VERIFY(tree->root == node);
@@ -511,34 +573,36 @@ node_verify(const rb_tree* tree, const rb_node* parent, const rb_node* node,
     } else {
         VERIFY(parent->llink == node || parent->rlink == node);
     }
-    if (node) {
-        VERIFY(PARENT(node) == parent);
-        if (parent) {
-            if (parent->llink == node) {
-                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-            } else {
-                ASSERT(parent->rlink == node);
-                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-            }
-        }
-        if (COLOR(node) == RB_RED) {
-            /* Verify that every child of a red node is black. */
-            if (node->llink)
-                VERIFY(COLOR(node->llink) == RB_BLACK);
-            if (node->rlink)
-                VERIFY(COLOR(node->rlink) == RB_BLACK);
-        } else {
-            black_node_count++;
-        }
-        if (!node->llink && !node->rlink) {
-            /* Verify that each path to a leaf contains the same number of black nodes. */
-            VERIFY(black_node_count == leaf_black_node_count);
-        }
-        bool l = node_verify(tree, node, node->llink, black_node_count, leaf_black_node_count);
-        bool r = node_verify(tree, node, node->rlink, black_node_count, leaf_black_node_count);
-        return l && r;
+    if (!node) {
+        /* NIL is the leaf for black-height purposes, so the comparison
+         * belongs here. Checking only at nodes with no children left every
+         * path that terminates at the absent child of a *one-child* node
+         * unverified -- which is most of them. */
+        VERIFY(black_node_count == leaf_black_node_count);
+        return true;
     }
-    return true;
+    VERIFY(PARENT(node) == parent);
+    /* Global BST ordering. Comparing a node only against its immediate parent
+     * would accept an entire subtree placed on the wrong side. */
+    if (lower)
+        VERIFY(tree->cmp_func(lower, node->key) < 0);
+    if (upper)
+        VERIFY(tree->cmp_func(upper, node->key) > 0);
+    if (COLOR(node) == RB_RED) {
+        /* Verify that every child of a red node is black. */
+        if (node->llink)
+            VERIFY(COLOR(node->llink) == RB_BLACK);
+        if (node->rlink)
+            VERIFY(COLOR(node->rlink) == RB_BLACK);
+    } else {
+        black_node_count++;
+    }
+    *count += 1;
+    bool l = node_verify(tree, node, node->llink, black_node_count,
+                         leaf_black_node_count, lower, node->key, count);
+    bool r = node_verify(tree, node, node->rlink, black_node_count,
+                         leaf_black_node_count, node->key, upper, count);
+    return l && r;
 }
 
 bool
@@ -555,7 +619,12 @@ rb_tree_verify(const rb_tree* tree)
     } else {
         VERIFY(tree->count == 0);
     }
-    return node_verify(tree, NULL, tree->root, 0, leaf_black_node_count);
+    size_t count = 0;
+    if (!node_verify(tree, NULL, tree->root, 0, leaf_black_node_count,
+                     NULL, NULL, &count))
+        return false;
+    VERIFY(tree->count == count);
+    return true;
 }
 
 rb_itor*

@@ -28,6 +28,10 @@
 #ifndef LIBDICT_HASHTABLE_COMMON_H__
 #define LIBDICT_HASHTABLE_COMMON_H__
 
+/* Returns the smallest prime from an internal table that is >= |n|, or the
+ * largest prime in the table (4294967291) if |n| exceeds it. Callers that
+ * allocate |result| elements must therefore check the result against |n|, or
+ * guard the allocation size themselves -- see the *_resize() functions. */
 unsigned dict_prime_geq(unsigned n);
 
 #endif /* !LIBDICT_HASHTABLE_COMMON_H__ */

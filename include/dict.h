@@ -28,19 +28,33 @@
 #ifndef LIBDICT_DICT_H__
 #define LIBDICT_DICT_H__
 
-#if defined(__cplusplus) || defined(c_plusplus)
-# define BEGIN_DECL     extern "C" {
-# define END_DECL       }
-#else
-# define BEGIN_DECL
-# define END_DECL
-#endif
-
-BEGIN_DECL
-
+/* Include system headers before opening the extern "C" block: in C++ these
+ * can pull in namespace-scoped declarations, which are ill-formed with C
+ * language linkage. */
 #include <stddef.h>
 #include <stdint.h>
 #include <stdbool.h>
+
+#ifndef LIBDICT_BEGIN_DECL
+# if defined(__cplusplus) || defined(c_plusplus)
+#  define LIBDICT_BEGIN_DECL    extern "C" {
+#  define LIBDICT_END_DECL      }
+# else
+#  define LIBDICT_BEGIN_DECL
+#  define LIBDICT_END_DECL
+# endif
+#endif
+
+/* Deprecated unprefixed aliases, kept for source compatibility. Defined only
+ * if nothing else has claimed the names. */
+#ifndef BEGIN_DECL
+# define BEGIN_DECL     LIBDICT_BEGIN_DECL
+#endif
+#ifndef END_DECL
+# define END_DECL       LIBDICT_END_DECL
+#endif
+
+LIBDICT_BEGIN_DECL
 
 #define DICT_VERSION_MAJOR    0
 #define DICT_VERSION_MINOR    3
@@ -49,8 +63,10 @@ extern const char* const kDictVersionString;
 
 /* A pointer to a function that compares two keys. It needs to return a
  * negative value if k1<k2, a positive value if k1>k2, and zero if the keys are
- * equal. The comparison should be reflexive (k1>k2 implies k1<k2, etc.),
- * symmetric (k1=k1) and transitive (k1>k2 and k2>k3 implies k1>k3). */
+ * equal. The comparison must be a total order, i.e. reflexive (cmp(k,k)==0),
+ * antisymmetric (k1>k2 implies k2<k1) and transitive (k1>k2 and k2>k3 implies
+ * k1>k3). Keys must compare identically for as long as they are in the
+ * dictionary. */
 typedef int        (*dict_compare_func)(const void*, const void*);
 /* A pointer to a function that is called when a key-value pair gets removed
  * from a dictionary. */
@@ -59,7 +75,9 @@ typedef void        (*dict_delete_func)(void*, void*);
 typedef bool        (*dict_visit_func)(const void*, void*, void*);
 /* A pointer to a function that returns the hash value of a key. */
 typedef unsigned    (*dict_hash_func)(const void*);
-/* A pointer to a function that returns the priority of a key. */
+/* A pointer to a function that returns the priority of a key, used by tr_tree
+ * (a treap). The treap is a max-heap on priority, so a LARGER value places the
+ * key closer to the root. Pass NULL to have priorities chosen at random. */
 typedef unsigned    (*dict_prio_func)(const void*);
 
 /* A pointer to a function that libdict will use to allocate memory. */
@@ -67,7 +85,7 @@ extern void*        (*dict_malloc_func)(size_t);
 /* A pointer to a function that libdict will use to deallocate memory. */
 extern void        (*dict_free_func)(void*);
 
-/* Forward declarations for transparent type dict_itor. */
+/* Forward declaration of dict_itor, whose definition appears below. */
 typedef struct dict_itor dict_itor;
 
 typedef struct {
@@ -121,16 +139,18 @@ typedef bool        (*dict_nextn_func)(void* itor, size_t count);
 typedef bool        (*dict_prevn_func)(void* itor, size_t count);
 typedef bool        (*dict_first_func)(void* itor);
 typedef bool        (*dict_last_func)(void* itor);
-typedef void*       (*dict_key_func)(void* itor);
+/* Returns the key the iterator is positioned on, or NULL if it is not
+ * positioned. The key belongs to the dictionary and must not be modified. */
+typedef const void* (*dict_key_func)(const void* itor);
 typedef void**      (*dict_datum_func)(void* itor);
 typedef bool        (*dict_isearch_func)(void* itor, const void* key);
 typedef bool        (*dict_iremove_func)(void* itor);
-typedef int         (*dict_icompare_func)(void* itor1, void* itor2);
+typedef int         (*dict_icompare_func)(const void* itor1, const void* itor2);
 
 typedef struct {
     dict_ifree_func         ifree;
     dict_valid_func         valid;
-    dict_invalidate_func    invalid;
+    dict_invalidate_func    invalidate;
     dict_next_func          next;
     dict_prev_func          prev;
     dict_nextn_func         nextn;
@@ -164,12 +184,36 @@ typedef struct {
 #define dict_remove(dct,key)        ((dct)->_vtable->remove((dct)->_object, (key)))
 #define dict_clear(dct,func)        ((dct)->_vtable->clear((dct)->_object, (func)))
 #define dict_traverse(dct,func,ud)  ((dct)->_vtable->traverse((dct)->_object, (func), (ud)))
+/* Retrieve the |n|th element in key order (0-based), storing its key in |key|
+ * and its datum in |d|, and evaluating to true. Evaluates to false, storing
+ * NULL through any non-NULL out-parameter, if |n| is out of range or the
+ * container does not support selection. Either out-parameter may be NULL.
+ * Only meaningful for sorted containers. */
 #define dict_select(dct,n,key,d)    ((dct)->_vtable->select && (dct)->_vtable->select((dct)->_object, (n), (key), (d)))
 #define dict_count(dct)             ((dct)->_vtable->count((dct)->_object))
 #define dict_verify(dct)            ((dct)->_vtable->verify((dct)->_object))
 #define dict_itor_new(dct)          (dct)->_vtable->inew((dct)->_object)
 
 size_t dict_free(dict* dct, dict_delete_func delete_func);
+
+/* ITERATOR INVALIDATION
+ *
+ * Removing an element invalidates iterators as follows.
+ *
+ *  - For the hash tables, ANY structural modification (an insert that grows
+ *    the table, any removal, or a clear) invalidates every existing iterator:
+ *    dict_itor_valid() then returns false, dict_itor_key()/_datum() return
+ *    NULL, and dict_itor_next()/_prev() return false. Reposition with
+ *    dict_itor_first()/_last()/_search() to use the iterator again.
+ *
+ *  - For the trees and the skip list, removing an element invalidates only
+ *    iterators positioned on a removed node. Note that for every tree except
+ *    tr_tree, removing a key with two children frees the node that held its
+ *    SUCCESSOR (the key and datum are moved into the surviving node), so an
+ *    iterator parked on the successor is invalidated too even though its own
+ *    key was not removed.
+ *
+ * Inserting into a tree or skip list never invalidates an iterator. */
 
 struct dict_itor {
     void* _itor;
@@ -178,7 +222,7 @@ struct dict_itor {
 
 #define dict_itor_private(i)        ((i)->_itor)
 #define dict_itor_valid(i)          ((i)->_vtable->valid((i)->_itor))
-#define dict_itor_invalidate(i)     ((i)->_vtable->invalid((i)->_itor))
+#define dict_itor_invalidate(i)     ((i)->_vtable->invalidate((i)->_itor))
 #define dict_itor_next(i)           ((i)->_vtable->next((i)->_itor))
 #define dict_itor_prev(i)           ((i)->_vtable->prev((i)->_itor))
 #define dict_itor_nextn(i,n)        ((i)->_vtable->nextn((i)->_itor, (n)))
@@ -192,7 +236,12 @@ struct dict_itor {
 #define dict_itor_search_gt(i,k)    ((i)->_vtable->search_gt && (i)->_vtable->search_gt((i)->_itor, (k)))
 #define dict_itor_key(i)            ((i)->_vtable->key((i)->_itor))
 #define dict_itor_datum(i)          ((i)->_vtable->datum((i)->_itor))
-#define dict_itor_compare(i1,i2)    ((i1)->_vtable->compare((i1)->_itor, (i2)->_itor))
+/* Compare the positions of two iterators over the same dictionary. Returns a
+ * negative value, zero or a positive value as |i1| precedes, is at, or follows
+ * |i2|. For unsorted containers the order is the container's current traversal
+ * order, which is only meaningful until the next structural modification.
+ * Evaluates to 0 if the container supplies no comparison. */
+#define dict_itor_compare(i1,i2)    ((i1)->_vtable->compare ? (i1)->_vtable->compare((i1)->_itor, (i2)->_itor) : 0)
 #define dict_itor_remove(i)         ((i)->_vtable->remove && (i)->_vtable->remove((i)->_itor))
 
 void dict_itor_free(dict_itor* itor);

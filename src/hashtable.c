@@ -31,6 +31,7 @@
 
 #include "hashtable.h"
 
+#include <stdint.h> /* For SIZE_MAX */
 #include <string.h> /* For memset() */
 #include "dict_private.h"
 #include "hashtable_common.h"
@@ -60,51 +61,86 @@ struct hashtable {
     dict_hash_func      hash_func;
     size_t              count;
     unsigned            size;
+    /* Bumped by every structural modification (node added or removed, table
+     * resized). Iterators record it so they can detect that the nodes and
+     * slots they cached are no longer valid, instead of walking freed memory
+     * or resuming at a stale slot in a rebucketed table. */
+    unsigned            gen;
 };
 
 struct hashtable_itor {
     hashtable*          table;
     hash_node*          node;
     unsigned            slot;
+    unsigned            gen;
 };
+
+/* Vtable thunks. The vtable slot types take void*, and calling a function
+ * through a function-pointer type that is not compatible with the function's
+ * own type is undefined behaviour (C11 6.5.2.2p9), so each slot below gets a
+ * thunk with the exact slot signature instead of a cast. A cast would also
+ * hide a genuine signature mismatch. */
+static dict_itor*         vt_hashtable_dict_itor_new(void* obj)                                    { return hashtable_dict_itor_new(obj); }
+static size_t             vt_hashtable_free(void* obj, dict_delete_func delete_func)               { return hashtable_free(obj, delete_func); }
+static dict_insert_result vt_hashtable_insert(void* obj, void* key)                                { return hashtable_insert(obj, key); }
+static void**             vt_hashtable_search(void* obj, const void* key)                          { return hashtable_search(obj, key); }
+static dict_remove_result vt_hashtable_remove(void* obj, const void* key)                          { return hashtable_remove(obj, key); }
+static size_t             vt_hashtable_clear(void* obj, dict_delete_func delete_func)              { return hashtable_clear(obj, delete_func); }
+static size_t             vt_hashtable_traverse(void* obj, dict_visit_func visit, void* user_data) { return hashtable_traverse(obj, visit, user_data); }
+static size_t             vt_hashtable_count(const void* obj)                                      { return hashtable_count(obj); }
+static bool               vt_hashtable_verify(const void* obj)                                     { return hashtable_verify(obj); }
+static void               vt_hashtable_itor_free(void* itor)                                       { hashtable_itor_free(itor); }
+static bool               vt_hashtable_itor_valid(const void* itor)                                { return hashtable_itor_valid(itor); }
+static void               vt_hashtable_itor_invalidate(void* itor)                                 { hashtable_itor_invalidate(itor); }
+static bool               vt_hashtable_itor_next(void* itor)                                       { return hashtable_itor_next(itor); }
+static bool               vt_hashtable_itor_prev(void* itor)                                       { return hashtable_itor_prev(itor); }
+static bool               vt_hashtable_itor_nextn(void* itor, size_t count)                        { return hashtable_itor_nextn(itor, count); }
+static bool               vt_hashtable_itor_prevn(void* itor, size_t count)                        { return hashtable_itor_prevn(itor, count); }
+static bool               vt_hashtable_itor_first(void* itor)                                      { return hashtable_itor_first(itor); }
+static bool               vt_hashtable_itor_last(void* itor)                                       { return hashtable_itor_last(itor); }
+static const void*        vt_hashtable_itor_key(const void* itor)                                  { return hashtable_itor_key(itor); }
+static void**             vt_hashtable_itor_datum(void* itor)                                      { return hashtable_itor_datum(itor); }
+static bool               vt_hashtable_itor_search(void* itor, const void* key)                    { return hashtable_itor_search(itor, key); }
+static bool               vt_hashtable_itor_remove(void* itor)                                     { return hashtable_itor_remove(itor); }
+static int                vt_hashtable_itor_compare(const void* itor1, const void* itor2)          { return hashtable_itor_compare(itor1, itor2); }
 
 static const dict_vtable hashtable_vtable = {
     false,
-    (dict_inew_func)        hashtable_dict_itor_new,
-    (dict_dfree_func)       hashtable_free,
-    (dict_insert_func)      hashtable_insert,
-    (dict_search_func)      hashtable_search,
-    (dict_search_func)      NULL,/* search_le: not supported */
-    (dict_search_func)      NULL,/* search_lt: not supported */
-    (dict_search_func)      NULL,/* search_ge: not supported */
-    (dict_search_func)      NULL,/* search_gt: not supported */
-    (dict_remove_func)      hashtable_remove,
-    (dict_clear_func)       hashtable_clear,
-    (dict_traverse_func)    hashtable_traverse,
-    (dict_select_func)      NULL,
-    (dict_count_func)       hashtable_count,
-    (dict_verify_func)      hashtable_verify,
+    vt_hashtable_dict_itor_new,
+    vt_hashtable_free,
+    vt_hashtable_insert,
+    vt_hashtable_search,
+    NULL,/* search_le: not supported */
+    NULL,/* search_lt: not supported */
+    NULL,/* search_ge: not supported */
+    NULL,/* search_gt: not supported */
+    vt_hashtable_remove,
+    vt_hashtable_clear,
+    vt_hashtable_traverse,
+    NULL,
+    vt_hashtable_count,
+    vt_hashtable_verify,
 };
 
 static const itor_vtable hashtable_itor_vtable = {
-    (dict_ifree_func)       hashtable_itor_free,
-    (dict_valid_func)       hashtable_itor_valid,
-    (dict_invalidate_func)  hashtable_itor_invalidate,
-    (dict_next_func)        hashtable_itor_next,
-    (dict_prev_func)        hashtable_itor_prev,
-    (dict_nextn_func)       hashtable_itor_nextn,
-    (dict_prevn_func)       hashtable_itor_prevn,
-    (dict_first_func)       hashtable_itor_first,
-    (dict_last_func)        hashtable_itor_last,
-    (dict_key_func)         hashtable_itor_key,
-    (dict_datum_func)       hashtable_itor_datum,
-    (dict_isearch_func)     hashtable_itor_search,
-    (dict_isearch_func)     NULL,/* itor_search_le: not supported */
-    (dict_isearch_func)     NULL,/* itor_search_lt: not supported */
-    (dict_isearch_func)     NULL,/* itor_search_ge: not supported */
-    (dict_isearch_func)     NULL,/* itor_search_gt: not supported */
-    (dict_iremove_func)     hashtable_itor_remove,/* hashtable_itor_remove not implemented yet */
-    (dict_icompare_func)    NULL,/* hashtable_itor_compare not implemented yet */
+    vt_hashtable_itor_free,
+    vt_hashtable_itor_valid,
+    vt_hashtable_itor_invalidate,
+    vt_hashtable_itor_next,
+    vt_hashtable_itor_prev,
+    vt_hashtable_itor_nextn,
+    vt_hashtable_itor_prevn,
+    vt_hashtable_itor_first,
+    vt_hashtable_itor_last,
+    vt_hashtable_itor_key,
+    vt_hashtable_itor_datum,
+    vt_hashtable_itor_search,
+    NULL,/* itor_search_le: not supported */
+    NULL,/* itor_search_lt: not supported */
+    NULL,/* itor_search_ge: not supported */
+    NULL,/* itor_search_gt: not supported */
+    vt_hashtable_itor_remove,
+    vt_hashtable_itor_compare,
 };
 
 hashtable*
@@ -117,15 +153,24 @@ hashtable_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned siz
     hashtable* table = MALLOC(sizeof(*table));
     if (table) {
         table->size = dict_prime_geq(size);
-        table->table = MALLOC(table->size * sizeof(hash_node*));
+        /* Guard the byte count against wrapping size_t. Unreachable where
+         * size_t is wider than unsigned, but on ILP32 an unchecked product
+         * would allocate a small table and then index past it. */
+        const size_t bytes = (size_t) table->size * sizeof(hash_node*);
+        if (bytes / sizeof(hash_node*) != (size_t) table->size) {
+            FREE(table);
+            return NULL;
+        }
+        table->table = MALLOC(bytes);
         if (!table->table) {
             FREE(table);
             return NULL;
         }
-        memset(table->table, 0, table->size * sizeof(hash_node*));
+        memset(table->table, 0, bytes);
         table->cmp_func = cmp_func;
         table->hash_func = hash_func;
         table->count = 0;
+        table->gen = 0;
     }
     return table;
 }
@@ -133,6 +178,7 @@ hashtable_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned siz
 dict*
 hashtable_dict_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned size)
 {
+    ASSERT(cmp_func != NULL);
     ASSERT(hash_func != NULL);
     ASSERT(size > 0);
 
@@ -163,8 +209,12 @@ dict_insert_result
 hashtable_insert(hashtable* table, void* key)
 {
     if (LOADFACTOR_DENOMINATOR * table->count >= LOADFACTOR_NUMERATOR * table->size) {
-        /* Load factor too high. */
-        hashtable_resize(table, table->size + 1);
+        /* Load factor too high: grow the table. If that fails there is no
+         * memory for a bigger table, but the insert can still proceed into the
+         * existing one -- chains simply get longer. */
+        if (!hashtable_resize(table, table->size + 1)) {
+            /* Nothing to do; the insert below still works. */
+        }
     }
 
     const unsigned hash = table->hash_func(key);
@@ -197,6 +247,7 @@ hashtable_insert(hashtable* table, void* key)
         node->prev = add;
 
     table->count++;
+    table->gen++;
     return (dict_insert_result) { &add->datum, true };
 }
 
@@ -227,6 +278,7 @@ remove_node(hashtable* table, hash_node* node, unsigned mhash)
 
     FREE(node);
     table->count--;
+    table->gen++;
 }
 
 dict_remove_result
@@ -263,6 +315,8 @@ hashtable_clear(hashtable* table, dict_delete_func delete_func)
 
     const size_t count = table->count;
     table->count = 0;
+    if (count)
+        table->gen++;
     return count;
 }
 
@@ -309,11 +363,15 @@ hashtable_resize(hashtable* table, unsigned new_size)
     new_size = dict_prime_geq(new_size);
     if (table->size == new_size) return true;
 
+    /* Guard the byte count against wrapping size_t (see hashtable_new). */
+    const size_t nbytes = (size_t) new_size * sizeof(hash_node*);
+    if (nbytes / sizeof(hash_node*) != (size_t) new_size) return false;
+
     /* TODO: investigate whether using realloc would be advantageous. */
-    hash_node** ntable = MALLOC(new_size * sizeof(hash_node*));
+    hash_node** ntable = MALLOC(nbytes);
     if (!ntable) return false;
 
-    memset(ntable, 0, new_size * sizeof(hash_node*));
+    memset(ntable, 0, nbytes);
 
     for (unsigned i = 0; i < table->size; i++) {
         for (hash_node* node = table->table[i]; node;) {
@@ -338,6 +396,8 @@ hashtable_resize(hashtable* table, unsigned new_size)
     FREE(table->table);
     table->table = ntable;
     table->size = new_size;
+    /* Every node moved to a new bucket, so cached slots are meaningless. */
+    table->gen++;
     return true;
 }
 
@@ -370,6 +430,7 @@ hashtable_itor_new(hashtable* table)
         itor->table = table;
         itor->node = NULL;
         itor->slot = 0;
+        itor->gen = table->gen;
     }
     return itor;
 }
@@ -394,10 +455,13 @@ hashtable_itor_free(hashtable_itor* itor)
     FREE(itor);
 }
 
+/* True only if the iterator still designates a live element: it must be
+ * positioned, and the table must not have been structurally modified since the
+ * iterator was last positioned. */
 bool
 hashtable_itor_valid(const hashtable_itor* itor)
 {
-    return itor->node != NULL;
+    return itor->node != NULL && itor->gen == itor->table->gen;
 }
 
 void
@@ -405,12 +469,13 @@ hashtable_itor_invalidate(hashtable_itor* itor)
 {
     itor->node = NULL;
     itor->slot = 0;
+    itor->gen = itor->table->gen;
 }
 
 bool
 hashtable_itor_next(hashtable_itor* itor)
 {
-    if (!itor->node)
+    if (!hashtable_itor_valid(itor))
         return false;
 
     if ((itor->node = itor->node->next) != NULL)
@@ -426,13 +491,13 @@ hashtable_itor_next(hashtable_itor* itor)
     }
     itor->node = NULL;
     itor->slot = 0;
-    return itor->node != NULL;
+    return false;
 }
 
 bool
 hashtable_itor_prev(hashtable_itor* itor)
 {
-    if (!itor->node)
+    if (!hashtable_itor_valid(itor))
         return false;
 
     if ((itor->node = itor->node->prev) != NULL)
@@ -461,7 +526,7 @@ hashtable_itor_nextn(hashtable_itor* itor, size_t count)
         if (!hashtable_itor_next(itor))
             return false;
     }
-    return itor->node != NULL;
+    return hashtable_itor_valid(itor);
 }
 
 bool
@@ -471,12 +536,13 @@ hashtable_itor_prevn(hashtable_itor* itor, size_t count)
         if (!hashtable_itor_prev(itor))
             return false;
     }
-    return itor->node != NULL;
+    return hashtable_itor_valid(itor);
 }
 
 bool
 hashtable_itor_first(hashtable_itor* itor)
 {
+    itor->gen = itor->table->gen;
     for (unsigned slot = 0; slot < itor->table->size; ++slot) {
         if (itor->table->table[slot]) {
             itor->node = itor->table->table[slot];
@@ -492,6 +558,7 @@ hashtable_itor_first(hashtable_itor* itor)
 bool
 hashtable_itor_last(hashtable_itor* itor)
 {
+    itor->gen = itor->table->gen;
     for (unsigned slot = itor->table->size; slot > 0;) {
         if (itor->table->table[--slot]) {
             hash_node* node = itor->table->table[slot];
@@ -510,6 +577,7 @@ hashtable_itor_last(hashtable_itor* itor)
 bool
 hashtable_itor_search(hashtable_itor* itor, const void* key)
 {
+    itor->gen = itor->table->gen;
     const unsigned hash = itor->table->hash_func(key);
     const unsigned mhash = hash % itor->table->size;
     hash_node* node = itor->table->table[mhash];
@@ -529,21 +597,47 @@ hashtable_itor_search(hashtable_itor* itor, const void* key)
 const void*
 hashtable_itor_key(const hashtable_itor* itor)
 {
-    return itor->node ? itor->node->key : NULL;
+    return hashtable_itor_valid(itor) ? itor->node->key : NULL;
 }
 
 void**
 hashtable_itor_datum(hashtable_itor* itor)
 {
-    return itor->node ? &itor->node->datum : NULL;
+    return hashtable_itor_valid(itor) ? &itor->node->datum : NULL;
 }
 
 bool
 hashtable_itor_remove(hashtable_itor* itor)
 {
-    if (!itor->node)
+    if (!hashtable_itor_valid(itor))
         return false;
     remove_node(itor->table, itor->node, itor->node->hash % itor->table->size);
     itor->node = NULL;
+    itor->gen = itor->table->gen;
     return true;
+}
+
+/* A hashtable is unordered, so iterators are ordered by their position in the
+ * table's current traversal order (bucket index, then position within that
+ * bucket's chain). That order matches hashtable_itor_next()/_prev(), but it is
+ * only meaningful until the next structural modification of the table. */
+int
+hashtable_itor_compare(const hashtable_itor* i1, const hashtable_itor* i2)
+{
+    ASSERT(i1->table == i2->table);
+
+    const bool v1 = hashtable_itor_valid(i1), v2 = hashtable_itor_valid(i2);
+    if (!v1)
+        return !v2 ? 0 : -1;
+    if (!v2)
+        return 1;
+    if (i1->node == i2->node)
+        return 0;
+    if (i1->slot != i2->slot)
+        return i1->slot < i2->slot ? -1 : 1;
+    /* Same bucket: whichever node comes first in the chain compares less. */
+    for (const hash_node* n = i1->node->next; n; n = n->next)
+        if (n == i2->node)
+            return -1;
+    return 1;
 }

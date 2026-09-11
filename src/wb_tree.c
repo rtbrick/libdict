@@ -31,14 +31,14 @@
 
 #include "wb_tree.h"
 
-#include <limits.h>
+#include <stdint.h>
 #include "dict_private.h"
 #include "tree_common.h"
 
 /* A tree BB[alpha] is said to be of weighted balance alpha if every node in
  * the tree has a balance p(n) such that alpha <= p(n) <= 1 - alpha. The
  * balance of a node is defined as the number of nodes in its left subtree
- * divided by the number of nodes in either subtree. The weight of a node is
+ * divided by the number of nodes in the subtree rooted at that node. The weight of a node is
  * defined as the number of external nodes in its subtrees.
  *
  * Legal values for alpha are 0 <= alpha <= 1/2. BB[0] is a normal, unbalanced
@@ -79,43 +79,55 @@ struct wb_itor {
     TREE_ITERATOR_FIELDS(wb_tree, wb_node);
 };
 
+/* Vtable thunks. The vtable slot types take void*, and calling a function
+ * through a function-pointer type that is not compatible with the function's
+ * own type is undefined behaviour (C11 6.5.2.2p9), so each slot below gets a
+ * thunk with the exact slot signature instead of a cast. A cast would also
+ * hide a genuine signature mismatch. */
+static dict_itor*         vt_wb_dict_itor_new(void* obj)                                         { return wb_dict_itor_new(obj); }
+static dict_insert_result vt_wb_tree_insert(void* obj, void* key)                                { return wb_tree_insert(obj, key); }
+static dict_remove_result vt_wb_tree_remove(void* obj, const void* key)                          { return wb_tree_remove(obj, key); }
+static bool               vt_wb_tree_select(void* obj, size_t n, const void** key, void** datum) { return wb_tree_select(obj, n, key, datum); }
+static bool               vt_wb_tree_verify(const void* obj)                                     { return wb_tree_verify(obj); }
+static bool               vt_wb_itor_remove(void* itor)                                          { return wb_itor_remove(itor); }
+
 static const dict_vtable wb_tree_vtable = {
     true,
-    (dict_inew_func)        wb_dict_itor_new,
-    (dict_dfree_func)       tree_free,
-    (dict_insert_func)      wb_tree_insert,
-    (dict_search_func)      tree_search,
-    (dict_search_func)      tree_search_le,
-    (dict_search_func)      tree_search_lt,
-    (dict_search_func)      tree_search_ge,
-    (dict_search_func)      tree_search_gt,
-    (dict_remove_func)      wb_tree_remove,
-    (dict_clear_func)       tree_clear,
-    (dict_traverse_func)    tree_traverse,
-    (dict_select_func)      wb_tree_select,
-    (dict_count_func)       tree_count,
-    (dict_verify_func)      wb_tree_verify,
+    vt_wb_dict_itor_new,
+    tree_free,
+    vt_wb_tree_insert,
+    tree_search,
+    tree_search_le,
+    tree_search_lt,
+    tree_search_ge,
+    tree_search_gt,
+    vt_wb_tree_remove,
+    tree_clear,
+    tree_traverse,
+    vt_wb_tree_select,
+    tree_count,
+    vt_wb_tree_verify,
 };
 
 static const itor_vtable wb_tree_itor_vtable = {
-    (dict_ifree_func)       tree_iterator_free,
-    (dict_valid_func)       tree_iterator_valid,
-    (dict_invalidate_func)  tree_iterator_invalidate,
-    (dict_next_func)        tree_iterator_next,
-    (dict_prev_func)        tree_iterator_prev,
-    (dict_nextn_func)       tree_iterator_nextn,
-    (dict_prevn_func)       tree_iterator_prevn,
-    (dict_first_func)       tree_iterator_first,
-    (dict_last_func)        tree_iterator_last,
-    (dict_key_func)         tree_iterator_key,
-    (dict_datum_func)       tree_iterator_datum,
-    (dict_isearch_func)     tree_iterator_search,
-    (dict_isearch_func)     tree_iterator_search_le,
-    (dict_isearch_func)     tree_iterator_search_lt,
-    (dict_isearch_func)     tree_iterator_search_ge,
-    (dict_isearch_func)     tree_iterator_search_gt,
-    (dict_iremove_func)     wb_itor_remove,
-    (dict_icompare_func)    tree_iterator_compare,
+    tree_iterator_free,
+    tree_iterator_valid,
+    tree_iterator_invalidate,
+    tree_iterator_next,
+    tree_iterator_prev,
+    tree_iterator_nextn,
+    tree_iterator_prevn,
+    tree_iterator_first,
+    tree_iterator_last,
+    tree_iterator_key,
+    tree_iterator_datum,
+    tree_iterator_search,
+    tree_iterator_search_le,
+    tree_iterator_search_lt,
+    tree_iterator_search_ge,
+    tree_iterator_search_gt,
+    vt_wb_itor_remove,
+    tree_iterator_compare,
 };
 
 static wb_node*    node_new(void* key);
@@ -160,11 +172,11 @@ fixup(wb_tree* tree, wb_node* n)
 {
     unsigned rotations = 0;
     unsigned weight = WEIGHT(n->llink);
-    if (weight * 1000U < n->weight * 293U) {
+    if ((uint64_t) weight * 1000U < (uint64_t) n->weight * 293U) {
         wb_node* nr = n->rlink;
         ASSERT(nr != NULL);
         wb_node* nrl = nr->llink;
-        if (WEIGHT(nrl) * 1000U < nr->weight * 586U) { /* LL */
+        if ((uint64_t) WEIGHT(nrl) * 1000U < (uint64_t) nr->weight * 586U) { /* RR */
             /* Rotate |n| left. */
             tree_node_rot_left(tree, n);
             nr->weight = (n->weight = WEIGHT(n->llink) + WEIGHT(n->rlink)) +
@@ -193,11 +205,11 @@ fixup(wb_tree* tree, wb_node* n)
                 (nr->weight = WEIGHT(b) + WEIGHT(nr->rlink));
             rotations += 2;
         }
-    } else if (weight * 1000U > n->weight * 707U) {
+    } else if ((uint64_t) weight * 1000U > (uint64_t) n->weight * 707U) {
         wb_node* nl = n->llink;
         ASSERT(nl != NULL);
         weight = WEIGHT(nl->llink);
-        if (weight * 1000U > nl->weight * 414U) {    /* RR */
+        if ((uint64_t) weight * 1000U > (uint64_t) nl->weight * 414U) {    /* LL */
             tree_node_rot_right(tree, n);
 
             n->weight = WEIGHT(n->llink) + WEIGHT(n->rlink);
@@ -290,7 +302,7 @@ remove_node(wb_tree* tree, wb_node* node)
         node = out;
     }
     ASSERT(!node->llink || !node->rlink);
-    /* Splice in the successor, if any. */
+    /* Splice in the node's only child, if any. */
     wb_node* child = node->llink ? node->llink : node->rlink;
     wb_node* parent = node->parent;
     if (child)
@@ -375,7 +387,7 @@ node_new(void* key)
 
 static bool
 node_verify(const wb_tree* tree, const wb_node* parent, const wb_node* node,
-        unsigned *weight)
+        unsigned *weight, const void* lower, const void* upper)
 {
     if (!parent) {
         VERIFY(tree->root == node);
@@ -384,23 +396,23 @@ node_verify(const wb_tree* tree, const wb_node* parent, const wb_node* node,
     }
     if (node) {
         VERIFY(node->parent == parent);
-        if (parent) {
-            if (parent->llink == node) {
-                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-            } else {
-                ASSERT(parent->rlink == node);
-                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-            }
-        }
+        /* Global BST ordering. Comparing a node only against its immediate
+         * parent would accept an entire subtree placed on the wrong side:
+         * root 5, 5->llink 3, 3->rlink 7 passes every parent-local check yet
+         * makes key 7 unreachable from the root. */
+        if (lower)
+            VERIFY(tree->cmp_func(lower, node->key) < 0);
+        if (upper)
+            VERIFY(tree->cmp_func(upper, node->key) > 0);
         unsigned lweight, rweight;
-        if (!node_verify(tree, node, node->llink, &lweight) ||
-            !node_verify(tree, node, node->rlink, &rweight))
+        if (!node_verify(tree, node, node->llink, &lweight, lower, node->key) ||
+            !node_verify(tree, node, node->rlink, &rweight, node->key, upper))
             return false;
         VERIFY(WEIGHT(node->llink) == lweight);
         VERIFY(WEIGHT(node->rlink) == rweight);
         VERIFY(node->weight == lweight + rweight);
-        VERIFY(lweight * 1000U >= node->weight * 292U);
-        VERIFY(lweight * 1000U <= node->weight * 708U);
+        VERIFY((uint64_t) lweight * 1000U >= (uint64_t) node->weight * 292U);
+        VERIFY((uint64_t) lweight * 1000U <= (uint64_t) node->weight * 708U);
         *weight = lweight + rweight;
     } else {
         *weight = 1;
@@ -417,8 +429,10 @@ wb_tree_verify(const wb_tree* tree)
     } else {
         VERIFY(tree->count == 0);
     }
+    /* The weight relationships are checked inside node_verify(); the
+     * top-level weight itself is already covered by the count check above. */
     unsigned root_weight;
-    return node_verify(tree, NULL, tree->root, &root_weight);
+    return node_verify(tree, NULL, tree->root, &root_weight, NULL, NULL);
 }
 
 wb_itor*

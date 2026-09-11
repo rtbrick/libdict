@@ -7,11 +7,15 @@ env:
 
 jobs:
   ubuntu:
-    name: Test ${{matrix.os}}
+    name: Test ${{matrix.os}} ${{matrix.build_type}}
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
         os: [ubuntu-22.04, ubuntu-24.04, ubuntu-26.04]
+        # Release defines NDEBUG, which makes every ASSERT() a no-op. Testing
+        # only Debug cannot catch a defect that an assertion was masking, and
+        # Release is what actually ships.
+        build_type: [Debug, Release]
 
     steps:
     - uses: actions/checkout@v7
@@ -26,17 +30,45 @@ jobs:
     - name: Configure CMake
       shell: bash
       working-directory: ${{github.workspace}}/build
-      run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+      run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=${{matrix.build_type}}
 
     - name: Build
       working-directory: ${{github.workspace}}/build
       shell: bash
-      run: cmake --build . --config $BUILD_TYPE
+      run: cmake --build . --config ${{matrix.build_type}}
 
     - name: Test
       working-directory: ${{github.workspace}}/build
       shell: bash
-      run: ctest -C $BUILD_TYPE
+      run: ctest -C ${{matrix.build_type}} --output-on-failure
+
+  sanitizers:
+    name: Test sanitizers
+    runs-on: ubuntu-24.04
+
+    steps:
+    - uses: actions/checkout@v7
+
+    - name: Install dependencies
+      shell: bash
+      run: sudo apt update && sudo apt install libcunit1-dev --yes
+
+    - name: Build and run the test suite under ASan, UBSan and LeakSanitizer
+      shell: bash
+      run: |
+        gcc -std=c11 -g -O1 -fsanitize=address,undefined \
+            -fno-omit-frame-pointer -fno-sanitize-recover=all \
+            -Iinclude -Isrc src/*.c unit_tests.c -o unit_tests_asan -lcunit
+        ASAN_OPTIONS=detect_leaks=1 ./unit_tests_asan
+
+    - name: Build the library with warnings as errors
+      shell: bash
+      run: |
+        for f in src/*.c; do \
+            gcc -c -std=c11 -O2 -Werror -Wall -Wextra -Wshadow -Wcast-qual \
+                -Wstrict-prototypes -Wmissing-prototypes -Wsign-compare \
+                -Wpointer-arith -Iinclude -Isrc "$f" -o /dev/null; \
+        done
 
   debian:
     name: Test debian ${{matrix.os}}

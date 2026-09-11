@@ -72,17 +72,25 @@ dict_ulong_cmp(const void* k1, const void* k2)
 int
 dict_ptr_cmp(const void* k1, const void* k2)
 {
-    return (k1 > k2) - (k1 < k2);
+    /* Relational operators on pointers into different objects are undefined
+     * (C11 6.5.8p5); comparing the converted integers is well defined. */
+    const uintptr_t a = (uintptr_t) k1;
+    const uintptr_t b = (uintptr_t) k2;
+    return (a > b) - (a < b);
 }
 
 int
 dict_str_cmp(const void* k1, const void* k2)
 {
-    const char* a = k1;
-    const char* b = k2;
+    /* Bytes must be compared as unsigned char, exactly as strcmp() is
+     * specified to: comparing as plain char makes 0xFF sort below 'a' on
+     * signed-char targets and above it on unsigned-char ones, so identical
+     * inputs would order differently on x86 and ARM. */
+    const unsigned char* a = k1;
+    const unsigned char* b = k2;
 
     for (;;) {
-        char p = *a++, q = *b++;
+        unsigned char p = *a++, q = *b++;
         if (!p || p != q)
             return (p > q) - (p < q);
     }
@@ -91,7 +99,7 @@ dict_str_cmp(const void* k1, const void* k2)
 unsigned
 dict_str_hash(const void* k)
 {
-    /* FNV 1-a string hash. */
+    /* FNV-1a string hash. */
     unsigned hash = 2166136261U;
     for (const uint8_t* ptr = k; *ptr;) {
         hash = (hash ^ *ptr++) * 16777619U;

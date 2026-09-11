@@ -37,6 +37,9 @@
     node_type*  llink; \
     node_type*  rlink
 
+/* The layout that every tree's node type must be compatible with, since the
+ * generic routines below reinterpret nodes as this type. hb_tree and rb_tree
+ * static_assert their field offsets against it. */
 typedef struct tree_node_base {
     TREE_NODE_FIELDS(struct tree_node_base);
 } tree_node_base;
@@ -67,29 +70,29 @@ void*   tree_node_prev(void *node);
 /* Return the successor of |node|, or NULL if |node| has no successor.
  * |node| must not be NULL. */
 void*   tree_node_next(void *node);
-/* Return the left child of |node|, or |node| if it has no right child.
- * |node| must not be NULL. */
+/* Return the leftmost descendant of |node|, or |node| itself if it has no left
+ * child. Returns NULL if |node| is NULL. */
 void*   tree_node_min(void *node);
-/* Return the rightmost child of |node|, or |node| if it has no right child.
- * |node| must not be NULL. */
+/* Return the rightmost descendant of |node|, or |node| itself if it has no
+ * right child. Returns NULL if |node| is NULL. */
 void*   tree_node_max(void *node);
 /* Return the address of the data for the given the key, or NULL if not found. */
 void**  tree_search(void *tree, const void *key);
-/* Return the node has the key, or NULL if not found. */
+/* Return the node that has the key, or NULL if not found. */
 void*   tree_search_node(void *tree, const void *key);
-/* Return the data/node associated with the first key less than or
+/* Return the data/node associated with the greatest key less than or
  * equal to the specified key, or NULL if not found. */
 void**  tree_search_le(void *tree, const void *key);
 void*   tree_search_le_node(void *tree, const void *key);
-/* Return the data/node associated with the first key less than the
+/* Return the data/node associated with the greatest key less than the
  * specified key, or NULL if not found. */
 void**  tree_search_lt(void *tree, const void *key);
 void*   tree_search_lt_node(void *tree, const void *key);
-/* Return the data/node associated with the first key greater than or
+/* Return the data/node associated with the least key greater than or
  * equal to the specified key, or NULL if not found. */
 void**  tree_search_ge(void *tree, const void *key);
 void*   tree_search_ge_node(void *tree, const void *key);
-/* Return the data/node associated with the first key greater than the
+/* Return the data/node associated with the least key greater than the
  * specified key, or NULL if not found. */
 void**  tree_search_gt(void *tree, const void *key);
 void*   tree_search_gt_node(void *tree, const void *key);
@@ -99,19 +102,26 @@ void*   tree_search_gt_node(void *tree, const void *key);
 size_t  tree_traverse(void *tree, dict_visit_func visit, void* user_data);
 /* Put the key and datum of the |n|th element of |tree| into |key| and |datum|
  * and return true, or, if n is greater than or equal to the number of elements,
- * return false. */
+ * store NULL through each and return false. Either |key| or |datum| may be
+ * NULL, in which case that value is not stored. */
 bool    tree_select(void *tree, size_t n, const void **key, void **datum);
+/* Verify the invariants shared by all trees (root/parent links, global key
+ * ordering, and count). Iterative, so it is safe on a degenerate tree. Must
+ * not be used by trees that tag their parent pointer (hb_tree, rb_tree). */
+bool    tree_verify_common(const void *tree);
 /* Return a count of the elements in |tree|. */
 size_t  tree_count(const void *tree);
 /* Remove all elements from |tree|. */
 size_t  tree_clear(void *tree, dict_delete_func delete_func);
 /* Remove all elements from |tree| and free its memory. */
 size_t  tree_free(void *tree, dict_delete_func delete_func);
-/* Returns the depth of the leaf with minimal depth, or 0 for an empty tree. */
+/* Returns the shallowest depth at which a child link is absent (the root being
+ * at depth 1), or 0 for an empty tree. */
 size_t  tree_min_path_length(const void *tree);
-/* Returns the depth of the leaf with maximal depth, or 0 for an empty tree. */
+/* Returns the greatest depth of any node (the root being at depth 1), or 0 for
+ * an empty tree. */
 size_t  tree_max_path_length(const void *tree);
-/* Returns the total path length of the tree. */
+/* Returns the sum of the depths of all nodes, or 0 for an empty tree. */
 size_t  tree_total_path_length(const void *tree);
 
 bool        tree_iterator_valid(const void *iterator);

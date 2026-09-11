@@ -44,6 +44,9 @@ struct skip_node {
     skip_node*          link[];
 };
 
+/* A node can be given at most max_link - 1 links, so max_link must be at
+ * least 2 for the list to be able to link anything at all. */
+#define MIN_LINK        2
 #define MAX_LINK        32
 
 struct skiplist {
@@ -59,43 +62,81 @@ struct skiplist_itor {
     skip_node*          node;
 };
 
+/* Vtable thunks. The vtable slot types take void*, and calling a function
+ * through a function-pointer type that is not compatible with the function's
+ * own type is undefined behaviour (C11 6.5.2.2p9), so each slot below gets a
+ * thunk with the exact slot signature instead of a cast. A cast would also
+ * hide a genuine signature mismatch. */
+static dict_itor*         vt_skiplist_dict_itor_new(void* obj)                                    { return skiplist_dict_itor_new(obj); }
+static size_t             vt_skiplist_free(void* obj, dict_delete_func delete_func)               { return skiplist_free(obj, delete_func); }
+static dict_insert_result vt_skiplist_insert(void* obj, void* key)                                { return skiplist_insert(obj, key); }
+static void**             vt_skiplist_search(void* obj, const void* key)                          { return skiplist_search(obj, key); }
+static void**             vt_skiplist_search_le(void* obj, const void* key)                       { return skiplist_search_le(obj, key); }
+static void**             vt_skiplist_search_lt(void* obj, const void* key)                       { return skiplist_search_lt(obj, key); }
+static void**             vt_skiplist_search_ge(void* obj, const void* key)                       { return skiplist_search_ge(obj, key); }
+static void**             vt_skiplist_search_gt(void* obj, const void* key)                       { return skiplist_search_gt(obj, key); }
+static dict_remove_result vt_skiplist_remove(void* obj, const void* key)                          { return skiplist_remove(obj, key); }
+static size_t             vt_skiplist_clear(void* obj, dict_delete_func delete_func)              { return skiplist_clear(obj, delete_func); }
+static size_t             vt_skiplist_traverse(void* obj, dict_visit_func visit, void* user_data) { return skiplist_traverse(obj, visit, user_data); }
+static bool               vt_skiplist_select(void* obj, size_t n, const void** key, void** datum) { return skiplist_select(obj, n, key, datum); }
+static size_t             vt_skiplist_count(const void* obj)                                      { return skiplist_count(obj); }
+static bool               vt_skiplist_verify(const void* obj)                                     { return skiplist_verify(obj); }
+static void               vt_skiplist_itor_free(void* itor)                                       { skiplist_itor_free(itor); }
+static bool               vt_skiplist_itor_valid(const void* itor)                                { return skiplist_itor_valid(itor); }
+static void               vt_skiplist_itor_invalidate(void* itor)                                 { skiplist_itor_invalidate(itor); }
+static bool               vt_skiplist_itor_next(void* itor)                                       { return skiplist_itor_next(itor); }
+static bool               vt_skiplist_itor_prev(void* itor)                                       { return skiplist_itor_prev(itor); }
+static bool               vt_skiplist_itor_nextn(void* itor, size_t count)                        { return skiplist_itor_nextn(itor, count); }
+static bool               vt_skiplist_itor_prevn(void* itor, size_t count)                        { return skiplist_itor_prevn(itor, count); }
+static bool               vt_skiplist_itor_first(void* itor)                                      { return skiplist_itor_first(itor); }
+static bool               vt_skiplist_itor_last(void* itor)                                       { return skiplist_itor_last(itor); }
+static const void*        vt_skiplist_itor_key(const void* itor)                                  { return skiplist_itor_key(itor); }
+static void**             vt_skiplist_itor_datum(void* itor)                                      { return skiplist_itor_datum(itor); }
+static bool               vt_skiplist_itor_search(void* itor, const void* key)                    { return skiplist_itor_search(itor, key); }
+static bool               vt_skiplist_itor_search_le(void* itor, const void* key)                 { return skiplist_itor_search_le(itor, key); }
+static bool               vt_skiplist_itor_search_lt(void* itor, const void* key)                 { return skiplist_itor_search_lt(itor, key); }
+static bool               vt_skiplist_itor_search_ge(void* itor, const void* key)                 { return skiplist_itor_search_ge(itor, key); }
+static bool               vt_skiplist_itor_search_gt(void* itor, const void* key)                 { return skiplist_itor_search_gt(itor, key); }
+static bool               vt_skiplist_itor_remove(void* itor)                                     { return skiplist_itor_remove(itor); }
+static int                vt_skiplist_itor_compare(const void* itor1, const void* itor2)          { return skiplist_itor_compare(itor1, itor2); }
+
 static const dict_vtable skiplist_vtable = {
     true,
-    (dict_inew_func)        skiplist_dict_itor_new,
-    (dict_dfree_func)       skiplist_free,
-    (dict_insert_func)      skiplist_insert,
-    (dict_search_func)      skiplist_search,
-    (dict_search_func)      skiplist_search_le,
-    (dict_search_func)      skiplist_search_lt,
-    (dict_search_func)      skiplist_search_ge,
-    (dict_search_func)      skiplist_search_gt,
-    (dict_remove_func)      skiplist_remove,
-    (dict_clear_func)       skiplist_clear,
-    (dict_traverse_func)    skiplist_traverse,
-    (dict_select_func)      NULL,
-    (dict_count_func)       skiplist_count,
-    (dict_verify_func)      skiplist_verify,
+    vt_skiplist_dict_itor_new,
+    vt_skiplist_free,
+    vt_skiplist_insert,
+    vt_skiplist_search,
+    vt_skiplist_search_le,
+    vt_skiplist_search_lt,
+    vt_skiplist_search_ge,
+    vt_skiplist_search_gt,
+    vt_skiplist_remove,
+    vt_skiplist_clear,
+    vt_skiplist_traverse,
+    vt_skiplist_select,
+    vt_skiplist_count,
+    vt_skiplist_verify,
 };
 
 static const itor_vtable skiplist_itor_vtable = {
-    (dict_ifree_func)       skiplist_itor_free,
-    (dict_valid_func)       skiplist_itor_valid,
-    (dict_invalidate_func)  skiplist_itor_invalidate,
-    (dict_next_func)        skiplist_itor_next,
-    (dict_prev_func)        skiplist_itor_prev,
-    (dict_nextn_func)       skiplist_itor_nextn,
-    (dict_prevn_func)       skiplist_itor_prevn,
-    (dict_first_func)       skiplist_itor_first,
-    (dict_last_func)        skiplist_itor_last,
-    (dict_key_func)         skiplist_itor_key,
-    (dict_datum_func)       skiplist_itor_datum,
-    (dict_isearch_func)     skiplist_itor_search,
-    (dict_isearch_func)     skiplist_itor_search_le,
-    (dict_isearch_func)     skiplist_itor_search_lt,
-    (dict_isearch_func)     skiplist_itor_search_ge,
-    (dict_isearch_func)     skiplist_itor_search_gt,
-    (dict_iremove_func)     skiplist_itor_remove,
-    (dict_icompare_func)    skiplist_itor_compare,
+    vt_skiplist_itor_free,
+    vt_skiplist_itor_valid,
+    vt_skiplist_itor_invalidate,
+    vt_skiplist_itor_next,
+    vt_skiplist_itor_prev,
+    vt_skiplist_itor_nextn,
+    vt_skiplist_itor_prevn,
+    vt_skiplist_itor_first,
+    vt_skiplist_itor_last,
+    vt_skiplist_itor_key,
+    vt_skiplist_itor_datum,
+    vt_skiplist_itor_search,
+    vt_skiplist_itor_search_le,
+    vt_skiplist_itor_search_lt,
+    vt_skiplist_itor_search_ge,
+    vt_skiplist_itor_search_gt,
+    vt_skiplist_itor_remove,
+    vt_skiplist_itor_compare,
 };
 
 static inline skip_node* node_new(void* key, unsigned link_count);
@@ -111,9 +152,15 @@ skiplist*
 skiplist_new(dict_compare_func cmp_func, unsigned max_link)
 {
     ASSERT(cmp_func != NULL);
-    ASSERT(max_link > 0);
 
-    if (max_link > MAX_LINK)
+    /* Clamp both ends rather than trusting the caller, consistently with how
+     * the upper bound has always been handled. The lower bound matters:
+     * rand_link_count() can produce at most max_link - 1 links, so a max_link
+     * below MIN_LINK would yield zero-link nodes that node_insert() silently
+     * fails to link into the list -- losing every element and leaking it. */
+    if (max_link < MIN_LINK)
+        max_link = MIN_LINK;
+    else if (max_link > MAX_LINK)
         max_link = MAX_LINK;
 
     skiplist* list = MALLOC(sizeof(*list));
@@ -442,6 +489,28 @@ skiplist_count(const skiplist* list)
 }
 
 bool
+skiplist_select(skiplist* list, size_t n, const void** key, void** datum)
+{
+    if (n >= list->count) {
+        if (key)
+            *key = NULL;
+        if (datum)
+            *datum = NULL;
+        return false;
+    }
+    /* No span counts are maintained, so this walks the bottom level: O(n)
+     * rather than the O(lg n) the trees manage. */
+    skip_node* node = list->head->link[0];
+    while (n--)
+        node = node->link[0];
+    if (key)
+        *key = node->key;
+    if (datum)
+        *datum = node->datum;
+    return true;
+}
+
+bool
 skiplist_verify(const skiplist* list)
 {
     if (list->count == 0) {
@@ -457,6 +526,7 @@ skiplist_verify(const skiplist* list)
         VERIFY(list->head->link[i] == NULL);
     }
     unsigned observed_top_link = 0;
+    size_t observed_count = 0;
 
     skip_node* prev = NULL;
     skip_node* node = list->head->link[0];
@@ -469,14 +539,20 @@ skiplist_verify(const skiplist* list)
         VERIFY(node->link_count <= list->top_link);
         for (unsigned k = 0; k < node->link_count; k++) {
             if (node->link[k]) {
-                VERIFY(node->link[k]->link_count >= k);
+                /* To occupy level k a node needs links 0..k, i.e. more than k
+                 * of them. */
+                VERIFY(node->link[k]->link_count > k);
+                /* Links must run strictly forward in key order. */
+                VERIFY(list->cmp_func(node->key, node->link[k]->key) < 0);
             }
         }
 
+        ++observed_count;
         prev = node;
         node = node->link[0];
     }
     VERIFY(list->top_link == observed_top_link);
+    VERIFY(list->count == observed_count);
     return true;
 }
 
@@ -656,9 +732,8 @@ skiplist_itor_remove(skiplist_itor* itor)
         return false;
     /* XXX make this smarter */
     dict_remove_result result = skiplist_remove(itor->list, itor->node->key);
-    ASSERT(result.removed);
     itor->node = NULL;
-    return true;
+    return result.removed;
 }
 
 static inline skip_node*
@@ -678,9 +753,16 @@ node_new(void* key, unsigned link_count)
     return node;
 }
 
+/* Returns a link count in [1, max_link - 1], geometrically distributed with
+ * ratio 1/4 (two coin flips per level). */
 static inline unsigned
 rand_link_count(skiplist* list)
 {
-    unsigned count = (unsigned) __builtin_ctz(dict_rand()) / 2 + 1;
-    return (count >= list->max_link) ? list->max_link - 1 : count;
+    /* dict_ctz() requires a nonzero argument and random() does return 0, so
+     * fold zero onto the largest trailing-zero count it could represent. */
+    const unsigned r = dict_rand();
+    const unsigned tz = r ? dict_ctz(r) : DICT_RAND_BITS;
+    const unsigned count = tz / 2 + 1;
+    ASSERT(list->max_link >= MIN_LINK);
+    return MIN(count, list->max_link - 1);
 }

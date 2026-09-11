@@ -69,6 +69,7 @@ bool            hashtable2_itor_search(hashtable2_itor* itor, const void* key);
 const void*     hashtable2_itor_key(const hashtable2_itor* itor);
 void**          hashtable2_itor_datum(hashtable2_itor* itor);
 bool            hashtable2_itor_remove(hashtable2_itor* itor);
+int             hashtable2_itor_compare(const hashtable2_itor* i1, const hashtable2_itor* i2);
 
 END_DECL
 

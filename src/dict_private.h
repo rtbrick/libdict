@@ -101,7 +101,40 @@
 # define GCC_CONST
 #endif
 
+/* random() is POSIX rather than ISO C, and is not declared by <stdlib.h> under
+ * a strict ISO compilation, so declare it explicitly. Toolchains that do not
+ * provide it fall back to combining rand() calls, since RAND_MAX is only
+ * guaranteed to be at least 32767. */
+#if defined(_MSC_VER) || defined(_WIN32)
+static inline unsigned dict_rand(void) {
+    return ((unsigned) rand() << 30) ^ ((unsigned) rand() << 15) ^ (unsigned) rand();
+}
+#else
 extern long random(void);
-static inline unsigned dict_rand() { return (unsigned) random(); }
+static inline unsigned dict_rand(void) { return (unsigned) random(); }
+#endif
+
+/* Number of low-order bits of dict_rand() that are usable: random() is
+ * specified to return a value in [0, 2^31), so the top bit of an unsigned is
+ * always clear. Callers needing a full-width value must combine two calls. */
+#define DICT_RAND_BITS  31
+
+/* Count trailing zero bits of |n|, which must be nonzero. Unlike
+ * __builtin_ctz() this is available on every toolchain. */
+static inline unsigned
+dict_ctz(unsigned n)
+{
+    ASSERT(n != 0);
+#if defined(__GNUC__) || defined(__clang__)
+    return (unsigned) __builtin_ctz(n);
+#else
+    unsigned count = 0;
+    while (!(n & 1u)) {
+        n >>= 1;
+        ++count;
+    }
+    return count;
+#endif
+}
 
 #endif /* !LIBDICT_DICT_PRIVATE_H__ */
