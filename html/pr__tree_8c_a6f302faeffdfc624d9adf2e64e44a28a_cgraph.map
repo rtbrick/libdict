@@ -1,5 +1,5 @@
 <map id="pr_itor_prev" name="pr_itor_prev">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,95,31"/>
+<area shape="rect" id="Node000001" title="Move |itor| to the previous element in key order and return true, or unposition it and return false i..." alt="" coords="5,5,95,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#afad64b5a28a44ca544fe3f0b8011db17" title=" " alt="" coords="143,5,265,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,16,127,16,127,21,95,21"/>
 <area shape="rect" id="Node000003" href="$tree__common_8c.html#aad7c42c6dfa4a11176cff91f41c9383a" title=" " alt="" coords="313,5,423,31"/>

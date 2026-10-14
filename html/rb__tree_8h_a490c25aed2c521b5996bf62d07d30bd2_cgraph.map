@@ -1,5 +1,5 @@
 <map id="rb_itor_search_le" name="rb_itor_search_le">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,126,31"/>
+<area shape="rect" id="Node000001" title="Position |itor| on the greatest key less than or equal to |key| and return true, or unposition it and..." alt="" coords="5,5,126,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#a630ac71696ac60548789b01f1e618350" title=" " alt="" coords="174,5,327,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,16,159,16,159,21,126,21"/>
 <area shape="rect" id="Node000003" href="$tree__common_8c.html#a1e5a4773127f62034080c522c657c5d1" title=" " alt="" coords="375,5,516,31"/>

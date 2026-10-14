@@ -1,5 +1,5 @@
 <map id="hashtable2_itor_key" name="hashtable2_itor_key">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,142,31"/>
-<area shape="rect" id="Node000002" href="$hashtable2_8c.html#a2d78df14e4791b628483129358ffab7c" title=" " alt="" coords="190,5,333,31"/>
+<area shape="rect" id="Node000001" title="Return the key |itor| is positioned on, or NULL if it is not positioned." alt="" coords="5,5,142,31"/>
+<area shape="rect" id="Node000002" href="$hashtable2_8c.html#a2d78df14e4791b628483129358ffab7c" title="Return whether |itor| is positioned on an element." alt="" coords="190,5,333,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,16,174,16,174,21,142,21"/>
 </map>

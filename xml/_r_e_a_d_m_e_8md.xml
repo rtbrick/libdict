@@ -30,7 +30,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">The<sp/>API<sp/>and<sp/>code<sp/>are<sp/>written<sp/>with<sp/>efficiency<sp/>as<sp/>a<sp/>primary<sp/>concern.<sp/>For<sp/>example,<sp/>an<sp/>insert<sp/>call<sp/>returns<sp/>a<sp/>boolean<sp/>(`dict_insert_result.inserted`)<sp/>that<sp/>is<sp/>`true`<sp/>if<sp/>the<sp/>key<sp/>was<sp/>inserted,<sp/>i.e.<sp/>was<sp/>not<sp/>already<sp/>present,<sp/>and<sp/>`false`<sp/>if<sp/>an<sp/>existing<sp/>entry<sp/>was<sp/>found,<sp/>together<sp/>with<sp/>a<sp/>pointer<sp/>to<sp/>the<sp/>location<sp/>of<sp/>the<sp/>associated<sp/>data.<sp/>Thus,<sp/>an<sp/>insert-or-update<sp/>operation<sp/>can<sp/>be<sp/>supported<sp/>with<sp/>a<sp/>single<sp/>traversal<sp/>of<sp/>the<sp/>data<sp/>structure.<sp/>In<sp/>addition,<sp/>almost<sp/>all<sp/>recursive<sp/>algorithms<sp/>have<sp/>been<sp/>rewritten<sp/>to<sp/>use<sp/>iteration<sp/>instead.</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Documentation<sp/>is<sp/>generated<sp/>by<sp/>Doxygen<sp/>on<sp/>every<sp/>commit<sp/>to<sp/>master<sp/>and<sp/>is<sp/>available<sp/>[here](https://rtbrick.github.io/libdict/html).</highlight></codeline>
+<codeline><highlight class="normal">Documentation<sp/>is<sp/>generated<sp/>by<sp/>Doxygen<sp/>on<sp/>every<sp/>commit<sp/>to<sp/>master<sp/>and<sp/>is<sp/>available<sp/>[here](https://rtbrick.github.io/libdict/html).<sp/>Changes<sp/>between<sp/>releases<sp/>are<sp/>listed<sp/>in<sp/>[CHANGELOG.md](CHANGELOG.md).</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Usage<sp/>notes</highlight></codeline>
 <codeline></codeline>

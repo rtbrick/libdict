@@ -674,8 +674,10 @@
           <declname>size</declname>
         </param>
         <briefdescription>
+<para>Create an empty hash table that compares keys with |cmp_func| and hashes them with |hash_func| (neither may be NULL), starting with at least |size| slots: the count is rounded up to the next entry of an internal table of primes (11, 17, 37, 67, ... roughly doubling). </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns NULL if memory cannot be allocated. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -709,8 +711,10 @@
           <declname>size</declname>
         </param>
         <briefdescription>
+<para>Like <ref refid="hashtable_8h_1af455c560cff947a8088f557ab119795a" kindref="member">hashtable_new()</ref>, but wrapped in a generic <ref refid="structdict" kindref="compound">dict</ref> for use with the dict_* macros. </para>
         </briefdescription>
         <detaileddescription>
+<para>Free it with <ref refid="dict_8c_1a4ffb34d3cb396bb2a79d2e21298c3bdb" kindref="member">dict_free()</ref>. Returns NULL if memory cannot be allocated. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -736,8 +740,10 @@
           <declname>delete_func</declname>
         </param>
         <briefdescription>
+<para>Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL, and free the table. </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns the number of elements removed. Iterators over the table may afterwards only be freed. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -761,8 +767,10 @@
           <declname>key</declname>
         </param>
         <briefdescription>
+<para>Insert |key| unless an equal key is present. </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns {&amp;datum, true} for a new key, whose datum starts as NULL; the table stores the |key| pointer itself, it does not copy the key. If an equal key is present, returns {&amp;datum, false} with that key&apos;s datum, and |key| is not stored and still belongs to the caller. Returns {NULL, false} if memory cannot be allocated. May grow the table first, which invalidates every iterator over it; inserting a key that is already present never does. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -797,6 +805,7 @@
           <declname>key</declname>
         </param>
         <briefdescription>
+<para>Return the address of the datum stored for |key|, or NULL if |key| is not present. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -851,8 +860,10 @@
           <declname>key</declname>
         </param>
         <briefdescription>
+<para>Remove the element with key |key|. </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns {key, datum, true}, handing the stored key and datum back to the caller (no delete function is called), or {NULL, NULL, false} if |key| is not present. See <ref refid="iterator_invalidation" kindref="compound">Iterator invalidation</ref> for which iterators this invalidates. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -880,8 +891,10 @@
           <declname>delete_func</declname>
         </param>
         <briefdescription>
+<para>Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL. </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns the number of elements removed. The table stays usable. See <ref refid="iterator_invalidation" kindref="compound">Iterator invalidation</ref> for which iterators this invalidates. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -913,8 +926,10 @@
           <declname>user_data</declname>
         </param>
         <briefdescription>
+<para>Call |visit|(key, datum, |user_data|) for each element in table order (unspecified), stopping early if |visit| returns false. </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns the number of calls made. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -935,8 +950,10 @@
           <declname>table</declname>
         </param>
         <briefdescription>
+<para>Return the number of elements. </para>
         </briefdescription>
         <detaileddescription>
+<para>Takes O(1) time. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -953,6 +970,7 @@
           <declname>table</declname>
         </param>
         <briefdescription>
+<para>Return the current number of slots in the table. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -971,6 +989,7 @@
           <declname>table</declname>
         </param>
         <briefdescription>
+<para>Return the number of slots whose chain is not empty. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -991,11 +1010,14 @@
         </param>
         <param>
           <type>unsigned</type>
-          <declname>new_size</declname>
+          <declname>size</declname>
+          <defname>new_size</defname>
         </param>
         <briefdescription>
+<para>Rehash the table into at least |size| slots, rounded up as in <ref refid="hashtable_8h_1af455c560cff947a8088f557ab119795a" kindref="member">hashtable_new()</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns true on success, or if the table already has that many slots. Returns false, leaving the table unchanged, if memory cannot be allocated, or if the slot array would not fit in a size_t. A successful resize invalidates every iterator over the table. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1020,8 +1042,10 @@
           <declname>table</declname>
         </param>
         <briefdescription>
+<para>Check the internal invariants of the table and return true if they hold, or print the first failed check to stderr and return false. </para>
         </briefdescription>
         <detaileddescription>
+<para>Meant for testing and debugging; takes O(n) time. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1041,8 +1065,10 @@
           <declname>table</declname>
         </param>
         <briefdescription>
+<para>Create an iterator over |table| that is not positioned on any element yet. </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns NULL if memory cannot be allocated. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1064,8 +1090,10 @@
           <declname>table</declname>
         </param>
         <briefdescription>
+<para>Like <ref refid="hashtable_8h_1a42ef1560386cd5b2ed4bbda89066305a" kindref="member">hashtable_itor_new()</ref>, but wrapped in a generic <ref refid="structdict__itor" kindref="compound">dict_itor</ref> for use with the dict_itor_* macros. </para>
         </briefdescription>
         <detaileddescription>
+<para>Free it with <ref refid="dict_8c_1ad63f3fe30bbbf82147a6eb419ab1f040" kindref="member">dict_itor_free()</ref>. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1086,6 +1114,7 @@
           <declname>itor</declname>
         </param>
         <briefdescription>
+<para>Free an iterator. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -1138,8 +1167,10 @@
           <declname>itor</declname>
         </param>
         <briefdescription>
+<para>Return whether |itor| is positioned on an element. </para>
         </briefdescription>
         <detaileddescription>
+<para>False also after a modification of the table that invalidated it. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1156,6 +1187,7 @@
           <declname>itor</declname>
         </param>
         <briefdescription>
+<para>Unposition |itor|, so that it is not positioned on any element. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -1175,8 +1207,10 @@
           <declname>itor</declname>
         </param>
         <briefdescription>
+<para>Move |itor| to the next element in table order (unspecified) and return true, or unposition it and return false if there is none. </para>
         </briefdescription>
         <detaileddescription>
+<para>An unpositioned iterator stays unpositioned and returns false. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1198,8 +1232,10 @@
           <declname>itor</declname>
         </param>
         <briefdescription>
+<para>Move |itor| to the previous element in table order (unspecified) and return true, or unposition it and return false if there is none. </para>
         </briefdescription>
         <detaileddescription>
+<para>An unpositioned iterator stays unpositioned and returns false. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1225,8 +1261,10 @@
           <declname>count</declname>
         </param>
         <briefdescription>
+<para>Move |itor| |count| elements forward and return whether it is still positioned. </para>
         </briefdescription>
         <detaileddescription>
+<para>It becomes unpositioned if it runs past the last element. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1247,8 +1285,10 @@
           <declname>count</declname>
         </param>
         <briefdescription>
+<para>Move |itor| |count| elements back and return whether it is still positioned. </para>
         </briefdescription>
         <detaileddescription>
+<para>It becomes unpositioned if it runs past the first element. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1265,6 +1305,7 @@
           <declname>itor</declname>
         </param>
         <briefdescription>
+<para>Position |itor| on the first element in table order (unspecified) and return true, or unposition it and return false if the table is empty. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -1289,6 +1330,7 @@
           <declname>itor</declname>
         </param>
         <briefdescription>
+<para>Position |itor| on the last element in table order (unspecified) and return true, or unposition it and return false if the table is empty. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -1318,6 +1360,7 @@
           <declname>key</declname>
         </param>
         <briefdescription>
+<para>Position |itor| on |key| and return true, or unposition it and return false if |key| is not present. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -1347,8 +1390,10 @@
           <declname>itor</declname>
         </param>
         <briefdescription>
+<para>Return the key |itor| is positioned on, or NULL if it is not positioned. </para>
         </briefdescription>
         <detaileddescription>
+<para>The key belongs to the container and must not be modified in a way that changes how it compares. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1367,6 +1412,7 @@
           <declname>itor</declname>
         </param>
         <briefdescription>
+<para>Return the address of the datum |itor| is positioned on, through which it can be read or replaced, or NULL if it is not positioned. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -1386,8 +1432,10 @@
           <declname>itor</declname>
         </param>
         <briefdescription>
+<para>Remove the element |itor| is positioned on and unposition |itor|; return false if it was not positioned. </para>
         </briefdescription>
         <detaileddescription>
+<para>No delete function is called, so fetch the key and datum first if they need freeing. See <ref refid="iterator_invalidation" kindref="compound">Iterator invalidation</ref> for which iterators this invalidates. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

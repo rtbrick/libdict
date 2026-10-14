@@ -1,5 +1,5 @@
 <map id="tr_tree_traverse" name="tr_tree_traverse">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,118,31"/>
+<area shape="rect" id="Node000001" title="Call |visit|(key, datum, |user_data|) for each element in key order, stopping early if |visit| return..." alt="" coords="5,5,118,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#a8af8d7bc05c41b6b1889714238c541e1" title=" " alt="" coords="166,5,263,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,16,150,16,150,21,118,21"/>
 <area shape="rect" id="Node000003" href="$tree__common_8c.html#a7b6de5488b23a09de4f838c218adabd0" title=" " alt="" coords="468,5,575,31"/>

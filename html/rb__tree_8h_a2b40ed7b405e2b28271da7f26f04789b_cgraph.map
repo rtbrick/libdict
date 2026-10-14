@@ -1,5 +1,5 @@
 <map id="rb_dict_itor_new" name="rb_dict_itor_new">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,122,31"/>
-<area shape="rect" id="Node000002" href="$rb__tree_8c.html#a5b8d3d3eb399c02c815d24bc1bc7cb35" title=" " alt="" coords="170,5,258,31"/>
+<area shape="rect" id="Node000001" title="Like rb_itor_new(), but wrapped in a generic dict_itor for use with the dict_itor_* macros." alt="" coords="5,5,122,31"/>
+<area shape="rect" id="Node000002" href="$rb__tree_8c.html#a5b8d3d3eb399c02c815d24bc1bc7cb35" title="Create an iterator over |tree| that is not positioned on any element yet." alt="" coords="170,5,258,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,16,154,16,154,21,122,21"/>
 </map>

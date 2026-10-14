@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">libdict
+   <div id="projectname">libdict<span id="projectnumber">&#160;1.0.6-30-g1b80462</span>
    </div>
    <div id="projectbrief">Data Structure C Library</div>
   </td>
@@ -107,7 +107,7 @@ Include dependency graph for hashtable.c:</div>
 <div class="center"><img src="hashtable_8c__incl.png" border="0" usemap="#asrc_2hashtable_8c" alt=""/></div>
 <map name="asrc_2hashtable_8c" id="asrc_2hashtable_8c">
 <area shape="rect" title=" " alt="" coords="727,5,836,31"/>
-<area shape="rect" href="hashtable_8h.html" title=" " alt="" coords="586,79,673,105"/>
+<area shape="rect" href="hashtable_8h.html" title="Hash table with separate chaining; each chain is kept sorted by hash value." alt="" coords="586,79,673,105"/>
 <area shape="poly" title=" " alt="" coords="757,34,671,74,668,70,755,29"/>
 <area shape="rect" title=" " alt="" coords="698,79,761,105"/>
 <area shape="poly" title=" " alt="" coords="775,33,750,68,745,65,771,30"/>
@@ -124,21 +124,21 @@ Include dependency graph for hashtable.c:</div>
 <area shape="poly" title=" " alt="" coords="603,172,427,190,304,207,176,228,175,223,304,201,427,185,603,166"/>
 <area shape="rect" title=" " alt="" coords="184,226,257,252"/>
 <area shape="poly" title=" " alt="" coords="603,173,466,194,273,229,272,223,465,189,603,168"/>
-<area shape="rect" href="hashtable2_8h.html" title=" " alt="" coords="281,226,376,252"/>
+<area shape="rect" href="hashtable2_8h.html" title="Hash table with open addressing and linear probing." alt="" coords="281,226,376,252"/>
 <area shape="poly" title=" " alt="" coords="604,175,388,225,387,220,602,169"/>
-<area shape="rect" href="hb__tree_8h.html" title=" " alt="" coords="399,226,474,252"/>
+<area shape="rect" href="hb__tree_8h.html" title="Height&#45;balanced (AVL) tree." alt="" coords="399,226,474,252"/>
 <area shape="poly" title=" " alt="" coords="604,177,477,223,475,218,602,172"/>
-<area shape="rect" href="pr__tree_8h.html" title=" " alt="" coords="498,226,569,252"/>
+<area shape="rect" href="pr__tree_8h.html" title="Path&#45;reduction tree [Gonnet 1983]." alt="" coords="498,226,569,252"/>
 <area shape="poly" title=" " alt="" coords="608,181,556,219,553,214,605,177"/>
-<area shape="rect" href="rb__tree_8h.html" title=" " alt="" coords="594,226,665,252"/>
+<area shape="rect" href="rb__tree_8h.html" title="Red&#45;black tree." alt="" coords="594,226,665,252"/>
 <area shape="poly" title=" " alt="" coords="625,179,624,211,618,211,620,178"/>
-<area shape="rect" href="skiplist_8h.html" title=" " alt="" coords="690,226,762,252"/>
+<area shape="rect" href="skiplist_8h.html" title="Skip list [Pugh 1990]." alt="" coords="690,226,762,252"/>
 <area shape="poly" title=" " alt="" coords="641,177,691,215,688,219,637,181"/>
-<area shape="rect" href="sp__tree_8h.html" title=" " alt="" coords="786,226,860,252"/>
+<area shape="rect" href="sp__tree_8h.html" title="Splay tree." alt="" coords="786,226,860,252"/>
 <area shape="poly" title=" " alt="" coords="656,176,772,219,770,224,655,181"/>
-<area shape="rect" href="tr__tree_8h.html" title=" " alt="" coords="885,226,953,252"/>
+<area shape="rect" href="tr__tree_8h.html" title="Treap: a binary search tree on the keys that is at the same time a max&#45;heap on per&#45;node priorities." alt="" coords="885,226,953,252"/>
 <area shape="poly" title=" " alt="" coords="657,173,861,224,870,226,869,231,860,229,656,178"/>
-<area shape="rect" href="wb__tree_8h.html" title=" " alt="" coords="978,226,1055,252"/>
+<area shape="rect" href="wb__tree_8h.html" title="Weight&#45;balanced tree, BB[alpha] with alpha = 1 &#45; sqrt(2)/2." alt="" coords="978,226,1055,252"/>
 <area shape="poly" title=" " alt="" coords="657,170,954,224,963,226,962,231,953,229,656,175"/>
 <area shape="poly" title=" " alt="" coords="375,226,588,176,589,181,376,231"/>
 <area shape="poly" title=" " alt="" coords="473,224,589,182,591,187,475,229"/>
@@ -182,60 +182,88 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af455c560cff947a8088f557ab119795a" id="r_af455c560cff947a8088f557ab119795a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhashtable.html">hashtable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af455c560cff947a8088f557ab119795a">hashtable_new</a> (<a class="el" href="dict_8h.html#a1704b677563c3195fcc69dbc42ff8704">dict_compare_func</a> cmp_func, <a class="el" href="dict_8h.html#a849c4295058ff98298369ba530fd254d">dict_hash_func</a> hash_func, unsigned size)</td></tr>
+<tr class="memdesc:af455c560cff947a8088f557ab119795a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an empty hash table that compares keys with |cmp_func| and hashes them with |hash_func| (neither may be NULL), starting with at least |size| slots: the count is rounded up to the next entry of an internal table of primes (11, 17, 37, 67, ... roughly doubling).  <br /></td></tr>
 <tr class="separator:af455c560cff947a8088f557ab119795a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbe4b0247e04c69486fe907df6b34849" id="r_abbe4b0247e04c69486fe907df6b34849"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdict.html">dict</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbe4b0247e04c69486fe907df6b34849">hashtable_dict_new</a> (<a class="el" href="dict_8h.html#a1704b677563c3195fcc69dbc42ff8704">dict_compare_func</a> cmp_func, <a class="el" href="dict_8h.html#a849c4295058ff98298369ba530fd254d">dict_hash_func</a> hash_func, unsigned size)</td></tr>
+<tr class="memdesc:abbe4b0247e04c69486fe907df6b34849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="hashtable_8h.html#af455c560cff947a8088f557ab119795a" title="Create an empty hash table that compares keys with |cmp_func| and hashes them with |hash_func| (neith...">hashtable_new()</a>, but wrapped in a generic <a class="el" href="structdict.html">dict</a> for use with the dict_* macros.  <br /></td></tr>
 <tr class="separator:abbe4b0247e04c69486fe907df6b34849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24bb5d1cc6d174e890eebcfbf4ecf4ee" id="r_a24bb5d1cc6d174e890eebcfbf4ecf4ee"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24bb5d1cc6d174e890eebcfbf4ecf4ee">hashtable_free</a> (<a class="el" href="structhashtable.html">hashtable</a> *table, <a class="el" href="dict_8h.html#a5301c8938ac34a1c9f18078bc6464385">dict_delete_func</a> delete_func)</td></tr>
+<tr class="memdesc:a24bb5d1cc6d174e890eebcfbf4ecf4ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL, and free the table.  <br /></td></tr>
 <tr class="separator:a24bb5d1cc6d174e890eebcfbf4ecf4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67bcbfe82dc7d75e26d28e82593de9ca" id="r_a67bcbfe82dc7d75e26d28e82593de9ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdict__insert__result.html">dict_insert_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67bcbfe82dc7d75e26d28e82593de9ca">hashtable_insert</a> (<a class="el" href="structhashtable.html">hashtable</a> *table, void *key)</td></tr>
+<tr class="memdesc:a67bcbfe82dc7d75e26d28e82593de9ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert |key| unless an equal key is present.  <br /></td></tr>
 <tr class="separator:a67bcbfe82dc7d75e26d28e82593de9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf6fe1dbd03b91f46fa0c2cc9b36f455" id="r_acf6fe1dbd03b91f46fa0c2cc9b36f455"><td class="memItemLeft" align="right" valign="top">void **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf6fe1dbd03b91f46fa0c2cc9b36f455">hashtable_search</a> (<a class="el" href="structhashtable.html">hashtable</a> *table, const void *key)</td></tr>
+<tr class="memdesc:acf6fe1dbd03b91f46fa0c2cc9b36f455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the address of the datum stored for |key|, or NULL if |key| is not present.  <br /></td></tr>
 <tr class="separator:acf6fe1dbd03b91f46fa0c2cc9b36f455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f60f28533279fae7e1b46de945986c5" id="r_a2f60f28533279fae7e1b46de945986c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdict__remove__result.html">dict_remove_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f60f28533279fae7e1b46de945986c5">hashtable_remove</a> (<a class="el" href="structhashtable.html">hashtable</a> *table, const void *key)</td></tr>
+<tr class="memdesc:a2f60f28533279fae7e1b46de945986c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the element with key |key|.  <br /></td></tr>
 <tr class="separator:a2f60f28533279fae7e1b46de945986c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae522c5e1cb380ff321c81d21b3c6f08" id="r_aae522c5e1cb380ff321c81d21b3c6f08"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae522c5e1cb380ff321c81d21b3c6f08">hashtable_clear</a> (<a class="el" href="structhashtable.html">hashtable</a> *table, <a class="el" href="dict_8h.html#a5301c8938ac34a1c9f18078bc6464385">dict_delete_func</a> delete_func)</td></tr>
+<tr class="memdesc:aae522c5e1cb380ff321c81d21b3c6f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL.  <br /></td></tr>
 <tr class="separator:aae522c5e1cb380ff321c81d21b3c6f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab48ef7547bc43acd328f97dd8695250a" id="r_ab48ef7547bc43acd328f97dd8695250a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab48ef7547bc43acd328f97dd8695250a">hashtable_traverse</a> (<a class="el" href="structhashtable.html">hashtable</a> *table, <a class="el" href="dict_8h.html#aebbefe3aa81b20e1254e8a7a5253caf6">dict_visit_func</a> visit, void *user_data)</td></tr>
+<tr class="memdesc:ab48ef7547bc43acd328f97dd8695250a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call |visit|(key, datum, |user_data|) for each element in table order (unspecified), stopping early if |visit| returns false.  <br /></td></tr>
 <tr class="separator:ab48ef7547bc43acd328f97dd8695250a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2c62eeb7bfff0954dbc5a2bfa1179c" id="r_a4c2c62eeb7bfff0954dbc5a2bfa1179c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c2c62eeb7bfff0954dbc5a2bfa1179c">hashtable_count</a> (const <a class="el" href="structhashtable.html">hashtable</a> *table)</td></tr>
+<tr class="memdesc:a4c2c62eeb7bfff0954dbc5a2bfa1179c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of elements.  <br /></td></tr>
 <tr class="separator:a4c2c62eeb7bfff0954dbc5a2bfa1179c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad37da2d98910ad7ad07a9bd325128e45" id="r_ad37da2d98910ad7ad07a9bd325128e45"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad37da2d98910ad7ad07a9bd325128e45">hashtable_size</a> (const <a class="el" href="structhashtable.html">hashtable</a> *table)</td></tr>
+<tr class="memdesc:ad37da2d98910ad7ad07a9bd325128e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current number of slots in the table.  <br /></td></tr>
 <tr class="separator:ad37da2d98910ad7ad07a9bd325128e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4e6def277e47c1ed3088462dbf6b652" id="r_ae4e6def277e47c1ed3088462dbf6b652"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4e6def277e47c1ed3088462dbf6b652">hashtable_slots_used</a> (const <a class="el" href="structhashtable.html">hashtable</a> *table)</td></tr>
+<tr class="memdesc:ae4e6def277e47c1ed3088462dbf6b652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of slots whose chain is not empty.  <br /></td></tr>
 <tr class="separator:ae4e6def277e47c1ed3088462dbf6b652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99a194118712fc1cfc4e3d954c9887a7" id="r_a99a194118712fc1cfc4e3d954c9887a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99a194118712fc1cfc4e3d954c9887a7">hashtable_resize</a> (<a class="el" href="structhashtable.html">hashtable</a> *table, unsigned new_size)</td></tr>
+<tr class="memdesc:a99a194118712fc1cfc4e3d954c9887a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rehash the table into at least |size| slots, rounded up as in <a class="el" href="hashtable_8h.html#af455c560cff947a8088f557ab119795a" title="Create an empty hash table that compares keys with |cmp_func| and hashes them with |hash_func| (neith...">hashtable_new()</a>.  <br /></td></tr>
 <tr class="separator:a99a194118712fc1cfc4e3d954c9887a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4470d170573e6d2d398cfa38e4a828cd" id="r_a4470d170573e6d2d398cfa38e4a828cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4470d170573e6d2d398cfa38e4a828cd">hashtable_verify</a> (const <a class="el" href="structhashtable.html">hashtable</a> *table)</td></tr>
+<tr class="memdesc:a4470d170573e6d2d398cfa38e4a828cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the internal invariants of the table and return true if they hold, or print the first failed check to stderr and return false.  <br /></td></tr>
 <tr class="separator:a4470d170573e6d2d398cfa38e4a828cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42ef1560386cd5b2ed4bbda89066305a" id="r_a42ef1560386cd5b2ed4bbda89066305a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structhashtable__itor.html">hashtable_itor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42ef1560386cd5b2ed4bbda89066305a">hashtable_itor_new</a> (<a class="el" href="structhashtable.html">hashtable</a> *table)</td></tr>
+<tr class="memdesc:a42ef1560386cd5b2ed4bbda89066305a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an iterator over |table| that is not positioned on any element yet.  <br /></td></tr>
 <tr class="separator:a42ef1560386cd5b2ed4bbda89066305a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a395e03d6fb1a673dacfa87784d9c1bba" id="r_a395e03d6fb1a673dacfa87784d9c1bba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdict__itor.html">dict_itor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a395e03d6fb1a673dacfa87784d9c1bba">hashtable_dict_itor_new</a> (<a class="el" href="structhashtable.html">hashtable</a> *table)</td></tr>
+<tr class="memdesc:a395e03d6fb1a673dacfa87784d9c1bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="hashtable_8h.html#a42ef1560386cd5b2ed4bbda89066305a" title="Create an iterator over |table| that is not positioned on any element yet.">hashtable_itor_new()</a>, but wrapped in a generic <a class="el" href="structdict__itor.html">dict_itor</a> for use with the dict_itor_* macros.  <br /></td></tr>
 <tr class="separator:a395e03d6fb1a673dacfa87784d9c1bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ac2a4cbf94617859785461561ac6641" id="r_a8ac2a4cbf94617859785461561ac6641"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ac2a4cbf94617859785461561ac6641">hashtable_itor_free</a> (<a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor)</td></tr>
+<tr class="memdesc:a8ac2a4cbf94617859785461561ac6641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free an iterator.  <br /></td></tr>
 <tr class="separator:a8ac2a4cbf94617859785461561ac6641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abefb05d066d3a1c9183bf8104667bce9" id="r_abefb05d066d3a1c9183bf8104667bce9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abefb05d066d3a1c9183bf8104667bce9">hashtable_itor_valid</a> (const <a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor)</td></tr>
+<tr class="memdesc:abefb05d066d3a1c9183bf8104667bce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether |itor| is positioned on an element.  <br /></td></tr>
 <tr class="separator:abefb05d066d3a1c9183bf8104667bce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab22306e18adca4372e681f440d9f15bd" id="r_ab22306e18adca4372e681f440d9f15bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab22306e18adca4372e681f440d9f15bd">hashtable_itor_invalidate</a> (<a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor)</td></tr>
+<tr class="memdesc:ab22306e18adca4372e681f440d9f15bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unposition |itor|, so that it is not positioned on any element.  <br /></td></tr>
 <tr class="separator:ab22306e18adca4372e681f440d9f15bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4640047b70788f6af358e36e4a35ecdd" id="r_a4640047b70788f6af358e36e4a35ecdd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4640047b70788f6af358e36e4a35ecdd">hashtable_itor_next</a> (<a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor)</td></tr>
+<tr class="memdesc:a4640047b70788f6af358e36e4a35ecdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move |itor| to the next element in table order (unspecified) and return true, or unposition it and return false if there is none.  <br /></td></tr>
 <tr class="separator:a4640047b70788f6af358e36e4a35ecdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab147d632aca389887973e15b382e070d" id="r_ab147d632aca389887973e15b382e070d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab147d632aca389887973e15b382e070d">hashtable_itor_prev</a> (<a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor)</td></tr>
+<tr class="memdesc:ab147d632aca389887973e15b382e070d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move |itor| to the previous element in table order (unspecified) and return true, or unposition it and return false if there is none.  <br /></td></tr>
 <tr class="separator:ab147d632aca389887973e15b382e070d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac4843e885adc5e4d700748ebf2c5230" id="r_aac4843e885adc5e4d700748ebf2c5230"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac4843e885adc5e4d700748ebf2c5230">hashtable_itor_nextn</a> (<a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor, size_t count)</td></tr>
+<tr class="memdesc:aac4843e885adc5e4d700748ebf2c5230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move |itor| |count| elements forward and return whether it is still positioned.  <br /></td></tr>
 <tr class="separator:aac4843e885adc5e4d700748ebf2c5230"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d9108429e134d8b6c06bf108677f77b" id="r_a4d9108429e134d8b6c06bf108677f77b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d9108429e134d8b6c06bf108677f77b">hashtable_itor_prevn</a> (<a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor, size_t count)</td></tr>
+<tr class="memdesc:a4d9108429e134d8b6c06bf108677f77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move |itor| |count| elements back and return whether it is still positioned.  <br /></td></tr>
 <tr class="separator:a4d9108429e134d8b6c06bf108677f77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4af5cb02f974fcafb9cbd486e273eca1" id="r_a4af5cb02f974fcafb9cbd486e273eca1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4af5cb02f974fcafb9cbd486e273eca1">hashtable_itor_first</a> (<a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor)</td></tr>
+<tr class="memdesc:a4af5cb02f974fcafb9cbd486e273eca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position |itor| on the first element in table order (unspecified) and return true, or unposition it and return false if the table is empty.  <br /></td></tr>
 <tr class="separator:a4af5cb02f974fcafb9cbd486e273eca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45f1d8e870f55a93a8aa7c6f11124080" id="r_a45f1d8e870f55a93a8aa7c6f11124080"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45f1d8e870f55a93a8aa7c6f11124080">hashtable_itor_last</a> (<a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor)</td></tr>
+<tr class="memdesc:a45f1d8e870f55a93a8aa7c6f11124080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position |itor| on the last element in table order (unspecified) and return true, or unposition it and return false if the table is empty.  <br /></td></tr>
 <tr class="separator:a45f1d8e870f55a93a8aa7c6f11124080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2618afdd980763175fab2a23333fb4a9" id="r_a2618afdd980763175fab2a23333fb4a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2618afdd980763175fab2a23333fb4a9">hashtable_itor_search</a> (<a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor, const void *key)</td></tr>
+<tr class="memdesc:a2618afdd980763175fab2a23333fb4a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position |itor| on |key| and return true, or unposition it and return false if |key| is not present.  <br /></td></tr>
 <tr class="separator:a2618afdd980763175fab2a23333fb4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5ecbe4b9400383290c704d35c7c9054" id="r_ae5ecbe4b9400383290c704d35c7c9054"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5ecbe4b9400383290c704d35c7c9054">hashtable_itor_key</a> (const <a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor)</td></tr>
+<tr class="memdesc:ae5ecbe4b9400383290c704d35c7c9054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the key |itor| is positioned on, or NULL if it is not positioned.  <br /></td></tr>
 <tr class="separator:ae5ecbe4b9400383290c704d35c7c9054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70ff976a76185ee4e9024bfa7b1b02bd" id="r_a70ff976a76185ee4e9024bfa7b1b02bd"><td class="memItemLeft" align="right" valign="top">void **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70ff976a76185ee4e9024bfa7b1b02bd">hashtable_itor_datum</a> (<a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor)</td></tr>
+<tr class="memdesc:a70ff976a76185ee4e9024bfa7b1b02bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the address of the datum |itor| is positioned on, through which it can be read or replaced, or NULL if it is not positioned.  <br /></td></tr>
 <tr class="separator:a70ff976a76185ee4e9024bfa7b1b02bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ba59e801312dab3714273fd4d060fe8" id="r_a7ba59e801312dab3714273fd4d060fe8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ba59e801312dab3714273fd4d060fe8">hashtable_itor_remove</a> (<a class="el" href="structhashtable__itor.html">hashtable_itor</a> *itor)</td></tr>
+<tr class="memdesc:a7ba59e801312dab3714273fd4d060fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the element |itor| is positioned on and unposition |itor|; return false if it was not positioned.  <br /></td></tr>
 <tr class="separator:a7ba59e801312dab3714273fd4d060fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -308,6 +336,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL. </p>
+<p>Returns the number of elements removed. The table stays usable. See <a class="el" href="iterator_invalidation.html">Iterator invalidation</a> for which iterators this invalidates. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00290">290</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
 </div>
@@ -326,6 +357,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Return the number of elements. </p>
+<p>Takes O(1) time. </p>
 
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00323">323</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
@@ -346,14 +380,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Like <a class="el" href="hashtable_8h.html#a42ef1560386cd5b2ed4bbda89066305a" title="Create an iterator over |table| that is not positioned on any element yet.">hashtable_itor_new()</a>, but wrapped in a generic <a class="el" href="structdict__itor.html">dict_itor</a> for use with the dict_itor_* macros. </p>
+<p>Free it with <a class="el" href="dict_8c.html#ad63f3fe30bbbf82147a6eb419ab1f040">dict_itor_free()</a>. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00420">420</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="hashtable_8c_a395e03d6fb1a673dacfa87784d9c1bba_cgraph.png" border="0" usemap="#ahashtable_8c_a395e03d6fb1a673dacfa87784d9c1bba_cgraph" alt=""/></div>
 <map name="ahashtable_8c_a395e03d6fb1a673dacfa87784d9c1bba_cgraph" id="ahashtable_8c_a395e03d6fb1a673dacfa87784d9c1bba_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,167,31"/>
-<area shape="rect" href="hashtable_8c.html#a42ef1560386cd5b2ed4bbda89066305a" title=" " alt="" coords="215,5,348,31"/>
+<area shape="rect" title="Like hashtable_itor_new(), but wrapped in a generic dict_itor for use with the dict_itor_* macros." alt="" coords="5,5,167,31"/>
+<area shape="rect" href="hashtable_8c.html#a42ef1560386cd5b2ed4bbda89066305a" title="Create an iterator over |table| that is not positioned on any element yet." alt="" coords="215,5,348,31"/>
 <area shape="poly" title=" " alt="" coords="167,16,199,16,199,21,167,21"/>
 </map>
 </div>
@@ -384,14 +421,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Like <a class="el" href="hashtable_8h.html#af455c560cff947a8088f557ab119795a" title="Create an empty hash table that compares keys with |cmp_func| and hashes them with |hash_func| (neith...">hashtable_new()</a>, but wrapped in a generic <a class="el" href="structdict.html">dict</a> for use with the dict_* macros. </p>
+<p>Free it with <a class="el" href="dict_8c.html#a4ffb34d3cb396bb2a79d2e21298c3bdb">dict_free()</a>. Returns NULL if memory cannot be allocated. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00168">168</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="hashtable_8c_abbe4b0247e04c69486fe907df6b34849_cgraph.png" border="0" usemap="#ahashtable_8c_abbe4b0247e04c69486fe907df6b34849_cgraph" alt=""/></div>
 <map name="ahashtable_8c_abbe4b0247e04c69486fe907df6b34849_cgraph" id="ahashtable_8c_abbe4b0247e04c69486fe907df6b34849_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,142,31"/>
-<area shape="rect" href="hashtable_8c.html#af455c560cff947a8088f557ab119795a" title=" " alt="" coords="190,5,298,31"/>
+<area shape="rect" title="Like hashtable_new(), but wrapped in a generic dict for use with the dict_* macros." alt="" coords="5,5,142,31"/>
+<area shape="rect" href="hashtable_8c.html#af455c560cff947a8088f557ab119795a" title="Create an empty hash table that compares keys with |cmp_func| and hashes them with |hash_func| (neith..." alt="" coords="190,5,298,31"/>
 <area shape="poly" title=" " alt="" coords="142,16,174,16,174,21,142,21"/>
 <area shape="rect" href="hashtable__common_8c.html#af8af08005cd8f9f8cd81dd7ca0692b11" title=" " alt="" coords="346,5,455,31"/>
 <area shape="poly" title=" " alt="" coords="299,16,330,16,330,21,299,21"/>
@@ -419,14 +459,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL, and free the table. </p>
+<p>Returns the number of elements removed. Iterators over the table may afterwards only be freed. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00187">187</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="hashtable_8c_a24bb5d1cc6d174e890eebcfbf4ecf4ee_cgraph.png" border="0" usemap="#ahashtable_8c_a24bb5d1cc6d174e890eebcfbf4ecf4ee_cgraph" alt=""/></div>
 <map name="ahashtable_8c_a24bb5d1cc6d174e890eebcfbf4ecf4ee_cgraph" id="ahashtable_8c_a24bb5d1cc6d174e890eebcfbf4ecf4ee_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,112,31"/>
-<area shape="rect" href="hashtable_8c.html#aae522c5e1cb380ff321c81d21b3c6f08" title=" " alt="" coords="160,5,272,31"/>
+<area shape="rect" title="Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL,..." alt="" coords="5,5,112,31"/>
+<area shape="rect" href="hashtable_8c.html#aae522c5e1cb380ff321c81d21b3c6f08" title="Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL." alt="" coords="160,5,272,31"/>
 <area shape="poly" title=" " alt="" coords="112,16,144,16,144,21,112,21"/>
 </map>
 </div>
@@ -452,16 +495,19 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Insert |key| unless an equal key is present. </p>
+<p>Returns {&amp;datum, true} for a new key, whose datum starts as NULL; the table stores the |key| pointer itself, it does not copy the key. If an equal key is present, returns {&amp;datum, false} with that key's datum, and |key| is not stored and still belongs to the caller. Returns {NULL, false} if memory cannot be allocated. May grow the table first, which invalidates every iterator over it; inserting a key that is already present never does. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00198">198</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="hashtable_8c_a67bcbfe82dc7d75e26d28e82593de9ca_cgraph.png" border="0" usemap="#ahashtable_8c_a67bcbfe82dc7d75e26d28e82593de9ca_cgraph" alt=""/></div>
 <map name="ahashtable_8c_a67bcbfe82dc7d75e26d28e82593de9ca_cgraph" id="ahashtable_8c_a67bcbfe82dc7d75e26d28e82593de9ca_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,122,56"/>
-<area shape="rect" href="hashtable_8c.html#a99a194118712fc1cfc4e3d954c9887a7" title=" " alt="" coords="172,5,290,31"/>
+<area shape="rect" title="Insert |key| unless an equal key is present." alt="" coords="5,31,122,56"/>
+<area shape="rect" href="hashtable_8c.html#a99a194118712fc1cfc4e3d954c9887a7" title="Rehash the table into at least |size| slots, rounded up as in hashtable_new()." alt="" coords="172,5,290,31"/>
 <area shape="poly" title=" " alt="" coords="122,32,156,27,157,32,123,37"/>
-<area shape="rect" href="hashtable_8c.html#acf6fe1dbd03b91f46fa0c2cc9b36f455" title=" " alt="" coords="170,55,293,80"/>
+<area shape="rect" href="hashtable_8c.html#acf6fe1dbd03b91f46fa0c2cc9b36f455" title="Return the address of the datum stored for |key|, or NULL if |key| is not present." alt="" coords="170,55,293,80"/>
 <area shape="poly" title=" " alt="" coords="123,49,155,54,154,59,122,54"/>
 <area shape="rect" href="hashtable__common_8c.html#af8af08005cd8f9f8cd81dd7ca0692b11" title=" " alt="" coords="341,5,450,31"/>
 <area shape="poly" title=" " alt="" coords="291,16,325,16,325,21,291,21"/>
@@ -485,6 +531,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the address of the datum |itor| is positioned on, through which it can be read or replaced, or NULL if it is not positioned. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00600">600</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
 </div>
@@ -503,6 +551,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Position |itor| on the first element in table order (unspecified) and return true, or unposition it and return false if the table is empty. </p>
 
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00539">539</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
@@ -523,6 +573,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Free an iterator. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00434">434</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
 </div>
@@ -541,6 +593,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Unposition |itor|, so that it is not positioned on any element. </p>
 
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00465">465</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
@@ -561,14 +615,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the key |itor| is positioned on, or NULL if it is not positioned. </p>
+<p>The key belongs to the container and must not be modified in a way that changes how it compares. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00594">594</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="hashtable_8c_ae5ecbe4b9400383290c704d35c7c9054_cgraph.png" border="0" usemap="#ahashtable_8c_ae5ecbe4b9400383290c704d35c7c9054_cgraph" alt=""/></div>
 <map name="ahashtable_8c_ae5ecbe4b9400383290c704d35c7c9054_cgraph" id="ahashtable_8c_ae5ecbe4b9400383290c704d35c7c9054_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,135,31"/>
-<area shape="rect" href="hashtable_8c.html#abefb05d066d3a1c9183bf8104667bce9" title=" " alt="" coords="183,5,319,31"/>
+<area shape="rect" title="Return the key |itor| is positioned on, or NULL if it is not positioned." alt="" coords="5,5,135,31"/>
+<area shape="rect" href="hashtable_8c.html#abefb05d066d3a1c9183bf8104667bce9" title="Return whether |itor| is positioned on an element." alt="" coords="183,5,319,31"/>
 <area shape="poly" title=" " alt="" coords="135,16,167,16,167,21,135,21"/>
 </map>
 </div>
@@ -590,6 +647,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Position |itor| on the last element in table order (unspecified) and return true, or unposition it and return false if the table is empty. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00555">555</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
 </div>
@@ -609,6 +668,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Create an iterator over |table| that is not positioned on any element yet. </p>
+<p>Returns NULL if memory cannot be allocated. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00407">407</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
 </div>
@@ -627,6 +689,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Move |itor| to the next element in table order (unspecified) and return true, or unposition it and return false if there is none. </p>
+<p>An unpositioned iterator stays unpositioned and returns false. </p>
 
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00472">472</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
@@ -651,14 +716,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Move |itor| |count| elements forward and return whether it is still positioned. </p>
+<p>It becomes unpositioned if it runs past the last element. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00519">519</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="hashtable_8c_aac4843e885adc5e4d700748ebf2c5230_cgraph.png" border="0" usemap="#ahashtable_8c_aac4843e885adc5e4d700748ebf2c5230_cgraph" alt=""/></div>
 <map name="ahashtable_8c_aac4843e885adc5e4d700748ebf2c5230_cgraph" id="ahashtable_8c_aac4843e885adc5e4d700748ebf2c5230_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,146,31"/>
-<area shape="rect" href="hashtable_8c.html#a4640047b70788f6af358e36e4a35ecdd" title=" " alt="" coords="194,5,327,31"/>
+<area shape="rect" title="Move |itor| |count| elements forward and return whether it is still positioned." alt="" coords="5,5,146,31"/>
+<area shape="rect" href="hashtable_8c.html#a4640047b70788f6af358e36e4a35ecdd" title="Move |itor| to the next element in table order (unspecified) and return true, or unposition it and re..." alt="" coords="194,5,327,31"/>
 <area shape="poly" title=" " alt="" coords="146,16,178,16,178,21,146,21"/>
 </map>
 </div>
@@ -679,6 +747,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Move |itor| to the previous element in table order (unspecified) and return true, or unposition it and return false if there is none. </p>
+<p>An unpositioned iterator stays unpositioned and returns false. </p>
 
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00494">494</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
@@ -703,14 +774,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Move |itor| |count| elements back and return whether it is still positioned. </p>
+<p>It becomes unpositioned if it runs past the first element. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00529">529</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="hashtable_8c_a4d9108429e134d8b6c06bf108677f77b_cgraph.png" border="0" usemap="#ahashtable_8c_a4d9108429e134d8b6c06bf108677f77b_cgraph" alt=""/></div>
 <map name="ahashtable_8c_a4d9108429e134d8b6c06bf108677f77b_cgraph" id="ahashtable_8c_a4d9108429e134d8b6c06bf108677f77b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,147,31"/>
-<area shape="rect" href="hashtable_8c.html#ab147d632aca389887973e15b382e070d" title=" " alt="" coords="195,5,329,31"/>
+<area shape="rect" title="Move |itor| |count| elements back and return whether it is still positioned." alt="" coords="5,5,147,31"/>
+<area shape="rect" href="hashtable_8c.html#ab147d632aca389887973e15b382e070d" title="Move |itor| to the previous element in table order (unspecified) and return true, or unposition it an..." alt="" coords="195,5,329,31"/>
 <area shape="poly" title=" " alt="" coords="147,16,179,16,179,21,147,21"/>
 </map>
 </div>
@@ -731,6 +805,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Remove the element |itor| is positioned on and unposition |itor|; return false if it was not positioned. </p>
+<p>No delete function is called, so fetch the key and datum first if they need freeing. See <a class="el" href="iterator_invalidation.html">Iterator invalidation</a> for which iterators this invalidates. </p>
 
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00606">606</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
@@ -755,6 +832,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Position |itor| on |key| and return true, or unposition it and return false if |key| is not present. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00574">574</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
 </div>
@@ -773,6 +852,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Return whether |itor| is positioned on an element. </p>
+<p>False also after a modification of the table that invalidated it. </p>
 
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00459">459</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
@@ -802,13 +884,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Create an empty hash table that compares keys with |cmp_func| and hashes them with |hash_func| (neither may be NULL), starting with at least |size| slots: the count is rounded up to the next entry of an internal table of primes (11, 17, 37, 67, ... roughly doubling). </p>
+<p>Returns NULL if memory cannot be allocated. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00144">144</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="hashtable_8c_af455c560cff947a8088f557ab119795a_cgraph.png" border="0" usemap="#ahashtable_8c_af455c560cff947a8088f557ab119795a_cgraph" alt=""/></div>
 <map name="ahashtable_8c_af455c560cff947a8088f557ab119795a_cgraph" id="ahashtable_8c_af455c560cff947a8088f557ab119795a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,114,31"/>
+<area shape="rect" title="Create an empty hash table that compares keys with |cmp_func| and hashes them with |hash_func| (neith..." alt="" coords="5,5,114,31"/>
 <area shape="rect" href="hashtable__common_8c.html#af8af08005cd8f9f8cd81dd7ca0692b11" title=" " alt="" coords="162,5,271,31"/>
 <area shape="poly" title=" " alt="" coords="114,16,146,16,146,21,114,21"/>
 </map>
@@ -835,6 +920,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Remove the element with key |key|. </p>
+<p>Returns {key, datum, true}, handing the stored key and datum back to the caller (no delete function is called), or {NULL, NULL, false} if |key| is not present. See <a class="el" href="iterator_invalidation.html">Iterator invalidation</a> for which iterators this invalidates. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00272">272</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
 </div>
@@ -853,10 +941,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>new_size</em></span>&#160;)</td>
+          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Rehash the table into at least |size| slots, rounded up as in <a class="el" href="hashtable_8h.html#af455c560cff947a8088f557ab119795a" title="Create an empty hash table that compares keys with |cmp_func| and hashes them with |hash_func| (neith...">hashtable_new()</a>. </p>
+<p>Returns true on success, or if the table already has that many slots. Returns false, leaving the table unchanged, if memory cannot be allocated, or if the slot array would not fit in a size_t. A successful resize invalidates every iterator over the table. </p>
 
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00345">345</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 <div class="dynheader">
@@ -864,7 +955,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="hashtable_8c_a99a194118712fc1cfc4e3d954c9887a7_cgraph.png" border="0" usemap="#ahashtable_8c_a99a194118712fc1cfc4e3d954c9887a7_cgraph" alt=""/></div>
 <map name="ahashtable_8c_a99a194118712fc1cfc4e3d954c9887a7_cgraph" id="ahashtable_8c_a99a194118712fc1cfc4e3d954c9887a7_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,124,31"/>
+<area shape="rect" title="Rehash the table into at least |size| slots, rounded up as in hashtable_new()." alt="" coords="5,5,124,31"/>
 <area shape="rect" href="hashtable__common_8c.html#af8af08005cd8f9f8cd81dd7ca0692b11" title=" " alt="" coords="172,5,281,31"/>
 <area shape="poly" title=" " alt="" coords="124,16,156,16,156,21,124,21"/>
 </map>
@@ -891,6 +982,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the address of the datum stored for |key|, or NULL if |key| is not present. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00243">243</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
 </div>
@@ -910,6 +1003,8 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the current number of slots in the table. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00329">329</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
 </div>
@@ -928,6 +1023,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Return the number of slots whose chain is not empty. </p>
 
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00335">335</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
@@ -957,6 +1054,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Call |visit|(key, datum, |user_data|) for each element in table order (unspecified), stopping early if |visit| returns false. </p>
+<p>Returns the number of calls made. </p>
+
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00310">310</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 
 </div>
@@ -975,6 +1075,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Check the internal invariants of the table and return true if they hold, or print the first failed check to stderr and return false. </p>
+<p>Meant for testing and debugging; takes O(n) time. </p>
 
 <p class="definition">Definition at line <a class="el" href="hashtable_8c_source.html#l00386">386</a> of file <a class="el" href="hashtable_8c_source.html">hashtable.c</a>.</p>
 

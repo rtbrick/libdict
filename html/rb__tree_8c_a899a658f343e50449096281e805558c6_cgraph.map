@@ -1,5 +1,5 @@
 <map id="rb_tree_free" name="rb_tree_free">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,96,31"/>
-<area shape="rect" id="Node000002" href="$rb__tree_8c.html#a4ad0f92a0a125ce3df88cc7ad4ececb1" title=" " alt="" coords="144,5,240,31"/>
+<area shape="rect" id="Node000001" title="Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL,..." alt="" coords="5,5,96,31"/>
+<area shape="rect" id="Node000002" href="$rb__tree_8c.html#a4ad0f92a0a125ce3df88cc7ad4ececb1" title="Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL." alt="" coords="144,5,240,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,16,128,16,128,21,96,21"/>
 </map>

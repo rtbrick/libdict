@@ -1,5 +1,5 @@
 <map id="pr_dict_itor_new" name="pr_dict_itor_new">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,122,31"/>
-<area shape="rect" id="Node000002" href="$pr__tree_8c.html#ae8398f448c6c0c7555d38840cba7bb55" title=" " alt="" coords="170,5,258,31"/>
+<area shape="rect" id="Node000001" title="Like pr_itor_new(), but wrapped in a generic dict_itor for use with the dict_itor_* macros." alt="" coords="5,5,122,31"/>
+<area shape="rect" id="Node000002" href="$pr__tree_8c.html#ae8398f448c6c0c7555d38840cba7bb55" title="Create an iterator over |tree| that is not positioned on any element yet." alt="" coords="170,5,258,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,16,154,16,154,21,122,21"/>
 </map>

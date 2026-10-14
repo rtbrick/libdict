@@ -1,5 +1,5 @@
 <map id="sp_tree_verify" name="sp_tree_verify">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,108,31"/>
+<area shape="rect" id="Node000001" title="Check the internal invariants of the tree and return true if they hold, or print the first failed che..." alt="" coords="5,5,108,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#a4981ec7f99b3d9652814bf0cda50c650" title=" " alt="" coords="156,5,294,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,16,140,16,140,21,108,21"/>
 </map>

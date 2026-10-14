@@ -1,5 +1,5 @@
 <map id="pr_itor_search_ge" name="pr_itor_search_ge">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,130,31"/>
+<area shape="rect" id="Node000001" title="Position |itor| on the least key greater than or equal to |key| and return true, or unposition it and..." alt="" coords="5,5,130,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#ab1b92ab0d7b212e2928912a417ecb9a1" title=" " alt="" coords="178,5,335,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,16,162,16,162,21,130,21"/>
 <area shape="rect" id="Node000003" href="$tree__common_8c.html#aec6b09ca1b7597db7cb5a5389153f598" title=" " alt="" coords="383,5,528,31"/>

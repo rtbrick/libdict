@@ -1,25 +1,25 @@
 <map id="include/hashtable.h" name="include/hashtable.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="724,5,856,31"/>
+<area shape="rect" id="Node000001" title="Hash table with separate chaining; each chain is kept sorted by hash value." alt="" coords="724,5,856,31"/>
 <area shape="rect" id="Node000002" href="$dict_8h.html" title=" " alt="" coords="742,79,839,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="784,46,786,78,781,79,779,46"/>
 <area shape="rect" id="Node000021" href="$hashtable_8c.html" title=" " alt="" coords="1429,226,1538,252"/>
 <area shape="poly" id="edge47_Node000001_Node000021" title=" " alt="" coords="872,24,1016,39,1188,65,1271,82,1346,102,1408,124,1452,151,1467,168,1476,188,1485,225,1480,226,1471,190,1462,171,1449,155,1406,129,1344,107,1270,87,1187,70,1016,45,871,29"/>
 <area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="796,64,795,31,800,31,802,63"/>
-<area shape="rect" id="Node000003" href="$hashtable2_8h.html" title=" " alt="" coords="1299,153,1439,178"/>
+<area shape="rect" id="Node000003" href="$hashtable2_8h.html" title="Hash table with open addressing and linear probing." alt="" coords="1299,153,1439,178"/>
 <area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="855,99,1276,150,1299,153,1299,158,1275,155,854,104"/>
-<area shape="rect" id="Node000005" href="$hb__tree_8h.html" title=" " alt="" coords="296,153,415,178"/>
+<area shape="rect" id="Node000005" href="$hb__tree_8h.html" title="Height&#45;balanced (AVL) tree." alt="" coords="296,153,415,178"/>
 <area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="727,105,416,156,415,151,726,100"/>
-<area shape="rect" id="Node000007" href="$pr__tree_8h.html" title=" " alt="" coords="732,153,848,178"/>
+<area shape="rect" id="Node000007" href="$pr__tree_8h.html" title="Path&#45;reduction tree [Gonnet 1983]." alt="" coords="732,153,848,178"/>
 <area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="784,120,786,152,781,152,779,120"/>
-<area shape="rect" id="Node000009" href="$rb__tree_8h.html" title=" " alt="" coords="1018,153,1134,178"/>
+<area shape="rect" id="Node000009" href="$rb__tree_8h.html" title="Red&#45;black tree." alt="" coords="1018,153,1134,178"/>
 <area shape="poly" id="edge12_Node000002_Node000009" title=" " alt="" coords="847,106,1021,149,1019,155,846,112"/>
-<area shape="rect" id="Node000011" href="$skiplist_8h.html" title=" " alt="" coords="1158,153,1276,178"/>
+<area shape="rect" id="Node000011" href="$skiplist_8h.html" title="Skip list [Pugh 1990]." alt="" coords="1158,153,1276,178"/>
 <area shape="poly" id="edge15_Node000002_Node000011" title=" " alt="" coords="854,102,1158,153,1157,158,854,108"/>
-<area shape="rect" id="Node000013" href="$sp__tree_8h.html" title=" " alt="" coords="5,153,125,178"/>
+<area shape="rect" id="Node000013" href="$sp__tree_8h.html" title="Splay tree." alt="" coords="5,153,125,178"/>
 <area shape="poly" id="edge18_Node000002_Node000013" title=" " alt="" coords="726,100,464,120,126,155,125,150,463,115,726,94"/>
-<area shape="rect" id="Node000015" href="$tr__tree_8h.html" title=" " alt="" coords="595,153,708,178"/>
+<area shape="rect" id="Node000015" href="$tr__tree_8h.html" title="Treap: a binary search tree on the keys that is at the same time a max&#45;heap on per&#45;node priorities." alt="" coords="595,153,708,178"/>
 <area shape="poly" id="edge21_Node000002_Node000015" title=" " alt="" coords="747,114,670,154,667,150,745,109"/>
-<area shape="rect" id="Node000017" href="$wb__tree_8h.html" title=" " alt="" coords="149,153,272,178"/>
+<area shape="rect" id="Node000017" href="$wb__tree_8h.html" title="Weight&#45;balanced tree, BB[alpha] with alpha = 1 &#45; sqrt(2)/2." alt="" coords="149,153,272,178"/>
 <area shape="poly" id="edge24_Node000002_Node000017" title=" " alt="" coords="727,102,524,124,273,155,272,150,523,119,726,96"/>
 <area shape="rect" id="Node000019" href="$dict__private_8h.html" title=" " alt="" coords="873,153,993,178"/>
 <area shape="poly" id="edge27_Node000002_Node000019" title=" " alt="" coords="829,110,910,150,907,154,827,114"/>

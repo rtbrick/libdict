@@ -1,5 +1,5 @@
 <map id="skiplist_itor_prevn" name="skiplist_itor_prevn">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,132,31"/>
-<area shape="rect" id="Node000002" href="$skiplist_8c.html#afa49a5994bef26a067229baf829757da" title=" " alt="" coords="180,5,299,31"/>
+<area shape="rect" id="Node000001" title="Move |itor| |count| elements back and return whether it is still positioned." alt="" coords="5,5,132,31"/>
+<area shape="rect" id="Node000002" href="$skiplist_8c.html#afa49a5994bef26a067229baf829757da" title="Move |itor| to the previous element in key order and return true, or unposition it and return false i..." alt="" coords="180,5,299,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,16,164,16,164,21,132,21"/>
 </map>

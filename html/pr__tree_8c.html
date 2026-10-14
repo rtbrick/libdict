@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">libdict
+   <div id="projectname">libdict<span id="projectnumber">&#160;1.0.6-30-g1b80462</span>
    </div>
    <div id="projectbrief">Data Structure C Library</div>
   </td>
@@ -106,7 +106,7 @@ Include dependency graph for pr_tree.c:</div>
 <div class="center"><img src="pr__tree_8c__incl.png" border="0" usemap="#asrc_2pr__tree_8c" alt=""/></div>
 <map name="asrc_2pr__tree_8c" id="asrc_2pr__tree_8c">
 <area shape="rect" title=" " alt="" coords="636,5,730,31"/>
-<area shape="rect" href="pr__tree_8h.html" title=" " alt="" coords="533,79,604,105"/>
+<area shape="rect" href="pr__tree_8h.html" title="Path&#45;reduction tree [Gonnet 1983]." alt="" coords="533,79,604,105"/>
 <area shape="poly" title=" " alt="" coords="665,34,602,73,599,68,662,29"/>
 <area shape="rect" href="dict__private_8h.html" title=" " alt="" coords="762,79,860,105"/>
 <area shape="poly" title=" " alt="" coords="706,29,777,69,775,73,703,34"/>
@@ -121,21 +121,21 @@ Include dependency graph for pr_tree.c:</div>
 <area shape="poly" title=" " alt="" coords="618,172,436,189,309,206,176,228,175,223,308,201,436,184,618,166"/>
 <area shape="rect" title=" " alt="" coords="184,226,257,252"/>
 <area shape="poly" title=" " alt="" coords="618,173,475,194,273,228,272,223,474,188,617,168"/>
-<area shape="rect" href="hashtable_8h.html" title=" " alt="" coords="281,226,368,252"/>
+<area shape="rect" href="hashtable_8h.html" title="Hash table with separate chaining; each chain is kept sorted by hash value." alt="" coords="281,226,368,252"/>
 <area shape="poly" title=" " alt="" coords="619,174,383,226,382,221,617,169"/>
-<area shape="rect" href="hashtable2_8h.html" title=" " alt="" coords="392,226,486,252"/>
+<area shape="rect" href="hashtable2_8h.html" title="Hash table with open addressing and linear probing." alt="" coords="392,226,486,252"/>
 <area shape="poly" title=" " alt="" coords="619,177,482,223,480,218,617,172"/>
-<area shape="rect" href="hb__tree_8h.html" title=" " alt="" coords="510,226,584,252"/>
+<area shape="rect" href="hb__tree_8h.html" title="Height&#45;balanced (AVL) tree." alt="" coords="510,226,584,252"/>
 <area shape="poly" title=" " alt="" coords="622,181,570,219,566,214,619,177"/>
-<area shape="rect" href="rb__tree_8h.html" title=" " alt="" coords="609,226,680,252"/>
+<area shape="rect" href="rb__tree_8h.html" title="Red&#45;black tree." alt="" coords="609,226,680,252"/>
 <area shape="poly" title=" " alt="" coords="640,179,638,211,633,211,635,178"/>
-<area shape="rect" href="skiplist_8h.html" title=" " alt="" coords="704,226,776,252"/>
+<area shape="rect" href="skiplist_8h.html" title="Skip list [Pugh 1990]." alt="" coords="704,226,776,252"/>
 <area shape="poly" title=" " alt="" coords="655,177,706,215,703,219,652,181"/>
-<area shape="rect" href="sp__tree_8h.html" title=" " alt="" coords="800,226,875,252"/>
+<area shape="rect" href="sp__tree_8h.html" title="Splay tree." alt="" coords="800,226,875,252"/>
 <area shape="poly" title=" " alt="" coords="671,176,787,219,785,224,669,181"/>
-<area shape="rect" href="tr__tree_8h.html" title=" " alt="" coords="900,226,968,252"/>
+<area shape="rect" href="tr__tree_8h.html" title="Treap: a binary search tree on the keys that is at the same time a max&#45;heap on per&#45;node priorities." alt="" coords="900,226,968,252"/>
 <area shape="poly" title=" " alt="" coords="672,173,876,224,885,226,884,231,874,229,671,178"/>
-<area shape="rect" href="wb__tree_8h.html" title=" " alt="" coords="992,226,1070,252"/>
+<area shape="rect" href="wb__tree_8h.html" title="Weight&#45;balanced tree, BB[alpha] with alpha = 1 &#45; sqrt(2)/2." alt="" coords="992,226,1070,252"/>
 <area shape="poly" title=" " alt="" coords="672,170,969,224,978,226,977,231,968,229,671,175"/>
 <area shape="poly" title=" " alt="" coords="368,227,602,175,604,180,369,232"/>
 <area shape="poly" title=" " alt="" coords="480,223,603,181,604,186,482,228"/>
@@ -178,80 +178,118 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a021d6c481cd2bf3e59d1e2d2ab869428" id="r_a021d6c481cd2bf3e59d1e2d2ab869428"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpr__tree.html">pr_tree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a021d6c481cd2bf3e59d1e2d2ab869428">pr_tree_new</a> (<a class="el" href="dict_8h.html#a1704b677563c3195fcc69dbc42ff8704">dict_compare_func</a> cmp_func)</td></tr>
+<tr class="memdesc:a021d6c481cd2bf3e59d1e2d2ab869428"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an empty tree that orders keys with |cmp_func| (must not be NULL).  <br /></td></tr>
 <tr class="separator:a021d6c481cd2bf3e59d1e2d2ab869428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f4e72cc520d3c11b84ac04989148352" id="r_a0f4e72cc520d3c11b84ac04989148352"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdict.html">dict</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f4e72cc520d3c11b84ac04989148352">pr_dict_new</a> (<a class="el" href="dict_8h.html#a1704b677563c3195fcc69dbc42ff8704">dict_compare_func</a> cmp_func)</td></tr>
+<tr class="memdesc:a0f4e72cc520d3c11b84ac04989148352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="pr__tree_8h.html#a021d6c481cd2bf3e59d1e2d2ab869428" title="Create an empty tree that orders keys with |cmp_func| (must not be NULL).">pr_tree_new()</a>, but wrapped in a generic <a class="el" href="structdict.html">dict</a> for use with the dict_* macros.  <br /></td></tr>
 <tr class="separator:a0f4e72cc520d3c11b84ac04989148352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a6bb903a1760fced365e1804c14b8f" id="r_aa4a6bb903a1760fced365e1804c14b8f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4a6bb903a1760fced365e1804c14b8f">pr_tree_free</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>, <a class="el" href="dict_8h.html#a5301c8938ac34a1c9f18078bc6464385">dict_delete_func</a> delete_func)</td></tr>
+<tr class="memdesc:aa4a6bb903a1760fced365e1804c14b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL, and free the tree.  <br /></td></tr>
 <tr class="separator:aa4a6bb903a1760fced365e1804c14b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af03a9d82a232ad95cab29fe57da099ab" id="r_af03a9d82a232ad95cab29fe57da099ab"><td class="memItemLeft" align="right" valign="top">void **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af03a9d82a232ad95cab29fe57da099ab">pr_tree_search</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>, const void *key)</td></tr>
+<tr class="memdesc:af03a9d82a232ad95cab29fe57da099ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the address of the datum stored for |key|, or NULL if |key| is not present.  <br /></td></tr>
 <tr class="separator:af03a9d82a232ad95cab29fe57da099ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc5e721a419ab0385d680fcf6876546c" id="r_acc5e721a419ab0385d680fcf6876546c"><td class="memItemLeft" align="right" valign="top">void **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc5e721a419ab0385d680fcf6876546c">pr_tree_search_le</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>, const void *key)</td></tr>
+<tr class="memdesc:acc5e721a419ab0385d680fcf6876546c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the address of the datum of the greatest key less than or equal to |key|, or NULL if there is none.  <br /></td></tr>
 <tr class="separator:acc5e721a419ab0385d680fcf6876546c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19abec2733a7ea9caa29f1d22e7b850c" id="r_a19abec2733a7ea9caa29f1d22e7b850c"><td class="memItemLeft" align="right" valign="top">void **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19abec2733a7ea9caa29f1d22e7b850c">pr_tree_search_lt</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>, const void *key)</td></tr>
+<tr class="memdesc:a19abec2733a7ea9caa29f1d22e7b850c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the address of the datum of the greatest key less than |key|, or NULL if there is none.  <br /></td></tr>
 <tr class="separator:a19abec2733a7ea9caa29f1d22e7b850c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66085cf58e260d862ce8fe4fbfe31df5" id="r_a66085cf58e260d862ce8fe4fbfe31df5"><td class="memItemLeft" align="right" valign="top">void **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66085cf58e260d862ce8fe4fbfe31df5">pr_tree_search_ge</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>, const void *key)</td></tr>
+<tr class="memdesc:a66085cf58e260d862ce8fe4fbfe31df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the address of the datum of the least key greater than or equal to |key|, or NULL if there is none.  <br /></td></tr>
 <tr class="separator:a66085cf58e260d862ce8fe4fbfe31df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13aac3c296260214168e0702ad88095b" id="r_a13aac3c296260214168e0702ad88095b"><td class="memItemLeft" align="right" valign="top">void **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13aac3c296260214168e0702ad88095b">pr_tree_search_gt</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>, const void *key)</td></tr>
+<tr class="memdesc:a13aac3c296260214168e0702ad88095b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the address of the datum of the least key greater than |key|, or NULL if there is none.  <br /></td></tr>
 <tr class="separator:a13aac3c296260214168e0702ad88095b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a369aef27d756b0dc5e36f9937aac3290" id="r_a369aef27d756b0dc5e36f9937aac3290"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdict__insert__result.html">dict_insert_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a369aef27d756b0dc5e36f9937aac3290">pr_tree_insert</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>, void *key)</td></tr>
+<tr class="memdesc:a369aef27d756b0dc5e36f9937aac3290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert |key| unless an equal key is present.  <br /></td></tr>
 <tr class="separator:a369aef27d756b0dc5e36f9937aac3290"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5439bea0d35397810101842ae9556056" id="r_a5439bea0d35397810101842ae9556056"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdict__remove__result.html">dict_remove_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5439bea0d35397810101842ae9556056">pr_tree_remove</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>, const void *key)</td></tr>
+<tr class="memdesc:a5439bea0d35397810101842ae9556056"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the element with key |key|.  <br /></td></tr>
 <tr class="separator:a5439bea0d35397810101842ae9556056"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9339232ae391d0e7f673fa275733555c" id="r_a9339232ae391d0e7f673fa275733555c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9339232ae391d0e7f673fa275733555c">pr_tree_clear</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>, <a class="el" href="dict_8h.html#a5301c8938ac34a1c9f18078bc6464385">dict_delete_func</a> delete_func)</td></tr>
+<tr class="memdesc:a9339232ae391d0e7f673fa275733555c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL.  <br /></td></tr>
 <tr class="separator:a9339232ae391d0e7f673fa275733555c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37f8889c7ddffaf5820ff824b9b798e7" id="r_a37f8889c7ddffaf5820ff824b9b798e7"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37f8889c7ddffaf5820ff824b9b798e7">pr_tree_traverse</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>, <a class="el" href="dict_8h.html#aebbefe3aa81b20e1254e8a7a5253caf6">dict_visit_func</a> visit, void *user_data)</td></tr>
+<tr class="memdesc:a37f8889c7ddffaf5820ff824b9b798e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call |visit|(key, datum, |user_data|) for each element in key order, stopping early if |visit| returns false.  <br /></td></tr>
 <tr class="separator:a37f8889c7ddffaf5820ff824b9b798e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7397755dbec281006bd3baf25f62f1de" id="r_a7397755dbec281006bd3baf25f62f1de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7397755dbec281006bd3baf25f62f1de">pr_tree_select</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>, size_t n, const void **key, void **datum)</td></tr>
+<tr class="memdesc:a7397755dbec281006bd3baf25f62f1de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the key and datum of the |n|th element in key order (0-based) through |key| and |datum| and return true, or store NULL through them and return false if |n| is out of range.  <br /></td></tr>
 <tr class="separator:a7397755dbec281006bd3baf25f62f1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad01559bb0016db3d55d99756d959479d" id="r_ad01559bb0016db3d55d99756d959479d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad01559bb0016db3d55d99756d959479d">pr_tree_count</a> (const <a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>)</td></tr>
+<tr class="memdesc:ad01559bb0016db3d55d99756d959479d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of elements.  <br /></td></tr>
 <tr class="separator:ad01559bb0016db3d55d99756d959479d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a8f3a4bfb2749b87517fa08971ca3da" id="r_a0a8f3a4bfb2749b87517fa08971ca3da"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a8f3a4bfb2749b87517fa08971ca3da">pr_tree_max_path_length</a> (const <a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>)</td></tr>
+<tr class="memdesc:a0a8f3a4bfb2749b87517fa08971ca3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the greatest depth of any node, the root being at depth 1, or 0 for an empty tree: the height of the tree.  <br /></td></tr>
 <tr class="separator:a0a8f3a4bfb2749b87517fa08971ca3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a813fe6b4373aebdf8d7eeeb8f022afd3" id="r_a813fe6b4373aebdf8d7eeeb8f022afd3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a813fe6b4373aebdf8d7eeeb8f022afd3">pr_tree_min_path_length</a> (const <a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>)</td></tr>
+<tr class="memdesc:a813fe6b4373aebdf8d7eeeb8f022afd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the shallowest depth at which a child link is absent, the root being at depth 1, or 0 for an empty tree.  <br /></td></tr>
 <tr class="separator:a813fe6b4373aebdf8d7eeeb8f022afd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdf0fc6fc9b122418083888333b7ccda" id="r_acdf0fc6fc9b122418083888333b7ccda"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdf0fc6fc9b122418083888333b7ccda">pr_tree_total_path_length</a> (const <a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>)</td></tr>
+<tr class="memdesc:acdf0fc6fc9b122418083888333b7ccda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the sum of the depths of all nodes, the root being at depth 1, or 0 for an empty tree.  <br /></td></tr>
 <tr class="separator:acdf0fc6fc9b122418083888333b7ccda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3a3c1c743cb2c3fdfbaac2befcf3c5e" id="r_ae3a3c1c743cb2c3fdfbaac2befcf3c5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3a3c1c743cb2c3fdfbaac2befcf3c5e">pr_tree_verify</a> (const <a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>)</td></tr>
+<tr class="memdesc:ae3a3c1c743cb2c3fdfbaac2befcf3c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the internal invariants of the tree and return true if they hold, or print the first failed check to stderr and return false.  <br /></td></tr>
 <tr class="separator:ae3a3c1c743cb2c3fdfbaac2befcf3c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8398f448c6c0c7555d38840cba7bb55" id="r_ae8398f448c6c0c7555d38840cba7bb55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpr__itor.html">pr_itor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8398f448c6c0c7555d38840cba7bb55">pr_itor_new</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>)</td></tr>
+<tr class="memdesc:ae8398f448c6c0c7555d38840cba7bb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an iterator over |tree| that is not positioned on any element yet.  <br /></td></tr>
 <tr class="separator:ae8398f448c6c0c7555d38840cba7bb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34060218131e6e94fea3533d268f03a9" id="r_a34060218131e6e94fea3533d268f03a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdict__itor.html">dict_itor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34060218131e6e94fea3533d268f03a9">pr_dict_itor_new</a> (<a class="el" href="structpr__tree.html">pr_tree</a> *<a class="el" href="structtree.html">tree</a>)</td></tr>
+<tr class="memdesc:a34060218131e6e94fea3533d268f03a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="pr__tree_8h.html#ae8398f448c6c0c7555d38840cba7bb55" title="Create an iterator over |tree| that is not positioned on any element yet.">pr_itor_new()</a>, but wrapped in a generic <a class="el" href="structdict__itor.html">dict_itor</a> for use with the dict_itor_* macros.  <br /></td></tr>
 <tr class="separator:a34060218131e6e94fea3533d268f03a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5486c7c9fe121ec615a4e53176228eed" id="r_a5486c7c9fe121ec615a4e53176228eed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5486c7c9fe121ec615a4e53176228eed">pr_itor_free</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor)</td></tr>
+<tr class="memdesc:a5486c7c9fe121ec615a4e53176228eed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free an iterator.  <br /></td></tr>
 <tr class="separator:a5486c7c9fe121ec615a4e53176228eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e728838fdbe2fea666faae2bfe82a1d" id="r_a5e728838fdbe2fea666faae2bfe82a1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e728838fdbe2fea666faae2bfe82a1d">pr_itor_valid</a> (const <a class="el" href="structpr__itor.html">pr_itor</a> *itor)</td></tr>
+<tr class="memdesc:a5e728838fdbe2fea666faae2bfe82a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether |itor| is positioned on an element.  <br /></td></tr>
 <tr class="separator:a5e728838fdbe2fea666faae2bfe82a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed5a10ede70733395106c6b749d7647a" id="r_aed5a10ede70733395106c6b749d7647a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed5a10ede70733395106c6b749d7647a">pr_itor_invalidate</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor)</td></tr>
+<tr class="memdesc:aed5a10ede70733395106c6b749d7647a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unposition |itor|, so that it is not positioned on any element.  <br /></td></tr>
 <tr class="separator:aed5a10ede70733395106c6b749d7647a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33078fbea87a49fd5d36c3d65b41b784" id="r_a33078fbea87a49fd5d36c3d65b41b784"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33078fbea87a49fd5d36c3d65b41b784">pr_itor_next</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor)</td></tr>
+<tr class="memdesc:a33078fbea87a49fd5d36c3d65b41b784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move |itor| to the next element in key order and return true, or unposition it and return false if there is none.  <br /></td></tr>
 <tr class="separator:a33078fbea87a49fd5d36c3d65b41b784"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f302faeffdfc624d9adf2e64e44a28a" id="r_a6f302faeffdfc624d9adf2e64e44a28a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f302faeffdfc624d9adf2e64e44a28a">pr_itor_prev</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor)</td></tr>
+<tr class="memdesc:a6f302faeffdfc624d9adf2e64e44a28a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move |itor| to the previous element in key order and return true, or unposition it and return false if there is none.  <br /></td></tr>
 <tr class="separator:a6f302faeffdfc624d9adf2e64e44a28a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a511f5f263b38ffd94af79324cfa03832" id="r_a511f5f263b38ffd94af79324cfa03832"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a511f5f263b38ffd94af79324cfa03832">pr_itor_nextn</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor, size_t count)</td></tr>
+<tr class="memdesc:a511f5f263b38ffd94af79324cfa03832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move |itor| |count| elements forward and return whether it is still positioned.  <br /></td></tr>
 <tr class="separator:a511f5f263b38ffd94af79324cfa03832"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a486455f59c063ba1261d158d44d7ef78" id="r_a486455f59c063ba1261d158d44d7ef78"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a486455f59c063ba1261d158d44d7ef78">pr_itor_prevn</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor, size_t count)</td></tr>
+<tr class="memdesc:a486455f59c063ba1261d158d44d7ef78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move |itor| |count| elements back and return whether it is still positioned.  <br /></td></tr>
 <tr class="separator:a486455f59c063ba1261d158d44d7ef78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8d018d3cbb7f0b1592347b618f566e9" id="r_aa8d018d3cbb7f0b1592347b618f566e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8d018d3cbb7f0b1592347b618f566e9">pr_itor_first</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor)</td></tr>
+<tr class="memdesc:aa8d018d3cbb7f0b1592347b618f566e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position |itor| on the first element in key order and return true, or unposition it and return false if the tree is empty.  <br /></td></tr>
 <tr class="separator:aa8d018d3cbb7f0b1592347b618f566e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e33347218fd385241a14d1209b0d102" id="r_a8e33347218fd385241a14d1209b0d102"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e33347218fd385241a14d1209b0d102">pr_itor_last</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor)</td></tr>
+<tr class="memdesc:a8e33347218fd385241a14d1209b0d102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position |itor| on the last element in key order and return true, or unposition it and return false if the tree is empty.  <br /></td></tr>
 <tr class="separator:a8e33347218fd385241a14d1209b0d102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4c5b7ef76aa1bfcbac8e0e40cd44046" id="r_aa4c5b7ef76aa1bfcbac8e0e40cd44046"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4c5b7ef76aa1bfcbac8e0e40cd44046">pr_itor_search</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor, const void *key)</td></tr>
+<tr class="memdesc:aa4c5b7ef76aa1bfcbac8e0e40cd44046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position |itor| on |key| and return true, or unposition it and return false if |key| is not present.  <br /></td></tr>
 <tr class="separator:aa4c5b7ef76aa1bfcbac8e0e40cd44046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a958018ddbd0d0fefdf9d897319536bf4" id="r_a958018ddbd0d0fefdf9d897319536bf4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a958018ddbd0d0fefdf9d897319536bf4">pr_itor_search_le</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor, const void *key)</td></tr>
+<tr class="memdesc:a958018ddbd0d0fefdf9d897319536bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position |itor| on the greatest key less than or equal to |key| and return true, or unposition it and return false if there is none.  <br /></td></tr>
 <tr class="separator:a958018ddbd0d0fefdf9d897319536bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af595a91bfa4ed7f53cfbdd7c8b75f669" id="r_af595a91bfa4ed7f53cfbdd7c8b75f669"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af595a91bfa4ed7f53cfbdd7c8b75f669">pr_itor_search_lt</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor, const void *key)</td></tr>
+<tr class="memdesc:af595a91bfa4ed7f53cfbdd7c8b75f669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position |itor| on the greatest key less than |key| and return true, or unposition it and return false if there is none.  <br /></td></tr>
 <tr class="separator:af595a91bfa4ed7f53cfbdd7c8b75f669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3580461d7082c82e1a8312529f799f3" id="r_aa3580461d7082c82e1a8312529f799f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3580461d7082c82e1a8312529f799f3">pr_itor_search_ge</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor, const void *key)</td></tr>
+<tr class="memdesc:aa3580461d7082c82e1a8312529f799f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position |itor| on the least key greater than or equal to |key| and return true, or unposition it and return false if there is none.  <br /></td></tr>
 <tr class="separator:aa3580461d7082c82e1a8312529f799f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af46574d3f0cac9d7a66f68b803464ee4" id="r_af46574d3f0cac9d7a66f68b803464ee4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af46574d3f0cac9d7a66f68b803464ee4">pr_itor_search_gt</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor, const void *key)</td></tr>
+<tr class="memdesc:af46574d3f0cac9d7a66f68b803464ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position |itor| on the least key greater than |key| and return true, or unposition it and return false if there is none.  <br /></td></tr>
 <tr class="separator:af46574d3f0cac9d7a66f68b803464ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a4daa96bf7bfbcf18e11112f7d2115a" id="r_a1a4daa96bf7bfbcf18e11112f7d2115a"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a4daa96bf7bfbcf18e11112f7d2115a">pr_itor_key</a> (const <a class="el" href="structpr__itor.html">pr_itor</a> *itor)</td></tr>
+<tr class="memdesc:a1a4daa96bf7bfbcf18e11112f7d2115a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the key |itor| is positioned on, or NULL if it is not positioned.  <br /></td></tr>
 <tr class="separator:a1a4daa96bf7bfbcf18e11112f7d2115a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc6f2b1cf7e2294ce3f3dd4ace188002" id="r_acc6f2b1cf7e2294ce3f3dd4ace188002"><td class="memItemLeft" align="right" valign="top">void **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc6f2b1cf7e2294ce3f3dd4ace188002">pr_itor_datum</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *itor)</td></tr>
+<tr class="memdesc:acc6f2b1cf7e2294ce3f3dd4ace188002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the address of the datum |itor| is positioned on, through which it can be read or replaced, or NULL if it is not positioned.  <br /></td></tr>
 <tr class="separator:acc6f2b1cf7e2294ce3f3dd4ace188002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a682978f7c2b9bbf42e3a632db907bfdb" id="r_a682978f7c2b9bbf42e3a632db907bfdb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a682978f7c2b9bbf42e3a632db907bfdb">pr_itor_compare</a> (const <a class="el" href="structpr__itor.html">pr_itor</a> *i1, const <a class="el" href="structpr__itor.html">pr_itor</a> *i2)</td></tr>
+<tr class="memdesc:a682978f7c2b9bbf42e3a632db907bfdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare the positions of two iterators over the same tree: return a negative value, zero, or a positive value as |i1| is before, at, or after |i2| in key order.  <br /></td></tr>
 <tr class="separator:a682978f7c2b9bbf42e3a632db907bfdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ad0eb725ec5114887f4c351b53fa320" id="r_a4ad0eb725ec5114887f4c351b53fa320"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ad0eb725ec5114887f4c351b53fa320">pr_itor_remove</a> (<a class="el" href="structpr__itor.html">pr_itor</a> *it)</td></tr>
+<tr class="memdesc:a4ad0eb725ec5114887f4c351b53fa320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the element |itor| is positioned on and unposition |itor|; return false if it was not positioned.  <br /></td></tr>
 <tr class="separator:a4ad0eb725ec5114887f4c351b53fa320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -308,14 +346,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Like <a class="el" href="pr__tree_8h.html#ae8398f448c6c0c7555d38840cba7bb55" title="Create an iterator over |tree| that is not positioned on any element yet.">pr_itor_new()</a>, but wrapped in a generic <a class="el" href="structdict__itor.html">dict_itor</a> for use with the dict_itor_* macros. </p>
+<p>Free it with <a class="el" href="dict_8c.html#ad63f3fe30bbbf82147a6eb419ab1f040">dict_itor_free()</a>. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00522">522</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a34060218131e6e94fea3533d268f03a9_cgraph.png" border="0" usemap="#apr__tree_8c_a34060218131e6e94fea3533d268f03a9_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a34060218131e6e94fea3533d268f03a9_cgraph" id="apr__tree_8c_a34060218131e6e94fea3533d268f03a9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,122,31"/>
-<area shape="rect" href="pr__tree_8c.html#ae8398f448c6c0c7555d38840cba7bb55" title=" " alt="" coords="170,5,258,31"/>
+<area shape="rect" title="Like pr_itor_new(), but wrapped in a generic dict_itor for use with the dict_itor_* macros." alt="" coords="5,5,122,31"/>
+<area shape="rect" href="pr__tree_8c.html#ae8398f448c6c0c7555d38840cba7bb55" title="Create an iterator over |tree| that is not positioned on any element yet." alt="" coords="170,5,258,31"/>
 <area shape="poly" title=" " alt="" coords="122,16,154,16,154,21,122,21"/>
 </map>
 </div>
@@ -337,14 +378,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Like <a class="el" href="pr__tree_8h.html#a021d6c481cd2bf3e59d1e2d2ab869428" title="Create an empty tree that orders keys with |cmp_func| (must not be NULL).">pr_tree_new()</a>, but wrapped in a generic <a class="el" href="structdict.html">dict</a> for use with the dict_* macros. </p>
+<p>Free it with <a class="el" href="dict_8c.html#a4ffb34d3cb396bb2a79d2e21298c3bdb">dict_free()</a>. Returns NULL if memory cannot be allocated. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00125">125</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a0f4e72cc520d3c11b84ac04989148352_cgraph.png" border="0" usemap="#apr__tree_8c_a0f4e72cc520d3c11b84ac04989148352_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a0f4e72cc520d3c11b84ac04989148352_cgraph" id="apr__tree_8c_a0f4e72cc520d3c11b84ac04989148352_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,97,31"/>
-<area shape="rect" href="pr__tree_8c.html#a021d6c481cd2bf3e59d1e2d2ab869428" title=" " alt="" coords="145,5,237,31"/>
+<area shape="rect" title="Like pr_tree_new(), but wrapped in a generic dict for use with the dict_* macros." alt="" coords="5,5,97,31"/>
+<area shape="rect" href="pr__tree_8c.html#a021d6c481cd2bf3e59d1e2d2ab869428" title="Create an empty tree that orders keys with |cmp_func| (must not be NULL)." alt="" coords="145,5,237,31"/>
 <area shape="poly" title=" " alt="" coords="97,16,129,16,129,21,97,21"/>
 </map>
 </div>
@@ -370,13 +414,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Compare the positions of two iterators over the same tree: return a negative value, zero, or a positive value as |i1| is before, at, or after |i2| in key order. </p>
+<p>An unpositioned iterator compares before every positioned one. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00551">551</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a682978f7c2b9bbf42e3a632db907bfdb_cgraph.png" border="0" usemap="#apr__tree_8c_a682978f7c2b9bbf42e3a632db907bfdb_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a682978f7c2b9bbf42e3a632db907bfdb_cgraph" id="apr__tree_8c_a682978f7c2b9bbf42e3a632db907bfdb_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,120,31"/>
+<area shape="rect" title="Compare the positions of two iterators over the same tree: return a negative value,..." alt="" coords="5,5,120,31"/>
 <area shape="rect" href="tree__common_8c.html#a32b8464955ebce9c4f8967162f01f50b" title=" " alt="" coords="168,5,315,31"/>
 <area shape="poly" title=" " alt="" coords="120,16,153,16,153,21,120,21"/>
 </map>
@@ -399,13 +446,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the address of the datum |itor| is positioned on, through which it can be read or replaced, or NULL if it is not positioned. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00550">550</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_acc6f2b1cf7e2294ce3f3dd4ace188002_cgraph.png" border="0" usemap="#apr__tree_8c_acc6f2b1cf7e2294ce3f3dd4ace188002_cgraph" alt=""/></div>
 <map name="apr__tree_8c_acc6f2b1cf7e2294ce3f3dd4ace188002_cgraph" id="apr__tree_8c_acc6f2b1cf7e2294ce3f3dd4ace188002_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,106,31"/>
+<area shape="rect" title="Return the address of the datum |itor| is positioned on, through which it can be read or replaced,..." alt="" coords="5,5,106,31"/>
 <area shape="rect" href="tree__common_8c.html#a1cc4c18adcfc606676bbbe632160f50a" title=" " alt="" coords="154,5,287,31"/>
 <area shape="poly" title=" " alt="" coords="106,16,138,16,138,21,106,21"/>
 </map>
@@ -428,13 +477,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Position |itor| on the first element in key order and return true, or unposition it and return false if the tree is empty. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00542">542</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_aa8d018d3cbb7f0b1592347b618f566e9_cgraph.png" border="0" usemap="#apr__tree_8c_aa8d018d3cbb7f0b1592347b618f566e9_cgraph" alt=""/></div>
 <map name="apr__tree_8c_aa8d018d3cbb7f0b1592347b618f566e9_cgraph" id="apr__tree_8c_aa8d018d3cbb7f0b1592347b618f566e9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,91,31"/>
+<area shape="rect" title="Position |itor| on the first element in key order and return true, or unposition it and return false ..." alt="" coords="5,5,91,31"/>
 <area shape="rect" href="tree__common_8c.html#a9bab181bc96dd1334ea36f0b3f647f2a" title=" " alt="" coords="139,5,257,31"/>
 <area shape="poly" title=" " alt="" coords="91,16,123,16,123,21,91,21"/>
 <area shape="rect" href="tree__common_8c.html#a7b6de5488b23a09de4f838c218adabd0" title=" " alt="" coords="305,5,411,31"/>
@@ -459,13 +510,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Free an iterator. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00535">535</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a5486c7c9fe121ec615a4e53176228eed_cgraph.png" border="0" usemap="#apr__tree_8c_a5486c7c9fe121ec615a4e53176228eed_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a5486c7c9fe121ec615a4e53176228eed_cgraph" id="apr__tree_8c_a5486c7c9fe121ec615a4e53176228eed_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,92,31"/>
+<area shape="rect" title="Free an iterator." alt="" coords="5,5,92,31"/>
 <area shape="rect" href="tree__common_8c.html#aa3a6573b092296a44a074269c8d2bc91" title=" " alt="" coords="140,5,259,31"/>
 <area shape="poly" title=" " alt="" coords="92,16,125,16,125,21,92,21"/>
 </map>
@@ -488,13 +541,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Unposition |itor|, so that it is not positioned on any element. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00537">537</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_aed5a10ede70733395106c6b749d7647a_cgraph.png" border="0" usemap="#apr__tree_8c_aed5a10ede70733395106c6b749d7647a_cgraph" alt=""/></div>
 <map name="apr__tree_8c_aed5a10ede70733395106c6b749d7647a_cgraph" id="apr__tree_8c_aed5a10ede70733395106c6b749d7647a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,125,31"/>
+<area shape="rect" title="Unposition |itor|, so that it is not positioned on any element." alt="" coords="5,5,125,31"/>
 <area shape="rect" href="tree__common_8c.html#a2493acbad8b60afbc8f60e67ab30e06a" title=" " alt="" coords="173,5,325,31"/>
 <area shape="poly" title=" " alt="" coords="125,16,157,16,157,21,125,21"/>
 </map>
@@ -517,13 +572,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the key |itor| is positioned on, or NULL if it is not positioned. </p>
+<p>The key belongs to the container and must not be modified in a way that changes how it compares. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00549">549</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a1a4daa96bf7bfbcf18e11112f7d2115a_cgraph.png" border="0" usemap="#apr__tree_8c_a1a4daa96bf7bfbcf18e11112f7d2115a_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a1a4daa96bf7bfbcf18e11112f7d2115a_cgraph" id="apr__tree_8c_a1a4daa96bf7bfbcf18e11112f7d2115a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,90,31"/>
+<area shape="rect" title="Return the key |itor| is positioned on, or NULL if it is not positioned." alt="" coords="5,5,90,31"/>
 <area shape="rect" href="tree__common_8c.html#a71fd87b638317045ae986d9886f10c10" title=" " alt="" coords="138,5,255,31"/>
 <area shape="poly" title=" " alt="" coords="90,16,122,16,122,21,90,21"/>
 </map>
@@ -546,13 +604,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Position |itor| on the last element in key order and return true, or unposition it and return false if the tree is empty. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00543">543</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a8e33347218fd385241a14d1209b0d102_cgraph.png" border="0" usemap="#apr__tree_8c_a8e33347218fd385241a14d1209b0d102_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a8e33347218fd385241a14d1209b0d102_cgraph" id="apr__tree_8c_a8e33347218fd385241a14d1209b0d102_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,91,31"/>
+<area shape="rect" title="Position |itor| on the last element in key order and return true, or unposition it and return false i..." alt="" coords="5,5,91,31"/>
 <area shape="rect" href="tree__common_8c.html#a03b78e22aed8c0dd38f96d939066239a" title=" " alt="" coords="139,5,257,31"/>
 <area shape="poly" title=" " alt="" coords="91,16,123,16,123,21,91,21"/>
 <area shape="rect" href="tree__common_8c.html#a1f73b77d5b43f77f45ba24acdbe83faf" title=" " alt="" coords="305,5,414,31"/>
@@ -577,6 +637,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Create an iterator over |tree| that is not positioned on any element yet. </p>
+<p>Returns NULL if memory cannot be allocated. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00511">511</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 
 </div>
@@ -596,13 +659,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Move |itor| to the next element in key order and return true, or unposition it and return false if there is none. </p>
+<p>An unpositioned iterator stays unpositioned and returns false. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00538">538</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a33078fbea87a49fd5d36c3d65b41b784_cgraph.png" border="0" usemap="#apr__tree_8c_a33078fbea87a49fd5d36c3d65b41b784_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a33078fbea87a49fd5d36c3d65b41b784_cgraph" id="apr__tree_8c_a33078fbea87a49fd5d36c3d65b41b784_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,94,31"/>
+<area shape="rect" title="Move |itor| to the next element in key order and return true, or unposition it and return false if th..." alt="" coords="5,5,94,31"/>
 <area shape="rect" href="tree__common_8c.html#a1e3db914a6bdf103e9f7db4f78c908ae" title=" " alt="" coords="142,5,263,31"/>
 <area shape="poly" title=" " alt="" coords="94,16,126,16,126,21,94,21"/>
 <area shape="rect" href="tree__common_8c.html#af61f08f021d60815449e7657dc75ea6a" title=" " alt="" coords="311,5,420,31"/>
@@ -633,13 +699,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Move |itor| |count| elements forward and return whether it is still positioned. </p>
+<p>It becomes unpositioned if it runs past the last element. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00540">540</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a511f5f263b38ffd94af79324cfa03832_cgraph.png" border="0" usemap="#apr__tree_8c_a511f5f263b38ffd94af79324cfa03832_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a511f5f263b38ffd94af79324cfa03832_cgraph" id="apr__tree_8c_a511f5f263b38ffd94af79324cfa03832_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,101,31"/>
+<area shape="rect" title="Move |itor| |count| elements forward and return whether it is still positioned." alt="" coords="5,5,101,31"/>
 <area shape="rect" href="tree__common_8c.html#a8a7b95378ac8dc696b220f073b83977c" title=" " alt="" coords="149,5,277,31"/>
 <area shape="poly" title=" " alt="" coords="101,16,133,16,133,21,101,21"/>
 <area shape="rect" href="tree__common_8c.html#af61f08f021d60815449e7657dc75ea6a" title=" " alt="" coords="325,5,434,31"/>
@@ -666,13 +735,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Move |itor| to the previous element in key order and return true, or unposition it and return false if there is none. </p>
+<p>An unpositioned iterator stays unpositioned and returns false. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00539">539</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a6f302faeffdfc624d9adf2e64e44a28a_cgraph.png" border="0" usemap="#apr__tree_8c_a6f302faeffdfc624d9adf2e64e44a28a_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a6f302faeffdfc624d9adf2e64e44a28a_cgraph" id="apr__tree_8c_a6f302faeffdfc624d9adf2e64e44a28a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,95,31"/>
+<area shape="rect" title="Move |itor| to the previous element in key order and return true, or unposition it and return false i..." alt="" coords="5,5,95,31"/>
 <area shape="rect" href="tree__common_8c.html#afad64b5a28a44ca544fe3f0b8011db17" title=" " alt="" coords="143,5,265,31"/>
 <area shape="poly" title=" " alt="" coords="95,16,127,16,127,21,95,21"/>
 <area shape="rect" href="tree__common_8c.html#aad7c42c6dfa4a11176cff91f41c9383a" title=" " alt="" coords="313,5,423,31"/>
@@ -703,13 +775,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Move |itor| |count| elements back and return whether it is still positioned. </p>
+<p>It becomes unpositioned if it runs past the first element. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00541">541</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a486455f59c063ba1261d158d44d7ef78_cgraph.png" border="0" usemap="#apr__tree_8c_a486455f59c063ba1261d158d44d7ef78_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a486455f59c063ba1261d158d44d7ef78_cgraph" id="apr__tree_8c_a486455f59c063ba1261d158d44d7ef78_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,102,31"/>
+<area shape="rect" title="Move |itor| |count| elements back and return whether it is still positioned." alt="" coords="5,5,102,31"/>
 <area shape="rect" href="tree__common_8c.html#aa54a225a4b2bfc3a6bbf73125d4dd88a" title=" " alt="" coords="150,5,279,31"/>
 <area shape="poly" title=" " alt="" coords="102,16,134,16,134,21,102,21"/>
 <area shape="rect" href="tree__common_8c.html#aad7c42c6dfa4a11176cff91f41c9383a" title=" " alt="" coords="327,5,437,31"/>
@@ -730,11 +805,14 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">bool pr_itor_remove </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structpr__itor.html">pr_itor</a> *</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structpr__itor.html">pr_itor</a> *</td>          <td class="paramname"><span class="paramname"><em>itor</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Remove the element |itor| is positioned on and unposition |itor|; return false if it was not positioned. </p>
+<p>No delete function is called, so fetch the key and datum first if they need freeing. See <a class="el" href="iterator_invalidation.html">Iterator invalidation</a> for which iterators this invalidates. </p>
 
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00554">554</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 
@@ -759,13 +837,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Position |itor| on |key| and return true, or unposition it and return false if |key| is not present. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00544">544</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_aa4c5b7ef76aa1bfcbac8e0e40cd44046_cgraph.png" border="0" usemap="#apr__tree_8c_aa4c5b7ef76aa1bfcbac8e0e40cd44046_cgraph" alt=""/></div>
 <map name="apr__tree_8c_aa4c5b7ef76aa1bfcbac8e0e40cd44046_cgraph" id="apr__tree_8c_aa4c5b7ef76aa1bfcbac8e0e40cd44046_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,109,31"/>
+<area shape="rect" title="Position |itor| on |key| and return true, or unposition it and return false if |key| is not present." alt="" coords="5,5,109,31"/>
 <area shape="rect" href="tree__common_8c.html#aeebf37a00012869c931e03dbb1047ade" title=" " alt="" coords="157,5,293,31"/>
 <area shape="poly" title=" " alt="" coords="109,16,141,16,141,21,109,21"/>
 <area shape="rect" href="tree__common_8c.html#a4336bbd1dec56af86a45e1d84d622063" title=" " alt="" coords="341,5,465,31"/>
@@ -794,13 +874,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Position |itor| on the least key greater than or equal to |key| and return true, or unposition it and return false if there is none. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00547">547</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_aa3580461d7082c82e1a8312529f799f3_cgraph.png" border="0" usemap="#apr__tree_8c_aa3580461d7082c82e1a8312529f799f3_cgraph" alt=""/></div>
 <map name="apr__tree_8c_aa3580461d7082c82e1a8312529f799f3_cgraph" id="apr__tree_8c_aa3580461d7082c82e1a8312529f799f3_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,130,31"/>
+<area shape="rect" title="Position |itor| on the least key greater than or equal to |key| and return true, or unposition it and..." alt="" coords="5,5,130,31"/>
 <area shape="rect" href="tree__common_8c.html#ab1b92ab0d7b212e2928912a417ecb9a1" title=" " alt="" coords="178,5,335,31"/>
 <area shape="poly" title=" " alt="" coords="130,16,162,16,162,21,130,21"/>
 <area shape="rect" href="tree__common_8c.html#aec6b09ca1b7597db7cb5a5389153f598" title=" " alt="" coords="383,5,528,31"/>
@@ -829,13 +911,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Position |itor| on the least key greater than |key| and return true, or unposition it and return false if there is none. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00548">548</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_af46574d3f0cac9d7a66f68b803464ee4_cgraph.png" border="0" usemap="#apr__tree_8c_af46574d3f0cac9d7a66f68b803464ee4_cgraph" alt=""/></div>
 <map name="apr__tree_8c_af46574d3f0cac9d7a66f68b803464ee4_cgraph" id="apr__tree_8c_af46574d3f0cac9d7a66f68b803464ee4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,127,31"/>
+<area shape="rect" title="Position |itor| on the least key greater than |key| and return true, or unposition it and return fals..." alt="" coords="5,5,127,31"/>
 <area shape="rect" href="tree__common_8c.html#ad0892dbc05516cf35927f3802ceb0073" title=" " alt="" coords="175,5,329,31"/>
 <area shape="poly" title=" " alt="" coords="127,16,159,16,159,21,127,21"/>
 <area shape="rect" href="tree__common_8c.html#a083987581cc9832ac2e13c1047b6f0f3" title=" " alt="" coords="377,5,519,31"/>
@@ -864,13 +948,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Position |itor| on the greatest key less than or equal to |key| and return true, or unposition it and return false if there is none. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00545">545</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a958018ddbd0d0fefdf9d897319536bf4_cgraph.png" border="0" usemap="#apr__tree_8c_a958018ddbd0d0fefdf9d897319536bf4_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a958018ddbd0d0fefdf9d897319536bf4_cgraph" id="apr__tree_8c_a958018ddbd0d0fefdf9d897319536bf4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,126,31"/>
+<area shape="rect" title="Position |itor| on the greatest key less than or equal to |key| and return true, or unposition it and..." alt="" coords="5,5,126,31"/>
 <area shape="rect" href="tree__common_8c.html#a630ac71696ac60548789b01f1e618350" title=" " alt="" coords="174,5,327,31"/>
 <area shape="poly" title=" " alt="" coords="126,16,159,16,159,21,126,21"/>
 <area shape="rect" href="tree__common_8c.html#a1e5a4773127f62034080c522c657c5d1" title=" " alt="" coords="375,5,516,31"/>
@@ -899,13 +985,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Position |itor| on the greatest key less than |key| and return true, or unposition it and return false if there is none. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00546">546</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_af595a91bfa4ed7f53cfbdd7c8b75f669_cgraph.png" border="0" usemap="#apr__tree_8c_af595a91bfa4ed7f53cfbdd7c8b75f669_cgraph" alt=""/></div>
 <map name="apr__tree_8c_af595a91bfa4ed7f53cfbdd7c8b75f669_cgraph" id="apr__tree_8c_af595a91bfa4ed7f53cfbdd7c8b75f669_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,123,31"/>
+<area shape="rect" title="Position |itor| on the greatest key less than |key| and return true, or unposition it and return fals..." alt="" coords="5,5,123,31"/>
 <area shape="rect" href="tree__common_8c.html#aa83954869eda27b3488032f96a257771" title=" " alt="" coords="171,5,321,31"/>
 <area shape="poly" title=" " alt="" coords="123,16,156,16,156,21,123,21"/>
 <area shape="rect" href="tree__common_8c.html#a645c577b5288a0d739610bca51a82e22" title=" " alt="" coords="369,5,507,31"/>
@@ -930,13 +1018,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return whether |itor| is positioned on an element. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00536">536</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a5e728838fdbe2fea666faae2bfe82a1d_cgraph.png" border="0" usemap="#apr__tree_8c_a5e728838fdbe2fea666faae2bfe82a1d_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a5e728838fdbe2fea666faae2bfe82a1d_cgraph" id="apr__tree_8c_a5e728838fdbe2fea666faae2bfe82a1d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,97,31"/>
+<area shape="rect" title="Return whether |itor| is positioned on an element." alt="" coords="5,5,97,31"/>
 <area shape="rect" href="tree__common_8c.html#a64ec4cc9e72043bf93b75394d4a6b089" title=" " alt="" coords="145,5,269,31"/>
 <area shape="poly" title=" " alt="" coords="97,16,129,16,129,21,97,21"/>
 </map>
@@ -963,13 +1053,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL. </p>
+<p>Returns the number of elements removed. The tree stays usable. See <a class="el" href="iterator_invalidation.html">Iterator invalidation</a> for which iterators this invalidates. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00351">351</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a9339232ae391d0e7f673fa275733555c_cgraph.png" border="0" usemap="#apr__tree_8c_a9339232ae391d0e7f673fa275733555c_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a9339232ae391d0e7f673fa275733555c_cgraph" id="apr__tree_8c_a9339232ae391d0e7f673fa275733555c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,102,31"/>
+<area shape="rect" title="Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL." alt="" coords="5,5,102,31"/>
 <area shape="rect" href="tree__common_8c.html#a6fbd46e35ff34bda38574a440b879dc1" title=" " alt="" coords="150,5,228,31"/>
 <area shape="poly" title=" " alt="" coords="102,16,134,16,134,21,102,21"/>
 </map>
@@ -992,13 +1085,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the number of elements. </p>
+<p>Takes O(1) time. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00388">388</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_ad01559bb0016db3d55d99756d959479d_cgraph.png" border="0" usemap="#apr__tree_8c_ad01559bb0016db3d55d99756d959479d_cgraph" alt=""/></div>
 <map name="apr__tree_8c_ad01559bb0016db3d55d99756d959479d_cgraph" id="apr__tree_8c_ad01559bb0016db3d55d99756d959479d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,106,31"/>
+<area shape="rect" title="Return the number of elements." alt="" coords="5,5,106,31"/>
 <area shape="rect" href="tree__common_8c.html#a666279f96572685934714532e744718e" title=" " alt="" coords="154,5,236,31"/>
 <area shape="poly" title=" " alt="" coords="106,16,138,16,138,21,106,21"/>
 </map>
@@ -1025,13 +1121,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL, and free the tree. </p>
+<p>Returns the number of elements removed. Iterators over the tree may afterwards only be freed. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00138">138</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_aa4a6bb903a1760fced365e1804c14b8f_cgraph.png" border="0" usemap="#apr__tree_8c_aa4a6bb903a1760fced365e1804c14b8f_cgraph" alt=""/></div>
 <map name="apr__tree_8c_aa4a6bb903a1760fced365e1804c14b8f_cgraph" id="apr__tree_8c_aa4a6bb903a1760fced365e1804c14b8f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,96,31"/>
+<area shape="rect" title="Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL,..." alt="" coords="5,5,96,31"/>
 <area shape="rect" href="tree__common_8c.html#a058d607ec36526c0e52cd66f853ef888" title=" " alt="" coords="144,5,216,31"/>
 <area shape="poly" title=" " alt="" coords="96,16,128,16,128,21,96,21"/>
 <area shape="rect" href="tree__common_8c.html#a6fbd46e35ff34bda38574a440b879dc1" title=" " alt="" coords="264,5,342,31"/>
@@ -1060,6 +1159,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Insert |key| unless an equal key is present. </p>
+<p>Returns {&amp;datum, true} for a new key, whose datum starts as NULL; the tree stores the |key| pointer itself, it does not copy the key. If an equal key is present, returns {&amp;datum, false} with that key's datum, and |key| is not stored and still belongs to the caller. Returns {NULL, false} if memory cannot be allocated. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00265">265</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 
 </div>
@@ -1079,13 +1181,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the greatest depth of any node, the root being at depth 1, or 0 for an empty tree: the height of the tree. </p>
+<p>A statistic for testing and benchmarking. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00389">389</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a0a8f3a4bfb2749b87517fa08971ca3da_cgraph.png" border="0" usemap="#apr__tree_8c_a0a8f3a4bfb2749b87517fa08971ca3da_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a0a8f3a4bfb2749b87517fa08971ca3da_cgraph" id="apr__tree_8c_a0a8f3a4bfb2749b87517fa08971ca3da_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,172,31"/>
+<area shape="rect" title="Return the greatest depth of any node, the root being at depth 1, or 0 for an empty tree: the height ..." alt="" coords="5,5,172,31"/>
 <area shape="rect" href="tree__common_8c.html#abf500bf5b159c5ec35a5e0a3ff57a0e8" title=" " alt="" coords="220,5,368,31"/>
 <area shape="poly" title=" " alt="" coords="172,16,204,16,204,21,172,21"/>
 </map>
@@ -1108,13 +1213,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the shallowest depth at which a child link is absent, the root being at depth 1, or 0 for an empty tree. </p>
+<p>A statistic for testing and benchmarking. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00390">390</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a813fe6b4373aebdf8d7eeeb8f022afd3_cgraph.png" border="0" usemap="#apr__tree_8c_a813fe6b4373aebdf8d7eeeb8f022afd3_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a813fe6b4373aebdf8d7eeeb8f022afd3_cgraph" id="apr__tree_8c_a813fe6b4373aebdf8d7eeeb8f022afd3_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,169,31"/>
+<area shape="rect" title="Return the shallowest depth at which a child link is absent, the root being at depth 1,..." alt="" coords="5,5,169,31"/>
 <area shape="rect" href="tree__common_8c.html#a756193ba67a2786a5e4a6274a7ec170e" title=" " alt="" coords="217,5,362,31"/>
 <area shape="poly" title=" " alt="" coords="169,16,201,16,201,21,169,21"/>
 </map>
@@ -1136,6 +1244,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Create an empty tree that orders keys with |cmp_func| (must not be NULL). </p>
+<p>Returns NULL if memory cannot be allocated. </p>
 
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00110">110</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 
@@ -1160,13 +1271,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Remove the element with key |key|. </p>
+<p>Returns {key, datum, true}, handing the stored key and datum back to the caller (no delete function is called), or {NULL, NULL, false} if |key| is not present. See <a class="el" href="iterator_invalidation.html">Iterator invalidation</a> for which iterators this invalidates. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00341">341</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a5439bea0d35397810101842ae9556056_cgraph.png" border="0" usemap="#apr__tree_8c_a5439bea0d35397810101842ae9556056_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a5439bea0d35397810101842ae9556056_cgraph" id="apr__tree_8c_a5439bea0d35397810101842ae9556056_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,117,31"/>
+<area shape="rect" title="Remove the element with key |key|." alt="" coords="5,5,117,31"/>
 <area shape="rect" href="tree__common_8c.html#a4336bbd1dec56af86a45e1d84d622063" title=" " alt="" coords="165,5,289,31"/>
 <area shape="poly" title=" " alt="" coords="117,16,149,16,149,21,117,21"/>
 </map>
@@ -1193,13 +1307,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the address of the datum stored for |key|, or NULL if |key| is not present. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00139">139</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_af03a9d82a232ad95cab29fe57da099ab_cgraph.png" border="0" usemap="#apr__tree_8c_af03a9d82a232ad95cab29fe57da099ab_cgraph" alt=""/></div>
 <map name="apr__tree_8c_af03a9d82a232ad95cab29fe57da099ab_cgraph" id="apr__tree_8c_af03a9d82a232ad95cab29fe57da099ab_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,113,31"/>
+<area shape="rect" title="Return the address of the datum stored for |key|, or NULL if |key| is not present." alt="" coords="5,5,113,31"/>
 <area shape="rect" href="tree__common_8c.html#a81a92b2c7f8d6ebdeacd787d53b67055" title=" " alt="" coords="161,5,250,31"/>
 <area shape="poly" title=" " alt="" coords="113,16,145,16,145,21,113,21"/>
 <area shape="rect" href="tree__common_8c.html#a4336bbd1dec56af86a45e1d84d622063" title=" " alt="" coords="298,5,422,31"/>
@@ -1228,13 +1344,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the address of the datum of the least key greater than or equal to |key|, or NULL if there is none. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00142">142</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a66085cf58e260d862ce8fe4fbfe31df5_cgraph.png" border="0" usemap="#apr__tree_8c_a66085cf58e260d862ce8fe4fbfe31df5_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a66085cf58e260d862ce8fe4fbfe31df5_cgraph" id="apr__tree_8c_a66085cf58e260d862ce8fe4fbfe31df5_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,134,31"/>
+<area shape="rect" title="Return the address of the datum of the least key greater than or equal to |key|, or NULL if there is ..." alt="" coords="5,5,134,31"/>
 <area shape="rect" href="tree__common_8c.html#ad6f8aff956f6f8b7f9eaebcd659506b1" title=" " alt="" coords="182,5,292,31"/>
 <area shape="poly" title=" " alt="" coords="134,16,166,16,166,21,134,21"/>
 <area shape="rect" href="tree__common_8c.html#aec6b09ca1b7597db7cb5a5389153f598" title=" " alt="" coords="340,5,485,31"/>
@@ -1263,13 +1381,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the address of the datum of the least key greater than |key|, or NULL if there is none. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00143">143</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a13aac3c296260214168e0702ad88095b_cgraph.png" border="0" usemap="#apr__tree_8c_a13aac3c296260214168e0702ad88095b_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a13aac3c296260214168e0702ad88095b_cgraph" id="apr__tree_8c_a13aac3c296260214168e0702ad88095b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,131,31"/>
+<area shape="rect" title="Return the address of the datum of the least key greater than |key|, or NULL if there is none." alt="" coords="5,5,131,31"/>
 <area shape="rect" href="tree__common_8c.html#a28283925393f2eb613aa1e669f181c18" title=" " alt="" coords="179,5,286,31"/>
 <area shape="poly" title=" " alt="" coords="131,16,163,16,163,21,131,21"/>
 <area shape="rect" href="tree__common_8c.html#a083987581cc9832ac2e13c1047b6f0f3" title=" " alt="" coords="334,5,476,31"/>
@@ -1298,13 +1418,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the address of the datum of the greatest key less than or equal to |key|, or NULL if there is none. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00140">140</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_acc5e721a419ab0385d680fcf6876546c_cgraph.png" border="0" usemap="#apr__tree_8c_acc5e721a419ab0385d680fcf6876546c_cgraph" alt=""/></div>
 <map name="apr__tree_8c_acc5e721a419ab0385d680fcf6876546c_cgraph" id="apr__tree_8c_acc5e721a419ab0385d680fcf6876546c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,130,31"/>
+<area shape="rect" title="Return the address of the datum of the greatest key less than or equal to |key|, or NULL if there is ..." alt="" coords="5,5,130,31"/>
 <area shape="rect" href="tree__common_8c.html#ae1ea8d32b69d63eed985f52949bb493c" title=" " alt="" coords="178,5,284,31"/>
 <area shape="poly" title=" " alt="" coords="130,16,162,16,162,21,130,21"/>
 <area shape="rect" href="tree__common_8c.html#a1e5a4773127f62034080c522c657c5d1" title=" " alt="" coords="332,5,473,31"/>
@@ -1333,13 +1455,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the address of the datum of the greatest key less than |key|, or NULL if there is none. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00141">141</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a19abec2733a7ea9caa29f1d22e7b850c_cgraph.png" border="0" usemap="#apr__tree_8c_a19abec2733a7ea9caa29f1d22e7b850c_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a19abec2733a7ea9caa29f1d22e7b850c_cgraph" id="apr__tree_8c_a19abec2733a7ea9caa29f1d22e7b850c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,127,31"/>
+<area shape="rect" title="Return the address of the datum of the greatest key less than |key|, or NULL if there is none." alt="" coords="5,5,127,31"/>
 <area shape="rect" href="tree__common_8c.html#a6f24b96ae2c229648439aa85a2895044" title=" " alt="" coords="175,5,278,31"/>
 <area shape="poly" title=" " alt="" coords="127,16,159,16,159,21,127,21"/>
 <area shape="rect" href="tree__common_8c.html#a645c577b5288a0d739610bca51a82e22" title=" " alt="" coords="326,5,464,31"/>
@@ -1378,6 +1502,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Store the key and datum of the |n|th element in key order (0-based) through |key| and |datum| and return true, or store NULL through them and return false if |n| is out of range. </p>
+<p>Either may be NULL. Takes O(log n) time. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00360">360</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 
 </div>
@@ -1397,13 +1524,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return the sum of the depths of all nodes, the root being at depth 1, or 0 for an empty tree. </p>
+<p>A statistic for testing and benchmarking. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00391">391</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_acdf0fc6fc9b122418083888333b7ccda_cgraph.png" border="0" usemap="#apr__tree_8c_acdf0fc6fc9b122418083888333b7ccda_cgraph" alt=""/></div>
 <map name="apr__tree_8c_acdf0fc6fc9b122418083888333b7ccda_cgraph" id="apr__tree_8c_acdf0fc6fc9b122418083888333b7ccda_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,131,46"/>
+<area shape="rect" title="Return the sum of the depths of all nodes, the root being at depth 1, or 0 for an empty tree." alt="" coords="5,5,131,46"/>
 <area shape="rect" href="tree__common_8c.html#a8ff1218a16ab93160f3a922fcdf88882" title=" " alt="" coords="179,13,328,38"/>
 <area shape="poly" title=" " alt="" coords="131,23,163,23,163,28,131,28"/>
 </map>
@@ -1435,13 +1565,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Call |visit|(key, datum, |user_data|) for each element in key order, stopping early if |visit| returns false. </p>
+<p>Returns the number of calls made. </p>
+
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00354">354</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pr__tree_8c_a37f8889c7ddffaf5820ff824b9b798e7_cgraph.png" border="0" usemap="#apr__tree_8c_a37f8889c7ddffaf5820ff824b9b798e7_cgraph" alt=""/></div>
 <map name="apr__tree_8c_a37f8889c7ddffaf5820ff824b9b798e7_cgraph" id="apr__tree_8c_a37f8889c7ddffaf5820ff824b9b798e7_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,121,31"/>
+<area shape="rect" title="Call |visit|(key, datum, |user_data|) for each element in key order, stopping early if |visit| return..." alt="" coords="5,5,121,31"/>
 <area shape="rect" href="tree__common_8c.html#a8af8d7bc05c41b6b1889714238c541e1" title=" " alt="" coords="169,5,266,31"/>
 <area shape="poly" title=" " alt="" coords="121,16,153,16,153,21,121,21"/>
 <area shape="rect" href="tree__common_8c.html#a7b6de5488b23a09de4f838c218adabd0" title=" " alt="" coords="471,5,578,31"/>
@@ -1468,6 +1601,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Check the internal invariants of the tree and return true if they hold, or print the first failed check to stderr and return false. </p>
+<p>Meant for testing and debugging; takes O(n) time. </p>
 
 <p class="definition">Definition at line <a class="el" href="pr__tree_8c_source.html#l00496">496</a> of file <a class="el" href="pr__tree_8c_source.html">pr_tree.c</a>.</p>
 

@@ -1,5 +1,5 @@
 <map id="pr_tree_search" name="pr_tree_search">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,113,31"/>
+<area shape="rect" id="Node000001" title="Return the address of the datum stored for |key|, or NULL if |key| is not present." alt="" coords="5,5,113,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#a81a92b2c7f8d6ebdeacd787d53b67055" title=" " alt="" coords="161,5,250,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,16,145,16,145,21,113,21"/>
 <area shape="rect" id="Node000003" href="$tree__common_8c.html#a4336bbd1dec56af86a45e1d84d622063" title=" " alt="" coords="298,5,422,31"/>

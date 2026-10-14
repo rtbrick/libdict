@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">libdict
+   <div id="projectname">libdict<span id="projectnumber">&#160;1.0.6-30-g1b80462</span>
    </div>
    <div id="projectbrief">Data Structure C Library</div>
   </td>
@@ -357,13 +357,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="adict_8h_html_af7abde3da86249ff4c3d19f5e62e7617"><div class="ttname"><a href="dict_8h.html#af7abde3da86249ff4c3d19f5e62e7617">dict_ifree_func</a></div><div class="ttdeci">void(* dict_ifree_func)(void *itor)</div><div class="ttdef"><b>Definition</b> <a href="#l00128">dict.h:128</a></div></div>
 <div class="ttc" id="adict_8h_html_afeae04c4c07e57a7451c3480a7a4bf2e"><div class="ttname"><a href="dict_8h.html#afeae04c4c07e57a7451c3480a7a4bf2e">dict_free_func</a></div><div class="ttdeci">void(* dict_free_func)(void *)</div><div class="ttdoc">A pointer to a function that libdict will use to deallocate memory.</div><div class="ttdef"><b>Definition</b> <a href="dict_8c_source.html#l00038">dict.c:38</a></div></div>
 <div class="ttc" id="adict_8h_html_aff73cb45075501b1f9cac831514fc716"><div class="ttname"><a href="dict_8h.html#aff73cb45075501b1f9cac831514fc716">dict_int_cmp</a></div><div class="ttdeci">int dict_int_cmp(const void *k1, const void *k2)</div><div class="ttdoc">Comparison functions for common key types, for use as dict_compare_func.</div><div class="ttdef"><b>Definition</b> <a href="dict_8c_source.html#l00041">dict.c:41</a></div></div>
-<div class="ttc" id="ahashtable2_8h_html"><div class="ttname"><a href="hashtable2_8h.html">hashtable2.h</a></div></div>
-<div class="ttc" id="ahashtable_8h_html"><div class="ttname"><a href="hashtable_8h.html">hashtable.h</a></div></div>
-<div class="ttc" id="ahb__tree_8h_html"><div class="ttname"><a href="hb__tree_8h.html">hb_tree.h</a></div></div>
-<div class="ttc" id="apr__tree_8h_html"><div class="ttname"><a href="pr__tree_8h.html">pr_tree.h</a></div></div>
-<div class="ttc" id="arb__tree_8h_html"><div class="ttname"><a href="rb__tree_8h.html">rb_tree.h</a></div></div>
-<div class="ttc" id="askiplist_8h_html"><div class="ttname"><a href="skiplist_8h.html">skiplist.h</a></div></div>
-<div class="ttc" id="asp__tree_8h_html"><div class="ttname"><a href="sp__tree_8h.html">sp_tree.h</a></div></div>
+<div class="ttc" id="ahashtable2_8h_html"><div class="ttname"><a href="hashtable2_8h.html">hashtable2.h</a></div><div class="ttdoc">Hash table with open addressing and linear probing.</div></div>
+<div class="ttc" id="ahashtable_8h_html"><div class="ttname"><a href="hashtable_8h.html">hashtable.h</a></div><div class="ttdoc">Hash table with separate chaining; each chain is kept sorted by hash value.</div></div>
+<div class="ttc" id="ahb__tree_8h_html"><div class="ttname"><a href="hb__tree_8h.html">hb_tree.h</a></div><div class="ttdoc">Height-balanced (AVL) tree.</div></div>
+<div class="ttc" id="apr__tree_8h_html"><div class="ttname"><a href="pr__tree_8h.html">pr_tree.h</a></div><div class="ttdoc">Path-reduction tree [Gonnet 1983].</div></div>
+<div class="ttc" id="arb__tree_8h_html"><div class="ttname"><a href="rb__tree_8h.html">rb_tree.h</a></div><div class="ttdoc">Red-black tree.</div></div>
+<div class="ttc" id="askiplist_8h_html"><div class="ttname"><a href="skiplist_8h.html">skiplist.h</a></div><div class="ttdoc">Skip list [Pugh 1990].</div></div>
+<div class="ttc" id="asp__tree_8h_html"><div class="ttname"><a href="sp__tree_8h.html">sp_tree.h</a></div><div class="ttdoc">Splay tree.</div></div>
 <div class="ttc" id="astructdict__insert__result_html"><div class="ttname"><a href="structdict__insert__result.html">dict_insert_result</a></div><div class="ttdef"><b>Definition</b> <a href="#l00080">dict.h:80</a></div></div>
 <div class="ttc" id="astructdict__insert__result_html_a325385b8d6787835cb03a2f364ab2c56"><div class="ttname"><a href="structdict__insert__result.html#a325385b8d6787835cb03a2f364ab2c56">dict_insert_result::inserted</a></div><div class="ttdeci">bool inserted</div><div class="ttdef"><b>Definition</b> <a href="#l00082">dict.h:82</a></div></div>
 <div class="ttc" id="astructdict__insert__result_html_a9874e765273b8a34323b00166c989f2e"><div class="ttname"><a href="structdict__insert__result.html#a9874e765273b8a34323b00166c989f2e">dict_insert_result::datum_ptr</a></div><div class="ttdeci">void ** datum_ptr</div><div class="ttdef"><b>Definition</b> <a href="#l00081">dict.h:81</a></div></div>
@@ -412,8 +412,8 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="astructitor__vtable_html_ae1bf0ee260c1d73bfcaf908383a48b18"><div class="ttname"><a href="structitor__vtable.html#ae1bf0ee260c1d73bfcaf908383a48b18">itor_vtable::search_gt</a></div><div class="ttdeci">dict_isearch_func search_gt</div><div class="ttdef"><b>Definition</b> <a href="#l00159">dict.h:159</a></div></div>
 <div class="ttc" id="astructitor__vtable_html_ae27a265a0e2d12bd857104499a4da018"><div class="ttname"><a href="structitor__vtable.html#ae27a265a0e2d12bd857104499a4da018">itor_vtable::invalid</a></div><div class="ttdeci">dict_invalidate_func invalid</div><div class="ttdef"><b>Definition</b> <a href="#l00146">dict.h:146</a></div></div>
 <div class="ttc" id="astructitor__vtable_html_aee22330239b8c709c60d3b8275e01060"><div class="ttname"><a href="structitor__vtable.html#aee22330239b8c709c60d3b8275e01060">itor_vtable::datum</a></div><div class="ttdeci">dict_datum_func datum</div><div class="ttdef"><b>Definition</b> <a href="#l00154">dict.h:154</a></div></div>
-<div class="ttc" id="atr__tree_8h_html"><div class="ttname"><a href="tr__tree_8h.html">tr_tree.h</a></div></div>
-<div class="ttc" id="awb__tree_8h_html"><div class="ttname"><a href="wb__tree_8h.html">wb_tree.h</a></div></div>
+<div class="ttc" id="atr__tree_8h_html"><div class="ttname"><a href="tr__tree_8h.html">tr_tree.h</a></div><div class="ttdoc">Treap: a binary search tree on the keys that is at the same time a max-heap on per-node priorities.</div></div>
+<div class="ttc" id="awb__tree_8h_html"><div class="ttname"><a href="wb__tree_8h.html">wb_tree.h</a></div><div class="ttdoc">Weight-balanced tree, BB[alpha] with alpha = 1 - sqrt(2)/2.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

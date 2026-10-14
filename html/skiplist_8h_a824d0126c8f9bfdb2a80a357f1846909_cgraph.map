@@ -1,5 +1,5 @@
 <map id="skiplist_free" name="skiplist_free">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,97,31"/>
-<area shape="rect" id="Node000002" href="$skiplist_8c.html#adcd7400173bafdbc06f7868e2ff11a9d" title=" " alt="" coords="145,5,242,31"/>
+<area shape="rect" id="Node000001" title="Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL,..." alt="" coords="5,5,97,31"/>
+<area shape="rect" id="Node000002" href="$skiplist_8c.html#adcd7400173bafdbc06f7868e2ff11a9d" title="Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL." alt="" coords="145,5,242,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,16,129,16,129,21,97,21"/>
 </map>

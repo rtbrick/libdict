@@ -1,5 +1,5 @@
 <map id="hashtable_dict_itor_new" name="hashtable_dict_itor_new">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,167,31"/>
-<area shape="rect" id="Node000002" href="$hashtable_8c.html#a42ef1560386cd5b2ed4bbda89066305a" title=" " alt="" coords="215,5,348,31"/>
+<area shape="rect" id="Node000001" title="Like hashtable_itor_new(), but wrapped in a generic dict_itor for use with the dict_itor_* macros." alt="" coords="5,5,167,31"/>
+<area shape="rect" id="Node000002" href="$hashtable_8c.html#a42ef1560386cd5b2ed4bbda89066305a" title="Create an iterator over |table| that is not positioned on any element yet." alt="" coords="215,5,348,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,16,199,16,199,21,167,21"/>
 </map>

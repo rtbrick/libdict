@@ -1,5 +1,5 @@
 <map id="tr_tree_search_lt" name="tr_tree_search_lt">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,124,31"/>
+<area shape="rect" id="Node000001" title="Return the address of the datum of the greatest key less than |key|, or NULL if there is none." alt="" coords="5,5,124,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#a6f24b96ae2c229648439aa85a2895044" title=" " alt="" coords="172,5,275,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,16,156,16,156,21,124,21"/>
 <area shape="rect" id="Node000003" href="$tree__common_8c.html#a645c577b5288a0d739610bca51a82e22" title=" " alt="" coords="323,5,461,31"/>

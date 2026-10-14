@@ -1,5 +1,5 @@
 <map id="pr_tree_free" name="pr_tree_free">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,96,31"/>
+<area shape="rect" id="Node000001" title="Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL,..." alt="" coords="5,5,96,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#a058d607ec36526c0e52cd66f853ef888" title=" " alt="" coords="144,5,216,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,16,128,16,128,21,96,21"/>
 <area shape="rect" id="Node000003" href="$tree__common_8c.html#a6fbd46e35ff34bda38574a440b879dc1" title=" " alt="" coords="264,5,342,31"/>

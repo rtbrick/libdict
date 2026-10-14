@@ -1,5 +1,5 @@
 <map id="sp_tree_search_lt" name="sp_tree_search_lt">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,130,31"/>
+<area shape="rect" id="Node000001" title="Return the address of the datum of the greatest key less than |key|, or NULL if there is none." alt="" coords="5,5,130,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#a645c577b5288a0d739610bca51a82e22" title=" " alt="" coords="178,5,316,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,16,162,16,162,21,130,21"/>
 </map>

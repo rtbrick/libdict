@@ -1,5 +1,5 @@
 <map id="wb_itor_datum" name="wb_itor_datum">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,112,31"/>
+<area shape="rect" id="Node000001" title="Return the address of the datum |itor| is positioned on, through which it can be read or replaced,..." alt="" coords="5,5,112,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#a1cc4c18adcfc606676bbbe632160f50a" title=" " alt="" coords="160,5,293,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,16,144,16,144,21,112,21"/>
 </map>

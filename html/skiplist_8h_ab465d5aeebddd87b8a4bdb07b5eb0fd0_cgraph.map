@@ -1,5 +1,5 @@
 <map id="skiplist_dict_itor_new" name="skiplist_dict_itor_new">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,152,31"/>
-<area shape="rect" id="Node000002" href="$skiplist_8c.html#adbe33aa562dee4fa3e409b3544203780" title=" " alt="" coords="200,5,318,31"/>
+<area shape="rect" id="Node000001" title="Like skiplist_itor_new(), but wrapped in a generic dict_itor for use with the dict_itor_* macros." alt="" coords="5,5,152,31"/>
+<area shape="rect" id="Node000002" href="$skiplist_8c.html#adbe33aa562dee4fa3e409b3544203780" title="Create an iterator over |list| that is not positioned on any element yet." alt="" coords="200,5,318,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,16,184,16,184,21,152,21"/>
 </map>

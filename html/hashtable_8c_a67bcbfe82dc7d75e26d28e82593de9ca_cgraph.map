@@ -1,8 +1,8 @@
 <map id="hashtable_insert" name="hashtable_insert">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,122,56"/>
-<area shape="rect" id="Node000002" href="$hashtable_8c.html#a99a194118712fc1cfc4e3d954c9887a7" title=" " alt="" coords="172,5,290,31"/>
+<area shape="rect" id="Node000001" title="Insert |key| unless an equal key is present." alt="" coords="5,31,122,56"/>
+<area shape="rect" id="Node000002" href="$hashtable_8c.html#a99a194118712fc1cfc4e3d954c9887a7" title="Rehash the table into at least |size| slots, rounded up as in hashtable_new()." alt="" coords="172,5,290,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,32,156,27,157,32,123,37"/>
-<area shape="rect" id="Node000004" href="$hashtable_8c.html#acf6fe1dbd03b91f46fa0c2cc9b36f455" title=" " alt="" coords="170,55,293,80"/>
+<area shape="rect" id="Node000004" href="$hashtable_8c.html#acf6fe1dbd03b91f46fa0c2cc9b36f455" title="Return the address of the datum stored for |key|, or NULL if |key| is not present." alt="" coords="170,55,293,80"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="123,49,155,54,154,59,122,54"/>
 <area shape="rect" id="Node000003" href="$hashtable__common_8c.html#af8af08005cd8f9f8cd81dd7ca0692b11" title=" " alt="" coords="341,5,450,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="291,16,325,16,325,21,291,21"/>

@@ -1,5 +1,5 @@
 <map id="wb_tree_search" name="wb_tree_search">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,119,31"/>
+<area shape="rect" id="Node000001" title="Return the address of the datum stored for |key|, or NULL if |key| is not present." alt="" coords="5,5,119,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#a81a92b2c7f8d6ebdeacd787d53b67055" title=" " alt="" coords="167,5,256,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,16,151,16,151,21,119,21"/>
 <area shape="rect" id="Node000003" href="$tree__common_8c.html#a4336bbd1dec56af86a45e1d84d622063" title=" " alt="" coords="304,5,428,31"/>

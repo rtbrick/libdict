@@ -1,5 +1,5 @@
 <map id="include/rb_tree.h" name="include/rb_tree.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="586,5,702,31"/>
+<area shape="rect" id="Node000001" title="Red&#45;black tree." alt="" coords="586,5,702,31"/>
 <area shape="rect" id="Node000002" href="$dict_8h.html" title=" " alt="" coords="618,79,670,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="640,31,638,64,633,63,635,31"/>
 <area shape="poly" id="edge13_Node000002_Node000001" title=" " alt="" coords="649,78,650,46,656,46,654,79"/>
@@ -9,21 +9,21 @@
 <area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="618,98,436,116,309,132,176,155,175,150,308,127,436,111,618,93"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="184,153,257,178"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="618,99,475,120,273,155,272,149,474,115,617,94"/>
-<area shape="rect" id="Node000006" href="$hashtable_8h.html" title=" " alt="" coords="281,153,368,178"/>
+<area shape="rect" id="Node000006" href="$hashtable_8h.html" title="Hash table with separate chaining; each chain is kept sorted by hash value." alt="" coords="281,153,368,178"/>
 <area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="619,101,383,152,382,147,617,95"/>
-<area shape="rect" id="Node000007" href="$hashtable2_8h.html" title=" " alt="" coords="392,153,486,178"/>
+<area shape="rect" id="Node000007" href="$hashtable2_8h.html" title="Hash table with open addressing and linear probing." alt="" coords="392,153,486,178"/>
 <area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="619,103,482,149,480,144,617,98"/>
-<area shape="rect" id="Node000008" href="$hb__tree_8h.html" title=" " alt="" coords="510,153,584,178"/>
+<area shape="rect" id="Node000008" href="$hb__tree_8h.html" title="Height&#45;balanced (AVL) tree." alt="" coords="510,153,584,178"/>
 <area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="622,107,570,145,566,141,619,103"/>
-<area shape="rect" id="Node000009" href="$pr__tree_8h.html" title=" " alt="" coords="609,153,680,178"/>
+<area shape="rect" id="Node000009" href="$pr__tree_8h.html" title="Path&#45;reduction tree [Gonnet 1983]." alt="" coords="609,153,680,178"/>
 <area shape="poly" id="edge11_Node000002_Node000009" title=" " alt="" coords="640,105,638,137,633,137,635,105"/>
-<area shape="rect" id="Node000010" href="$skiplist_8h.html" title=" " alt="" coords="704,153,776,178"/>
+<area shape="rect" id="Node000010" href="$skiplist_8h.html" title="Skip list [Pugh 1990]." alt="" coords="704,153,776,178"/>
 <area shape="poly" id="edge14_Node000002_Node000010" title=" " alt="" coords="655,103,706,142,703,146,652,107"/>
-<area shape="rect" id="Node000011" href="$sp__tree_8h.html" title=" " alt="" coords="800,153,875,178"/>
+<area shape="rect" id="Node000011" href="$sp__tree_8h.html" title="Splay tree." alt="" coords="800,153,875,178"/>
 <area shape="poly" id="edge16_Node000002_Node000011" title=" " alt="" coords="671,103,787,145,785,150,669,108"/>
-<area shape="rect" id="Node000012" href="$tr__tree_8h.html" title=" " alt="" coords="900,153,968,178"/>
+<area shape="rect" id="Node000012" href="$tr__tree_8h.html" title="Treap: a binary search tree on the keys that is at the same time a max&#45;heap on per&#45;node priorities." alt="" coords="900,153,968,178"/>
 <area shape="poly" id="edge18_Node000002_Node000012" title=" " alt="" coords="672,99,876,150,885,152,884,158,874,155,671,104"/>
-<area shape="rect" id="Node000013" href="$wb__tree_8h.html" title=" " alt="" coords="992,153,1070,178"/>
+<area shape="rect" id="Node000013" href="$wb__tree_8h.html" title="Weight&#45;balanced tree, BB[alpha] with alpha = 1 &#45; sqrt(2)/2." alt="" coords="992,153,1070,178"/>
 <area shape="poly" id="edge20_Node000002_Node000013" title=" " alt="" coords="672,96,969,150,978,152,977,157,968,155,671,101"/>
 <area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="368,153,602,101,604,106,369,158"/>
 <area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="480,149,603,107,604,112,482,155"/>

@@ -1,5 +1,5 @@
 <map id="hb_tree_free" name="hb_tree_free">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,99,31"/>
-<area shape="rect" id="Node000002" href="$hb__tree_8c.html#a074911e5272be53155567b2a9631ef29" title=" " alt="" coords="147,5,246,31"/>
+<area shape="rect" id="Node000001" title="Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL,..." alt="" coords="5,5,99,31"/>
+<area shape="rect" id="Node000002" href="$hb__tree_8c.html#a074911e5272be53155567b2a9631ef29" title="Remove every element, calling |delete_func|(key, datum) for each unless |delete_func| is NULL." alt="" coords="147,5,246,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,16,131,16,131,21,99,21"/>
 </map>

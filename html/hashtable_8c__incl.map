@@ -1,6 +1,6 @@
 <map id="src/hashtable.c" name="src/hashtable.c">
 <area shape="rect" id="Node000001" title=" " alt="" coords="727,5,836,31"/>
-<area shape="rect" id="Node000002" href="$hashtable_8h.html" title=" " alt="" coords="586,79,673,105"/>
+<area shape="rect" id="Node000002" href="$hashtable_8h.html" title="Hash table with separate chaining; each chain is kept sorted by hash value." alt="" coords="586,79,673,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="757,34,671,74,668,70,755,29"/>
 <area shape="rect" id="Node000015" title=" " alt="" coords="698,79,761,105"/>
 <area shape="poly" id="edge23_Node000001_Node000015" title=" " alt="" coords="775,33,750,68,745,65,771,30"/>
@@ -17,21 +17,21 @@
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="603,172,427,190,304,207,176,228,175,223,304,201,427,185,603,166"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="184,226,257,252"/>
 <area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="603,173,466,194,273,229,272,223,465,189,603,168"/>
-<area shape="rect" id="Node000007" href="$hashtable2_8h.html" title=" " alt="" coords="281,226,376,252"/>
+<area shape="rect" id="Node000007" href="$hashtable2_8h.html" title="Hash table with open addressing and linear probing." alt="" coords="281,226,376,252"/>
 <area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="604,175,388,225,387,220,602,169"/>
-<area shape="rect" id="Node000008" href="$hb__tree_8h.html" title=" " alt="" coords="399,226,474,252"/>
+<area shape="rect" id="Node000008" href="$hb__tree_8h.html" title="Height&#45;balanced (AVL) tree." alt="" coords="399,226,474,252"/>
 <area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="604,177,477,223,475,218,602,172"/>
-<area shape="rect" id="Node000009" href="$pr__tree_8h.html" title=" " alt="" coords="498,226,569,252"/>
+<area shape="rect" id="Node000009" href="$pr__tree_8h.html" title="Path&#45;reduction tree [Gonnet 1983]." alt="" coords="498,226,569,252"/>
 <area shape="poly" id="edge11_Node000003_Node000009" title=" " alt="" coords="608,181,556,219,553,214,605,177"/>
-<area shape="rect" id="Node000010" href="$rb__tree_8h.html" title=" " alt="" coords="594,226,665,252"/>
+<area shape="rect" id="Node000010" href="$rb__tree_8h.html" title="Red&#45;black tree." alt="" coords="594,226,665,252"/>
 <area shape="poly" id="edge13_Node000003_Node000010" title=" " alt="" coords="625,179,624,211,618,211,620,178"/>
-<area shape="rect" id="Node000011" href="$skiplist_8h.html" title=" " alt="" coords="690,226,762,252"/>
+<area shape="rect" id="Node000011" href="$skiplist_8h.html" title="Skip list [Pugh 1990]." alt="" coords="690,226,762,252"/>
 <area shape="poly" id="edge15_Node000003_Node000011" title=" " alt="" coords="641,177,691,215,688,219,637,181"/>
-<area shape="rect" id="Node000012" href="$sp__tree_8h.html" title=" " alt="" coords="786,226,860,252"/>
+<area shape="rect" id="Node000012" href="$sp__tree_8h.html" title="Splay tree." alt="" coords="786,226,860,252"/>
 <area shape="poly" id="edge17_Node000003_Node000012" title=" " alt="" coords="656,176,772,219,770,224,655,181"/>
-<area shape="rect" id="Node000013" href="$tr__tree_8h.html" title=" " alt="" coords="885,226,953,252"/>
+<area shape="rect" id="Node000013" href="$tr__tree_8h.html" title="Treap: a binary search tree on the keys that is at the same time a max&#45;heap on per&#45;node priorities." alt="" coords="885,226,953,252"/>
 <area shape="poly" id="edge19_Node000003_Node000013" title=" " alt="" coords="657,173,861,224,870,226,869,231,860,229,656,178"/>
-<area shape="rect" id="Node000014" href="$wb__tree_8h.html" title=" " alt="" coords="978,226,1055,252"/>
+<area shape="rect" id="Node000014" href="$wb__tree_8h.html" title="Weight&#45;balanced tree, BB[alpha] with alpha = 1 &#45; sqrt(2)/2." alt="" coords="978,226,1055,252"/>
 <area shape="poly" id="edge21_Node000003_Node000014" title=" " alt="" coords="657,170,954,224,963,226,962,231,953,229,656,175"/>
 <area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="375,226,588,176,589,181,376,231"/>
 <area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="473,224,589,182,591,187,475,229"/>

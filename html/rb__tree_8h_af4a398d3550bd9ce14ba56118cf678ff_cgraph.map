@@ -1,5 +1,5 @@
 <map id="rb_tree_search_gt" name="rb_tree_search_gt">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,131,31"/>
+<area shape="rect" id="Node000001" title="Return the address of the datum of the least key greater than |key|, or NULL if there is none." alt="" coords="5,5,131,31"/>
 <area shape="rect" id="Node000002" href="$tree__common_8c.html#a28283925393f2eb613aa1e669f181c18" title=" " alt="" coords="179,5,286,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,16,163,16,163,21,131,21"/>
 <area shape="rect" id="Node000003" href="$tree__common_8c.html#a083987581cc9832ac2e13c1047b6f0f3" title=" " alt="" coords="334,5,476,31"/>
