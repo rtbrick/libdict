@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['dict_2ec_0',['dict.c',['../dict_8c.html',1,'']]],
-  ['dict_2eh_1',['dict.h',['../dict_8h.html',1,'']]],
-  ['dict_5fprivate_2eh_2',['dict_private.h',['../dict__private_8h.html',1,'']]]
+  ['changelog_2emd_0',['CHANGELOG.md',['../_c_h_a_n_g_e_l_o_g_8md.html',1,'']]]
 ];

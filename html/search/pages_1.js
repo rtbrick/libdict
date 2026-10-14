@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['libdict_0',['libdict',['../index.html',1,'']]]
+  ['invalidation_0',['Iterator invalidation',['../iterator_invalidation.html',1,'']]],
+  ['iterator_20invalidation_1',['Iterator invalidation',['../iterator_invalidation.html',1,'']]]
 ];

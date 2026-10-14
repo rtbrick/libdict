@@ -253,6 +253,8 @@
     <member refid="structwb__tree_1a3e0944ca8a425fcd254ca5057e885e45" kind="variable"><name>cmp_func</name></member>
     <member refid="structwb__tree_1adf0b2d44ac6cd97d428ec85210970b43" kind="variable"><name>rotation_count</name></member>
   </compound>
+  <compound refid="_c_h_a_n_g_e_l_o_g_8md" kind="file"><name>CHANGELOG.md</name>
+  </compound>
   <compound refid="dict_8h" kind="file"><name>dict.h</name>
     <member refid="dict_8h_1a0c5f0f7b40e3b3df5aaa4c5e3c874b3b" kind="define"><name>BEGIN_DECL</name></member>
     <member refid="dict_8h_1acca589e3adebef8ed4e5bed6dea40ebb" kind="define"><name>END_DECL</name></member>
@@ -1410,6 +1412,8 @@
     <member refid="wb__tree_8c_1a832c1b1d07fa0e6b2bd6af95a5ff5e4a" kind="function"><name>wb_itor_datum</name></member>
     <member refid="wb__tree_8c_1a3195a70c2624d672b6d45c90f78b7b8c" kind="function"><name>wb_itor_compare</name></member>
     <member refid="wb__tree_8c_1a44846bbf6729a9998e7d615043ccc910" kind="function"><name>wb_itor_remove</name></member>
+  </compound>
+  <compound refid="md__c_h_a_n_g_e_l_o_g" kind="page"><name>md__c_h_a_n_g_e_l_o_g</name>
   </compound>
   <compound refid="iterator_invalidation" kind="page"><name>iterator_invalidation</name>
   </compound>

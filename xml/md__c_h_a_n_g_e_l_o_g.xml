@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="md__c_h_a_n_g_e_l_o_g" kind="page">
+    <compoundname>md__c_h_a_n_g_e_l_o_g</compoundname>
+    <title>Changelog</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><heading level="1">1.0.7 (2026-10-14)</heading>
+</para>
+<para>Changes since 1.0.6. The public API and ABI are unchanged: existing code compiles as before, and <computeroutput>abidiff</computeroutput> against 1.0.6 reports no removed or changed functions. A few fixes do change behaviour that a program may have relied on; they are listed first.</para>
+<para><heading level="2">Behaviour changes</heading>
+</para>
+<para><itemizedlist>
+<listitem><para><bold>String key order on x86.</bold> <computeroutput>dict_str_cmp</computeroutput> now compares bytes as <computeroutput>unsigned char</computeroutput>, exactly as <computeroutput>strcmp()</computeroutput> does. On x86, x86_64 and i386, keys containing bytes &gt;= 0x80 (for example UTF-8 text) therefore sort differently than before: <computeroutput>&quot;é&quot;</computeroutput> now sorts after <computeroutput>&quot;a&quot;</computeroutput>. This affects iteration order, <computeroutput><ref refid="dict_8h_1a79a2925a163c7e11cf051b2b09385001" kindref="member">dict_select()</ref></computeroutput> positions and the neighbours found by the near searches; lookups are unaffected. Nothing changes on ARM, PowerPC or s390x, which already behaved this way.</para>
+</listitem><listitem><para><bold><computeroutput><ref refid="hb__tree_8c_1a01b798d34492d3237aede0152581dcc1" kindref="member">hb_itor_search()</ref></computeroutput> is an exact search.</bold> It used to find the first key greater than or equal to the target. <computeroutput><ref refid="dict_8h_1acc73d96ff9e1c12a18e8336425a509fd" kindref="member">dict_itor_search()</ref></computeroutput> on an <ref refid="structhb__tree" kindref="compound">hb_tree</ref> was already exact; use <computeroutput><ref refid="hb__tree_8c_1a2fb84f10c1de87e756f9da059ac4849b" kindref="member">hb_itor_search_ge()</ref></computeroutput> for the old behaviour.</para>
+</listitem><listitem><para><bold>Hash table iterators detect invalidation.</bold> After an insert that grows the table, an explicit resize, or <computeroutput><ref refid="dict_8h_1a0b854d4ba82e0130b688ef10cbeec314" kindref="member">dict_clear()</ref></computeroutput> (and, for <computeroutput><ref refid="structhashtable2" kindref="compound">hashtable2</ref></computeroutput>, after any removal), every iterator over the table reports itself invalid: <computeroutput><ref refid="dict_8h_1a8252e0a9de5db497c840b19160982ae8" kindref="member">dict_itor_valid()</ref></computeroutput> is false and <computeroutput><ref refid="dict_8h_1ac148237746f970f7b88f73776748d9ef" kindref="member">dict_itor_next()</ref></computeroutput> returns false. Loops that modify a hash table while iterating now stop instead of silently skipping or repeating elements, or reading freed memory. Reposition with <computeroutput><ref refid="dict_8h_1a98e4692234c7eb5850ad9f0aa634f883" kindref="member">dict_itor_first()</ref></computeroutput> or <computeroutput><ref refid="dict_8h_1acc73d96ff9e1c12a18e8336425a509fd" kindref="member">dict_itor_search()</ref></computeroutput>. Inserting another key without a resize, and (for <computeroutput>hashtable</computeroutput>) removing another element, keep iterators valid as before. The rules for all containers are documented under &quot;Iterator invalidation&quot;.</para>
+</listitem><listitem><para><bold>Inserting an existing key never grows a hash table.</bold> Previously the resize check ran before the lookup.</para>
+</listitem><listitem><para><bold>vtable slots hold internal wrapper functions.</bold> Calling container functions through incompatible function pointer types was undefined behaviour. As a result, comparing a vtable slot with a public function (for example <computeroutput>dct-&gt;_vtable-&gt;insert == hashtable_insert</computeroutput>) is now always false; compare the <computeroutput>_vtable</computeroutput> pointer with that of a dict of the known type instead.</para>
+</listitem></itemizedlist>
+</para>
+<para><heading level="2">Fixed</heading>
+</para>
+<para><itemizedlist>
+<listitem><para><computeroutput><ref refid="dict_8h_1adf18e104c6ad831a90b18b222a0ea5f2" kindref="member">dict_traverse()</ref></computeroutput> on an <ref refid="structhb__tree" kindref="compound">hb_tree</ref> with two or more keys crashed.</para>
+</listitem><listitem><para><computeroutput><ref refid="dict_8h_1a79a2925a163c7e11cf051b2b09385001" kindref="member">dict_select()</ref></computeroutput> with a NULL key or datum argument crashed on <ref refid="structsp__tree" kindref="compound">sp_tree</ref> and <ref refid="structtr__tree" kindref="compound">tr_tree</ref>.</para>
+</listitem><listitem><para><computeroutput><ref refid="skiplist_8c_1a163c5a84a8d9796d5a382824734d041c" kindref="member">skiplist_new()</ref></computeroutput> with <computeroutput>max_link</computeroutput> 0 or 1 lost every element and leaked it; <computeroutput>max_link</computeroutput> is now raised to 2.</para>
+</listitem><listitem><para><ref refid="structwb__tree" kindref="compound">wb_tree</ref> rebalancing broke above about 6 million elements (32-bit overflow).</para>
+</listitem><listitem><para>A degenerate splay tree or treap (about 175,000+ nodes in a chain) crashed the <computeroutput>*_path_length</computeroutput> functions and <computeroutput>sp_tree_verify</computeroutput>/<computeroutput>tr_tree_verify</computeroutput> with a stack overflow; they are now iterative.</para>
+</listitem><listitem><para>On 32-bit targets, creating or resizing a hash table with about 2^30 slots or more allocated too little memory and wrote past it; it now fails.</para>
+</listitem><listitem><para><ref refid="structhb__tree" kindref="compound">hb_tree</ref> and <ref refid="structrb__tree" kindref="compound">rb_tree</ref> now abort with a message, also in release builds, if the allocator returns misaligned memory, instead of corrupting the tree.</para>
+</listitem><listitem><para>Undefined behaviour: <computeroutput>__builtin_ctz(0)</computeroutput> in the skip list, relational comparison of unrelated pointers in <computeroutput>dict_ptr_cmp</computeroutput>, and comparisons of pointers to freed nodes in several trees.</para>
+</listitem><listitem><para><computeroutput><ref refid="dict_8h_1aa3386120405200439c1bcfedbd90a310" kindref="member">dict_verify()</ref></computeroutput> now catches corruption it used to accept: wrong black height in <ref refid="structrb__tree" kindref="compound">rb_tree</ref>, a subtree on the wrong side of an ancestor (all trees), a wrong element count, and out-of-order skip list links. It prints the failed check to stderr.</para>
+</listitem><listitem><para><computeroutput><ref refid="dict_8h_1a79566cdb6aa135d0959fb092e05496c7" kindref="member">dict_itor_compare()</ref></computeroutput> on a hash table evaluates to 0 instead of calling a NULL function pointer; <computeroutput><ref refid="hashtable2_8c_1a2d78df14e4791b628483129358ffab7c" kindref="member">hashtable2_itor_valid()</ref></computeroutput> no longer aborts after a removal.</para>
+</listitem><listitem><para><ref refid="structsp__tree" kindref="compound">sp_tree</ref> now splays when inserting an existing key, preserving its amortized O(log n) bound; the <computeroutput>rotation_count</computeroutput> statistics of <ref refid="structsp__tree" kindref="compound">sp_tree</ref> and <ref refid="structpr__tree" kindref="compound">pr_tree</ref> count single and double rotations consistently.</para>
+</listitem><listitem><para><computeroutput>demo</computeroutput>, <computeroutput>anagram</computeroutput> and <computeroutput>benchmark</computeroutput>: crashes on a bare <computeroutput>search</computeroutput> command and on blank or NUL-led input lines, an overlapping <computeroutput>strcpy</computeroutput>, negative <computeroutput>&lt;ctype.h&gt;</computeroutput> arguments, <computeroutput>printf</computeroutput> format mismatches, unchecked allocations, and memory leaks. <computeroutput>benchmark</computeroutput> now skips blank input lines; <computeroutput>anagram</computeroutput> skips words with ten or more of one letter.</para>
+</listitem><listitem><para><computeroutput>util.h</computeroutput> could not be included by two translation units.</para>
+</listitem></itemizedlist>
+</para>
+<para><heading level="2">Documentation</heading>
+</para>
+<para><itemizedlist>
+<listitem><para>Every function of the public headers is documented, and the published Doxygen documentation now includes it (header comments were not extracted before) with the README as its main page.</para>
+</listitem><listitem><para>The README described <computeroutput><ref refid="structdict__insert__result_1a325385b8d6787835cb03a2f364ab2c56" kindref="member">dict_insert_result.inserted</ref></computeroutput> backwards; it is <computeroutput>true</computeroutput> when the key was inserted.</para>
+</listitem><listitem><para>New: iterator invalidation rules for every container, the comparison function contract, treap priority direction (max-heap), and usage notes in the README. Many wrong comments were corrected.</para>
+</listitem></itemizedlist>
+</para>
+<para><heading level="2">Build and tests</heading>
+</para>
+<para><itemizedlist>
+<listitem><para>The GNU makefile works again (its recipe tabs had been replaced by spaces) and builds warning-free with clang <computeroutput>-Weverything</computeroutput>.</para>
+</listitem><listitem><para>The test suite grew from 13 to 41 tests, including checks of every container for traversal, selection and iterator behaviour. Slow tests (a 6-million-element tree) run only with <computeroutput>LIBDICT_SLOW_TESTS=1</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+<para><heading level="1">1.0.6 and earlier</heading>
+</para>
+<para>See the <ulink url="https://github.com/rtbrick/libdict/releases">GitHub releases</ulink> and the git history. </para>
+    </detaileddescription>
+    <location file="CHANGELOG.md"/>
+  </compounddef>
+</doxygen>

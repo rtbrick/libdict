@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_c_h_a_n_g_e_l_o_g_8md" kind="file" language="Markdown">
+    <compoundname>CHANGELOG.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Changelog</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>1.0.7<sp/>(2026-10-14)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Changes<sp/>since<sp/>1.0.6.<sp/>The<sp/>public<sp/>API<sp/>and<sp/>ABI<sp/>are<sp/>unchanged:<sp/>existing<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">compiles<sp/>as<sp/>before,<sp/>and<sp/>`abidiff`<sp/>against<sp/>1.0.6<sp/>reports<sp/>no<sp/>removed<sp/>or<sp/>changed</highlight></codeline>
+<codeline><highlight class="normal">functions.<sp/>A<sp/>few<sp/>fixes<sp/>do<sp/>change<sp/>behaviour<sp/>that<sp/>a<sp/>program<sp/>may<sp/>have<sp/>relied<sp/>on;</highlight></codeline>
+<codeline><highlight class="normal">they<sp/>are<sp/>listed<sp/>first.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Behaviour<sp/>changes</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**String<sp/>key<sp/>order<sp/>on<sp/>x86.**<sp/>`dict_str_cmp`<sp/>now<sp/>compares<sp/>bytes<sp/>as</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>`unsigned<sp/>char`,<sp/>exactly<sp/>as<sp/>`strcmp()`<sp/>does.<sp/>On<sp/>x86,<sp/>x86_64<sp/>and<sp/>i386,<sp/>keys</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>containing<sp/>bytes<sp/>&gt;=<sp/>0x80<sp/>(for<sp/>example<sp/>UTF-8<sp/>text)<sp/>therefore<sp/>sort<sp/>differently</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>than<sp/>before:<sp/>`&quot;é&quot;`<sp/>now<sp/>sorts<sp/>after<sp/>`&quot;a&quot;`.<sp/>This<sp/>affects<sp/>iteration<sp/>order,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>`dict_select()`<sp/>positions<sp/>and<sp/>the<sp/>neighbours<sp/>found<sp/>by<sp/>the<sp/>near<sp/>searches;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>lookups<sp/>are<sp/>unaffected.<sp/>Nothing<sp/>changes<sp/>on<sp/>ARM,<sp/>PowerPC<sp/>or<sp/>s390x,<sp/>which</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>already<sp/>behaved<sp/>this<sp/>way.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**`hb_itor_search()`<sp/>is<sp/>an<sp/>exact<sp/>search.**<sp/>It<sp/>used<sp/>to<sp/>find<sp/>the<sp/>first<sp/>key</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>greater<sp/>than<sp/>or<sp/>equal<sp/>to<sp/>the<sp/>target.<sp/>`dict_itor_search()`<sp/>on<sp/>an<sp/>hb_tree<sp/>was</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>already<sp/>exact;<sp/>use<sp/>`hb_itor_search_ge()`<sp/>for<sp/>the<sp/>old<sp/>behaviour.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Hash<sp/>table<sp/>iterators<sp/>detect<sp/>invalidation.**<sp/>After<sp/>an<sp/>insert<sp/>that<sp/>grows<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>table,<sp/>an<sp/>explicit<sp/>resize,<sp/>or<sp/>`dict_clear()`<sp/>(and,<sp/>for<sp/>`hashtable2`,<sp/>after</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>any<sp/>removal),<sp/>every<sp/>iterator<sp/>over<sp/>the<sp/>table<sp/>reports<sp/>itself<sp/>invalid:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>`dict_itor_valid()`<sp/>is<sp/>false<sp/>and<sp/>`dict_itor_next()`<sp/>returns<sp/>false.<sp/>Loops</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>that<sp/>modify<sp/>a<sp/>hash<sp/>table<sp/>while<sp/>iterating<sp/>now<sp/>stop<sp/>instead<sp/>of<sp/>silently</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>skipping<sp/>or<sp/>repeating<sp/>elements,<sp/>or<sp/>reading<sp/>freed<sp/>memory.<sp/>Reposition<sp/>with</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>`dict_itor_first()`<sp/>or<sp/>`dict_itor_search()`.<sp/>Inserting<sp/>another<sp/>key<sp/>without<sp/>a</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>resize,<sp/>and<sp/>(for<sp/>`hashtable`)<sp/>removing<sp/>another<sp/>element,<sp/>keep<sp/>iterators</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>valid<sp/>as<sp/>before.<sp/>The<sp/>rules<sp/>for<sp/>all<sp/>containers<sp/>are<sp/>documented<sp/>under</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;Iterator<sp/>invalidation&quot;.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Inserting<sp/>an<sp/>existing<sp/>key<sp/>never<sp/>grows<sp/>a<sp/>hash<sp/>table.**<sp/>Previously<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>resize<sp/>check<sp/>ran<sp/>before<sp/>the<sp/>lookup.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**vtable<sp/>slots<sp/>hold<sp/>internal<sp/>wrapper<sp/>functions.**<sp/>Calling<sp/>container</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>functions<sp/>through<sp/>incompatible<sp/>function<sp/>pointer<sp/>types<sp/>was<sp/>undefined</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>behaviour.<sp/>As<sp/>a<sp/>result,<sp/>comparing<sp/>a<sp/>vtable<sp/>slot<sp/>with<sp/>a<sp/>public<sp/>function<sp/>(for</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>example<sp/>`dct-&gt;_vtable-&gt;insert<sp/>==<sp/>hashtable_insert`)<sp/>is<sp/>now<sp/>always<sp/>false;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>compare<sp/>the<sp/>`_vtable`<sp/>pointer<sp/>with<sp/>that<sp/>of<sp/>a<sp/>dict<sp/>of<sp/>the<sp/>known<sp/>type<sp/>instead.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Fixed</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`dict_traverse()`<sp/>on<sp/>an<sp/>hb_tree<sp/>with<sp/>two<sp/>or<sp/>more<sp/>keys<sp/>crashed.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`dict_select()`<sp/>with<sp/>a<sp/>NULL<sp/>key<sp/>or<sp/>datum<sp/>argument<sp/>crashed<sp/>on<sp/>sp_tree<sp/>and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tr_tree.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`skiplist_new()`<sp/>with<sp/>`max_link`<sp/>0<sp/>or<sp/>1<sp/>lost<sp/>every<sp/>element<sp/>and<sp/>leaked<sp/>it;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>`max_link`<sp/>is<sp/>now<sp/>raised<sp/>to<sp/>2.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>wb_tree<sp/>rebalancing<sp/>broke<sp/>above<sp/>about<sp/>6<sp/>million<sp/>elements<sp/>(32-bit<sp/>overflow).</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>A<sp/>degenerate<sp/>splay<sp/>tree<sp/>or<sp/>treap<sp/>(about<sp/>175,000+<sp/>nodes<sp/>in<sp/>a<sp/>chain)<sp/>crashed</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>the<sp/>`*_path_length`<sp/>functions<sp/>and<sp/>`sp_tree_verify`/`tr_tree_verify`<sp/>with<sp/>a</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>stack<sp/>overflow;<sp/>they<sp/>are<sp/>now<sp/>iterative.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>On<sp/>32-bit<sp/>targets,<sp/>creating<sp/>or<sp/>resizing<sp/>a<sp/>hash<sp/>table<sp/>with<sp/>about<sp/>2^30<sp/>slots</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>or<sp/>more<sp/>allocated<sp/>too<sp/>little<sp/>memory<sp/>and<sp/>wrote<sp/>past<sp/>it;<sp/>it<sp/>now<sp/>fails.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>hb_tree<sp/>and<sp/>rb_tree<sp/>now<sp/>abort<sp/>with<sp/>a<sp/>message,<sp/>also<sp/>in<sp/>release<sp/>builds,<sp/>if</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>the<sp/>allocator<sp/>returns<sp/>misaligned<sp/>memory,<sp/>instead<sp/>of<sp/>corrupting<sp/>the<sp/>tree.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Undefined<sp/>behaviour:<sp/>`__builtin_ctz(0)`<sp/>in<sp/>the<sp/>skip<sp/>list,<sp/>relational</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>comparison<sp/>of<sp/>unrelated<sp/>pointers<sp/>in<sp/>`dict_ptr_cmp`,<sp/>and<sp/>comparisons<sp/>of</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>pointers<sp/>to<sp/>freed<sp/>nodes<sp/>in<sp/>several<sp/>trees.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`dict_verify()`<sp/>now<sp/>catches<sp/>corruption<sp/>it<sp/>used<sp/>to<sp/>accept:<sp/>wrong<sp/>black</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>height<sp/>in<sp/>rb_tree,<sp/>a<sp/>subtree<sp/>on<sp/>the<sp/>wrong<sp/>side<sp/>of<sp/>an<sp/>ancestor<sp/>(all<sp/>trees),<sp/>a</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>wrong<sp/>element<sp/>count,<sp/>and<sp/>out-of-order<sp/>skip<sp/>list<sp/>links.<sp/>It<sp/>prints<sp/>the<sp/>failed</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>check<sp/>to<sp/>stderr.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`dict_itor_compare()`<sp/>on<sp/>a<sp/>hash<sp/>table<sp/>evaluates<sp/>to<sp/>0<sp/>instead<sp/>of<sp/>calling<sp/>a</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>NULL<sp/>function<sp/>pointer;<sp/>`hashtable2_itor_valid()`<sp/>no<sp/>longer<sp/>aborts<sp/>after<sp/>a</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>removal.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>sp_tree<sp/>now<sp/>splays<sp/>when<sp/>inserting<sp/>an<sp/>existing<sp/>key,<sp/>preserving<sp/>its<sp/>amortized</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>O(log<sp/>n)<sp/>bound;<sp/>the<sp/>`rotation_count`<sp/>statistics<sp/>of<sp/>sp_tree<sp/>and<sp/>pr_tree</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>count<sp/>single<sp/>and<sp/>double<sp/>rotations<sp/>consistently.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`demo`,<sp/>`anagram`<sp/>and<sp/>`benchmark`:<sp/>crashes<sp/>on<sp/>a<sp/>bare<sp/>`search`<sp/>command<sp/>and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>on<sp/>blank<sp/>or<sp/>NUL-led<sp/>input<sp/>lines,<sp/>an<sp/>overlapping<sp/>`strcpy`,<sp/>negative<sp/>`&lt;ctype.h&gt;`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>arguments,<sp/>`printf`<sp/>format<sp/>mismatches,<sp/>unchecked<sp/>allocations,<sp/>and<sp/>memory</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>leaks.<sp/>`benchmark`<sp/>now<sp/>skips<sp/>blank<sp/>input<sp/>lines;<sp/>`anagram`<sp/>skips<sp/>words<sp/>with</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>ten<sp/>or<sp/>more<sp/>of<sp/>one<sp/>letter.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`util.h`<sp/>could<sp/>not<sp/>be<sp/>included<sp/>by<sp/>two<sp/>translation<sp/>units.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Every<sp/>function<sp/>of<sp/>the<sp/>public<sp/>headers<sp/>is<sp/>documented,<sp/>and<sp/>the<sp/>published</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Doxygen<sp/>documentation<sp/>now<sp/>includes<sp/>it<sp/>(header<sp/>comments<sp/>were<sp/>not<sp/>extracted</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>before)<sp/>with<sp/>the<sp/>README<sp/>as<sp/>its<sp/>main<sp/>page.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>README<sp/>described<sp/>`dict_insert_result.inserted`<sp/>backwards;<sp/>it<sp/>is<sp/>`true`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>when<sp/>the<sp/>key<sp/>was<sp/>inserted.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>New:<sp/>iterator<sp/>invalidation<sp/>rules<sp/>for<sp/>every<sp/>container,<sp/>the<sp/>comparison</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>function<sp/>contract,<sp/>treap<sp/>priority<sp/>direction<sp/>(max-heap),<sp/>and<sp/>usage<sp/>notes<sp/>in</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>the<sp/>README.<sp/>Many<sp/>wrong<sp/>comments<sp/>were<sp/>corrected.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Build<sp/>and<sp/>tests</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>GNU<sp/>makefile<sp/>works<sp/>again<sp/>(its<sp/>recipe<sp/>tabs<sp/>had<sp/>been<sp/>replaced<sp/>by<sp/>spaces)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>and<sp/>builds<sp/>warning-free<sp/>with<sp/>clang<sp/>`-Weverything`.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>The<sp/>test<sp/>suite<sp/>grew<sp/>from<sp/>13<sp/>to<sp/>41<sp/>tests,<sp/>including<sp/>checks<sp/>of<sp/>every</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>container<sp/>for<sp/>traversal,<sp/>selection<sp/>and<sp/>iterator<sp/>behaviour.<sp/>Slow<sp/>tests<sp/>(a</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>6-million-element<sp/>tree)<sp/>run<sp/>only<sp/>with<sp/>`LIBDICT_SLOW_TESTS=1`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>1.0.6<sp/>and<sp/>earlier</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">See<sp/>the<sp/>[GitHub<sp/>releases](https://github.com/rtbrick/libdict/releases)<sp/>and<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>history.</highlight></codeline>
+    </programlisting>
+    <location file="CHANGELOG.md"/>
+  </compounddef>
+</doxygen>
