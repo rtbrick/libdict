@@ -28,6 +28,13 @@
 #ifndef LIBDICT_DICT_H__
 #define LIBDICT_DICT_H__
 
+/* Include system headers before opening the extern "C" block: in C++ they can
+ * declare templates and other C++-only entities, which are ill-formed with C
+ * language linkage. */
+#include <stddef.h>
+#include <stdint.h>
+#include <stdbool.h>
+
 #if defined(__cplusplus) || defined(c_plusplus)
 # define BEGIN_DECL     extern "C" {
 # define END_DECL       }
@@ -37,10 +44,6 @@
 #endif
 
 BEGIN_DECL
-
-#include <stddef.h>
-#include <stdint.h>
-#include <stdbool.h>
 
 #define DICT_VERSION_MAJOR    0
 #define DICT_VERSION_MINOR    3
