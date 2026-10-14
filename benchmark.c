@@ -43,6 +43,14 @@ void key_str_free(void *key, void *datum);
 void timer_start(struct rusage* start);
 void timer_end(const struct rusage* start, struct rusage *end,
            struct timeval *total);
+
+/* Seconds in |tv| as a double. Converting each field separately avoids the
+ * overflow of tv_sec * 1000000 where long is 32 bits. */
+static double
+timeval_seconds(const struct timeval* tv)
+{
+    return (double) tv->tv_sec + (double) tv->tv_usec * 1e-6;
+}
 dict *create_dictionary(char type, const char **container_name);
 
 #define HASHTABLE_SIZE 97
@@ -128,12 +136,12 @@ main(int argc, char **argv)
         *result.datum_ptr = words[i];
     }
     timer_end(&start, &end, &total);
-    printf("    %s container: %.02fkB\n", container_name, malloced_save * 1e-3);
-    printf("       %s memory: %.02fkB\n", container_name, malloced * 1e-3);
+    printf("    %s container: %.02fkB\n", container_name, (double) malloced_save * 1e-3);
+    printf("       %s memory: %.02fkB\n", container_name, (double) malloced * 1e-3);
     printf("       %s insert: %6.03fs %9zu cmp (%.02f/insert)",
        container_name,
-       (end.ru_utime.tv_sec * 1000000 + end.ru_utime.tv_usec) * 1e-6,
-       comp_count, comp_count / (double) nwords);
+       timeval_seconds(&end.ru_utime),
+       comp_count, (double) comp_count / (double) nwords);
     if (hash_count)
         printf(" %9zu hash", hash_count);
     printf("\n");
@@ -178,7 +186,7 @@ main(int argc, char **argv)
     timer_end(&start, &end, &total);
     printf("  %s fwd iterate: %6.03fs\n",
        container_name,
-       (end.ru_utime.tv_sec * 1000000 + end.ru_utime.tv_usec) * 1e-6);
+       timeval_seconds(&end.ru_utime));
     if (n != nwords)
         warn("Fwd iteration returned %u items - should be %u", n, nwords);
 
@@ -196,7 +204,7 @@ main(int argc, char **argv)
     timer_end(&start, &end, &total);
     printf("  %s rev iterate: %6.03fs\n",
        container_name,
-       (end.ru_utime.tv_sec * 1000000 + end.ru_utime.tv_usec) * 1e-6);
+       timeval_seconds(&end.ru_utime));
     if (n != nwords)
         warn("Rev iteration returned %u items - should be %u", n, nwords);
 
@@ -218,8 +226,8 @@ main(int argc, char **argv)
     timer_end(&start, &end, &total);
     printf("  %s good search: %6.03fs %9zu cmp (%.02f/search)",
        container_name,
-       (end.ru_utime.tv_sec * 1000000 + end.ru_utime.tv_usec) * 1e-6,
-       comp_count, comp_count / (double) nwords);
+       timeval_seconds(&end.ru_utime),
+       comp_count, (double) comp_count / (double) nwords);
     if (hash_count)
         printf(" %9zu hash", hash_count);
     printf("\n");
@@ -245,8 +253,8 @@ main(int argc, char **argv)
     timer_end(&start, &end, &total);
     printf("   %s bad search: %6.03fs %9zu cmp (%.02f/search)",
        container_name,
-       (end.ru_utime.tv_sec * 1000000 + end.ru_utime.tv_usec) * 1e-6,
-       comp_count, comp_count / (double) nwords);
+       timeval_seconds(&end.ru_utime),
+       comp_count, (double) comp_count / (double) nwords);
     if (hash_count)
         printf(" %9zu hash", hash_count);
     printf("\n");
@@ -269,8 +277,8 @@ main(int argc, char **argv)
     timer_end(&start, &end, &total);
     printf("       %s remove: %6.03fs %9zu cmp (%.2f/remove)",
        container_name,
-       (end.ru_utime.tv_sec * 1000000 + end.ru_utime.tv_usec) * 1e-6,
-       comp_count, comp_count / (double)nwords);
+       timeval_seconds(&end.ru_utime),
+       comp_count, (double) comp_count / (double) nwords);
     if (hash_count)
         printf(" %9zu hash", hash_count);
     printf("\n");
@@ -293,7 +301,7 @@ main(int argc, char **argv)
 
     printf("        %s total: %6.03fs %9zu cmp",
        container_name,
-       (total.tv_sec * 1000000 + total.tv_usec) * 1e-6,
+       timeval_seconds(&total),
        total_comp);
     if (total_hash)
         printf(" %9zu hash", total_hash);
