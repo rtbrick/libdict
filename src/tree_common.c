@@ -271,8 +271,10 @@ tree_select(void *Tree, size_t n, const void **key, void **datum)
 {
     tree* t = Tree;
     if (n >= t->count) {
-        *key = NULL;
-        *datum = NULL;
+        if (key)
+            *key = NULL;
+        if (datum)
+            *datum = NULL;
         return false;
     }
     tree_node* node;
@@ -286,8 +288,10 @@ tree_select(void *Tree, size_t n, const void **key, void **datum)
         while (n--)
             node = tree_node_next(node);
     }
-    *key = node->key;
-    *datum = node->datum;
+    if (key)
+        *key = node->key;
+    if (datum)
+        *datum = node->datum;
     return true;
 }
 

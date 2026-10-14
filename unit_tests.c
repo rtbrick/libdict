@@ -51,6 +51,7 @@ void test_hb_tree_verify_global_order(void);
 void test_skiplist_max_link_below_two(void);
 void test_skiplist_verify_order(void);
 void test_traverse_all_containers(void);
+void test_select_null_out_params(void);
 void test_wb_tree_verify_global_order(void);
 void test_wb_tree_balance_above_6m_nodes(void);
 void test_basic_skiplist(void);
@@ -80,6 +81,7 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_skiplist_max_link_below_two),
     TEST_FUNC(test_skiplist_verify_order),
     TEST_FUNC(test_traverse_all_containers),
+    TEST_FUNC(test_select_null_out_params),
     TEST_FUNC(test_wb_tree_verify_global_order),
     TEST_FUNC(test_wb_tree_balance_above_6m_nodes),
     TEST_FUNC(test_basic_skiplist),
@@ -1051,26 +1053,28 @@ static dict* new_sp_tree(void)      { return sp_dict_new(dict_str_cmp); }
 static dict* new_tr_tree(void)      { return tr_dict_new(dict_str_cmp, NULL); }
 static dict* new_wb_tree(void)      { return wb_dict_new(dict_str_cmp); }
 
+/* Every container, for tests of code paths they all implement. */
+static const struct {
+    const char* name;
+    dict*       (*new_dict)(void);
+} containers[] = {
+    { "hashtable/1", new_hashtable_1 },   { "hashtable/97", new_hashtable_n },
+    { "hashtable2/1", new_hashtable2_1 }, { "hashtable2/97", new_hashtable2_n },
+    { "hb_tree", new_hb_tree },           { "pr_tree", new_pr_tree },
+    { "rb_tree", new_rb_tree },           { "skiplist", new_skiplist },
+    { "sp_tree", new_sp_tree },           { "tr_tree", new_tr_tree },
+    { "wb_tree", new_wb_tree },
+};
+#define NUM_CONTAINERS (sizeof(containers) / sizeof(containers[0]))
+
 void test_traverse_all_containers()
 {
-    static const struct {
-        const char* name;
-        dict*       (*new_dict)(void);
-    } containers[] = {
-        { "hashtable/1", new_hashtable_1 },   { "hashtable/97", new_hashtable_n },
-        { "hashtable2/1", new_hashtable2_1 }, { "hashtable2/97", new_hashtable2_n },
-        { "hb_tree", new_hb_tree },           { "pr_tree", new_pr_tree },
-        { "rb_tree", new_rb_tree },           { "skiplist", new_skiplist },
-        { "sp_tree", new_sp_tree },           { "tr_tree", new_tr_tree },
-        { "wb_tree", new_wb_tree },
-    };
-
     /* "k00" .. "k39": ascending in dict_str_cmp order. */
     char keys[TRAVERSE_NKEYS][4];
     for (unsigned i = 0; i < TRAVERSE_NKEYS; ++i)
         snprintf(keys[i], sizeof(keys[i]), "k%02u", i);
 
-    for (size_t c = 0; c < sizeof(containers) / sizeof(containers[0]); ++c) {
+    for (size_t c = 0; c < NUM_CONTAINERS; ++c) {
         dict* dct = containers[c].new_dict();
         CU_ASSERT_PTR_NOT_NULL_FATAL(dct);
 
@@ -1112,6 +1116,60 @@ void test_traverse_all_containers()
 
         CU_ASSERT_TRUE(dict_verify(dct));
         CU_ASSERT_EQUAL(dict_free(dct, NULL), TRAVERSE_NKEYS);
+        CU_ASSERT_EQUAL(bytes_malloced, 0);
+    }
+}
+
+void test_select_null_out_params()
+{
+    /* "k00" .. "k09": ascending in dict_str_cmp order. */
+    char keys[10][4];
+    for (unsigned i = 0; i < 10; ++i)
+        snprintf(keys[i], sizeof(keys[i]), "k%02u", i);
+
+    for (size_t c = 0; c < NUM_CONTAINERS; ++c) {
+        dict* dct = containers[c].new_dict();
+        CU_ASSERT_PTR_NOT_NULL_FATAL(dct);
+        /* Containers without select make dict_select() evaluate to false. */
+        const bool has_select = dct->_vtable->select != NULL;
+
+        /* Either out-parameter may be NULL, also when |n| is out of range. */
+        const void* key = keys[0];
+        void* datum = keys[0];
+        CU_ASSERT_FALSE(dict_select(dct, 0, NULL, NULL));
+        CU_ASSERT_FALSE(dict_select(dct, 0, NULL, &datum));
+        CU_ASSERT_FALSE(dict_select(dct, 0, &key, NULL));
+        if (has_select) {
+            CU_ASSERT_PTR_NULL(datum);
+            CU_ASSERT_PTR_NULL(key);
+        }
+
+        for (unsigned i = 0; i < 10; ++i) {
+            char* k = keys[(i * 3) % 10];
+            dict_insert_result result = dict_insert(dct, k);
+            CU_ASSERT_TRUE(result.inserted);
+            *result.datum_ptr = k;
+        }
+        CU_ASSERT_TRUE(dict_verify(dct));
+
+        for (unsigned n = 0; n < 10; ++n) {
+            key = NULL;
+            datum = NULL;
+            CU_ASSERT_EQUAL(dict_select(dct, n, NULL, &datum), has_select);
+            CU_ASSERT_EQUAL(dict_select(dct, n, &key, NULL), has_select);
+            CU_ASSERT_EQUAL(dict_select(dct, n, NULL, NULL), has_select);
+            if (has_select) {
+                CU_ASSERT_PTR_EQUAL(datum, keys[n]);
+                CU_ASSERT_PTR_EQUAL(key, keys[n]);
+            }
+        }
+        datum = keys[0];
+        CU_ASSERT_FALSE(dict_select(dct, 10, NULL, &datum));
+        if (has_select)
+            CU_ASSERT_PTR_NULL(datum);
+
+        CU_ASSERT_TRUE(dict_verify(dct));
+        CU_ASSERT_EQUAL(dict_free(dct, NULL), 10);
         CU_ASSERT_EQUAL(bytes_malloced, 0);
     }
 }

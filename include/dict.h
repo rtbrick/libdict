@@ -164,6 +164,11 @@ typedef struct {
 #define dict_remove(dct,key)        ((dct)->_vtable->remove((dct)->_object, (key)))
 #define dict_clear(dct,func)        ((dct)->_vtable->clear((dct)->_object, (func)))
 #define dict_traverse(dct,func,ud)  ((dct)->_vtable->traverse((dct)->_object, (func), (ud)))
+/* Retrieve the |n|th element in key order (0-based), storing its key in |key|
+ * and its datum in |d|, and evaluating to true. Either out-parameter may be
+ * NULL. If |n| is out of range, evaluates to false and stores NULL through any
+ * non-NULL out-parameter. Containers that do not support selection (the hash
+ * tables and the skip list) evaluate to false and store nothing. */
 #define dict_select(dct,n,key,d)    ((dct)->_vtable->select && (dct)->_vtable->select((dct)->_object, (n), (key), (d)))
 #define dict_count(dct)             ((dct)->_vtable->count((dct)->_object))
 #define dict_verify(dct)            ((dct)->_vtable->verify((dct)->_object))
