@@ -378,11 +378,11 @@ remove_node(sp_tree* tree, sp_node* node)
 
     sp_node* const temp = out->llink ? out->llink : out->rlink;
     sp_node* const parent = out->parent;
+    /* Splice before freeing: comparing a pointer to a freed object is UB. */
+    *(parent ? (parent->llink == out ? &parent->llink : &parent->rlink) : &tree->root) = temp;
     FREE(out);
     if (temp)
         temp->parent = parent;
-
-    *(parent ? (parent->llink == out ? &parent->llink : &parent->rlink) : &tree->root) = temp;
     if (parent)
         splay(tree, parent);
     tree->count--;

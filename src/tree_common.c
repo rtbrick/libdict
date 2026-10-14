@@ -315,8 +315,9 @@ tree_clear(void* Tree, dict_delete_func delete_func)
         }
         if (delete_func) delete_func(node->key, node->datum);
         tree_node* const parent = node->parent;
-        FREE(node);
+        /* Unlink before freeing: comparing a pointer to a freed object is UB. */
         *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &t->root) = NULL;
+        FREE(node);
         node = parent;
     }
     ASSERT(t->root == NULL);
