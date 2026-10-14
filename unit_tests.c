@@ -50,6 +50,7 @@ void test_hb_itor_search_exact(void);
 void test_hb_tree_verify_global_order(void);
 void test_skiplist_max_link_below_two(void);
 void test_skiplist_verify_order(void);
+void test_traverse_all_containers(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -76,6 +77,7 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_hb_tree_verify_global_order),
     TEST_FUNC(test_skiplist_max_link_below_two),
     TEST_FUNC(test_skiplist_verify_order),
+    TEST_FUNC(test_traverse_all_containers),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -1012,6 +1014,102 @@ void test_skiplist_verify_order()
 
     CU_ASSERT_EQUAL(skiplist_free(list, NULL), 5);
     CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+#define TRAVERSE_NKEYS 40
+
+struct traverse_all_state {
+    const void* seen[TRAVERSE_NKEYS];
+    unsigned    count;
+    unsigned    stop_after;
+};
+
+static bool
+traverse_all_visit(const void* key, void* datum, void* user_data)
+{
+    struct traverse_all_state* state = user_data;
+    /* Each key was inserted with itself as its datum. */
+    CU_ASSERT_PTR_EQUAL(datum, key);
+    if (state->count < TRAVERSE_NKEYS)
+        state->seen[state->count] = key;
+    return ++state->count != state->stop_after;
+}
+
+static dict* new_hashtable_1(void)  { return hashtable_dict_new(dict_str_cmp, dict_str_hash, 1); }
+static dict* new_hashtable_n(void)  { return hashtable_dict_new(dict_str_cmp, dict_str_hash, 97); }
+static dict* new_hashtable2_1(void) { return hashtable2_dict_new(dict_str_cmp, dict_str_hash, 1); }
+static dict* new_hashtable2_n(void) { return hashtable2_dict_new(dict_str_cmp, dict_str_hash, 97); }
+static dict* new_hb_tree(void)      { return hb_dict_new(dict_str_cmp); }
+static dict* new_pr_tree(void)      { return pr_dict_new(dict_str_cmp); }
+static dict* new_rb_tree(void)      { return rb_dict_new(dict_str_cmp); }
+static dict* new_skiplist(void)     { return skiplist_dict_new(dict_str_cmp, 13); }
+static dict* new_sp_tree(void)      { return sp_dict_new(dict_str_cmp); }
+static dict* new_tr_tree(void)      { return tr_dict_new(dict_str_cmp, NULL); }
+static dict* new_wb_tree(void)      { return wb_dict_new(dict_str_cmp); }
+
+void test_traverse_all_containers()
+{
+    static const struct {
+        const char* name;
+        dict*       (*new_dict)(void);
+    } containers[] = {
+        { "hashtable/1", new_hashtable_1 },   { "hashtable/97", new_hashtable_n },
+        { "hashtable2/1", new_hashtable2_1 }, { "hashtable2/97", new_hashtable2_n },
+        { "hb_tree", new_hb_tree },           { "pr_tree", new_pr_tree },
+        { "rb_tree", new_rb_tree },           { "skiplist", new_skiplist },
+        { "sp_tree", new_sp_tree },           { "tr_tree", new_tr_tree },
+        { "wb_tree", new_wb_tree },
+    };
+
+    /* "k00" .. "k39": ascending in dict_str_cmp order. */
+    char keys[TRAVERSE_NKEYS][4];
+    for (unsigned i = 0; i < TRAVERSE_NKEYS; ++i)
+        snprintf(keys[i], sizeof(keys[i]), "k%02u", i);
+
+    for (size_t c = 0; c < sizeof(containers) / sizeof(containers[0]); ++c) {
+        dict* dct = containers[c].new_dict();
+        CU_ASSERT_PTR_NOT_NULL_FATAL(dct);
+
+        struct traverse_all_state state = { .count = 0, .stop_after = 0 };
+        CU_ASSERT_EQUAL(dict_traverse(dct, traverse_all_visit, &state), 0);
+        CU_ASSERT_EQUAL(state.count, 0);
+
+        /* Insert in an order that is neither ascending nor descending, so the
+         * trees rotate and the hash tables chain. */
+        for (unsigned i = 0; i < TRAVERSE_NKEYS; ++i) {
+            char* key = keys[(i * 7) % TRAVERSE_NKEYS];
+            dict_insert_result result = dict_insert(dct, key);
+            CU_ASSERT_TRUE(result.inserted);
+            *result.datum_ptr = key;
+        }
+        CU_ASSERT_TRUE(dict_verify(dct));
+
+        state = (struct traverse_all_state) { .count = 0, .stop_after = 0 };
+        CU_ASSERT_EQUAL(dict_traverse(dct, traverse_all_visit, &state), TRAVERSE_NKEYS);
+        CU_ASSERT_EQUAL(state.count, TRAVERSE_NKEYS);
+        for (unsigned i = 0; i < TRAVERSE_NKEYS; ++i) {
+            /* Every key exactly once. */
+            unsigned found = 0;
+            for (unsigned j = 0; j < TRAVERSE_NKEYS; ++j)
+                found += (state.seen[j] == keys[i]);
+            if (found != 1)
+                fprintf(stderr, "%s: key %s visited %u times\n",
+                        containers[c].name, keys[i], found);
+            CU_ASSERT_EQUAL(found, 1);
+            /* Sorted containers visit in key order. */
+            if (dict_is_sorted(dct))
+                CU_ASSERT_PTR_EQUAL(state.seen[i], keys[i]);
+        }
+
+        /* Returning false from the visit function stops the traversal. */
+        state = (struct traverse_all_state) { .count = 0, .stop_after = 5 };
+        CU_ASSERT_EQUAL(dict_traverse(dct, traverse_all_visit, &state), 5);
+        CU_ASSERT_EQUAL(state.count, 5);
+
+        CU_ASSERT_TRUE(dict_verify(dct));
+        CU_ASSERT_EQUAL(dict_free(dct, NULL), TRAVERSE_NKEYS);
+        CU_ASSERT_EQUAL(bytes_malloced, 0);
+    }
 }
 
 void test_basic_skiplist()
