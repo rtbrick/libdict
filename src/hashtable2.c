@@ -56,11 +56,17 @@ struct hashtable2 {
     dict_hash_func      hash_func;
     hash_node*          table;
     unsigned            size;
+    /* Bumped by every change that invalidates iterators: a resize, which
+     * rehashes every element into a different slot, a clear, and a removal,
+     * which moves other elements into the freed slots. Iterators record it
+     * when positioned and treat a mismatch as unpositioned. */
+    size_t              gen;
 };
 
 struct hashtable2_itor {
     hashtable2*         table;
     int                 slot;
+    size_t              gen;
 };
 
 /* Vtable thunks. The vtable slot types take void*, and calling a function
@@ -149,6 +155,7 @@ hashtable2_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned in
         table->cmp_func = cmp_func;
         table->hash_func = hash_func;
         table->count = 0;
+        table->gen = 0;
     }
     return table;
 }
@@ -215,7 +222,12 @@ dict_insert_result
 hashtable2_insert(hashtable2* table, void* key)
 {
     if (LOADFACTOR_DENOMINATOR * table->count >= LOADFACTOR_NUMERATOR * table->size) {
-        /* Load factor too high: increase the table size. */
+        /* Load factor too high: increase the table size. A resize invalidates
+         * iterators, so do not resize for a key that is already present:
+         * nothing is added. */
+        void** datum_ptr = hashtable2_search(table, key);
+        if (datum_ptr)
+            return (dict_insert_result) { datum_ptr, false };
         if (!hashtable2_resize(table, table->size + 1)) {
             /* No memory for a bigger table, but let the insert proceed anyway. */
         }
@@ -320,6 +332,9 @@ hashtable2_remove(hashtable2* table, const void* key)
         if (node->hash == hash && table->cmp_func(key, node->key) == 0) {
             dict_remove_result result = { node->key, node->datum, true };
             remove_node(table, first, node);
+            /* Bumped here rather than in remove_node(): there it made every
+             * removal ~8% slower (gcc 11, -O2). */
+            table->gen++;
             return result;
         }
 
@@ -344,6 +359,7 @@ hashtable2_clear(hashtable2* table, dict_delete_func delete_func)
 
     const size_t count = table->count;
     table->count = 0;
+    table->gen++;
     return count;
 }
 
@@ -420,6 +436,7 @@ hashtable2_resize(hashtable2* table, unsigned new_size)
         }
     }
     FREE(old_table);
+    table->gen++;
     return true;
 }
 
@@ -447,6 +464,7 @@ hashtable2_itor_new(hashtable2* table)
     if (itor) {
         itor->table = table;
         itor->slot = -1;
+        itor->gen = table->gen;
     }
     return itor;
 }
@@ -471,11 +489,29 @@ hashtable2_itor_free(hashtable2_itor* itor)
     FREE(itor);
 }
 
+/* True if the table was resized, cleared or had an element removed since
+ * |itor| was positioned, in which case its slot must not be used. */
+static inline bool
+itor_stale(const hashtable2_itor* itor)
+{
+    return itor->gen != itor->table->gen;
+}
+
+/* Unpositions |itor| if it is stale, and returns whether it is positioned. */
+static inline bool
+itor_check(hashtable2_itor* itor)
+{
+    if (itor->slot >= 0 && itor_stale(itor))
+        itor->slot = -1;
+    return itor->slot >= 0;
+}
+
 bool
 hashtable2_itor_valid(const hashtable2_itor* itor)
 {
-    if (itor->slot < 0)
+    if (itor->slot < 0 || itor_stale(itor))
         return false;
+    /* Nothing that could empty or move the slot happened since. */
     ASSERT(itor->table->table[itor->slot].hash != 0);
     return true;
 }
@@ -489,7 +525,7 @@ hashtable2_itor_invalidate(hashtable2_itor* itor)
 bool
 hashtable2_itor_next(hashtable2_itor* itor)
 {
-    if (itor->slot < 0)
+    if (!itor_check(itor))
         return false;
 
     while (++itor->slot < (int) itor->table->size) {
@@ -503,7 +539,7 @@ hashtable2_itor_next(hashtable2_itor* itor)
 bool
 hashtable2_itor_prev(hashtable2_itor* itor)
 {
-    if (itor->slot < 0)
+    if (!itor_check(itor))
         return false;
 
     while (itor->slot-- > 0) {
@@ -520,7 +556,7 @@ hashtable2_itor_nextn(hashtable2_itor* itor, size_t count)
     while (count--)
         if (!hashtable2_itor_next(itor))
             return false;
-    return itor->slot >= 0;
+    return itor_check(itor);
 }
 
 bool
@@ -529,12 +565,13 @@ hashtable2_itor_prevn(hashtable2_itor* itor, size_t count)
     while (count--)
         if (!hashtable2_itor_prev(itor))
             return false;
-    return itor->slot >= 0;
+    return itor_check(itor);
 }
 
 bool
 hashtable2_itor_first(hashtable2_itor* itor)
 {
+    itor->gen = itor->table->gen;
     for (unsigned slot = 0; slot < itor->table->size; ++slot) {
         if (itor->table->table[slot].hash) {
             itor->slot = (int) slot;
@@ -548,6 +585,7 @@ hashtable2_itor_first(hashtable2_itor* itor)
 bool
 hashtable2_itor_last(hashtable2_itor* itor)
 {
+    itor->gen = itor->table->gen;
     for (unsigned slot = itor->table->size; slot > 0;) {
         if (itor->table->table[--slot].hash) {
             itor->slot = (int) slot;
@@ -561,6 +599,7 @@ hashtable2_itor_last(hashtable2_itor* itor)
 bool
 hashtable2_itor_search(hashtable2_itor* itor, const void* key)
 {
+    itor->gen = itor->table->gen;
     const unsigned hash = nonzero_hash(itor->table->hash_func, key);
     const unsigned truncated_hash = hash % itor->table->size;
     unsigned index = truncated_hash;
@@ -582,23 +621,24 @@ hashtable2_itor_search(hashtable2_itor* itor, const void* key)
 const void*
 hashtable2_itor_key(const hashtable2_itor* itor)
 {
-    return (itor->slot >= 0) ? itor->table->table[itor->slot].key : NULL;
+    return hashtable2_itor_valid(itor) ? itor->table->table[itor->slot].key : NULL;
 }
 
 void**
 hashtable2_itor_datum(hashtable2_itor* itor)
 {
-    return (itor->slot >= 0) ? &itor->table->table[itor->slot].datum : NULL;
+    return itor_check(itor) ? &itor->table->table[itor->slot].datum : NULL;
 }
 
 bool
 hashtable2_itor_remove(hashtable2_itor* itor)
 {
-    if (itor->slot < 0)
+    if (!itor_check(itor))
         return false;
     remove_node(itor->table,
         itor->table->table + itor->table->table[itor->slot].hash % itor->table->size,
         itor->table->table + itor->slot);
+    itor->table->gen++;
     itor->slot = -1;
     return true;
 }

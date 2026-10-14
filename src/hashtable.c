@@ -60,12 +60,17 @@ struct hashtable {
     dict_hash_func      hash_func;
     size_t              count;
     unsigned            size;
+    /* Bumped by every change that invalidates iterators: a resize, which
+     * rehashes every node into a different slot, and a clear. Iterators
+     * record it when positioned and treat a mismatch as unpositioned. */
+    size_t              gen;
 };
 
 struct hashtable_itor {
     hashtable*          table;
     hash_node*          node;
     unsigned            slot;
+    size_t              gen;
 };
 
 /* Vtable thunks. The vtable slot types take void*, and calling a function
@@ -154,6 +159,7 @@ hashtable_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned siz
         table->cmp_func = cmp_func;
         table->hash_func = hash_func;
         table->count = 0;
+        table->gen = 0;
     }
     return table;
 }
@@ -191,7 +197,11 @@ dict_insert_result
 hashtable_insert(hashtable* table, void* key)
 {
     if (LOADFACTOR_DENOMINATOR * table->count >= LOADFACTOR_NUMERATOR * table->size) {
-        /* Load factor too high. */
+        /* Load factor too high. A resize invalidates iterators, so do not
+         * resize for a key that is already present: nothing is added. */
+        void** datum_ptr = hashtable_search(table, key);
+        if (datum_ptr)
+            return (dict_insert_result) { datum_ptr, false };
         hashtable_resize(table, table->size + 1);
     }
 
@@ -291,6 +301,7 @@ hashtable_clear(hashtable* table, dict_delete_func delete_func)
 
     const size_t count = table->count;
     table->count = 0;
+    table->gen++;
     return count;
 }
 
@@ -366,6 +377,7 @@ hashtable_resize(hashtable* table, unsigned new_size)
     FREE(table->table);
     table->table = ntable;
     table->size = new_size;
+    table->gen++;
     return true;
 }
 
@@ -398,6 +410,7 @@ hashtable_itor_new(hashtable* table)
         itor->table = table;
         itor->node = NULL;
         itor->slot = 0;
+        itor->gen = table->gen;
     }
     return itor;
 }
@@ -422,10 +435,29 @@ hashtable_itor_free(hashtable_itor* itor)
     FREE(itor);
 }
 
+/* True if the table was resized or cleared since |itor| was positioned, in
+ * which case its node and slot must not be used. */
+static inline bool
+itor_stale(const hashtable_itor* itor)
+{
+    return itor->gen != itor->table->gen;
+}
+
+/* Unpositions |itor| if it is stale, and returns whether it is positioned. */
+static inline bool
+itor_check(hashtable_itor* itor)
+{
+    if (itor->node && itor_stale(itor)) {
+        itor->node = NULL;
+        itor->slot = 0;
+    }
+    return itor->node != NULL;
+}
+
 bool
 hashtable_itor_valid(const hashtable_itor* itor)
 {
-    return itor->node != NULL;
+    return itor->node != NULL && !itor_stale(itor);
 }
 
 void
@@ -438,7 +470,7 @@ hashtable_itor_invalidate(hashtable_itor* itor)
 bool
 hashtable_itor_next(hashtable_itor* itor)
 {
-    if (!itor->node)
+    if (!itor_check(itor))
         return false;
 
     if ((itor->node = itor->node->next) != NULL)
@@ -460,7 +492,7 @@ hashtable_itor_next(hashtable_itor* itor)
 bool
 hashtable_itor_prev(hashtable_itor* itor)
 {
-    if (!itor->node)
+    if (!itor_check(itor))
         return false;
 
     if ((itor->node = itor->node->prev) != NULL)
@@ -489,7 +521,7 @@ hashtable_itor_nextn(hashtable_itor* itor, size_t count)
         if (!hashtable_itor_next(itor))
             return false;
     }
-    return itor->node != NULL;
+    return itor_check(itor);
 }
 
 bool
@@ -499,12 +531,13 @@ hashtable_itor_prevn(hashtable_itor* itor, size_t count)
         if (!hashtable_itor_prev(itor))
             return false;
     }
-    return itor->node != NULL;
+    return itor_check(itor);
 }
 
 bool
 hashtable_itor_first(hashtable_itor* itor)
 {
+    itor->gen = itor->table->gen;
     for (unsigned slot = 0; slot < itor->table->size; ++slot) {
         if (itor->table->table[slot]) {
             itor->node = itor->table->table[slot];
@@ -520,6 +553,7 @@ hashtable_itor_first(hashtable_itor* itor)
 bool
 hashtable_itor_last(hashtable_itor* itor)
 {
+    itor->gen = itor->table->gen;
     for (unsigned slot = itor->table->size; slot > 0;) {
         if (itor->table->table[--slot]) {
             hash_node* node = itor->table->table[slot];
@@ -538,6 +572,7 @@ hashtable_itor_last(hashtable_itor* itor)
 bool
 hashtable_itor_search(hashtable_itor* itor, const void* key)
 {
+    itor->gen = itor->table->gen;
     const unsigned hash = itor->table->hash_func(key);
     const unsigned mhash = hash % itor->table->size;
     hash_node* node = itor->table->table[mhash];
@@ -557,19 +592,19 @@ hashtable_itor_search(hashtable_itor* itor, const void* key)
 const void*
 hashtable_itor_key(const hashtable_itor* itor)
 {
-    return itor->node ? itor->node->key : NULL;
+    return hashtable_itor_valid(itor) ? itor->node->key : NULL;
 }
 
 void**
 hashtable_itor_datum(hashtable_itor* itor)
 {
-    return itor->node ? &itor->node->datum : NULL;
+    return itor_check(itor) ? &itor->node->datum : NULL;
 }
 
 bool
 hashtable_itor_remove(hashtable_itor* itor)
 {
-    if (!itor->node)
+    if (!itor_check(itor))
         return false;
     remove_node(itor->table, itor->node, itor->node->hash % itor->table->size);
     itor->node = NULL;

@@ -58,6 +58,11 @@ void test_degenerate_tree_verify_and_path_lengths(void);
 void test_sp_tr_tree_verify_order_and_count(void);
 void test_dict_ptr_cmp_unrelated_objects(void);
 void test_pr_tree_verify_order_and_count(void);
+void test_hashtable_itor_resize_invalidates(void);
+void test_hashtable_insert_existing_key_no_resize(void);
+void test_hashtable_itor_clear_invalidates(void);
+void test_hashtable2_itor_remove_invalidates(void);
+void test_itor_survives_other_insert_and_remove(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -92,6 +97,11 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_sp_tr_tree_verify_order_and_count),
     TEST_FUNC(test_dict_ptr_cmp_unrelated_objects),
     TEST_FUNC(test_pr_tree_verify_order_and_count),
+    TEST_FUNC(test_hashtable_itor_resize_invalidates),
+    TEST_FUNC(test_hashtable_insert_existing_key_no_resize),
+    TEST_FUNC(test_hashtable_itor_clear_invalidates),
+    TEST_FUNC(test_hashtable2_itor_remove_invalidates),
+    TEST_FUNC(test_itor_survives_other_insert_and_remove),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -1404,6 +1414,224 @@ void test_pr_tree_verify_order_and_count()
     check_verify_order_and_count("pr_tree", pr);
     CU_ASSERT_EQUAL(dict_free(pr, NULL), 7);
     CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+#define HASH_NKEYS 64
+
+/* "k00" .. "k63", for the hash table iterator tests. */
+static char hash_keys[HASH_NKEYS][4];
+
+static void
+init_hash_keys(void)
+{
+    for (unsigned i = 0; i < HASH_NKEYS; ++i)
+        snprintf(hash_keys[i], sizeof(hash_keys[i]), "k%02u", i);
+}
+
+/* Number of slots of a hash table dict, which changes when it resizes. */
+static size_t
+hash_dict_size(dict* dct)
+{
+    return is_hashtable(dct) ? hashtable_size(dict_private(dct))
+                             : hashtable2_size(dict_private(dct));
+}
+
+/* An iterator that was invalidated by a modification must behave exactly like
+ * an unpositioned one. */
+static void
+check_itor_invalid(dict_itor* itor)
+{
+    CU_ASSERT_FALSE(dict_itor_valid(itor));
+    CU_ASSERT_PTR_NULL(dict_itor_key(itor));
+    CU_ASSERT_PTR_NULL(dict_itor_datum(itor));
+    CU_ASSERT_FALSE(dict_itor_next(itor));
+    CU_ASSERT_FALSE(dict_itor_valid(itor));
+    CU_ASSERT_FALSE(dict_itor_remove(itor));
+}
+
+static dict*
+new_hash_dict(bool chained, unsigned size)
+{
+    return chained ? hashtable_dict_new(dict_str_cmp, dict_str_hash, size)
+                   : hashtable2_dict_new(dict_str_cmp, dict_str_hash, size);
+}
+
+void test_hashtable_itor_resize_invalidates()
+{
+    init_hash_keys();
+    for (int chained = 1; chained >= 0; --chained) {
+        dict* dct = new_hash_dict(chained, 1);
+        CU_ASSERT_TRUE(dict_insert(dct, hash_keys[0]).inserted);
+        dict_itor* itor = dict_itor_new(dct);
+        CU_ASSERT_TRUE(dict_itor_first(itor));
+
+        /* Inserts that do not resize leave the iterator where it was; the
+         * first one that does invalidates it, since it rehashes every
+         * element into a different slot. */
+        const size_t size = hash_dict_size(dct);
+        bool resized = false;
+        for (unsigned i = 1; i < HASH_NKEYS && !resized; ++i) {
+            CU_ASSERT_TRUE(dict_insert(dct, hash_keys[i]).inserted);
+            if (hash_dict_size(dct) != size) {
+                resized = true;
+                check_itor_invalid(itor);
+            } else {
+                CU_ASSERT_TRUE(dict_itor_valid(itor));
+                CU_ASSERT_PTR_EQUAL(dict_itor_key(itor), hash_keys[0]);
+            }
+        }
+        CU_ASSERT_TRUE(resized);
+        CU_ASSERT_TRUE(dict_verify(dct));
+
+        /* Repositioning makes it usable again. */
+        CU_ASSERT_TRUE(dict_itor_first(itor));
+        CU_ASSERT_TRUE(dict_itor_valid(itor));
+
+        dict_itor_free(itor);
+        dict_free(dct, NULL);
+        CU_ASSERT_EQUAL(bytes_malloced, 0);
+    }
+}
+
+void test_hashtable_insert_existing_key_no_resize()
+{
+    init_hash_keys();
+    for (int chained = 1; chained >= 0; --chained) {
+        /* Find how many keys a table starting at size 1 holds before the next
+         * new key makes it grow. */
+        dict* probe = new_hash_dict(chained, 1);
+        const size_t size = hash_dict_size(probe);
+        unsigned fill = 0;
+        while (fill < HASH_NKEYS) {
+            CU_ASSERT_TRUE(dict_insert(probe, hash_keys[fill]).inserted);
+            if (hash_dict_size(probe) != size)
+                break;
+            ++fill;
+        }
+        dict_free(probe, NULL);
+        CU_ASSERT_TRUE_FATAL(fill > 0 && fill < HASH_NKEYS);
+
+        /* Fill a fresh table to exactly that point: inserting a key that is
+         * already present adds nothing, so it must not grow the table. */
+        dict* dct = new_hash_dict(chained, 1);
+        for (unsigned i = 0; i < fill; ++i)
+            CU_ASSERT_TRUE(dict_insert(dct, hash_keys[i]).inserted);
+        dict_itor* itor = dict_itor_new(dct);
+        CU_ASSERT_TRUE(dict_itor_first(itor));
+        const void* key = dict_itor_key(itor);
+
+        CU_ASSERT_FALSE(dict_insert(dct, hash_keys[0]).inserted);
+        CU_ASSERT_EQUAL(hash_dict_size(dct), size);
+        CU_ASSERT_TRUE(dict_itor_valid(itor));
+        CU_ASSERT_PTR_EQUAL(dict_itor_key(itor), key);
+        CU_ASSERT_TRUE(dict_verify(dct));
+
+        dict_itor_free(itor);
+        dict_free(dct, NULL);
+        CU_ASSERT_EQUAL(bytes_malloced, 0);
+    }
+}
+
+void test_hashtable_itor_clear_invalidates()
+{
+    init_hash_keys();
+    for (int chained = 1; chained >= 0; --chained) {
+        dict* dct = new_hash_dict(chained, 97);
+        for (unsigned i = 0; i < 10; ++i)
+            CU_ASSERT_TRUE(dict_insert(dct, hash_keys[i]).inserted);
+        dict_itor* itor = dict_itor_new(dct);
+        CU_ASSERT_TRUE(dict_itor_search(itor, hash_keys[3]));
+
+        CU_ASSERT_EQUAL(dict_clear(dct, NULL), 10);
+        check_itor_invalid(itor);
+
+        CU_ASSERT_TRUE(dict_insert(dct, hash_keys[5]).inserted);
+        CU_ASSERT_TRUE(dict_itor_first(itor));
+        CU_ASSERT_PTR_EQUAL(dict_itor_key(itor), hash_keys[5]);
+        CU_ASSERT_TRUE(dict_verify(dct));
+
+        dict_itor_free(itor);
+        dict_free(dct, NULL);
+        CU_ASSERT_EQUAL(bytes_malloced, 0);
+    }
+}
+
+void test_hashtable2_itor_remove_invalidates()
+{
+    init_hash_keys();
+    /* Removing from an open-addressing table moves other elements to fill
+     * the gap, so any removal invalidates its iterators: the slot an iterator
+     * holds may now be empty or hold a different key. */
+    for (int own = 0; own <= 1; ++own) {
+        dict* dct = new_hash_dict(false, 97);
+        for (unsigned i = 0; i < 20; ++i)
+            CU_ASSERT_TRUE(dict_insert(dct, hash_keys[i]).inserted);
+        dict_itor* itor = dict_itor_new(dct);
+        CU_ASSERT_TRUE(dict_itor_search(itor, hash_keys[7]));
+
+        CU_ASSERT_TRUE(dict_remove(dct, hash_keys[own ? 7 : 12]).removed);
+        CU_ASSERT_TRUE(dict_verify(dct));
+        check_itor_invalid(itor);
+
+        CU_ASSERT_TRUE(dict_itor_search(itor, hash_keys[own ? 8 : 7]));
+        CU_ASSERT_TRUE(dict_itor_valid(itor));
+
+        dict_itor_free(itor);
+        dict_free(dct, NULL);
+        CU_ASSERT_EQUAL(bytes_malloced, 0);
+    }
+}
+
+void test_itor_survives_other_insert_and_remove()
+{
+    /* "k00" .. "k39". */
+    char keys[40][4];
+    for (unsigned i = 0; i < 40; ++i)
+        snprintf(keys[i], sizeof(keys[i]), "k%02u", i);
+
+    for (size_t c = 0; c < NUM_CONTAINERS; ++c) {
+        dict* dct = containers[c].new_dict();
+        CU_ASSERT_PTR_NOT_NULL_FATAL(dct);
+        const bool hashed = is_hashtable(dct) || is_hashtable2(dct);
+        for (unsigned i = 0; i < 30; ++i)
+            CU_ASSERT_TRUE(dict_insert(dct, keys[i]).inserted);
+        dict_itor* itor = dict_itor_new(dct);
+        CU_ASSERT_TRUE_FATAL(dict_itor_search(itor, keys[5]));
+
+        /* Inserting another key leaves the iterator on its key, unless it
+         * made a hash table grow. */
+        const size_t size = hashed ? hash_dict_size(dct) : 0;
+        CU_ASSERT_TRUE(dict_insert(dct, keys[35]).inserted);
+        CU_ASSERT_TRUE(dict_verify(dct));
+        if (hashed && hash_dict_size(dct) != size) {
+            check_itor_invalid(itor);
+            CU_ASSERT_TRUE_FATAL(dict_itor_search(itor, keys[5]));
+        } else {
+            if (!dict_itor_valid(itor))
+                fprintf(stderr, "%s: insert invalidated the iterator\n",
+                        containers[c].name);
+            CU_ASSERT_TRUE(dict_itor_valid(itor));
+            CU_ASSERT_PTR_EQUAL(dict_itor_key(itor), keys[5]);
+        }
+
+        /* Removing another key leaves the iterator on its key, except for
+         * hashtable2, where removals move elements between slots. */
+        CU_ASSERT_TRUE(dict_remove(dct, keys[20]).removed);
+        CU_ASSERT_TRUE(dict_verify(dct));
+        if (is_hashtable2(dct)) {
+            check_itor_invalid(itor);
+        } else {
+            if (!dict_itor_valid(itor))
+                fprintf(stderr, "%s: remove invalidated the iterator\n",
+                        containers[c].name);
+            CU_ASSERT_TRUE(dict_itor_valid(itor));
+            CU_ASSERT_PTR_EQUAL(dict_itor_key(itor), keys[5]);
+        }
+
+        dict_itor_free(itor);
+        dict_free(dct, NULL);
+        CU_ASSERT_EQUAL(bytes_malloced, 0);
+    }
 }
 
 void test_basic_skiplist()

@@ -176,6 +176,36 @@ typedef struct {
 
 size_t dict_free(dict* dct, dict_delete_func delete_func);
 
+/* ITERATOR INVALIDATION
+ *
+ * An iterator that has been invalidated must be repositioned with
+ * dict_itor_first(), dict_itor_last() or dict_itor_search() before further
+ * use. Freeing a dictionary leaves all of its iterators unusable; they may only
+ * be freed.
+ *
+ * Trees and the skip list:
+ *  - Inserting never invalidates an iterator.
+ *  - Removing an element (by key, by dict_itor_remove() or by dict_clear())
+ *    invalidates iterators positioned on that element; using them is
+ *    undefined. In every tree except tr_tree, removing a key whose node has two
+ *    children moves the key and datum of an in-order neighbour (the successor
+ *    in rb_tree and sp_tree, the successor or predecessor in hb_tree, pr_tree
+ *    and wb_tree) into that node and frees the neighbour's node instead. So
+ *    an iterator positioned on that neighbour is invalidated as well, and one
+ *    positioned on the removed key is left on the neighbour.
+ *
+ * Hash tables:
+ *  - An insert that grows the table, an explicit resize, and dict_clear()
+ *    invalidate every iterator. Inserting a key that is already present never
+ *    grows the table.
+ *  - hashtable: removing an element invalidates iterators positioned on it,
+ *    as for the trees.
+ *  - hashtable2: any removal invalidates every iterator, since it moves other
+ *    elements between slots.
+ * Hash table iterators detect these invalidations: dict_itor_valid() returns
+ * false, dict_itor_key() and dict_itor_datum() return NULL, and
+ * dict_itor_next(), dict_itor_prev() and dict_itor_remove() return false. */
+
 struct dict_itor {
     void* _itor;
     const itor_vtable* _vtable;
