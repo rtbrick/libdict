@@ -48,6 +48,26 @@ struct hb_node {
 #define BAL_POS(node)   ((node)->bal & 1)
 #define BAL_NEG(node)   ((node)->bal & 2)
 
+/* hb_node is handed to the generic routines in tree_common.c as though it were
+ * a tree_node_base, so its first five members must sit at the same offsets.
+ * The third of those, the parent pointer, additionally carries the balance
+ * factor in its two low bits, so ONLY this file's PARENT() macro may decode
+ * it: any tree_common routine that reads |parent| directly (tree_traverse,
+ * tree_select, tree_clear, tree_iterator_next/prev, tree_node_rot_*) would
+ * dereference a tagged, misaligned pointer and must be reimplemented here. */
+_Static_assert(sizeof(intptr_t) == sizeof(hb_node*),
+               "hb_node tags a parent pointer stored in an intptr_t");
+_Static_assert(offsetof(hb_node, key)   == offsetof(tree_node_base, key),
+               "hb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(hb_node, datum) == offsetof(tree_node_base, datum),
+               "hb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(hb_node, bal)   == offsetof(tree_node_base, parent),
+               "hb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(hb_node, llink) == offsetof(tree_node_base, llink),
+               "hb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(hb_node, rlink) == offsetof(tree_node_base, rlink),
+               "hb_node must be layout-compatible with tree_node_base");
+
 struct hb_tree {
     TREE_FIELDS(hb_node);
 };
@@ -119,7 +139,8 @@ static hb_node* node_next(hb_node* node);
 static hb_node* node_new(void* key);
 
 static bool node_verify(const hb_tree* tree, const hb_node* parent, const hb_node* node,
-                        unsigned* height, size_t *count);
+                        unsigned* height, size_t *count,
+                        const void* lower, const void* upper);
 
 hb_tree*
 hb_tree_new(dict_compare_func cmp_func)
@@ -170,8 +191,9 @@ hb_tree_clear(hb_tree* tree, dict_delete_func delete_func)
         }
         if (delete_func) delete_func(node->key, node->datum);
         hb_node* const parent = PARENT(node);
-        FREE(node);
+        /* Unlink before freeing: comparing a pointer to a freed object is UB. */
         *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &tree->root) = NULL;
+        FREE(node);
         node = parent;
     }
     ASSERT(tree->root == NULL);
@@ -392,6 +414,10 @@ remove_node(hb_tree* tree, hb_node* node)
 
     hb_node* p = PARENT(node);
     hb_node* child = node->llink ? node->llink : node->rlink;
+    /* Decide which side of |p| the node hangs off BEFORE freeing it:
+     * comparing a pointer to a freed object is UB. */
+    bool left = p && (p->llink == node);
+    ASSERT(!p || left || p->rlink == node);
     FREE(node);
     tree->count--;
     if (child)
@@ -401,11 +427,9 @@ remove_node(hb_tree* tree, hb_node* node)
         return;
     }
 
-    bool left = (p->llink == node);
     if (left) {
         p->llink = child;
     } else {
-        ASSERT(p->rlink == node);
         p->rlink = child;
     }
     node = child;
@@ -479,7 +503,18 @@ hb_tree_remove(hb_tree* tree, const void* key)
 size_t
 hb_tree_traverse(hb_tree* tree, dict_visit_func visit, void* user_data)
 {
-    return tree_traverse(tree, visit, user_data);
+    ASSERT(visit != NULL);
+
+    /* NOTE: this must NOT delegate to the generic tree_traverse(). hb_node
+     * packs the balance factor into the low bits of its parent pointer, so
+     * only node_next()/PARENT() may walk the parent chain here. */
+    size_t count = 0;
+    for (hb_node* node = tree_node_min(tree->root); node; node = node_next(node)) {
+        ++count;
+        if (!visit(node->key, node->datum, user_data))
+            break;
+    }
+    return count;
 }
 
 bool
@@ -520,7 +555,16 @@ node_new(void* key)
 {
     hb_node* node = MALLOC(sizeof(*node));
     if (node) {
-        ASSERT((((intptr_t)node) & 3) == 0); /* Ensure malloc returns aligned result. */
+        /* The two low bits of the parent pointer hold the balance factor, so
+         * a node must be at least 4-byte aligned. dict_malloc_func is
+         * user-replaceable, and an ASSERT would vanish under NDEBUG and let a
+         * misaligned allocator corrupt every parent pointer silently. */
+        if ((((uintptr_t) node) & 3) != 0) {
+            fprintf(stderr, "%s:%d (%s) dict_malloc_func returned a pointer "
+                    "that is not 4-byte aligned: %p\n",
+                    __FILE__, __LINE__, __func__, (void*) node);
+            abort();
+        }
         node->key = key;
         node->datum = NULL;
         node->bal = 0; /* also initializes parent to NULL */
@@ -558,21 +602,25 @@ node_next(hb_node* node)
 
 static bool
 node_verify(const hb_tree* tree, const hb_node* parent, const hb_node* node,
-        unsigned* height, size_t *count)
+        unsigned* height, size_t *count, const void* lower, const void* upper)
 {
     if (!parent) {
         VERIFY(tree->root == node);
     } else {
-        if (parent->llink == node) {
-            if (node)
-            VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-        } else {
-            ASSERT(parent->rlink == node);
-            if (node)
-            VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-        }
+        /* Was an ASSERT, which vanishes under NDEBUG and then silently
+         * accepted a node whose claimed parent had no link back to it. */
+        VERIFY(parent->llink == node || parent->rlink == node);
     }
     if (node) {
+        /* Global BST ordering. Comparing a node only against its immediate
+         * parent would accept an entire subtree placed on the wrong side:
+         * root 5, 5->llink 3, 3->rlink 7 passes every parent-local check yet
+         * makes key 7 unreachable from the root. */
+        if (lower)
+            VERIFY(tree->cmp_func(lower, node->key) < 0);
+        if (upper)
+            VERIFY(tree->cmp_func(upper, node->key) > 0);
+
         int bal = node->bal & BAL_MASK;
         VERIFY(bal >= 0);
         VERIFY(bal <= 2);
@@ -584,8 +632,8 @@ node_verify(const hb_tree* tree, const hb_node* parent, const hb_node* node,
         }
         VERIFY(PARENT(node) == parent);
         unsigned lheight, rheight;
-        if (!node_verify(tree, node, node->llink, &lheight, count) ||
-            !node_verify(tree, node, node->rlink, &rheight, count))
+        if (!node_verify(tree, node, node->llink, &lheight, count, lower, node->key) ||
+            !node_verify(tree, node, node->rlink, &rheight, count, node->key, upper))
             return false;
         VERIFY(bal == (int)rheight - (int)lheight);
         if (height)
@@ -602,9 +650,13 @@ bool
 hb_tree_verify(const hb_tree* tree)
 {
     size_t count = 0;
-    bool verified = node_verify(tree, NULL, tree->root, NULL, &count);
+    /* Only check the tally if the structure itself verified: otherwise
+     * node_verify() bailed out with a partial count and the count mismatch
+     * would mask the real failure it already reported. */
+    if (!node_verify(tree, NULL, tree->root, NULL, &count, NULL, NULL))
+        return false;
     VERIFY(tree->count == count);
-    return verified;
+    return true;
 }
 
 hb_itor*
@@ -662,7 +714,7 @@ bool hb_itor_prevn(hb_itor* itor, size_t count) {
 
 bool hb_itor_first(hb_itor* itor) { return tree_iterator_first(itor); }
 bool hb_itor_last(hb_itor* itor) { return tree_iterator_last(itor); }
-bool hb_itor_search(hb_itor* itor, const void* key) { return tree_iterator_search_ge(itor, key); }
+bool hb_itor_search(hb_itor* itor, const void* key) { return tree_iterator_search(itor, key); }
 bool hb_itor_search_le(hb_itor* itor, const void* key) { return tree_iterator_search_le(itor, key); }
 bool hb_itor_search_lt(hb_itor* itor, const void* key) { return tree_iterator_search_lt(itor, key); }
 bool hb_itor_search_ge(hb_itor* itor, const void* key) { return tree_iterator_search_ge(itor, key); }

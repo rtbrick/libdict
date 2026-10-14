@@ -45,6 +45,9 @@ void test_rb_tree_verify_black_height(void);
 void test_rb_tree_verify_global_order(void);
 void test_rb_tree_verify_count(void);
 void test_rb_tree_clear_rotation_count(void);
+void test_hb_tree_traverse(void);
+void test_hb_itor_search_exact(void);
+void test_hb_tree_verify_global_order(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -66,6 +69,9 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_rb_tree_verify_global_order),
     TEST_FUNC(test_rb_tree_verify_count),
     TEST_FUNC(test_rb_tree_clear_rotation_count),
+    TEST_FUNC(test_hb_tree_traverse),
+    TEST_FUNC(test_hb_itor_search_exact),
+    TEST_FUNC(test_hb_tree_verify_global_order),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -872,6 +878,94 @@ void test_rb_tree_clear_rotation_count()
     CU_ASSERT_TRUE(rb_tree_verify(tree));
 
     CU_ASSERT_EQUAL(rb_tree_free(tree, NULL), 0);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+struct traverse_state {
+    int         keys[16];
+    unsigned    count;
+    unsigned    stop_after;
+};
+
+static bool
+traverse_visit(const void* key, void* datum, void* user_data)
+{
+    (void)datum;
+    struct traverse_state* state = user_data;
+    if (state->count < 16)
+        state->keys[state->count] = *(const int*)key;
+    return ++state->count != state->stop_after;
+}
+
+void test_hb_tree_traverse()
+{
+    int keys[10];
+    hb_tree* tree = hb_tree_new(dict_int_cmp);
+    struct traverse_state state = { .count = 0, .stop_after = 0 };
+    CU_ASSERT_EQUAL(hb_tree_traverse(tree, traverse_visit, &state), 0);
+
+    /* Ascending inserts rotate, leaving balance bits set in the parent
+     * pointers that the generic tree_traverse() must not decode. */
+    for (int i = 0; i < 10; ++i) {
+        keys[i] = i;
+        CU_ASSERT_TRUE(hb_tree_insert(tree, &keys[i]).inserted);
+    }
+    CU_ASSERT_EQUAL(hb_tree_traverse(tree, traverse_visit, &state), 10);
+    CU_ASSERT_EQUAL(state.count, 10);
+    for (int i = 0; i < 10; ++i)
+        CU_ASSERT_EQUAL(state.keys[i], i);
+
+    /* A visit function returning false stops the traversal. */
+    state = (struct traverse_state) { .count = 0, .stop_after = 3 };
+    CU_ASSERT_EQUAL(hb_tree_traverse(tree, traverse_visit, &state), 3);
+
+    CU_ASSERT_EQUAL(hb_tree_free(tree, NULL), 10);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+void test_hb_itor_search_exact()
+{
+    int keys[] = { 10, 20 };
+    int probe = 15;
+    hb_tree* tree = hb_tree_new(dict_int_cmp);
+    for (unsigned i = 0; i < 2; ++i)
+        CU_ASSERT_TRUE(hb_tree_insert(tree, &keys[i]).inserted);
+
+    hb_itor* itor = hb_itor_new(tree);
+    CU_ASSERT_TRUE(hb_itor_search(itor, &keys[1]));
+    CU_ASSERT_PTR_EQUAL(hb_itor_key(itor), &keys[1]);
+    /* 15 is absent: an exact search must fail, not land on 20. */
+    CU_ASSERT_FALSE(hb_itor_search(itor, &probe));
+    CU_ASSERT_FALSE(hb_itor_valid(itor));
+    CU_ASSERT_TRUE(hb_itor_search_ge(itor, &probe));
+    CU_ASSERT_PTR_EQUAL(hb_itor_key(itor), &keys[1]);
+    hb_itor_free(itor);
+
+    CU_ASSERT_EQUAL(hb_tree_free(tree, NULL), 2);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+void test_hb_tree_verify_global_order()
+{
+    int keys[] = { 10, 5, 15, 3, 7 };
+    hb_tree* tree = hb_tree_new(dict_int_cmp);
+    for (unsigned i = 0; i < 5; ++i)
+        CU_ASSERT_TRUE(hb_tree_insert(tree, &keys[i]).inserted);
+    CU_ASSERT_TRUE(hb_tree_verify(tree));
+
+    /* Shape is 10 -> (5 -> (3, 7), 15). Changing 7 to 12 keeps it ordered
+     * relative to its parent 5, but puts 12 in the left subtree of 10. */
+    tree_node_base* root = ((tree_base*)tree)->root;
+    CU_ASSERT_EQUAL_FATAL(*(int*)root->key, 10);
+    CU_ASSERT_PTR_NOT_NULL_FATAL(root->llink);
+    CU_ASSERT_PTR_NOT_NULL_FATAL(root->llink->rlink);
+    CU_ASSERT_PTR_EQUAL_FATAL(root->llink->rlink->key, &keys[4]);
+    keys[4] = 12;
+    CU_ASSERT_FALSE(hb_tree_verify(tree));
+    keys[4] = 7;
+    CU_ASSERT_TRUE(hb_tree_verify(tree));
+
+    CU_ASSERT_EQUAL(hb_tree_free(tree, NULL), 5);
     CU_ASSERT_EQUAL(bytes_malloced, 0);
 }
 

@@ -60,7 +60,7 @@ typedef struct hb_itor hb_itor;
 
 hb_itor*        hb_itor_new(hb_tree* tree);
 dict_itor*      hb_dict_itor_new(hb_tree* tree);
-void            hb_itor_free(hb_itor* tree);
+void            hb_itor_free(hb_itor* itor);
 
 bool            hb_itor_valid(const hb_itor* itor);
 void            hb_itor_invalidate(hb_itor* itor);
