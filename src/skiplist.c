@@ -44,6 +44,9 @@ struct skip_node {
     skip_node*          link[];
 };
 
+/* A node can be given at most max_link - 1 links, so max_link must be at
+ * least 2 for the list to be able to link anything at all. */
+#define MIN_LINK        2
 #define MAX_LINK        32
 
 struct skiplist {
@@ -148,9 +151,14 @@ skiplist*
 skiplist_new(dict_compare_func cmp_func, unsigned max_link)
 {
     ASSERT(cmp_func != NULL);
-    ASSERT(max_link > 0);
 
-    if (max_link > MAX_LINK)
+    /* Clamp both ends, as the upper bound always was. rand_link_count() gives
+     * at most max_link - 1 links, so a max_link below MIN_LINK would yield
+     * zero-link nodes that node_insert() never links into the list, losing
+     * every element and leaking it. */
+    if (max_link < MIN_LINK)
+        max_link = MIN_LINK;
+    else if (max_link > MAX_LINK)
         max_link = MAX_LINK;
 
     skiplist* list = MALLOC(sizeof(*list));
@@ -494,6 +502,7 @@ skiplist_verify(const skiplist* list)
         VERIFY(list->head->link[i] == NULL);
     }
     unsigned observed_top_link = 0;
+    size_t observed_count = 0;
 
     skip_node* prev = NULL;
     skip_node* node = list->head->link[0];
@@ -506,14 +515,20 @@ skiplist_verify(const skiplist* list)
         VERIFY(node->link_count <= list->top_link);
         for (unsigned k = 0; k < node->link_count; k++) {
             if (node->link[k]) {
-                VERIFY(node->link[k]->link_count >= k);
+                /* To occupy level k a node needs links 0..k, i.e. more than k
+                 * of them. */
+                VERIFY(node->link[k]->link_count > k);
+                /* Links must run strictly forward in key order. */
+                VERIFY(list->cmp_func(node->key, node->link[k]->key) < 0);
             }
         }
 
+        ++observed_count;
         prev = node;
         node = node->link[0];
     }
     VERIFY(list->top_link == observed_top_link);
+    VERIFY(list->count == observed_count);
     return true;
 }
 
@@ -715,9 +730,16 @@ node_new(void* key, unsigned link_count)
     return node;
 }
 
+/* Returns a link count in [1, max_link - 1], geometrically distributed with
+ * ratio 1/4 (two coin flips per level). */
 static inline unsigned
 rand_link_count(skiplist* list)
 {
-    unsigned count = (unsigned) __builtin_ctz(dict_rand()) / 2 + 1;
-    return (count >= list->max_link) ? list->max_link - 1 : count;
+    /* dict_ctz() requires a nonzero argument and random() does return 0, so
+     * fold zero onto the largest trailing-zero count it could represent. */
+    const unsigned r = dict_rand();
+    const unsigned tz = r ? dict_ctz(r) : DICT_RAND_BITS;
+    const unsigned count = tz / 2 + 1;
+    ASSERT(list->max_link >= MIN_LINK);
+    return MIN(count, list->max_link - 1);
 }

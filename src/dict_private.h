@@ -104,6 +104,29 @@
 extern long random(void);
 static inline unsigned dict_rand() { return (unsigned) random(); }
 
+/* Number of low-order bits of dict_rand() that are usable: random() is
+ * specified to return a value in [0, 2^31), so the top bit of an unsigned is
+ * always clear. */
+#define DICT_RAND_BITS  31
+
+/* Count trailing zero bits of |n|, which must be nonzero. Unlike
+ * __builtin_ctz() this is available on every toolchain. */
+static inline unsigned
+dict_ctz(unsigned n)
+{
+    ASSERT(n != 0);
+#if defined(__GNUC__) || defined(__clang__)
+    return (unsigned) __builtin_ctz(n);
+#else
+    unsigned count = 0;
+    while (!(n & 1u)) {
+        n >>= 1;
+        ++count;
+    }
+    return count;
+#endif
+}
+
 /* Drop const from a key pointer for the void*-returning dict_key_func slot.
  * Round-tripping through uintptr_t is well defined and, unlike a direct cast,
  * does not trigger -Wcast-qual. */

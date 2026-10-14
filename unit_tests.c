@@ -48,6 +48,8 @@ void test_rb_tree_clear_rotation_count(void);
 void test_hb_tree_traverse(void);
 void test_hb_itor_search_exact(void);
 void test_hb_tree_verify_global_order(void);
+void test_skiplist_max_link_below_two(void);
+void test_skiplist_verify_order(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -72,6 +74,8 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_hb_tree_traverse),
     TEST_FUNC(test_hb_itor_search_exact),
     TEST_FUNC(test_hb_tree_verify_global_order),
+    TEST_FUNC(test_skiplist_max_link_below_two),
+    TEST_FUNC(test_skiplist_verify_order),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -966,6 +970,47 @@ void test_hb_tree_verify_global_order()
     CU_ASSERT_TRUE(hb_tree_verify(tree));
 
     CU_ASSERT_EQUAL(hb_tree_free(tree, NULL), 5);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+void test_skiplist_max_link_below_two()
+{
+    /* A node gets at most max_link - 1 links, so max_link 0 or 1 used to give
+     * nodes that were never linked in: every element was lost and leaked. */
+    for (unsigned max_link = 0; max_link < 2; ++max_link) {
+        int keys[100];
+        dict* dct = skiplist_dict_new(dict_int_cmp, max_link);
+        CU_ASSERT_PTR_NOT_NULL_FATAL(dct);
+        for (int i = 0; i < 100; ++i) {
+            keys[i] = i;
+            CU_ASSERT_TRUE(dict_insert(dct, &keys[i]).inserted);
+        }
+        CU_ASSERT_TRUE(dict_verify(dct));
+        CU_ASSERT_EQUAL(dict_count(dct), 100);
+        for (int i = 0; i < 100; ++i)
+            CU_ASSERT_PTR_NOT_NULL(dict_search(dct, &keys[i]));
+        CU_ASSERT_TRUE(dict_remove(dct, &keys[50]).removed);
+        CU_ASSERT_TRUE(dict_verify(dct));
+        CU_ASSERT_EQUAL(dict_free(dct, NULL), 99);
+        CU_ASSERT_EQUAL(bytes_malloced, 0);
+    }
+}
+
+void test_skiplist_verify_order()
+{
+    int keys[] = { 1, 2, 3, 4, 5 };
+    skiplist* list = skiplist_new(dict_int_cmp, 13);
+    for (unsigned i = 0; i < 5; ++i)
+        CU_ASSERT_TRUE(skiplist_insert(list, &keys[i]).inserted);
+    CU_ASSERT_TRUE(skiplist_verify(list));
+
+    /* 1 2 10 4 5 is out of order, whatever links each node has. */
+    keys[2] = 10;
+    CU_ASSERT_FALSE(skiplist_verify(list));
+    keys[2] = 3;
+    CU_ASSERT_TRUE(skiplist_verify(list));
+
+    CU_ASSERT_EQUAL(skiplist_free(list, NULL), 5);
     CU_ASSERT_EQUAL(bytes_malloced, 0);
 }
 

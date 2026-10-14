@@ -34,6 +34,9 @@ BEGIN_DECL
 
 typedef struct skiplist skiplist;
 
+/* |max_link| is the number of levels in the list. It is clamped into the
+ * usable range [2, 32]: a node receives at most max_link - 1 links, so fewer
+ * than 2 levels could not link anything. */
 skiplist*       skiplist_new(dict_compare_func cmp_func, unsigned max_link);
 dict*           skiplist_dict_new(dict_compare_func cmp_func, unsigned max_link);
 size_t          skiplist_free(skiplist* list, dict_delete_func delete_func);
