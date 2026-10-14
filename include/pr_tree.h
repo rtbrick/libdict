@@ -60,7 +60,7 @@ typedef struct pr_itor pr_itor;
 
 pr_itor*        pr_itor_new(pr_tree* tree);
 dict_itor*      pr_dict_itor_new(pr_tree* tree);
-void            pr_itor_free(pr_itor* tree);
+void            pr_itor_free(pr_itor* itor);
 
 bool            pr_itor_valid(const pr_itor* itor);
 void            pr_itor_invalidate(pr_itor* itor);

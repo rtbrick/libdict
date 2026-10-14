@@ -31,7 +31,7 @@
  * A single operation on a splay tree has a worst-case time complexity of O(N),
  * but a series of M operations have a time complexity of O(M lg N), and thus
  * the amortized time complexity of an operation is O(lg N). More specifically,
- * a series of M operations on a tree with N nodes will runs in O((N+M)lg(N+M))
+ * a series of M operations on a tree with N nodes will run in O((N+M)lg(N+M))
  * time. Splay trees work by "splaying" a node up the tree using a series of
  * rotations until it is the root each time it is accessed. They are much
  * simpler to code than most balanced trees, because there is no strict

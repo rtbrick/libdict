@@ -60,7 +60,7 @@ typedef struct tr_itor tr_itor;
 
 tr_itor*        tr_itor_new(tr_tree* tree);
 dict_itor*      tr_dict_itor_new(tr_tree* tree);
-void            tr_itor_free(tr_itor* tree);
+void            tr_itor_free(tr_itor* itor);
 
 bool            tr_itor_valid(const tr_itor* itor);
 void            tr_itor_invalidate(tr_itor* itor);

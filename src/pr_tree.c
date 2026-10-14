@@ -155,23 +155,22 @@ fixup(pr_tree* tree, pr_node* node)
      *
      * Consider a node N.
      * A single left rotation is performed when
-     * WEIGHT(n->llink) < WEIGHT(n->rlink->rlink)
+     * WEIGHT(n->rlink->rlink) > WEIGHT(n->llink)
      * A right-left rotation is performed when
-     * WEIGHT(n->llink) < WEIGHT(n->rlink->llink)
+     * WEIGHT(n->rlink->llink) > WEIGHT(n->llink)
      *
      * A single right rotation is performed when
-     * WEIGHT(n->rlink) > WEIGHT(n->llink->llink)
+     * WEIGHT(n->llink->llink) > WEIGHT(n->rlink)
      * A left-right rotation is performed when
-     * WEIGHT(n->rlink) > WEIGHT(n->llink->rlink)
+     * WEIGHT(n->llink->rlink) > WEIGHT(n->rlink)
      *
      * Although the worst case number of rotations for a single insertion or
      * deletion is O(n), the amortized worst-case number of rotations is
      * .44042lg(n) + O(1) for insertion, and .42062lg(n) + O(1) for deletion.
      *
-     * We use tail recursion to minimize the number of recursive calls. For
-     * single rotations, no recursive call is made, and we tail recurse to
-     * continue checking for out-of-balance conditions. For double, we make one
-     * recursive call and then tail recurse.
+     * Every rotating branch below recurses twice, once into each node whose
+     * subtree changed shape, so the recursion depth is bounded by the height
+     * of the tree.
      */
     unsigned rotations = 0;
     const unsigned lweight = WEIGHT(node->llink);
@@ -179,7 +178,7 @@ fixup(pr_tree* tree, pr_node* node)
     if (lweight < rweight) {
         pr_node* r = node->rlink;
         ASSERT(r != NULL);
-        if (WEIGHT(r->rlink) > lweight) {        /* LL */
+        if (WEIGHT(r->rlink) > lweight) {        /* RR */
             rot_left(tree, node);
             rotations += 1;
             rotations += fixup(tree, node);
@@ -221,11 +220,11 @@ fixup(pr_tree* tree, pr_node* node)
     } else if (lweight > rweight) {
         pr_node* l = node->llink;
         ASSERT(l != NULL);
-        if (WEIGHT(l->llink) > rweight) { /* RR */
+        if (WEIGHT(l->llink) > rweight) { /* LL */
             rot_right(tree, node);
             rotations += 1;
             rotations += fixup(tree, node);
-            /* Commenting the next line means we must turn the weight
+            /* Commenting the next line means we must make the weight
              * verification condition in node_verify() less stringent. */
             rotations += fixup(tree, l);
         } else if (WEIGHT(l->rlink) > rweight) { /* LR */
@@ -319,7 +318,7 @@ remove_node(pr_tree* tree, pr_node* node)
         node = out;
     }
     ASSERT(!node->llink || !node->rlink);
-    /* Splice in the successor, if any. */
+    /* Splice in the node's only child, if any. */
     pr_node* child = node->llink ? node->llink : node->rlink;
     pr_node* parent = node->parent;
     if (child)
@@ -409,14 +408,14 @@ node_new(void* key)
 /*
  * rot_left(T, B):
  *
- *     /         /
- *    B         D
- *   / \       / \
- *  A   D   ==>   B   E
- *     / \       / \
- *    C   E     A   C
+ *       /                     /
+ *       B                     D
+ *      / \                   / \
+ *     A   D      ==>        B   E
+ *        / \               / \
+ *       C   E             A   C
  *
- * Only the weights of B and B's right child to be readjusted.
+ * Only the weights of B and B's new parent D need to be readjusted.
  */
 static void
 rot_left(pr_tree* tree, pr_node *node)
@@ -433,14 +432,14 @@ rot_left(pr_tree* tree, pr_node *node)
 /*
  * rot_right(T, D):
  *
- *       /       /
- *      D       B
- *     / \     / \
- *    B   E  ==>  A   D
- *   / \         / \
- *  A   C       C   E
+ *       /                     /
+ *       D                     B
+ *      / \                   / \
+ *     B   E      ==>        A   D
+ *    / \                       / \
+ *   A   C                     C   E
  *
- * Only the weights of D and D's left child need to be readjusted.
+ * Only the weights of D and D's new parent B need to be readjusted.
  */
 static void
 rot_right(pr_tree* tree, pr_node* node)

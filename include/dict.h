@@ -49,8 +49,10 @@ extern const char* const kDictVersionString;
 
 /* A pointer to a function that compares two keys. It needs to return a
  * negative value if k1<k2, a positive value if k1>k2, and zero if the keys are
- * equal. The comparison should be reflexive (k1>k2 implies k1<k2, etc.),
- * symmetric (k1=k1) and transitive (k1>k2 and k2>k3 implies k1>k3). */
+ * equal. The comparison must be a total order, i.e. reflexive (cmp(k,k)==0),
+ * antisymmetric (k1>k2 implies k2<k1) and transitive (k1>k2 and k2>k3 implies
+ * k1>k3). Keys must compare identically for as long as they are in the
+ * dictionary. */
 typedef int        (*dict_compare_func)(const void*, const void*);
 /* A pointer to a function that is called when a key-value pair gets removed
  * from a dictionary. */
@@ -59,7 +61,9 @@ typedef void        (*dict_delete_func)(void*, void*);
 typedef bool        (*dict_visit_func)(const void*, void*, void*);
 /* A pointer to a function that returns the hash value of a key. */
 typedef unsigned    (*dict_hash_func)(const void*);
-/* A pointer to a function that returns the priority of a key. */
+/* A pointer to a function that returns the priority of a key, used by tr_tree
+ * (a treap). The treap is a max-heap on priority, so a LARGER value places the
+ * key closer to the root. Pass NULL to have priorities chosen at random. */
 typedef unsigned    (*dict_prio_func)(const void*);
 
 /* A pointer to a function that libdict will use to allocate memory. */
@@ -67,7 +71,7 @@ extern void*        (*dict_malloc_func)(size_t);
 /* A pointer to a function that libdict will use to deallocate memory. */
 extern void        (*dict_free_func)(void*);
 
-/* Forward declarations for transparent type dict_itor. */
+/* Forward declaration of dict_itor, whose definition appears below. */
 typedef struct dict_itor dict_itor;
 
 typedef struct {

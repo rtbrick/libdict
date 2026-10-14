@@ -28,16 +28,18 @@
 /*
  * cf. [Aragon and Seidel, 1996], [Knuth 1998]
  *
- * A treap is a randomized data structure in which each node of tree has an
- * associated key and priority. The priority is chosen at random when the node
- * is inserted into the tree. Each node is inserted so that the lexicographic
- * order of the keys is preserved, and the priority of any node is less than
- * the priority of either of its child nodes; in this way the treap is a
- * combination of a tree and a min-heap. In this implementation, this is
- * accomplished by first inserting the node according to lexigraphical order of
- * keys as in a normal binary tree, and then, if needed, sifting the node
- * upwards using a series of rotations until the heap property of the tree is
- * restored.
+ * A treap is a randomized data structure in which each node of the tree has
+ * an associated key and priority. The priority is chosen at random when the
+ * node is inserted into the tree, unless a dict_prio_func supplies it. Each
+ * node is inserted so that the lexicographic order of the keys is preserved,
+ * and the priority of any node is greater than or equal to the priority of
+ * either of its child nodes; in this way the treap is a combination of a tree
+ * and a max-heap. Note the direction: a dict_prio_func should return a LARGER
+ * value for a key that ought to sit closer to the root. In this
+ * implementation, this is accomplished by first inserting the node according
+ * to the lexicographical order of keys as in a normal binary tree, and then,
+ * if needed, sifting the node upwards using a series of rotations until the
+ * heap property of the tree is restored.
  */
 
 #include "tr_tree.h"

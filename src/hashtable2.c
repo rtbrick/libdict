@@ -1,5 +1,5 @@
 /*
- * libdict -- chained hash-table, with chains sorted by hash, implementation.
+ * libdict -- open-addressing hash-table, with linear probing, implementation.
  *
  * Copyright (c) 2001-2014, Farooq Mela
  * All rights reserved.
