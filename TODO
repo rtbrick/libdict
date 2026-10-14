@@ -1,7 +1,35 @@
-[ ] Use restrict keyword wherever appropriate.
+[ ] Use restrict keyword wherever appropriate (only hb_tree and pr_tree use it).
 [X] Fix skiplist prev pointers.
 [ ] Implement iterator compare for the hash tables (iterator remove is done).
-[ ] Reformat to 80 columns.
+[ ] Reformat to 80 columns (~400 longer lines, e.g. the vtable thunk tables).
 [ ] Optimize double-rotations.
 [X] Fix bugs in weight balanced tree.
 [ ] Optimize skiplist.
+
+Features (new API, not bug fixes):
+[ ] skiplist_select(), so dict_select() works on the skip list (O(n)).
+[ ] A way to seed dict_rand(): random() is never seeded, so every process
+    gets the same treap priorities and skip list levels. It also yields only
+    31 bits, so skip list levels above 16 are never used.
+
+Versioning:
+[ ] DICT_VERSION_* in dict.h still say 0.3.0 while releases are 1.0.x; the
+    macros are compiled into applications, so decide before changing them.
+[ ] The GNUmakefile installs libdict.so.2 (INSTALL_LIBVER) while CMake builds
+    soname libdict.so.1.0.
+
+Candidates for the next major version (API/ABI breaking):
+[ ] Rename itor_vtable's 'invalid' member to 'invalidate'.
+[ ] Make dict_key_func and dict_icompare_func take/return const pointers.
+[ ] Prefix BEGIN_DECL/END_DECL (LIBDICT_), keeping the old names as aliases.
+
+Portability and limits:
+[ ] Fallback for random(), which is POSIX only (e.g. MSVC).
+[ ] hashtable2 iterators use an int slot index, wrong beyond 2^31 slots.
+[ ] dict_prime_geq() returns a smaller value for n > 4294967291.
+
+Build, tests and CI (propose before adding, see CLAUDE.md):
+[ ] CI: Release next to Debug, an ASan + UBSan job, a LIBDICT_SLOW_TESTS=1
+    job, QEMU jobs for arm64, armv7, i386 and s390x, and a clang make build.
+[ ] Smoke tests for demo, anagram and benchmark in CTest.
+[ ] Update the Doxyfile ("doxygen -u"); doxygen warns about 14 obsolete tags.
