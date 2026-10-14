@@ -12,6 +12,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0    # full history and tags, for git describe
+
+      # Show the version in the documentation. The Doxyfile leaves
+      # PROJECT_NUMBER empty; a later assignment overrides it.
+      - name: Set documentation version
+        run: echo "PROJECT_NUMBER = $(git describe --tags --always)" >> Doxyfile
 
       - name: Generate Doxygen
         uses: mattnotmitt/doxygen-action@v1
