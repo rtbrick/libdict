@@ -56,6 +56,7 @@ void test_wb_tree_verify_global_order(void);
 void test_wb_tree_balance_above_6m_nodes(void);
 void test_degenerate_tree_verify_and_path_lengths(void);
 void test_sp_tr_tree_verify_order_and_count(void);
+void test_dict_ptr_cmp_unrelated_objects(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -88,6 +89,7 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_wb_tree_balance_above_6m_nodes),
     TEST_FUNC(test_degenerate_tree_verify_and_path_lengths),
     TEST_FUNC(test_sp_tr_tree_verify_order_and_count),
+    TEST_FUNC(test_dict_ptr_cmp_unrelated_objects),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -1367,6 +1369,28 @@ void test_sp_tr_tree_verify_order_and_count()
     check_verify_order_and_count("tr_tree", tr);
     CU_ASSERT_EQUAL(dict_free(tr, NULL), 7);
     CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+/* dict_ptr_cmp is used on keys that are pointers to separately allocated
+ * objects, where relational operators on the pointers themselves are
+ * undefined (C11 6.5.8p5). The results are the same either way on common
+ * targets, so the undefined comparison itself is only caught by building with
+ * -fsanitize=address,pointer-compare and running with
+ * ASAN_OPTIONS=detect_invalid_pointer_pairs=2. */
+void test_dict_ptr_cmp_unrelated_objects()
+{
+    int* a = malloc(sizeof(*a));
+    int* b = malloc(sizeof(*b));
+    CU_ASSERT_PTR_NOT_NULL_FATAL(a);
+    CU_ASSERT_PTR_NOT_NULL_FATAL(b);
+    const int expected = ((uintptr_t) a > (uintptr_t) b) - ((uintptr_t) a < (uintptr_t) b);
+    CU_ASSERT_NOT_EQUAL(expected, 0);
+    CU_ASSERT_EQUAL(dict_ptr_cmp(a, b), expected);
+    CU_ASSERT_EQUAL(dict_ptr_cmp(b, a), -expected);
+    CU_ASSERT_EQUAL(dict_ptr_cmp(a, a), 0);
+    CU_ASSERT_EQUAL(dict_ptr_cmp(NULL, NULL), 0);
+    free(a);
+    free(b);
 }
 
 void test_basic_skiplist()

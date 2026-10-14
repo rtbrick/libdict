@@ -72,7 +72,11 @@ dict_ulong_cmp(const void* k1, const void* k2)
 int
 dict_ptr_cmp(const void* k1, const void* k2)
 {
-    return (k1 > k2) - (k1 < k2);
+    /* Relational operators on pointers into different objects are undefined
+     * (C11 6.5.8p5); comparing the converted integers is well defined. */
+    const uintptr_t a = (uintptr_t) k1;
+    const uintptr_t b = (uintptr_t) k2;
+    return (a > b) - (a < b);
 }
 
 int
