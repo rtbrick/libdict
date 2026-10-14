@@ -171,7 +171,6 @@ splay(sp_tree* t, sp_node* n)
                 if ((p->llink = n->rlink) != NULL)
                     p->llink->parent = p;
                 n->rlink = p;
-                ++rotations;
             } else {
                 if ((p->rlink = n->llink) != NULL)
                     p->rlink->parent = p;
@@ -269,8 +268,13 @@ sp_tree_insert(sp_tree* tree, void* key)
             parent = node; node = node->llink;
         } else if (cmp > 0) {
             parent = node; node = node->rlink;
-        } else
+        } else {
+            /* Splay on a duplicate too: every other accessor restructures, and
+             * skipping it here breaks the amortized O(lg n) bound for repeated
+             * inserts of an existing key. */
+            splay(tree, node);
             return (dict_insert_result) { &node->datum, false };
+        }
     }
 
     if (!(node = node_new(key)))

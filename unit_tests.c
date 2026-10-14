@@ -65,6 +65,9 @@ void test_hashtable2_itor_remove_invalidates(void);
 void test_itor_survives_other_insert_and_remove(void);
 void test_dict_str_cmp_unsigned_bytes(void);
 void test_util_is_prime_and_shuffle_edges(void);
+void test_sp_tree_rotation_count_single_zig(void);
+void test_pr_tree_rotation_count_double(void);
+void test_sp_tree_insert_duplicate_splays(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -106,6 +109,9 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_itor_survives_other_insert_and_remove),
     TEST_FUNC(test_dict_str_cmp_unsigned_bytes),
     TEST_FUNC(test_util_is_prime_and_shuffle_edges),
+    TEST_FUNC(test_sp_tree_rotation_count_single_zig),
+    TEST_FUNC(test_pr_tree_rotation_count_double),
+    TEST_FUNC(test_sp_tree_insert_duplicate_splays),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -1718,6 +1724,64 @@ void test_util_is_prime_and_shuffle_edges()
         seen |= (words[i] == a ? 1u : 0u) | (words[i] == b ? 2u : 0u) | (words[i] == c ? 4u : 0u);
     CU_ASSERT_EQUAL(seen, 7u);
     CU_ASSERT_PTR_NULL(words[3]);
+}
+
+/* Inserts |n| int keys into a fresh tree from |new_dict| in the given order and
+ * returns the tree's rotation count. */
+static size_t
+rotations_after_inserts(dict* (*new_dict)(dict_compare_func), int* keys, unsigned n)
+{
+    dict* dct = new_dict(dict_int_cmp);
+    for (unsigned i = 0; i < n; ++i)
+        CU_ASSERT_TRUE(dict_insert(dct, &keys[i]).inserted);
+    CU_ASSERT_TRUE(dict_verify(dct));
+    const size_t rotations = ((tree_base*)dict_private(dct))->rotation_count;
+    dict_free(dct, NULL);
+    return rotations;
+}
+
+void test_sp_tree_rotation_count_single_zig()
+{
+    /* Splaying a child of the root is one rotation, whichever side the child
+     * is on; the left case used to count two. */
+    int left[] = { 2, 1 };
+    int right[] = { 1, 2 };
+    CU_ASSERT_EQUAL(rotations_after_inserts(sp_dict_new, left, 2), 1);
+    CU_ASSERT_EQUAL(rotations_after_inserts(sp_dict_new, right, 2), 1);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+void test_pr_tree_rotation_count_double()
+{
+    /* 1 -> (_, 3 -> (2, _)) needs one right-left double rotation, which counts
+     * two like its mirror, the left-right case; it used to count one. */
+    int rl[] = { 1, 3, 2 };
+    int lr[] = { 3, 1, 2 };
+    CU_ASSERT_EQUAL(rotations_after_inserts(pr_dict_new, lr, 3), 2);
+    CU_ASSERT_EQUAL(rotations_after_inserts(pr_dict_new, rl, 3), 2);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+void test_sp_tree_insert_duplicate_splays()
+{
+    /* Every splay tree accessor moves the key it found to the root, which is
+     * what bounds the amortized cost; inserting an existing key did not. */
+    int keys[] = { 1, 2, 3 };
+    sp_tree* tree = sp_tree_new(dict_int_cmp);
+    for (unsigned i = 0; i < 3; ++i)
+        CU_ASSERT_TRUE(sp_tree_insert(tree, &keys[i]).inserted);
+    CU_ASSERT_PTR_EQUAL(((tree_base*)tree)->root->key, &keys[2]);
+
+    int dup = 1;
+    dict_insert_result result = sp_tree_insert(tree, &dup);
+    CU_ASSERT_FALSE(result.inserted);
+    CU_ASSERT_PTR_NOT_NULL(result.datum_ptr);
+    CU_ASSERT_PTR_EQUAL(((tree_base*)tree)->root->key, &keys[0]);
+    CU_ASSERT_TRUE(sp_tree_verify(tree));
+    CU_ASSERT_EQUAL(sp_tree_count(tree), 3);
+
+    CU_ASSERT_EQUAL(sp_tree_free(tree, NULL), 3);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
 }
 
 void test_basic_skiplist()

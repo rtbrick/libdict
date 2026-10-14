@@ -212,7 +212,9 @@ fixup(pr_tree* tree, pr_node* node)
             r->weight += WEIGHT(b) - rl->weight;
             rl->weight = node->weight + r->weight;
 
-            rotations += 1;
+            /* A double rotation counts as two, matching the mirrored LR case
+             * below. */
+            rotations += 2;
             rotations += fixup(tree, r);
             rotations += fixup(tree, node);
         }
