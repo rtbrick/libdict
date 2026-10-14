@@ -487,7 +487,7 @@ hashtable_itor_next(hashtable_itor* itor)
     }
     itor->node = NULL;
     itor->slot = 0;
-    return itor->node != NULL;
+    return false;
 }
 
 bool

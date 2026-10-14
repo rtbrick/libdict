@@ -33,8 +33,6 @@ void *xmalloc(size_t size);
 static size_t hash_count = 0, comp_count = 0;
 unsigned str_hash(const void *p);
 int my_strcmp(const void *k1, const void *k2);
-unsigned ptr_hash(const void *p);
-int my_ptrcmp(const void *k1, const void *k2);
 void key_str_free(void *key, void *datum);
 
 void timer_start(struct rusage* start);
@@ -59,8 +57,6 @@ static size_t malloced = 0;
 int
 main(int argc, char **argv)
 {
-    bool shuffle_keys = true;
-
     if (argc != 3) {
         fprintf(stderr, "usage: %s [type] [input]\n", appname);
         fprintf(stderr, "type: specifies the dictionary type:\n");
@@ -217,7 +213,7 @@ main(int argc, char **argv)
 
     dict_itor_free(itor);
 
-    if (shuffle_keys) shuffle(words, nwords);
+    shuffle(words, nwords);
 
     ASSERT(dict_verify(dct));
     comp_count = hash_count = 0; /* Ignore comparisons/hashes incurred by dict_verify() */
@@ -271,7 +267,7 @@ main(int argc, char **argv)
     ASSERT(dict_verify(dct));
     comp_count = hash_count = 0; /* Ignore comparisons/hashes incurred by dict_verify() */
 
-    if (shuffle_keys) shuffle(words, nwords);
+    shuffle(words, nwords);
 
     timer_start(&start);
     for (unsigned i = 0; i < nwords; i++) {
@@ -435,20 +431,6 @@ my_strcmp(const void *k1, const void *k2)
 {
     ++comp_count;
     return strcmp(k1, k2);
-}
-
-unsigned
-ptr_hash(const void *p)
-{
-    ++hash_count;
-    return (unsigned) ((2166136261U ^ (uintptr_t)p) * 16777619U);
-}
-
-int
-my_ptrcmp(const void *k1, const void *k2)
-{
-    ++comp_count;
-    return (k1 < k2) ? -1 : (k1 > k2);
 }
 
 void

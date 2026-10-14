@@ -261,27 +261,6 @@ hashtable2_search(hashtable2* table, const void* key)
     return NULL;
 }
 
-#if 0
-static int
-index_of_node_to_shift(hashtable2* table, unsigned truncated_hash, unsigned index)
-{
-    int last_index = -1;
-    do {
-    hash_node* node = &table->table[index];
-    if (!node->hash) {
-        break;
-    }
-    if (node->hash % table->size == truncated_hash) {
-        last_index = index;
-    }
-    if (++index == table->size) {
-        index = 0;
-    }
-    } while (index != truncated_hash);
-    return last_index;
-}
-#endif
-
 static void
 remove_cleanup(hashtable2* table, hash_node* const first, hash_node* node)
 {
@@ -617,7 +596,7 @@ hashtable2_itor_search(hashtable2_itor* itor, const void* key)
             index = 0;
     } while (index != truncated_hash);
     itor->slot = -1;
-    return NULL;
+    return false;
 }
 
 const void*

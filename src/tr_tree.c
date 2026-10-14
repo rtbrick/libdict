@@ -42,7 +42,6 @@
 
 #include "tr_tree.h"
 
-#include <limits.h>
 #include "dict_private.h"
 #include "tree_common.h"
 

@@ -102,7 +102,7 @@
 #endif
 
 extern long random(void);
-static inline unsigned dict_rand() { return (unsigned) random(); }
+static inline unsigned dict_rand(void) { return (unsigned) random(); }
 
 /* Number of low-order bits of dict_rand() that are usable: random() is
  * specified to return a value in [0, 2^31), so the top bit of an unsigned is
