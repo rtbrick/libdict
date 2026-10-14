@@ -329,8 +329,10 @@
           <declname>max_link</declname>
         </param>
         <briefdescription>
+<para>|max_link| is the number of levels in the list. </para>
         </briefdescription>
         <detaileddescription>
+<para>It is clamped into the usable range [2, 32]: a node receives at most max_link - 1 links, so fewer than 2 levels could not link anything. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -366,8 +368,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/skiplist.h" line="41" column="16" bodyfile="src/skiplist.c" bodystart="180" bodyend="191" declfile="include/skiplist.h" declline="41" declcolumn="16"/>
-        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="159">dict::_object</references>
-        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="160">dict::_vtable</references>
+        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="165">dict::_object</references>
+        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="166">dict::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
         <references refid="skiplist_8c_1a163c5a84a8d9796d5a382824734d041c" compoundref="skiplist_8c" startline="151" endline="177">skiplist_new</references>
@@ -688,8 +690,10 @@
           <declname>ncounts</declname>
         </param>
         <briefdescription>
+<para>Compute the histogram of link counts of the skiplist. </para>
         </briefdescription>
         <detaileddescription>
+<para>For 0 &lt;= x &lt; |ncounts|, |counts|[x] will be set to the number of nodes with x links, and the maximal link count will be returned. If the return value is greater than or equal to |ncounts|, not all link counts could be stored in |counts| (i.e. the array was not large enough). </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -733,8 +737,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/skiplist.h" line="70" column="16" bodyfile="src/skiplist.c" bodystart="563" bodyend="574" declfile="include/skiplist.h" declline="70" declcolumn="16"/>
-        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="217">dict_itor::_itor</references>
-        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="218">dict_itor::_vtable</references>
+        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="235">dict_itor::_itor</references>
+        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="236">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
         <references refid="skiplist_8c_1adbe33aa562dee4fa3e409b3544203780" compoundref="skiplist_8c" startline="552" endline="560">skiplist_itor_new</references>
@@ -1164,9 +1168,6 @@
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35" refid="skiplist_8h_1ad54b05301a5276404d53e2bce969c45f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structskiplist" kindref="compound">skiplist</ref><sp/><ref refid="structskiplist" kindref="compound">skiplist</ref>;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>|max_link|<sp/>is<sp/>the<sp/>number<sp/>of<sp/>levels<sp/>in<sp/>the<sp/>list.<sp/>It<sp/>is<sp/>clamped<sp/>into<sp/>the</highlight></codeline>
-<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>usable<sp/>range<sp/>[2,<sp/>32]:<sp/>a<sp/>node<sp/>receives<sp/>at<sp/>most<sp/>max_link<sp/>-<sp/>1<sp/>links,<sp/>so<sp/>fewer</highlight></codeline>
-<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>than<sp/>2<sp/>levels<sp/>could<sp/>not<sp/>link<sp/>anything.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8h_1a163c5a84a8d9796d5a382824734d041c" kindref="member">skiplist_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structskiplist_1a196385d0ce1b6f622135248c96a88e6d" kindref="member">max_link</ref>);</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><ref refid="structdict" kindref="compound">dict</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8h_1a97d5ef497ad5c8b0b14c59097c0efa6b" kindref="member">skiplist_dict_new</ref>(<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref><sp/><ref refid="structskiplist_1a3e0944ca8a425fcd254ca5057e885e45" kindref="member">cmp_func</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structskiplist_1a196385d0ce1b6f622135248c96a88e6d" kindref="member">max_link</ref>);</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8h_1a824d0126c8f9bfdb2a80a357f1846909" kindref="member">skiplist_free</ref>(<ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
@@ -1186,11 +1187,6 @@
 <codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8h_1aeab0378a37def72ea8c518e1f44a1b33" kindref="member">skiplist_count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8h_1a4df47d9ff2ce6126c15bc80d9423bdf1" kindref="member">skiplist_verify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Compute<sp/>the<sp/>histogram<sp/>of<sp/>link<sp/>counts<sp/>of<sp/>the<sp/>skiplist.</highlight></codeline>
-<codeline lineno="60"><highlight class="comment"><sp/>*<sp/>For<sp/>0<sp/>&lt;=<sp/>x<sp/>&lt;<sp/>|ncounts|,<sp/>|counts|[x]<sp/>will<sp/>be<sp/>set<sp/>to<sp/>the<sp/>number<sp/>of<sp/>nodes<sp/>with<sp/>x</highlight></codeline>
-<codeline lineno="61"><highlight class="comment"><sp/>*<sp/>links,<sp/>and<sp/>the<sp/>maximal<sp/>link<sp/>count<sp/>will<sp/>be<sp/>returned.<sp/>If<sp/>the<sp/>return<sp/>value<sp/>is</highlight></codeline>
-<codeline lineno="62"><highlight class="comment"><sp/>*<sp/>greater<sp/>than<sp/>or<sp/>equal<sp/>to<sp/>|ncounts|,<sp/>not<sp/>all<sp/>link<sp/>counts<sp/>could<sp/>be<sp/>stored<sp/>in</highlight></codeline>
-<codeline lineno="63"><highlight class="comment"><sp/>*<sp/>|counts|<sp/>(i.e.<sp/>the<sp/>array<sp/>was<sp/>not<sp/>large<sp/>enough).<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="skiplist_8h_1af9d82cffc987f421df8743706ac80538" kindref="member">skiplist_link_count_histogram</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structskiplist" kindref="compound">skiplist</ref>*<sp/>list,</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>counts[],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ncounts);</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>

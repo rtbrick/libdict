@@ -1020,8 +1020,10 @@
           <declname>max_link</declname>
         </param>
         <briefdescription>
+<para>|max_link| is the number of levels in the list. </para>
         </briefdescription>
         <detaileddescription>
+<para>It is clamped into the usable range [2, 32]: a node receives at most max_link - 1 links, so fewer than 2 levels could not link anything. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1057,8 +1059,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="180" column="1" bodyfile="src/skiplist.c" bodystart="180" bodyend="191"/>
-        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="159">dict::_object</references>
-        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="160">dict::_vtable</references>
+        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="165">dict::_object</references>
+        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="166">dict::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
         <references refid="skiplist_8c_1a163c5a84a8d9796d5a382824734d041c" compoundref="skiplist_8c" startline="151" endline="177">skiplist_new</references>
@@ -1379,8 +1381,10 @@
           <declname>ncounts</declname>
         </param>
         <briefdescription>
+<para>Compute the histogram of link counts of the skiplist. </para>
         </briefdescription>
         <detaileddescription>
+<para>For 0 &lt;= x &lt; |ncounts|, |counts|[x] will be set to the number of nodes with x links, and the maximal link count will be returned. If the return value is greater than or equal to |ncounts|, not all link counts could be stored in |counts| (i.e. the array was not large enough). </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -1424,8 +1428,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/skiplist.c" line="563" column="1" bodyfile="src/skiplist.c" bodystart="563" bodyend="574"/>
-        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="217">dict_itor::_itor</references>
-        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="218">dict_itor::_vtable</references>
+        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="235">dict_itor::_itor</references>
+        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="236">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
         <references refid="skiplist_8c_1adbe33aa562dee4fa3e409b3544203780" compoundref="skiplist_8c" startline="552" endline="560">skiplist_itor_new</references>

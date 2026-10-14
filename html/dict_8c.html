@@ -159,6 +159,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aff73cb45075501b1f9cac831514fc716" id="r_aff73cb45075501b1f9cac831514fc716"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff73cb45075501b1f9cac831514fc716">dict_int_cmp</a> (const void *k1, const void *k2)</td></tr>
+<tr class="memdesc:aff73cb45075501b1f9cac831514fc716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison functions for common key types, for use as dict_compare_func.  <br /></td></tr>
 <tr class="separator:aff73cb45075501b1f9cac831514fc716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f039dd5b7c1348411fe3eb40f10aa91" id="r_a5f039dd5b7c1348411fe3eb40f10aa91"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f039dd5b7c1348411fe3eb40f10aa91">dict_uint_cmp</a> (const void *k1, const void *k2)</td></tr>
 <tr class="separator:a5f039dd5b7c1348411fe3eb40f10aa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,6 +172,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a6e8db53eafe12ed257b3a8005a947d85" id="r_a6e8db53eafe12ed257b3a8005a947d85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e8db53eafe12ed257b3a8005a947d85">dict_str_cmp</a> (const void *k1, const void *k2)</td></tr>
 <tr class="separator:a6e8db53eafe12ed257b3a8005a947d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a174e862d3ddbf2a985675500dcaf43" id="r_a8a174e862d3ddbf2a985675500dcaf43"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a174e862d3ddbf2a985675500dcaf43">dict_str_hash</a> (const void *k)</td></tr>
+<tr class="memdesc:a8a174e862d3ddbf2a985675500dcaf43"><td class="mdescLeft">&#160;</td><td class="mdescRight">FNV-1a hash of a NUL-terminated string, over its bytes in order, so a key hashes to the same value on every platform.  <br /></td></tr>
 <tr class="separator:a8a174e862d3ddbf2a985675500dcaf43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ffb34d3cb396bb2a79d2e21298c3bdb" id="r_a4ffb34d3cb396bb2a79d2e21298c3bdb"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ffb34d3cb396bb2a79d2e21298c3bdb">dict_free</a> (<a class="el" href="structdict.html">dict</a> *dct, <a class="el" href="dict_8h.html#a5301c8938ac34a1c9f18078bc6464385">dict_delete_func</a> delete_func)</td></tr>
 <tr class="separator:a4ffb34d3cb396bb2a79d2e21298c3bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,8 +184,10 @@ Variables</h2></td></tr>
 <tr class="memitem:aebdce71ca7165e3d22e931f13b3b354e" id="r_aebdce71ca7165e3d22e931f13b3b354e"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebdce71ca7165e3d22e931f13b3b354e">kDictVersionString</a></td></tr>
 <tr class="separator:aebdce71ca7165e3d22e931f13b3b354e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e4168cb588cf762d93db53f53fdcce0" id="r_a6e4168cb588cf762d93db53f53fdcce0"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e4168cb588cf762d93db53f53fdcce0">dict_malloc_func</a> )(size_t) = malloc</td></tr>
+<tr class="memdesc:a6e4168cb588cf762d93db53f53fdcce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to a function that libdict will use to allocate memory.  <br /></td></tr>
 <tr class="separator:a6e4168cb588cf762d93db53f53fdcce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeae04c4c07e57a7451c3480a7a4bf2e" id="r_afeae04c4c07e57a7451c3480a7a4bf2e"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeae04c4c07e57a7451c3480a7a4bf2e">dict_free_func</a> )(void *) = free</td></tr>
+<tr class="memdesc:afeae04c4c07e57a7451c3480a7a4bf2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to a function that libdict will use to deallocate memory.  <br /></td></tr>
 <tr class="separator:afeae04c4c07e57a7451c3480a7a4bf2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -270,6 +274,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Comparison functions for common key types, for use as dict_compare_func. </p>
+<p>The keys are pointers to values of the type, except for dict_ptr_cmp, which orders the key pointers themselves (by address, as uintptr_t), and dict_str_cmp, which takes NUL-terminated strings. dict_str_cmp orders bytes as unsigned char, exactly as strcmp() does, so string keys sort the same on every platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="dict_8c_source.html#l00041">41</a> of file <a class="el" href="dict_8c_source.html">dict.c</a>.</p>
 
@@ -372,11 +379,14 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">unsigned dict_str_hash </td>
           <td>(</td>
-          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>k</em></span></td><td>)</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>FNV-1a hash of a NUL-terminated string, over its bytes in order, so a key hashes to the same value on every platform. </p>
+<p>For use as dict_hash_func. </p>
 
 <p class="definition">Definition at line <a class="el" href="dict_8c_source.html#l00100">100</a> of file <a class="el" href="dict_8c_source.html">dict.c</a>.</p>
 
@@ -444,6 +454,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>A pointer to a function that libdict will use to deallocate memory. </p>
+
 <p class="definition">Definition at line <a class="el" href="dict_8c_source.html#l00038">38</a> of file <a class="el" href="dict_8c_source.html">dict.c</a>.</p>
 
 </div>
@@ -462,6 +474,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A pointer to a function that libdict will use to allocate memory. </p>
 
 <p class="definition">Definition at line <a class="el" href="dict_8c_source.html#l00037">37</a> of file <a class="el" href="dict_8c_source.html">dict.c</a>.</p>
 

@@ -179,6 +179,7 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a163c5a84a8d9796d5a382824734d041c" id="r_a163c5a84a8d9796d5a382824734d041c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structskiplist.html">skiplist</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a163c5a84a8d9796d5a382824734d041c">skiplist_new</a> (<a class="el" href="dict_8h.html#a1704b677563c3195fcc69dbc42ff8704">dict_compare_func</a> cmp_func, unsigned max_link)</td></tr>
+<tr class="memdesc:a163c5a84a8d9796d5a382824734d041c"><td class="mdescLeft">&#160;</td><td class="mdescRight">|max_link| is the number of levels in the list.  <br /></td></tr>
 <tr class="separator:a163c5a84a8d9796d5a382824734d041c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97d5ef497ad5c8b0b14c59097c0efa6b" id="r_a97d5ef497ad5c8b0b14c59097c0efa6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdict.html">dict</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97d5ef497ad5c8b0b14c59097c0efa6b">skiplist_dict_new</a> (<a class="el" href="dict_8h.html#a1704b677563c3195fcc69dbc42ff8704">dict_compare_func</a> cmp_func, unsigned max_link)</td></tr>
 <tr class="separator:a97d5ef497ad5c8b0b14c59097c0efa6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,6 +208,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a4df47d9ff2ce6126c15bc80d9423bdf1" id="r_a4df47d9ff2ce6126c15bc80d9423bdf1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4df47d9ff2ce6126c15bc80d9423bdf1">skiplist_verify</a> (const <a class="el" href="structskiplist.html">skiplist</a> *list)</td></tr>
 <tr class="separator:a4df47d9ff2ce6126c15bc80d9423bdf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9d82cffc987f421df8743706ac80538" id="r_af9d82cffc987f421df8743706ac80538"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9d82cffc987f421df8743706ac80538">skiplist_link_count_histogram</a> (const <a class="el" href="structskiplist.html">skiplist</a> *list, size_t counts[], size_t ncounts)</td></tr>
+<tr class="memdesc:af9d82cffc987f421df8743706ac80538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the histogram of link counts of the skiplist.  <br /></td></tr>
 <tr class="separator:af9d82cffc987f421df8743706ac80538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbe33aa562dee4fa3e409b3544203780" id="r_adbe33aa562dee4fa3e409b3544203780"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structskiplist__itor.html">skiplist_itor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbe33aa562dee4fa3e409b3544203780">skiplist_itor_new</a> (<a class="el" href="structskiplist.html">skiplist</a> *list)</td></tr>
 <tr class="separator:adbe33aa562dee4fa3e409b3544203780"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -397,7 +399,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="skiplist_8c_a97d5ef497ad5c8b0b14c59097c0efa6b_cgraph.png" border="0" usemap="#askiplist_8c_a97d5ef497ad5c8b0b14c59097c0efa6b_cgraph" alt=""/></div>
 <map name="askiplist_8c_a97d5ef497ad5c8b0b14c59097c0efa6b_cgraph" id="askiplist_8c_a97d5ef497ad5c8b0b14c59097c0efa6b_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,127,31"/>
-<area shape="rect" href="skiplist_8c.html#a163c5a84a8d9796d5a382824734d041c" title=" " alt="" coords="175,5,268,31"/>
+<area shape="rect" href="skiplist_8c.html#a163c5a84a8d9796d5a382824734d041c" title="|max_link| is the number of levels in the list." alt="" coords="175,5,268,31"/>
 <area shape="poly" title=" " alt="" coords="127,16,159,16,159,21,127,21"/>
 </map>
 </div>
@@ -907,6 +909,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Compute the histogram of link counts of the skiplist. </p>
+<p>For 0 &lt;= x &lt; |ncounts|, |counts|[x] will be set to the number of nodes with x links, and the maximal link count will be returned. If the return value is greater than or equal to |ncounts|, not all link counts could be stored in |counts| (i.e. the array was not large enough). </p>
+
 <p class="definition">Definition at line <a class="el" href="skiplist_8c_source.html#l00536">536</a> of file <a class="el" href="skiplist_8c_source.html">skiplist.c</a>.</p>
 
 </div>
@@ -929,6 +934,9 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>|max_link| is the number of levels in the list. </p>
+<p>It is clamped into the usable range [2, 32]: a node receives at most max_link - 1 links, so fewer than 2 levels could not link anything. </p>
 
 <p class="definition">Definition at line <a class="el" href="skiplist_8c_source.html#l00151">151</a> of file <a class="el" href="skiplist_8c_source.html">skiplist.c</a>.</p>
 

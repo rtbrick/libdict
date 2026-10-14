@@ -690,6 +690,8 @@
     <member refid="wb__tree_8h_1a3195a70c2624d672b6d45c90f78b7b8c" kind="function"><name>wb_itor_compare</name></member>
     <member refid="wb__tree_8h_1a44846bbf6729a9998e7d615043ccc910" kind="function"><name>wb_itor_remove</name></member>
   </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
   <compound refid="dict_8c" kind="file"><name>dict.c</name>
     <member refid="dict_8c_1aaa3726224d7be26c97326d970701af83" kind="define"><name>XSTRINGIFY</name></member>
     <member refid="dict_8c_1a6df1d22fb5f09eccc23b9f399670cfd7" kind="define"><name>STRINGIFY</name></member>
@@ -1409,8 +1411,12 @@
     <member refid="wb__tree_8c_1a3195a70c2624d672b6d45c90f78b7b8c" kind="function"><name>wb_itor_compare</name></member>
     <member refid="wb__tree_8c_1a44846bbf6729a9998e7d615043ccc910" kind="function"><name>wb_itor_remove</name></member>
   </compound>
+  <compound refid="iterator_invalidation" kind="page"><name>iterator_invalidation</name>
+  </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
   </compound>
 </doxygenindex>

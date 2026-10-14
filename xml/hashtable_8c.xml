@@ -715,8 +715,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/hashtable.c" line="168" column="1" bodyfile="src/hashtable.c" bodystart="168" bodyend="184"/>
-        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="159">dict::_object</references>
-        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="160">dict::_vtable</references>
+        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="165">dict::_object</references>
+        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="166">dict::_vtable</references>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="hashtable_8c_1af455c560cff947a8088f557ab119795a" compoundref="hashtable_8c" startline="144" endline="165">hashtable_new</references>
@@ -1070,8 +1070,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/hashtable.c" line="420" column="1" bodyfile="src/hashtable.c" bodystart="420" bodyend="431"/>
-        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="217">dict_itor::_itor</references>
-        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="218">dict_itor::_vtable</references>
+        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="235">dict_itor::_itor</references>
+        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="236">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="hashtable_8c_1a42ef1560386cd5b2ed4bbda89066305a" compoundref="hashtable_8c" startline="407" endline="417">hashtable_itor_new</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>

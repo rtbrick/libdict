@@ -376,7 +376,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="163" column="9" bodyfile="include/dict.h" bodystart="163" bodyend="-1"/>
+        <location file="include/dict.h" line="169" column="9" bodyfile="include/dict.h" bodystart="169" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a8f967f37ff331bd89830c7fb25500250" prot="public" static="no">
         <name>dict_insert</name>
@@ -389,7 +389,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="164" column="9" bodyfile="include/dict.h" bodystart="164" bodyend="-1"/>
+        <location file="include/dict.h" line="170" column="9" bodyfile="include/dict.h" bodystart="170" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1ac141198c0f4b318a049b8bd93a4a6d8f" prot="public" static="no">
         <name>dict_search</name>
@@ -397,12 +397,13 @@
         <param><defname>key</defname></param>
         <initializer>((dct)-&gt;_vtable-&gt;search((dct)-&gt;_object, (key)))</initializer>
         <briefdescription>
+<para>Return the address of the datum stored for |key|, or NULL if |key| is not present. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="165" column="9" bodyfile="include/dict.h" bodystart="165" bodyend="-1"/>
+        <location file="include/dict.h" line="173" column="9" bodyfile="include/dict.h" bodystart="173" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a2d1be1dd9ce7c4973c4f0e23bf5d9ef2" prot="public" static="no">
         <name>dict_is_sorted</name>
@@ -414,7 +415,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="166" column="9" bodyfile="include/dict.h" bodystart="166" bodyend="-1"/>
+        <location file="include/dict.h" line="174" column="9" bodyfile="include/dict.h" bodystart="174" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a07c045b3ac1ecc42d68176c42c17c14e" prot="public" static="no">
         <name>dict_search_le</name>
@@ -422,12 +423,14 @@
         <param><defname>key</defname></param>
         <initializer>((dct)-&gt;_vtable-&gt;search_le ? (dct)-&gt;_vtable-&gt;search_le((dct)-&gt;_object, (key)) : NULL)</initializer>
         <briefdescription>
+<para>Near searches on sorted containers: return the address of the datum of the greatest key less than or equal to (le) or less than (lt) |key|, or of the least key greater than or equal to (ge) or greater than (gt) |key|; NULL if there is no such key. </para>
         </briefdescription>
         <detaileddescription>
+<para>They evaluate to NULL on the hash tables, which are not sorted. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="167" column="9" bodyfile="include/dict.h" bodystart="167" bodyend="-1"/>
+        <location file="include/dict.h" line="180" column="9" bodyfile="include/dict.h" bodystart="180" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a305ad77c03b21ec5cdb317e3b2d5949f" prot="public" static="no">
         <name>dict_search_lt</name>
@@ -440,7 +443,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="168" column="9" bodyfile="include/dict.h" bodystart="168" bodyend="-1"/>
+        <location file="include/dict.h" line="181" column="9" bodyfile="include/dict.h" bodystart="181" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a7512ec99ba39b523f3490af98e52b25d" prot="public" static="no">
         <name>dict_search_ge</name>
@@ -453,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="169" column="9" bodyfile="include/dict.h" bodystart="169" bodyend="-1"/>
+        <location file="include/dict.h" line="182" column="9" bodyfile="include/dict.h" bodystart="182" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1ae8704a45cdff3ba8b0592eeb4db44b0d" prot="public" static="no">
         <name>dict_search_gt</name>
@@ -466,7 +469,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="170" column="9" bodyfile="include/dict.h" bodystart="170" bodyend="-1"/>
+        <location file="include/dict.h" line="183" column="9" bodyfile="include/dict.h" bodystart="183" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a9ce3e06fb9056a90090e7c9c4ffc410d" prot="public" static="no">
         <name>dict_remove</name>
@@ -479,7 +482,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="171" column="9" bodyfile="include/dict.h" bodystart="171" bodyend="-1"/>
+        <location file="include/dict.h" line="184" column="9" bodyfile="include/dict.h" bodystart="184" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a0b854d4ba82e0130b688ef10cbeec314" prot="public" static="no">
         <name>dict_clear</name>
@@ -492,7 +495,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="172" column="9" bodyfile="include/dict.h" bodystart="172" bodyend="-1"/>
+        <location file="include/dict.h" line="185" column="9" bodyfile="include/dict.h" bodystart="185" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1adf18e104c6ad831a90b18b222a0ea5f2" prot="public" static="no">
         <name>dict_traverse</name>
@@ -506,7 +509,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="173" column="9" bodyfile="include/dict.h" bodystart="173" bodyend="-1"/>
+        <location file="include/dict.h" line="186" column="9" bodyfile="include/dict.h" bodystart="186" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a79a2925a163c7e11cf051b2b09385001" prot="public" static="no">
         <name>dict_select</name>
@@ -516,12 +519,14 @@
         <param><defname>d</defname></param>
         <initializer>((dct)-&gt;_vtable-&gt;select &amp;&amp; (dct)-&gt;_vtable-&gt;select((dct)-&gt;_object, (n), (key), (d)))</initializer>
         <briefdescription>
+<para>Retrieve the |n|th element in key order (0-based), storing its key in |key| and its datum in |d|, and evaluating to true. </para>
         </briefdescription>
         <detaileddescription>
+<para>Either out-parameter may be NULL. If |n| is out of range, evaluates to false and stores NULL through any non-NULL out-parameter. Containers that do not support selection (the hash tables and the skip list) evaluate to false and store nothing. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="179" column="9" bodyfile="include/dict.h" bodystart="179" bodyend="-1"/>
+        <location file="include/dict.h" line="192" column="9" bodyfile="include/dict.h" bodystart="192" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1ac08b3f708c7767010142051178345338" prot="public" static="no">
         <name>dict_count</name>
@@ -533,19 +538,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="180" column="9" bodyfile="include/dict.h" bodystart="180" bodyend="-1"/>
+        <location file="include/dict.h" line="193" column="9" bodyfile="include/dict.h" bodystart="193" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1aa3386120405200439c1bcfedbd90a310" prot="public" static="no">
         <name>dict_verify</name>
         <param><defname>dct</defname></param>
         <initializer>((dct)-&gt;_vtable-&gt;verify((dct)-&gt;_object))</initializer>
         <briefdescription>
+<para>Check the container&apos;s internal invariants and evaluate to true if they hold. </para>
         </briefdescription>
         <detaileddescription>
+<para>On failure the failed check is printed to stderr. Meant for testing and debugging: it visits every element. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="181" column="9" bodyfile="include/dict.h" bodystart="181" bodyend="-1"/>
+        <location file="include/dict.h" line="197" column="9" bodyfile="include/dict.h" bodystart="197" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1ad6109c8421f1f71e5c9847b5b10e45bc" prot="public" static="no">
         <name>dict_itor_new</name>
@@ -557,7 +564,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="182" column="9" bodyfile="include/dict.h" bodystart="182" bodyend="-1"/>
+        <location file="include/dict.h" line="198" column="9" bodyfile="include/dict.h" bodystart="198" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a3f9a73fe30105a1463cb216932fcd67f" prot="public" static="no">
         <name>dict_itor_private</name>
@@ -569,7 +576,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="221" column="9" bodyfile="include/dict.h" bodystart="221" bodyend="-1"/>
+        <location file="include/dict.h" line="239" column="9" bodyfile="include/dict.h" bodystart="239" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a8252e0a9de5db497c840b19160982ae8" prot="public" static="no">
         <name>dict_itor_valid</name>
@@ -581,7 +588,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="222" column="9" bodyfile="include/dict.h" bodystart="222" bodyend="-1"/>
+        <location file="include/dict.h" line="240" column="9" bodyfile="include/dict.h" bodystart="240" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a51c3a9813f74c79662b5b79c4dbf9370" prot="public" static="no">
         <name>dict_itor_invalidate</name>
@@ -593,7 +600,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="223" column="9" bodyfile="include/dict.h" bodystart="223" bodyend="-1"/>
+        <location file="include/dict.h" line="241" column="9" bodyfile="include/dict.h" bodystart="241" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1ac148237746f970f7b88f73776748d9ef" prot="public" static="no">
         <name>dict_itor_next</name>
@@ -605,7 +612,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="224" column="9" bodyfile="include/dict.h" bodystart="224" bodyend="-1"/>
+        <location file="include/dict.h" line="242" column="9" bodyfile="include/dict.h" bodystart="242" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a532fa2601855a59d998a29c8c0c80b58" prot="public" static="no">
         <name>dict_itor_prev</name>
@@ -617,7 +624,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="225" column="9" bodyfile="include/dict.h" bodystart="225" bodyend="-1"/>
+        <location file="include/dict.h" line="243" column="9" bodyfile="include/dict.h" bodystart="243" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1ad9782f50f6c565fb9f06f7b8d287edf1" prot="public" static="no">
         <name>dict_itor_nextn</name>
@@ -630,7 +637,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="226" column="9" bodyfile="include/dict.h" bodystart="226" bodyend="-1"/>
+        <location file="include/dict.h" line="244" column="9" bodyfile="include/dict.h" bodystart="244" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a39ac51389ed7f9347dc48bc91dec46ac" prot="public" static="no">
         <name>dict_itor_prevn</name>
@@ -643,7 +650,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="227" column="9" bodyfile="include/dict.h" bodystart="227" bodyend="-1"/>
+        <location file="include/dict.h" line="245" column="9" bodyfile="include/dict.h" bodystart="245" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a98e4692234c7eb5850ad9f0aa634f883" prot="public" static="no">
         <name>dict_itor_first</name>
@@ -655,7 +662,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="228" column="9" bodyfile="include/dict.h" bodystart="228" bodyend="-1"/>
+        <location file="include/dict.h" line="246" column="9" bodyfile="include/dict.h" bodystart="246" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a7550c2f2e7331287964bf0ad8bfb886e" prot="public" static="no">
         <name>dict_itor_last</name>
@@ -667,7 +674,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="229" column="9" bodyfile="include/dict.h" bodystart="229" bodyend="-1"/>
+        <location file="include/dict.h" line="247" column="9" bodyfile="include/dict.h" bodystart="247" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1acc73d96ff9e1c12a18e8336425a509fd" prot="public" static="no">
         <name>dict_itor_search</name>
@@ -675,12 +682,14 @@
         <param><defname>k</defname></param>
         <initializer>((i)-&gt;_vtable-&gt;search((i)-&gt;_itor, (k)))</initializer>
         <briefdescription>
+<para>Position the iterator on |k| (exact match) and evaluate to true, or leave it unpositioned and evaluate to false if |k| is not present. </para>
         </briefdescription>
         <detaileddescription>
+<para>The <emphasis>le, _lt, _ge and _gt variants position it on the same key the corresponding dict_search</emphasis>* finds; on the hash tables they evaluate to false and leave the iterator unchanged. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="230" column="9" bodyfile="include/dict.h" bodystart="230" bodyend="-1"/>
+        <location file="include/dict.h" line="253" column="9" bodyfile="include/dict.h" bodystart="253" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a7ee4c5a0a0085742fe905cf5e2522d45" prot="public" static="no">
         <name>dict_itor_search_le</name>
@@ -693,7 +702,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="231" column="9" bodyfile="include/dict.h" bodystart="231" bodyend="-1"/>
+        <location file="include/dict.h" line="254" column="9" bodyfile="include/dict.h" bodystart="254" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a76916c883325959dd687d5345d69d7d2" prot="public" static="no">
         <name>dict_itor_search_lt</name>
@@ -706,7 +715,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="232" column="9" bodyfile="include/dict.h" bodystart="232" bodyend="-1"/>
+        <location file="include/dict.h" line="255" column="9" bodyfile="include/dict.h" bodystart="255" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a4b5221337325aee686cb44b9ae7d81aa" prot="public" static="no">
         <name>dict_itor_search_ge</name>
@@ -719,7 +728,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="233" column="9" bodyfile="include/dict.h" bodystart="233" bodyend="-1"/>
+        <location file="include/dict.h" line="256" column="9" bodyfile="include/dict.h" bodystart="256" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a64af63f7296189d23f379a2f80f157bc" prot="public" static="no">
         <name>dict_itor_search_gt</name>
@@ -732,7 +741,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="234" column="9" bodyfile="include/dict.h" bodystart="234" bodyend="-1"/>
+        <location file="include/dict.h" line="257" column="9" bodyfile="include/dict.h" bodystart="257" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a9ecb53fc8f90c272d0da27237c45f766" prot="public" static="no">
         <name>dict_itor_key</name>
@@ -744,7 +753,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="235" column="9" bodyfile="include/dict.h" bodystart="235" bodyend="-1"/>
+        <location file="include/dict.h" line="258" column="9" bodyfile="include/dict.h" bodystart="258" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1ab0fd6037caf5426df3d20579cd1fa058" prot="public" static="no">
         <name>dict_itor_datum</name>
@@ -756,7 +765,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="236" column="9" bodyfile="include/dict.h" bodystart="236" bodyend="-1"/>
+        <location file="include/dict.h" line="259" column="9" bodyfile="include/dict.h" bodystart="259" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1a79566cdb6aa135d0959fb092e05496c7" prot="public" static="no">
         <name>dict_itor_compare</name>
@@ -764,12 +773,14 @@
         <param><defname>i2</defname></param>
         <initializer>((i1)-&gt;_vtable-&gt;compare ? (i1)-&gt;_vtable-&gt;compare((i1)-&gt;_itor, (i2)-&gt;_itor) : 0)</initializer>
         <briefdescription>
+<para>Compare the positions of two iterators over the same dictionary. </para>
         </briefdescription>
         <detaileddescription>
+<para>Returns a negative value, zero or a positive value as |i1| precedes, is at, or follows |i2|. Evaluates to 0 if the container supplies no comparison. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="240" column="9" bodyfile="include/dict.h" bodystart="240" bodyend="-1"/>
+        <location file="include/dict.h" line="263" column="9" bodyfile="include/dict.h" bodystart="263" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dict_8h_1ad1e05eb030ca76dc416afd6d37d5e932" prot="public" static="no">
         <name>dict_itor_remove</name>
@@ -781,7 +792,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="241" column="9" bodyfile="include/dict.h" bodystart="241" bodyend="-1"/>
+        <location file="include/dict.h" line="264" column="9" bodyfile="include/dict.h" bodystart="264" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -791,8 +802,10 @@
         <argsstring>)(const void *, const void *)</argsstring>
         <name>dict_compare_func</name>
         <briefdescription>
+<para>A pointer to a function that compares two keys. </para>
         </briefdescription>
         <detaileddescription>
+<para>It needs to return a negative value if k1&lt;k2, a positive value if k1&gt;k2, and zero if the keys are equal. The comparison must be a total order, i.e. reflexive (cmp(k,k)==0), antisymmetric (k1&gt;k2 implies k2&lt;k1) and transitive (k1&gt;k2 and k2&gt;k3 implies k1&gt;k3). Keys must compare identically for as long as they are in the dictionary. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -804,6 +817,7 @@
         <argsstring>)(void *, void *)</argsstring>
         <name>dict_delete_func</name>
         <briefdescription>
+<para>A pointer to a function that is called when a key-value pair gets removed from a dictionary. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -817,6 +831,7 @@
         <argsstring>)(const void *, void *, void *)</argsstring>
         <name>dict_visit_func</name>
         <briefdescription>
+<para>A pointer to a function used for iterating over dictionary contents. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -830,6 +845,7 @@
         <argsstring>)(const void *)</argsstring>
         <name>dict_hash_func</name>
         <briefdescription>
+<para>A pointer to a function that returns the hash value of a key. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -843,8 +859,10 @@
         <argsstring>)(const void *)</argsstring>
         <name>dict_prio_func</name>
         <briefdescription>
+<para>A pointer to a function that returns the priority of a key, used by <ref refid="structtr__tree" kindref="compound">tr_tree</ref> (a treap). </para>
         </briefdescription>
         <detaileddescription>
+<para>The treap is a max-heap on priority, so a LARGER value places the key closer to the root. Pass NULL to have priorities chosen at random. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -856,6 +874,7 @@
         <argsstring></argsstring>
         <name>dict_itor</name>
         <briefdescription>
+<para>Forward declaration of <ref refid="structdict__itor" kindref="compound">dict_itor</ref>, whose definition appears below. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -1004,7 +1023,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="122" column="9" bodyfile="include/dict.h" bodystart="122" bodyend="-1"/>
+        <location file="include/dict.h" line="128" column="9" bodyfile="include/dict.h" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" prot="public" static="no">
         <type>bool(*</type>
@@ -1017,7 +1036,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="123" column="9" bodyfile="include/dict.h" bodystart="123" bodyend="-1"/>
+        <location file="include/dict.h" line="129" column="9" bodyfile="include/dict.h" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1a1fdd9cad34cc517ad72e999498333195" prot="public" static="no">
         <type>void(*</type>
@@ -1030,7 +1049,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="124" column="9" bodyfile="include/dict.h" bodystart="124" bodyend="-1"/>
+        <location file="include/dict.h" line="130" column="9" bodyfile="include/dict.h" bodystart="130" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" prot="public" static="no">
         <type>bool(*</type>
@@ -1043,7 +1062,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="125" column="9" bodyfile="include/dict.h" bodystart="125" bodyend="-1"/>
+        <location file="include/dict.h" line="131" column="9" bodyfile="include/dict.h" bodystart="131" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" prot="public" static="no">
         <type>bool(*</type>
@@ -1056,7 +1075,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="126" column="9" bodyfile="include/dict.h" bodystart="126" bodyend="-1"/>
+        <location file="include/dict.h" line="132" column="9" bodyfile="include/dict.h" bodystart="132" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" prot="public" static="no">
         <type>bool(*</type>
@@ -1069,7 +1088,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="127" column="9" bodyfile="include/dict.h" bodystart="127" bodyend="-1"/>
+        <location file="include/dict.h" line="133" column="9" bodyfile="include/dict.h" bodystart="133" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" prot="public" static="no">
         <type>bool(*</type>
@@ -1082,7 +1101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="128" column="9" bodyfile="include/dict.h" bodystart="128" bodyend="-1"/>
+        <location file="include/dict.h" line="134" column="9" bodyfile="include/dict.h" bodystart="134" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" prot="public" static="no">
         <type>bool(*</type>
@@ -1095,7 +1114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="129" column="9" bodyfile="include/dict.h" bodystart="129" bodyend="-1"/>
+        <location file="include/dict.h" line="135" column="9" bodyfile="include/dict.h" bodystart="135" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" prot="public" static="no">
         <type>bool(*</type>
@@ -1108,7 +1127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="130" column="9" bodyfile="include/dict.h" bodystart="130" bodyend="-1"/>
+        <location file="include/dict.h" line="136" column="9" bodyfile="include/dict.h" bodystart="136" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1a7969590b6825845cd1e644d05b4fa300" prot="public" static="no">
         <type>void *(*</type>
@@ -1121,7 +1140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="131" column="9" bodyfile="include/dict.h" bodystart="131" bodyend="-1"/>
+        <location file="include/dict.h" line="137" column="9" bodyfile="include/dict.h" bodystart="137" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1aa24f05bcc6368e21bc8774eec9fb3a17" prot="public" static="no">
         <type>void **(*</type>
@@ -1134,7 +1153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="132" column="9" bodyfile="include/dict.h" bodystart="132" bodyend="-1"/>
+        <location file="include/dict.h" line="138" column="9" bodyfile="include/dict.h" bodystart="138" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" prot="public" static="no">
         <type>bool(*</type>
@@ -1147,7 +1166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="133" column="9" bodyfile="include/dict.h" bodystart="133" bodyend="-1"/>
+        <location file="include/dict.h" line="139" column="9" bodyfile="include/dict.h" bodystart="139" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" prot="public" static="no">
         <type>bool(*</type>
@@ -1160,7 +1179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="134" column="9" bodyfile="include/dict.h" bodystart="134" bodyend="-1"/>
+        <location file="include/dict.h" line="140" column="9" bodyfile="include/dict.h" bodystart="140" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" prot="public" static="no">
         <type>int(*</type>
@@ -1173,7 +1192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="135" column="9" bodyfile="include/dict.h" bodystart="135" bodyend="-1"/>
+        <location file="include/dict.h" line="141" column="9" bodyfile="include/dict.h" bodystart="141" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -1196,6 +1215,7 @@
         <argsstring>)(size_t)</argsstring>
         <name>dict_malloc_func</name>
         <briefdescription>
+<para>A pointer to a function that libdict will use to allocate memory. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -1209,6 +1229,7 @@
         <argsstring>)(void *)</argsstring>
         <name>dict_free_func</name>
         <briefdescription>
+<para>A pointer to a function that libdict will use to deallocate memory. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -1237,11 +1258,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="184" column="8" bodyfile="src/dict.c" bodystart="111" bodyend="118" declfile="include/dict.h" declline="184" declcolumn="8"/>
-        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="159">dict::_object</references>
-        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="160">dict::_vtable</references>
+        <location file="include/dict.h" line="200" column="8" bodyfile="src/dict.c" bodystart="111" bodyend="118" declfile="include/dict.h" declline="200" declcolumn="8"/>
+        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="165">dict::_object</references>
+        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="166">dict::_vtable</references>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
-        <references refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" compoundref="dict_8h" startline="107">dict_vtable::dfree</references>
+        <references refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" compoundref="dict_8h" startline="113">dict_vtable::dfree</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
       </memberdef>
       <memberdef kind="function" id="dict_8h_1ad63f3fe30bbbf82147a6eb419ab1f040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1259,12 +1280,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="243" column="6" bodyfile="src/dict.c" bodystart="121" bodyend="127" declfile="include/dict.h" declline="243" declcolumn="6"/>
-        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="217">dict_itor::_itor</references>
-        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="218">dict_itor::_vtable</references>
+        <location file="include/dict.h" line="266" column="6" bodyfile="src/dict.c" bodystart="121" bodyend="127" declfile="include/dict.h" declline="266" declcolumn="6"/>
+        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="235">dict_itor::_itor</references>
+        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="236">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
-        <references refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" compoundref="dict_8h" startline="138">itor_vtable::ifree</references>
+        <references refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" compoundref="dict_8h" startline="144">itor_vtable::ifree</references>
       </memberdef>
       <memberdef kind="function" id="dict_8h_1aff73cb45075501b1f9cac831514fc716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1280,12 +1301,14 @@
           <declname>k2</declname>
         </param>
         <briefdescription>
+<para>Comparison functions for common key types, for use as dict_compare_func. </para>
         </briefdescription>
         <detaileddescription>
+<para>The keys are pointers to values of the type, except for dict_ptr_cmp, which orders the key pointers themselves (by address, as uintptr_t), and dict_str_cmp, which takes NUL-terminated strings. dict_str_cmp orders bytes as unsigned char, exactly as strcmp() does, so string keys sort the same on every platform. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="245" column="5" bodyfile="src/dict.c" bodystart="41" bodyend="46" declfile="include/dict.h" declline="245" declcolumn="5"/>
+        <location file="include/dict.h" line="274" column="5" bodyfile="src/dict.c" bodystart="41" bodyend="46" declfile="include/dict.h" declline="274" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="dict_8h_1a5f039dd5b7c1348411fe3eb40f10aa91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1306,7 +1329,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="246" column="5" bodyfile="src/dict.c" bodystart="49" bodyend="54" declfile="include/dict.h" declline="246" declcolumn="5"/>
+        <location file="include/dict.h" line="275" column="5" bodyfile="src/dict.c" bodystart="49" bodyend="54" declfile="include/dict.h" declline="275" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="dict_8h_1ae281f2cf5e9f40b8d9f043e55f98389b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1327,7 +1350,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="247" column="5" bodyfile="src/dict.c" bodystart="57" bodyend="62" declfile="include/dict.h" declline="247" declcolumn="5"/>
+        <location file="include/dict.h" line="276" column="5" bodyfile="src/dict.c" bodystart="57" bodyend="62" declfile="include/dict.h" declline="276" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="dict_8h_1a4a9f360c1a6254aba6f33ada8bc981a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1348,7 +1371,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="248" column="5" bodyfile="src/dict.c" bodystart="65" bodyend="70" declfile="include/dict.h" declline="248" declcolumn="5"/>
+        <location file="include/dict.h" line="277" column="5" bodyfile="src/dict.c" bodystart="65" bodyend="70" declfile="include/dict.h" declline="277" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="dict_8h_1a18bc040f3cc63cf74faa0218a2e36ea5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1369,7 +1392,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="249" column="5" bodyfile="src/dict.c" bodystart="73" bodyend="80" declfile="include/dict.h" declline="249" declcolumn="5"/>
+        <location file="include/dict.h" line="278" column="5" bodyfile="src/dict.c" bodystart="73" bodyend="80" declfile="include/dict.h" declline="278" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="dict_8h_1a6e8db53eafe12ed257b3a8005a947d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1390,7 +1413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="250" column="5" bodyfile="src/dict.c" bodystart="83" bodyend="97" declfile="include/dict.h" declline="250" declcolumn="5"/>
+        <location file="include/dict.h" line="279" column="5" bodyfile="src/dict.c" bodystart="83" bodyend="97" declfile="include/dict.h" declline="279" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="dict_8h_1a381845f9bdf11505f6623f796e0a5672" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
@@ -1402,12 +1425,14 @@
           <declname>str</declname>
         </param>
         <briefdescription>
+<para>FNV-1a hash of a NUL-terminated string, over its bytes in order, so a key hashes to the same value on every platform. </para>
         </briefdescription>
         <detaileddescription>
+<para>For use as dict_hash_func. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="251" column="10" bodyfile="src/dict.c" bodystart="100" bodyend="108" declfile="include/dict.h" declline="251" declcolumn="10"/>
+        <location file="include/dict.h" line="282" column="10" bodyfile="src/dict.c" bodystart="100" bodyend="108" declfile="include/dict.h" declline="282" declcolumn="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -1467,31 +1492,15 @@
 <codeline lineno="50" refid="dict_8h_1a5985ca4f8bd97c110645a7e2315b4516" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DICT_VERSION_PATCH<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1aebdce71ca7165e3d22e931f13b3b354e" kindref="member">kDictVersionString</ref>;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>function<sp/>that<sp/>compares<sp/>two<sp/>keys.<sp/>It<sp/>needs<sp/>to<sp/>return<sp/>a</highlight></codeline>
-<codeline lineno="54"><highlight class="comment"><sp/>*<sp/>negative<sp/>value<sp/>if<sp/>k1&lt;k2,<sp/>a<sp/>positive<sp/>value<sp/>if<sp/>k1&gt;k2,<sp/>and<sp/>zero<sp/>if<sp/>the<sp/>keys<sp/>are</highlight></codeline>
-<codeline lineno="55"><highlight class="comment"><sp/>*<sp/>equal.<sp/>The<sp/>comparison<sp/>must<sp/>be<sp/>a<sp/>total<sp/>order,<sp/>i.e.<sp/>reflexive<sp/>(cmp(k,k)==0),</highlight></codeline>
-<codeline lineno="56"><highlight class="comment"><sp/>*<sp/>antisymmetric<sp/>(k1&gt;k2<sp/>implies<sp/>k2&lt;k1)<sp/>and<sp/>transitive<sp/>(k1&gt;k2<sp/>and<sp/>k2&gt;k3<sp/>implies</highlight></codeline>
-<codeline lineno="57"><highlight class="comment"><sp/>*<sp/>k1&gt;k3).<sp/>Keys<sp/>must<sp/>compare<sp/>identically<sp/>for<sp/>as<sp/>long<sp/>as<sp/>they<sp/>are<sp/>in<sp/>the</highlight></codeline>
-<codeline lineno="58"><highlight class="comment"><sp/>*<sp/>dictionary.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="59" refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a1704b677563c3195fcc69dbc42ff8704" kindref="member">dict_compare_func</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>function<sp/>that<sp/>is<sp/>called<sp/>when<sp/>a<sp/>key-value<sp/>pair<sp/>gets<sp/>removed</highlight></codeline>
-<codeline lineno="61"><highlight class="comment"><sp/>*<sp/>from<sp/>a<sp/>dictionary.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="62" refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>function<sp/>used<sp/>for<sp/>iterating<sp/>over<sp/>dictionary<sp/>contents.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="64" refid="dict_8h_1aebbefe3aa81b20e1254e8a7a5253caf6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1aebbefe3aa81b20e1254e8a7a5253caf6" kindref="member">dict_visit_func</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>function<sp/>that<sp/>returns<sp/>the<sp/>hash<sp/>value<sp/>of<sp/>a<sp/>key.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="66" refid="dict_8h_1a849c4295058ff98298369ba530fd254d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>unsigned<sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a849c4295058ff98298369ba530fd254d" kindref="member">dict_hash_func</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>function<sp/>that<sp/>returns<sp/>the<sp/>priority<sp/>of<sp/>a<sp/>key,<sp/>used<sp/>by<sp/>tr_tree</highlight></codeline>
-<codeline lineno="68"><highlight class="comment"><sp/>*<sp/>(a<sp/>treap).<sp/>The<sp/>treap<sp/>is<sp/>a<sp/>max-heap<sp/>on<sp/>priority,<sp/>so<sp/>a<sp/>LARGER<sp/>value<sp/>places<sp/>the</highlight></codeline>
-<codeline lineno="69"><highlight class="comment"><sp/>*<sp/>key<sp/>closer<sp/>to<sp/>the<sp/>root.<sp/>Pass<sp/>NULL<sp/>to<sp/>have<sp/>priorities<sp/>chosen<sp/>at<sp/>random.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="70" refid="dict_8h_1acd0323c1d9eb91048a9458e7467594f7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>unsigned<sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1acd0323c1d9eb91048a9458e7467594f7" kindref="member">dict_prio_func</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>function<sp/>that<sp/>libdict<sp/>will<sp/>use<sp/>to<sp/>allocate<sp/>memory.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*dict_malloc_func)(size_t);</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>pointer<sp/>to<sp/>a<sp/>function<sp/>that<sp/>libdict<sp/>will<sp/>use<sp/>to<sp/>deallocate<sp/>memory.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1afeae04c4c07e57a7451c3480a7a4bf2e" kindref="member">dict_free_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Forward<sp/>declaration<sp/>of<sp/>dict_itor,<sp/>whose<sp/>definition<sp/>appears<sp/>below.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="78" refid="dict_8h_1a8100e988beb964b7ef6705ce30158829" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref><sp/><ref refid="structdict__itor" kindref="compound">dict_itor</ref>;</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
 <codeline lineno="80" refid="structdict__insert__result" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
@@ -1518,168 +1527,130 @@
 <codeline lineno="101" refid="dict_8h_1a6c85f33ba34353d8433b41377053f882" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>size_t<sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a6c85f33ba34353d8433b41377053f882" kindref="member">dict_count_func</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>obj);</highlight></codeline>
 <codeline lineno="102" refid="dict_8h_1aeb7fec8d69b3fc9802e46e7d3eae4d41" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1aeb7fec8d69b3fc9802e46e7d3eae4d41" kindref="member">dict_verify_func</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>obj);</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104" refid="structdict__vtable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="105" refid="structdict__vtable_1acf8fad49e668cc99a362e48aad34fe67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1acf8fad49e668cc99a362e48aad34fe67" kindref="member">sorted</ref>;</highlight></codeline>
-<codeline lineno="106" refid="structdict__vtable_1accc47e6d4e080bda45cbd10177d06f9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ad70c6127784fe473398838a4ca7ee0e8" kindref="member">dict_inew_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1accc47e6d4e080bda45cbd10177d06f9b" kindref="member">inew</ref>;</highlight></codeline>
-<codeline lineno="107" refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a861d296c134c416c965b8e2117cda33a" kindref="member">dict_dfree_func</ref><sp/><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" kindref="member">dfree</ref>;</highlight></codeline>
-<codeline lineno="108" refid="structdict__vtable_1a841c55da488714c38f761e78e449fcb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a526ec5a7be277ebf2fb509362b6b2f0c" kindref="member">dict_insert_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a841c55da488714c38f761e78e449fcb0" kindref="member">insert</ref>;</highlight></codeline>
-<codeline lineno="109" refid="structdict__vtable_1a8f81e32838f291f16df28fe9a68d588e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a8f81e32838f291f16df28fe9a68d588e" kindref="member">search</ref>;</highlight></codeline>
-<codeline lineno="110" refid="structdict__vtable_1a11eb072fdeb8a09637cb83c22b585315" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a11eb072fdeb8a09637cb83c22b585315" kindref="member">search_le</ref>;</highlight></codeline>
-<codeline lineno="111" refid="structdict__vtable_1a993cad0961870e4819c22235a458340b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a993cad0961870e4819c22235a458340b" kindref="member">search_lt</ref>;</highlight></codeline>
-<codeline lineno="112" refid="structdict__vtable_1ab9863c525cb29a00e6a89263492902b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1ab9863c525cb29a00e6a89263492902b4" kindref="member">search_ge</ref>;</highlight></codeline>
-<codeline lineno="113" refid="structdict__vtable_1a8056803e5f315296e1015f3934e13bd1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a8056803e5f315296e1015f3934e13bd1" kindref="member">search_gt</ref>;</highlight></codeline>
-<codeline lineno="114" refid="structdict__vtable_1afda0b20e130895ef4ee5d176e9f2fac5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a03ac901668905b999c543bd504ce6049" kindref="member">dict_remove_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1afda0b20e130895ef4ee5d176e9f2fac5" kindref="member">remove</ref>;</highlight></codeline>
-<codeline lineno="115" refid="structdict__vtable_1a5f94157af1adf4ad9afdb6b6ce1fe7c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1af10d9833546e8a985bf8a21e7cca9c39" kindref="member">dict_clear_func</ref><sp/><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a5f94157af1adf4ad9afdb6b6ce1fe7c8" kindref="member">clear</ref>;</highlight></codeline>
-<codeline lineno="116" refid="structdict__vtable_1a5029b9a8aaf0dba01f0ad3f33f8f0a2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a465ab0c48a0c2920bd4a4d2119dde513" kindref="member">dict_traverse_func</ref><sp/><sp/><ref refid="structdict__vtable_1a5029b9a8aaf0dba01f0ad3f33f8f0a2c" kindref="member">traverse</ref>;</highlight></codeline>
-<codeline lineno="117" refid="structdict__vtable_1a1b53ea6123c1028131cf2558a321b433" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a18186f71a497454b44c31cd4737594fc" kindref="member">dict_select_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a1b53ea6123c1028131cf2558a321b433" kindref="member">select</ref>;</highlight></codeline>
-<codeline lineno="118" refid="structdict__vtable_1af975eb7eab0d010053e07ad065da0501" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a6c85f33ba34353d8433b41377053f882" kindref="member">dict_count_func</ref><sp/><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1af975eb7eab0d010053e07ad065da0501" kindref="member">count</ref>;</highlight></codeline>
-<codeline lineno="119" refid="structdict__vtable_1a8cee39f73df4b25654a6d9c96ea0efbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1aeb7fec8d69b3fc9802e46e7d3eae4d41" kindref="member">dict_verify_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a8cee39f73df4b25654a6d9c96ea0efbf" kindref="member">verify</ref>;</highlight></codeline>
-<codeline lineno="120"><highlight class="normal">}<sp/><ref refid="structdict__vtable" kindref="compound">dict_vtable</ref>;</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122" refid="dict_8h_1af7abde3da86249ff4c3d19f5e62e7617" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1af7abde3da86249ff4c3d19f5e62e7617" kindref="member">dict_ifree_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
-<codeline lineno="123" refid="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" kindref="member">dict_valid_func</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
-<codeline lineno="124" refid="dict_8h_1a1fdd9cad34cc517ad72e999498333195" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a1fdd9cad34cc517ad72e999498333195" kindref="member">dict_invalidate_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
-<codeline lineno="125" refid="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" kindref="member">dict_next_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
-<codeline lineno="126" refid="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" kindref="member">dict_prev_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
-<codeline lineno="127" refid="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" kindref="member">dict_nextn_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
-<codeline lineno="128" refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" kindref="member">dict_prevn_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
-<codeline lineno="129" refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" kindref="member">dict_first_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
-<codeline lineno="130" refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" kindref="member">dict_last_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
-<codeline lineno="131" refid="dict_8h_1a7969590b6825845cd1e644d05b4fa300" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*dict_key_func)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
-<codeline lineno="132" refid="dict_8h_1aa24f05bcc6368e21bc8774eec9fb3a17" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/>(*dict_datum_func)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
-<codeline lineno="133" refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
-<codeline lineno="134" refid="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" kindref="member">dict_iremove_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
-<codeline lineno="135" refid="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" kindref="member">dict_icompare_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor1,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor2);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137" refid="structitor__vtable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="138" refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1af7abde3da86249ff4c3d19f5e62e7617" kindref="member">dict_ifree_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" kindref="member">ifree</ref>;</highlight></codeline>
-<codeline lineno="139" refid="structitor__vtable_1a2de3a49ad4c09cd57630c00441a0b884" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" kindref="member">dict_valid_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a2de3a49ad4c09cd57630c00441a0b884" kindref="member">valid</ref>;</highlight></codeline>
-<codeline lineno="140" refid="structitor__vtable_1ae27a265a0e2d12bd857104499a4da018" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a1fdd9cad34cc517ad72e999498333195" kindref="member">dict_invalidate_func</ref><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1ae27a265a0e2d12bd857104499a4da018" kindref="member">invalid</ref>;</highlight></codeline>
-<codeline lineno="141" refid="structitor__vtable_1a22c479a3f3f1fcd22f18540fc32022eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" kindref="member">dict_next_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a22c479a3f3f1fcd22f18540fc32022eb" kindref="member">next</ref>;</highlight></codeline>
-<codeline lineno="142" refid="structitor__vtable_1a2dcf3b43ec0d1c839e5b236ef6ed212f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" kindref="member">dict_prev_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a2dcf3b43ec0d1c839e5b236ef6ed212f" kindref="member">prev</ref>;</highlight></codeline>
-<codeline lineno="143" refid="structitor__vtable_1a2405b6667d1f6f32c6e25ceeba154317" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" kindref="member">dict_nextn_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a2405b6667d1f6f32c6e25ceeba154317" kindref="member">nextn</ref>;</highlight></codeline>
-<codeline lineno="144" refid="structitor__vtable_1a593b1e098cce8ad21d434d219da5c08d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" kindref="member">dict_prevn_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a593b1e098cce8ad21d434d219da5c08d" kindref="member">prevn</ref>;</highlight></codeline>
-<codeline lineno="145" refid="structitor__vtable_1a064b89069cd3e17dd1a956b3e9ee35c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" kindref="member">dict_first_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a064b89069cd3e17dd1a956b3e9ee35c1" kindref="member">first</ref>;</highlight></codeline>
-<codeline lineno="146" refid="structitor__vtable_1aac8d35d9edb2929837b71f9d9ffa9c59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" kindref="member">dict_last_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1aac8d35d9edb2929837b71f9d9ffa9c59" kindref="member">last</ref>;</highlight></codeline>
-<codeline lineno="147" refid="structitor__vtable_1a236dbeefa21b31029d1e4828126988c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a7969590b6825845cd1e644d05b4fa300" kindref="member">dict_key_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a236dbeefa21b31029d1e4828126988c5" kindref="member">key</ref>;</highlight></codeline>
-<codeline lineno="148" refid="structitor__vtable_1aee22330239b8c709c60d3b8275e01060" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1aa24f05bcc6368e21bc8774eec9fb3a17" kindref="member">dict_datum_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1aee22330239b8c709c60d3b8275e01060" kindref="member">datum</ref>;</highlight></codeline>
-<codeline lineno="149" refid="structitor__vtable_1a4867ed1cb6bd475eb87388be8798d14f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a4867ed1cb6bd475eb87388be8798d14f" kindref="member">search</ref>;</highlight></codeline>
-<codeline lineno="150" refid="structitor__vtable_1a823b28098350199f53aefc0f16a25485" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a823b28098350199f53aefc0f16a25485" kindref="member">search_le</ref>;</highlight></codeline>
-<codeline lineno="151" refid="structitor__vtable_1a3206e65f8cd7b6ce8de3b0b2c2850bcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a3206e65f8cd7b6ce8de3b0b2c2850bcc" kindref="member">search_lt</ref>;</highlight></codeline>
-<codeline lineno="152" refid="structitor__vtable_1a40913cdc59ef58019dc7f90534d70354" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a40913cdc59ef58019dc7f90534d70354" kindref="member">search_ge</ref>;</highlight></codeline>
-<codeline lineno="153" refid="structitor__vtable_1ae1bf0ee260c1d73bfcaf908383a48b18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1ae1bf0ee260c1d73bfcaf908383a48b18" kindref="member">search_gt</ref>;</highlight></codeline>
-<codeline lineno="154" refid="structitor__vtable_1acdfb3e51a6abaca9365c410f913fe10f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" kindref="member">dict_iremove_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1acdfb3e51a6abaca9365c410f913fe10f" kindref="member">remove</ref>;</highlight></codeline>
-<codeline lineno="155" refid="structitor__vtable_1a565493a9952194060c3594db8745a560" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" kindref="member">dict_icompare_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a565493a9952194060c3594db8745a560" kindref="member">compare</ref>;</highlight></codeline>
-<codeline lineno="156"><highlight class="normal">}<sp/><ref refid="structitor__vtable" kindref="compound">itor_vtable</ref>;</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158" refid="structdict" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="159" refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" kindref="member">_object</ref>;</highlight></codeline>
-<codeline lineno="160" refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdict__vtable" kindref="compound">dict_vtable</ref>*<sp/><sp/><ref refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" kindref="member">_vtable</ref>;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal">}<sp/><ref refid="structdict" kindref="compound">dict</ref>;</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163" refid="dict_8h_1a135cd0036160861d14f78574cbc2c233" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_private(dct)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_object)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="164" refid="dict_8h_1a8f967f37ff331bd89830c7fb25500250" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_insert(dct,key)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;insert((dct)-&gt;_object,<sp/>(key)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="165" refid="dict_8h_1ac141198c0f4b318a049b8bd93a4a6d8f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_search(dct,key)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;search((dct)-&gt;_object,<sp/>(key)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="166" refid="dict_8h_1a2d1be1dd9ce7c4973c4f0e23bf5d9ef2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_is_sorted(dct)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;sorted)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="167" refid="dict_8h_1a07c045b3ac1ecc42d68176c42c17c14e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_search_le(dct,key)<sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;search_le<sp/>?<sp/>(dct)-&gt;_vtable-&gt;search_le((dct)-&gt;_object,<sp/>(key))<sp/>:<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="168" refid="dict_8h_1a305ad77c03b21ec5cdb317e3b2d5949f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_search_lt(dct,key)<sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;search_lt<sp/>?<sp/>(dct)-&gt;_vtable-&gt;search_lt((dct)-&gt;_object,<sp/>(key))<sp/>:<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="169" refid="dict_8h_1a7512ec99ba39b523f3490af98e52b25d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_search_ge(dct,key)<sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;search_ge<sp/>?<sp/>(dct)-&gt;_vtable-&gt;search_ge((dct)-&gt;_object,<sp/>(key))<sp/>:<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="170" refid="dict_8h_1ae8704a45cdff3ba8b0592eeb4db44b0d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_search_gt(dct,key)<sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;search_gt<sp/>?<sp/>(dct)-&gt;_vtable-&gt;search_gt((dct)-&gt;_object,<sp/>(key))<sp/>:<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="171" refid="dict_8h_1a9ce3e06fb9056a90090e7c9c4ffc410d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_remove(dct,key)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;remove((dct)-&gt;_object,<sp/>(key)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="172" refid="dict_8h_1a0b854d4ba82e0130b688ef10cbeec314" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_clear(dct,func)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;clear((dct)-&gt;_object,<sp/>(func)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="173" refid="dict_8h_1adf18e104c6ad831a90b18b222a0ea5f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_traverse(dct,func,ud)<sp/><sp/>((dct)-&gt;_vtable-&gt;traverse((dct)-&gt;_object,<sp/>(func),<sp/>(ud)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Retrieve<sp/>the<sp/>|n|th<sp/>element<sp/>in<sp/>key<sp/>order<sp/>(0-based),<sp/>storing<sp/>its<sp/>key<sp/>in<sp/>|key|</highlight></codeline>
-<codeline lineno="175"><highlight class="comment"><sp/>*<sp/>and<sp/>its<sp/>datum<sp/>in<sp/>|d|,<sp/>and<sp/>evaluating<sp/>to<sp/>true.<sp/>Either<sp/>out-parameter<sp/>may<sp/>be</highlight></codeline>
-<codeline lineno="176"><highlight class="comment"><sp/>*<sp/>NULL.<sp/>If<sp/>|n|<sp/>is<sp/>out<sp/>of<sp/>range,<sp/>evaluates<sp/>to<sp/>false<sp/>and<sp/>stores<sp/>NULL<sp/>through<sp/>any</highlight></codeline>
-<codeline lineno="177"><highlight class="comment"><sp/>*<sp/>non-NULL<sp/>out-parameter.<sp/>Containers<sp/>that<sp/>do<sp/>not<sp/>support<sp/>selection<sp/>(the<sp/>hash</highlight></codeline>
-<codeline lineno="178"><highlight class="comment"><sp/>*<sp/>tables<sp/>and<sp/>the<sp/>skip<sp/>list)<sp/>evaluate<sp/>to<sp/>false<sp/>and<sp/>store<sp/>nothing.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="179" refid="dict_8h_1a79a2925a163c7e11cf051b2b09385001" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_select(dct,n,key,d)<sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;select<sp/>&amp;&amp;<sp/>(dct)-&gt;_vtable-&gt;select((dct)-&gt;_object,<sp/>(n),<sp/>(key),<sp/>(d)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="180" refid="dict_8h_1ac08b3f708c7767010142051178345338" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_count(dct)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;count((dct)-&gt;_object))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="181" refid="dict_8h_1aa3386120405200439c1bcfedbd90a310" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_verify(dct)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;verify((dct)-&gt;_object))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="182" refid="dict_8h_1ad6109c8421f1f71e5c9847b5b10e45bc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_new(dct)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(dct)-&gt;_vtable-&gt;inew((dct)-&gt;_object)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="183"><highlight class="normal"></highlight></codeline>
-<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a4ffb34d3cb396bb2a79d2e21298c3bdb" kindref="member">dict_free</ref>(<ref refid="structdict" kindref="compound">dict</ref>*<sp/>dct,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"></highlight></codeline>
-<codeline lineno="186"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ITERATOR<sp/>INVALIDATION</highlight></codeline>
-<codeline lineno="187"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="188"><highlight class="comment"><sp/>*<sp/>An<sp/>iterator<sp/>that<sp/>has<sp/>been<sp/>invalidated<sp/>must<sp/>be<sp/>repositioned<sp/>with</highlight></codeline>
-<codeline lineno="189"><highlight class="comment"><sp/>*<sp/>dict_itor_first(),<sp/>dict_itor_last()<sp/>or<sp/>dict_itor_search()<sp/>before<sp/>further</highlight></codeline>
-<codeline lineno="190"><highlight class="comment"><sp/>*<sp/>use.<sp/>Freeing<sp/>a<sp/>dictionary<sp/>leaves<sp/>all<sp/>of<sp/>its<sp/>iterators<sp/>unusable;<sp/>they<sp/>may<sp/>only</highlight></codeline>
-<codeline lineno="191"><highlight class="comment"><sp/>*<sp/>be<sp/>freed.</highlight></codeline>
-<codeline lineno="192"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="193"><highlight class="comment"><sp/>*<sp/>Trees<sp/>and<sp/>the<sp/>skip<sp/>list:</highlight></codeline>
-<codeline lineno="194"><highlight class="comment"><sp/>*<sp/><sp/>-<sp/>Inserting<sp/>never<sp/>invalidates<sp/>an<sp/>iterator.</highlight></codeline>
-<codeline lineno="195"><highlight class="comment"><sp/>*<sp/><sp/>-<sp/>Removing<sp/>an<sp/>element<sp/>(by<sp/>key,<sp/>by<sp/>dict_itor_remove()<sp/>or<sp/>by<sp/>dict_clear())</highlight></codeline>
-<codeline lineno="196"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>invalidates<sp/>iterators<sp/>positioned<sp/>on<sp/>that<sp/>element;<sp/>using<sp/>them<sp/>is</highlight></codeline>
-<codeline lineno="197"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>undefined.<sp/>In<sp/>every<sp/>tree<sp/>except<sp/>tr_tree,<sp/>removing<sp/>a<sp/>key<sp/>whose<sp/>node<sp/>has<sp/>two</highlight></codeline>
-<codeline lineno="198"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>children<sp/>moves<sp/>the<sp/>key<sp/>and<sp/>datum<sp/>of<sp/>an<sp/>in-order<sp/>neighbour<sp/>(the<sp/>successor</highlight></codeline>
-<codeline lineno="199"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>in<sp/>rb_tree<sp/>and<sp/>sp_tree,<sp/>the<sp/>successor<sp/>or<sp/>predecessor<sp/>in<sp/>hb_tree,<sp/>pr_tree</highlight></codeline>
-<codeline lineno="200"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>and<sp/>wb_tree)<sp/>into<sp/>that<sp/>node<sp/>and<sp/>frees<sp/>the<sp/>neighbour&apos;s<sp/>node<sp/>instead.<sp/>So</highlight></codeline>
-<codeline lineno="201"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>an<sp/>iterator<sp/>positioned<sp/>on<sp/>that<sp/>neighbour<sp/>is<sp/>invalidated<sp/>as<sp/>well,<sp/>and<sp/>one</highlight></codeline>
-<codeline lineno="202"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>positioned<sp/>on<sp/>the<sp/>removed<sp/>key<sp/>is<sp/>left<sp/>on<sp/>the<sp/>neighbour.</highlight></codeline>
-<codeline lineno="203"><highlight class="comment"><sp/>*</highlight></codeline>
-<codeline lineno="204"><highlight class="comment"><sp/>*<sp/>Hash<sp/>tables:</highlight></codeline>
-<codeline lineno="205"><highlight class="comment"><sp/>*<sp/><sp/>-<sp/>An<sp/>insert<sp/>that<sp/>grows<sp/>the<sp/>table,<sp/>an<sp/>explicit<sp/>resize,<sp/>and<sp/>dict_clear()</highlight></codeline>
-<codeline lineno="206"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>invalidate<sp/>every<sp/>iterator.<sp/>Inserting<sp/>a<sp/>key<sp/>that<sp/>is<sp/>already<sp/>present<sp/>never</highlight></codeline>
-<codeline lineno="207"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>grows<sp/>the<sp/>table.</highlight></codeline>
-<codeline lineno="208"><highlight class="comment"><sp/>*<sp/><sp/>-<sp/>hashtable:<sp/>removing<sp/>an<sp/>element<sp/>invalidates<sp/>iterators<sp/>positioned<sp/>on<sp/>it,</highlight></codeline>
-<codeline lineno="209"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>as<sp/>for<sp/>the<sp/>trees.</highlight></codeline>
-<codeline lineno="210"><highlight class="comment"><sp/>*<sp/><sp/>-<sp/>hashtable2:<sp/>any<sp/>removal<sp/>invalidates<sp/>every<sp/>iterator,<sp/>since<sp/>it<sp/>moves<sp/>other</highlight></codeline>
-<codeline lineno="211"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>elements<sp/>between<sp/>slots.</highlight></codeline>
-<codeline lineno="212"><highlight class="comment"><sp/>*<sp/>Hash<sp/>table<sp/>iterators<sp/>detect<sp/>these<sp/>invalidations:<sp/>dict_itor_valid()<sp/>returns</highlight></codeline>
-<codeline lineno="213"><highlight class="comment"><sp/>*<sp/>false,<sp/>dict_itor_key()<sp/>and<sp/>dict_itor_datum()<sp/>return<sp/>NULL,<sp/>and</highlight></codeline>
-<codeline lineno="214"><highlight class="comment"><sp/>*<sp/>dict_itor_next(),<sp/>dict_itor_prev()<sp/>and<sp/>dict_itor_remove()<sp/>return<sp/>false.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="215"><highlight class="normal"></highlight></codeline>
-<codeline lineno="216" refid="structdict__itor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref><sp/>{</highlight></codeline>
-<codeline lineno="217" refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" kindref="member">_itor</ref>;</highlight></codeline>
-<codeline lineno="218" refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structitor__vtable" kindref="compound">itor_vtable</ref>*<sp/><ref refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" kindref="member">_vtable</ref>;</highlight></codeline>
-<codeline lineno="219"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"></highlight></codeline>
-<codeline lineno="221" refid="dict_8h_1a3f9a73fe30105a1463cb216932fcd67f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_private(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_itor)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="222" refid="dict_8h_1a8252e0a9de5db497c840b19160982ae8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_valid(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;valid((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="223" refid="dict_8h_1a51c3a9813f74c79662b5b79c4dbf9370" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_invalidate(i)<sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;invalid((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="224" refid="dict_8h_1ac148237746f970f7b88f73776748d9ef" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_next(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;next((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="225" refid="dict_8h_1a532fa2601855a59d998a29c8c0c80b58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_prev(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;prev((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="226" refid="dict_8h_1ad9782f50f6c565fb9f06f7b8d287edf1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_nextn(i,n)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;nextn((i)-&gt;_itor,<sp/>(n)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="227" refid="dict_8h_1a39ac51389ed7f9347dc48bc91dec46ac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_prevn(i,n)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;prevn((i)-&gt;_itor,<sp/>(n)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="228" refid="dict_8h_1a98e4692234c7eb5850ad9f0aa634f883" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_first(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;first((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="229" refid="dict_8h_1a7550c2f2e7331287964bf0ad8bfb886e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_last(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;last((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="230" refid="dict_8h_1acc73d96ff9e1c12a18e8336425a509fd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_search(i,k)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;search((i)-&gt;_itor,<sp/>(k)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="231" refid="dict_8h_1a7ee4c5a0a0085742fe905cf5e2522d45" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_search_le(i,k)<sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;search_le<sp/>&amp;&amp;<sp/>(i)-&gt;_vtable-&gt;search_le((i)-&gt;_itor,<sp/>(k)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="232" refid="dict_8h_1a76916c883325959dd687d5345d69d7d2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_search_lt(i,k)<sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;search_lt<sp/>&amp;&amp;<sp/>(i)-&gt;_vtable-&gt;search_lt((i)-&gt;_itor,<sp/>(k)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="233" refid="dict_8h_1a4b5221337325aee686cb44b9ae7d81aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_search_ge(i,k)<sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;search_ge<sp/>&amp;&amp;<sp/>(i)-&gt;_vtable-&gt;search_ge((i)-&gt;_itor,<sp/>(k)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="234" refid="dict_8h_1a64af63f7296189d23f379a2f80f157bc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_search_gt(i,k)<sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;search_gt<sp/>&amp;&amp;<sp/>(i)-&gt;_vtable-&gt;search_gt((i)-&gt;_itor,<sp/>(k)))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="235" refid="dict_8h_1a9ecb53fc8f90c272d0da27237c45f766" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_key(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;key((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="236" refid="dict_8h_1ab0fd6037caf5426df3d20579cd1fa058" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_datum(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;datum((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Compare<sp/>the<sp/>positions<sp/>of<sp/>two<sp/>iterators<sp/>over<sp/>the<sp/>same<sp/>dictionary.<sp/>Returns<sp/>a</highlight></codeline>
-<codeline lineno="238"><highlight class="comment"><sp/>*<sp/>negative<sp/>value,<sp/>zero<sp/>or<sp/>a<sp/>positive<sp/>value<sp/>as<sp/>|i1|<sp/>precedes,<sp/>is<sp/>at,<sp/>or<sp/>follows</highlight></codeline>
-<codeline lineno="239"><highlight class="comment"><sp/>*<sp/>|i2|.<sp/>Evaluates<sp/>to<sp/>0<sp/>if<sp/>the<sp/>container<sp/>supplies<sp/>no<sp/>comparison.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="240" refid="dict_8h_1a79566cdb6aa135d0959fb092e05496c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_compare(i1,i2)<sp/><sp/><sp/><sp/>((i1)-&gt;_vtable-&gt;compare<sp/>?<sp/>(i1)-&gt;_vtable-&gt;compare((i1)-&gt;_itor,<sp/>(i2)-&gt;_itor)<sp/>:<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="241" refid="dict_8h_1ad1e05eb030ca76dc416afd6d37d5e932" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_remove(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;remove<sp/>&amp;&amp;<sp/>(i)-&gt;_vtable-&gt;remove((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="242"><highlight class="normal"></highlight></codeline>
-<codeline lineno="243"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1ad63f3fe30bbbf82147a6eb419ab1f040" kindref="member">dict_itor_free</ref>(<ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/>itor);</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"></highlight></codeline>
-<codeline lineno="245"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1aff73cb45075501b1f9cac831514fc716" kindref="member">dict_int_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
-<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a5f039dd5b7c1348411fe3eb40f10aa91" kindref="member">dict_uint_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1ae281f2cf5e9f40b8d9f043e55f98389b" kindref="member">dict_long_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a4a9f360c1a6254aba6f33ada8bc981a8" kindref="member">dict_ulong_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
-<codeline lineno="249"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a18bc040f3cc63cf74faa0218a2e36ea5" kindref="member">dict_ptr_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
-<codeline lineno="250"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a6e8db53eafe12ed257b3a8005a947d85" kindref="member">dict_str_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
-<codeline lineno="251"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a381845f9bdf11505f6623f796e0a5672" kindref="member">dict_str_hash</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>str);</highlight></codeline>
-<codeline lineno="252"><highlight class="normal"></highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><ref refid="dict_8h_1acca589e3adebef8ed4e5bed6dea40ebb" kindref="member">END_DECL</ref></highlight></codeline>
-<codeline lineno="254"><highlight class="normal"></highlight></codeline>
-<codeline lineno="255"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hashtable_8h" kindref="compound">hashtable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="256"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hashtable2_8h" kindref="compound">hashtable2.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="257"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hb__tree_8h" kindref="compound">hb_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="258"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pr__tree_8h" kindref="compound">pr_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rb__tree_8h" kindref="compound">rb_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="skiplist_8h" kindref="compound">skiplist.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="261"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sp__tree_8h" kindref="compound">sp_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tr__tree_8h" kindref="compound">tr_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="263"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wb__tree_8h" kindref="compound">wb_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="264"><highlight class="normal"></highlight></codeline>
-<codeline lineno="265"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!LIBDICT_DICT_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="110" refid="structdict__vtable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111" refid="structdict__vtable_1acf8fad49e668cc99a362e48aad34fe67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1acf8fad49e668cc99a362e48aad34fe67" kindref="member">sorted</ref>;</highlight></codeline>
+<codeline lineno="112" refid="structdict__vtable_1accc47e6d4e080bda45cbd10177d06f9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ad70c6127784fe473398838a4ca7ee0e8" kindref="member">dict_inew_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1accc47e6d4e080bda45cbd10177d06f9b" kindref="member">inew</ref>;</highlight></codeline>
+<codeline lineno="113" refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a861d296c134c416c965b8e2117cda33a" kindref="member">dict_dfree_func</ref><sp/><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" kindref="member">dfree</ref>;</highlight></codeline>
+<codeline lineno="114" refid="structdict__vtable_1a841c55da488714c38f761e78e449fcb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a526ec5a7be277ebf2fb509362b6b2f0c" kindref="member">dict_insert_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a841c55da488714c38f761e78e449fcb0" kindref="member">insert</ref>;</highlight></codeline>
+<codeline lineno="115" refid="structdict__vtable_1a8f81e32838f291f16df28fe9a68d588e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a8f81e32838f291f16df28fe9a68d588e" kindref="member">search</ref>;</highlight></codeline>
+<codeline lineno="116" refid="structdict__vtable_1a11eb072fdeb8a09637cb83c22b585315" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a11eb072fdeb8a09637cb83c22b585315" kindref="member">search_le</ref>;</highlight></codeline>
+<codeline lineno="117" refid="structdict__vtable_1a993cad0961870e4819c22235a458340b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a993cad0961870e4819c22235a458340b" kindref="member">search_lt</ref>;</highlight></codeline>
+<codeline lineno="118" refid="structdict__vtable_1ab9863c525cb29a00e6a89263492902b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1ab9863c525cb29a00e6a89263492902b4" kindref="member">search_ge</ref>;</highlight></codeline>
+<codeline lineno="119" refid="structdict__vtable_1a8056803e5f315296e1015f3934e13bd1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab062091ed90f88e902342e2069a545ee" kindref="member">dict_search_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a8056803e5f315296e1015f3934e13bd1" kindref="member">search_gt</ref>;</highlight></codeline>
+<codeline lineno="120" refid="structdict__vtable_1afda0b20e130895ef4ee5d176e9f2fac5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a03ac901668905b999c543bd504ce6049" kindref="member">dict_remove_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1afda0b20e130895ef4ee5d176e9f2fac5" kindref="member">remove</ref>;</highlight></codeline>
+<codeline lineno="121" refid="structdict__vtable_1a5f94157af1adf4ad9afdb6b6ce1fe7c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1af10d9833546e8a985bf8a21e7cca9c39" kindref="member">dict_clear_func</ref><sp/><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a5f94157af1adf4ad9afdb6b6ce1fe7c8" kindref="member">clear</ref>;</highlight></codeline>
+<codeline lineno="122" refid="structdict__vtable_1a5029b9a8aaf0dba01f0ad3f33f8f0a2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a465ab0c48a0c2920bd4a4d2119dde513" kindref="member">dict_traverse_func</ref><sp/><sp/><ref refid="structdict__vtable_1a5029b9a8aaf0dba01f0ad3f33f8f0a2c" kindref="member">traverse</ref>;</highlight></codeline>
+<codeline lineno="123" refid="structdict__vtable_1a1b53ea6123c1028131cf2558a321b433" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a18186f71a497454b44c31cd4737594fc" kindref="member">dict_select_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a1b53ea6123c1028131cf2558a321b433" kindref="member">select</ref>;</highlight></codeline>
+<codeline lineno="124" refid="structdict__vtable_1af975eb7eab0d010053e07ad065da0501" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a6c85f33ba34353d8433b41377053f882" kindref="member">dict_count_func</ref><sp/><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1af975eb7eab0d010053e07ad065da0501" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="125" refid="structdict__vtable_1a8cee39f73df4b25654a6d9c96ea0efbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1aeb7fec8d69b3fc9802e46e7d3eae4d41" kindref="member">dict_verify_func</ref><sp/><sp/><sp/><sp/><ref refid="structdict__vtable_1a8cee39f73df4b25654a6d9c96ea0efbf" kindref="member">verify</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}<sp/><ref refid="structdict__vtable" kindref="compound">dict_vtable</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="dict_8h_1af7abde3da86249ff4c3d19f5e62e7617" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1af7abde3da86249ff4c3d19f5e62e7617" kindref="member">dict_ifree_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
+<codeline lineno="129" refid="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" kindref="member">dict_valid_func</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
+<codeline lineno="130" refid="dict_8h_1a1fdd9cad34cc517ad72e999498333195" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a1fdd9cad34cc517ad72e999498333195" kindref="member">dict_invalidate_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
+<codeline lineno="131" refid="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" kindref="member">dict_next_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
+<codeline lineno="132" refid="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" kindref="member">dict_prev_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
+<codeline lineno="133" refid="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" kindref="member">dict_nextn_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="134" refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" kindref="member">dict_prevn_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="135" refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" kindref="member">dict_first_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
+<codeline lineno="136" refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" kindref="member">dict_last_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
+<codeline lineno="137" refid="dict_8h_1a7969590b6825845cd1e644d05b4fa300" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*dict_key_func)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
+<codeline lineno="138" refid="dict_8h_1aa24f05bcc6368e21bc8774eec9fb3a17" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">**<sp/><sp/><sp/><sp/><sp/><sp/>(*dict_datum_func)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
+<codeline lineno="139" refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key);</highlight></codeline>
+<codeline lineno="140" refid="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" kindref="member">dict_iremove_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor);</highlight></codeline>
+<codeline lineno="141" refid="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*<ref refid="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" kindref="member">dict_icompare_func</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor1,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>itor2);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="structitor__vtable" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144" refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1af7abde3da86249ff4c3d19f5e62e7617" kindref="member">dict_ifree_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" kindref="member">ifree</ref>;</highlight></codeline>
+<codeline lineno="145" refid="structitor__vtable_1a2de3a49ad4c09cd57630c00441a0b884" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" kindref="member">dict_valid_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a2de3a49ad4c09cd57630c00441a0b884" kindref="member">valid</ref>;</highlight></codeline>
+<codeline lineno="146" refid="structitor__vtable_1ae27a265a0e2d12bd857104499a4da018" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a1fdd9cad34cc517ad72e999498333195" kindref="member">dict_invalidate_func</ref><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1ae27a265a0e2d12bd857104499a4da018" kindref="member">invalid</ref>;</highlight></codeline>
+<codeline lineno="147" refid="structitor__vtable_1a22c479a3f3f1fcd22f18540fc32022eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" kindref="member">dict_next_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a22c479a3f3f1fcd22f18540fc32022eb" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="148" refid="structitor__vtable_1a2dcf3b43ec0d1c839e5b236ef6ed212f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" kindref="member">dict_prev_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a2dcf3b43ec0d1c839e5b236ef6ed212f" kindref="member">prev</ref>;</highlight></codeline>
+<codeline lineno="149" refid="structitor__vtable_1a2405b6667d1f6f32c6e25ceeba154317" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" kindref="member">dict_nextn_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a2405b6667d1f6f32c6e25ceeba154317" kindref="member">nextn</ref>;</highlight></codeline>
+<codeline lineno="150" refid="structitor__vtable_1a593b1e098cce8ad21d434d219da5c08d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" kindref="member">dict_prevn_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a593b1e098cce8ad21d434d219da5c08d" kindref="member">prevn</ref>;</highlight></codeline>
+<codeline lineno="151" refid="structitor__vtable_1a064b89069cd3e17dd1a956b3e9ee35c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" kindref="member">dict_first_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a064b89069cd3e17dd1a956b3e9ee35c1" kindref="member">first</ref>;</highlight></codeline>
+<codeline lineno="152" refid="structitor__vtable_1aac8d35d9edb2929837b71f9d9ffa9c59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" kindref="member">dict_last_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1aac8d35d9edb2929837b71f9d9ffa9c59" kindref="member">last</ref>;</highlight></codeline>
+<codeline lineno="153" refid="structitor__vtable_1a236dbeefa21b31029d1e4828126988c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a7969590b6825845cd1e644d05b4fa300" kindref="member">dict_key_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a236dbeefa21b31029d1e4828126988c5" kindref="member">key</ref>;</highlight></codeline>
+<codeline lineno="154" refid="structitor__vtable_1aee22330239b8c709c60d3b8275e01060" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1aa24f05bcc6368e21bc8774eec9fb3a17" kindref="member">dict_datum_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1aee22330239b8c709c60d3b8275e01060" kindref="member">datum</ref>;</highlight></codeline>
+<codeline lineno="155" refid="structitor__vtable_1a4867ed1cb6bd475eb87388be8798d14f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a4867ed1cb6bd475eb87388be8798d14f" kindref="member">search</ref>;</highlight></codeline>
+<codeline lineno="156" refid="structitor__vtable_1a823b28098350199f53aefc0f16a25485" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a823b28098350199f53aefc0f16a25485" kindref="member">search_le</ref>;</highlight></codeline>
+<codeline lineno="157" refid="structitor__vtable_1a3206e65f8cd7b6ce8de3b0b2c2850bcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a3206e65f8cd7b6ce8de3b0b2c2850bcc" kindref="member">search_lt</ref>;</highlight></codeline>
+<codeline lineno="158" refid="structitor__vtable_1a40913cdc59ef58019dc7f90534d70354" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a40913cdc59ef58019dc7f90534d70354" kindref="member">search_ge</ref>;</highlight></codeline>
+<codeline lineno="159" refid="structitor__vtable_1ae1bf0ee260c1d73bfcaf908383a48b18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1ae1bf0ee260c1d73bfcaf908383a48b18" kindref="member">search_gt</ref>;</highlight></codeline>
+<codeline lineno="160" refid="structitor__vtable_1acdfb3e51a6abaca9365c410f913fe10f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" kindref="member">dict_iremove_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1acdfb3e51a6abaca9365c410f913fe10f" kindref="member">remove</ref>;</highlight></codeline>
+<codeline lineno="161" refid="structitor__vtable_1a565493a9952194060c3594db8745a560" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" kindref="member">dict_icompare_func</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structitor__vtable_1a565493a9952194060c3594db8745a560" kindref="member">compare</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}<sp/><ref refid="structitor__vtable" kindref="compound">itor_vtable</ref>;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="structdict" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="165" refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" kindref="member">_object</ref>;</highlight></codeline>
+<codeline lineno="166" refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdict__vtable" kindref="compound">dict_vtable</ref>*<sp/><sp/><ref refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" kindref="member">_vtable</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}<sp/><ref refid="structdict" kindref="compound">dict</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="dict_8h_1a135cd0036160861d14f78574cbc2c233" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_private(dct)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_object)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="dict_8h_1a8f967f37ff331bd89830c7fb25500250" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_insert(dct,key)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;insert((dct)-&gt;_object,<sp/>(key)))</highlight></codeline>
+<codeline lineno="173" refid="dict_8h_1ac141198c0f4b318a049b8bd93a4a6d8f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_search(dct,key)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;search((dct)-&gt;_object,<sp/>(key)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="dict_8h_1a2d1be1dd9ce7c4973c4f0e23bf5d9ef2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_is_sorted(dct)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;sorted)</highlight></codeline>
+<codeline lineno="180" refid="dict_8h_1a07c045b3ac1ecc42d68176c42c17c14e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_search_le(dct,key)<sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;search_le<sp/>?<sp/>(dct)-&gt;_vtable-&gt;search_le((dct)-&gt;_object,<sp/>(key))<sp/>:<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="dict_8h_1a305ad77c03b21ec5cdb317e3b2d5949f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_search_lt(dct,key)<sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;search_lt<sp/>?<sp/>(dct)-&gt;_vtable-&gt;search_lt((dct)-&gt;_object,<sp/>(key))<sp/>:<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="dict_8h_1a7512ec99ba39b523f3490af98e52b25d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_search_ge(dct,key)<sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;search_ge<sp/>?<sp/>(dct)-&gt;_vtable-&gt;search_ge((dct)-&gt;_object,<sp/>(key))<sp/>:<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="dict_8h_1ae8704a45cdff3ba8b0592eeb4db44b0d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_search_gt(dct,key)<sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;search_gt<sp/>?<sp/>(dct)-&gt;_vtable-&gt;search_gt((dct)-&gt;_object,<sp/>(key))<sp/>:<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="dict_8h_1a9ce3e06fb9056a90090e7c9c4ffc410d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_remove(dct,key)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;remove((dct)-&gt;_object,<sp/>(key)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="dict_8h_1a0b854d4ba82e0130b688ef10cbeec314" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_clear(dct,func)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;clear((dct)-&gt;_object,<sp/>(func)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="dict_8h_1adf18e104c6ad831a90b18b222a0ea5f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_traverse(dct,func,ud)<sp/><sp/>((dct)-&gt;_vtable-&gt;traverse((dct)-&gt;_object,<sp/>(func),<sp/>(ud)))</highlight></codeline>
+<codeline lineno="192" refid="dict_8h_1a79a2925a163c7e11cf051b2b09385001" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_select(dct,n,key,d)<sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;select<sp/>&amp;&amp;<sp/>(dct)-&gt;_vtable-&gt;select((dct)-&gt;_object,<sp/>(n),<sp/>(key),<sp/>(d)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="dict_8h_1ac08b3f708c7767010142051178345338" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_count(dct)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;count((dct)-&gt;_object))</highlight></codeline>
+<codeline lineno="197" refid="dict_8h_1aa3386120405200439c1bcfedbd90a310" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_verify(dct)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((dct)-&gt;_vtable-&gt;verify((dct)-&gt;_object))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="dict_8h_1ad6109c8421f1f71e5c9847b5b10e45bc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_new(dct)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(dct)-&gt;_vtable-&gt;inew((dct)-&gt;_object)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a4ffb34d3cb396bb2a79d2e21298c3bdb" kindref="member">dict_free</ref>(<ref refid="structdict" kindref="compound">dict</ref>*<sp/>dct,<sp/><ref refid="dict_8h_1a5301c8938ac34a1c9f18078bc6464385" kindref="member">dict_delete_func</ref><sp/>delete_func);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="structdict__itor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref><sp/>{</highlight></codeline>
+<codeline lineno="235" refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" kindref="member">_itor</ref>;</highlight></codeline>
+<codeline lineno="236" refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structitor__vtable" kindref="compound">itor_vtable</ref>*<sp/><ref refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" kindref="member">_vtable</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239" refid="dict_8h_1a3f9a73fe30105a1463cb216932fcd67f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_private(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_itor)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="dict_8h_1a8252e0a9de5db497c840b19160982ae8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_valid(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;valid((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="dict_8h_1a51c3a9813f74c79662b5b79c4dbf9370" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_invalidate(i)<sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;invalid((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="dict_8h_1ac148237746f970f7b88f73776748d9ef" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_next(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;next((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="dict_8h_1a532fa2601855a59d998a29c8c0c80b58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_prev(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;prev((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="dict_8h_1ad9782f50f6c565fb9f06f7b8d287edf1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_nextn(i,n)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;nextn((i)-&gt;_itor,<sp/>(n)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245" refid="dict_8h_1a39ac51389ed7f9347dc48bc91dec46ac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_prevn(i,n)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;prevn((i)-&gt;_itor,<sp/>(n)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="dict_8h_1a98e4692234c7eb5850ad9f0aa634f883" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_first(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;first((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="dict_8h_1a7550c2f2e7331287964bf0ad8bfb886e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_last(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;last((i)-&gt;_itor))</highlight></codeline>
+<codeline lineno="253" refid="dict_8h_1acc73d96ff9e1c12a18e8336425a509fd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_search(i,k)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;search((i)-&gt;_itor,<sp/>(k)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="dict_8h_1a7ee4c5a0a0085742fe905cf5e2522d45" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_search_le(i,k)<sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;search_le<sp/>&amp;&amp;<sp/>(i)-&gt;_vtable-&gt;search_le((i)-&gt;_itor,<sp/>(k)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="dict_8h_1a76916c883325959dd687d5345d69d7d2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_search_lt(i,k)<sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;search_lt<sp/>&amp;&amp;<sp/>(i)-&gt;_vtable-&gt;search_lt((i)-&gt;_itor,<sp/>(k)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="dict_8h_1a4b5221337325aee686cb44b9ae7d81aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_search_ge(i,k)<sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;search_ge<sp/>&amp;&amp;<sp/>(i)-&gt;_vtable-&gt;search_ge((i)-&gt;_itor,<sp/>(k)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="dict_8h_1a64af63f7296189d23f379a2f80f157bc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_search_gt(i,k)<sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;search_gt<sp/>&amp;&amp;<sp/>(i)-&gt;_vtable-&gt;search_gt((i)-&gt;_itor,<sp/>(k)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="dict_8h_1a9ecb53fc8f90c272d0da27237c45f766" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_key(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;key((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="dict_8h_1ab0fd6037caf5426df3d20579cd1fa058" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_datum(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;datum((i)-&gt;_itor))</highlight></codeline>
+<codeline lineno="263" refid="dict_8h_1a79566cdb6aa135d0959fb092e05496c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_compare(i1,i2)<sp/><sp/><sp/><sp/>((i1)-&gt;_vtable-&gt;compare<sp/>?<sp/>(i1)-&gt;_vtable-&gt;compare((i1)-&gt;_itor,<sp/>(i2)-&gt;_itor)<sp/>:<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264" refid="dict_8h_1ad1e05eb030ca76dc416afd6d37d5e932" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dict_itor_remove(i)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((i)-&gt;_vtable-&gt;remove<sp/>&amp;&amp;<sp/>(i)-&gt;_vtable-&gt;remove((i)-&gt;_itor))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1ad63f3fe30bbbf82147a6eb419ab1f040" kindref="member">dict_itor_free</ref>(<ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/>itor);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1aff73cb45075501b1f9cac831514fc716" kindref="member">dict_int_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a5f039dd5b7c1348411fe3eb40f10aa91" kindref="member">dict_uint_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1ae281f2cf5e9f40b8d9f043e55f98389b" kindref="member">dict_long_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a4a9f360c1a6254aba6f33ada8bc981a8" kindref="member">dict_ulong_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a18bc040f3cc63cf74faa0218a2e36ea5" kindref="member">dict_ptr_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a6e8db53eafe12ed257b3a8005a947d85" kindref="member">dict_str_cmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>k2);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="dict_8h_1a381845f9bdf11505f6623f796e0a5672" kindref="member">dict_str_hash</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>str);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><ref refid="dict_8h_1acca589e3adebef8ed4e5bed6dea40ebb" kindref="member">END_DECL</ref></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hashtable_8h" kindref="compound">hashtable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hashtable2_8h" kindref="compound">hashtable2.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hb__tree_8h" kindref="compound">hb_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pr__tree_8h" kindref="compound">pr_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rb__tree_8h" kindref="compound">rb_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="skiplist_8h" kindref="compound">skiplist.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sp__tree_8h" kindref="compound">sp_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tr__tree_8h" kindref="compound">tr_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wb__tree_8h" kindref="compound">wb_tree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!LIBDICT_DICT_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="include/dict.h"/>
   </compounddef>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="iterator_invalidation" kind="page">
+    <compoundname>iterator_invalidation</compoundname>
+    <title>Iterator invalidation</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>ITERATOR INVALIDATION</para>
+<para>An iterator that has been invalidated must be repositioned with <ref refid="dict_8h_1a98e4692234c7eb5850ad9f0aa634f883" kindref="member">dict_itor_first()</ref>, <ref refid="dict_8h_1a7550c2f2e7331287964bf0ad8bfb886e" kindref="member">dict_itor_last()</ref> or <ref refid="dict_8h_1acc73d96ff9e1c12a18e8336425a509fd" kindref="member">dict_itor_search()</ref> before further use. Freeing a dictionary leaves all of its iterators unusable; they may only be freed.</para>
+<para>Trees and the skip list:<itemizedlist>
+<listitem><para>Inserting never invalidates an iterator.</para>
+</listitem><listitem><para>Removing an element (by key, by <ref refid="dict_8h_1ad1e05eb030ca76dc416afd6d37d5e932" kindref="member">dict_itor_remove()</ref> or by <ref refid="dict_8h_1a0b854d4ba82e0130b688ef10cbeec314" kindref="member">dict_clear()</ref>) invalidates iterators positioned on that element; using them is undefined. In every tree except <ref refid="structtr__tree" kindref="compound">tr_tree</ref>, removing a key whose node has two children moves the key and datum of an in-order neighbour (the successor in <ref refid="structrb__tree" kindref="compound">rb_tree</ref> and <ref refid="structsp__tree" kindref="compound">sp_tree</ref>, the successor or predecessor in <ref refid="structhb__tree" kindref="compound">hb_tree</ref>, <ref refid="structpr__tree" kindref="compound">pr_tree</ref> and <ref refid="structwb__tree" kindref="compound">wb_tree</ref>) into that node and frees the neighbour&apos;s node instead. So an iterator positioned on that neighbour is invalidated as well, and one positioned on the removed key is left on the neighbour.</para>
+</listitem></itemizedlist>
+</para>
+<para>Hash tables:<itemizedlist>
+<listitem><para>An insert that grows the table, an explicit resize, and <ref refid="dict_8h_1a0b854d4ba82e0130b688ef10cbeec314" kindref="member">dict_clear()</ref> invalidate every iterator. Inserting a key that is already present never grows the table.</para>
+</listitem><listitem><para>hashtable: removing an element invalidates iterators positioned on it, as for the trees.</para>
+</listitem><listitem><para><ref refid="structhashtable2" kindref="compound">hashtable2</ref>: any removal invalidates every iterator, since it moves other elements between slots. Hash table iterators detect these invalidations: <ref refid="dict_8h_1a8252e0a9de5db497c840b19160982ae8" kindref="member">dict_itor_valid()</ref> returns false, <ref refid="dict_8h_1a9ecb53fc8f90c272d0da27237c45f766" kindref="member">dict_itor_key()</ref> and <ref refid="dict_8h_1ab0fd6037caf5426df3d20579cd1fa058" kindref="member">dict_itor_datum()</ref> return NULL, and <ref refid="dict_8h_1ac148237746f970f7b88f73776748d9ef" kindref="member">dict_itor_next()</ref>, <ref refid="dict_8h_1a532fa2601855a59d998a29c8c0c80b58" kindref="member">dict_itor_prev()</ref> and <ref refid="dict_8h_1ad1e05eb030ca76dc416afd6d37d5e932" kindref="member">dict_itor_remove()</ref> return false. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="include/dict.h"/>
+  </compounddef>
+</doxygen>

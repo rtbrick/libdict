@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>libdict</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Test](https://github.com/rtbrick/libdict/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/rtbrick/libdict/actions/workflows/test.yml)</highlight></codeline>
+<codeline><highlight class="normal">[![GitHub<sp/>release<sp/>(latest<sp/>SemVer)](https://img.shields.io/github/v/release/rtbrick/libdict?color=green)](https://github.com/rtbrick/libdict/releases)</highlight></codeline>
+<codeline><highlight class="normal">[![Doxygen<sp/>documentation](https://img.shields.io/badge/docs-doxygen-green)](https://rtbrick.github.io/libdict/html)</highlight></codeline>
+<codeline><highlight class="normal">[![GitHub](https://img.shields.io/github/license/rtbrick/libdict)](LICENSE)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">libdict<sp/>is<sp/>a<sp/>C<sp/>library<sp/>that<sp/>provides<sp/>the<sp/>following<sp/>data<sp/>structures<sp/>with<sp/>efficient<sp/>insert,<sp/>lookup,<sp/>and<sp/>delete<sp/>routines:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[height-balanced<sp/>(AVL)<sp/>tree](http://en.wikipedia.org/wiki/AVL_tree)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[red-black<sp/>tree](http://en.wikipedia.org/wiki/Red-black_tree)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[splay<sp/>tree](http://en.wikipedia.org/wiki/Splay_tree)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[weight-balanced<sp/>tree](https://en.wikipedia.org/wiki/Weight-balanced_tree)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[path-reduction<sp/>tree](https://cs.uwaterloo.ca/research/tr/1982/CS-82-07.pdf)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[treap](http://en.wikipedia.org/wiki/Treap)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[hashtable<sp/>using<sp/>separate<sp/>chaining](http://en.wikipedia.org/wiki/Hash_table#Separate_chaining)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[hashtable<sp/>using<sp/>open<sp/>addressing<sp/>with<sp/>linear<sp/>probing](http://en.wikipedia.org/wiki/Hash_table#Open_addressing)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[skip<sp/>list](https://en.wikipedia.org/wiki/Skip_list)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">All<sp/>data<sp/>structures<sp/>in<sp/>this<sp/>library<sp/>support<sp/>insert,<sp/>search,<sp/>and<sp/>remove,<sp/>and<sp/>have<sp/>bidirectional<sp/>iterators.<sp/>The<sp/>sorted<sp/>data<sp/>structures<sp/>(everything<sp/>but<sp/>hash<sp/>tables)<sp/>support<sp/>near-search<sp/>operations:<sp/>searching<sp/>for<sp/>the<sp/>key<sp/>greater<sp/>or<sp/>equal<sp/>to,<sp/>strictly<sp/>greater<sp/>than,<sp/>lesser<sp/>or<sp/>equal<sp/>to,<sp/>or<sp/>strictly<sp/>less<sp/>than,<sp/>a<sp/>given<sp/>key.<sp/>The<sp/>tree<sp/>data<sp/>structures<sp/>also<sp/>support<sp/>selecting<sp/>the<sp/>nth<sp/>element;<sp/>this<sp/>takes<sp/>linear<sp/>time,<sp/>except<sp/>in<sp/>path-reduction<sp/>and<sp/>weight-balanced<sp/>trees,<sp/>where<sp/>it<sp/>only<sp/>takes<sp/>logarithmic<sp/>time.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>API<sp/>and<sp/>code<sp/>are<sp/>written<sp/>with<sp/>efficiency<sp/>as<sp/>a<sp/>primary<sp/>concern.<sp/>For<sp/>example,<sp/>an<sp/>insert<sp/>call<sp/>returns<sp/>a<sp/>boolean<sp/>(`dict_insert_result.inserted`)<sp/>that<sp/>is<sp/>`true`<sp/>if<sp/>the<sp/>key<sp/>was<sp/>inserted,<sp/>i.e.<sp/>was<sp/>not<sp/>already<sp/>present,<sp/>and<sp/>`false`<sp/>if<sp/>an<sp/>existing<sp/>entry<sp/>was<sp/>found,<sp/>together<sp/>with<sp/>a<sp/>pointer<sp/>to<sp/>the<sp/>location<sp/>of<sp/>the<sp/>associated<sp/>data.<sp/>Thus,<sp/>an<sp/>insert-or-update<sp/>operation<sp/>can<sp/>be<sp/>supported<sp/>with<sp/>a<sp/>single<sp/>traversal<sp/>of<sp/>the<sp/>data<sp/>structure.<sp/>In<sp/>addition,<sp/>almost<sp/>all<sp/>recursive<sp/>algorithms<sp/>have<sp/>been<sp/>rewritten<sp/>to<sp/>use<sp/>iteration<sp/>instead.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Documentation<sp/>is<sp/>generated<sp/>by<sp/>Doxygen<sp/>on<sp/>every<sp/>commit<sp/>to<sp/>master<sp/>and<sp/>is<sp/>available<sp/>[here](https://rtbrick.github.io/libdict/html).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Usage<sp/>notes</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>**Iterators**<sp/>support<sp/>`remove`<sp/>on<sp/>every<sp/>container.<sp/>Iterator<sp/>`compare`<sp/>is<sp/>not<sp/>available<sp/>on<sp/>the<sp/>hash<sp/>tables,<sp/>where<sp/>`dict_itor_compare()`<sp/>evaluates<sp/>to<sp/>0.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**Iterator<sp/>invalidation**<sp/>(full<sp/>rules<sp/>in<sp/>`dict.h`,<sp/>&quot;Iterator<sp/>invalidation&quot;<sp/>in<sp/>the<sp/>generated<sp/>documentation):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Trees<sp/>and<sp/>the<sp/>skip<sp/>list:<sp/>inserting<sp/>never<sp/>invalidates<sp/>an<sp/>iterator;<sp/>removing<sp/>an<sp/>element<sp/>invalidates<sp/>iterators<sp/>positioned<sp/>on<sp/>it.<sp/>In<sp/>every<sp/>tree<sp/>except<sp/>the<sp/>treap,<sp/>removing<sp/>a<sp/>key<sp/>whose<sp/>node<sp/>has<sp/>two<sp/>children<sp/>also<sp/>moves<sp/>an<sp/>in-order<sp/>neighbour<sp/>into<sp/>that<sp/>node,<sp/>invalidating<sp/>iterators<sp/>on<sp/>the<sp/>neighbour.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>Hash<sp/>tables:<sp/>an<sp/>insert<sp/>that<sp/>grows<sp/>the<sp/>table,<sp/>an<sp/>explicit<sp/>resize,<sp/>and<sp/>`dict_clear()`<sp/>invalidate<sp/>every<sp/>iterator.<sp/>In<sp/>`hashtable2`<sp/>(open<sp/>addressing)<sp/>any<sp/>removal<sp/>does<sp/>too.<sp/>Hash<sp/>table<sp/>iterators<sp/>detect<sp/>this:<sp/>`dict_itor_valid()`<sp/>returns<sp/>false<sp/>and<sp/>`dict_itor_next()`<sp/>stops.<sp/>Reposition<sp/>them<sp/>with<sp/>`dict_itor_first()`<sp/>or<sp/>`dict_itor_search()`.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**String<sp/>keys:**<sp/>`dict_str_cmp`<sp/>orders<sp/>bytes<sp/>as<sp/>unsigned<sp/>char,<sp/>exactly<sp/>as<sp/>`strcmp()`<sp/>does,<sp/>so<sp/>string<sp/>keys<sp/>sort<sp/>the<sp/>same<sp/>on<sp/>every<sp/>platform.<sp/>`dict_str_hash`<sp/>gives<sp/>the<sp/>same<sp/>hash<sp/>on<sp/>every<sp/>platform.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**Selection:**<sp/>`dict_select()`<sp/>accepts<sp/>NULL<sp/>for<sp/>either<sp/>out-parameter.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**Treap<sp/>priorities:**<sp/>the<sp/>treap<sp/>is<sp/>a<sp/>max-heap;<sp/>a<sp/>`dict_prio_func`<sp/>should<sp/>return<sp/>a<sp/>larger<sp/>value<sp/>for<sp/>a<sp/>key<sp/>that<sp/>should<sp/>sit<sp/>closer<sp/>to<sp/>the<sp/>root.<sp/>Pass<sp/>NULL<sp/>for<sp/>random<sp/>priorities.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Installing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">On<sp/>every<sp/>release,<sp/>Debian<sp/>packages<sp/>are<sp/>automatically<sp/>built.<sp/>You<sp/>can<sp/>download<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">latest<sp/>packages<sp/>from<sp/>[here](https://github.com/rtbrick/libdict/releases/latest/download/libdict-debian.zip).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>install,<sp/>run<sp/>this:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>wget<sp/>https://github.com/rtbrick/libdict/releases/latest/download/libdict-debian.zip</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unzip<sp/>libdict-debian.zip</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt<sp/>install<sp/>-y<sp/>./*.deb</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>will<sp/>install<sp/>the<sp/>library,<sp/>along<sp/>with<sp/>headers<sp/>and<sp/>tools.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Building</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Both<sp/>GNU<sp/>Make<sp/>and<sp/>CMake<sp/>are<sp/>supported.<sp/>To<sp/>use<sp/>the<sp/>CMake<sp/>build<sp/>system,<sp/>ensure<sp/>that<sp/>you<sp/>have</highlight></codeline>
+<codeline><highlight class="normal">a<sp/>recent<sp/>version<sp/>of<sp/>CMake<sp/>installed<sp/>(version<sp/>3.10<sp/>or<sp/>greater).<sp/>Then,<sp/>from<sp/>within<sp/>this</highlight></codeline>
+<codeline><highlight class="normal">repository,<sp/>run:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>make<sp/>-j16</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>want<sp/>to<sp/>run<sp/>unit<sp/>tests,<sp/>you<sp/>can<sp/>run:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>make<sp/>test</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>few<sp/>slow,<sp/>memory-hungry<sp/>tests<sp/>(e.g.<sp/>a<sp/>6-million-element<sp/>tree)<sp/>only<sp/>run<sp/>when</highlight></codeline>
+<codeline><highlight class="normal">`LIBDICT_SLOW_TESTS=1`<sp/>is<sp/>set:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LIBDICT_SLOW_TESTS=1<sp/>./libdict-tests</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>want<sp/>to<sp/>generate<sp/>Debian<sp/>packages,<sp/>you<sp/>can<sp/>run:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cpack<sp/>-G<sp/>DEB</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>build<sp/>with<sp/>the<sp/>included<sp/>GNU<sp/>Makefile,<sp/>simply<sp/>run<sp/>`make`<sp/>in<sp/>the<sp/>repository,</highlight></codeline>
+<codeline><highlight class="normal">and<sp/>`make<sp/>test`<sp/>to<sp/>run<sp/>the<sp/>unit<sp/>tests.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">libdict<sp/>is<sp/>released<sp/>under<sp/>the<sp/>simplified<sp/>BSD<sp/>[license](LICENSE).<sp/></highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

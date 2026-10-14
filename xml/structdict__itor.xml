@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="217" column="10" bodyfile="include/dict.h" bodystart="217" bodyend="-1"/>
+        <location file="include/dict.h" line="235" column="10" bodyfile="include/dict.h" bodystart="235" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" prot="public" static="no" mutable="no">
         <type>const <ref refid="structitor__vtable" kindref="compound">itor_vtable</ref> *</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="218" column="23" bodyfile="include/dict.h" bodystart="218" bodyend="-1"/>
+        <location file="include/dict.h" line="236" column="23" bodyfile="include/dict.h" bodystart="236" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -50,7 +50,7 @@
         <link refid="structitor__vtable"/>
       </node>
     </collaborationgraph>
-    <location file="include/dict.h" line="216" column="1" bodyfile="include/dict.h" bodystart="216" bodyend="219"/>
+    <location file="include/dict.h" line="234" column="1" bodyfile="include/dict.h" bodystart="234" bodyend="237"/>
     <listofallmembers>
       <member refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" prot="public" virt="non-virtual"><scope>dict_itor</scope><name>_itor</name></member>
       <member refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" prot="public" virt="non-virtual"><scope>dict_itor</scope><name>_vtable</name></member>

@@ -168,6 +168,7 @@
         <name>dict_malloc_func</name>
         <initializer>= malloc</initializer>
         <briefdescription>
+<para>A pointer to a function that libdict will use to allocate memory. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -182,6 +183,7 @@
         <name>dict_free_func</name>
         <initializer>= free</initializer>
         <briefdescription>
+<para>A pointer to a function that libdict will use to deallocate memory. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -205,8 +207,10 @@
           <declname>k2</declname>
         </param>
         <briefdescription>
+<para>Comparison functions for common key types, for use as dict_compare_func. </para>
         </briefdescription>
         <detaileddescription>
+<para>The keys are pointers to values of the type, except for dict_ptr_cmp, which orders the key pointers themselves (by address, as uintptr_t), and dict_str_cmp, which takes NUL-terminated strings. dict_str_cmp orders bytes as unsigned char, exactly as strcmp() does, so string keys sort the same on every platform. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -324,11 +328,14 @@
         <name>dict_str_hash</name>
         <param>
           <type>const void *</type>
-          <declname>k</declname>
+          <declname>str</declname>
+          <defname>k</defname>
         </param>
         <briefdescription>
+<para>FNV-1a hash of a NUL-terminated string, over its bytes in order, so a key hashes to the same value on every platform. </para>
         </briefdescription>
         <detaileddescription>
+<para>For use as dict_hash_func. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -354,10 +361,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/dict.c" line="111" column="1" bodyfile="src/dict.c" bodystart="111" bodyend="118"/>
-        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="159">dict::_object</references>
-        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="160">dict::_vtable</references>
+        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="165">dict::_object</references>
+        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="166">dict::_vtable</references>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
-        <references refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" compoundref="dict_8h" startline="107">dict_vtable::dfree</references>
+        <references refid="structdict__vtable_1a4acf0b406bbe6cf63c7d6bd6f554442f" compoundref="dict_8h" startline="113">dict_vtable::dfree</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
       </memberdef>
       <memberdef kind="function" id="dict_8c_1ad63f3fe30bbbf82147a6eb419ab1f040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -376,11 +383,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/dict.c" line="121" column="1" bodyfile="src/dict.c" bodystart="121" bodyend="127"/>
-        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="217">dict_itor::_itor</references>
-        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="218">dict_itor::_vtable</references>
+        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="235">dict_itor::_itor</references>
+        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="236">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
-        <references refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" compoundref="dict_8h" startline="138">itor_vtable::ifree</references>
+        <references refid="structitor__vtable_1a0b552f64916cddfb5d1974dcf2afd510" compoundref="dict_8h" startline="144">itor_vtable::ifree</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

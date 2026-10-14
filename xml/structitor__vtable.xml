@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="138" column="29" bodyfile="include/dict.h" bodystart="138" bodyend="-1"/>
+        <location file="include/dict.h" line="144" column="29" bodyfile="include/dict.h" bodystart="144" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a2de3a49ad4c09cd57630c00441a0b884" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1a66d8fb8461e0c7c72407c33f9eb1fc92" kindref="member">dict_valid_func</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="139" column="29" bodyfile="include/dict.h" bodystart="139" bodyend="-1"/>
+        <location file="include/dict.h" line="145" column="29" bodyfile="include/dict.h" bodystart="145" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1ae27a265a0e2d12bd857104499a4da018" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1a1fdd9cad34cc517ad72e999498333195" kindref="member">dict_invalidate_func</ref></type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="140" column="29" bodyfile="include/dict.h" bodystart="140" bodyend="-1"/>
+        <location file="include/dict.h" line="146" column="29" bodyfile="include/dict.h" bodystart="146" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a22c479a3f3f1fcd22f18540fc32022eb" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1a70987d3f887eb81f7ff4fb344bf09859" kindref="member">dict_next_func</ref></type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="141" column="29" bodyfile="include/dict.h" bodystart="141" bodyend="-1"/>
+        <location file="include/dict.h" line="147" column="29" bodyfile="include/dict.h" bodystart="147" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a2dcf3b43ec0d1c839e5b236ef6ed212f" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1ad0f023b37e2af0590e30cba3ebb779bf" kindref="member">dict_prev_func</ref></type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="142" column="29" bodyfile="include/dict.h" bodystart="142" bodyend="-1"/>
+        <location file="include/dict.h" line="148" column="29" bodyfile="include/dict.h" bodystart="148" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a2405b6667d1f6f32c6e25ceeba154317" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1a65f11df3f83a7ffe796598fc3efead7d" kindref="member">dict_nextn_func</ref></type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="143" column="29" bodyfile="include/dict.h" bodystart="143" bodyend="-1"/>
+        <location file="include/dict.h" line="149" column="29" bodyfile="include/dict.h" bodystart="149" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a593b1e098cce8ad21d434d219da5c08d" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1aaf7eb283d05ac82c2a7f32d39286c888" kindref="member">dict_prevn_func</ref></type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="144" column="29" bodyfile="include/dict.h" bodystart="144" bodyend="-1"/>
+        <location file="include/dict.h" line="150" column="29" bodyfile="include/dict.h" bodystart="150" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a064b89069cd3e17dd1a956b3e9ee35c1" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1a6e5c0bb6cb2131da31fdb2c1b363a734" kindref="member">dict_first_func</ref></type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="145" column="29" bodyfile="include/dict.h" bodystart="145" bodyend="-1"/>
+        <location file="include/dict.h" line="151" column="29" bodyfile="include/dict.h" bodystart="151" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1aac8d35d9edb2929837b71f9d9ffa9c59" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1adc800add5456e9c0d9fd2f4f8f8b868f" kindref="member">dict_last_func</ref></type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="146" column="29" bodyfile="include/dict.h" bodystart="146" bodyend="-1"/>
+        <location file="include/dict.h" line="152" column="29" bodyfile="include/dict.h" bodystart="152" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a236dbeefa21b31029d1e4828126988c5" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1a7969590b6825845cd1e644d05b4fa300" kindref="member">dict_key_func</ref></type>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="147" column="29" bodyfile="include/dict.h" bodystart="147" bodyend="-1"/>
+        <location file="include/dict.h" line="153" column="29" bodyfile="include/dict.h" bodystart="153" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1aee22330239b8c709c60d3b8275e01060" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1aa24f05bcc6368e21bc8774eec9fb3a17" kindref="member">dict_datum_func</ref></type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="148" column="29" bodyfile="include/dict.h" bodystart="148" bodyend="-1"/>
+        <location file="include/dict.h" line="154" column="29" bodyfile="include/dict.h" bodystart="154" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a4867ed1cb6bd475eb87388be8798d14f" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref></type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="149" column="29" bodyfile="include/dict.h" bodystart="149" bodyend="-1"/>
+        <location file="include/dict.h" line="155" column="29" bodyfile="include/dict.h" bodystart="155" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a823b28098350199f53aefc0f16a25485" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref></type>
@@ -184,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="150" column="29" bodyfile="include/dict.h" bodystart="150" bodyend="-1"/>
+        <location file="include/dict.h" line="156" column="29" bodyfile="include/dict.h" bodystart="156" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a3206e65f8cd7b6ce8de3b0b2c2850bcc" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref></type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="151" column="29" bodyfile="include/dict.h" bodystart="151" bodyend="-1"/>
+        <location file="include/dict.h" line="157" column="29" bodyfile="include/dict.h" bodystart="157" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a40913cdc59ef58019dc7f90534d70354" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref></type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="152" column="29" bodyfile="include/dict.h" bodystart="152" bodyend="-1"/>
+        <location file="include/dict.h" line="158" column="29" bodyfile="include/dict.h" bodystart="158" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1ae1bf0ee260c1d73bfcaf908383a48b18" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1ab8de90f16c288deeb67b9c67f43bed37" kindref="member">dict_isearch_func</ref></type>
@@ -226,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="153" column="29" bodyfile="include/dict.h" bodystart="153" bodyend="-1"/>
+        <location file="include/dict.h" line="159" column="29" bodyfile="include/dict.h" bodystart="159" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1acdfb3e51a6abaca9365c410f913fe10f" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1ad01841eadd81f6b6eb68a1809aa7c7a1" kindref="member">dict_iremove_func</ref></type>
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="154" column="29" bodyfile="include/dict.h" bodystart="154" bodyend="-1"/>
+        <location file="include/dict.h" line="160" column="29" bodyfile="include/dict.h" bodystart="160" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structitor__vtable_1a565493a9952194060c3594db8745a560" prot="public" static="no" mutable="no">
         <type><ref refid="dict_8h_1a64ed8ac945518e5d17e23a5d640fc5ef" kindref="member">dict_icompare_func</ref></type>
@@ -254,14 +254,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/dict.h" line="155" column="29" bodyfile="include/dict.h" bodystart="155" bodyend="-1"/>
+        <location file="include/dict.h" line="161" column="29" bodyfile="include/dict.h" bodystart="161" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/dict.h" line="137" column="1" bodyfile="include/dict.h" bodystart="137" bodyend="156"/>
+    <location file="include/dict.h" line="143" column="1" bodyfile="include/dict.h" bodystart="143" bodyend="162"/>
     <listofallmembers>
       <member refid="structitor__vtable_1a565493a9952194060c3594db8745a560" prot="public" virt="non-virtual"><scope>itor_vtable</scope><name>compare</name></member>
       <member refid="structitor__vtable_1aee22330239b8c709c60d3b8275e01060" prot="public" virt="non-virtual"><scope>itor_vtable</scope><name>datum</name></member>

@@ -238,6 +238,7 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdict__remove__result.html">dict_remove_result</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdict__vtable.html">dict_vtable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operations of one container type.  <a href="structdict__vtable.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structitor__vtable.html">itor_vtable</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,10 +264,12 @@ Macros</h2></td></tr>
 <tr class="memitem:a8f967f37ff331bd89830c7fb25500250" id="r_a8f967f37ff331bd89830c7fb25500250"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f967f37ff331bd89830c7fb25500250">dict_insert</a>(dct,  key)</td></tr>
 <tr class="separator:a8f967f37ff331bd89830c7fb25500250"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac141198c0f4b318a049b8bd93a4a6d8f" id="r_ac141198c0f4b318a049b8bd93a4a6d8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac141198c0f4b318a049b8bd93a4a6d8f">dict_search</a>(dct,  key)</td></tr>
+<tr class="memdesc:ac141198c0f4b318a049b8bd93a4a6d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the address of the datum stored for |key|, or NULL if |key| is not present.  <br /></td></tr>
 <tr class="separator:ac141198c0f4b318a049b8bd93a4a6d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d1be1dd9ce7c4973c4f0e23bf5d9ef2" id="r_a2d1be1dd9ce7c4973c4f0e23bf5d9ef2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d1be1dd9ce7c4973c4f0e23bf5d9ef2">dict_is_sorted</a>(dct)</td></tr>
 <tr class="separator:a2d1be1dd9ce7c4973c4f0e23bf5d9ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07c045b3ac1ecc42d68176c42c17c14e" id="r_a07c045b3ac1ecc42d68176c42c17c14e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07c045b3ac1ecc42d68176c42c17c14e">dict_search_le</a>(dct,  key)</td></tr>
+<tr class="memdesc:a07c045b3ac1ecc42d68176c42c17c14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Near searches on sorted containers: return the address of the datum of the greatest key less than or equal to (le) or less than (lt) |key|, or of the least key greater than or equal to (ge) or greater than (gt) |key|; NULL if there is no such key.  <br /></td></tr>
 <tr class="separator:a07c045b3ac1ecc42d68176c42c17c14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a305ad77c03b21ec5cdb317e3b2d5949f" id="r_a305ad77c03b21ec5cdb317e3b2d5949f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a305ad77c03b21ec5cdb317e3b2d5949f">dict_search_lt</a>(dct,  key)</td></tr>
 <tr class="separator:a305ad77c03b21ec5cdb317e3b2d5949f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -281,10 +284,12 @@ Macros</h2></td></tr>
 <tr class="memitem:adf18e104c6ad831a90b18b222a0ea5f2" id="r_adf18e104c6ad831a90b18b222a0ea5f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf18e104c6ad831a90b18b222a0ea5f2">dict_traverse</a>(dct,  func,  ud)</td></tr>
 <tr class="separator:adf18e104c6ad831a90b18b222a0ea5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79a2925a163c7e11cf051b2b09385001" id="r_a79a2925a163c7e11cf051b2b09385001"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79a2925a163c7e11cf051b2b09385001">dict_select</a>(dct,  n,  key,  d)</td></tr>
+<tr class="memdesc:a79a2925a163c7e11cf051b2b09385001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the |n|th element in key order (0-based), storing its key in |key| and its datum in |d|, and evaluating to true.  <br /></td></tr>
 <tr class="separator:a79a2925a163c7e11cf051b2b09385001"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac08b3f708c7767010142051178345338" id="r_ac08b3f708c7767010142051178345338"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac08b3f708c7767010142051178345338">dict_count</a>(dct)</td></tr>
 <tr class="separator:ac08b3f708c7767010142051178345338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3386120405200439c1bcfedbd90a310" id="r_aa3386120405200439c1bcfedbd90a310"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3386120405200439c1bcfedbd90a310">dict_verify</a>(dct)</td></tr>
+<tr class="memdesc:aa3386120405200439c1bcfedbd90a310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the container's internal invariants and evaluate to true if they hold.  <br /></td></tr>
 <tr class="separator:aa3386120405200439c1bcfedbd90a310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6109c8421f1f71e5c9847b5b10e45bc" id="r_ad6109c8421f1f71e5c9847b5b10e45bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6109c8421f1f71e5c9847b5b10e45bc">dict_itor_new</a>(dct)</td></tr>
 <tr class="separator:ad6109c8421f1f71e5c9847b5b10e45bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,6 +312,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a7550c2f2e7331287964bf0ad8bfb886e" id="r_a7550c2f2e7331287964bf0ad8bfb886e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7550c2f2e7331287964bf0ad8bfb886e">dict_itor_last</a>(i)</td></tr>
 <tr class="separator:a7550c2f2e7331287964bf0ad8bfb886e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc73d96ff9e1c12a18e8336425a509fd" id="r_acc73d96ff9e1c12a18e8336425a509fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc73d96ff9e1c12a18e8336425a509fd">dict_itor_search</a>(i,  k)</td></tr>
+<tr class="memdesc:acc73d96ff9e1c12a18e8336425a509fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position the iterator on |k| (exact match) and evaluate to true, or leave it unpositioned and evaluate to false if |k| is not present.  <br /></td></tr>
 <tr class="separator:acc73d96ff9e1c12a18e8336425a509fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ee4c5a0a0085742fe905cf5e2522d45" id="r_a7ee4c5a0a0085742fe905cf5e2522d45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ee4c5a0a0085742fe905cf5e2522d45">dict_itor_search_le</a>(i,  k)</td></tr>
 <tr class="separator:a7ee4c5a0a0085742fe905cf5e2522d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -321,6 +327,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ab0fd6037caf5426df3d20579cd1fa058" id="r_ab0fd6037caf5426df3d20579cd1fa058"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0fd6037caf5426df3d20579cd1fa058">dict_itor_datum</a>(i)</td></tr>
 <tr class="separator:ab0fd6037caf5426df3d20579cd1fa058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79566cdb6aa135d0959fb092e05496c7" id="r_a79566cdb6aa135d0959fb092e05496c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79566cdb6aa135d0959fb092e05496c7">dict_itor_compare</a>(i1,  i2)</td></tr>
+<tr class="memdesc:a79566cdb6aa135d0959fb092e05496c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare the positions of two iterators over the same dictionary.  <br /></td></tr>
 <tr class="separator:a79566cdb6aa135d0959fb092e05496c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1e05eb030ca76dc416afd6d37d5e932" id="r_ad1e05eb030ca76dc416afd6d37d5e932"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1e05eb030ca76dc416afd6d37d5e932">dict_itor_remove</a>(i)</td></tr>
 <tr class="separator:ad1e05eb030ca76dc416afd6d37d5e932"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,16 +335,22 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a1704b677563c3195fcc69dbc42ff8704" id="r_a1704b677563c3195fcc69dbc42ff8704"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1704b677563c3195fcc69dbc42ff8704">dict_compare_func</a>) (const void *, const void *)</td></tr>
+<tr class="memdesc:a1704b677563c3195fcc69dbc42ff8704"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to a function that compares two keys.  <br /></td></tr>
 <tr class="separator:a1704b677563c3195fcc69dbc42ff8704"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5301c8938ac34a1c9f18078bc6464385" id="r_a5301c8938ac34a1c9f18078bc6464385"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5301c8938ac34a1c9f18078bc6464385">dict_delete_func</a>) (void *, void *)</td></tr>
+<tr class="memdesc:a5301c8938ac34a1c9f18078bc6464385"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to a function that is called when a key-value pair gets removed from a dictionary.  <br /></td></tr>
 <tr class="separator:a5301c8938ac34a1c9f18078bc6464385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebbefe3aa81b20e1254e8a7a5253caf6" id="r_aebbefe3aa81b20e1254e8a7a5253caf6"><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebbefe3aa81b20e1254e8a7a5253caf6">dict_visit_func</a>) (const void *, void *, void *)</td></tr>
+<tr class="memdesc:aebbefe3aa81b20e1254e8a7a5253caf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to a function used for iterating over dictionary contents.  <br /></td></tr>
 <tr class="separator:aebbefe3aa81b20e1254e8a7a5253caf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a849c4295058ff98298369ba530fd254d" id="r_a849c4295058ff98298369ba530fd254d"><td class="memItemLeft" align="right" valign="top">typedef unsigned(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a849c4295058ff98298369ba530fd254d">dict_hash_func</a>) (const void *)</td></tr>
+<tr class="memdesc:a849c4295058ff98298369ba530fd254d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to a function that returns the hash value of a key.  <br /></td></tr>
 <tr class="separator:a849c4295058ff98298369ba530fd254d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd0323c1d9eb91048a9458e7467594f7" id="r_acd0323c1d9eb91048a9458e7467594f7"><td class="memItemLeft" align="right" valign="top">typedef unsigned(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd0323c1d9eb91048a9458e7467594f7">dict_prio_func</a>) (const void *)</td></tr>
+<tr class="memdesc:acd0323c1d9eb91048a9458e7467594f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to a function that returns the priority of a key, used by <a class="el" href="structtr__tree.html">tr_tree</a> (a treap).  <br /></td></tr>
 <tr class="separator:acd0323c1d9eb91048a9458e7467594f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8100e988beb964b7ef6705ce30158829" id="r_a8100e988beb964b7ef6705ce30158829"><td class="memItemLeft" align="right" valign="top">typedef struct dict_itor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8100e988beb964b7ef6705ce30158829">dict_itor</a></td></tr>
+<tr class="memdesc:a8100e988beb964b7ef6705ce30158829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward declaration of <a class="el" href="structdict__itor.html">dict_itor</a>, whose definition appears below.  <br /></td></tr>
 <tr class="separator:a8100e988beb964b7ef6705ce30158829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad70c6127784fe473398838a4ca7ee0e8" id="r_ad70c6127784fe473398838a4ca7ee0e8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structdict__itor.html">dict_itor</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad70c6127784fe473398838a4ca7ee0e8">dict_inew_func</a>) (void *obj)</td></tr>
 <tr class="separator:ad70c6127784fe473398838a4ca7ee0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -395,6 +408,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ad63f3fe30bbbf82147a6eb419ab1f040" id="r_ad63f3fe30bbbf82147a6eb419ab1f040"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad63f3fe30bbbf82147a6eb419ab1f040">dict_itor_free</a> (<a class="el" href="structdict__itor.html">dict_itor</a> *itor)</td></tr>
 <tr class="separator:ad63f3fe30bbbf82147a6eb419ab1f040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff73cb45075501b1f9cac831514fc716" id="r_aff73cb45075501b1f9cac831514fc716"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff73cb45075501b1f9cac831514fc716">dict_int_cmp</a> (const void *k1, const void *k2)</td></tr>
+<tr class="memdesc:aff73cb45075501b1f9cac831514fc716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison functions for common key types, for use as dict_compare_func.  <br /></td></tr>
 <tr class="separator:aff73cb45075501b1f9cac831514fc716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f039dd5b7c1348411fe3eb40f10aa91" id="r_a5f039dd5b7c1348411fe3eb40f10aa91"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f039dd5b7c1348411fe3eb40f10aa91">dict_uint_cmp</a> (const void *k1, const void *k2)</td></tr>
 <tr class="separator:a5f039dd5b7c1348411fe3eb40f10aa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -407,6 +421,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a6e8db53eafe12ed257b3a8005a947d85" id="r_a6e8db53eafe12ed257b3a8005a947d85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e8db53eafe12ed257b3a8005a947d85">dict_str_cmp</a> (const void *k1, const void *k2)</td></tr>
 <tr class="separator:a6e8db53eafe12ed257b3a8005a947d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a381845f9bdf11505f6623f796e0a5672" id="r_a381845f9bdf11505f6623f796e0a5672"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a381845f9bdf11505f6623f796e0a5672">dict_str_hash</a> (const void *str)</td></tr>
+<tr class="memdesc:a381845f9bdf11505f6623f796e0a5672"><td class="mdescLeft">&#160;</td><td class="mdescRight">FNV-1a hash of a NUL-terminated string, over its bytes in order, so a key hashes to the same value on every platform.  <br /></td></tr>
 <tr class="separator:a381845f9bdf11505f6623f796e0a5672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -414,8 +429,10 @@ Variables</h2></td></tr>
 <tr class="memitem:aebdce71ca7165e3d22e931f13b3b354e" id="r_aebdce71ca7165e3d22e931f13b3b354e"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebdce71ca7165e3d22e931f13b3b354e">kDictVersionString</a></td></tr>
 <tr class="separator:aebdce71ca7165e3d22e931f13b3b354e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e4168cb588cf762d93db53f53fdcce0" id="r_a6e4168cb588cf762d93db53f53fdcce0"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e4168cb588cf762d93db53f53fdcce0">dict_malloc_func</a> )(size_t)</td></tr>
+<tr class="memdesc:a6e4168cb588cf762d93db53f53fdcce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to a function that libdict will use to allocate memory.  <br /></td></tr>
 <tr class="separator:a6e4168cb588cf762d93db53f53fdcce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeae04c4c07e57a7451c3480a7a4bf2e" id="r_afeae04c4c07e57a7451c3480a7a4bf2e"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeae04c4c07e57a7451c3480a7a4bf2e">dict_free_func</a> )(void *)</td></tr>
+<tr class="memdesc:afeae04c4c07e57a7451c3480a7a4bf2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to a function that libdict will use to deallocate memory.  <br /></td></tr>
 <tr class="separator:afeae04c4c07e57a7451c3480a7a4bf2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -455,7 +472,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;clear((dct)-&gt;_object, (func)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00172">172</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00185">185</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -475,7 +492,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;count((dct)-&gt;_object))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00180">180</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00193">193</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -499,7 +516,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;insert((dct)-&gt;_object, (key)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00164">164</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00170">170</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -519,7 +536,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;sorted)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00166">166</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00174">174</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -543,7 +560,10 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i1)-&gt;_vtable-&gt;compare ? (i1)-&gt;_vtable-&gt;compare((i1)-&gt;_itor, (i2)-&gt;_itor) : 0)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00240">240</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p>Compare the positions of two iterators over the same dictionary. </p>
+<p>Returns a negative value, zero or a positive value as |i1| precedes, is at, or follows |i2|. Evaluates to 0 if the container supplies no comparison. </p>
+
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00263">263</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -563,7 +583,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;datum((i)-&gt;_itor))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00236">236</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00259">259</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -583,7 +603,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;first((i)-&gt;_itor))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00228">228</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00246">246</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -603,7 +623,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;invalid((i)-&gt;_itor))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00223">223</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00241">241</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -623,7 +643,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;key((i)-&gt;_itor))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00235">235</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00258">258</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -643,7 +663,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;last((i)-&gt;_itor))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00229">229</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00247">247</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -663,7 +683,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(dct)-&gt;_vtable-&gt;inew((dct)-&gt;_object)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00182">182</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00198">198</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -683,7 +703,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;next((i)-&gt;_itor))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00224">224</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00242">242</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -707,7 +727,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;nextn((i)-&gt;_itor, (n)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00226">226</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00244">244</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -727,7 +747,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;prev((i)-&gt;_itor))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00225">225</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00243">243</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -751,7 +771,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;prevn((i)-&gt;_itor, (n)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00227">227</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00245">245</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -771,7 +791,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_itor)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00221">221</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00239">239</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -791,7 +811,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;remove &amp;&amp; (i)-&gt;_vtable-&gt;remove((i)-&gt;_itor))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00241">241</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00264">264</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -815,7 +835,10 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;search((i)-&gt;_itor, (k)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00230">230</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p>Position the iterator on |k| (exact match) and evaluate to true, or leave it unpositioned and evaluate to false if |k| is not present. </p>
+<p>The <em>le, _lt, _ge and _gt variants position it on the same key the corresponding dict_search</em>* finds; on the hash tables they evaluate to false and leave the iterator unchanged. </p>
+
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00253">253</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -839,7 +862,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;search_ge &amp;&amp; (i)-&gt;_vtable-&gt;search_ge((i)-&gt;_itor, (k)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00233">233</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00256">256</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -863,7 +886,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;search_gt &amp;&amp; (i)-&gt;_vtable-&gt;search_gt((i)-&gt;_itor, (k)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00234">234</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00257">257</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -887,7 +910,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;search_le &amp;&amp; (i)-&gt;_vtable-&gt;search_le((i)-&gt;_itor, (k)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00231">231</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00254">254</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -911,7 +934,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;search_lt &amp;&amp; (i)-&gt;_vtable-&gt;search_lt((i)-&gt;_itor, (k)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00232">232</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00255">255</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -931,7 +954,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((i)-&gt;_vtable-&gt;valid((i)-&gt;_itor))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00222">222</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00240">240</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -951,7 +974,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_object)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00163">163</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00169">169</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -975,7 +998,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;remove((dct)-&gt;_object, (key)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00171">171</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00184">184</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -999,7 +1022,9 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;search((dct)-&gt;_object, (key)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00165">165</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p>Return the address of the datum stored for |key|, or NULL if |key| is not present. </p>
+
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00173">173</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1023,7 +1048,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;search_ge ? (dct)-&gt;_vtable-&gt;search_ge((dct)-&gt;_object, (key)) : NULL)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00169">169</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00182">182</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1047,7 +1072,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;search_gt ? (dct)-&gt;_vtable-&gt;search_gt((dct)-&gt;_object, (key)) : NULL)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00170">170</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00183">183</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1071,7 +1096,10 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;search_le ? (dct)-&gt;_vtable-&gt;search_le((dct)-&gt;_object, (key)) : NULL)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00167">167</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p>Near searches on sorted containers: return the address of the datum of the greatest key less than or equal to (le) or less than (lt) |key|, or of the least key greater than or equal to (ge) or greater than (gt) |key|; NULL if there is no such key. </p>
+<p>They evaluate to NULL on the hash tables, which are not sorted. </p>
+
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00180">180</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1095,7 +1123,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;search_lt ? (dct)-&gt;_vtable-&gt;search_lt((dct)-&gt;_object, (key)) : NULL)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00168">168</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00181">181</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1129,7 +1157,10 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;select &amp;&amp; (dct)-&gt;_vtable-&gt;select((dct)-&gt;_object, (n), (key), (d)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00179">179</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p>Retrieve the |n|th element in key order (0-based), storing its key in |key| and its datum in |d|, and evaluating to true. </p>
+<p>Either out-parameter may be NULL. If |n| is out of range, evaluates to false and stores NULL through any non-NULL out-parameter. Containers that do not support selection (the hash tables and the skip list) evaluate to false and store nothing. </p>
+
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00192">192</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1158,7 +1189,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;traverse((dct)-&gt;_object, (func), (ud)))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00173">173</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00186">186</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1178,7 +1209,10 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((dct)-&gt;_vtable-&gt;verify((dct)-&gt;_object))</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00181">181</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p>Check the container's internal invariants and evaluate to true if they hold. </p>
+<p>On failure the failed check is printed to stderr. Meant for testing and debugging: it visits every element. </p>
+
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00197">197</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1275,6 +1309,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>A pointer to a function that compares two keys. </p>
+<p>It needs to return a negative value if k1&lt;k2, a positive value if k1&gt;k2, and zero if the keys are equal. The comparison must be a total order, i.e. reflexive (cmp(k,k)==0), antisymmetric (k1&gt;k2 implies k2&lt;k1) and transitive (k1&gt;k2 and k2&gt;k3 implies k1&gt;k3). Keys must compare identically for as long as they are in the dictionary. </p>
+
 <p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00059">59</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
@@ -1307,7 +1344,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00132">132</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00138">138</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1322,6 +1359,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A pointer to a function that is called when a key-value pair gets removed from a dictionary. </p>
 
 <p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00062">62</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
@@ -1355,7 +1394,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00129">129</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00135">135</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1370,6 +1409,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A pointer to a function that returns the hash value of a key. </p>
 
 <p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00066">66</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
@@ -1387,7 +1428,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00135">135</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00141">141</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1403,7 +1444,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00122">122</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00128">128</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1451,7 +1492,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00124">124</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00130">130</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1467,7 +1508,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00134">134</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00140">140</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1483,7 +1524,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00133">133</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00139">139</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1498,6 +1539,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Forward declaration of <a class="el" href="structdict__itor.html">dict_itor</a>, whose definition appears below. </p>
 
 <p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00078">78</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
@@ -1515,7 +1558,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00131">131</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00137">137</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1531,7 +1574,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00130">130</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00136">136</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1547,7 +1590,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00125">125</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00131">131</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1563,7 +1606,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00127">127</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00133">133</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1579,7 +1622,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00126">126</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00132">132</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1595,7 +1638,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00128">128</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00134">134</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1610,6 +1653,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A pointer to a function that returns the priority of a key, used by <a class="el" href="structtr__tree.html">tr_tree</a> (a treap). </p>
+<p>The treap is a max-heap on priority, so a LARGER value places the key closer to the root. Pass NULL to have priorities chosen at random. </p>
 
 <p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00070">70</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
@@ -1691,7 +1737,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00123">123</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00129">129</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
 </div>
 </div>
@@ -1722,6 +1768,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A pointer to a function used for iterating over dictionary contents. </p>
 
 <p class="definition">Definition at line <a class="el" href="dict_8h_source.html#l00064">64</a> of file <a class="el" href="dict_8h_source.html">dict.h</a>.</p>
 
@@ -1769,6 +1817,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Comparison functions for common key types, for use as dict_compare_func. </p>
+<p>The keys are pointers to values of the type, except for dict_ptr_cmp, which orders the key pointers themselves (by address, as uintptr_t), and dict_str_cmp, which takes NUL-terminated strings. dict_str_cmp orders bytes as unsigned char, exactly as strcmp() does, so string keys sort the same on every platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="dict_8c_source.html#l00041">41</a> of file <a class="el" href="dict_8c_source.html">dict.c</a>.</p>
 
@@ -1877,6 +1928,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>FNV-1a hash of a NUL-terminated string, over its bytes in order, so a key hashes to the same value on every platform. </p>
+<p>For use as dict_hash_func. </p>
+
 <p class="definition">Definition at line <a class="el" href="dict_8c_source.html#l00100">100</a> of file <a class="el" href="dict_8c_source.html">dict.c</a>.</p>
 
 </div>
@@ -1951,6 +2005,8 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>A pointer to a function that libdict will use to deallocate memory. </p>
+
 <p class="definition">Definition at line <a class="el" href="dict_8c_source.html#l00038">38</a> of file <a class="el" href="dict_8c_source.html">dict.c</a>.</p>
 
 </div>
@@ -1977,6 +2033,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A pointer to a function that libdict will use to allocate memory. </p>
 
 <p class="definition">Definition at line <a class="el" href="dict_8c_source.html#l00037">37</a> of file <a class="el" href="dict_8c_source.html">dict.c</a>.</p>
 
