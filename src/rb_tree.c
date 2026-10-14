@@ -81,43 +81,74 @@ struct rb_itor {
     TREE_ITERATOR_FIELDS(rb_tree, rb_node);
 };
 
+/* Vtable thunks. The vtable slot types take void*, and calling a function
+ * through a function-pointer type that is not compatible with the function's
+ * own type is undefined behaviour (C11 6.5.2.2p9), so each slot below gets a
+ * thunk with the exact slot signature instead of a cast. A cast would also
+ * hide a genuine signature mismatch. */
+static dict_itor*         vt_rb_dict_itor_new(void* obj)                                         { return rb_dict_itor_new(obj); }
+static size_t             vt_rb_tree_free(void* obj, dict_delete_func delete_func)               { return rb_tree_free(obj, delete_func); }
+static dict_insert_result vt_rb_tree_insert(void* obj, void* key)                                { return rb_tree_insert(obj, key); }
+static dict_remove_result vt_rb_tree_remove(void* obj, const void* key)                          { return rb_tree_remove(obj, key); }
+static size_t             vt_rb_tree_clear(void* obj, dict_delete_func delete_func)              { return rb_tree_clear(obj, delete_func); }
+static size_t             vt_rb_tree_traverse(void* obj, dict_visit_func visit, void* user_data) { return rb_tree_traverse(obj, visit, user_data); }
+static bool               vt_rb_tree_select(void* obj, size_t n, const void** key, void** datum) { return rb_tree_select(obj, n, key, datum); }
+static bool               vt_rb_tree_verify(const void* obj)                                     { return rb_tree_verify(obj); }
+static void               vt_rb_itor_free(void* itor)                                            { rb_itor_free(itor); }
+static bool               vt_rb_itor_valid(const void* itor)                                     { return rb_itor_valid(itor); }
+static void               vt_rb_itor_invalidate(void* itor)                                      { rb_itor_invalidate(itor); }
+static bool               vt_rb_itor_next(void* itor)                                            { return rb_itor_next(itor); }
+static bool               vt_rb_itor_prev(void* itor)                                            { return rb_itor_prev(itor); }
+static bool               vt_rb_itor_nextn(void* itor, size_t count)                             { return rb_itor_nextn(itor, count); }
+static bool               vt_rb_itor_prevn(void* itor, size_t count)                             { return rb_itor_prevn(itor, count); }
+static bool               vt_rb_itor_first(void* itor)                                           { return rb_itor_first(itor); }
+static bool               vt_rb_itor_last(void* itor)                                            { return rb_itor_last(itor); }
+static void*              vt_rb_itor_key(void* itor)                                             { return (void*)rb_itor_key(itor); }
+static void**             vt_rb_itor_datum(void* itor)                                           { return rb_itor_datum(itor); }
+static bool               vt_rb_itor_search(void* itor, const void* key)                         { return rb_itor_search(itor, key); }
+static bool               vt_rb_itor_search_le(void* itor, const void* key)                      { return rb_itor_search_le(itor, key); }
+static bool               vt_rb_itor_search_lt(void* itor, const void* key)                      { return rb_itor_search_lt(itor, key); }
+static bool               vt_rb_itor_search_ge(void* itor, const void* key)                      { return rb_itor_search_ge(itor, key); }
+static bool               vt_rb_itor_search_gt(void* itor, const void* key)                      { return rb_itor_search_gt(itor, key); }
+static bool               vt_rb_itor_remove(void* itor)                                          { return rb_itor_remove(itor); }
+
 static const dict_vtable rb_tree_vtable = {
     true,
-    (dict_inew_func)        rb_dict_itor_new,
-    (dict_dfree_func)       rb_tree_free,
-    (dict_insert_func)      rb_tree_insert,
-    (dict_search_func)      tree_search,
-    (dict_search_func)      tree_search_le,
-    (dict_search_func)      tree_search_lt,
-    (dict_search_func)      tree_search_ge,
-    (dict_search_func)      tree_search_gt,
-    (dict_remove_func)      rb_tree_remove,
-    (dict_clear_func)       rb_tree_clear,
-    (dict_traverse_func)    rb_tree_traverse,
-    (dict_select_func)      rb_tree_select,
-    (dict_count_func)       tree_count,
-    (dict_verify_func)      rb_tree_verify,
+    vt_rb_dict_itor_new,
+    vt_rb_tree_free,
+    vt_rb_tree_insert,
+    tree_search,
+    tree_search_le,
+    tree_search_lt,
+    tree_search_ge,
+    tree_search_gt,
+    vt_rb_tree_remove,
+    vt_rb_tree_clear,
+    vt_rb_tree_traverse,
+    vt_rb_tree_select,
+    tree_count,
+    vt_rb_tree_verify,
 };
 
 static const itor_vtable rb_tree_itor_vtable = {
-    (dict_ifree_func)       rb_itor_free,
-    (dict_valid_func)       rb_itor_valid,
-    (dict_invalidate_func)  rb_itor_invalidate,
-    (dict_next_func)        rb_itor_next,
-    (dict_prev_func)        rb_itor_prev,
-    (dict_nextn_func)       rb_itor_nextn,
-    (dict_prevn_func)       rb_itor_prevn,
-    (dict_first_func)       rb_itor_first,
-    (dict_last_func)        rb_itor_last,
-    (dict_key_func)         rb_itor_key,
-    (dict_datum_func)       rb_itor_datum,
-    (dict_isearch_func)     rb_itor_search,
-    (dict_isearch_func)     rb_itor_search_le,
-    (dict_isearch_func)     rb_itor_search_lt,
-    (dict_isearch_func)     rb_itor_search_ge,
-    (dict_isearch_func)     rb_itor_search_gt,
-    (dict_iremove_func)     rb_itor_remove,
-    (dict_icompare_func)    tree_iterator_compare
+    vt_rb_itor_free,
+    vt_rb_itor_valid,
+    vt_rb_itor_invalidate,
+    vt_rb_itor_next,
+    vt_rb_itor_prev,
+    vt_rb_itor_nextn,
+    vt_rb_itor_prevn,
+    vt_rb_itor_first,
+    vt_rb_itor_last,
+    vt_rb_itor_key,
+    vt_rb_itor_datum,
+    vt_rb_itor_search,
+    vt_rb_itor_search_le,
+    vt_rb_itor_search_lt,
+    vt_rb_itor_search_ge,
+    vt_rb_itor_search_gt,
+    vt_rb_itor_remove,
+    tree_iterator_compare_vt
 };
 
 static void rot_left(rb_tree* tree, rb_node* node);

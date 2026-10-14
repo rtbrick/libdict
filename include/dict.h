@@ -192,7 +192,10 @@ struct dict_itor {
 #define dict_itor_search_gt(i,k)    ((i)->_vtable->search_gt && (i)->_vtable->search_gt((i)->_itor, (k)))
 #define dict_itor_key(i)            ((i)->_vtable->key((i)->_itor))
 #define dict_itor_datum(i)          ((i)->_vtable->datum((i)->_itor))
-#define dict_itor_compare(i1,i2)    ((i1)->_vtable->compare((i1)->_itor, (i2)->_itor))
+/* Compare the positions of two iterators over the same dictionary. Returns a
+ * negative value, zero or a positive value as |i1| precedes, is at, or follows
+ * |i2|. Evaluates to 0 if the container supplies no comparison. */
+#define dict_itor_compare(i1,i2)    ((i1)->_vtable->compare ? (i1)->_vtable->compare((i1)->_itor, (i2)->_itor) : 0)
 #define dict_itor_remove(i)         ((i)->_vtable->remove && (i)->_vtable->remove((i)->_itor))
 
 void dict_itor_free(dict_itor* itor);

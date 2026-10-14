@@ -407,6 +407,43 @@ test_closest_lookup(dict *dct, unsigned nkeys, bool keys_sorted)
     dict_itor_free(itor);
 }
 
+/* Identify a container by its vtable. The slots hold file-local thunks with
+ * the exact slot signatures rather than the public typed functions (calling a
+ * function through an incompatible function-pointer type is undefined
+ * behaviour), so a slot can no longer be compared against a public function.
+ * Every dict of a given type shares one static vtable, so compare against the
+ * vtable of a throwaway instance instead. */
+static const dict_vtable*
+reference_vtable(dict *dct)
+{
+    CU_ASSERT_PTR_NOT_NULL_FATAL(dct);
+    const dict_vtable* vtable = dct->_vtable;
+    dict_free(dct, NULL);
+    return vtable;
+}
+
+/* True if `dct` is a chained hashtable. */
+static bool
+is_hashtable(const dict *dct)
+{
+    static const dict_vtable* vtable = NULL;
+    if (!vtable)
+        vtable = reference_vtable(hashtable_dict_new(dict_str_cmp,
+                                                     dict_str_hash, 1));
+    return dct->_vtable == vtable;
+}
+
+/* True if `dct` is an open-addressing hashtable. */
+static bool
+is_hashtable2(const dict *dct)
+{
+    static const dict_vtable* vtable = NULL;
+    if (!vtable)
+        vtable = reference_vtable(hashtable2_dict_new(dict_str_cmp,
+                                                      dict_str_hash, 1));
+    return dct->_vtable == vtable;
+}
+
 void test_basic(dict *dct, const struct key_info *keys, const unsigned nkeys, bool keys_sorted)
 {
     CU_ASSERT_TRUE(dict_verify(dct));
@@ -437,10 +474,9 @@ void test_basic(dict *dct, const struct key_info *keys, const unsigned nkeys, bo
     }
     CU_ASSERT_EQUAL(dict_count(dct), nkeys);
 
-    if (dct->_vtable->insert == (dict_insert_func)hashtable_insert ||
-        dct->_vtable->insert == (dict_insert_func)hashtable2_insert) {
+    if (is_hashtable(dct) || is_hashtable2(dct)) {
         /* Verify that hashtable_resize works as expected. */
-        if (dct->_vtable->insert == (dict_insert_func)hashtable_insert) {
+        if (is_hashtable(dct)) {
             CU_ASSERT_TRUE(hashtable_resize(dict_private(dct), 3));
         } else {
             CU_ASSERT_TRUE(hashtable2_resize(dict_private(dct),

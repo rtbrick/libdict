@@ -508,3 +508,15 @@ tree_iterator_datum(void* Iterator)
     tree_iterator* iterator = Iterator;
     return iterator->node ? &iterator->node->datum : NULL;
 }
+
+void*
+tree_iterator_key_vt(void* Iterator)
+{
+    return (void*)tree_iterator_key(Iterator);
+}
+
+int
+tree_iterator_compare_vt(void* Iterator1, void* Iterator2)
+{
+    return tree_iterator_compare(Iterator1, Iterator2);
+}

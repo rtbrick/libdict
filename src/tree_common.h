@@ -131,5 +131,9 @@ bool        tree_iterator_search_gt(void *iterator, const void *key);
 int         tree_iterator_compare(const void* iterator1, const void* iterator2);
 const void* tree_iterator_key(const void *iterator);
 void**      tree_iterator_datum(void *iterator);
+/* tree_iterator_key() and tree_iterator_compare() with the exact
+ * dict_key_func and dict_icompare_func slot types, for use in vtables. */
+void*       tree_iterator_key_vt(void *iterator);
+int         tree_iterator_compare_vt(void* iterator1, void* iterator2);
 
 #endif /* !LIBDICT_TREE_COMMON_H__ */

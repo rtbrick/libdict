@@ -63,43 +63,71 @@ struct hashtable2_itor {
     int                 slot;
 };
 
+/* Vtable thunks. The vtable slot types take void*, and calling a function
+ * through a function-pointer type that is not compatible with the function's
+ * own type is undefined behaviour (C11 6.5.2.2p9), so each slot below gets a
+ * thunk with the exact slot signature instead of a cast. A cast would also
+ * hide a genuine signature mismatch. */
+static dict_itor*         vt_hashtable2_dict_itor_new(void* obj)                                    { return hashtable2_dict_itor_new(obj); }
+static size_t             vt_hashtable2_free(void* obj, dict_delete_func delete_func)               { return hashtable2_free(obj, delete_func); }
+static dict_insert_result vt_hashtable2_insert(void* obj, void* key)                                { return hashtable2_insert(obj, key); }
+static void**             vt_hashtable2_search(void* obj, const void* key)                          { return hashtable2_search(obj, key); }
+static dict_remove_result vt_hashtable2_remove(void* obj, const void* key)                          { return hashtable2_remove(obj, key); }
+static size_t             vt_hashtable2_clear(void* obj, dict_delete_func delete_func)              { return hashtable2_clear(obj, delete_func); }
+static size_t             vt_hashtable2_traverse(void* obj, dict_visit_func visit, void* user_data) { return hashtable2_traverse(obj, visit, user_data); }
+static size_t             vt_hashtable2_count(const void* obj)                                      { return hashtable2_count(obj); }
+static bool               vt_hashtable2_verify(const void* obj)                                     { return hashtable2_verify(obj); }
+static void               vt_hashtable2_itor_free(void* itor)                                       { hashtable2_itor_free(itor); }
+static bool               vt_hashtable2_itor_valid(const void* itor)                                { return hashtable2_itor_valid(itor); }
+static void               vt_hashtable2_itor_invalidate(void* itor)                                 { hashtable2_itor_invalidate(itor); }
+static bool               vt_hashtable2_itor_next(void* itor)                                       { return hashtable2_itor_next(itor); }
+static bool               vt_hashtable2_itor_prev(void* itor)                                       { return hashtable2_itor_prev(itor); }
+static bool               vt_hashtable2_itor_nextn(void* itor, size_t count)                        { return hashtable2_itor_nextn(itor, count); }
+static bool               vt_hashtable2_itor_prevn(void* itor, size_t count)                        { return hashtable2_itor_prevn(itor, count); }
+static bool               vt_hashtable2_itor_first(void* itor)                                      { return hashtable2_itor_first(itor); }
+static bool               vt_hashtable2_itor_last(void* itor)                                       { return hashtable2_itor_last(itor); }
+static void*              vt_hashtable2_itor_key(void* itor)                                        { return (void*)hashtable2_itor_key(itor); }
+static void**             vt_hashtable2_itor_datum(void* itor)                                      { return hashtable2_itor_datum(itor); }
+static bool               vt_hashtable2_itor_search(void* itor, const void* key)                    { return hashtable2_itor_search(itor, key); }
+static bool               vt_hashtable2_itor_remove(void* itor)                                     { return hashtable2_itor_remove(itor); }
+
 static const dict_vtable hashtable2_vtable = {
     false,
-    (dict_inew_func)        hashtable2_dict_itor_new,
-    (dict_dfree_func)       hashtable2_free,
-    (dict_insert_func)      hashtable2_insert,
-    (dict_search_func)      hashtable2_search,
-    (dict_search_func)      NULL,/* search_le: not supported */
-    (dict_search_func)      NULL,/* search_lt: not supported */
-    (dict_search_func)      NULL,/* search_ge: not supported */
-    (dict_search_func)      NULL,/* search_gt: not supported */
-    (dict_remove_func)      hashtable2_remove,
-    (dict_clear_func)       hashtable2_clear,
-    (dict_traverse_func)    hashtable2_traverse,
-    (dict_select_func)      NULL,
-    (dict_count_func)       hashtable2_count,
-    (dict_verify_func)      hashtable2_verify,
+    vt_hashtable2_dict_itor_new,
+    vt_hashtable2_free,
+    vt_hashtable2_insert,
+    vt_hashtable2_search,
+    NULL,/* search_le: not supported */
+    NULL,/* search_lt: not supported */
+    NULL,/* search_ge: not supported */
+    NULL,/* search_gt: not supported */
+    vt_hashtable2_remove,
+    vt_hashtable2_clear,
+    vt_hashtable2_traverse,
+    NULL,
+    vt_hashtable2_count,
+    vt_hashtable2_verify,
 };
 
 static const itor_vtable hashtable2_itor_vtable = {
-    (dict_ifree_func)       hashtable2_itor_free,
-    (dict_valid_func)       hashtable2_itor_valid,
-    (dict_invalidate_func)  hashtable2_itor_invalidate,
-    (dict_next_func)        hashtable2_itor_next,
-    (dict_prev_func)        hashtable2_itor_prev,
-    (dict_nextn_func)       hashtable2_itor_nextn,
-    (dict_prevn_func)       hashtable2_itor_prevn,
-    (dict_first_func)       hashtable2_itor_first,
-    (dict_last_func)        hashtable2_itor_last,
-    (dict_key_func)         hashtable2_itor_key,
-    (dict_datum_func)       hashtable2_itor_datum,
-    (dict_isearch_func)     hashtable2_itor_search,
-    (dict_isearch_func)     NULL,/* itor_search_le: not supported */
-    (dict_isearch_func)     NULL,/* itor_search_lt: not supported */
-    (dict_isearch_func)     NULL,/* itor_search_ge: not supported */
-    (dict_isearch_func)     NULL,/* itor_search_gt: not supported */
-    (dict_iremove_func)     hashtable2_itor_remove,
-    (dict_icompare_func)    NULL,/* hashtable2_itor_compare not implemented yet */
+    vt_hashtable2_itor_free,
+    vt_hashtable2_itor_valid,
+    vt_hashtable2_itor_invalidate,
+    vt_hashtable2_itor_next,
+    vt_hashtable2_itor_prev,
+    vt_hashtable2_itor_nextn,
+    vt_hashtable2_itor_prevn,
+    vt_hashtable2_itor_first,
+    vt_hashtable2_itor_last,
+    vt_hashtable2_itor_key,
+    vt_hashtable2_itor_datum,
+    vt_hashtable2_itor_search,
+    NULL,/* itor_search_le: not supported */
+    NULL,/* itor_search_lt: not supported */
+    NULL,/* itor_search_ge: not supported */
+    NULL,/* itor_search_gt: not supported */
+    vt_hashtable2_itor_remove,
+    NULL,/* hashtable2_itor_compare not implemented yet */
 };
 
 hashtable2*
