@@ -64,6 +64,7 @@ void test_hashtable_itor_clear_invalidates(void);
 void test_hashtable2_itor_remove_invalidates(void);
 void test_itor_survives_other_insert_and_remove(void);
 void test_dict_str_cmp_unsigned_bytes(void);
+void test_util_is_prime_and_shuffle_edges(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -104,6 +105,7 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_hashtable2_itor_remove_invalidates),
     TEST_FUNC(test_itor_survives_other_insert_and_remove),
     TEST_FUNC(test_dict_str_cmp_unsigned_bytes),
+    TEST_FUNC(test_util_is_prime_and_shuffle_edges),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -1689,6 +1691,33 @@ void test_dict_str_cmp_unsigned_bytes()
     dict_itor_free(itor);
     dict_free(dct, NULL);
     CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+void test_util_is_prime_and_shuffle_edges()
+{
+    CU_ASSERT_FALSE(is_prime(0));
+    CU_ASSERT_FALSE(is_prime(1));
+    CU_ASSERT_TRUE(is_prime(2));
+
+    /* shuffle() must not touch the array for 0 or 1 elements; with 0 it
+     * used to compute size - 1 as SIZE_MAX and write far out of bounds. The
+     * sentinels after the used part catch any stray write. */
+    char a[] = "a", b[] = "b", c[] = "c";
+    char* words[4] = { a, b, c, NULL };
+    shuffle(words, 0);
+    shuffle(words, 1);
+    CU_ASSERT_PTR_EQUAL(words[0], a);
+    CU_ASSERT_PTR_EQUAL(words[1], b);
+    CU_ASSERT_PTR_EQUAL(words[2], c);
+    CU_ASSERT_PTR_NULL(words[3]);
+
+    /* And with three it permutes them without losing any. */
+    shuffle(words, 3);
+    unsigned seen = 0;
+    for (unsigned i = 0; i < 3; ++i)
+        seen |= (words[i] == a ? 1u : 0u) | (words[i] == b ? 2u : 0u) | (words[i] == c ? 4u : 0u);
+    CU_ASSERT_EQUAL(seen, 7u);
+    CU_ASSERT_PTR_NULL(words[3]);
 }
 
 void test_basic_skiplist()
