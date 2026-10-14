@@ -50,31 +50,31 @@ BEGIN_DECL
 #define DICT_VERSION_PATCH    0
 extern const char* const kDictVersionString;
 
-/* A pointer to a function that compares two keys. It needs to return a
+/** A pointer to a function that compares two keys. It needs to return a
  * negative value if k1<k2, a positive value if k1>k2, and zero if the keys are
  * equal. The comparison must be a total order, i.e. reflexive (cmp(k,k)==0),
  * antisymmetric (k1>k2 implies k2<k1) and transitive (k1>k2 and k2>k3 implies
  * k1>k3). Keys must compare identically for as long as they are in the
  * dictionary. */
 typedef int        (*dict_compare_func)(const void*, const void*);
-/* A pointer to a function that is called when a key-value pair gets removed
+/** A pointer to a function that is called when a key-value pair gets removed
  * from a dictionary. */
 typedef void        (*dict_delete_func)(void*, void*);
-/* A pointer to a function used for iterating over dictionary contents. */
+/** A pointer to a function used for iterating over dictionary contents. */
 typedef bool        (*dict_visit_func)(const void*, void*, void*);
-/* A pointer to a function that returns the hash value of a key. */
+/** A pointer to a function that returns the hash value of a key. */
 typedef unsigned    (*dict_hash_func)(const void*);
-/* A pointer to a function that returns the priority of a key, used by tr_tree
+/** A pointer to a function that returns the priority of a key, used by tr_tree
  * (a treap). The treap is a max-heap on priority, so a LARGER value places the
  * key closer to the root. Pass NULL to have priorities chosen at random. */
 typedef unsigned    (*dict_prio_func)(const void*);
 
-/* A pointer to a function that libdict will use to allocate memory. */
+/** A pointer to a function that libdict will use to allocate memory. */
 extern void*        (*dict_malloc_func)(size_t);
-/* A pointer to a function that libdict will use to deallocate memory. */
+/** A pointer to a function that libdict will use to deallocate memory. */
 extern void        (*dict_free_func)(void*);
 
-/* Forward declaration of dict_itor, whose definition appears below. */
+/** Forward declaration of dict_itor, whose definition appears below. */
 typedef struct dict_itor dict_itor;
 
 typedef struct {
@@ -101,6 +101,12 @@ typedef bool        (*dict_select_func)(void *obj, size_t n, const void** key, v
 typedef size_t      (*dict_count_func)(const void* obj);
 typedef bool        (*dict_verify_func)(const void* obj);
 
+/** The operations of one container type. Every dict of that type shares one
+ * static vtable. Use it only through the dict_* macros: its slots point at
+ * internal wrapper functions, not at the public functions of the container,
+ * so comparing a slot with, say, hashtable_insert is always false. To tell
+ * container types apart, compare the _vtable pointer itself with that of a
+ * dict known to be of the type. */
 typedef struct {
     const bool          sorted;
     dict_inew_func      inew;
@@ -162,8 +168,15 @@ typedef struct {
 
 #define dict_private(dct)           ((dct)->_object)
 #define dict_insert(dct,key)        ((dct)->_vtable->insert((dct)->_object, (key)))
+/** Return the address of the datum stored for |key|, or NULL if |key| is not
+ * present. */
 #define dict_search(dct,key)        ((dct)->_vtable->search((dct)->_object, (key)))
 #define dict_is_sorted(dct)         ((dct)->_vtable->sorted)
+/** Near searches on sorted containers: return the address of the datum of the
+ * greatest key less than or equal to (le) or less than (lt) |key|, or of the
+ * least key greater than or equal to (ge) or greater than (gt) |key|; NULL if
+ * there is no such key. They evaluate to NULL on the hash tables, which are
+ * not sorted. */
 #define dict_search_le(dct,key)     ((dct)->_vtable->search_le ? (dct)->_vtable->search_le((dct)->_object, (key)) : NULL)
 #define dict_search_lt(dct,key)     ((dct)->_vtable->search_lt ? (dct)->_vtable->search_lt((dct)->_object, (key)) : NULL)
 #define dict_search_ge(dct,key)     ((dct)->_vtable->search_ge ? (dct)->_vtable->search_ge((dct)->_object, (key)) : NULL)
@@ -171,19 +184,24 @@ typedef struct {
 #define dict_remove(dct,key)        ((dct)->_vtable->remove((dct)->_object, (key)))
 #define dict_clear(dct,func)        ((dct)->_vtable->clear((dct)->_object, (func)))
 #define dict_traverse(dct,func,ud)  ((dct)->_vtable->traverse((dct)->_object, (func), (ud)))
-/* Retrieve the |n|th element in key order (0-based), storing its key in |key|
+/** Retrieve the |n|th element in key order (0-based), storing its key in |key|
  * and its datum in |d|, and evaluating to true. Either out-parameter may be
  * NULL. If |n| is out of range, evaluates to false and stores NULL through any
  * non-NULL out-parameter. Containers that do not support selection (the hash
  * tables and the skip list) evaluate to false and store nothing. */
 #define dict_select(dct,n,key,d)    ((dct)->_vtable->select && (dct)->_vtable->select((dct)->_object, (n), (key), (d)))
 #define dict_count(dct)             ((dct)->_vtable->count((dct)->_object))
+/** Check the container's internal invariants and evaluate to true if they
+ * hold. On failure the failed check is printed to stderr. Meant for testing
+ * and debugging: it visits every element. */
 #define dict_verify(dct)            ((dct)->_vtable->verify((dct)->_object))
 #define dict_itor_new(dct)          (dct)->_vtable->inew((dct)->_object)
 
 size_t dict_free(dict* dct, dict_delete_func delete_func);
 
-/* ITERATOR INVALIDATION
+/** \page iterator_invalidation Iterator invalidation
+ *
+ * ITERATOR INVALIDATION
  *
  * An iterator that has been invalidated must be repositioned with
  * dict_itor_first(), dict_itor_last() or dict_itor_search() before further
@@ -227,6 +245,11 @@ struct dict_itor {
 #define dict_itor_prevn(i,n)        ((i)->_vtable->prevn((i)->_itor, (n)))
 #define dict_itor_first(i)          ((i)->_vtable->first((i)->_itor))
 #define dict_itor_last(i)           ((i)->_vtable->last((i)->_itor))
+/** Position the iterator on |k| (exact match) and evaluate to true, or leave
+ * it unpositioned and evaluate to false if |k| is not present. The _le, _lt,
+ * _ge and _gt variants position it on the same key the corresponding
+ * dict_search_* finds; on the hash tables they evaluate to false and leave the
+ * iterator unchanged. */
 #define dict_itor_search(i,k)       ((i)->_vtable->search((i)->_itor, (k)))
 #define dict_itor_search_le(i,k)    ((i)->_vtable->search_le && (i)->_vtable->search_le((i)->_itor, (k)))
 #define dict_itor_search_lt(i,k)    ((i)->_vtable->search_lt && (i)->_vtable->search_lt((i)->_itor, (k)))
@@ -234,7 +257,7 @@ struct dict_itor {
 #define dict_itor_search_gt(i,k)    ((i)->_vtable->search_gt && (i)->_vtable->search_gt((i)->_itor, (k)))
 #define dict_itor_key(i)            ((i)->_vtable->key((i)->_itor))
 #define dict_itor_datum(i)          ((i)->_vtable->datum((i)->_itor))
-/* Compare the positions of two iterators over the same dictionary. Returns a
+/** Compare the positions of two iterators over the same dictionary. Returns a
  * negative value, zero or a positive value as |i1| precedes, is at, or follows
  * |i2|. Evaluates to 0 if the container supplies no comparison. */
 #define dict_itor_compare(i1,i2)    ((i1)->_vtable->compare ? (i1)->_vtable->compare((i1)->_itor, (i2)->_itor) : 0)
@@ -242,12 +265,20 @@ struct dict_itor {
 
 void dict_itor_free(dict_itor* itor);
 
+/** Comparison functions for common key types, for use as dict_compare_func.
+ * The keys are pointers to values of the type, except for dict_ptr_cmp, which
+ * orders the key pointers themselves (by address, as uintptr_t), and
+ * dict_str_cmp, which takes NUL-terminated strings. dict_str_cmp orders bytes
+ * as unsigned char, exactly as strcmp() does, so string keys sort the same on
+ * every platform. */
 int dict_int_cmp(const void* k1, const void* k2);
 int dict_uint_cmp(const void* k1, const void* k2);
 int dict_long_cmp(const void* k1, const void* k2);
 int dict_ulong_cmp(const void* k1, const void* k2);
 int dict_ptr_cmp(const void* k1, const void* k2);
 int dict_str_cmp(const void* k1, const void* k2);
+/** FNV-1a hash of a NUL-terminated string, over its bytes in order, so a key
+ * hashes to the same value on every platform. For use as dict_hash_func. */
 unsigned dict_str_hash(const void* str);
 
 END_DECL

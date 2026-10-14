@@ -34,7 +34,7 @@ BEGIN_DECL
 
 typedef struct skiplist skiplist;
 
-/* |max_link| is the number of levels in the list. It is clamped into the
+/** |max_link| is the number of levels in the list. It is clamped into the
  * usable range [2, 32]: a node receives at most max_link - 1 links, so fewer
  * than 2 levels could not link anything. */
 skiplist*       skiplist_new(dict_compare_func cmp_func, unsigned max_link);
@@ -56,7 +56,7 @@ size_t          skiplist_traverse(skiplist* list, dict_visit_func visit, void* u
 size_t          skiplist_count(const skiplist* list);
 bool            skiplist_verify(const skiplist* list);
 
-/* Compute the histogram of link counts of the skiplist.
+/** Compute the histogram of link counts of the skiplist.
  * For 0 <= x < |ncounts|, |counts|[x] will be set to the number of nodes with x
  * links, and the maximal link count will be returned. If the return value is
  * greater than or equal to |ncounts|, not all link counts could be stored in
