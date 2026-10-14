@@ -512,7 +512,7 @@ tree_iterator_datum(void* Iterator)
 void*
 tree_iterator_key_vt(void* Iterator)
 {
-    return (void*)tree_iterator_key(Iterator);
+    return dict_unconst(tree_iterator_key(Iterator));
 }
 
 int

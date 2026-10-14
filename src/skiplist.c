@@ -86,7 +86,7 @@ static bool               vt_skiplist_itor_nextn(void* itor, size_t count)      
 static bool               vt_skiplist_itor_prevn(void* itor, size_t count)                        { return skiplist_itor_prevn(itor, count); }
 static bool               vt_skiplist_itor_first(void* itor)                                      { return skiplist_itor_first(itor); }
 static bool               vt_skiplist_itor_last(void* itor)                                       { return skiplist_itor_last(itor); }
-static void*              vt_skiplist_itor_key(void* itor)                                        { return (void*)skiplist_itor_key(itor); }
+static void*              vt_skiplist_itor_key(void* itor)                                        { return dict_unconst(skiplist_itor_key(itor)); }
 static void**             vt_skiplist_itor_datum(void* itor)                                      { return skiplist_itor_datum(itor); }
 static bool               vt_skiplist_itor_search(void* itor, const void* key)                    { return skiplist_itor_search(itor, key); }
 static bool               vt_skiplist_itor_search_le(void* itor, const void* key)                 { return skiplist_itor_search_le(itor, key); }

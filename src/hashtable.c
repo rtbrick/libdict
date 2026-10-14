@@ -91,7 +91,7 @@ static bool               vt_hashtable_itor_nextn(void* itor, size_t count)     
 static bool               vt_hashtable_itor_prevn(void* itor, size_t count)                        { return hashtable_itor_prevn(itor, count); }
 static bool               vt_hashtable_itor_first(void* itor)                                      { return hashtable_itor_first(itor); }
 static bool               vt_hashtable_itor_last(void* itor)                                       { return hashtable_itor_last(itor); }
-static void*              vt_hashtable_itor_key(void* itor)                                        { return (void*)hashtable_itor_key(itor); }
+static void*              vt_hashtable_itor_key(void* itor)                                        { return dict_unconst(hashtable_itor_key(itor)); }
 static void**             vt_hashtable_itor_datum(void* itor)                                      { return hashtable_itor_datum(itor); }
 static bool               vt_hashtable_itor_search(void* itor, const void* key)                    { return hashtable_itor_search(itor, key); }
 static bool               vt_hashtable_itor_remove(void* itor)                                     { return hashtable_itor_remove(itor); }

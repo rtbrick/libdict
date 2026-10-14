@@ -104,4 +104,9 @@
 extern long random(void);
 static inline unsigned dict_rand() { return (unsigned) random(); }
 
+/* Drop const from a key pointer for the void*-returning dict_key_func slot.
+ * Round-tripping through uintptr_t is well defined and, unlike a direct cast,
+ * does not trigger -Wcast-qual. */
+static inline void* dict_unconst(const void* p) { return (void*)(uintptr_t)p; }
+
 #endif /* !LIBDICT_DICT_PRIVATE_H__ */
