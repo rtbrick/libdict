@@ -15,6 +15,15 @@ struct WordList {
     WordList    *next;
 };
 
+/* The tree owns the keys; the WordList data are freed while iterating, so
+ * only the key is released here. */
+static void
+key_free(void *key, void *datum)
+{
+    (void)datum;
+    free(key);
+}
+
 int
 main(int argc, char *argv[])
 {
@@ -29,37 +38,59 @@ main(int argc, char *argv[])
         exit(1);
     }
 
+    dict_malloc_func = xmalloc;
+
     rb_tree *tree = rb_tree_new(dict_str_cmp);
 
     char buf[512];
     while (fgets(buf, sizeof(buf), fp)) {
-        if (isupper(buf[0]))    /* Disregard proper nouns. */
+        if (isupper((unsigned char) buf[0]))    /* Disregard proper nouns. */
             continue;
 
         strtok(buf, "\r\n");
         int freq[256] = { 0 };
-        memset(freq, 0, sizeof(freq));
-
-        ASSERT(buf[0] != '\0');
 
         for (char *p = buf; *p; p++)
-            freq[tolower(*p)]++;
+            freq[tolower((unsigned char) *p)]++;
+
+        /* The signature encodes each letter count as a single digit, so a
+         * word with ten or more of the same letter cannot be represented
+         * unambiguously; skip it rather than mis-group it. */
+        int representable = 1;
+        for (int i = 1; i < 256; i++) {
+            if (freq[i] > 9) {
+                representable = 0;
+                break;
+            }
+        }
+        if (!representable) {
+            fprintf(stderr, "Skipping '%s': letter repeated 10 or more times.\n",
+                buf);
+            continue;
+        }
 
         char name[1024];
         char *p = name;
         for (int i=1; i<256; i++) {
             if (freq[i]) {
-                ASSERT(freq[i] < 10);
-
                 *p++ = (char) i;
                 *p++ = '0' + (char) freq[i];
             }
         }
         *p = 0;
 
+        char *key = xstrdup(name);
+        dict_insert_result result = rb_tree_insert(tree, key);
+        if (!result.datum_ptr) {
+            free(key);
+            fprintf(stderr, "Insertion failed\n");
+            exit(1);
+        }
+        if (!result.inserted)
+            free(key);      /* The tree kept the pre-existing key. */
         WordList* word = xmalloc(sizeof(*word));
         word->word = xstrdup(buf);
-        WordList** wordp = (WordList**) rb_tree_insert(tree, xstrdup(name)).datum_ptr;
+        WordList** wordp = (WordList**) result.datum_ptr;
         word->next = *wordp;
         *wordp = word;
     }
@@ -87,9 +118,9 @@ main(int argc, char *argv[])
             free(word);
             word = next;
         }
-    } while (rb_itor_next(itor));
+    }
     rb_itor_free(itor);
-    rb_tree_free(tree, NULL);
+    rb_tree_free(tree, key_free);
     fclose(fp);
 
     return 0;
