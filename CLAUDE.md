@@ -185,6 +185,9 @@ native `ubuntu-24.04-arm` runner, and a sanitizer job.
   performance in mind; run `libdict-benchmark` before/after changes to hot paths and
   mention significant regressions.
 - Public API changes need Doxygen comments in the header (docs are published from master).
+  Doxygen only extracts `/** */` comments.
+- Record user-visible changes, especially behaviour changes, under "Unreleased" in
+  `CHANGELOG.md`.
 - Keep changes minimal and focused: one bug, one test, one fix per commit where possible.
 - Before finishing any task, verify: builds with gcc and clang, `ctest` passes,
   sanitizer build passes, no new warnings, public headers unchanged unless intended.
