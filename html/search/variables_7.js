@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['kdictversionstring_0',['kDictVersionString',['../dict_8c.html#aebdce71ca7165e3d22e931f13b3b354e',1,'kDictVersionString:&#160;dict.c'],['../dict_8h.html#aebdce71ca7165e3d22e931f13b3b354e',1,'kDictVersionString:&#160;dict.c']]],
-  ['key_1',['key',['../structhash__node.html#a269110e1860732992f4f6f5514813c75',1,'hash_node::key'],['../structhb__node.html#ab5c000aec752f2206131e183daf5efbf',1,'hb_node::key'],['../structpr__node.html#ab5c000aec752f2206131e183daf5efbf',1,'pr_node::key'],['../structrb__node.html#ab5c000aec752f2206131e183daf5efbf',1,'rb_node::key'],['../structskip__node.html#ab5c000aec752f2206131e183daf5efbf',1,'skip_node::key'],['../structsp__node.html#ab5c000aec752f2206131e183daf5efbf',1,'sp_node::key'],['../structtr__node.html#ab5c000aec752f2206131e183daf5efbf',1,'tr_node::key'],['../structtree__node.html#ab5c000aec752f2206131e183daf5efbf',1,'tree_node::key'],['../structtree__node__base.html#ab5c000aec752f2206131e183daf5efbf',1,'tree_node_base::key'],['../structwb__node.html#ab5c000aec752f2206131e183daf5efbf',1,'wb_node::key'],['../structdict__remove__result.html#ab5c000aec752f2206131e183daf5efbf',1,'dict_remove_result::key'],['../structitor__vtable.html#a236dbeefa21b31029d1e4828126988c5',1,'itor_vtable::key']]]
+  ['ifree_0',['ifree',['../structitor__vtable.html#a0b552f64916cddfb5d1974dcf2afd510',1,'itor_vtable']]],
+  ['inew_1',['inew',['../structdict__vtable.html#accc47e6d4e080bda45cbd10177d06f9b',1,'dict_vtable']]],
+  ['insert_2',['insert',['../structdict__vtable.html#a841c55da488714c38f761e78e449fcb0',1,'dict_vtable']]],
+  ['inserted_3',['inserted',['../structdict__insert__result.html#a325385b8d6787835cb03a2f364ab2c56',1,'dict_insert_result']]],
+  ['invalid_4',['invalid',['../structitor__vtable.html#ae27a265a0e2d12bd857104499a4da018',1,'itor_vtable']]],
+  ['items_5',['items',['../structnode__stack.html#a132153225fed92146dce6efed8a9d35f',1,'node_stack']]]
 ];

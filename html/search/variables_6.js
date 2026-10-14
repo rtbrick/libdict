@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['ifree_0',['ifree',['../structitor__vtable.html#a0b552f64916cddfb5d1974dcf2afd510',1,'itor_vtable']]],
-  ['inew_1',['inew',['../structdict__vtable.html#accc47e6d4e080bda45cbd10177d06f9b',1,'dict_vtable']]],
-  ['insert_2',['insert',['../structdict__vtable.html#a841c55da488714c38f761e78e449fcb0',1,'dict_vtable']]],
-  ['inserted_3',['inserted',['../structdict__insert__result.html#a325385b8d6787835cb03a2f364ab2c56',1,'dict_insert_result']]],
-  ['invalid_4',['invalid',['../structitor__vtable.html#ae27a265a0e2d12bd857104499a4da018',1,'itor_vtable']]]
+  ['hash_0',['hash',['../structhash__node.html#a1528ad8c92b5bb97aac6de4360a6e16f',1,'hash_node']]],
+  ['hash_5ffunc_1',['hash_func',['../structhashtable.html#afcbf6b4ca50c87e70ae1ae4febfdff2f',1,'hashtable::hash_func'],['../structhashtable2.html#afcbf6b4ca50c87e70ae1ae4febfdff2f',1,'hashtable2::hash_func']]],
+  ['head_2',['head',['../structskiplist.html#a100e90aa60de0591e29864fef4ba2baf',1,'skiplist']]]
 ];

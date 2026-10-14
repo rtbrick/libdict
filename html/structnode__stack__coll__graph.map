@@ -1,0 +1,8 @@
+<map id="node_stack" name="node_stack">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,202,94,228"/>
+<area shape="rect" id="Node000002" href="$structnode__depth.html" title=" " alt="" coords="5,113,94,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,155,52,202,47,202,47,155"/>
+<area shape="rect" id="Node000003" href="$structtree__node.html" title=" " alt="" coords="10,15,89,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="52,57,52,113,47,113,47,57"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="105,17,112,21,115,28,107,38,89,41,89,35,105,33,110,27,108,25,103,22"/>
+</map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['weight_0',['weight',['../structpr__node.html#a72e70550dea6ad3694160a3d35dd932f',1,'pr_node::weight'],['../structwb__node.html#a81c1ee5114e7b2d69dcb6fa7c92a0430',1,'wb_node::weight']]]
+  ['valid_0',['valid',['../structitor__vtable.html#a2de3a49ad4c09cd57630c00441a0b884',1,'itor_vtable']]],
+  ['verify_1',['verify',['../structdict__vtable.html#a8cee39f73df4b25654a6d9c96ea0efbf',1,'dict_vtable']]]
 ];

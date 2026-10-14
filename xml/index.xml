@@ -47,6 +47,7 @@
     <member refid="structhashtable_1afcbf6b4ca50c87e70ae1ae4febfdff2f" kind="variable"><name>hash_func</name></member>
     <member refid="structhashtable_1a76d971a3c552bc58ba9f0d5fceae9806" kind="variable"><name>count</name></member>
     <member refid="structhashtable_1a245260f6f74972558f61b85227df5aae" kind="variable"><name>size</name></member>
+    <member refid="structhashtable_1a63901752e04d36273e0dee15022d7983" kind="variable"><name>gen</name></member>
   </compound>
   <compound refid="structhashtable2" kind="struct"><name>hashtable2</name>
     <member refid="structhashtable2_1a76d971a3c552bc58ba9f0d5fceae9806" kind="variable"><name>count</name></member>
@@ -54,15 +55,18 @@
     <member refid="structhashtable2_1afcbf6b4ca50c87e70ae1ae4febfdff2f" kind="variable"><name>hash_func</name></member>
     <member refid="structhashtable2_1a653e97fd0c756741d6c277dd97afede8" kind="variable"><name>table</name></member>
     <member refid="structhashtable2_1a245260f6f74972558f61b85227df5aae" kind="variable"><name>size</name></member>
+    <member refid="structhashtable2_1a63901752e04d36273e0dee15022d7983" kind="variable"><name>gen</name></member>
   </compound>
   <compound refid="structhashtable2__itor" kind="struct"><name>hashtable2_itor</name>
     <member refid="structhashtable2__itor_1ac39287fa1fbff323f1764c7902c9e718" kind="variable"><name>table</name></member>
     <member refid="structhashtable2__itor_1a83d6e2127b4cc5e01f2012608487d31a" kind="variable"><name>slot</name></member>
+    <member refid="structhashtable2__itor_1a63901752e04d36273e0dee15022d7983" kind="variable"><name>gen</name></member>
   </compound>
   <compound refid="structhashtable__itor" kind="struct"><name>hashtable_itor</name>
     <member refid="structhashtable__itor_1a1c2725966eac16e4eb85ec20276be313" kind="variable"><name>table</name></member>
     <member refid="structhashtable__itor_1ac132a6acabd26ddbcea7c8d00fd5b68f" kind="variable"><name>node</name></member>
     <member refid="structhashtable__itor_1a10d37451a519c4fc6326acbdf8856451" kind="variable"><name>slot</name></member>
+    <member refid="structhashtable__itor_1a63901752e04d36273e0dee15022d7983" kind="variable"><name>gen</name></member>
   </compound>
   <compound refid="structhb__itor" kind="struct"><name>hb_itor</name>
     <member refid="structhb__itor_1a024a8670718387a22dc8053590c48176" kind="variable"><name>tree</name></member>
@@ -102,6 +106,15 @@
     <member refid="structitor__vtable_1ae1bf0ee260c1d73bfcaf908383a48b18" kind="variable"><name>search_gt</name></member>
     <member refid="structitor__vtable_1acdfb3e51a6abaca9365c410f913fe10f" kind="variable"><name>remove</name></member>
     <member refid="structitor__vtable_1a565493a9952194060c3594db8745a560" kind="variable"><name>compare</name></member>
+  </compound>
+  <compound refid="structnode__depth" kind="struct"><name>node_depth</name>
+    <member refid="structnode__depth_1af55cdc6bc322bf675fb4ca637f6a57a1" kind="variable"><name>node</name></member>
+    <member refid="structnode__depth_1a820c167ceaaa9759b0ca2695d22db55c" kind="variable"><name>depth</name></member>
+  </compound>
+  <compound refid="structnode__stack" kind="struct"><name>node_stack</name>
+    <member refid="structnode__stack_1a132153225fed92146dce6efed8a9d35f" kind="variable"><name>items</name></member>
+    <member refid="structnode__stack_1a854352f53b148adc24983a58a1866d66" kind="variable"><name>size</name></member>
+    <member refid="structnode__stack_1ad721fc6ca6a3d6ba3bc506576622aab0" kind="variable"><name>capacity</name></member>
   </compound>
   <compound refid="structpr__itor" kind="struct"><name>pr_itor</name>
     <member refid="structpr__itor_1a0e42d341d4cb4d8aa99bd66d8a5877dd" kind="variable"><name>tree</name></member>
@@ -409,7 +422,7 @@
     <member refid="hb__tree_8h_1abacf1587193dd266718afcc29a909728" kind="function"><name>hb_tree_verify</name></member>
     <member refid="hb__tree_8h_1a3b953aabe2e0cc553e89b59d5f308607" kind="function"><name>hb_itor_new</name></member>
     <member refid="hb__tree_8h_1a0636536d77902f633b4a7cad46bd3fed" kind="function"><name>hb_dict_itor_new</name></member>
-    <member refid="hb__tree_8h_1a81460798e9da8681d4d030d608561005" kind="function"><name>hb_itor_free</name></member>
+    <member refid="hb__tree_8h_1a305fa65b9c801f56f0c981a60b421943" kind="function"><name>hb_itor_free</name></member>
     <member refid="hb__tree_8h_1a60e945547a822605b87a874fe84f36f9" kind="function"><name>hb_itor_valid</name></member>
     <member refid="hb__tree_8h_1a5aa40cf9743b020d1a9096856f5ee49d" kind="function"><name>hb_itor_invalidate</name></member>
     <member refid="hb__tree_8h_1aa03cde1152fd7f57d4dbc96082aed683" kind="function"><name>hb_itor_next</name></member>
@@ -451,7 +464,7 @@
     <member refid="pr__tree_8h_1ae3a3c1c743cb2c3fdfbaac2befcf3c5e" kind="function"><name>pr_tree_verify</name></member>
     <member refid="pr__tree_8h_1ae8398f448c6c0c7555d38840cba7bb55" kind="function"><name>pr_itor_new</name></member>
     <member refid="pr__tree_8h_1a34060218131e6e94fea3533d268f03a9" kind="function"><name>pr_dict_itor_new</name></member>
-    <member refid="pr__tree_8h_1ab1f4e7a7a186e27d63269f7f40bbbb88" kind="function"><name>pr_itor_free</name></member>
+    <member refid="pr__tree_8h_1a5486c7c9fe121ec615a4e53176228eed" kind="function"><name>pr_itor_free</name></member>
     <member refid="pr__tree_8h_1a5e728838fdbe2fea666faae2bfe82a1d" kind="function"><name>pr_itor_valid</name></member>
     <member refid="pr__tree_8h_1aed5a10ede70733395106c6b749d7647a" kind="function"><name>pr_itor_invalidate</name></member>
     <member refid="pr__tree_8h_1a33078fbea87a49fd5d36c3d65b41b784" kind="function"><name>pr_itor_next</name></member>
@@ -493,7 +506,7 @@
     <member refid="rb__tree_8h_1ab5f358cd3fc473153a486aa394367aa5" kind="function"><name>rb_tree_verify</name></member>
     <member refid="rb__tree_8h_1a5b8d3d3eb399c02c815d24bc1bc7cb35" kind="function"><name>rb_itor_new</name></member>
     <member refid="rb__tree_8h_1a2b40ed7b405e2b28271da7f26f04789b" kind="function"><name>rb_dict_itor_new</name></member>
-    <member refid="rb__tree_8h_1ab87e5e22f1e91b8b4c4236eb3d11ef95" kind="function"><name>rb_itor_free</name></member>
+    <member refid="rb__tree_8h_1a8be4761e630cd2a0dc3ac0d0ed0bf498" kind="function"><name>rb_itor_free</name></member>
     <member refid="rb__tree_8h_1a1eec6338f4eb24421b4556a65dd8937f" kind="function"><name>rb_itor_valid</name></member>
     <member refid="rb__tree_8h_1a49c9c4d5489be20c7bbf27ea84df4755" kind="function"><name>rb_itor_invalidate</name></member>
     <member refid="rb__tree_8h_1a1d0ba0959571c5479c902f3296d1c826" kind="function"><name>rb_itor_next</name></member>
@@ -532,7 +545,7 @@
     <member refid="skiplist_8h_1af9d82cffc987f421df8743706ac80538" kind="function"><name>skiplist_link_count_histogram</name></member>
     <member refid="skiplist_8h_1adbe33aa562dee4fa3e409b3544203780" kind="function"><name>skiplist_itor_new</name></member>
     <member refid="skiplist_8h_1ab465d5aeebddd87b8a4bdb07b5eb0fd0" kind="function"><name>skiplist_dict_itor_new</name></member>
-    <member refid="skiplist_8h_1a0038797e29797bdb7ccd59e33f9e65a0" kind="function"><name>skiplist_itor_free</name></member>
+    <member refid="skiplist_8h_1ad31dfafa1f916757efc48eb41f4040f1" kind="function"><name>skiplist_itor_free</name></member>
     <member refid="skiplist_8h_1a8c9a8ef464827a0ae56e66063b632b02" kind="function"><name>skiplist_itor_valid</name></member>
     <member refid="skiplist_8h_1a83a1a0a8199354a84a74bc69785d48d2" kind="function"><name>skiplist_itor_invalidate</name></member>
     <member refid="skiplist_8h_1a6b16e0f86c1a718837212ec494dc639d" kind="function"><name>skiplist_itor_next</name></member>
@@ -574,7 +587,7 @@
     <member refid="sp__tree_8h_1abff88ebfaaba6159ca254c41c5f2e128" kind="function"><name>sp_tree_verify</name></member>
     <member refid="sp__tree_8h_1a4f2d401aa5cda05fc2d1f74e5ae62677" kind="function"><name>sp_itor_new</name></member>
     <member refid="sp__tree_8h_1a7ffd78dd7a34ea39753d59a14b033e14" kind="function"><name>sp_dict_itor_new</name></member>
-    <member refid="sp__tree_8h_1a0df269d6d13ae6e5d40ee396bf9739a6" kind="function"><name>sp_itor_free</name></member>
+    <member refid="sp__tree_8h_1a4149e8d78168dc0e2d225944d7d2f672" kind="function"><name>sp_itor_free</name></member>
     <member refid="sp__tree_8h_1ab9c244698889f3b8d3a9c4fce90e1060" kind="function"><name>sp_itor_valid</name></member>
     <member refid="sp__tree_8h_1a9d080146ed7720bfa237111611caa970" kind="function"><name>sp_itor_invalidate</name></member>
     <member refid="sp__tree_8h_1a5ec031c6c4bf789b0391bce36c664dc3" kind="function"><name>sp_itor_next</name></member>
@@ -616,7 +629,7 @@
     <member refid="tr__tree_8h_1acb4c734f0994b7eadedde0e1c9a3809a" kind="function"><name>tr_tree_verify</name></member>
     <member refid="tr__tree_8h_1a83f90deca79342a7693b461a51af5552" kind="function"><name>tr_itor_new</name></member>
     <member refid="tr__tree_8h_1a16c009f729f369a25e74f8d71e4d04e4" kind="function"><name>tr_dict_itor_new</name></member>
-    <member refid="tr__tree_8h_1a0d33be2ae7dd13a2c1517f7141e9fc0f" kind="function"><name>tr_itor_free</name></member>
+    <member refid="tr__tree_8h_1ad2e0654f35bcfd2b4b2d3214599adc68" kind="function"><name>tr_itor_free</name></member>
     <member refid="tr__tree_8h_1ac4bafa502b5ed7d8f92b3f917d7464fb" kind="function"><name>tr_itor_valid</name></member>
     <member refid="tr__tree_8h_1a37970eecfadd85fbcd621b2fddbda176" kind="function"><name>tr_itor_invalidate</name></member>
     <member refid="tr__tree_8h_1a6a6b39591a7036d82998fe5012b79e94" kind="function"><name>tr_itor_next</name></member>
@@ -658,7 +671,7 @@
     <member refid="wb__tree_8h_1a817ec8c3de389dcba19fa0fbd6e719f2" kind="function"><name>wb_tree_verify</name></member>
     <member refid="wb__tree_8h_1ad6ec8c7c6c7ed74c04cd2380597e999c" kind="function"><name>wb_itor_new</name></member>
     <member refid="wb__tree_8h_1a66f125a277aa553c123e2489c680c4e4" kind="function"><name>wb_dict_itor_new</name></member>
-    <member refid="wb__tree_8h_1a5450092be0ca0ed0c1e8be22846e6d3d" kind="function"><name>wb_itor_free</name></member>
+    <member refid="wb__tree_8h_1a11a9b8595b328b3b2c2758cb1efa98a4" kind="function"><name>wb_itor_free</name></member>
     <member refid="wb__tree_8h_1ab954259febd4e147facc6c586ebbf7b7" kind="function"><name>wb_itor_valid</name></member>
     <member refid="wb__tree_8h_1aa3ead63bfafe567b78dc86abd591feaa" kind="function"><name>wb_itor_invalidate</name></member>
     <member refid="wb__tree_8h_1ac7eb41b7cf280538f88dff5617154c50" kind="function"><name>wb_itor_next</name></member>
@@ -706,8 +719,12 @@
     <member refid="dict__private_8h_1ab342a6196c058644c297e3c191c6e4e4" kind="define"><name>SWAP</name></member>
     <member refid="dict__private_8h_1a451bf468f4bb265aba601ce6e6a29969" kind="define"><name>GCC_INLINE</name></member>
     <member refid="dict__private_8h_1a12d694562e578998ac23889a81e2df58" kind="define"><name>GCC_CONST</name></member>
+    <member refid="dict__private_8h_1a57a254843f0ac97ef1e495eb47ca6e7c" kind="define"><name>DICT_RAND_BITS</name></member>
     <member refid="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" kind="function"><name>random</name></member>
-    <member refid="dict__private_8h_1a419e929fe2cc7ac7cd90accf60b09682" kind="function"><name>dict_rand</name></member>
+    <member refid="dict__private_8h_1ad8698eff86b8975dd4a7998f28c69e74" kind="function"><name>dict_rand</name></member>
+    <member refid="dict__private_8h_1a3273405a40a3b68dbfd54ec49e375352" kind="function"><name>dict_ctz</name></member>
+    <member refid="dict__private_8h_1a0d5ec752776429ac995f874739a2301c" kind="function"><name>dict_malloc_array</name></member>
+    <member refid="dict__private_8h_1a514c5edf614187638591069f25ebb0f3" kind="function"><name>dict_unconst</name></member>
   </compound>
   <compound refid="hashtable_8c" kind="file"><name>hashtable.c</name>
     <member refid="hashtable_8c_1a24e21f497bc214e2c211c4bed541bdf8" kind="define"><name>LOADFACTOR_NUMERATOR</name></member>
@@ -715,6 +732,28 @@
     <member refid="hashtable_8c_1a4a37dff778daa13ddb34cd8e4ef1a129" kind="typedef"><name>hash_node</name></member>
     <member refid="hashtable_8c_1a2051a341f7fb6b2beaffa057dc6ccfbc" kind="variable"><name>hashtable_vtable</name></member>
     <member refid="hashtable_8c_1a5b83e2962aa102d43c6eca25bbca701f" kind="variable"><name>hashtable_itor_vtable</name></member>
+    <member refid="hashtable_8c_1a50a90feff3020593acfa7783e68477b2" kind="function"><name>vt_hashtable_dict_itor_new</name></member>
+    <member refid="hashtable_8c_1ac1f08f8ed07e405a6f713c8c2827eb0d" kind="function"><name>vt_hashtable_free</name></member>
+    <member refid="hashtable_8c_1a8f28768b39ab00f6558f8fdc6576b3bb" kind="function"><name>vt_hashtable_insert</name></member>
+    <member refid="hashtable_8c_1abc7aca0f9c30ecf755912d19b2e48198" kind="function"><name>vt_hashtable_search</name></member>
+    <member refid="hashtable_8c_1abb867343cc199ac0ef634e8b04db1ce1" kind="function"><name>vt_hashtable_remove</name></member>
+    <member refid="hashtable_8c_1ac142f450e76df84f5f5426cfa7a49945" kind="function"><name>vt_hashtable_clear</name></member>
+    <member refid="hashtable_8c_1a1648749d9207bf01cdde25abbcc25de7" kind="function"><name>vt_hashtable_traverse</name></member>
+    <member refid="hashtable_8c_1a41b5d019f312fe989cd3edfb107fc7b4" kind="function"><name>vt_hashtable_count</name></member>
+    <member refid="hashtable_8c_1ad62fbf19fcda7ed32992bbda386676c2" kind="function"><name>vt_hashtable_verify</name></member>
+    <member refid="hashtable_8c_1ac09b607020a4ebb7adc7d1aaffa54837" kind="function"><name>vt_hashtable_itor_free</name></member>
+    <member refid="hashtable_8c_1a030a0eef376b3e8006abf85cf039916f" kind="function"><name>vt_hashtable_itor_valid</name></member>
+    <member refid="hashtable_8c_1affc462abca43b96d390008f14656900e" kind="function"><name>vt_hashtable_itor_invalidate</name></member>
+    <member refid="hashtable_8c_1a034722052dd437ae0cd2b0dfc857155f" kind="function"><name>vt_hashtable_itor_next</name></member>
+    <member refid="hashtable_8c_1a1acb36ad624285192b53c26172e4689e" kind="function"><name>vt_hashtable_itor_prev</name></member>
+    <member refid="hashtable_8c_1a3cd01b805381bb795352acd39e8ac056" kind="function"><name>vt_hashtable_itor_nextn</name></member>
+    <member refid="hashtable_8c_1af98f82540246a953896c8e2582a92898" kind="function"><name>vt_hashtable_itor_prevn</name></member>
+    <member refid="hashtable_8c_1a4edbbe0588c258b1061f62f2cea9c873" kind="function"><name>vt_hashtable_itor_first</name></member>
+    <member refid="hashtable_8c_1aa4665f26620551391b6b228602cafeff" kind="function"><name>vt_hashtable_itor_last</name></member>
+    <member refid="hashtable_8c_1ac0d6651efeb8b7c449155b791d21b3a7" kind="function"><name>vt_hashtable_itor_key</name></member>
+    <member refid="hashtable_8c_1a7aee3b7dbc2fafa73c6e6323359a534a" kind="function"><name>vt_hashtable_itor_datum</name></member>
+    <member refid="hashtable_8c_1a35e7f536f6c655d8ebffafe3a6f95658" kind="function"><name>vt_hashtable_itor_search</name></member>
+    <member refid="hashtable_8c_1af4564151bf623104fabe1a186ac9a19e" kind="function"><name>vt_hashtable_itor_remove</name></member>
     <member refid="hashtable_8c_1af455c560cff947a8088f557ab119795a" kind="function"><name>hashtable_new</name></member>
     <member refid="hashtable_8c_1abbe4b0247e04c69486fe907df6b34849" kind="function"><name>hashtable_dict_new</name></member>
     <member refid="hashtable_8c_1a24bb5d1cc6d174e890eebcfbf4ecf4ee" kind="function"><name>hashtable_free</name></member>
@@ -732,6 +771,8 @@
     <member refid="hashtable_8c_1a42ef1560386cd5b2ed4bbda89066305a" kind="function"><name>hashtable_itor_new</name></member>
     <member refid="hashtable_8c_1a395e03d6fb1a673dacfa87784d9c1bba" kind="function"><name>hashtable_dict_itor_new</name></member>
     <member refid="hashtable_8c_1a8ac2a4cbf94617859785461561ac6641" kind="function"><name>hashtable_itor_free</name></member>
+    <member refid="hashtable_8c_1ae3ce30535be8c4ad626138d2f9e24ca8" kind="function"><name>itor_stale</name></member>
+    <member refid="hashtable_8c_1acef5ca3626e2ea5e2c1c1cf61eb07db6" kind="function"><name>itor_check</name></member>
     <member refid="hashtable_8c_1abefb05d066d3a1c9183bf8104667bce9" kind="function"><name>hashtable_itor_valid</name></member>
     <member refid="hashtable_8c_1ab22306e18adca4372e681f440d9f15bd" kind="function"><name>hashtable_itor_invalidate</name></member>
     <member refid="hashtable_8c_1a4640047b70788f6af358e36e4a35ecdd" kind="function"><name>hashtable_itor_next</name></member>
@@ -750,6 +791,28 @@
     <member refid="hashtable2_8c_1a58651144f26400509df7a63f76c972c9" kind="define"><name>LOADFACTOR_DENOMINATOR</name></member>
     <member refid="hashtable2_8c_1a1c33bed2d1996ebfbb81a841f3439393" kind="variable"><name>hashtable2_vtable</name></member>
     <member refid="hashtable2_8c_1aeb6d49a24931b3fc47e240e4dd0e5a6b" kind="variable"><name>hashtable2_itor_vtable</name></member>
+    <member refid="hashtable2_8c_1ac4debb3857c84585f3f9c698a215b623" kind="function"><name>vt_hashtable2_dict_itor_new</name></member>
+    <member refid="hashtable2_8c_1af705e50323c450f94885512e5c606137" kind="function"><name>vt_hashtable2_free</name></member>
+    <member refid="hashtable2_8c_1a3a97d0d075088856883c97250bef0ba4" kind="function"><name>vt_hashtable2_insert</name></member>
+    <member refid="hashtable2_8c_1a81677c3d4ee77f21b672adb41cf1a0d6" kind="function"><name>vt_hashtable2_search</name></member>
+    <member refid="hashtable2_8c_1afcdf7322f51de2b35e213d29799af93b" kind="function"><name>vt_hashtable2_remove</name></member>
+    <member refid="hashtable2_8c_1a589293db0d898d2809b2cb2e716f1d4a" kind="function"><name>vt_hashtable2_clear</name></member>
+    <member refid="hashtable2_8c_1a5f2da139118e5464dd06ed881e38eb7b" kind="function"><name>vt_hashtable2_traverse</name></member>
+    <member refid="hashtable2_8c_1aae97c047d4df6727501ace786945bac4" kind="function"><name>vt_hashtable2_count</name></member>
+    <member refid="hashtable2_8c_1ae5c66ebbadd774c86b865998f0f32263" kind="function"><name>vt_hashtable2_verify</name></member>
+    <member refid="hashtable2_8c_1acb805cc6e6fce7b5f358b5b1b60a7745" kind="function"><name>vt_hashtable2_itor_free</name></member>
+    <member refid="hashtable2_8c_1ae3157193ba5e9fe620ba5a277b87b488" kind="function"><name>vt_hashtable2_itor_valid</name></member>
+    <member refid="hashtable2_8c_1a7518592aa0ddd934ac21c1e90bae2332" kind="function"><name>vt_hashtable2_itor_invalidate</name></member>
+    <member refid="hashtable2_8c_1aab62ecdd49d8bee03d12cd888e902894" kind="function"><name>vt_hashtable2_itor_next</name></member>
+    <member refid="hashtable2_8c_1af58636eaf186fc92c670a625c73b922e" kind="function"><name>vt_hashtable2_itor_prev</name></member>
+    <member refid="hashtable2_8c_1a8f2549492f82b59e1f4c6bba22e3bd33" kind="function"><name>vt_hashtable2_itor_nextn</name></member>
+    <member refid="hashtable2_8c_1a89f3b5bd4b2c3e467053866754d837e1" kind="function"><name>vt_hashtable2_itor_prevn</name></member>
+    <member refid="hashtable2_8c_1a7e769d9a44691fb698f1d17b77cbcc92" kind="function"><name>vt_hashtable2_itor_first</name></member>
+    <member refid="hashtable2_8c_1af771215f8c947f8b7a3cd7ec878bdf34" kind="function"><name>vt_hashtable2_itor_last</name></member>
+    <member refid="hashtable2_8c_1a12f29d617dd896d9a71ccf7728d35860" kind="function"><name>vt_hashtable2_itor_key</name></member>
+    <member refid="hashtable2_8c_1abfa04dff3053d86e5b6449e72ea31bfe" kind="function"><name>vt_hashtable2_itor_datum</name></member>
+    <member refid="hashtable2_8c_1a9927c21dc65a8935eae14e49c672b1a6" kind="function"><name>vt_hashtable2_itor_search</name></member>
+    <member refid="hashtable2_8c_1a6c593aff5eefcbca76276ecefe99d23e" kind="function"><name>vt_hashtable2_itor_remove</name></member>
     <member refid="hashtable2_8c_1a840e984b3c37be780f2cd0e054513e62" kind="function"><name>hashtable2_new</name></member>
     <member refid="hashtable2_8c_1afb856415818c346738023a60f2bc2015" kind="function"><name>hashtable2_dict_new</name></member>
     <member refid="hashtable2_8c_1a25f09fa1be9712c4837e1d8df24155ee" kind="function"><name>hashtable2_free</name></member>
@@ -770,6 +833,8 @@
     <member refid="hashtable2_8c_1a0c15f24c3e187b1c121a051ef62b8e43" kind="function"><name>hashtable2_itor_new</name></member>
     <member refid="hashtable2_8c_1a0ff5cf294222a238e6d3e51a2ba4dd3d" kind="function"><name>hashtable2_dict_itor_new</name></member>
     <member refid="hashtable2_8c_1aa32b8b4ebed701351a7d4463c5f28dca" kind="function"><name>hashtable2_itor_free</name></member>
+    <member refid="hashtable2_8c_1a0d51ce2a5e6cad19bc796c991d0b2bcf" kind="function"><name>itor_stale</name></member>
+    <member refid="hashtable2_8c_1a3db69acccba5eb04847c720f8fe95c41" kind="function"><name>itor_check</name></member>
     <member refid="hashtable2_8c_1a2d78df14e4791b628483129358ffab7c" kind="function"><name>hashtable2_itor_valid</name></member>
     <member refid="hashtable2_8c_1a7d7262bb936836d3456bae0c279503c8" kind="function"><name>hashtable2_itor_invalidate</name></member>
     <member refid="hashtable2_8c_1adbbfc37e889dffca71d67c12e29562b8" kind="function"><name>hashtable2_itor_next</name></member>
@@ -799,10 +864,23 @@
     <member refid="hb__tree_8c_1a2b28587da28d5a69716732a2a3ad3f16" kind="typedef"><name>hb_node</name></member>
     <member refid="hb__tree_8c_1a511fd79154b23dda6d30b0114aea43bc" kind="variable"><name>hb_tree_vtable</name></member>
     <member refid="hb__tree_8c_1a28e74c84ff8a76a3a68e5a7252a91ff8" kind="variable"><name>hb_tree_itor_vtable</name></member>
+    <member refid="hb__tree_8c_1a9b9dd89b8b6c0a230478be522a8ccf16" kind="function"><name>vt_hb_dict_itor_new</name></member>
+    <member refid="hb__tree_8c_1acefbc77089df3eb8c25e4ebe19077d5b" kind="function"><name>vt_hb_tree_free</name></member>
+    <member refid="hb__tree_8c_1a14972d141d135c60f13bf54eebc2de76" kind="function"><name>vt_hb_tree_insert</name></member>
+    <member refid="hb__tree_8c_1adce72ac87fcd9fe1843dce11d484eca2" kind="function"><name>vt_hb_tree_remove</name></member>
+    <member refid="hb__tree_8c_1a57c6326ff298d881f9bb05c77a56ebfa" kind="function"><name>vt_hb_tree_clear</name></member>
+    <member refid="hb__tree_8c_1a5e67c313f010b0fef0132d55b5daf56f" kind="function"><name>vt_hb_tree_traverse</name></member>
+    <member refid="hb__tree_8c_1ac81c2dd96e5ace8fadef109d19fe9cba" kind="function"><name>vt_hb_tree_select</name></member>
+    <member refid="hb__tree_8c_1a667de53bef115db3f27d94973d9982f6" kind="function"><name>vt_hb_tree_verify</name></member>
+    <member refid="hb__tree_8c_1a62ffa63508266e3de803b4daef11e632" kind="function"><name>vt_hb_itor_next</name></member>
+    <member refid="hb__tree_8c_1afa618616588fffac4fc51efb448b9777" kind="function"><name>vt_hb_itor_prev</name></member>
+    <member refid="hb__tree_8c_1aa647d05271ef59db02099bd18826a6e8" kind="function"><name>vt_hb_itor_nextn</name></member>
+    <member refid="hb__tree_8c_1a14f20485641b5331c0f43b1ba01cf7ce" kind="function"><name>vt_hb_itor_prevn</name></member>
+    <member refid="hb__tree_8c_1a36f8564ed9af49dfbfd48375b7808636" kind="function"><name>vt_hb_itor_remove</name></member>
     <member refid="hb__tree_8c_1a77740c5ae948597c00ff7acd45171d24" kind="function"><name>node_prev</name></member>
     <member refid="hb__tree_8c_1a9a63d92ccb5a0225359c76871daf08cd" kind="function"><name>node_next</name></member>
     <member refid="hb__tree_8c_1a5f1b305b183100549497f9c93941b1e2" kind="function"><name>node_new</name></member>
-    <member refid="hb__tree_8c_1a512103981e7c82c47d8d761b128a5fae" kind="function"><name>node_verify</name></member>
+    <member refid="hb__tree_8c_1a8e93f8e6002f4e86a6bc3b8d3e830d5e" kind="function"><name>node_verify</name></member>
     <member refid="hb__tree_8c_1a57b5dfeb404aaf4d90547bd39751d635" kind="function"><name>hb_tree_new</name></member>
     <member refid="hb__tree_8c_1a2e1c00512efdc460239efbbf3199c78e" kind="function"><name>hb_dict_new</name></member>
     <member refid="hb__tree_8c_1a835fc4b0757a7447a0ab302117a101a4" kind="function"><name>hb_tree_free</name></member>
@@ -852,6 +930,12 @@
     <member refid="pr__tree_8c_1a9c99a7afdc595f4bf162db44d8375630" kind="typedef"><name>pr_node</name></member>
     <member refid="pr__tree_8c_1ae0e5307ac933d9aece1ae4e1ffd4eb9d" kind="variable"><name>pr_tree_vtable</name></member>
     <member refid="pr__tree_8c_1add77cbb0895aeea08742c4894f2d9da6" kind="variable"><name>pr_tree_itor_vtable</name></member>
+    <member refid="pr__tree_8c_1af78c231d1c1afbe13f8c72e2f2b8736a" kind="function"><name>vt_pr_dict_itor_new</name></member>
+    <member refid="pr__tree_8c_1ad37448d44cecbb9086fa9de41493f1c7" kind="function"><name>vt_pr_tree_insert</name></member>
+    <member refid="pr__tree_8c_1a08cc89ecd5ddc5e0d1cb74609466bb99" kind="function"><name>vt_pr_tree_remove</name></member>
+    <member refid="pr__tree_8c_1a17fd904ef299eedeafc820045c5d3fd7" kind="function"><name>vt_pr_tree_select</name></member>
+    <member refid="pr__tree_8c_1ad51fbf10f5ce2e683b2d7d51a9d9ed09" kind="function"><name>vt_pr_tree_verify</name></member>
+    <member refid="pr__tree_8c_1a9124d1d956cc548c78563c1de5dccbc9" kind="function"><name>vt_pr_itor_remove</name></member>
     <member refid="pr__tree_8c_1a9ef53aba3623a85774d1060a6c585136" kind="function"><name>fixup</name></member>
     <member refid="pr__tree_8c_1a1db5a6e5246dadf594eb5a148d3011e0" kind="function"><name>rot_left</name></member>
     <member refid="pr__tree_8c_1a048ff32d213c4691e45aee8f0f959b30" kind="function"><name>rot_right</name></member>
@@ -874,7 +958,7 @@
     <member refid="pr__tree_8c_1a0a8f3a4bfb2749b87517fa08971ca3da" kind="function"><name>pr_tree_max_path_length</name></member>
     <member refid="pr__tree_8c_1a813fe6b4373aebdf8d7eeeb8f022afd3" kind="function"><name>pr_tree_min_path_length</name></member>
     <member refid="pr__tree_8c_1acdf0fc6fc9b122418083888333b7ccda" kind="function"><name>pr_tree_total_path_length</name></member>
-    <member refid="pr__tree_8c_1a8fef683caa65c32f1b6662ef8a2d6cd1" kind="function"><name>node_verify</name></member>
+    <member refid="pr__tree_8c_1a5d2724fa18df027ae22fe754d1b70e27" kind="function"><name>node_verify</name></member>
     <member refid="pr__tree_8c_1ae3a3c1c743cb2c3fdfbaac2befcf3c5e" kind="function"><name>pr_tree_verify</name></member>
     <member refid="pr__tree_8c_1ae8398f448c6c0c7555d38840cba7bb55" kind="function"><name>pr_itor_new</name></member>
     <member refid="pr__tree_8c_1a34060218131e6e94fea3533d268f03a9" kind="function"><name>pr_dict_itor_new</name></member>
@@ -908,6 +992,31 @@
     <member refid="rb__tree_8c_1a3debd163d7696f113822817ea5f74d63" kind="typedef"><name>rb_node</name></member>
     <member refid="rb__tree_8c_1a3cf01baf14dac893e481acd0d731570f" kind="variable"><name>rb_tree_vtable</name></member>
     <member refid="rb__tree_8c_1a6bf25b6b99105ab504f5bf7fb9a9ef0e" kind="variable"><name>rb_tree_itor_vtable</name></member>
+    <member refid="rb__tree_8c_1a3564e97081c3eb5d6f4f4a5e75d98e1b" kind="function"><name>vt_rb_dict_itor_new</name></member>
+    <member refid="rb__tree_8c_1a6da13262b2c8cf9fd32673ac9851afe9" kind="function"><name>vt_rb_tree_free</name></member>
+    <member refid="rb__tree_8c_1a085e0b6e19f7bbcc6caf5f356e8f7235" kind="function"><name>vt_rb_tree_insert</name></member>
+    <member refid="rb__tree_8c_1a6603adf96e2b0e1ebbad9e52528f812d" kind="function"><name>vt_rb_tree_remove</name></member>
+    <member refid="rb__tree_8c_1aae101498e88b2c1fcedfde810769c3d2" kind="function"><name>vt_rb_tree_clear</name></member>
+    <member refid="rb__tree_8c_1a16a54a46628c374cd424696d8c19a24b" kind="function"><name>vt_rb_tree_traverse</name></member>
+    <member refid="rb__tree_8c_1afdd5a937daa3368afc08dd91b6f39344" kind="function"><name>vt_rb_tree_select</name></member>
+    <member refid="rb__tree_8c_1a8c6998b0884abeb7689aaa042a35f7c3" kind="function"><name>vt_rb_tree_verify</name></member>
+    <member refid="rb__tree_8c_1add544f66cf038fa36409ec02e0d52a64" kind="function"><name>vt_rb_itor_free</name></member>
+    <member refid="rb__tree_8c_1ae991981ccaefe3b14cd1a5bc952cafdd" kind="function"><name>vt_rb_itor_valid</name></member>
+    <member refid="rb__tree_8c_1ae3f09e0a53005bbd622ce690fff5c193" kind="function"><name>vt_rb_itor_invalidate</name></member>
+    <member refid="rb__tree_8c_1a68faa8fb8e06d14ee7003c03171606ac" kind="function"><name>vt_rb_itor_next</name></member>
+    <member refid="rb__tree_8c_1a0598e41db475bc95a37c2a7ddb337704" kind="function"><name>vt_rb_itor_prev</name></member>
+    <member refid="rb__tree_8c_1a50e9b6e1ba4e997c9a342009fce6b9cb" kind="function"><name>vt_rb_itor_nextn</name></member>
+    <member refid="rb__tree_8c_1ac31d5d52b15befd4f0087ffa6f085bf0" kind="function"><name>vt_rb_itor_prevn</name></member>
+    <member refid="rb__tree_8c_1a2365f440fc201fd7377bb5cbf25dda31" kind="function"><name>vt_rb_itor_first</name></member>
+    <member refid="rb__tree_8c_1a915ea19f2f6e128e14c8ab6d1c575132" kind="function"><name>vt_rb_itor_last</name></member>
+    <member refid="rb__tree_8c_1ae3937a398e32762554579d11c4b07513" kind="function"><name>vt_rb_itor_key</name></member>
+    <member refid="rb__tree_8c_1a384f12b5656554574795cb8ae7bc8728" kind="function"><name>vt_rb_itor_datum</name></member>
+    <member refid="rb__tree_8c_1a456debfa00e68c899dae3bc82a45a9a2" kind="function"><name>vt_rb_itor_search</name></member>
+    <member refid="rb__tree_8c_1aba833f4fbeeb5363b21f2756394bb43f" kind="function"><name>vt_rb_itor_search_le</name></member>
+    <member refid="rb__tree_8c_1a5f92fbd857d79dbea90aba707b496fa5" kind="function"><name>vt_rb_itor_search_lt</name></member>
+    <member refid="rb__tree_8c_1a8c231b7dff644694f9589d2603b868e2" kind="function"><name>vt_rb_itor_search_ge</name></member>
+    <member refid="rb__tree_8c_1a6521047995b285410cee756855b74535" kind="function"><name>vt_rb_itor_search_gt</name></member>
+    <member refid="rb__tree_8c_1acbba2560a82f9f34c76ba065a462f237" kind="function"><name>vt_rb_itor_remove</name></member>
     <member refid="rb__tree_8c_1aaae070e2770a8b4de295389d2efe34cd" kind="function"><name>rot_left</name></member>
     <member refid="rb__tree_8c_1a9537eb2cdfc56ca1b14f29f5ed799801" kind="function"><name>rot_right</name></member>
     <member refid="rb__tree_8c_1a95cfb4e823b4c6fe371b4b59be9ea6f0" kind="function"><name>insert_fixup</name></member>
@@ -933,7 +1042,7 @@
     <member refid="rb__tree_8c_1a39beb3c1aff54da1098d4aff97172244" kind="function"><name>rb_tree_total_path_length</name></member>
     <member refid="rb__tree_8c_1a37dab4056fc3c5c0dd2ec82f16b83b8b" kind="function"><name>rb_tree_traverse</name></member>
     <member refid="rb__tree_8c_1ade69cd881303ce0c2984862383788985" kind="function"><name>rb_tree_select</name></member>
-    <member refid="rb__tree_8c_1a7840a3ba67e30b1940194bcb908e70ec" kind="function"><name>node_verify</name></member>
+    <member refid="rb__tree_8c_1a769a555f7a5bbee5d0dbd0d2272fbf66" kind="function"><name>node_verify</name></member>
     <member refid="rb__tree_8c_1ab5f358cd3fc473153a486aa394367aa5" kind="function"><name>rb_tree_verify</name></member>
     <member refid="rb__tree_8c_1a5b8d3d3eb399c02c815d24bc1bc7cb35" kind="function"><name>rb_itor_new</name></member>
     <member refid="rb__tree_8c_1a2b40ed7b405e2b28271da7f26f04789b" kind="function"><name>rb_dict_itor_new</name></member>
@@ -957,10 +1066,42 @@
     <member refid="rb__tree_8c_1a5d6bd6505d2feb275514a5f70e63ffbb" kind="function"><name>rb_itor_remove</name></member>
   </compound>
   <compound refid="skiplist_8c" kind="file"><name>skiplist.c</name>
+    <member refid="skiplist_8c_1a991aa5130055ed8aec13e491169619aa" kind="define"><name>MIN_LINK</name></member>
     <member refid="skiplist_8c_1abfa744c8ca5b46f7f2a10aea53a4ec59" kind="define"><name>MAX_LINK</name></member>
     <member refid="skiplist_8c_1a50e428cd0dfc84ac5e72fb3ae9595a37" kind="typedef"><name>skip_node</name></member>
     <member refid="skiplist_8c_1a9ae78b7e22c15dd4be10a2afaf18ad37" kind="variable"><name>skiplist_vtable</name></member>
     <member refid="skiplist_8c_1a8312192ddda59c8d5a8dd192b1634b7c" kind="variable"><name>skiplist_itor_vtable</name></member>
+    <member refid="skiplist_8c_1a1052108b0c024b08b5a9306e9eeaf3c2" kind="function"><name>vt_skiplist_dict_itor_new</name></member>
+    <member refid="skiplist_8c_1a16e6f030fa95452e30e7618383bcef2c" kind="function"><name>vt_skiplist_free</name></member>
+    <member refid="skiplist_8c_1a395c00b6730ae07f27d61cca73cdc86e" kind="function"><name>vt_skiplist_insert</name></member>
+    <member refid="skiplist_8c_1a706ea85afa70ca503e6b85249c44b919" kind="function"><name>vt_skiplist_search</name></member>
+    <member refid="skiplist_8c_1a249717f13b1909e4e946223c0ab3508e" kind="function"><name>vt_skiplist_search_le</name></member>
+    <member refid="skiplist_8c_1a7fa68154a7f6fa821f9b4f0fd0c88fc3" kind="function"><name>vt_skiplist_search_lt</name></member>
+    <member refid="skiplist_8c_1a04bd5f047929cf3d9fa356de6a36bd93" kind="function"><name>vt_skiplist_search_ge</name></member>
+    <member refid="skiplist_8c_1a0749e380920f330697f471452a81389b" kind="function"><name>vt_skiplist_search_gt</name></member>
+    <member refid="skiplist_8c_1a1a8442113118a41d17dba8ba1a4c706c" kind="function"><name>vt_skiplist_remove</name></member>
+    <member refid="skiplist_8c_1a2da2e5b2cb957dd21fa03509f7dad494" kind="function"><name>vt_skiplist_clear</name></member>
+    <member refid="skiplist_8c_1addc4b26186562b744d82e602a986bf99" kind="function"><name>vt_skiplist_traverse</name></member>
+    <member refid="skiplist_8c_1a64ff48c2be46071e5c634096bc9eb5a8" kind="function"><name>vt_skiplist_count</name></member>
+    <member refid="skiplist_8c_1a09087c17ba5034412eb4a7b20e35f19c" kind="function"><name>vt_skiplist_verify</name></member>
+    <member refid="skiplist_8c_1ac15a6687cd84df23330d22646c601859" kind="function"><name>vt_skiplist_itor_free</name></member>
+    <member refid="skiplist_8c_1a32d5a6e7b98fdcb4b38e6dae90a1dbf3" kind="function"><name>vt_skiplist_itor_valid</name></member>
+    <member refid="skiplist_8c_1aa71306d85890a69a7b88031f04077ce6" kind="function"><name>vt_skiplist_itor_invalidate</name></member>
+    <member refid="skiplist_8c_1a1102c1c68e84d6f6df8c1a78fc44aaf6" kind="function"><name>vt_skiplist_itor_next</name></member>
+    <member refid="skiplist_8c_1a499a3c097464f5572b44cf7e3152af02" kind="function"><name>vt_skiplist_itor_prev</name></member>
+    <member refid="skiplist_8c_1a42bd1cc2c617fc2766a19857c80c36bd" kind="function"><name>vt_skiplist_itor_nextn</name></member>
+    <member refid="skiplist_8c_1abee3515b9b9bc2d9e904a393b228956d" kind="function"><name>vt_skiplist_itor_prevn</name></member>
+    <member refid="skiplist_8c_1af1974b5d80c67eadea4847ca06bcf042" kind="function"><name>vt_skiplist_itor_first</name></member>
+    <member refid="skiplist_8c_1a1b79a702af05f0d0e6856f14bc3eec11" kind="function"><name>vt_skiplist_itor_last</name></member>
+    <member refid="skiplist_8c_1a4a1291b7aed980ddfd433883357c013e" kind="function"><name>vt_skiplist_itor_key</name></member>
+    <member refid="skiplist_8c_1a906871ba9242d40b3b23e54bddcfb1bd" kind="function"><name>vt_skiplist_itor_datum</name></member>
+    <member refid="skiplist_8c_1aee2cdfdbe1fe594e36cce40c2208697b" kind="function"><name>vt_skiplist_itor_search</name></member>
+    <member refid="skiplist_8c_1a195d877d0d8738238f7f553464e7aa7a" kind="function"><name>vt_skiplist_itor_search_le</name></member>
+    <member refid="skiplist_8c_1a0defbda20169c449fee44c187aebc112" kind="function"><name>vt_skiplist_itor_search_lt</name></member>
+    <member refid="skiplist_8c_1a13f59ccd1ea14eb7e51c6a7b9eeb4f7a" kind="function"><name>vt_skiplist_itor_search_ge</name></member>
+    <member refid="skiplist_8c_1aa6d64723a3a6e08be24df1126c28f3b2" kind="function"><name>vt_skiplist_itor_search_gt</name></member>
+    <member refid="skiplist_8c_1a2e7e95c54ed766616be6d88e06334a5b" kind="function"><name>vt_skiplist_itor_remove</name></member>
+    <member refid="skiplist_8c_1a79a1d08ae0f82261ad0593f370282d6e" kind="function"><name>vt_skiplist_itor_compare</name></member>
     <member refid="skiplist_8c_1a035540716c81ddbe09e3bb4a2723131a" kind="function"><name>node_new</name></member>
     <member refid="skiplist_8c_1a410e4e7e4476510b7e94195e2892adc0" kind="function"><name>node_insert</name></member>
     <member refid="skiplist_8c_1a5a203a8dc84d9a8bd80e99a522df7263" kind="function"><name>node_search</name></member>
@@ -1009,6 +1150,17 @@
     <member refid="sp__tree_8c_1a5691ea6af6c9773f1eb9605b269a2152" kind="typedef"><name>sp_node</name></member>
     <member refid="sp__tree_8c_1ad795fbc5baab8f0ae486b2da1a3cfb32" kind="variable"><name>sp_tree_vtable</name></member>
     <member refid="sp__tree_8c_1a349c18e6c13d1d9e9b6a8c8246d809ac" kind="variable"><name>sp_tree_itor_vtable</name></member>
+    <member refid="sp__tree_8c_1a14ed6ad97b0472878210c46df4a9af15" kind="function"><name>vt_sp_dict_itor_new</name></member>
+    <member refid="sp__tree_8c_1ab5dd1900cb0009531c1a203f37e42286" kind="function"><name>vt_sp_tree_insert</name></member>
+    <member refid="sp__tree_8c_1a6ae1a809b4dd5c69e679c9ada8ea94ee" kind="function"><name>vt_sp_tree_search</name></member>
+    <member refid="sp__tree_8c_1a3e367aabb5893daa1601f2e5ca27cf30" kind="function"><name>vt_sp_tree_search_le</name></member>
+    <member refid="sp__tree_8c_1aaad078f9bbebca724acccee09bbaba30" kind="function"><name>vt_sp_tree_search_lt</name></member>
+    <member refid="sp__tree_8c_1a6a23ae0935f66757750899f33f980e1a" kind="function"><name>vt_sp_tree_search_ge</name></member>
+    <member refid="sp__tree_8c_1af6841969154ef23c9371d39c62de9f1a" kind="function"><name>vt_sp_tree_search_gt</name></member>
+    <member refid="sp__tree_8c_1a3d66923b6be8ea6a6b126c12f398da57" kind="function"><name>vt_sp_tree_remove</name></member>
+    <member refid="sp__tree_8c_1a804d781b14cb14306ea7baf710771a68" kind="function"><name>vt_sp_tree_verify</name></member>
+    <member refid="sp__tree_8c_1aa214cb7c8fbcfa2f80a13de45a52f55e" kind="function"><name>vt_sp_itor_search</name></member>
+    <member refid="sp__tree_8c_1a022024f52e6a2d13bc3d0cf0faa2ddfa" kind="function"><name>vt_sp_itor_remove</name></member>
     <member refid="sp__tree_8c_1a9b6cac6415d06381b3e353d672cc6c0b" kind="function"><name>node_new</name></member>
     <member refid="sp__tree_8c_1a1e511ff4ef27a489167b9836e4425bb9" kind="function"><name>splay</name></member>
     <member refid="sp__tree_8c_1af46136630f838070fce5907b68ed4bc5" kind="function"><name>sp_tree_new</name></member>
@@ -1029,7 +1181,6 @@
     <member refid="sp__tree_8c_1a4d72fa3b29ac89d45d898ecf7e4dac8f" kind="function"><name>sp_tree_min_path_length</name></member>
     <member refid="sp__tree_8c_1a7f612182b8d25714fd43dd70a264d132" kind="function"><name>sp_tree_max_path_length</name></member>
     <member refid="sp__tree_8c_1aeaad2a79cf2f5811d22d9027c881c0f8" kind="function"><name>sp_tree_total_path_length</name></member>
-    <member refid="sp__tree_8c_1a513d5dcda30a02504aed361205686a14" kind="function"><name>node_verify</name></member>
     <member refid="sp__tree_8c_1abff88ebfaaba6159ca254c41c5f2e128" kind="function"><name>sp_tree_verify</name></member>
     <member refid="sp__tree_8c_1a4f2d401aa5cda05fc2d1f74e5ae62677" kind="function"><name>sp_itor_new</name></member>
     <member refid="sp__tree_8c_1a7ffd78dd7a34ea39753d59a14b033e14" kind="function"><name>sp_dict_itor_new</name></member>
@@ -1056,6 +1207,11 @@
     <member refid="tr__tree_8c_1a9e133a630615d0838dc94fa52d7d7395" kind="typedef"><name>tr_node</name></member>
     <member refid="tr__tree_8c_1ae644d5e2ee0e0fb10e49c18f320d5426" kind="variable"><name>tr_tree_vtable</name></member>
     <member refid="tr__tree_8c_1aec869c9972cd577ccc6a6017b3344b5b" kind="variable"><name>tr_tree_itor_vtable</name></member>
+    <member refid="tr__tree_8c_1a9d2368240c77d64ce1a8017f7fce348d" kind="function"><name>vt_tr_dict_itor_new</name></member>
+    <member refid="tr__tree_8c_1af7ca8490c591adce2770868d62ae8729" kind="function"><name>vt_tr_tree_insert</name></member>
+    <member refid="tr__tree_8c_1ae094f09972bedcdfad6dc132a9aa985d" kind="function"><name>vt_tr_tree_remove</name></member>
+    <member refid="tr__tree_8c_1af72fee585bf5176787b7f605f2213cf3" kind="function"><name>vt_tr_tree_verify</name></member>
+    <member refid="tr__tree_8c_1a7b2dff2015fd15cd9cf67a54a0de7798" kind="function"><name>vt_tr_itor_remove</name></member>
     <member refid="tr__tree_8c_1a1da1da775ec7171b829f3d404d4d937e" kind="function"><name>node_new</name></member>
     <member refid="tr__tree_8c_1a398e23790a47d9c58023ad6f1870f9e9" kind="function"><name>tr_tree_new</name></member>
     <member refid="tr__tree_8c_1ad66a03fc74325b6ca6074fd79de9d8dd" kind="function"><name>tr_dict_new</name></member>
@@ -1075,7 +1231,6 @@
     <member refid="tr__tree_8c_1a8d47e3d4932c53b1af3cda751867d431" kind="function"><name>tr_tree_min_path_length</name></member>
     <member refid="tr__tree_8c_1af7b0627fcc48dfe850aacbc4dab7ec01" kind="function"><name>tr_tree_max_path_length</name></member>
     <member refid="tr__tree_8c_1a35128a0a7038af7f263a1d2d5209086b" kind="function"><name>tr_tree_total_path_length</name></member>
-    <member refid="tr__tree_8c_1a9d5796c0c2efa70b42fcf3ce3c9d4393" kind="function"><name>node_verify</name></member>
     <member refid="tr__tree_8c_1acb4c734f0994b7eadedde0e1c9a3809a" kind="function"><name>tr_tree_verify</name></member>
     <member refid="tr__tree_8c_1a83f90deca79342a7693b461a51af5552" kind="function"><name>tr_itor_new</name></member>
     <member refid="tr__tree_8c_1a16c009f729f369a25e74f8d71e4d04e4" kind="function"><name>tr_dict_itor_new</name></member>
@@ -1099,6 +1254,7 @@
     <member refid="tr__tree_8c_1a332a934be706ba2287233367d39c2e67" kind="function"><name>tr_itor_remove</name></member>
   </compound>
   <compound refid="tree__common_8c" kind="file"><name>tree_common.c</name>
+    <member refid="tree__common_8c_1a5bc226527d80ecf697a8aabbfa4a8f39" kind="define"><name>PUSH</name></member>
     <member refid="tree__common_8c_1a6dae47dcd4d115ec4657410802efb75b" kind="typedef"><name>tree_node</name></member>
     <member refid="tree__common_8c_1a364dcfa88f9f8e27d1e0ffa7ae7cd15d" kind="function"><name>tree_node_rot_left</name></member>
     <member refid="tree__common_8c_1ad79fac7e5a30bf71ac8a7d53c56cf176" kind="function"><name>tree_node_rot_right</name></member>
@@ -1119,13 +1275,14 @@
     <member refid="tree__common_8c_1a8af8d7bc05c41b6b1889714238c541e1" kind="function"><name>tree_traverse</name></member>
     <member refid="tree__common_8c_1aa14359a5a539fe914717663d62ab3bc2" kind="function"><name>tree_select</name></member>
     <member refid="tree__common_8c_1a666279f96572685934714532e744718e" kind="function"><name>tree_count</name></member>
+    <member refid="tree__common_8c_1a916d1181ef1c0ebddc2c44438087cfcb" kind="function"><name>node_verify_common</name></member>
+    <member refid="tree__common_8c_1a4981ec7f99b3d9652814bf0cda50c650" kind="function"><name>tree_verify_common</name></member>
     <member refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" kind="function"><name>tree_clear</name></member>
     <member refid="tree__common_8c_1a058d607ec36526c0e52cd66f853ef888" kind="function"><name>tree_free</name></member>
-    <member refid="tree__common_8c_1a8e2e1b5f17965b7ba5f0d4aaad4e8d61" kind="function"><name>node_min_path_length</name></member>
+    <member refid="tree__common_8c_1ada49eedd56edb7980a024300bd882a29" kind="function"><name>node_stack_push</name></member>
+    <member refid="tree__common_8c_1a0c5591f13391cbb5c4e3af154c24e6c8" kind="function"><name>tree_path_lengths</name></member>
     <member refid="tree__common_8c_1a756193ba67a2786a5e4a6274a7ec170e" kind="function"><name>tree_min_path_length</name></member>
-    <member refid="tree__common_8c_1a2487033dc4dfd907eebc9ea0ab7b189b" kind="function"><name>node_max_path_length</name></member>
     <member refid="tree__common_8c_1abf500bf5b159c5ec35a5e0a3ff57a0e8" kind="function"><name>tree_max_path_length</name></member>
-    <member refid="tree__common_8c_1a9166dc2c17617953104f5ca83fe1f943" kind="function"><name>node_path_length</name></member>
     <member refid="tree__common_8c_1a8ff1218a16ab93160f3a922fcdf88882" kind="function"><name>tree_total_path_length</name></member>
     <member refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" kind="function"><name>tree_iterator_valid</name></member>
     <member refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" kind="function"><name>tree_iterator_invalidate</name></member>
@@ -1144,6 +1301,8 @@
     <member refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" kind="function"><name>tree_iterator_compare</name></member>
     <member refid="tree__common_8c_1a71fd87b638317045ae986d9886f10c10" kind="function"><name>tree_iterator_key</name></member>
     <member refid="tree__common_8c_1a1cc4c18adcfc606676bbbe632160f50a" kind="function"><name>tree_iterator_datum</name></member>
+    <member refid="tree__common_8c_1ac6f1c35894573571de44e99995ce3def" kind="function"><name>tree_iterator_key_vt</name></member>
+    <member refid="tree__common_8c_1acdf8884bb9fa5e5a8fb19c8d2d74fc51" kind="function"><name>tree_iterator_compare_vt</name></member>
   </compound>
   <compound refid="tree__common_8h" kind="file"><name>tree_common.h</name>
     <member refid="tree__common_8h_1a8bf6d3b26e824be81b856b68ff0ceed1" kind="define"><name>TREE_NODE_FIELDS</name></member>
@@ -1169,6 +1328,7 @@
     <member refid="tree__common_8h_1a68a8285626f8ca19aa5028d8db8c1c97" kind="function"><name>tree_search_gt_node</name></member>
     <member refid="tree__common_8h_1a62fef1416dee2635ca075d5d9a519c34" kind="function"><name>tree_traverse</name></member>
     <member refid="tree__common_8h_1ac144b757fd8ecdeab9e1ae4d31dd92e2" kind="function"><name>tree_select</name></member>
+    <member refid="tree__common_8h_1a6eee08faa9f783b7755bce5083d5fcf2" kind="function"><name>tree_verify_common</name></member>
     <member refid="tree__common_8h_1ad7192e6cc9305bd387a2de989dbe0c54" kind="function"><name>tree_count</name></member>
     <member refid="tree__common_8h_1a883af43dc54a56d18fd30bee2104ba85" kind="function"><name>tree_clear</name></member>
     <member refid="tree__common_8h_1a29602ed18f6d0a7db2b9c37d6fa0368b" kind="function"><name>tree_free</name></member>
@@ -1192,12 +1352,20 @@
     <member refid="tree__common_8h_1abf1de1d71e92df79cd1b0cee24465c27" kind="function"><name>tree_iterator_compare</name></member>
     <member refid="tree__common_8h_1aaa46faf126d94dfa7dd33fe9db363f2b" kind="function"><name>tree_iterator_key</name></member>
     <member refid="tree__common_8h_1a192415adccccf2fd72ed144ffec4cac6" kind="function"><name>tree_iterator_datum</name></member>
+    <member refid="tree__common_8h_1ad163f12d47e771678eed6f2023124970" kind="function"><name>tree_iterator_key_vt</name></member>
+    <member refid="tree__common_8h_1a12ee1fbe862cfe6e4a1240e34738daf3" kind="function"><name>tree_iterator_compare_vt</name></member>
   </compound>
   <compound refid="wb__tree_8c" kind="file"><name>wb_tree.c</name>
     <member refid="wb__tree_8c_1ab15db866407010ad20587248b4febfcb" kind="define"><name>WEIGHT</name></member>
     <member refid="wb__tree_8c_1a59c9f6dbbc6b0cf7f27ff879a637c67a" kind="typedef"><name>wb_node</name></member>
     <member refid="wb__tree_8c_1a96c993e1c879955b44c07ff3fdf5a89f" kind="variable"><name>wb_tree_vtable</name></member>
     <member refid="wb__tree_8c_1a7194f1fa079113bc4bd9617aed30af0a" kind="variable"><name>wb_tree_itor_vtable</name></member>
+    <member refid="wb__tree_8c_1a37107dabd83e8712f12f64309940a774" kind="function"><name>vt_wb_dict_itor_new</name></member>
+    <member refid="wb__tree_8c_1a739ff06c9a4f966e97ee828bb76b9687" kind="function"><name>vt_wb_tree_insert</name></member>
+    <member refid="wb__tree_8c_1a4ffa71e451a065d6571b79594d867c6a" kind="function"><name>vt_wb_tree_remove</name></member>
+    <member refid="wb__tree_8c_1a52cc318a377372fae1792fb133d3fd38" kind="function"><name>vt_wb_tree_select</name></member>
+    <member refid="wb__tree_8c_1a6034c1ebe7b9d10e8bd23d9146197e33" kind="function"><name>vt_wb_tree_verify</name></member>
+    <member refid="wb__tree_8c_1a941acbfeb5a0f79cda55369832d911fd" kind="function"><name>vt_wb_itor_remove</name></member>
     <member refid="wb__tree_8c_1ad2e81e81e53af1202fc7460601d154ac" kind="function"><name>node_new</name></member>
     <member refid="wb__tree_8c_1a4e25ed241fb4065fc9de6719ce5fb30b" kind="function"><name>wb_tree_new</name></member>
     <member refid="wb__tree_8c_1a56a4ff781347387bc8bf46abf9ba8450" kind="function"><name>wb_dict_new</name></member>
@@ -1218,7 +1386,7 @@
     <member refid="wb__tree_8c_1ac56cd4fdd98c4925d4d977e9ce7a58a3" kind="function"><name>wb_tree_min_path_length</name></member>
     <member refid="wb__tree_8c_1ad904ad93c7fa2a090b83ac245762f2c8" kind="function"><name>wb_tree_max_path_length</name></member>
     <member refid="wb__tree_8c_1af808013473d7440aaf265bb349c0b50b" kind="function"><name>wb_tree_total_path_length</name></member>
-    <member refid="wb__tree_8c_1ad008c7ff6895c2c0b09caeee475e5cac" kind="function"><name>node_verify</name></member>
+    <member refid="wb__tree_8c_1aef1bb71f28ee89b77660a21aa82ccaf4" kind="function"><name>node_verify</name></member>
     <member refid="wb__tree_8c_1a817ec8c3de389dcba19fa0fbd6e719f2" kind="function"><name>wb_tree_verify</name></member>
     <member refid="wb__tree_8c_1ad6ec8c7c6c7ed74c04cd2380597e999c" kind="function"><name>wb_itor_new</name></member>
     <member refid="wb__tree_8c_1a66f125a277aa553c123e2489c680c4e4" kind="function"><name>wb_dict_itor_new</name></member>

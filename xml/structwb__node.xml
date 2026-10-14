@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/wb_tree.c" line="68" column="11" bodyfile="src/wb_tree.c" bodystart="68" bodyend="-1"/>
+        <location file="src/wb_tree.c" line="69" column="11" bodyfile="src/wb_tree.c" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwb__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" static="no" mutable="no">
         <type>void *</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/wb_tree.c" line="68" column="22" bodyfile="src/wb_tree.c" bodystart="68" bodyend="-1"/>
+        <location file="src/wb_tree.c" line="69" column="22" bodyfile="src/wb_tree.c" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwb__node_1a25828e10f8a3f92211d2ad44b6f768cf" prot="public" static="no" mutable="no">
         <type><ref refid="structwb__node" kindref="compound">wb_node</ref> *</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/wb_tree.c" line="68" column="38" bodyfile="src/wb_tree.c" bodystart="68" bodyend="-1"/>
+        <location file="src/wb_tree.c" line="69" column="38" bodyfile="src/wb_tree.c" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwb__node_1af91dd920ea0878d84a967d5e97af1eb3" prot="public" static="no" mutable="no">
         <type><ref refid="structwb__node" kindref="compound">wb_node</ref> *</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/wb_tree.c" line="68" column="55" bodyfile="src/wb_tree.c" bodystart="68" bodyend="-1"/>
+        <location file="src/wb_tree.c" line="69" column="55" bodyfile="src/wb_tree.c" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwb__node_1ab7a18655945ee22a7a45f6222ad8a360" prot="public" static="no" mutable="no">
         <type><ref refid="structwb__node" kindref="compound">wb_node</ref> *</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/wb_tree.c" line="68" column="71" bodyfile="src/wb_tree.c" bodystart="68" bodyend="-1"/>
+        <location file="src/wb_tree.c" line="69" column="71" bodyfile="src/wb_tree.c" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwb__node_1a81c1ee5114e7b2d69dcb6fa7c92a0430" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/wb_tree.c" line="69" column="14" bodyfile="src/wb_tree.c" bodystart="69" bodyend="-1"/>
+        <location file="src/wb_tree.c" line="70" column="14" bodyfile="src/wb_tree.c" bodystart="70" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -103,7 +103,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/wb_tree.c" line="67" column="1" bodyfile="src/wb_tree.c" bodystart="67" bodyend="70"/>
+    <location file="src/wb_tree.c" line="68" column="1" bodyfile="src/wb_tree.c" bodystart="68" bodyend="71"/>
     <listofallmembers>
       <member refid="structwb__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" virt="non-virtual"><scope>wb_node</scope><name>datum</name></member>
       <member refid="structwb__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" virt="non-virtual"><scope>wb_node</scope><name>key</name></member>

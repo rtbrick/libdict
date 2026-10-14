@@ -354,6 +354,17 @@
         </inbodydescription>
         <location file="src/dict_private.h" line="101" column="10" bodyfile="src/dict_private.h" bodystart="101" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="define" id="dict__private_8h_1a57a254843f0ac97ef1e495eb47ca6e7c" prot="public" static="no">
+        <name>DICT_RAND_BITS</name>
+        <initializer>31</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="110" column="9" bodyfile="src/dict_private.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
     </sectiondef>
     <sectiondef kind="func">
       <memberdef kind="function" id="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" prot="public" static="no" extern="yes" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -372,11 +383,14 @@
         </inbodydescription>
         <location file="src/dict_private.h" line="104" column="13" declfile="src/dict_private.h" declline="104" declcolumn="13"/>
       </memberdef>
-      <memberdef kind="function" id="dict__private_8h_1a419e929fe2cc7ac7cd90accf60b09682" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="dict__private_8h_1ad8698eff86b8975dd4a7998f28c69e74" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned</type>
         <definition>static unsigned dict_rand</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(void)</argsstring>
         <name>dict_rand</name>
+        <param>
+          <type>void</type>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -384,6 +398,61 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/dict_private.h" line="105" column="24" bodyfile="src/dict_private.h" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="dict__private_8h_1a3273405a40a3b68dbfd54ec49e375352" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>static unsigned dict_ctz</definition>
+        <argsstring>(unsigned n)</argsstring>
+        <name>dict_ctz</name>
+        <param>
+          <type>unsigned</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="115" column="1" bodyfile="src/dict_private.h" bodystart="115" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="dict__private_8h_1a0d5ec752776429ac995f874739a2301c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>static void * dict_malloc_array</definition>
+        <argsstring>(size_t n, size_t size)</argsstring>
+        <name>dict_malloc_array</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="134" column="1" bodyfile="src/dict_private.h" bodystart="134" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="dict__private_8h_1a514c5edf614187638591069f25ebb0f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>static void * dict_unconst</definition>
+        <argsstring>(const void *p)</argsstring>
+        <name>dict_unconst</name>
+        <param>
+          <type>const void *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dict_private.h" line="144" column="20" bodyfile="src/dict_private.h" bodystart="144" bodyend="144"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -495,9 +564,48 @@
 <codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
 <codeline lineno="104" refid="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" kindref="member">random</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>dict_rand()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)<sp/><ref refid="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" kindref="member">random</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>dict_rand(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)<sp/><ref refid="dict__private_8h_1a114aeb1751119382aaf3340355b22cfd" kindref="member">random</ref>();<sp/>}</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!LIBDICT_DICT_PRIVATE_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Number<sp/>of<sp/>low-order<sp/>bits<sp/>of<sp/>dict_rand()<sp/>that<sp/>are<sp/>usable:<sp/>random()<sp/>is</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/>*<sp/>specified<sp/>to<sp/>return<sp/>a<sp/>value<sp/>in<sp/>[0,<sp/>2^31),<sp/>so<sp/>the<sp/>top<sp/>bit<sp/>of<sp/>an<sp/>unsigned<sp/>is</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/>*<sp/>always<sp/>clear.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="dict__private_8h_1a57a254843f0ac97ef1e495eb47ca6e7c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DICT_RAND_BITS<sp/><sp/>31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Count<sp/>trailing<sp/>zero<sp/>bits<sp/>of<sp/>|n|,<sp/>which<sp/>must<sp/>be<sp/>nonzero.<sp/>Unlike</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/>*<sp/>__builtin_ctz()<sp/>this<sp/>is<sp/>available<sp/>on<sp/>every<sp/>toolchain.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">dict_ctz(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" kindref="member">ASSERT</ref>(n<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)<sp/>||<sp/>defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)<sp/>__builtin_ctz(n);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!(n<sp/>&amp;<sp/>1u))<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>&gt;&gt;=<sp/>1;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++count;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Allocate<sp/>an<sp/>array<sp/>of<sp/>|n|<sp/>elements<sp/>of<sp/>|size|<sp/>bytes,<sp/>or<sp/>return<sp/>NULL<sp/>if<sp/>the</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/>*<sp/>byte<sp/>count<sp/>does<sp/>not<sp/>fit<sp/>in<sp/>a<sp/>size_t,<sp/>as<sp/>it<sp/>may<sp/>not<sp/>where<sp/>size_t<sp/>is<sp/>32<sp/>bits.</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/>*<sp/>Without<sp/>the<sp/>check<sp/>the<sp/>product<sp/>would<sp/>wrap<sp/>and<sp/>allocate<sp/>a<sp/>short<sp/>array.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">dict_malloc_array(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&amp;&amp;<sp/>n<sp/>&gt;<sp/>SIZE_MAX<sp/>/<sp/>size)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" kindref="member">MALLOC</ref>(n<sp/>*<sp/>size);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Drop<sp/>const<sp/>from<sp/>a<sp/>key<sp/>pointer<sp/>for<sp/>the<sp/>void*-returning<sp/>dict_key_func<sp/>slot.</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/>*<sp/>Round-tripping<sp/>through<sp/>uintptr_t<sp/>is<sp/>well<sp/>defined<sp/>and,<sp/>unlike<sp/>a<sp/>direct<sp/>cast,</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/>*<sp/>does<sp/>not<sp/>trigger<sp/>-Wcast-qual.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>dict_unconst(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>p)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(uintptr_t)p;<sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!LIBDICT_DICT_PRIVATE_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="src/dict_private.h"/>
   </compounddef>

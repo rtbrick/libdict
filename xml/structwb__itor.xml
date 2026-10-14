@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/wb_tree.c" line="79" column="14" bodyfile="src/wb_tree.c" bodystart="79" bodyend="-1"/>
+        <location file="src/wb_tree.c" line="80" column="14" bodyfile="src/wb_tree.c" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwb__itor_1a0c66ad50dc8ddb60e664a1d4c3132009" prot="public" static="no" mutable="no">
         <type><ref refid="structwb__node" kindref="compound">wb_node</ref> *</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/wb_tree.c" line="79" column="29" bodyfile="src/wb_tree.c" bodystart="79" bodyend="-1"/>
+        <location file="src/wb_tree.c" line="80" column="29" bodyfile="src/wb_tree.c" bodystart="80" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -64,7 +64,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/wb_tree.c" line="78" column="1" bodyfile="src/wb_tree.c" bodystart="78" bodyend="80"/>
+    <location file="src/wb_tree.c" line="79" column="1" bodyfile="src/wb_tree.c" bodystart="79" bodyend="81"/>
     <listofallmembers>
       <member refid="structwb__itor_1a0c66ad50dc8ddb60e664a1d4c3132009" prot="public" virt="non-virtual"><scope>wb_itor</scope><name>node</name></member>
       <member refid="structwb__itor_1a42771997b8e85c81685bce9ab1a46426" prot="public" virt="non-virtual"><scope>wb_itor</scope><name>tree</name></member>

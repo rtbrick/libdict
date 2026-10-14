@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable.c" line="66" column="24" bodyfile="src/hashtable.c" bodystart="66" bodyend="-1"/>
+        <location file="src/hashtable.c" line="70" column="24" bodyfile="src/hashtable.c" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structhashtable__itor_1ac132a6acabd26ddbcea7c8d00fd5b68f" prot="public" static="no" mutable="no">
         <type><ref refid="hashtable_8c_1a4a37dff778daa13ddb34cd8e4ef1a129" kindref="member">hash_node</ref> *</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable.c" line="67" column="24" bodyfile="src/hashtable.c" bodystart="67" bodyend="-1"/>
+        <location file="src/hashtable.c" line="71" column="24" bodyfile="src/hashtable.c" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structhashtable__itor_1a10d37451a519c4fc6326acbdf8856451" prot="public" static="no" mutable="no">
         <type>unsigned</type>
@@ -43,7 +43,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/hashtable.c" line="68" column="25" bodyfile="src/hashtable.c" bodystart="68" bodyend="-1"/>
+        <location file="src/hashtable.c" line="72" column="25" bodyfile="src/hashtable.c" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhashtable__itor_1a63901752e04d36273e0dee15022d7983" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gen</definition>
+        <argsstring></argsstring>
+        <name>gen</name>
+        <qualifiedname>hashtable_itor::gen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/hashtable.c" line="73" column="25" bodyfile="src/hashtable.c" bodystart="73" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -77,8 +91,9 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/hashtable.c" line="65" column="1" bodyfile="src/hashtable.c" bodystart="65" bodyend="69"/>
+    <location file="src/hashtable.c" line="69" column="1" bodyfile="src/hashtable.c" bodystart="69" bodyend="74"/>
     <listofallmembers>
+      <member refid="structhashtable__itor_1a63901752e04d36273e0dee15022d7983" prot="public" virt="non-virtual"><scope>hashtable_itor</scope><name>gen</name></member>
       <member refid="structhashtable__itor_1ac132a6acabd26ddbcea7c8d00fd5b68f" prot="public" virt="non-virtual"><scope>hashtable_itor</scope><name>node</name></member>
       <member refid="structhashtable__itor_1a10d37451a519c4fc6326acbdf8856451" prot="public" virt="non-virtual"><scope>hashtable_itor</scope><name>slot</name></member>
       <member refid="structhashtable__itor_1a1c2725966eac16e4eb85ec20276be313" prot="public" virt="non-virtual"><scope>hashtable_itor</scope><name>table</name></member>

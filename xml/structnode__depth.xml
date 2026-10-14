@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="structnode__depth" kind="struct" language="C++" prot="public">
+    <compoundname>node_depth</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structnode__depth_1af55cdc6bc322bf675fb4ca637f6a57a1" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structtree__node" kindref="compound">tree_node</ref> *</type>
+        <definition>const tree_node* node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <qualifiedname>node_depth::node</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tree_common.c" line="443" column="24" bodyfile="src/tree_common.c" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnode__depth_1a820c167ceaaa9759b0ca2695d22db55c" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <qualifiedname>node_depth::depth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tree_common.c" line="444" column="25" bodyfile="src/tree_common.c" bodystart="444" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>node_depth</label>
+        <link refid="structnode__depth"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tree_node</label>
+        <link refid="structtree__node"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>llink</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>rlink</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/tree_common.c" line="442" column="1" bodyfile="src/tree_common.c" bodystart="442" bodyend="445"/>
+    <listofallmembers>
+      <member refid="structnode__depth_1a820c167ceaaa9759b0ca2695d22db55c" prot="public" virt="non-virtual"><scope>node_depth</scope><name>depth</name></member>
+      <member refid="structnode__depth_1af55cdc6bc322bf675fb4ca637f6a57a1" prot="public" virt="non-virtual"><scope>node_depth</scope><name>node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

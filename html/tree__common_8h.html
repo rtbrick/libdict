@@ -227,6 +227,8 @@ Functions</h2></td></tr>
 <tr class="separator:a62fef1416dee2635ca075d5d9a519c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac144b757fd8ecdeab9e1ae4d31dd92e2" id="r_ac144b757fd8ecdeab9e1ae4d31dd92e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac144b757fd8ecdeab9e1ae4d31dd92e2">tree_select</a> (void *<a class="el" href="structtree.html">tree</a>, size_t n, const void **key, void **datum)</td></tr>
 <tr class="separator:ac144b757fd8ecdeab9e1ae4d31dd92e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eee08faa9f783b7755bce5083d5fcf2" id="r_a6eee08faa9f783b7755bce5083d5fcf2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6eee08faa9f783b7755bce5083d5fcf2">tree_verify_common</a> (const void *<a class="el" href="structtree.html">tree</a>)</td></tr>
+<tr class="separator:a6eee08faa9f783b7755bce5083d5fcf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7192e6cc9305bd387a2de989dbe0c54" id="r_ad7192e6cc9305bd387a2de989dbe0c54"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7192e6cc9305bd387a2de989dbe0c54">tree_count</a> (const void *<a class="el" href="structtree.html">tree</a>)</td></tr>
 <tr class="separator:ad7192e6cc9305bd387a2de989dbe0c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a883af43dc54a56d18fd30bee2104ba85" id="r_a883af43dc54a56d18fd30bee2104ba85"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a883af43dc54a56d18fd30bee2104ba85">tree_clear</a> (void *<a class="el" href="structtree.html">tree</a>, <a class="el" href="dict_8h.html#a5301c8938ac34a1c9f18078bc6464385">dict_delete_func</a> delete_func)</td></tr>
@@ -273,6 +275,10 @@ Functions</h2></td></tr>
 <tr class="separator:aaa46faf126d94dfa7dd33fe9db363f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a192415adccccf2fd72ed144ffec4cac6" id="r_a192415adccccf2fd72ed144ffec4cac6"><td class="memItemLeft" align="right" valign="top">void **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a192415adccccf2fd72ed144ffec4cac6">tree_iterator_datum</a> (void *iterator)</td></tr>
 <tr class="separator:a192415adccccf2fd72ed144ffec4cac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad163f12d47e771678eed6f2023124970" id="r_ad163f12d47e771678eed6f2023124970"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad163f12d47e771678eed6f2023124970">tree_iterator_key_vt</a> (void *iterator)</td></tr>
+<tr class="separator:ad163f12d47e771678eed6f2023124970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ee1fbe862cfe6e4a1240e34738daf3" id="r_a12ee1fbe862cfe6e4a1240e34738daf3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12ee1fbe862cfe6e4a1240e34738daf3">tree_iterator_compare_vt</a> (void *iterator1, void *iterator2)</td></tr>
+<tr class="separator:a12ee1fbe862cfe6e4a1240e34738daf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ab336de7dac2bbab532f41737fa8f103d" name="ab336de7dac2bbab532f41737fa8f103d"></a>
@@ -293,7 +299,7 @@ Functions</h2></td></tr>
 <div class="line">    <span class="keywordtype">size_t</span>              count; \</div>
 <div class="line">    <a class="code hl_typedef" href="dict_8h.html#a1704b677563c3195fcc69dbc42ff8704">dict_compare_func</a>   cmp_func; \</div>
 <div class="line">    <span class="keywordtype">size_t</span>              rotation_count</div>
-<div class="ttc" id="adict_8h_html_a1704b677563c3195fcc69dbc42ff8704"><div class="ttname"><a href="dict_8h.html#a1704b677563c3195fcc69dbc42ff8704">dict_compare_func</a></div><div class="ttdeci">int(* dict_compare_func)(const void *, const void *)</div><div class="ttdef"><b>Definition</b> <a href="dict_8h_source.html#l00054">dict.h:54</a></div></div>
+<div class="ttc" id="adict_8h_html_a1704b677563c3195fcc69dbc42ff8704"><div class="ttname"><a href="dict_8h.html#a1704b677563c3195fcc69dbc42ff8704">dict_compare_func</a></div><div class="ttdeci">int(* dict_compare_func)(const void *, const void *)</div><div class="ttdef"><b>Definition</b> <a href="dict_8h_source.html#l00059">dict.h:59</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="tree__common_8h_source.html#l00044">44</a> of file <a class="el" href="tree__common_8h_source.html">tree_common.h</a>.</p>
 
@@ -398,7 +404,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00301">301</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00401">401</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 
 </div>
 </div>
@@ -417,7 +423,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00295">295</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00299">299</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 
 </div>
 </div>
@@ -440,7 +446,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00324">324</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00425">425</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -473,7 +479,40 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00486">486</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00657">657</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+
+</div>
+</div>
+<a id="a12ee1fbe862cfe6e4a1240e34738daf3" name="a12ee1fbe862cfe6e4a1240e34738daf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ee1fbe862cfe6e4a1240e34738daf3">&#9670;&#160;</a></span>tree_iterator_compare_vt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int tree_iterator_compare_vt </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>iterator1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>iterator2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00690">690</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="tree__common_8h_a12ee1fbe862cfe6e4a1240e34738daf3_cgraph.png" border="0" usemap="#atree__common_8h_a12ee1fbe862cfe6e4a1240e34738daf3_cgraph" alt=""/></div>
+<map name="atree__common_8h_a12ee1fbe862cfe6e4a1240e34738daf3_cgraph" id="atree__common_8h_a12ee1fbe862cfe6e4a1240e34738daf3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,171,31"/>
+<area shape="rect" href="tree__common_8c.html#a32b8464955ebce9c4f8967162f01f50b" title=" " alt="" coords="219,5,366,31"/>
+<area shape="poly" title=" " alt="" coords="171,16,203,16,203,21,171,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -492,7 +531,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00506">506</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00677">677</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 
 </div>
 </div>
@@ -511,7 +550,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00437">437</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00608">608</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -540,7 +579,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00389">389</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00560">560</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 
 </div>
 </div>
@@ -559,7 +598,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00383">383</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00554">554</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 
 </div>
 </div>
@@ -578,7 +617,36 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00499">499</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00670">670</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+
+</div>
+</div>
+<a id="ad163f12d47e771678eed6f2023124970" name="ad163f12d47e771678eed6f2023124970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad163f12d47e771678eed6f2023124970">&#9670;&#160;</a></span>tree_iterator_key_vt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * tree_iterator_key_vt </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>iterator</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00684">684</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="tree__common_8h_ad163f12d47e771678eed6f2023124970_cgraph.png" border="0" usemap="#atree__common_8h_ad163f12d47e771678eed6f2023124970_cgraph" alt=""/></div>
+<map name="atree__common_8h_ad163f12d47e771678eed6f2023124970_cgraph" id="atree__common_8h_ad163f12d47e771678eed6f2023124970_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,141,31"/>
+<area shape="rect" href="tree__common_8c.html#a71fd87b638317045ae986d9886f10c10" title=" " alt="" coords="189,5,306,31"/>
+<area shape="poly" title=" " alt="" coords="141,16,173,16,173,21,141,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -597,7 +665,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00444">444</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00615">615</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -626,7 +694,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00397">397</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00568">568</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -661,7 +729,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00419">419</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00590">590</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -692,7 +760,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00408">408</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00579">579</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -727,7 +795,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00428">428</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00599">599</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -762,7 +830,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00451">451</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00622">622</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -795,7 +863,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00472">472</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00643">643</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -828,7 +896,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00479">479</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00650">650</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -861,7 +929,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00458">458</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00629">629</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -894,7 +962,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00465">465</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00636">636</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -923,7 +991,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00377">377</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00548">548</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 
 </div>
 </div>
@@ -942,7 +1010,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00355">355</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00532">532</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 
 </div>
 </div>
@@ -961,7 +1029,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00340">340</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00524">524</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 
 </div>
 </div>
@@ -1453,7 +1521,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00370">370</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00540">540</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 
 </div>
 </div>
@@ -1495,6 +1563,25 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="260,32,292,27,293,32,261,37"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a6eee08faa9f783b7755bce5083d5fcf2" name="a6eee08faa9f783b7755bce5083d5fcf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eee08faa9f783b7755bce5083d5fcf2">&#9670;&#160;</a></span>tree_verify_common()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool tree_verify_common </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>tree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="tree__common_8c_source.html#l00333">333</a> of file <a class="el" href="tree__common_8c_source.html">tree_common.c</a>.</p>
 
 </div>
 </div>

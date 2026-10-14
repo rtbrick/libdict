@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/skiplist.c" line="58" column="24" bodyfile="src/skiplist.c" bodystart="58" bodyend="-1"/>
+        <location file="src/skiplist.c" line="61" column="24" bodyfile="src/skiplist.c" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" prot="public" static="no" mutable="no">
         <type><ref refid="structskip__node" kindref="compound">skip_node</ref> *</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/skiplist.c" line="59" column="24" bodyfile="src/skiplist.c" bodystart="59" bodyend="-1"/>
+        <location file="src/skiplist.c" line="62" column="24" bodyfile="src/skiplist.c" bodystart="62" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -63,7 +63,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/skiplist.c" line="57" column="1" bodyfile="src/skiplist.c" bodystart="57" bodyend="60"/>
+    <location file="src/skiplist.c" line="60" column="1" bodyfile="src/skiplist.c" bodystart="60" bodyend="63"/>
     <listofallmembers>
       <member refid="structskiplist__itor_1a7260d0d916f979a1e29faecd0cd47e24" prot="public" virt="non-virtual"><scope>skiplist_itor</scope><name>list</name></member>
       <member refid="structskiplist__itor_1afc7e898c4e7283b56a2759a764473cd0" prot="public" virt="non-virtual"><scope>skiplist_itor</scope><name>node</name></member>

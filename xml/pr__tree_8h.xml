@@ -330,7 +330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="37" column="16" bodyfile="src/pr_tree.c" bodystart="98" bodyend="110" declfile="include/pr_tree.h" declline="37" declcolumn="16"/>
+        <location file="include/pr_tree.h" line="37" column="16" bodyfile="src/pr_tree.c" bodystart="110" bodyend="122" declfile="include/pr_tree.h" declline="37" declcolumn="16"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
@@ -353,12 +353,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="38" column="16" bodyfile="src/pr_tree.c" bodystart="113" bodyend="124" declfile="include/pr_tree.h" declline="38" declcolumn="16"/>
-        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="152">dict::_object</references>
-        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="153">dict::_vtable</references>
+        <location file="include/pr_tree.h" line="38" column="16" bodyfile="src/pr_tree.c" bodystart="125" bodyend="136" declfile="include/pr_tree.h" declline="38" declcolumn="16"/>
+        <references refid="structdict_1a4658ca96529d47daaf0c459afdf9cc59" compoundref="dict_8h" startline="159">dict::_object</references>
+        <references refid="structdict_1acf9d1ce55b44ba41d25081c84310a031" compoundref="dict_8h" startline="160">dict::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
-        <references refid="pr__tree_8c_1a021d6c481cd2bf3e59d1e2d2ab869428" compoundref="pr__tree_8c" startline="98" endline="110">pr_tree_new</references>
+        <references refid="pr__tree_8c_1a021d6c481cd2bf3e59d1e2d2ab869428" compoundref="pr__tree_8c" startline="110" endline="122">pr_tree_new</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1aa4a6bb903a1760fced365e1804c14b8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -379,8 +379,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="39" column="17" bodyfile="src/pr_tree.c" bodystart="126" bodyend="126" declfile="include/pr_tree.h" declline="39" declcolumn="17"/>
-        <references refid="tree__common_8c_1a058d607ec36526c0e52cd66f853ef888" compoundref="tree__common_8c" startline="324" endline="329">tree_free</references>
+        <location file="include/pr_tree.h" line="39" column="17" bodyfile="src/pr_tree.c" bodystart="138" bodyend="138" declfile="include/pr_tree.h" declline="39" declcolumn="17"/>
+        <references refid="tree__common_8c_1a058d607ec36526c0e52cd66f853ef888" compoundref="tree__common_8c" startline="425" endline="430">tree_free</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a369aef27d756b0dc5e36f9937aac3290" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structdict__insert__result" kindref="compound">dict_insert_result</ref></type>
@@ -401,7 +401,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="42" column="17" bodyfile="src/pr_tree.c" bodystart="252" bodyend="290" declfile="include/pr_tree.h" declline="42" declcolumn="17"/>
+        <location file="include/pr_tree.h" line="42" column="17" bodyfile="src/pr_tree.c" bodystart="265" bodyend="303" declfile="include/pr_tree.h" declline="42" declcolumn="17"/>
         <references refid="dict__private_8h_1a28301f76c53b643912da7c538f74e2c6" compoundref="dict__private_8h" startline="51" endline="58">ASSERT</references>
         <references refid="structtree_1a3e0944ca8a425fcd254ca5057e885e45" compoundref="tree__common_8c" startline="38">tree::cmp_func</references>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
@@ -433,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="43" column="15" bodyfile="src/pr_tree.c" bodystart="127" bodyend="127" declfile="include/pr_tree.h" declline="43" declcolumn="15"/>
+        <location file="include/pr_tree.h" line="43" column="15" bodyfile="src/pr_tree.c" bodystart="139" bodyend="139" declfile="include/pr_tree.h" declline="43" declcolumn="15"/>
         <references refid="tree__common_8c_1a81a92b2c7f8d6ebdeacd787d53b67055" compoundref="tree__common_8c" startline="144" endline="148">tree_search</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1acc5e721a419ab0385d680fcf6876546c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -455,7 +455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="44" column="15" bodyfile="src/pr_tree.c" bodystart="128" bodyend="128" declfile="include/pr_tree.h" declline="44" declcolumn="15"/>
+        <location file="include/pr_tree.h" line="44" column="15" bodyfile="src/pr_tree.c" bodystart="140" bodyend="140" declfile="include/pr_tree.h" declline="44" declcolumn="15"/>
         <references refid="tree__common_8c_1ae1ea8d32b69d63eed985f52949bb493c" compoundref="tree__common_8c" startline="170" endline="174">tree_search_le</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a19abec2733a7ea9caa29f1d22e7b850c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -477,7 +477,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="45" column="15" bodyfile="src/pr_tree.c" bodystart="129" bodyend="129" declfile="include/pr_tree.h" declline="45" declcolumn="15"/>
+        <location file="include/pr_tree.h" line="45" column="15" bodyfile="src/pr_tree.c" bodystart="141" bodyend="141" declfile="include/pr_tree.h" declline="45" declcolumn="15"/>
         <references refid="tree__common_8c_1a6f24b96ae2c229648439aa85a2895044" compoundref="tree__common_8c" startline="194" endline="198">tree_search_lt</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a66085cf58e260d862ce8fe4fbfe31df5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -499,7 +499,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="46" column="15" bodyfile="src/pr_tree.c" bodystart="130" bodyend="130" declfile="include/pr_tree.h" declline="46" declcolumn="15"/>
+        <location file="include/pr_tree.h" line="46" column="15" bodyfile="src/pr_tree.c" bodystart="142" bodyend="142" declfile="include/pr_tree.h" declline="46" declcolumn="15"/>
         <references refid="tree__common_8c_1ad6f8aff956f6f8b7f9eaebcd659506b1" compoundref="tree__common_8c" startline="221" endline="225">tree_search_ge</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a13aac3c296260214168e0702ad88095b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -521,7 +521,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="47" column="15" bodyfile="src/pr_tree.c" bodystart="131" bodyend="131" declfile="include/pr_tree.h" declline="47" declcolumn="15"/>
+        <location file="include/pr_tree.h" line="47" column="15" bodyfile="src/pr_tree.c" bodystart="143" bodyend="143" declfile="include/pr_tree.h" declline="47" declcolumn="15"/>
         <references refid="tree__common_8c_1a28283925393f2eb613aa1e669f181c18" compoundref="tree__common_8c" startline="245" endline="249">tree_search_gt</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a5439bea0d35397810101842ae9556056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -543,7 +543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="49" column="17" bodyfile="src/pr_tree.c" bodystart="328" bodyend="336" declfile="include/pr_tree.h" declline="49" declcolumn="17"/>
+        <location file="include/pr_tree.h" line="49" column="17" bodyfile="src/pr_tree.c" bodystart="341" bodyend="349" declfile="include/pr_tree.h" declline="49" declcolumn="17"/>
         <references refid="structpr__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="pr__tree_8c" startline="39">pr_node::datum</references>
         <references refid="structpr__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="pr__tree_8c" startline="39">pr_node::key</references>
         <references refid="tree__common_8c_1a4336bbd1dec56af86a45e1d84d622063" compoundref="tree__common_8c" startline="128" endline="141">tree_search_node</references>
@@ -567,8 +567,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="50" column="17" bodyfile="src/pr_tree.c" bodystart="338" bodyend="338" declfile="include/pr_tree.h" declline="50" declcolumn="17"/>
-        <references refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" compoundref="tree__common_8c" startline="301" endline="321">tree_clear</references>
+        <location file="include/pr_tree.h" line="50" column="17" bodyfile="src/pr_tree.c" bodystart="351" bodyend="351" declfile="include/pr_tree.h" declline="50" declcolumn="17"/>
+        <references refid="tree__common_8c_1a6fbd46e35ff34bda38574a440b879dc1" compoundref="tree__common_8c" startline="401" endline="422">tree_clear</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a37f8889c7ddffaf5820ff824b9b798e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -593,7 +593,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="51" column="17" bodyfile="src/pr_tree.c" bodystart="341" bodyend="344" declfile="include/pr_tree.h" declline="51" declcolumn="17"/>
+        <location file="include/pr_tree.h" line="51" column="17" bodyfile="src/pr_tree.c" bodystart="354" bodyend="357" declfile="include/pr_tree.h" declline="51" declcolumn="17"/>
         <references refid="tree__common_8c_1a8af8d7bc05c41b6b1889714238c541e1" compoundref="tree__common_8c" startline="252" endline="267">tree_traverse</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a7397755dbec281006bd3baf25f62f1de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -623,7 +623,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="52" column="17" bodyfile="src/pr_tree.c" bodystart="347" bodyend="373" declfile="include/pr_tree.h" declline="52" declcolumn="17"/>
+        <location file="include/pr_tree.h" line="52" column="17" bodyfile="src/pr_tree.c" bodystart="360" bodyend="386" declfile="include/pr_tree.h" declline="52" declcolumn="17"/>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structpr__node_1a56b62b74c25973b49f06895dfd600c94" compoundref="pr__tree_8c" startline="39">pr_node::datum</references>
         <references refid="structpr__node_1ab5c000aec752f2206131e183daf5efbf" compoundref="pr__tree_8c" startline="39">pr_node::key</references>
@@ -647,8 +647,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="53" column="17" bodyfile="src/pr_tree.c" bodystart="375" bodyend="375" declfile="include/pr_tree.h" declline="53" declcolumn="17"/>
-        <references refid="tree__common_8c_1a666279f96572685934714532e744718e" compoundref="tree__common_8c" startline="295" endline="298">tree_count</references>
+        <location file="include/pr_tree.h" line="53" column="17" bodyfile="src/pr_tree.c" bodystart="388" bodyend="388" declfile="include/pr_tree.h" declline="53" declcolumn="17"/>
+        <references refid="tree__common_8c_1a666279f96572685934714532e744718e" compoundref="tree__common_8c" startline="299" endline="302">tree_count</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a813fe6b4373aebdf8d7eeeb8f022afd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -665,8 +665,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="54" column="17" bodyfile="src/pr_tree.c" bodystart="377" bodyend="377" declfile="include/pr_tree.h" declline="54" declcolumn="17"/>
-        <references refid="tree__common_8c_1a756193ba67a2786a5e4a6274a7ec170e" compoundref="tree__common_8c" startline="340" endline="344">tree_min_path_length</references>
+        <location file="include/pr_tree.h" line="54" column="17" bodyfile="src/pr_tree.c" bodystart="390" bodyend="390" declfile="include/pr_tree.h" declline="54" declcolumn="17"/>
+        <references refid="tree__common_8c_1a756193ba67a2786a5e4a6274a7ec170e" compoundref="tree__common_8c" startline="524" endline="529">tree_min_path_length</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a0a8f3a4bfb2749b87517fa08971ca3da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -683,8 +683,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="55" column="17" bodyfile="src/pr_tree.c" bodystart="376" bodyend="376" declfile="include/pr_tree.h" declline="55" declcolumn="17"/>
-        <references refid="tree__common_8c_1abf500bf5b159c5ec35a5e0a3ff57a0e8" compoundref="tree__common_8c" startline="355" endline="359">tree_max_path_length</references>
+        <location file="include/pr_tree.h" line="55" column="17" bodyfile="src/pr_tree.c" bodystart="389" bodyend="389" declfile="include/pr_tree.h" declline="55" declcolumn="17"/>
+        <references refid="tree__common_8c_1abf500bf5b159c5ec35a5e0a3ff57a0e8" compoundref="tree__common_8c" startline="532" endline="537">tree_max_path_length</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1acdf0fc6fc9b122418083888333b7ccda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -701,8 +701,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="56" column="17" bodyfile="src/pr_tree.c" bodystart="378" bodyend="378" declfile="include/pr_tree.h" declline="56" declcolumn="17"/>
-        <references refid="tree__common_8c_1a8ff1218a16ab93160f3a922fcdf88882" compoundref="tree__common_8c" startline="370" endline="374">tree_total_path_length</references>
+        <location file="include/pr_tree.h" line="56" column="17" bodyfile="src/pr_tree.c" bodystart="391" bodyend="391" declfile="include/pr_tree.h" declline="56" declcolumn="17"/>
+        <references refid="tree__common_8c_1a8ff1218a16ab93160f3a922fcdf88882" compoundref="tree__common_8c" startline="540" endline="545">tree_total_path_length</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1ae3a3c1c743cb2c3fdfbaac2befcf3c5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -719,7 +719,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="57" column="17" bodyfile="src/pr_tree.c" bodystart="481" bodyend="489" declfile="include/pr_tree.h" declline="57" declcolumn="17"/>
+        <location file="include/pr_tree.h" line="57" column="17" bodyfile="src/pr_tree.c" bodystart="496" bodyend="508" declfile="include/pr_tree.h" declline="57" declcolumn="17"/>
         <references refid="structtree_1a76d971a3c552bc58ba9f0d5fceae9806" compoundref="tree__common_8c" startline="38">tree::count</references>
         <references refid="structtree_1a462689348fa341c603f4840db1a29841" compoundref="tree__common_8c" startline="38">tree::root</references>
         <references refid="dict__private_8h_1a38818e3cd642f0c0737956ad568e3751" compoundref="dict__private_8h" startline="78" endline="85">VERIFY</references>
@@ -739,7 +739,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="61" column="16" bodyfile="src/pr_tree.c" bodystart="492" bodyend="500" declfile="include/pr_tree.h" declline="61" declcolumn="16"/>
+        <location file="include/pr_tree.h" line="61" column="16" bodyfile="src/pr_tree.c" bodystart="511" bodyend="519" declfile="include/pr_tree.h" declline="61" declcolumn="16"/>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
         <references refid="structpr__itor_1a6abe4fbcd865ddab321cb1e020355fc7" compoundref="pr__tree_8c" startline="50">pr_itor::node</references>
         <references refid="structpr__itor_1a0e42d341d4cb4d8aa99bd66d8a5877dd" compoundref="pr__tree_8c" startline="50">pr_itor::tree</references>
@@ -759,21 +759,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="62" column="16" bodyfile="src/pr_tree.c" bodystart="503" bodyend="514" declfile="include/pr_tree.h" declline="62" declcolumn="16"/>
-        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="175">dict_itor::_itor</references>
-        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="176">dict_itor::_vtable</references>
+        <location file="include/pr_tree.h" line="62" column="16" bodyfile="src/pr_tree.c" bodystart="522" bodyend="533" declfile="include/pr_tree.h" declline="62" declcolumn="16"/>
+        <references refid="structdict__itor_1a5f0e212b1ddef75495c8510a9438f377" compoundref="dict_8h" startline="217">dict_itor::_itor</references>
+        <references refid="structdict__itor_1aec8a547b2b1220000757c4dfec8e7847" compoundref="dict_8h" startline="218">dict_itor::_vtable</references>
         <references refid="dict__private_8h_1a02048bf846e8bc87e3ce188e4957ef06" compoundref="dict__private_8h" startline="89">FREE</references>
         <references refid="dict__private_8h_1a7e3c05d61a56a6798627a9d576cb6b45" compoundref="dict__private_8h" startline="88">MALLOC</references>
-        <references refid="pr__tree_8c_1ae8398f448c6c0c7555d38840cba7bb55" compoundref="pr__tree_8c" startline="492" endline="500">pr_itor_new</references>
+        <references refid="pr__tree_8c_1ae8398f448c6c0c7555d38840cba7bb55" compoundref="pr__tree_8c" startline="511" endline="519">pr_itor_new</references>
       </memberdef>
-      <memberdef kind="function" id="pr__tree_8h_1ab1f4e7a7a186e27d63269f7f40bbbb88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="pr__tree_8h_1a5486c7c9fe121ec615a4e53176228eed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void pr_itor_free</definition>
-        <argsstring>(pr_itor *tree)</argsstring>
+        <argsstring>(pr_itor *itor)</argsstring>
         <name>pr_itor_free</name>
         <param>
           <type><ref refid="structpr__itor" kindref="compound">pr_itor</ref> *</type>
-          <declname>tree</declname>
+          <declname>itor</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -781,8 +781,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="63" column="17" bodyfile="src/pr_tree.c" bodystart="516" bodyend="516" declfile="include/pr_tree.h" declline="63" declcolumn="17"/>
-        <references refid="tree__common_8c_1aa3a6573b092296a44a074269c8d2bc91" compoundref="tree__common_8c" startline="389" endline="394">tree_iterator_free</references>
+        <location file="include/pr_tree.h" line="63" column="17" bodyfile="src/pr_tree.c" bodystart="535" bodyend="535" declfile="include/pr_tree.h" declline="63" declcolumn="17"/>
+        <references refid="tree__common_8c_1aa3a6573b092296a44a074269c8d2bc91" compoundref="tree__common_8c" startline="560" endline="565">tree_iterator_free</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a5e728838fdbe2fea666faae2bfe82a1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -799,8 +799,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="65" column="17" bodyfile="src/pr_tree.c" bodystart="517" bodyend="517" declfile="include/pr_tree.h" declline="65" declcolumn="17"/>
-        <references refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" compoundref="tree__common_8c" startline="377" endline="380">tree_iterator_valid</references>
+        <location file="include/pr_tree.h" line="65" column="17" bodyfile="src/pr_tree.c" bodystart="536" bodyend="536" declfile="include/pr_tree.h" declline="65" declcolumn="17"/>
+        <references refid="tree__common_8c_1a64ec4cc9e72043bf93b75394d4a6b089" compoundref="tree__common_8c" startline="548" endline="551">tree_iterator_valid</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1aed5a10ede70733395106c6b749d7647a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -817,8 +817,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="66" column="17" bodyfile="src/pr_tree.c" bodystart="518" bodyend="518" declfile="include/pr_tree.h" declline="66" declcolumn="17"/>
-        <references refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" compoundref="tree__common_8c" startline="383" endline="386">tree_iterator_invalidate</references>
+        <location file="include/pr_tree.h" line="66" column="17" bodyfile="src/pr_tree.c" bodystart="537" bodyend="537" declfile="include/pr_tree.h" declline="66" declcolumn="17"/>
+        <references refid="tree__common_8c_1a2493acbad8b60afbc8f60e67ab30e06a" compoundref="tree__common_8c" startline="554" endline="557">tree_iterator_invalidate</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a33078fbea87a49fd5d36c3d65b41b784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -835,8 +835,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="67" column="17" bodyfile="src/pr_tree.c" bodystart="519" bodyend="519" declfile="include/pr_tree.h" declline="67" declcolumn="17"/>
-        <references refid="tree__common_8c_1a1e3db914a6bdf103e9f7db4f78c908ae" compoundref="tree__common_8c" startline="397" endline="405">tree_iterator_next</references>
+        <location file="include/pr_tree.h" line="67" column="17" bodyfile="src/pr_tree.c" bodystart="538" bodyend="538" declfile="include/pr_tree.h" declline="67" declcolumn="17"/>
+        <references refid="tree__common_8c_1a1e3db914a6bdf103e9f7db4f78c908ae" compoundref="tree__common_8c" startline="568" endline="576">tree_iterator_next</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a6f302faeffdfc624d9adf2e64e44a28a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -853,8 +853,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="68" column="17" bodyfile="src/pr_tree.c" bodystart="520" bodyend="520" declfile="include/pr_tree.h" declline="68" declcolumn="17"/>
-        <references refid="tree__common_8c_1afad64b5a28a44ca544fe3f0b8011db17" compoundref="tree__common_8c" startline="408" endline="416">tree_iterator_prev</references>
+        <location file="include/pr_tree.h" line="68" column="17" bodyfile="src/pr_tree.c" bodystart="539" bodyend="539" declfile="include/pr_tree.h" declline="68" declcolumn="17"/>
+        <references refid="tree__common_8c_1afad64b5a28a44ca544fe3f0b8011db17" compoundref="tree__common_8c" startline="579" endline="587">tree_iterator_prev</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a511f5f263b38ffd94af79324cfa03832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -875,8 +875,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="69" column="17" bodyfile="src/pr_tree.c" bodystart="521" bodyend="521" declfile="include/pr_tree.h" declline="69" declcolumn="17"/>
-        <references refid="tree__common_8c_1a8a7b95378ac8dc696b220f073b83977c" compoundref="tree__common_8c" startline="419" endline="425">tree_iterator_nextn</references>
+        <location file="include/pr_tree.h" line="69" column="17" bodyfile="src/pr_tree.c" bodystart="540" bodyend="540" declfile="include/pr_tree.h" declline="69" declcolumn="17"/>
+        <references refid="tree__common_8c_1a8a7b95378ac8dc696b220f073b83977c" compoundref="tree__common_8c" startline="590" endline="596">tree_iterator_nextn</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a486455f59c063ba1261d158d44d7ef78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -897,8 +897,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="70" column="17" bodyfile="src/pr_tree.c" bodystart="522" bodyend="522" declfile="include/pr_tree.h" declline="70" declcolumn="17"/>
-        <references refid="tree__common_8c_1aa54a225a4b2bfc3a6bbf73125d4dd88a" compoundref="tree__common_8c" startline="428" endline="434">tree_iterator_prevn</references>
+        <location file="include/pr_tree.h" line="70" column="17" bodyfile="src/pr_tree.c" bodystart="541" bodyend="541" declfile="include/pr_tree.h" declline="70" declcolumn="17"/>
+        <references refid="tree__common_8c_1aa54a225a4b2bfc3a6bbf73125d4dd88a" compoundref="tree__common_8c" startline="599" endline="605">tree_iterator_prevn</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1aa8d018d3cbb7f0b1592347b618f566e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -915,8 +915,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="71" column="17" bodyfile="src/pr_tree.c" bodystart="523" bodyend="523" declfile="include/pr_tree.h" declline="71" declcolumn="17"/>
-        <references refid="tree__common_8c_1a9bab181bc96dd1334ea36f0b3f647f2a" compoundref="tree__common_8c" startline="437" endline="441">tree_iterator_first</references>
+        <location file="include/pr_tree.h" line="71" column="17" bodyfile="src/pr_tree.c" bodystart="542" bodyend="542" declfile="include/pr_tree.h" declline="71" declcolumn="17"/>
+        <references refid="tree__common_8c_1a9bab181bc96dd1334ea36f0b3f647f2a" compoundref="tree__common_8c" startline="608" endline="612">tree_iterator_first</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a8e33347218fd385241a14d1209b0d102" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -933,8 +933,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="72" column="17" bodyfile="src/pr_tree.c" bodystart="524" bodyend="524" declfile="include/pr_tree.h" declline="72" declcolumn="17"/>
-        <references refid="tree__common_8c_1a03b78e22aed8c0dd38f96d939066239a" compoundref="tree__common_8c" startline="444" endline="448">tree_iterator_last</references>
+        <location file="include/pr_tree.h" line="72" column="17" bodyfile="src/pr_tree.c" bodystart="543" bodyend="543" declfile="include/pr_tree.h" declline="72" declcolumn="17"/>
+        <references refid="tree__common_8c_1a03b78e22aed8c0dd38f96d939066239a" compoundref="tree__common_8c" startline="615" endline="619">tree_iterator_last</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1aa4c5b7ef76aa1bfcbac8e0e40cd44046" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -955,8 +955,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="73" column="17" bodyfile="src/pr_tree.c" bodystart="525" bodyend="525" declfile="include/pr_tree.h" declline="73" declcolumn="17"/>
-        <references refid="tree__common_8c_1aeebf37a00012869c931e03dbb1047ade" compoundref="tree__common_8c" startline="451" endline="455">tree_iterator_search</references>
+        <location file="include/pr_tree.h" line="73" column="17" bodyfile="src/pr_tree.c" bodystart="544" bodyend="544" declfile="include/pr_tree.h" declline="73" declcolumn="17"/>
+        <references refid="tree__common_8c_1aeebf37a00012869c931e03dbb1047ade" compoundref="tree__common_8c" startline="622" endline="626">tree_iterator_search</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a958018ddbd0d0fefdf9d897319536bf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -977,8 +977,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="74" column="17" bodyfile="src/pr_tree.c" bodystart="526" bodyend="526" declfile="include/pr_tree.h" declline="74" declcolumn="17"/>
-        <references refid="tree__common_8c_1a630ac71696ac60548789b01f1e618350" compoundref="tree__common_8c" startline="458" endline="462">tree_iterator_search_le</references>
+        <location file="include/pr_tree.h" line="74" column="17" bodyfile="src/pr_tree.c" bodystart="545" bodyend="545" declfile="include/pr_tree.h" declline="74" declcolumn="17"/>
+        <references refid="tree__common_8c_1a630ac71696ac60548789b01f1e618350" compoundref="tree__common_8c" startline="629" endline="633">tree_iterator_search_le</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1af595a91bfa4ed7f53cfbdd7c8b75f669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -999,8 +999,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="75" column="17" bodyfile="src/pr_tree.c" bodystart="527" bodyend="527" declfile="include/pr_tree.h" declline="75" declcolumn="17"/>
-        <references refid="tree__common_8c_1aa83954869eda27b3488032f96a257771" compoundref="tree__common_8c" startline="465" endline="469">tree_iterator_search_lt</references>
+        <location file="include/pr_tree.h" line="75" column="17" bodyfile="src/pr_tree.c" bodystart="546" bodyend="546" declfile="include/pr_tree.h" declline="75" declcolumn="17"/>
+        <references refid="tree__common_8c_1aa83954869eda27b3488032f96a257771" compoundref="tree__common_8c" startline="636" endline="640">tree_iterator_search_lt</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1aa3580461d7082c82e1a8312529f799f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1021,8 +1021,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="76" column="17" bodyfile="src/pr_tree.c" bodystart="528" bodyend="528" declfile="include/pr_tree.h" declline="76" declcolumn="17"/>
-        <references refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" compoundref="tree__common_8c" startline="472" endline="476">tree_iterator_search_ge</references>
+        <location file="include/pr_tree.h" line="76" column="17" bodyfile="src/pr_tree.c" bodystart="547" bodyend="547" declfile="include/pr_tree.h" declline="76" declcolumn="17"/>
+        <references refid="tree__common_8c_1ab1b92ab0d7b212e2928912a417ecb9a1" compoundref="tree__common_8c" startline="643" endline="647">tree_iterator_search_ge</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1af46574d3f0cac9d7a66f68b803464ee4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1043,8 +1043,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="77" column="17" bodyfile="src/pr_tree.c" bodystart="529" bodyend="529" declfile="include/pr_tree.h" declline="77" declcolumn="17"/>
-        <references refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" compoundref="tree__common_8c" startline="479" endline="483">tree_iterator_search_gt</references>
+        <location file="include/pr_tree.h" line="77" column="17" bodyfile="src/pr_tree.c" bodystart="548" bodyend="548" declfile="include/pr_tree.h" declline="77" declcolumn="17"/>
+        <references refid="tree__common_8c_1ad0892dbc05516cf35927f3802ceb0073" compoundref="tree__common_8c" startline="650" endline="654">tree_iterator_search_gt</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a1a4daa96bf7bfbcf18e11112f7d2115a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const void *</type>
@@ -1061,8 +1061,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="78" column="16" bodyfile="src/pr_tree.c" bodystart="530" bodyend="530" declfile="include/pr_tree.h" declline="78" declcolumn="16"/>
-        <references refid="tree__common_8c_1a71fd87b638317045ae986d9886f10c10" compoundref="tree__common_8c" startline="499" endline="503">tree_iterator_key</references>
+        <location file="include/pr_tree.h" line="78" column="16" bodyfile="src/pr_tree.c" bodystart="549" bodyend="549" declfile="include/pr_tree.h" declline="78" declcolumn="16"/>
+        <references refid="tree__common_8c_1a71fd87b638317045ae986d9886f10c10" compoundref="tree__common_8c" startline="670" endline="674">tree_iterator_key</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1acc6f2b1cf7e2294ce3f3dd4ace188002" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void **</type>
@@ -1079,8 +1079,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="79" column="15" bodyfile="src/pr_tree.c" bodystart="531" bodyend="531" declfile="include/pr_tree.h" declline="79" declcolumn="15"/>
-        <references refid="tree__common_8c_1a1cc4c18adcfc606676bbbe632160f50a" compoundref="tree__common_8c" startline="506" endline="510">tree_iterator_datum</references>
+        <location file="include/pr_tree.h" line="79" column="15" bodyfile="src/pr_tree.c" bodystart="550" bodyend="550" declfile="include/pr_tree.h" declline="79" declcolumn="15"/>
+        <references refid="tree__common_8c_1a1cc4c18adcfc606676bbbe632160f50a" compoundref="tree__common_8c" startline="677" endline="681">tree_iterator_datum</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a682978f7c2b9bbf42e3a632db907bfdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1101,8 +1101,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="80" column="17" bodyfile="src/pr_tree.c" bodystart="532" bodyend="532" declfile="include/pr_tree.h" declline="80" declcolumn="17"/>
-        <references refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" compoundref="tree__common_8c" startline="486" endline="496">tree_iterator_compare</references>
+        <location file="include/pr_tree.h" line="80" column="17" bodyfile="src/pr_tree.c" bodystart="551" bodyend="551" declfile="include/pr_tree.h" declline="80" declcolumn="17"/>
+        <references refid="tree__common_8c_1a32b8464955ebce9c4f8967162f01f50b" compoundref="tree__common_8c" startline="657" endline="667">tree_iterator_compare</references>
       </memberdef>
       <memberdef kind="function" id="pr__tree_8h_1a604e78d2b7caf21b31a2f287fa2e2bd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1119,7 +1119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/pr_tree.h" line="81" column="17" bodyfile="src/pr_tree.c" bodystart="535" bodyend="542" declfile="include/pr_tree.h" declline="81" declcolumn="17"/>
+        <location file="include/pr_tree.h" line="81" column="17" bodyfile="src/pr_tree.c" bodystart="554" bodyend="561" declfile="include/pr_tree.h" declline="81" declcolumn="17"/>
         <references refid="structpr__itor_1a6abe4fbcd865ddab321cb1e020355fc7" compoundref="pr__tree_8c" startline="50">pr_itor::node</references>
         <references refid="structpr__itor_1a0e42d341d4cb4d8aa99bd66d8a5877dd" compoundref="pr__tree_8c" startline="50">pr_itor::tree</references>
       </memberdef>
@@ -1191,7 +1191,7 @@
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1ae8398f448c6c0c7555d38840cba7bb55" kindref="member">pr_itor_new</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><ref refid="structdict__itor" kindref="compound">dict_itor</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a34060218131e6e94fea3533d268f03a9" kindref="member">pr_dict_itor_new</ref>(<ref refid="structpr__tree" kindref="compound">pr_tree</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1ab1f4e7a7a186e27d63269f7f40bbbb88" kindref="member">pr_itor_free</ref>(<ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/><ref refid="structtree" kindref="compound">tree</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a5486c7c9fe121ec615a4e53176228eed" kindref="member">pr_itor_free</ref>(<ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1a5e728838fdbe2fea666faae2bfe82a1d" kindref="member">pr_itor_valid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor);</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pr__tree_8h_1aed5a10ede70733395106c6b749d7647a" kindref="member">pr_itor_invalidate</ref>(<ref refid="structpr__itor" kindref="compound">pr_itor</ref>*<sp/>itor);</highlight></codeline>

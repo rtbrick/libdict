@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tr_tree.c" line="51" column="11" bodyfile="src/tr_tree.c" bodystart="51" bodyend="-1"/>
+        <location file="src/tr_tree.c" line="52" column="11" bodyfile="src/tr_tree.c" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtr__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" static="no" mutable="no">
         <type>void *</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tr_tree.c" line="51" column="22" bodyfile="src/tr_tree.c" bodystart="51" bodyend="-1"/>
+        <location file="src/tr_tree.c" line="52" column="22" bodyfile="src/tr_tree.c" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtr__node_1a083e9ef58beaa2d361ed2786e7d81f44" prot="public" static="no" mutable="no">
         <type><ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tr_tree.c" line="51" column="38" bodyfile="src/tr_tree.c" bodystart="51" bodyend="-1"/>
+        <location file="src/tr_tree.c" line="52" column="38" bodyfile="src/tr_tree.c" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtr__node_1ac1b51514b162d38bc3ab945c91d3d9fc" prot="public" static="no" mutable="no">
         <type><ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tr_tree.c" line="51" column="55" bodyfile="src/tr_tree.c" bodystart="51" bodyend="-1"/>
+        <location file="src/tr_tree.c" line="52" column="55" bodyfile="src/tr_tree.c" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtr__node_1ae0d7cc9f06368539a97dd7e02d0ba81e" prot="public" static="no" mutable="no">
         <type><ref refid="structtr__node" kindref="compound">tr_node</ref> *</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tr_tree.c" line="51" column="71" bodyfile="src/tr_tree.c" bodystart="51" bodyend="-1"/>
+        <location file="src/tr_tree.c" line="52" column="71" bodyfile="src/tr_tree.c" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structtr__node_1a6871573fefee3ad102e26a09e7a2f493" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tr_tree.c" line="52" column="25" bodyfile="src/tr_tree.c" bodystart="52" bodyend="-1"/>
+        <location file="src/tr_tree.c" line="53" column="25" bodyfile="src/tr_tree.c" bodystart="53" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -103,7 +103,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/tr_tree.c" line="50" column="1" bodyfile="src/tr_tree.c" bodystart="50" bodyend="53"/>
+    <location file="src/tr_tree.c" line="51" column="1" bodyfile="src/tr_tree.c" bodystart="51" bodyend="54"/>
     <listofallmembers>
       <member refid="structtr__node_1a56b62b74c25973b49f06895dfd600c94" prot="public" virt="non-virtual"><scope>tr_node</scope><name>datum</name></member>
       <member refid="structtr__node_1ab5c000aec752f2206131e183daf5efbf" prot="public" virt="non-virtual"><scope>tr_node</scope><name>key</name></member>

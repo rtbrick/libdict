@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['parent_0',['parent',['../structpr__node.html#abf99a703fdebf3d585be06abfc890b49',1,'pr_node::parent'],['../structsp__node.html#a1c7fd5fcaab9ca7faadfacd8acc9d21b',1,'sp_node::parent'],['../structtr__node.html#a083e9ef58beaa2d361ed2786e7d81f44',1,'tr_node::parent'],['../structtree__node.html#a1b14b7d0565271b34732a5c6fd7b79c4',1,'tree_node::parent'],['../structtree__node__base.html#a004e0d775ac84f0908b5b6b346087660',1,'tree_node_base::parent'],['../structwb__node.html#a25828e10f8a3f92211d2ad44b6f768cf',1,'wb_node::parent']]],
-  ['pptr_1',['pptr',['../structhb__node.html#a5a83c322bc3600c9d6ad24ac42fb3da4',1,'hb_node']]],
-  ['prev_2',['prev',['../structhash__node.html#a92aeb549b5bf6b8ca9fa704ee00a9e79',1,'hash_node::prev'],['../structskip__node.html#a45a0b6bc7ce1d301c1527998d99e85f0',1,'skip_node::prev'],['../structitor__vtable.html#a2dcf3b43ec0d1c839e5b236ef6ed212f',1,'itor_vtable::prev']]],
-  ['prevn_3',['prevn',['../structitor__vtable.html#a593b1e098cce8ad21d434d219da5c08d',1,'itor_vtable']]],
-  ['prio_4',['prio',['../structtr__node.html#a6871573fefee3ad102e26a09e7a2f493',1,'tr_node']]],
-  ['prio_5ffunc_5',['prio_func',['../structtr__tree.html#ab0fddef55318e7c9a173f78c9bbeffd1',1,'tr_tree']]]
+  ['next_0',['next',['../structhash__node.html#a7a97227f6e8d3ea257f595306e8cb20a',1,'hash_node::next'],['../structitor__vtable.html#a22c479a3f3f1fcd22f18540fc32022eb',1,'itor_vtable::next']]],
+  ['nextn_1',['nextn',['../structitor__vtable.html#a2405b6667d1f6f32c6e25ceeba154317',1,'itor_vtable']]],
+  ['node_2',['node',['../structhashtable__itor.html#ac132a6acabd26ddbcea7c8d00fd5b68f',1,'hashtable_itor::node'],['../structhb__itor.html#abd1d99b37abe63189d6db6eb630bd2ff',1,'hb_itor::node'],['../structpr__itor.html#a6abe4fbcd865ddab321cb1e020355fc7',1,'pr_itor::node'],['../structrb__itor.html#ae49fdb9a0b8ac1940cd9fd3047488de1',1,'rb_itor::node'],['../structskiplist__itor.html#afc7e898c4e7283b56a2759a764473cd0',1,'skiplist_itor::node'],['../structsp__itor.html#a60c62d8f1ba6e12c422f3e5c2bf98e32',1,'sp_itor::node'],['../structtr__itor.html#aa20baf22d1f5efc4cb041a5f4d7070ba',1,'tr_itor::node'],['../structtree__iterator.html#a3fb7c06515f16af7c11e07e7a3dd4813',1,'tree_iterator::node'],['../structnode__depth.html#af55cdc6bc322bf675fb4ca637f6a57a1',1,'node_depth::node'],['../structwb__itor.html#a0c66ad50dc8ddb60e664a1d4c3132009',1,'wb_itor::node']]]
 ];

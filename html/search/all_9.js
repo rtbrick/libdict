@@ -5,5 +5,6 @@ var searchData=
   ['insert_2',['insert',['../structdict__vtable.html#a841c55da488714c38f761e78e449fcb0',1,'dict_vtable']]],
   ['inserted_3',['inserted',['../structdict__insert__result.html#a325385b8d6787835cb03a2f364ab2c56',1,'dict_insert_result']]],
   ['invalid_4',['invalid',['../structitor__vtable.html#ae27a265a0e2d12bd857104499a4da018',1,'itor_vtable']]],
-  ['itor_5fvtable_5',['itor_vtable',['../structitor__vtable.html',1,'']]]
+  ['items_5',['items',['../structnode__stack.html#a132153225fed92146dce6efed8a9d35f',1,'node_stack']]],
+  ['itor_5fvtable_6',['itor_vtable',['../structitor__vtable.html',1,'']]]
 ];

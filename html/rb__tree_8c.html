@@ -98,7 +98,6 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="rb__tree_8h_source.html">rb_tree.h</a>&quot;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="dict__private_8h_source.html">dict_private.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="tree__common_8h_source.html">tree_common.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -106,18 +105,16 @@ Include dependency graph for rb_tree.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="rb__tree_8c__incl.png" border="0" usemap="#asrc_2rb__tree_8c" alt=""/></div>
 <map name="asrc_2rb__tree_8c" id="asrc_2rb__tree_8c">
-<area shape="rect" title=" " alt="" coords="619,5,712,31"/>
-<area shape="rect" href="rb__tree_8h.html" title=" " alt="" coords="483,79,555,105"/>
-<area shape="poly" title=" " alt="" coords="642,34,559,74,557,69,640,29"/>
-<area shape="rect" title=" " alt="" coords="579,79,643,105"/>
-<area shape="poly" title=" " alt="" coords="659,33,631,68,627,65,655,30"/>
-<area shape="rect" href="dict__private_8h.html" title=" " alt="" coords="800,79,899,105"/>
-<area shape="poly" title=" " alt="" coords="698,29,805,71,803,75,696,34"/>
-<area shape="rect" href="tree__common_8h.html" title=" " alt="" coords="666,79,777,105"/>
-<area shape="poly" title=" " alt="" coords="677,30,705,65,701,68,673,33"/>
+<area shape="rect" title=" " alt="" coords="636,5,730,31"/>
+<area shape="rect" href="rb__tree_8h.html" title=" " alt="" coords="533,79,604,105"/>
+<area shape="poly" title=" " alt="" coords="665,34,602,73,599,68,662,29"/>
+<area shape="rect" href="dict__private_8h.html" title=" " alt="" coords="762,79,860,105"/>
+<area shape="poly" title=" " alt="" coords="706,29,777,69,775,73,703,34"/>
+<area shape="rect" href="tree__common_8h.html" title=" " alt="" coords="628,79,738,105"/>
+<area shape="poly" title=" " alt="" coords="686,31,686,63,680,63,680,31"/>
 <area shape="rect" href="dict_8h.html" title=" " alt="" coords="618,153,670,178"/>
-<area shape="poly" title=" " alt="" coords="535,103,606,144,603,148,532,108"/>
-<area shape="poly" title=" " alt="" coords="629,154,559,114,562,110,631,150"/>
+<area shape="poly" title=" " alt="" coords="576,103,615,141,611,144,572,107"/>
+<area shape="poly" title=" " alt="" coords="637,154,598,117,602,113,640,150"/>
 <area shape="rect" title=" " alt="" coords="5,226,73,252"/>
 <area shape="poly" title=" " alt="" coords="618,171,403,188,249,205,88,229,87,223,248,199,402,182,618,166"/>
 <area shape="rect" title=" " alt="" coords="97,226,160,252"/>
@@ -148,12 +145,12 @@ Include dependency graph for rb_tree.c:</div>
 <area shape="poly" title=" " alt="" coords="811,228,684,182,686,177,813,223"/>
 <area shape="poly" title=" " alt="" coords="898,229,685,178,686,172,899,224"/>
 <area shape="poly" title=" " alt="" coords="991,229,822,197,686,175,686,170,823,192,992,224"/>
-<area shape="poly" title=" " alt="" coords="816,108,686,153,684,148,814,103"/>
-<area shape="rect" title=" " alt="" coords="777,153,837,178"/>
-<area shape="poly" title=" " alt="" coords="845,106,824,141,820,138,840,104"/>
-<area shape="rect" title=" " alt="" coords="861,153,924,178"/>
-<area shape="poly" title=" " alt="" coords="859,104,880,138,875,141,854,106"/>
-<area shape="poly" title=" " alt="" coords="710,107,670,144,667,140,707,103"/>
+<area shape="poly" title=" " alt="" coords="784,108,686,149,684,144,782,103"/>
+<area shape="rect" title=" " alt="" coords="733,153,793,178"/>
+<area shape="poly" title=" " alt="" coords="805,106,782,141,777,138,801,103"/>
+<area shape="rect" title=" " alt="" coords="817,153,880,178"/>
+<area shape="poly" title=" " alt="" coords="820,104,837,138,833,140,815,106"/>
+<area shape="poly" title=" " alt="" coords="679,106,660,140,656,138,674,104"/>
 </map>
 </div>
 </div>
@@ -285,9 +282,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((node)-&gt;color &amp; <a class="code hl_define" href="#a9776c921e63661755728d05e55484d0b">RB_BLACK</a>)</div>
-<div class="ttc" id="arb__tree_8c_html_a9776c921e63661755728d05e55484d0b"><div class="ttname"><a href="#a9776c921e63661755728d05e55484d0b">RB_BLACK</a></div><div class="ttdeci">#define RB_BLACK</div><div class="ttdef"><b>Definition</b> <a href="rb__tree_8c_source.html#l00048">rb_tree.c:48</a></div></div>
+<div class="ttc" id="arb__tree_8c_html_a9776c921e63661755728d05e55484d0b"><div class="ttname"><a href="#a9776c921e63661755728d05e55484d0b">RB_BLACK</a></div><div class="ttdeci">#define RB_BLACK</div><div class="ttdef"><b>Definition</b> <a href="rb__tree_8c_source.html#l00047">rb_tree.c:47</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00051">51</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00050">50</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -306,9 +303,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((<a class="code hl_struct" href="structrb__node.html">rb_node</a>*)((node)-&gt;color &amp; ~<a class="code hl_define" href="#a9776c921e63661755728d05e55484d0b">RB_BLACK</a>))</div>
-<div class="ttc" id="astructrb__node_html"><div class="ttname"><a href="structrb__node.html">rb_node</a></div><div class="ttdef"><b>Definition</b> <a href="rb__tree_8c_source.html#l00039">rb_tree.c:39</a></div></div>
+<div class="ttc" id="astructrb__node_html"><div class="ttname"><a href="structrb__node.html">rb_node</a></div><div class="ttdef"><b>Definition</b> <a href="rb__tree_8c_source.html#l00038">rb_tree.c:38</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00050">50</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00049">49</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -324,7 +321,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00048">48</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00047">47</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -340,7 +337,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00047">47</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00046">46</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -360,7 +357,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(node)-&gt;color |= ((intptr_t)<a class="code hl_define" href="#a9776c921e63661755728d05e55484d0b">RB_BLACK</a>)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00054">54</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00053">53</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -383,9 +380,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(node)-&gt;color = <a class="code hl_define" href="#ae75791dcea89e11d3f729f4bc57a2cae">COLOR</a>(node) | (intptr_t)(p)</div>
-<div class="ttc" id="arb__tree_8c_html_ae75791dcea89e11d3f729f4bc57a2cae"><div class="ttname"><a href="#ae75791dcea89e11d3f729f4bc57a2cae">COLOR</a></div><div class="ttdeci">#define COLOR(node)</div><div class="ttdef"><b>Definition</b> <a href="rb__tree_8c_source.html#l00051">rb_tree.c:51</a></div></div>
+<div class="ttc" id="arb__tree_8c_html_ae75791dcea89e11d3f729f4bc57a2cae"><div class="ttname"><a href="#ae75791dcea89e11d3f729f4bc57a2cae">COLOR</a></div><div class="ttdeci">#define COLOR(node)</div><div class="ttdef"><b>Definition</b> <a href="rb__tree_8c_source.html#l00050">rb_tree.c:50</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00055">55</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00054">54</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -405,7 +402,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(node)-&gt;color &amp;= (~(intptr_t)<a class="code hl_define" href="#a9776c921e63661755728d05e55484d0b">RB_BLACK</a>)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00053">53</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00052">52</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -422,7 +419,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00038">38</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00037">37</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -442,7 +439,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00573">573</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00642">642</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -471,7 +468,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00128">128</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00178">178</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -504,7 +501,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00635">635</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00704">704</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -533,7 +530,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00634">634</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00703">703</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -562,7 +559,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00626">626</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00695">695</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -593,7 +590,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00586">586</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00655">655</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -622,7 +619,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00588">588</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00657">657</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -651,7 +648,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00633">633</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00702">702</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -680,7 +677,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00627">627</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00696">696</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -711,7 +708,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00562">562</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00631">631</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -730,7 +727,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00591">591</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00660">660</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -753,7 +750,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00607">607</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00676">676</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -782,7 +779,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00599">599</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00668">668</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -805,7 +802,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00617">617</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00686">686</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -834,7 +831,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00638">638</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00707">707</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -857,7 +854,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00628">628</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00697">697</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -892,7 +889,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00631">631</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00700">700</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -927,7 +924,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00632">632</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00701">701</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -962,7 +959,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00629">629</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00698">698</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -997,7 +994,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00630">630</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00699">699</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1028,7 +1025,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00587">587</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00656">656</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1061,7 +1058,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00149">149</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00199">199</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -1080,7 +1077,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00379">379</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00432">432</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1113,7 +1110,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00142">142</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00192">192</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1146,7 +1143,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00177">177</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00229">229</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -1165,7 +1162,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00381">381</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00434">434</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1194,7 +1191,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00380">380</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00433">433</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1223,7 +1220,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00113">113</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00163">163</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
@@ -1246,7 +1243,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00294">294</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00346">346</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1279,7 +1276,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00170">170</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00222">222</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1314,7 +1311,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00173">173</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00225">225</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1349,7 +1346,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00174">174</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00226">226</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1384,7 +1381,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00171">171</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00223">223</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1419,7 +1416,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00172">172</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00224">224</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1464,7 +1461,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00400">400</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00453">453</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1495,7 +1492,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00382">382</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00435">435</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1533,7 +1530,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00385">385</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00438">438</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1562,7 +1559,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00545">545</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rb__tree_8c_source.html#l00609">609</a> of file <a class="el" href="rb__tree_8c_source.html">rb_tree.c</a>.</p>
 
 </div>
 </div>
