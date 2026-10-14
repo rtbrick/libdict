@@ -32,4 +32,4 @@ Build, tests and CI (propose before adding, see CLAUDE.md):
 [ ] CI: Release next to Debug, an ASan + UBSan job, a LIBDICT_SLOW_TESTS=1
     job, QEMU jobs for arm64, armv7, i386 and s390x, and a clang make build.
 [ ] Smoke tests for demo, anagram and benchmark in CTest.
-[ ] Update the Doxyfile ("doxygen -u"); doxygen warns about 14 obsolete tags.
+[X] Update the Doxyfile ("doxygen -u"); doxygen warned about 14 obsolete tags.
