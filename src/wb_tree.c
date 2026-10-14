@@ -31,15 +31,16 @@
 
 #include "wb_tree.h"
 
-#include <limits.h>
+#include <stdint.h>
 #include "dict_private.h"
 #include "tree_common.h"
 
 /* A tree BB[alpha] is said to be of weighted balance alpha if every node in
  * the tree has a balance p(n) such that alpha <= p(n) <= 1 - alpha. The
  * balance of a node is defined as the number of nodes in its left subtree
- * divided by the number of nodes in either subtree. The weight of a node is
- * defined as the number of external nodes in its subtrees.
+ * divided by the number of nodes in the subtree rooted at that node. The
+ * weight of a node is defined as the number of external nodes in its
+ * subtrees.
  *
  * Legal values for alpha are 0 <= alpha <= 1/2. BB[0] is a normal, unbalanced
  * binary tree, and BB[1/2] includes only completely balanced binary search
@@ -172,11 +173,11 @@ fixup(wb_tree* tree, wb_node* n)
 {
     unsigned rotations = 0;
     unsigned weight = WEIGHT(n->llink);
-    if (weight * 1000U < n->weight * 293U) {
+    if ((uint64_t) weight * 1000U < (uint64_t) n->weight * 293U) {
         wb_node* nr = n->rlink;
         ASSERT(nr != NULL);
         wb_node* nrl = nr->llink;
-        if (WEIGHT(nrl) * 1000U < nr->weight * 586U) { /* LL */
+        if ((uint64_t) WEIGHT(nrl) * 1000U < (uint64_t) nr->weight * 586U) { /* RR */
             /* Rotate |n| left. */
             tree_node_rot_left(tree, n);
             nr->weight = (n->weight = WEIGHT(n->llink) + WEIGHT(n->rlink)) +
@@ -205,11 +206,11 @@ fixup(wb_tree* tree, wb_node* n)
                 (nr->weight = WEIGHT(b) + WEIGHT(nr->rlink));
             rotations += 2;
         }
-    } else if (weight * 1000U > n->weight * 707U) {
+    } else if ((uint64_t) weight * 1000U > (uint64_t) n->weight * 707U) {
         wb_node* nl = n->llink;
         ASSERT(nl != NULL);
         weight = WEIGHT(nl->llink);
-        if (weight * 1000U > nl->weight * 414U) {    /* RR */
+        if ((uint64_t) weight * 1000U > (uint64_t) nl->weight * 414U) {    /* LL */
             tree_node_rot_right(tree, n);
 
             n->weight = WEIGHT(n->llink) + WEIGHT(n->rlink);
@@ -302,7 +303,7 @@ remove_node(wb_tree* tree, wb_node* node)
         node = out;
     }
     ASSERT(!node->llink || !node->rlink);
-    /* Splice in the successor, if any. */
+    /* Splice in the node's only child, if any. */
     wb_node* child = node->llink ? node->llink : node->rlink;
     wb_node* parent = node->parent;
     if (child)
@@ -387,7 +388,7 @@ node_new(void* key)
 
 static bool
 node_verify(const wb_tree* tree, const wb_node* parent, const wb_node* node,
-        unsigned *weight)
+        unsigned *weight, const void* lower, const void* upper)
 {
     if (!parent) {
         VERIFY(tree->root == node);
@@ -396,23 +397,23 @@ node_verify(const wb_tree* tree, const wb_node* parent, const wb_node* node,
     }
     if (node) {
         VERIFY(node->parent == parent);
-        if (parent) {
-            if (parent->llink == node) {
-                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-            } else {
-                ASSERT(parent->rlink == node);
-                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-            }
-        }
+        /* Global BST ordering. Comparing a node only against its immediate
+         * parent would accept an entire subtree placed on the wrong side:
+         * root 5, 5->llink 3, 3->rlink 7 passes every parent-local check yet
+         * makes key 7 unreachable from the root. */
+        if (lower)
+            VERIFY(tree->cmp_func(lower, node->key) < 0);
+        if (upper)
+            VERIFY(tree->cmp_func(upper, node->key) > 0);
         unsigned lweight, rweight;
-        if (!node_verify(tree, node, node->llink, &lweight) ||
-            !node_verify(tree, node, node->rlink, &rweight))
+        if (!node_verify(tree, node, node->llink, &lweight, lower, node->key) ||
+            !node_verify(tree, node, node->rlink, &rweight, node->key, upper))
             return false;
         VERIFY(WEIGHT(node->llink) == lweight);
         VERIFY(WEIGHT(node->rlink) == rweight);
         VERIFY(node->weight == lweight + rweight);
-        VERIFY(lweight * 1000U >= node->weight * 292U);
-        VERIFY(lweight * 1000U <= node->weight * 708U);
+        VERIFY((uint64_t) lweight * 1000U >= (uint64_t) node->weight * 292U);
+        VERIFY((uint64_t) lweight * 1000U <= (uint64_t) node->weight * 708U);
         *weight = lweight + rweight;
     } else {
         *weight = 1;
@@ -429,8 +430,10 @@ wb_tree_verify(const wb_tree* tree)
     } else {
         VERIFY(tree->count == 0);
     }
+    /* The weight relationships are checked inside node_verify(); the
+     * top-level weight itself is already covered by the count check above. */
     unsigned root_weight;
-    return node_verify(tree, NULL, tree->root, &root_weight);
+    return node_verify(tree, NULL, tree->root, &root_weight, NULL, NULL);
 }
 
 wb_itor*
