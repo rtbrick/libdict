@@ -57,6 +57,7 @@ void test_wb_tree_balance_above_6m_nodes(void);
 void test_degenerate_tree_verify_and_path_lengths(void);
 void test_sp_tr_tree_verify_order_and_count(void);
 void test_dict_ptr_cmp_unrelated_objects(void);
+void test_pr_tree_verify_order_and_count(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -90,6 +91,7 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_degenerate_tree_verify_and_path_lengths),
     TEST_FUNC(test_sp_tr_tree_verify_order_and_count),
     TEST_FUNC(test_dict_ptr_cmp_unrelated_objects),
+    TEST_FUNC(test_pr_tree_verify_order_and_count),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -1391,6 +1393,17 @@ void test_dict_ptr_cmp_unrelated_objects()
     CU_ASSERT_EQUAL(dict_ptr_cmp(NULL, NULL), 0);
     free(a);
     free(b);
+}
+
+void test_pr_tree_verify_order_and_count()
+{
+    int keys[] = { 10, 20, 30, 40, 50, 60, 70 };
+    dict* pr = pr_dict_new(dict_int_cmp);
+    for (unsigned i = 0; i < 7; ++i)
+        CU_ASSERT_TRUE(dict_insert(pr, &keys[i]).inserted);
+    check_verify_order_and_count("pr_tree", pr);
+    CU_ASSERT_EQUAL(dict_free(pr, NULL), 7);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
 }
 
 void test_basic_skiplist()

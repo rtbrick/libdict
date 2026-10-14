@@ -453,7 +453,8 @@ rot_right(pr_tree* tree, pr_node* node)
 }
 
 static bool
-node_verify(const pr_tree* tree, const pr_node* parent, const pr_node* node)
+node_verify(const pr_tree* tree, const pr_node* parent, const pr_node* node,
+        const void* lower, const void* upper, size_t* count)
 {
     if (!parent) {
         VERIFY(tree->root == node);
@@ -462,18 +463,19 @@ node_verify(const pr_tree* tree, const pr_node* parent, const pr_node* node)
     }
     if (node) {
         VERIFY(node->parent == parent);
-        if (parent) {
-            if (parent->llink == node) {
-                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-            } else {
-                ASSERT(parent->rlink == node);
-                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-            }
-        }
+        /* Global BST ordering. Comparing a node only against its immediate
+         * parent would accept an entire subtree placed on the wrong side:
+         * root 5, 5->llink 3, 3->rlink 7 passes every parent-local check yet
+         * makes key 7 unreachable from the root. */
+        if (lower)
+            VERIFY(tree->cmp_func(lower, node->key) < 0);
+        if (upper)
+            VERIFY(tree->cmp_func(upper, node->key) > 0);
         pr_node* l = node->llink;
         pr_node* r = node->rlink;
-        if (!node_verify(tree, node, l) ||
-            !node_verify(tree, node, r))
+        *count += 1;
+        if (!node_verify(tree, node, l, lower, node->key, count) ||
+            !node_verify(tree, node, r, node->key, upper, count))
             return false;
         unsigned lweight = WEIGHT(l);
         unsigned rweight = WEIGHT(r);
@@ -497,7 +499,11 @@ pr_tree_verify(const pr_tree* tree)
     } else {
         VERIFY(tree->count == 0);
     }
-    return node_verify(tree, NULL, tree->root);
+    size_t count = 0;
+    if (!node_verify(tree, NULL, tree->root, NULL, NULL, &count))
+        return false;
+    VERIFY(tree->count == count);
+    return true;
 }
 
 pr_itor*
