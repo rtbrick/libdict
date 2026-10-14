@@ -146,7 +146,7 @@ hashtable2_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned in
     hashtable2* table = MALLOC(sizeof(*table));
     if (table) {
         table->size = dict_prime_geq(initial_size);
-        table->table = MALLOC(table->size * sizeof(hash_node));
+        table->table = dict_malloc_array(table->size, sizeof(hash_node));
         if (!table->table) {
             FREE(table);
             return NULL;
@@ -163,6 +163,7 @@ hashtable2_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned in
 dict*
 hashtable2_dict_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned initial_size)
 {
+    ASSERT(cmp_func != NULL);
     ASSERT(hash_func != NULL);
     ASSERT(initial_size > 0);
 
@@ -181,6 +182,7 @@ hashtable2_dict_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsign
 size_t
 hashtable2_free(hashtable2* table, dict_delete_func delete_func)
 {
+    ASSERT(table != NULL);
     size_t count = hashtable2_clear(table, delete_func);
     FREE(table->table);
     FREE(table);
@@ -413,7 +415,7 @@ hashtable2_resize(hashtable2* table, unsigned new_size)
     const size_t old_count = table->count;
     hash_node* const old_table = table->table;
 
-    table->table = MALLOC(new_size * sizeof(hash_node));
+    table->table = dict_malloc_array(new_size, sizeof(hash_node));
     if (!table->table) {
         table->table = old_table;
         return false;

@@ -68,6 +68,7 @@ void test_util_is_prime_and_shuffle_edges(void);
 void test_sp_tree_rotation_count_single_zig(void);
 void test_pr_tree_rotation_count_double(void);
 void test_sp_tree_insert_duplicate_splays(void);
+void test_hashtable_size_overflow_32bit(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -112,6 +113,7 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_sp_tree_rotation_count_single_zig),
     TEST_FUNC(test_pr_tree_rotation_count_double),
     TEST_FUNC(test_sp_tree_insert_duplicate_splays),
+    TEST_FUNC(test_hashtable_size_overflow_32bit),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -1781,6 +1783,36 @@ void test_sp_tree_insert_duplicate_splays()
     CU_ASSERT_EQUAL(sp_tree_count(tree), 3);
 
     CU_ASSERT_EQUAL(sp_tree_free(tree, NULL), 3);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+/* Where size_t is 32 bits, a table of 2^31 slots needs more bytes than size_t
+ * can count; the byte count used to wrap, so resize allocated a tiny array
+ * and rehashed far past its end. It must fail instead. Where size_t is 64 bits
+ * no unsigned slot count can overflow, and such a table would really be
+ * allocated, so the test does nothing there. */
+void test_hashtable_size_overflow_32bit()
+{
+    if (sizeof(size_t) >= 8)
+        return;
+    const unsigned huge = 0x80000000u;
+
+    init_hash_keys();
+    hashtable* table = hashtable_new(dict_str_cmp, dict_str_hash, 7);
+    CU_ASSERT_TRUE(hashtable_insert(table, hash_keys[0]).inserted);
+    CU_ASSERT_FALSE(hashtable_resize(table, huge));
+    CU_ASSERT_TRUE(hashtable_verify(table));
+    CU_ASSERT_PTR_NOT_NULL(hashtable_search(table, hash_keys[0]));
+    hashtable_free(table, NULL);
+    CU_ASSERT_PTR_NULL(hashtable_new(dict_str_cmp, dict_str_hash, huge));
+
+    hashtable2* table2 = hashtable2_new(dict_str_cmp, dict_str_hash, 7);
+    CU_ASSERT_TRUE(hashtable2_insert(table2, hash_keys[0]).inserted);
+    CU_ASSERT_FALSE(hashtable2_resize(table2, huge));
+    CU_ASSERT_TRUE(hashtable2_verify(table2));
+    CU_ASSERT_PTR_NOT_NULL(hashtable2_search(table2, hash_keys[0]));
+    hashtable2_free(table2, NULL);
+    CU_ASSERT_PTR_NULL(hashtable2_new(dict_str_cmp, dict_str_hash, huge));
     CU_ASSERT_EQUAL(bytes_malloced, 0);
 }
 

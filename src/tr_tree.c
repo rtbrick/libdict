@@ -248,6 +248,9 @@ node_new(void* key)
         node->parent = NULL;
         node->llink = NULL;
         node->rlink = NULL;
+        /* Overwritten by the caller, but leaving it uninitialized would make a
+         * future second caller inherit heap garbage as a priority. */
+        node->prio = 0;
     }
     return node;
 }

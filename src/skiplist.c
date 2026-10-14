@@ -710,7 +710,7 @@ skiplist_itor_remove(skiplist_itor* itor)
     dict_remove_result result = skiplist_remove(itor->list, itor->node->key);
     ASSERT(result.removed);
     itor->node = NULL;
-    return true;
+    return result.removed;
 }
 
 static inline skip_node*

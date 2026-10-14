@@ -127,6 +127,17 @@ dict_ctz(unsigned n)
 #endif
 }
 
+/* Allocate an array of |n| elements of |size| bytes, or return NULL if the
+ * byte count does not fit in a size_t, as it may not where size_t is 32 bits.
+ * Without the check the product would wrap and allocate a short array. */
+static inline void*
+dict_malloc_array(size_t n, size_t size)
+{
+    if (size && n > SIZE_MAX / size)
+        return NULL;
+    return MALLOC(n * size);
+}
+
 /* Drop const from a key pointer for the void*-returning dict_key_func slot.
  * Round-tripping through uintptr_t is well defined and, unlike a direct cast,
  * does not trigger -Wcast-qual. */

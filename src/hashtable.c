@@ -150,7 +150,7 @@ hashtable_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned siz
     hashtable* table = MALLOC(sizeof(*table));
     if (table) {
         table->size = dict_prime_geq(size);
-        table->table = MALLOC(table->size * sizeof(hash_node*));
+        table->table = dict_malloc_array(table->size, sizeof(hash_node*));
         if (!table->table) {
             FREE(table);
             return NULL;
@@ -167,6 +167,7 @@ hashtable_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned siz
 dict*
 hashtable_dict_new(dict_compare_func cmp_func, dict_hash_func hash_func, unsigned size)
 {
+    ASSERT(cmp_func != NULL);
     ASSERT(hash_func != NULL);
     ASSERT(size > 0);
 
@@ -349,7 +350,7 @@ hashtable_resize(hashtable* table, unsigned new_size)
     if (table->size == new_size) return true;
 
     /* TODO: investigate whether using realloc would be advantageous. */
-    hash_node** ntable = MALLOC(new_size * sizeof(hash_node*));
+    hash_node** ntable = dict_malloc_array(new_size, sizeof(hash_node*));
     if (!ntable) return false;
 
     memset(ntable, 0, new_size * sizeof(hash_node*));
