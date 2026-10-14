@@ -63,6 +63,7 @@ void test_hashtable_insert_existing_key_no_resize(void);
 void test_hashtable_itor_clear_invalidates(void);
 void test_hashtable2_itor_remove_invalidates(void);
 void test_itor_survives_other_insert_and_remove(void);
+void test_dict_str_cmp_unsigned_bytes(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -102,6 +103,7 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_hashtable_itor_clear_invalidates),
     TEST_FUNC(test_hashtable2_itor_remove_invalidates),
     TEST_FUNC(test_itor_survives_other_insert_and_remove),
+    TEST_FUNC(test_dict_str_cmp_unsigned_bytes),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -1632,6 +1634,61 @@ void test_itor_survives_other_insert_and_remove()
         dict_free(dct, NULL);
         CU_ASSERT_EQUAL(bytes_malloced, 0);
     }
+}
+
+static int
+sign(int x)
+{
+    return (x > 0) - (x < 0);
+}
+
+/* dict_str_cmp must order bytes as unsigned char, exactly as strcmp() does,
+ * so that string keys sort identically on targets where plain char is signed
+ * (x86) and where it is unsigned (ARM, PowerPC, s390x). */
+void test_dict_str_cmp_unsigned_bytes()
+{
+    static const struct {
+        const char* a;
+        const char* b;
+        int         expected;
+    } cases[] = {
+        { "a", "\xc3\xa9", -1 },        /* "a" < "é" in UTF-8 */
+        { "\x7f", "\x80", -1 },
+        { "\x7f", "\xff", -1 },
+        { "\x80", "\xff", -1 },
+        { "z\xff", "z\x01", 1 },
+        { "\xff", "\xff", 0 },
+        { "", "\x80", -1 },
+        { "abc", "abd", -1 },
+        { "ab", "abc", -1 },
+    };
+    for (size_t i = 0; i < sizeof(cases) / sizeof(cases[0]); ++i) {
+        const int got = sign(dict_str_cmp(cases[i].a, cases[i].b));
+        const int reversed = sign(dict_str_cmp(cases[i].b, cases[i].a));
+        if (got != cases[i].expected)
+            fprintf(stderr, "dict_str_cmp case %zu: got %d, expected %d\n",
+                    i, got, cases[i].expected);
+        CU_ASSERT_EQUAL(got, cases[i].expected);
+        CU_ASSERT_EQUAL(reversed, -cases[i].expected);
+        /* Must agree with strcmp(), which compares as unsigned char. */
+        CU_ASSERT_EQUAL(got, sign(strcmp(cases[i].a, cases[i].b)));
+    }
+
+    /* And a sorted container iterates non-ASCII keys in that order. */
+    static char sorted[][3] = { "", "a", "z", "\x7f", "\x80", "\xc3\xa9", "\xff" };
+    const size_t n = sizeof(sorted) / sizeof(sorted[0]);
+    dict* dct = rb_dict_new(dict_str_cmp);
+    for (size_t i = n; i-- > 0;)
+        CU_ASSERT_TRUE(dict_insert(dct, sorted[i]).inserted);
+    CU_ASSERT_TRUE(dict_verify(dct));
+    dict_itor* itor = dict_itor_new(dct);
+    size_t i = 0;
+    for (bool ok = dict_itor_first(itor); ok; ok = dict_itor_next(itor), ++i)
+        CU_ASSERT_PTR_EQUAL(dict_itor_key(itor), sorted[i < n ? i : n - 1]);
+    CU_ASSERT_EQUAL(i, n);
+    dict_itor_free(itor);
+    dict_free(dct, NULL);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
 }
 
 void test_basic_skiplist()

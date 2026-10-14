@@ -82,11 +82,15 @@ dict_ptr_cmp(const void* k1, const void* k2)
 int
 dict_str_cmp(const void* k1, const void* k2)
 {
-    const char* a = k1;
-    const char* b = k2;
+    /* Bytes must be compared as unsigned char, exactly as strcmp() is
+     * specified to: comparing as plain char makes 0xFF sort below 'a' where
+     * char is signed (x86) and above it where it is unsigned (ARM, PowerPC,
+     * s390x), so identical keys would sort differently on different targets. */
+    const unsigned char* a = k1;
+    const unsigned char* b = k2;
 
     for (;;) {
-        char p = *a++, q = *b++;
+        unsigned char p = *a++, q = *b++;
         if (!p || p != q)
             return (p > q) - (p < q);
     }
