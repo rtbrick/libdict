@@ -186,8 +186,10 @@ native `ubuntu-24.04-arm` runner, and a sanitizer job.
   mention significant regressions.
 - Public API changes need Doxygen comments in the header (docs are published from master).
   Doxygen only extracts `/** */` comments.
-- Record user-visible changes, especially behaviour changes, under "Unreleased" in
-  `CHANGELOG.md`.
+- Record user-visible changes, especially behaviour changes, under an "Unreleased"
+  section at the top of `CHANGELOG.md` (add it if missing). A release renames that
+  section to the version and date, sets `project(... VERSION)` in `CMakeLists.txt`,
+  and is published by pushing a tag `X.Y.Z`; CI builds the packages from the tag.
 - Keep changes minimal and focused: one bug, one test, one fix per commit where possible.
 - Before finishing any task, verify: builds with gcc and clang, `ctest` passes,
   sanitizer build passes, no new warnings, public headers unchanged unless intended.

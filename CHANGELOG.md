@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.0.7 (2026-10-14)
 
 Changes since 1.0.6. The public API and ABI are unchanged: existing code
 compiles as before, and `abidiff` against 1.0.6 reports no removed or changed
