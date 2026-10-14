@@ -31,7 +31,6 @@
 
 #include "rb_tree.h"
 
-#include <string.h>
 #include "dict_private.h"
 #include "tree_common.h"
 
@@ -53,6 +52,26 @@ struct rb_node {
 #define SET_RED(node) (node)->color &= (~(intptr_t)RB_BLACK)
 #define SET_BLACK(node) (node)->color |= ((intptr_t)RB_BLACK)
 #define SET_PARENT(node,p) (node)->color = COLOR(node) | (intptr_t)(p)
+
+/* rb_node is handed to the generic routines in tree_common.c as though it were
+ * a tree_node_base, so its first five members must sit at the same offsets.
+ * The third of those, the parent pointer, additionally carries the colour in
+ * its low bit, so ONLY this file's PARENT() macro may decode it: any
+ * tree_common routine that reads |parent| directly (tree_traverse,
+ * tree_select, tree_clear, tree_iterator_next/prev, tree_node_rot_*) would
+ * dereference a tagged pointer and must be reimplemented here. */
+_Static_assert(sizeof(intptr_t) == sizeof(rb_node*),
+               "rb_node tags a parent pointer stored in an intptr_t");
+_Static_assert(offsetof(rb_node, key)   == offsetof(tree_node_base, key),
+               "rb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(rb_node, datum) == offsetof(tree_node_base, datum),
+               "rb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(rb_node, color) == offsetof(tree_node_base, parent),
+               "rb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(rb_node, llink) == offsetof(tree_node_base, llink),
+               "rb_node must be layout-compatible with tree_node_base");
+_Static_assert(offsetof(rb_node, rlink) == offsetof(tree_node_base, rlink),
+               "rb_node must be layout-compatible with tree_node_base");
 
 struct rb_tree {
     TREE_FIELDS(rb_node);
@@ -158,12 +177,14 @@ rb_tree_clear(rb_tree* tree, dict_delete_func delete_func)
         }
         if (delete_func) delete_func(node->key, node->datum);
         rb_node* const parent = PARENT(node);
-        FREE(node);
+        /* Unlink before freeing: comparing a pointer to a freed object is UB. */
         *(parent ? (parent->llink == node ? &parent->llink : &parent->rlink) : &tree->root) = NULL;
+        FREE(node);
         node = parent;
     }
     ASSERT(tree->root == NULL);
     tree->count = 0;
+    tree->rotation_count = 0;
     return count;
 }
 
@@ -371,8 +392,9 @@ delete_fixup(rb_tree* tree, rb_node* node, rb_node* parent, bool left)
         }
     }
 
-    if (node)
-    SET_BLACK(node);
+    if (node) {
+        SET_BLACK(node);
+    }
     return rotations;
 }
 
@@ -455,7 +477,15 @@ node_new(void* key)
 {
     rb_node* node = MALLOC(sizeof(*node));
     if (node) {
-        ASSERT((((intptr_t)node) & 1) == 0); /* Ensure malloc returns aligned result. */
+        /* The low bit of the parent pointer holds the colour, so a node must
+         * be at least 2-byte aligned. dict_malloc_func is user-replaceable,
+         * and an ASSERT would vanish under NDEBUG and let a misaligned
+         * allocator corrupt every parent pointer silently. */
+        if ((((uintptr_t) node) & 1) != 0) {
+            fprintf(stderr, "%s:%d (%s) dict_malloc_func returned an odd "
+                    "pointer: %p\n", __FILE__, __LINE__, __func__, (void*) node);
+            abort();
+        }
         node->key = key;
         node->datum = NULL;
         node->color = RB_RED; /* Also initializes parent to NULL */
@@ -503,7 +533,8 @@ node_prev(rb_node* node)
 
 static bool
 node_verify(const rb_tree* tree, const rb_node* parent, const rb_node* node,
-        unsigned black_node_count, unsigned leaf_black_node_count)
+        unsigned black_node_count, unsigned leaf_black_node_count,
+        const void* lower, const void* upper, size_t* count)
 {
     if (parent == NULL) {
         VERIFY(tree->root == node);
@@ -511,34 +542,36 @@ node_verify(const rb_tree* tree, const rb_node* parent, const rb_node* node,
     } else {
         VERIFY(parent->llink == node || parent->rlink == node);
     }
-    if (node) {
-        VERIFY(PARENT(node) == parent);
-        if (parent) {
-            if (parent->llink == node) {
-                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-            } else {
-                ASSERT(parent->rlink == node);
-                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-            }
-        }
-        if (COLOR(node) == RB_RED) {
-            /* Verify that every child of a red node is black. */
-            if (node->llink)
-                VERIFY(COLOR(node->llink) == RB_BLACK);
-            if (node->rlink)
-                VERIFY(COLOR(node->rlink) == RB_BLACK);
-        } else {
-            black_node_count++;
-        }
-        if (!node->llink && !node->rlink) {
-            /* Verify that each path to a leaf contains the same number of black nodes. */
-            VERIFY(black_node_count == leaf_black_node_count);
-        }
-        bool l = node_verify(tree, node, node->llink, black_node_count, leaf_black_node_count);
-        bool r = node_verify(tree, node, node->rlink, black_node_count, leaf_black_node_count);
-        return l && r;
+    if (!node) {
+        /* NIL is the leaf for black-height purposes, so the comparison
+         * belongs here. Checking only at nodes with no children left every
+         * path that terminates at the absent child of a *one-child* node
+         * unverified -- which is most of them. */
+        VERIFY(black_node_count == leaf_black_node_count);
+        return true;
     }
-    return true;
+    VERIFY(PARENT(node) == parent);
+    /* Global BST ordering. Comparing a node only against its immediate parent
+     * would accept an entire subtree placed on the wrong side. */
+    if (lower)
+        VERIFY(tree->cmp_func(lower, node->key) < 0);
+    if (upper)
+        VERIFY(tree->cmp_func(upper, node->key) > 0);
+    if (COLOR(node) == RB_RED) {
+        /* Verify that every child of a red node is black. */
+        if (node->llink)
+            VERIFY(COLOR(node->llink) == RB_BLACK);
+        if (node->rlink)
+            VERIFY(COLOR(node->rlink) == RB_BLACK);
+    } else {
+        black_node_count++;
+    }
+    *count += 1;
+    bool l = node_verify(tree, node, node->llink, black_node_count,
+                         leaf_black_node_count, lower, node->key, count);
+    bool r = node_verify(tree, node, node->rlink, black_node_count,
+                         leaf_black_node_count, node->key, upper, count);
+    return l && r;
 }
 
 bool
@@ -555,7 +588,12 @@ rb_tree_verify(const rb_tree* tree)
     } else {
         VERIFY(tree->count == 0);
     }
-    return node_verify(tree, NULL, tree->root, 0, leaf_black_node_count);
+    size_t count = 0;
+    if (!node_verify(tree, NULL, tree->root, 0, leaf_black_node_count,
+                     NULL, NULL, &count))
+        return false;
+    VERIFY(tree->count == count);
+    return true;
 }
 
 rb_itor*

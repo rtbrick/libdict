@@ -17,6 +17,7 @@
 #include "dict.h"
 #include "util.h"
 #include "src/hashtable_common.h"   /* For dict_prime_geq() */
+#include "src/tree_common.h"        /* For tree_base, tree_node_base */
 
 #define TEST_FUNC(func) { (char *)#func, func }
 
@@ -40,6 +41,10 @@ void test_basic_hashtable2_nbuckets(void);
 void test_basic_height_balanced_tree(void);
 void test_basic_path_reduction_tree(void);
 void test_basic_red_black_tree(void);
+void test_rb_tree_verify_black_height(void);
+void test_rb_tree_verify_global_order(void);
+void test_rb_tree_verify_count(void);
+void test_rb_tree_clear_rotation_count(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -57,6 +62,10 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_basic_height_balanced_tree),
     TEST_FUNC(test_basic_path_reduction_tree),
     TEST_FUNC(test_basic_red_black_tree),
+    TEST_FUNC(test_rb_tree_verify_black_height),
+    TEST_FUNC(test_rb_tree_verify_global_order),
+    TEST_FUNC(test_rb_tree_verify_count),
+    TEST_FUNC(test_rb_tree_clear_rotation_count),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -742,6 +751,92 @@ void test_basic_red_black_tree()
         test_basic(rb_dict_new(dict_str_cmp), sorted_keys, n, true);
         CU_ASSERT_EQUAL(bytes_malloced, 0);
     }
+}
+
+/* The tests below corrupt an rb_tree through the generic tree_base and
+ * tree_node_base views, whose layout rb_tree.c static_asserts it matches. The
+ * |parent| member of an rb_node holds the colour in its low bit (1 = black). */
+#define RB_NODE(n)          ((tree_node_base*)(n))
+#define RB_FLIP_COLOR(n)    (RB_NODE(n)->parent = (tree_node_base*)((intptr_t)RB_NODE(n)->parent ^ 1))
+
+void test_rb_tree_verify_black_height()
+{
+    int keys[] = { 10, 5 };
+    rb_tree* tree = rb_tree_new(dict_int_cmp);
+    for (unsigned i = 0; i < 2; ++i)
+        CU_ASSERT_TRUE(rb_tree_insert(tree, &keys[i]).inserted);
+    CU_ASSERT_TRUE(rb_tree_verify(tree));
+
+    /* Root 10 (black) with only a red left child 5. Turning 5 black gives the
+     * path 10->NIL one black node and 10->5->NIL two. */
+    tree_node_base* root = ((tree_base*)tree)->root;
+    CU_ASSERT_PTR_NOT_NULL_FATAL(root->llink);
+    CU_ASSERT_PTR_NULL(root->rlink);
+    RB_FLIP_COLOR(root->llink);
+    CU_ASSERT_FALSE(rb_tree_verify(tree));
+    RB_FLIP_COLOR(root->llink);
+    CU_ASSERT_TRUE(rb_tree_verify(tree));
+
+    CU_ASSERT_EQUAL(rb_tree_free(tree, NULL), 2);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+void test_rb_tree_verify_global_order()
+{
+    int keys[] = { 10, 5, 15, 3, 7 };
+    rb_tree* tree = rb_tree_new(dict_int_cmp);
+    for (unsigned i = 0; i < 5; ++i)
+        CU_ASSERT_TRUE(rb_tree_insert(tree, &keys[i]).inserted);
+    CU_ASSERT_TRUE(rb_tree_verify(tree));
+
+    /* Shape is 10 -> (5 -> (3, 7), 15). Changing 7 to 12 keeps it ordered
+     * relative to its parent 5, but puts 12 in the left subtree of 10. */
+    tree_node_base* root = ((tree_base*)tree)->root;
+    CU_ASSERT_EQUAL_FATAL(*(int*)root->key, 10);
+    CU_ASSERT_PTR_NOT_NULL_FATAL(root->llink);
+    CU_ASSERT_PTR_NOT_NULL_FATAL(root->llink->rlink);
+    CU_ASSERT_PTR_EQUAL_FATAL(root->llink->rlink->key, &keys[4]);
+    keys[4] = 12;
+    CU_ASSERT_FALSE(rb_tree_verify(tree));
+    keys[4] = 7;
+    CU_ASSERT_TRUE(rb_tree_verify(tree));
+
+    CU_ASSERT_EQUAL(rb_tree_free(tree, NULL), 5);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+void test_rb_tree_verify_count()
+{
+    int keys[] = { 1, 2, 3 };
+    rb_tree* tree = rb_tree_new(dict_int_cmp);
+    for (unsigned i = 0; i < 3; ++i)
+        CU_ASSERT_TRUE(rb_tree_insert(tree, &keys[i]).inserted);
+    CU_ASSERT_TRUE(rb_tree_verify(tree));
+
+    ((tree_base*)tree)->count++;
+    CU_ASSERT_FALSE(rb_tree_verify(tree));
+    ((tree_base*)tree)->count--;
+    CU_ASSERT_TRUE(rb_tree_verify(tree));
+
+    CU_ASSERT_EQUAL(rb_tree_free(tree, NULL), 3);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+void test_rb_tree_clear_rotation_count()
+{
+    int keys[] = { 1, 2, 3, 4, 5 };
+    rb_tree* tree = rb_tree_new(dict_int_cmp);
+    for (unsigned i = 0; i < 5; ++i)
+        CU_ASSERT_TRUE(rb_tree_insert(tree, &keys[i]).inserted);
+    /* Ascending inserts always rotate. */
+    CU_ASSERT_NOT_EQUAL(((tree_base*)tree)->rotation_count, 0);
+
+    CU_ASSERT_EQUAL(rb_tree_clear(tree, NULL), 5);
+    CU_ASSERT_EQUAL(((tree_base*)tree)->rotation_count, 0);
+    CU_ASSERT_TRUE(rb_tree_verify(tree));
+
+    CU_ASSERT_EQUAL(rb_tree_free(tree, NULL), 0);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
 }
 
 void test_basic_skiplist()
