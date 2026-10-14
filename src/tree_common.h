@@ -102,17 +102,23 @@ size_t  tree_traverse(void *tree, dict_visit_func visit, void* user_data);
  * store NULL through each and return false. Either |key| or |datum| may be
  * NULL, in which case that value is not stored. */
 bool    tree_select(void *tree, size_t n, const void **key, void **datum);
+/* Verify the invariants shared by all trees (root/parent links, global key
+ * ordering, and count). Iterative, so it is safe on a degenerate tree. Must
+ * not be used by trees that tag their parent pointer (hb_tree, rb_tree). */
+bool    tree_verify_common(const void *tree);
 /* Return a count of the elements in |tree|. */
 size_t  tree_count(const void *tree);
 /* Remove all elements from |tree|. */
 size_t  tree_clear(void *tree, dict_delete_func delete_func);
 /* Remove all elements from |tree| and free its memory. */
 size_t  tree_free(void *tree, dict_delete_func delete_func);
-/* Returns the depth of the leaf with minimal depth, or 0 for an empty tree. */
+/* Returns the shallowest depth at which a child link is absent (the root being
+ * at depth 1), or 0 for an empty tree. */
 size_t  tree_min_path_length(const void *tree);
-/* Returns the depth of the leaf with maximal depth, or 0 for an empty tree. */
+/* Returns the greatest depth of any node (the root being at depth 1), or 0 for
+ * an empty tree. */
 size_t  tree_max_path_length(const void *tree);
-/* Returns the total path length of the tree. */
+/* Returns the sum of the depths of all nodes, or 0 for an empty tree. */
 size_t  tree_total_path_length(const void *tree);
 
 bool        tree_iterator_valid(const void *iterator);

@@ -252,41 +252,37 @@ node_new(void* key)
     return node;
 }
 
-static bool
-node_verify(const tr_tree* tree, const tr_node* parent, const tr_node* node)
-{
-    if (!parent) {
-        VERIFY(tree->root == node);
-    } else {
-        VERIFY(parent->llink == node || parent->rlink == node);
-    }
-    if (node) {
-        VERIFY(node->parent == parent);
-        if (parent) {
-            VERIFY(node->prio <= parent->prio);
-            if (parent->llink == node) {
-                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-            } else {
-                ASSERT(parent->rlink == node);
-                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-            }
-        }
-        if (!node_verify(tree, node, node->llink) ||
-            !node_verify(tree, node, node->rlink))
-            return false;
-    }
-    return true;
-}
-
 bool
 tr_tree_verify(const tr_tree* tree)
 {
-    if (tree->root) {
-        VERIFY(tree->count > 0);
-    } else {
-        VERIFY(tree->count == 0);
+    /* Search-tree, parent-link and count invariants. Iterative, because a
+     * treap given a poor priority function degenerates into a chain as deep
+     * as it has nodes. */
+    if (!tree_verify_common(tree))
+        return false;
+
+    /* Max-heap property on priorities. Now that the links have been verified
+     * an in-order walk is safe, and it needs no stack of its own. */
+    const tr_node* node = tree->root;
+    while (node && node->llink)
+        node = node->llink;
+    while (node) {
+        if (node->parent)
+            VERIFY(node->prio <= node->parent->prio);
+        if (node->rlink) {
+            node = node->rlink;
+            while (node->llink)
+                node = node->llink;
+        } else {
+            const tr_node* parent = node->parent;
+            while (parent && parent->rlink == node) {
+                node = parent;
+                parent = parent->parent;
+            }
+            node = parent;
+        }
     }
-    return node_verify(tree, NULL, tree->root);
+    return true;
 }
 
 tr_itor*

@@ -301,6 +301,102 @@ tree_count(const void* Tree)
     return ((const tree*)Tree)->count;
 }
 
+/* Checks one node of tree_verify_common()'s traversal: its key lies strictly
+ * between the bounds inherited from its ancestors (NULL meaning unbounded), and
+ * its children link back to it. */
+static bool
+node_verify_common(const tree* t, const tree_node* node, const void* lower,
+                   const void* upper)
+{
+    /* Global key ordering. Comparing a node only against its immediate parent
+     * would accept an entire subtree placed on the wrong side. */
+    if (lower)
+        VERIFY(t->cmp_func(lower, node->key) < 0);
+    if (upper)
+        VERIFY(t->cmp_func(upper, node->key) > 0);
+    if (node->llink)
+        VERIFY(node->llink->parent == node);
+    if (node->rlink)
+        VERIFY(node->rlink->parent == node);
+    return true;
+}
+
+/* Verifies the invariants every tree shares: root/parent link consistency,
+ * global key ordering, and that |count| matches the number of nodes reachable.
+ *
+ * This is iterative for the same reason the path-length statistics are: a
+ * degenerate sp_tree or tr_tree is as deep as it has nodes, so a recursive
+ * checker would overflow the stack on the very trees most likely to be
+ * malformed. It may only be used by trees with an untagged parent pointer --
+ * hb_tree and rb_tree pack bits into that field and must verify themselves. */
+bool
+tree_verify_common(const void* Tree)
+{
+    const tree* t = Tree;
+
+    VERIFY(t->root == NULL || t->root->parent == NULL);
+    if (t->root) {
+        VERIFY(t->count > 0);
+    } else {
+        VERIFY(t->count == 0);
+    }
+
+    /* (node, lower bound, upper bound) triples still to visit. A NULL bound
+     * means unbounded on that side. */
+    struct frame { const tree_node* node; const void* lower; const void* upper; };
+    struct frame* stack = NULL;
+    size_t size = 0, capacity = 0, count = 0;
+    bool ok = true, oom = false;
+
+#define PUSH(n, lo, hi) \
+    do { \
+        if (size == capacity) { \
+            const size_t cap = capacity ? capacity * 2 : 32; \
+            struct frame* items = MALLOC(cap * sizeof(*items)); \
+            if (!items) { oom = true; break; } \
+            if (stack) { \
+                memcpy(items, stack, size * sizeof(*items)); \
+                FREE(stack); \
+            } \
+            stack = items; \
+            capacity = cap; \
+        } \
+        stack[size].node = (n); \
+        stack[size].lower = (lo); \
+        stack[size].upper = (hi); \
+        ++size; \
+    } while (0)
+
+    if (t->root)
+        PUSH(t->root, NULL, NULL);
+
+    while (ok && !oom && size) {
+        const struct frame top = stack[--size];
+        const tree_node* const node = top.node;
+        if (!node_verify_common(t, node, top.lower, top.upper)) {
+            ok = false;
+            break;
+        }
+        ++count;
+        if (node->llink)
+            PUSH(node->llink, top.lower, node->key);
+        if (!oom && node->rlink)
+            PUSH(node->rlink, node->key, top.upper);
+    }
+#undef PUSH
+    if (stack)
+        FREE(stack);
+
+    if (oom) {
+        fprintf(stderr, "%s:%d (%s) out of memory\n", __FILE__, __LINE__, __func__);
+        return false;
+    }
+    if (!ok)
+        return false;
+    VERIFY(t->count == count);
+    return true;
+}
+
 size_t
 tree_clear(void* Tree, dict_delete_func delete_func)
 {
@@ -333,49 +429,119 @@ tree_free(void* Tree, dict_delete_func delete_func)
     return count;
 }
 
-static size_t
-node_min_path_length(const tree_node* node)
+/* The three path-length statistics below share one iterative traversal.
+ *
+ * They must not recurse: a degenerate sp_tree or tr_tree (e.g. a treap given a
+ * constant priority function) is as deep as it has nodes, so recursion would
+ * overflow the stack on a few hundred thousand elements. They must also not
+ * walk parent pointers, because hb_tree and rb_tree pack bits into that field
+ * and only their own PARENT() macro may decode it -- so the traversal keeps an
+ * explicit, growable stack of (node, depth) pairs instead.
+ *
+ * Depths are 1-based, i.e. the root is at depth 1. */
+typedef struct {
+    const tree_node*    node;
+    size_t              depth;
+} node_depth;
+
+typedef struct {
+    node_depth* items;
+    size_t      size;
+    size_t      capacity;
+} node_stack;
+
+/* Returns false only if memory could not be obtained. */
+static bool
+node_stack_push(node_stack* stack, const tree_node* node, size_t depth)
 {
-    size_t l = node->llink ? node_min_path_length(node->llink) : 0;
-    size_t r = node->rlink ? node_min_path_length(node->rlink) : 0;
-    return 1 + MIN(l, r);
+    if (stack->size == stack->capacity) {
+        const size_t capacity = stack->capacity ? stack->capacity * 2 : 32;
+        node_depth* items = MALLOC(capacity * sizeof(*items));
+        if (!items)
+            return false;
+        if (stack->items) {
+            memcpy(items, stack->items, stack->size * sizeof(*items));
+            FREE(stack->items);
+        }
+        stack->items = items;
+        stack->capacity = capacity;
+    }
+    stack->items[stack->size].node = node;
+    stack->items[stack->size].depth = depth;
+    ++stack->size;
+    return true;
+}
+
+/* Computes, over all nodes of |t|:
+ *  |min_path|   the shallowest depth at which a child link is absent,
+ *  |max_path|   the greatest node depth,
+ *  |total_path| the sum of all node depths.
+ * Any output pointer may be NULL. Returns false if the traversal ran out of
+ * memory, in which case the outputs are not written. */
+static bool
+tree_path_lengths(const tree* t, size_t* min_path, size_t* max_path,
+                  size_t* total_path)
+{
+    size_t min_len = 0, max_len = 0, total_len = 0;
+    node_stack stack = { NULL, 0, 0 };
+    bool ok = true;
+
+    if (t->root && !node_stack_push(&stack, t->root, 1))
+        ok = false;
+
+    while (ok && stack.size) {
+        const node_depth top = stack.items[--stack.size];
+        const tree_node* const node = top.node;
+        const size_t depth = top.depth;
+
+        if (depth > max_len)
+            max_len = depth;
+        total_len += depth;
+        if (!node->llink || !node->rlink) {
+            if (!min_len || depth < min_len)
+                min_len = depth;
+        }
+        if (node->llink && !node_stack_push(&stack, node->llink, depth + 1))
+            ok = false;
+        if (ok && node->rlink && !node_stack_push(&stack, node->rlink, depth + 1))
+            ok = false;
+    }
+    if (stack.items)
+        FREE(stack.items);
+
+    if (!ok)
+        return false;
+    if (min_path)
+        *min_path = min_len;
+    if (max_path)
+        *max_path = max_len;
+    if (total_path)
+        *total_path = total_len;
+    return true;
 }
 
 size_t
 tree_min_path_length(const void* Tree)
 {
-    const tree* t = Tree;
-    return t->root ? node_min_path_length(t->root) : 0;
-}
-
-static size_t
-node_max_path_length(const tree_node* node)
-{
-    size_t l = node->llink ? node_max_path_length(node->llink) : 0;
-    size_t r = node->rlink ? node_max_path_length(node->rlink) : 0;
-    return 1 + MAX(l, r);
+    size_t len = 0;
+    tree_path_lengths(Tree, &len, NULL, NULL);
+    return len;
 }
 
 size_t
 tree_max_path_length(const void* Tree)
 {
-    const tree* t = Tree;
-    return t->root ? node_max_path_length(t->root) : 0;
-}
-
-static size_t
-node_path_length(const tree_node* node, size_t level)
-{
-    return level
-    + (node->llink ? node_path_length(node->llink, level + 1) : 0)
-    + (node->rlink ? node_path_length(node->rlink, level + 1) : 0);
+    size_t len = 0;
+    tree_path_lengths(Tree, NULL, &len, NULL);
+    return len;
 }
 
 size_t
 tree_total_path_length(const void* Tree)
 {
-    const tree* t = Tree;
-    return t->root ? node_path_length(t->root, 1) : 0;
+    size_t len = 0;
+    tree_path_lengths(Tree, NULL, NULL, &len);
+    return len;
 }
 
 bool

@@ -420,40 +420,14 @@ node_new(void* key)
     return node;
 }
 
-static bool
-node_verify(const sp_tree* tree, const sp_node* parent, const sp_node* node)
-{
-    if (!parent) {
-        VERIFY(tree->root == node);
-    } else {
-        VERIFY(parent->llink == node || parent->rlink == node);
-    }
-    if (node) {
-        VERIFY(node->parent == parent);
-        if (parent) {
-            if (parent->llink == node) {
-                VERIFY(tree->cmp_func(parent->key, node->key) > 0);
-            } else {
-                ASSERT(parent->rlink == node);
-                VERIFY(tree->cmp_func(parent->key, node->key) < 0);
-            }
-        }
-        if (!node_verify(tree, node, node->llink) ||
-            !node_verify(tree, node, node->rlink))
-            return false;
-    }
-    return true;
-}
-
 bool
 sp_tree_verify(const sp_tree* tree)
 {
-    if (tree->root) {
-        VERIFY(tree->count > 0);
-    } else {
-        VERIFY(tree->count == 0);
-    }
-    return node_verify(tree, NULL, tree->root);
+    /* A splay tree has no shape invariant of its own beyond being a valid
+     * search tree, so the shared iterative check is the whole job. It must be
+     * iterative: ascending inserts make a chain as deep as the tree is large,
+     * and recursion would overflow the stack on exactly that case. */
+    return tree_verify_common(tree);
 }
 
 sp_itor*

@@ -54,6 +54,8 @@ void test_traverse_all_containers(void);
 void test_select_null_out_params(void);
 void test_wb_tree_verify_global_order(void);
 void test_wb_tree_balance_above_6m_nodes(void);
+void test_degenerate_tree_verify_and_path_lengths(void);
+void test_sp_tr_tree_verify_order_and_count(void);
 void test_basic_skiplist(void);
 void test_basic_splay_tree(void);
 void test_basic_treap(void);
@@ -84,6 +86,8 @@ static CU_TestInfo basic_tests[] = {
     TEST_FUNC(test_select_null_out_params),
     TEST_FUNC(test_wb_tree_verify_global_order),
     TEST_FUNC(test_wb_tree_balance_above_6m_nodes),
+    TEST_FUNC(test_degenerate_tree_verify_and_path_lengths),
+    TEST_FUNC(test_sp_tr_tree_verify_order_and_count),
     TEST_FUNC(test_basic_skiplist),
     TEST_FUNC(test_basic_splay_tree),
     TEST_FUNC(test_basic_treap),
@@ -1240,6 +1244,128 @@ void test_wb_tree_balance_above_6m_nodes()
         CU_ASSERT_TRUE(wb_tree_max_path_length(tree) <= 46);
 
     CU_ASSERT_EQUAL(wb_tree_free(tree, NULL), nkeys);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+/* Priority function for a treap: a larger key sits closer to the root. */
+static unsigned
+uintptr_key_prio(const void* key)
+{
+    return (unsigned) (uintptr_t) key;
+}
+
+#define DEGENERATE_NKEYS 1000000
+
+/* Checks the verifier and the path-length statistics on a tree that is one
+ * chain of DEGENERATE_NKEYS nodes. Recursive implementations exhaust the stack
+ * on such a tree. */
+static void
+check_degenerate_tree(const char* name, bool verified, size_t min_path,
+                      size_t max_path, size_t total_path)
+{
+    /* Every node but the deepest has exactly one child, so a link is already
+     * absent at the root. Sum in size_t, wrapping where size_t is 32 bits
+     * exactly as the implementation does. */
+    size_t expected_total = 0;
+    for (size_t depth = 1; depth <= DEGENERATE_NKEYS; ++depth)
+        expected_total += depth;
+    if (!verified || min_path != 1 || max_path != DEGENERATE_NKEYS ||
+        total_path != expected_total)
+        fprintf(stderr, "%s: verified=%d min=%zu max=%zu total=%zu\n",
+                name, verified, min_path, max_path, total_path);
+    CU_ASSERT_TRUE(verified);
+    CU_ASSERT_EQUAL(min_path, 1);
+    CU_ASSERT_EQUAL(max_path, DEGENERATE_NKEYS);
+    CU_ASSERT_EQUAL(total_path, expected_total);
+}
+
+void test_degenerate_tree_verify_and_path_lengths()
+{
+    /* Ascending inserts splay each new key to the root, leaving the previous
+     * tree as its left subtree: a left chain, built in O(1) per insert. */
+    sp_tree* sp = sp_tree_new(uintptr_key_cmp);
+    for (uintptr_t i = 1; i <= DEGENERATE_NKEYS; ++i)
+        CU_ASSERT_TRUE(sp_tree_insert(sp, (void*) i).inserted);
+    check_degenerate_tree("sp_tree", sp_tree_verify(sp),
+                          sp_tree_min_path_length(sp),
+                          sp_tree_max_path_length(sp),
+                          sp_tree_total_path_length(sp));
+    CU_ASSERT_EQUAL(sp_tree_free(sp, NULL), DEGENERATE_NKEYS);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+
+    /* With priority equal to the key, each new (largest) key rotates up to
+     * the root: the same left chain. */
+    tr_tree* tr = tr_tree_new(uintptr_key_cmp, uintptr_key_prio);
+    for (uintptr_t i = 1; i <= DEGENERATE_NKEYS; ++i)
+        CU_ASSERT_TRUE(tr_tree_insert(tr, (void*) i).inserted);
+    check_degenerate_tree("tr_tree", tr_tree_verify(tr),
+                          tr_tree_min_path_length(tr),
+                          tr_tree_max_path_length(tr),
+                          tr_tree_total_path_length(tr));
+    CU_ASSERT_EQUAL(tr_tree_free(tr, NULL), DEGENERATE_NKEYS);
+    CU_ASSERT_EQUAL(bytes_malloced, 0);
+}
+
+/* Corrupts |dct|, a tree with int keys, in two ways that only a global check
+ * catches, and checks that dict_verify() rejects each and accepts the repair. */
+static void
+check_verify_order_and_count(const char* name, dict* dct)
+{
+    tree_base* tree = dict_private(dct);
+    CU_ASSERT_TRUE_FATAL(dict_verify(dct));
+
+    /* The rightmost node of the root's left subtree, if it is a right child,
+     * is ordered against its parent even when its key exceeds the root's. */
+    tree_node_base* node = tree->root->llink;
+    CU_ASSERT_PTR_NOT_NULL_FATAL(node);
+    CU_ASSERT_PTR_NOT_NULL_FATAL(node->rlink);
+    while (node->rlink)
+        node = node->rlink;
+    int* key = node->key;
+    const int saved = *key;
+    *key = *(int*)tree->root->key + 1;
+    if (dict_verify(dct))
+        fprintf(stderr, "%s: accepted a key on the wrong side of the root\n", name);
+    CU_ASSERT_FALSE(dict_verify(dct));
+    *key = saved;
+    CU_ASSERT_TRUE(dict_verify(dct));
+
+    tree->count++;
+    CU_ASSERT_FALSE(dict_verify(dct));
+    tree->count--;
+    CU_ASSERT_TRUE(dict_verify(dct));
+}
+
+/* Treap priorities giving the shape 40 -> (20 -> (10, 30), 60 -> (50, 70)). */
+static unsigned
+shape_prio(const void* key)
+{
+    switch (*(const int*)key) {
+    case 40: return 3;
+    case 20: case 60: return 2;
+    default: return 1;
+    }
+}
+
+void test_sp_tr_tree_verify_order_and_count()
+{
+    int keys[] = { 10, 20, 30, 40, 50, 60, 70 };
+
+    /* Searching 20 and then 40 splays them to the root in turn, leaving
+     * 40 -> (20 -> (10, 30), ...). */
+    dict* sp = sp_dict_new(dict_int_cmp);
+    for (unsigned i = 0; i < 7; ++i)
+        CU_ASSERT_TRUE(dict_insert(sp, &keys[i]).inserted);
+    CU_ASSERT_PTR_NOT_NULL(dict_search(sp, &keys[1]));
+    CU_ASSERT_PTR_NOT_NULL(dict_search(sp, &keys[3]));
+    check_verify_order_and_count("sp_tree", sp);
+    CU_ASSERT_EQUAL(dict_free(sp, NULL), 7);
+
+    dict* tr = tr_dict_new(dict_int_cmp, shape_prio);
+    for (unsigned i = 0; i < 7; ++i)
+        CU_ASSERT_TRUE(dict_insert(tr, &keys[i]).inserted);
+    check_verify_order_and_count("tr_tree", tr);
+    CU_ASSERT_EQUAL(dict_free(tr, NULL), 7);
     CU_ASSERT_EQUAL(bytes_malloced, 0);
 }
 
